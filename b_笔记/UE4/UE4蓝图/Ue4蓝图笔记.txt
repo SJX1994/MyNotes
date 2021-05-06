@@ -12,6 +12,10 @@
 
 
 C++基础：
+    Ue4框架基础：
+        https://docs.unrealengine.com/zh-CN/InteractiveExperiences/Framework/index.html
+    Unity与ue4编码对比：
+        https://docs.unrealengine.com/zh-CN/Basics/UnrealEngineForUnityDevs/index.html
     符号：
         *：
             用法：
@@ -130,7 +134,7 @@ Api方程：
             如果没有:
                 1.Editor Preferences -> Sources and set it to Visual Studio 2017
                 2.Take this file: "C:\Program Files (x86)\Epic Games\Launcher\Engine\Binaries\Win64\UnrealVersionSelector.exe".
-And paste it into "C:\Program Files\Epic Games\UE_4.15\Engine\Binaries\Win64" then double click it.
+                    And paste it into "C:\Program Files\Epic Games\UE_4.15\Engine\Binaries\Win64" then double click it.
         4.双击.sln程序集
         5.VisualStudio解决方案>构建配置：Development>右键build
             构建文件：https://github.com/EpicGames/UnrealEngine
@@ -157,6 +161,19 @@ And paste it into "C:\Program Files\Epic Games\UE_4.15\Engine\Binaries\Win64" th
         只能低版本向高版本迁移，不可逆
 
 引擎结构：
+    根目录：
+        Engine：
+            包含构成引擎的所有源代码、内容等。
+
+        Templates：
+            创建新项目时可用的项目模板集合。
+
+        GenerateProjectFiles.bat：
+            用于创建在Visual Studio中使用引擎和游戏所需的UE4解决方案和项目文件。
+            请参阅IDE的项目文件以了解详细信息。
+
+        UE4Games.uprojectdirs：
+            这是帮助文件，用于帮助引擎发现位于子目录中的项目。
     通用目录：
         Binaries：
             包含 可执行文件 或 编译期间 创建的其他文件。 
@@ -173,9 +190,106 @@ And paste it into "C:\Program Files\Epic Games\UE_4.15\Engine\Binaries\Win64" th
         Saved:
             包含自动保存、配置（.ini）文件和日志文件。此外，Engine > Saved 目录还包含崩溃日志、硬件信息和Swarm选项与数据。 
         Source:
-            Classes:
-                包含所有游戏类标头（.h）文件。 
-            Private:
-                包含所有 .cpp 文件，包括游戏类实现文件和模块实现文件。 
-            Public:
-                包含模块标头文件。 
+            包含引擎或游戏的所有源文件，包括引擎源代码、工具和游戏类等。
+            Engine：
+                Developer：
+                    编辑器和引擎共同使用的文件。
+                Editor：
+                    仅供编辑器使用的文件。
+                Programs：
+                    引擎或编辑器使用的外部工具。
+                Runtime：
+                    仅供引擎使用的文件。
+            Game：
+                Classes:
+                    包含所有游戏类标头（.h）文件。 
+                Private:
+                    包含所有 .cpp 文件，包括游戏类实现文件和模块实现文件。 
+                Public:
+                    包含模块标头文件。 
+    引擎目录：
+        Documentation：
+            包含引擎文档，包括源文件和发布的文件。
+
+        HTML：
+            发布的HTML文档文件。
+
+        Source：
+            源markdown文档文件。
+
+        Extras：
+            其他帮助和实用程序文件。
+
+        Plugins：
+            包含引擎中使用的插件。
+
+        Programs：
+            包含UE4根目录中存储的项目以及其他虚幻程序（如UnrealFrontend和UnrealHeaderTool）的配置文件和日志文件。
+
+        Shaders：
+            保存引擎的着色器源文件（.usf）。
+    游戏项目目录：
+        Binaries
+
+            包含可执行文件或编译期间创建的其他文件。
+
+        Config
+
+            游戏的默认项目设置。
+
+        Content
+
+            包含引擎或游戏的内容，包括资源包和贴图。
+
+        External dependencies
+
+            显示公共引擎标头文件（仅在Visual Studio中可见）。
+
+        Intermediate
+
+            包含UnrealBuildTool生成的文件，如Visual Studio项目文件。这些文件可以删除并重新构建。
+
+        Saved
+
+            包含引擎生成的文件，如配置文件和日志。这些文件可以删除并重新构建。
+
+        Source
+
+            包含游戏模块对象类文件。
+    解决方案目录:
+        Classes
+
+            包含游戏对象类定义（.h 文件）。
+
+        Config
+
+            游戏的默认项目设置。
+
+        External dependencies
+
+            显示公共引擎标头文件（仅在Visual Studio中可见）。
+
+        Private
+
+            包含私有游戏对象类实现文件（.cpp 文件）。
+
+        Public
+
+            包含公共游戏对象类实现文件（.cpp 文件）。
+
+模块：
+    ReferenceViewer：
+        软性引用：
+            A 通过间接机制（例如字符串形式的对象路径）来引用对象 B
+        硬性引用：
+             A 引用对象 B，并导致对象 B 在对象 A 加载时加载
+        todo写：
+            https://docs.unrealengine.com/zh-CN/Basics/ContentBrowser/AssetConsolidationTool/index.html
+        替换插件思路：
+            文件a与b结构一样：
+            1.通过referenceViewer抓到a引用路径
+            2.如果b的a引用路径不为空，则复制并重命名b到a
+            3.每个文件夹下，通过replaceReference方法，选择重命名的文件保留
+            
+
+            
