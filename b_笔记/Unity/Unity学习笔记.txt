@@ -1,0 +1,141 @@
+文档规则：
+    注释：
+        (这是注释)
+    省略：
+        ...
+    包含：
+        <
+    值：
+        >
+    代码：
+        <(代码)>
+
+文件结构：
+    参考：https://abaojin.github.io/2018/03/11/unity-project/
+    官方解释：https://learn.unity.com/tutorial/project-architecture-unity-project-folder-structure?uv=4.x#5c7f8528edbc2a002053b672
+    源码管理：
+        Assets:
+            腾讯整理：
+                https://gameinstitute.qq.com/community/detail/129050
+            特殊文件夹：
+                Editor：
+                    无论在根目录或者子目录，该文件下的脚本只能在编辑器中运行。
+                Editor Default Resources：
+                    （中间空格不能省略）必须放在根目录，用于存放编辑器需要用到的图片文本等资源。（可以通过EditorGUIUtility.Load读取）
+                Gizmos：
+                    Gizmos.DrawIcon(transform.position,"0.png",true);调用的0.png就是这个文件夹下的文件
+                Plugins：
+                    做平台开发（ios，安卓，小米...）所依赖的sdk放在这里，打包的时候会把这个文件夹中的sdks一起打包
+                Resources：
+                    无论在根目录或者子目录，会把文件夹下的资源直接打包，可以读写，会被压缩，Resource.Load直接读取这个路径下的文件
+                StreamingAssets：
+                    这个文件夹会被打包，只能读取，不会压缩。
+                .(隐藏文件)：
+                    以.开头的不会被导入到引擎中，不会打包
+                WebPlayerTemplates：
+                    不会被编译，存放网页相关文件
+                Standard Assets：
+                    导入标准材质包时创建，由自己的编译顺序
+            编译顺序：
+                1.运行时依赖的脚本：
+                    Standard Assets Pro/Standard Assets/Plugins/MonoBehaviour/ScriptableObject...
+                2.编译器中的文件：
+                    1.1.Editor中的和Editor相关的文件
+                    1.2.Editor之外的脚本
+                    1.3.Editor之中的脚本
+        ProjectSettings：
+           存储所有项目设置（物理，标签，播放器...）表示在编辑器中：“编辑”->“项目设置”的所有内容
+        
+    从源码管理中产生的：
+        Packages：
+        Library：
+            版本控制时，本地缓存应当完全忽略
+        Temp：
+            临时文件，可以删除，给MonoDevelop使用
+        obj：
+            临时文件，可以删除，给Unity使用
+        代码文件：
+            Assembly-CSharp-vs.csproj & Assembly-CSharp.csproj：
+                是由VisualStudio和MonoDevelop产生的文件
+            Assembly-CSharp-vs.csproj & Assembly-CSharp.csproj:
+                是为JavaScript准备的
+
+
+
+MonoDevelop：
+    概念：
+        https://en.wikipedia.org/wiki/MonoDevelop
+        是一个开源的集成开发环境。使用Mono和.net框架(详见windows笔记)
+
+功能模块：
+    Shader：
+        API:
+            Category {}:
+                分类是如下任意命令的逻辑组。大多数情况下是被用于继承渲染状态。例如，你的着色器可以有多个子着色器，他们都需要关闭雾效果，附加的混合，等等。
+            Fallback "name"
+                退回到给定名称的着色器
+            Fallback Off
+                显式声明没有fallback并且不会打印任何警告，甚至没有子着色器会被运行
+        HLSL：
+            文档：
+                官方：
+                    https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@10.4/manual/index.html
+                知乎：
+                    https://zhuanlan.zhihu.com/p/84908168
+        操作：
+            修改颜色和sprite：
+                https://dev.twsiyuan.com/2017/10/unity-custom-sprite-shader.html
+    自带:
+        Presets(预设)：
+            保存：
+                Inspector:
+                    右上角第一个：
+                        左下角SaveCurrtenTo
+            读取：
+                Inspector:
+                    右上角第一个
+                        选择
+        显示线框：
+            
+    插件：
+        MagicaCloth：
+            下载：
+                CSDN：
+                    50元
+                官方：
+                    25美元一位
+
+版本控制：
+    gitignore：
+        https://learn.unity.com/tutorial/project-architecture-unity-project-folder-structure?uv=4.x#5c7f8528edbc2a002053b672
+
+Adia任务：
+    unity炸弹人需求：
+        \\192.168.10.3\Producer_New\GA_Producer\Incoming\Japan\KDE\FUSE\B00\测试用
+    unityXD需求：
+        \\192.168.10.3\Producer_New\GA_Producer\Incoming\China\XD\XDXZ\B01\3D道具\New\XDXZ_LookDev
+        file://192.168.10.3/Producer_New/GA_Producer/Incoming/China/XD/XDXZ/B01/3D道具/New/物件制作规范.pdf
+
+优化：
+    粒子特效:
+        原理：
+            参考：https://blog.csdn.net/alla_Candy/article/details/103709925
+            梳理：
+                
+        方案：
+            参考：https://www.cnblogs.com/cnxkey/articles/9743920.html
+
+    粒子系统消耗检查工具：
+        https://networm.me/2019/07/28/unity-particle-effect-profiler/
+
+插件：
+    粒子特效性能测试：
+        https://github.com/sunbrando/ParticleEffectProfiler
+    复制粘贴：
+        https://www.jianshu.com/p/68680a67ff0e
+    texutrePackerGUI：
+        https://www.codeandweb.com/texturepacker/tutorials/using-spritesheets-with-unity
+    减包体大小分割Texture2D：
+        https://www.codenong.com/cs105490621/
+    编译dll：
+        https://blog.csdn.net/Fenglele_Fans/article/details/82694333

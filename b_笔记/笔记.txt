@@ -1,0 +1,94 @@
+代码命名规范：
+	格式：
+		符号左右留空格
+		变量集上下留换行
+		方法留换行
+	命名：
+		变量：
+			循环：i/j/k
+			计数：count
+			指针：p/ptr
+			缓冲区：buf/buffer
+			总和：sum
+		成员变量：
+			m_xxx
+		全局变量：
+			g_xxx
+		类名：
+			ClassName
+		宏或常量：
+			MY_PATH_LEN
+		作用域:
+			名字越长作用域越广
+	注释：
+		作者，时间，用途
+		
+	
+
+
+
+
+共享地址：
+	前端：
+		http://192.168.10.7:80
+		http://192.168.10.7
+		页面任务：
+			参考图：
+				https://www.xiaopiu.com/web/byId?type=project&id=603df2626a20fd47ad51fc0c&activePage=2
+			参考框架：
+				http://www-db.deis.unibo.it/courses/TW/DOCS/w3schools/w3css/w3css_sidenav.asp.html
+	数据库：
+		\\192.168.10.7\Assets\Materials
+	数据库token：
+		http://192.168.10.7/search_assets?sk=tree
+		正确图片取得范例：
+			http://192.168.10.7/assets/Materials/M_Atlas/M_Atlas_Plant/M_Atlas_Plant_Trees_1045_Preview.png
+	需要整理：
+		\\192.168.55.97\Downloaded\surface
+	上个人的方法：
+		\\192.168.10.4\Share_Folder\GA-个人空间\PGW\素材整理脚本
+Udemy
+	Chris Murphy
+Shader:
+	ChayanShader
+
+DNS刷新：
+	ipconfig/flushdns
+
+adia：
+	请假：
+		http://192.168.10.6:8080/adiaims/mainframe.action?language=zh_CN
+		abc,123
+私人：
+	牛链接：
+		https://open3dmodel.com/download.php
+		https://open3dmodel.com/3d-models/black-bull-rig_36414.html
+	表白建站：
+		https://blog.csdn.net/YJD19970908/article/details/80467637?utm_medium=distribute.pc_relevant_t0.none-task-blog-OPENSEARCH-1.control&dist_request_id=c016500c-7dd9-4948-8939-7bda5dcf7800&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-OPENSEARCH-1.control
+git国内镜像：
+	镜像网址：
+		fastgit.org
+		https://doc.fastgit.org/
+
+		gitclone.com
+		https://gitclone.com/
+
+		gitee
+		https://gitee.com/mirrors
+
+		cnpmjs.org
+		https://github.com.cnpmjs.org/
+	示例：
+		#原地址
+		git clone https://github.com/kubernetes/kubernetes.git
+
+		#改为
+		git clone https://github.com.cnpmjs.org/kubernetes/kubernetes.git
+
+		#或者
+		git clone https://hub.fastgit.org/kubernetes/kubernetes.git
+
+		#或者
+		git clone https://gitclone.com/github.com/kubernetes/kubernetes.git
+	ref：
+		https://blog.csdn.net/networken/article/details/105122778

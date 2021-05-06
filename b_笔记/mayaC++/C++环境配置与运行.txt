@@ -1,0 +1,214 @@
+文档规则：
+    注释：
+        (这是注释)
+    省略：
+        ...
+    包含：
+        <
+    值：
+        >
+    代码：
+        <(代码)>
+
+windows开发环境配置：
+    IDE(可以选择VisualStudio),APP(Maya软件),DEVKIT(Maya软件：对应版本),文档(Maya软件：对应版本)
+        (*)
+        1.DEVKIT(Maya软件：对应版本)
+            选择一个版本的devkit下载:
+                https://www.autodesk.com/developer-network/platform-technologies/maya
+            在DEVKIT中的footPrintNode范例文件：(2019版中的路径)
+                ...devkit\dekitBase\devkit\plug-ins\footPrintNode
+        (*)
+        2.IDE(VisualStudio)
+            C++插件安装需要的环境:
+                Visual Studio Installer：
+                必要选项：
+                    C++桌面开发模板：
+                        JustInTimeDebuger
+                        (如果Maya版本过低请选择低版本的VC++)：
+                        VC++: 20xx v:xxx 
+                        Windows xx SDK
+                        Visual C++ tools for CMake
+                        Visual C++ ATL for x86 and x64
+            C++插件运行建议结构：
+                解决方案.sln：
+                    插件_1_footPrintNode.vcproj
+                        外部依赖(folder)
+                        头文件(folder)
+                            直接拖入APP(Maya)的依赖头文件(可选)
+                                ...Maya20xx\include\maya\
+                        源文件(folder)
+                        资源文件(folder)
+                            footPrintNode.cpp(DEVKIT中的范例)
+                                去除报错(举例)：
+                                    <#pragma warning(disable:4996)>
+                                Maya插件运行机制<
+                                    验证方法：
+                                        CMD：
+                                            <C:>
+                                            <CD \Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin>
+                                            <dumpbin /EXPORTS (你的插件.mll路径)>
+                                    Maya加载插件：
+                                        initializePlugin
+                                    Maya卸载插件：
+                                        uninitializePlugin
+                        buildConfig:
+                            Release(发布设置):
+                                General:
+                                    OutputDirectory(可选) > $(PojectDir)build\release\(最终文件输出路径)
+                                    IntermediateDirectory(可选) > $(PojectDir)intermediate\release\(最终中间文件输出路径)
+
+                            Debug(调试设置):
+                                General:
+                                    OutputDirectory(可选) > $(PojectDir)build\debug\(最终文件输出路径)
+                                    IntermediateDirectory(可选) > $(PojectDir)intermediate\debug\(最终中间文件输出路径)
+
+                            AllConfigurations:
+                                ConfigurationManager(vs2019右上角):
+                                    Active solution platform > x64
+                                General:
+                                    Configuration Type >
+                                        DynamicLibrary(.dll)
+                                    PlatfromToolset > 
+                                        对应maya版本
+                                    TargetFileExtension > 
+                                        .mll(Maya插件格式)
+                                VC++Directories:
+                                    IncludeDirectories:
+                                        (默认：$(VC_IncludePath);$(WindowsSDK_IncludePath);)...Maya20xx\include\maya\(依赖头文件路径,注意#include中是否已经包含路径,不同版本maya修改这个文件)
+                                Linker:(否则会报LinkErrors)
+                                    General:
+                                        AdditionalLibraryDirectories >
+                                            ;...Maya20xx\lib(依赖库文件路径,不同版本maya修改这个文件)
+                                    Input:
+                                        AdditionalDependencies >
+                                            OpenMaya.lib;
+                                            OpenMayaRender.lib;
+                                            OpenMayaUI.lib;
+                                            Foundation.lib;
+                                            opengl32.lib;(这个不包含在Maya依赖库文件,但不引用会报错:LINK2019)
+                                            shell32.lib;(这个不包含在Maya依赖库文件,但不引用会报错:LINK2001)
+                                            (默认：%(AdditionalDependencies))
+                                    CommandLine:
+                                        Additional options (可选，解决老版本maya报错的问题) >
+                                            /export:initializePlugin /export:uninitializePlugin /FORCE:MULTIPLE (这条解决头文件重复引用问题)
+                                C/C++:
+                                    Preprocessor:
+                                        Preprocessor Definitions:(运行环境)(可选) >
+                                            WIN32
+                                            _WIN64
+                                            _WINDOWS
+                                            _USRDLL
+                                            NT_PLUGIN
+                                            REQUIRE_IOSTREAM
+                                    Language: >
+                                        Enable Run-Time Type Information (可选)
+                                    CodeGeneration: >
+                                        RuntimeLibrary: >
+                                            Multi-threaded(/MT)(带入.dll到其他计算机)
+
+                    插件_2.vcproj
+                        外部依赖(folder)
+                        头文件(folder)
+                        源文件(folder)
+                        资源文件(folder)
+                        buildConfig
+        (*)
+        3.APP(Maya)
+            依赖头文件：(.h)
+                ...Maya20xx\include\maya\
+            依赖库：(.lib)
+                ...Maya20xx\lib\
+            入口：
+                Plug-in Manager
+        
+C++目录结构：
+    (*)
+    输出：
+        app.exe:(应用程序)
+            xxx.h
+            xxx.cpp
+            app.cpp
+        math.lib:(可以被“应用程序”引用)
+            math.h
+            math.cpp
+        math.dll:(“应用程序”的依赖库)
+            math.h
+            math.cpp
+    (*)
+    编辑：
+    (例子):
+        Maya_nodes.sln(解决方案)
+            maya_math_node.dll(第1个插件程序集)
+                maya_math_node.h
+                maya_math_node.cpp
+            maya_array_node.dll(第2个插件程序集)
+                maya_array_node.h
+                maya_array_node.cpp
+    (*)
+    原理：
+        target<
+            BuildConfig
+            连接器1(linker)<
+                编译器(compiler)<
+                    txt(文本信息)<
+                        .cpp
+                        .h
+                        .hpp
+                        .svc
+                        .c
+                        .cs
+                        ...
+                二进制文件(binary)<
+                    .lib
+                    .dll
+            连接器2(linker)<
+                编译器(compiler)<
+                    txt(文本信息)<
+                        .cpp
+                        .h
+                        .hpp
+                        .svc
+                        .c
+                        .cs
+                        ...
+                二进制文件(binary)<
+                    .lib
+                    .dll
+            ...
+
+MAYA目录结构：
+
+Maya报错解决：
+
+Maya功能模块：
+    Maya.env:
+        环境变量
+    缓存播放：
+        动画算法：
+            UI：
+                Preferences:
+                    Setting-Animation-Evaluation mode
+            DG:
+                缓存播放 无法生效
+        启用：
+            windows-Preferences-CachedPlayback
+            或者
+            时间滑块-右键-CachedPlayback
+        模式：
+            解算缓存(Evaluation cache)：
+                此模式是默认设置，因为它可以适用于不同的硬件配置。如果您不确定自己的设置有哪些优势，建议使用此模式。
+                解算缓存模式与渲染器无关。它还是唯一一种可在 Viewport 1、Viewport 2、其他渲染器或烘焙/导出脚本中使用的缓存模式。
+                但是，由于此方法以与渲染器无关的方式存储数据，渲染器需要执行一个转换步骤才能访问它，这一额外的步骤会使此方法的速度略有下降。
+                注： 这是唯一支持 图像平面的“缓存播放”(Cached Playback)的模式。
+            视口软件缓存(Viewport software cache)：
+                视口软件缓存模式获取场景的变换和几何体数据（例如，变换、网格、NURBS（曲线和曲面）、细分曲面、Bezier 曲线、晶格和 baseLattice 形状、灯光、摄影机和图像平面），并将其存储为渲染器可读取的格式。
+                不同于解算缓存模式，它可以在从缓存中还原时避免转换步骤，因此速度会更快。VP2 软件缓存模式将数据存储在主内存或 RAM 中，因此这种方法更适用于 RAM 量大的计算机。
+            视口硬件缓存(Viewport hardware cache)：
+                与视口软件缓存模式类似，只是缓冲区在 GPU 或 VRAM（而非 CPU）上存储为硬件缓冲区。
+                该缓存模式将数据直接存储在 GPU 上，这样速度更快，除非 GPU 内存受限。
+
+Maya插件：
+    UV插件集合：
+        ref：
+            https://www.highend3d.com/maya/script/nightshade-uv-editor-for-maya

@@ -1,0 +1,31 @@
+报错：
+      errno 10054：
+            原因：
+                  上传大小限制
+            解决方法：
+                  git init
+                  git config http.postBuffer 524288000
+      Logon failed, use ctrl+c to cancel basic credential prompt：
+            原因：
+                  可能：git升级后必须从网页登陆
+                        详细：
+                              https://stackoverflow.com/questions/64962533/logon-failed-use-ctrlc-to-cancel-basic-credential-prompt
+                        解决方案：
+                              git update-git-for-windows
+                              勾选：
+                                    GitCredentialManagerCore
+                              
+
+                  可能2：凭证不正确
+                        解决方案1： 
+                              删除凭证：
+                                    删除 AppData\Local\GitCredentialManager目录下的tenant.cache文件
+                        解决方案2：
+                              关闭验证弹窗（暂时解决）：
+                                    git config --system --unset credential.helper
+      
+      Failed to connect to github.com port 443: Timed out:
+            代理不通报错：
+                  参考：https://blog.csdn.net/u011476390/article/details/93411139
+
+                    

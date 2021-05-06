@@ -1,0 +1,47 @@
+
+
+IDA（ Interactive Disassembler）：
+      概念：
+            可以从机器可执行代码生成汇编语言源代码。
+            IDA具有交互功能，有助于改善拆卸效果。典型的IDA用户将以自动生成的反汇编列表开始，然后将部分从代码转换为数据，反之亦然，重命名，注释和以其他方式将信息添加到列表中，直到清楚其功能为止。
+      下载：
+            https://www.52pojie.cn/thread-1345176-1-1.html
+      youtube教程：
+            https://youtu.be/fgMl0Uqiey8
+      快捷键：
+            F5:
+                  查看伪代码
+      工作区域：
+            IDA View-A：
+                  是反汇编窗口，
+
+            HexView-A：
+                  是十六进制格式显示的窗口，
+
+            Imports：
+                  是导入表（程序中调用到的外面的函数），
+
+            Functions：
+                  是函数表（这个程序中的函数），
+
+            Structures：
+                  是结构，
+
+            Enums：
+                  是枚举。
+      读档：
+            https://zhuanlan.zhihu.com/p/82177268
+OllyDbg：
+      概念：
+            是一个x86调试器，它着重于二进制代码分析，当源代码不可用时，这很有用。 它跟踪寄存器，识别过程，API调用，开关，表，常量和字符串，并从目标文件和库中查找例程。
+      下载：
+            https://www.52pojie.cn/thread-14986-1-1.html
+
+操作：
+      破解内网通：
+            参考：
+                  https://www.52pojie.cn/thread-1059480-1-1.html
+            1.找到加积分页面的html：
+                  \res\ShiYeLine\value\string.xml
+                  <String Id="IDS_VERIFY_CODE_INVALID">
+            

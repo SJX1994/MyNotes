@@ -1,0 +1,181 @@
+文档阅读规则：
+    注释：
+        (这是注释)
+    省略：
+        ...
+    包含：
+        <
+    值：
+        >
+    代码：
+        <(代码)>
+
+
+C++基础：
+    符号：
+        *：
+            用法：
+                1.用作乘法
+                    例子：
+                        x=y*z;
+                2.乘法赋值运算
+                    例子：
+                        x*=y;
+                3.注释
+                    例子：
+                        /*注释*/
+                4.指针的声明
+                    例子：
+                        int *p; (指向一个整数类型的指针)
+                5.复合指针
+                    例子：
+                        int **p; (指向一个指向整数类型的指针的指针)
+                6.解引用
+                    例子：
+                        x=*p;(把指针p指向的值赋值给x)
+                    例子0：
+                       if(USceneComponent* R = GetRootComponent())
+                       (USceneComponent* R返回一个指向USceneComponent结构的指针给R,并且判断这个结构指针是否是GetRootComponent())
+            
+        &：
+            用法：
+                1.逻辑与
+                    例子：
+                        if( (a>1) && (b<0) )
+                2.位运算与
+                    例子：
+                        x=a & b;
+                3.逻辑与赋值
+                    例子：
+                        x& = y;
+                4.求地址运算符
+                    例子：
+                        p= &x; (把x的地址赋给p)
+        
+        ->:
+            概念：
+                指针指向结构体
+        
+
+
+
+
+
+Api方程：
+    AActor:
+        概念：
+            所有可以在场景中放置和生成的基类
+        GetRootComponent：
+            返回actor的所有组件
+        GetWorld：
+            检查actor是否在场景中
+        GetActorLocation:
+            获取actor的位置信息
+
+    APawn:
+        概念：
+            所有Actor可以获取组件的基类
+
+    FVector：
+        概念：
+            3D空间中矢量的基类,由V3浮点组成
+        GetSafeNormal：
+            返回归一化的向量
+        Rotation：
+            返回向量的旋转角度
+
+    USceneComponent:
+        概念：
+            可以获取场景中所有的坐标和附件，但不进行渲染和碰撞(筛选用)
+        SetWorldRotation:
+            返回世界空间下的旋转角度
+        GetComponentLocation：
+            返回世界坐标下的坐标信息
+
+    UGameplayStatics:
+        概念:
+            静态的实用游戏函数封装集
+        GetPlayerPawn：
+            获取第N个组件
+            例子0：
+                GetPlayerPawn(GetWorld(),0)
+    UWorld:
+        概念：？
+        GetWorld：？
+
+
+
+
+流程控制：
+    Super:
+        通过调用父类重写子类
+生命周期：
+    
+    BeginPlay:
+        执行一次，通过Super每次开始时调用自己
+    Ticky(float DeltaTime):
+        执行每一帧，通过Super和DeltaTime每帧调用自己
+        
+            
+操作：
+    实时编程：
+        开启：
+            Edit>EditorPreferences>General_LiveCoding>General>EnableLiveCoding
+        Ctrl+Alt+F11:
+            在VisualStudio中运行项目后,在引擎中进行实时代码更新
+    蓝图项目转C++：
+        1.打开项目,File>NewC++Class>None>CreateClass
+        2.关闭引擎
+        3.项目目录>右键.uproject>GenerateVisualStudioProjectFiles.
+            如果没有:
+                1.Editor Preferences -> Sources and set it to Visual Studio 2017
+                2.Take this file: "C:\Program Files (x86)\Epic Games\Launcher\Engine\Binaries\Win64\UnrealVersionSelector.exe".
+And paste it into "C:\Program Files\Epic Games\UE_4.15\Engine\Binaries\Win64" then double click it.
+        4.双击.sln程序集
+        5.VisualStudio解决方案>构建配置：Development>右键build
+            构建文件：https://github.com/EpicGames/UnrealEngine
+            选择：DebugGame Editor
+    插件：
+        创建一个插件：
+            创建：
+                Edit>Plugins>NewPlugin>选择类型
+                VisualStudio:
+                    在Plugins中找到 创建好的插件
+                Ue4:
+                    在ContentBrowser右下角找到ViewOptions>开启ShowPlugInContent
+                创建插件中的C++代码：
+                    File > New C++ Class > 找到对应插件
+        插件的加载：
+            找到.uproject文件进行修改
+
+    通过组件获取Actor：
+        if (USceneComponent* RootComp = AActor::GetRootComponent())
+        {
+            ...
+        }
+    打包/迁移 资产：
+        只能低版本向高版本迁移，不可逆
+
+引擎结构：
+    通用目录：
+        Binaries：
+            包含 可执行文件 或 编译期间 创建的其他文件。 
+        Build：
+            包含构建引擎或游戏所需的文件，包括特定平台所需的文件。
+        Config:
+            配置文件，用于设置用来控制引擎行为的值。
+        Content:
+            保存引擎或游戏的内容，包括资源包和贴图。
+        DerivedDataCache:
+            加载时针对引用内容生成的派生数据文件。
+        Intermediate:
+            包含构建引擎或游戏时生成的临时文件。在游戏目录中，着色器存储在Intermediate目录中。
+        Saved:
+            包含自动保存、配置（.ini）文件和日志文件。此外，Engine > Saved 目录还包含崩溃日志、硬件信息和Swarm选项与数据。 
+        Source:
+            Classes:
+                包含所有游戏类标头（.h）文件。 
+            Private:
+                包含所有 .cpp 文件，包括游戏类实现文件和模块实现文件。 
+            Public:
+                包含模块标头文件。 
