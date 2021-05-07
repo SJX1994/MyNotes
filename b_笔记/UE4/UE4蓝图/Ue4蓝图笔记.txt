@@ -113,12 +113,38 @@ Api方程：
 流程控制：
     Super:
         通过调用父类重写子类
+
 生命周期：
-    
-    BeginPlay:
-        执行一次，通过Super每次开始时调用自己
-    Ticky(float DeltaTime):
-        执行每一帧，通过Super和DeltaTime每帧调用自己
+    ref：
+        https://docs.unrealengine.com/zh-CN/InteractiveExperiences/Framework/GameFlow/index.html
+
+    编辑器：
+        1.StartEngine(Editor):
+        2.Init(UEditorEngine)
+        3.Start(UEngine)
+        4.点击Play
+        5.CreateUGameInstance
+        6.InitializePIE(UGameInstance)
+        7.Init(UGameInstance)
+        8.UOnlineSession
+        9.CreatePIEGameInstance(UEditorEngin)
+        10.StartPIEGameInstance(UEditorEngin)
+    独立程序：
+        1.StartEngine(Editor):
+        2.Init(UEditorEngine)
+        3.CreateUGameInstance:
+        4.InitStandalone(UGameInstance)
+        5.Init(UGameInstance)
+        6.UOnlineSession
+        7.Start(UEngine)
+    共有：
+        BeginPlay(UWorld):
+            执行一次，通过Super每次开始时调用自己
+        StartPlay(AGameMode):
+        StartMatch(AGameMode):
+        SpawnActors:
+        Ticky(float DeltaTime):
+            执行每一帧，通过Super和DeltaTime每帧调用自己
         
             
 操作：
@@ -285,6 +311,21 @@ Api方程：
              A 引用对象 B，并导致对象 B 在对象 A 加载时加载
         todo写：
             https://docs.unrealengine.com/zh-CN/Basics/ContentBrowser/AssetConsolidationTool/index.html
+        
+    插件编写：
+        开发付费教程：
+            https://www.aboutcg.org/courseDetails/510/introduce
+                账号：752523247/15365119616
+                密码：Carsa5th22
+        环境：
+            https://docs.unrealengine.com/zh-CN/ProductionPipelines/ScriptingAndAutomation/index.html
+        PythonEditor:
+            vscode：
+                自动补全：
+                    https://qiita.com/dolphinkyotopenguin/items/c39976f3b72f44bd935a
+            输入方法：
+                输出日志（Output Log）
+                文件（File）
         替换插件思路：
             文件a与b结构一样：
             1.通过referenceViewer抓到a引用路径

@@ -1,5 +1,10 @@
 
-LOD制作：
-      官方：
-            https://knowledge.autodesk.com/zh-hans/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2019/CHS/Maya-Basics/files/GUID-092344A4-0BFB-4C1A-8C10-1017AC92BBC4-htm.html
-      编辑_LOD_GenerateLODMesh
+制作：
+      LOD制作：
+            官方：
+                  https://knowledge.autodesk.com/zh-hans/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2019/CHS/Maya-Basics/files/GUID-092344A4-0BFB-4C1A-8C10-1017AC92BBC4-htm.html
+            编辑_LOD_GenerateLODMesh
+
+编辑器：
+      随时间自动保存：
+            https://knowledge.autodesk.com/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2020/ENU/Maya-ManagingScenes/files/GUID-BF903937-BAAD-4E28-ADE3-592EB0F8AAA5-htm.html#:~:text=Select%20Windows%20%3E%20Settings%2FPreferences%20%3E,Autosave%20section%2C%20turn%20on%20Enable.&text=See%20the%20Autosave%20section%20of,a%20description%20of%20these%20options.
