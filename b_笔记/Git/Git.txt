@@ -28,4 +28,15 @@
             代理不通报错：
                   参考：https://blog.csdn.net/u011476390/article/details/93411139
 
-                    
+mac:
+      生成ssh：
+            报错：
+                  remote: Invalid username or password.
+                  fatal: Authentication failed for 'https://github.com/mohamad-wael/tmp.git/'
+            解决方案1：
+            https://twiserandom.com/git/github-error-remote-invalid-username-or-password-a-solution/index.html                  
+      mac开发套装（包含git）：
+            终端：
+                  xcode-select --install
+                  sudo xcode-select -s /Library/Developer/CommandLineTools
+            
