@@ -10,6 +10,7 @@ import random
 import time
 
 from datetime import datetime
+from sys import platform
 
 # 公共数据 ↓
 # -----游戏名称          'GameName'
@@ -27,6 +28,7 @@ root = os.getcwd()
 
 path = os.path.join(root, 'GamesBuy.json')
 stockPath = os.path.join(root, 'GamesBuyStock.json')
+
 list_default = [{
     "游戏名称": "NONE",
     "市场价格": "NONE",
@@ -55,6 +57,24 @@ Stock_Append_default = {"游戏名称": "NONE", "库存": 0, "仓库容量": 0, 
 # 程序数据栈 ↓
 
 Stock_dataBase = {"terminal_Number": 0}
+# 系统版本 ↓
+
+
+class SystemTest:
+    def __init__(self):
+        print("目前的操作系统是：")
+
+    def test(self):
+
+        if platform == "linux" or platform == "linux2":
+            print(" Linus 的 系统")
+
+        elif platform == "darwin":
+            print(" 乔布斯 的 操作系统")
+
+        elif platform == "win32":
+            print(" 比尔盖斯 的 操作系统")
+
 
 # 图形界面 ↓
 
@@ -334,7 +354,7 @@ class GUI:
             Stock_dataBase['terminal_Number'] += 1
             terminalOut = values['-TERMINAL-'] + \
                 strIn + "\n-----↑ 第" + \
-                str( Stock_dataBase['terminal_Number']) + "操作输出 ↑-----\n"
+                str(Stock_dataBase['terminal_Number']) + "操作输出 ↑-----\n"
             window['-TERMINAL-'].update(terminalOut)
 
 
@@ -642,5 +662,8 @@ class JsonReadAndWrite:
     # GUI ↓
 
 
-m_GUI = GUI()
-m_GUI.show()
+m_s = SystemTest()
+m_s.test()
+
+# m_GUI = GUI()
+# m_GUI.show()
