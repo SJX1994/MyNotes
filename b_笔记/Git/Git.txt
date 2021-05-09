@@ -39,4 +39,7 @@ mac:
             终端：
                   xcode-select --install
                   sudo xcode-select -s /Library/Developer/CommandLineTools
+      简单的提交拉取推送：
+            ref：
+                  https://blog.csdn.net/jiangyu1013/article/details/83622179
             
