@@ -317,6 +317,7 @@ Api方程：
             https://www.aboutcg.org/courseDetails/510/introduce
                 账号：752523247/15365119616
                 密码：Carsa5th22
+        
         环境：
             https://docs.unrealengine.com/zh-CN/ProductionPipelines/ScriptingAndAutomation/index.html
         PythonEditor:
@@ -326,6 +327,46 @@ Api方程：
             输入方法：
                 输出日志（Output Log）
                 文件（File）
+
+        内置开发工具：
+            插件UI界面的接口名称：
+                EditorPreferences:
+                    General-Miscellaneous(杂项)-Display UIExtension Points
+            widget拾取器,获取程序运算生命周期：
+                windows:
+                    DeveloperTools-widgetReflector
+        创建：
+            方法：
+                创建一个插件：
+                    插件类型：
+                        Blank：
+                            用最少的代码创建一个空白插件。 如果要从头开始设置所有内容或正在制作非可视插件，请选择此选项。使用此模板创建的插件将显示在编辑器的插件列表，但不会注册任何按钮或菜单项
+                        ContentOnly：
+                            创建一个只能包含内容的空白插件。
+                        Basic(Editor Toolbar Button)：
+                            创建一个将在级别编辑器中的工具栏上添加按钮的插件。 首先在创建的 OnButtonClick \事件中实现一些操作。
+                        Advanced：
+                            创建一个插件，该插件将向级别编辑器中的工具栏添加一个按钮，单击该按钮时将召唤一个空的独立选项卡窗口。
+                        BPLib：
+                            创建一个包含蓝图功能库的插件。 如果要创建静态蓝图节点，请选择此项。
+                        EditorMode ：
+                            创建一个具有编辑器模式的插件。 这将包括一个工具包示例，用于指定将显示在\模式\选项卡（在Foliage，Landscape等旁边）中的UI。包括非常基本的UI，可演示编辑器的交互作用以及撤消/重做功能的用法。
+                        ThirdParty ：
+                            创建一个使用包含的第三方库的插件。 这可以用作如何自己包含，加载和使用第三方库的示例。
+
+                    创建：
+                        Edit>Plugins>NewPlugin>选择类型
+                        VisualStudio:
+                            在Plugins中找到 创建好的插件
+                        Ue4:
+                            在ContentBrowser右下角找到ViewOptions>开启ShowPlugInContent
+                        创建插件中的C++代码：
+                            File > New C++ Class > 找到对应插件
+        更新代码：
+            开始和暂停调试旁边的小圆圈
+        插件的加载：
+            找到.uproject文件进行修改
+
         替换插件思路：
             文件a与b结构一样：
             1.通过referenceViewer抓到a引用路径
