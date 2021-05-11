@@ -243,39 +243,60 @@ class GUI:
             # 回收价格  'BuyInPrice'
             # 游戏库存      'GameStock'
             # 读取仓库容量  'GameStockSizeRead'
+            [sg.Button('m_总览',  size=(m_InputSize["x"] + \
+                       m_TextSize["x"], m_InputSize["y"]))],
 
             [sg.Text('游戏名称', pad=((m_Pading["l"], m_Pading["r"]), (m_Pading["u"], m_Pading["d"])), size=(m_TextSize["x"], m_TextSize["y"])), sg.InputText(default_text='游戏名称',
                                                                                                                                                           key='-GAMENAME-', size=(m_InputSize["x"], m_InputSize["y"]))],
             [sg.Text('市场价格', pad=((m_Pading["l"], m_Pading["r"]), (m_Pading["u"], m_Pading["d"])), size=(m_TextSize["x"], m_TextSize["y"])), sg.InputText(default_text=300,
                                                                                                                                                           key='-MARKETPRICE-', size=(m_InputSize["x"], m_InputSize["y"]))],
-            [sg.Text('回收备注', pad=((m_Pading["l"], m_Pading["r"]), (m_Pading["u"], m_Pading["d"])), size=(m_TextSize["x"], m_TextSize["y"])), sg.InputText(default_text='三天退还,交易码请粘贴至此进行查找',
-                                                                                                                                                          key='-BUYINREMARKS-', size=(m_InputSize["x"], m_InputSize["y"]))],
 
             [sg.Text('成本利润(0.x)', pad=((m_Pading["l"], m_Pading["r"]), (m_Pading["u"], m_Pading["d"])), size=(m_TextSize["x"], m_TextSize["y"])), sg.InputText(default_text=0.3,
                                                                                                                                                                key='-COSTPROFIT-', size=(m_InputSize["x"], m_InputSize["y"]))],
+
+            [sg.Button('m_报价',  size=(m_InputSize["x"] + \
+                       m_TextSize["x"], m_InputSize["y"]))],
+
+
+
+
             [sg.Text('修改仓库容量', pad=((m_Pading["l"], m_Pading["r"]), (m_Pading["u"], m_Pading["d"])), size=(m_TextSize["x"], m_TextSize["y"])), sg.InputText(default_text=5,
                                                                                                                                                             key='-GAMESTOCKSIZEWRITE-', size=(m_InputSize["x"], m_InputSize["y"]))],
 
 
-            [sg.Button('增加',  size=(m_InputSize["x"] + \
+
+
+            [sg.Button('m_增加/修改',  size=(m_InputSize["x"] + \
                        m_TextSize["x"], m_InputSize["y"]))],
-            [sg.Button('删除',  size=(m_InputSize["x"] + \
+
+            [sg.Text('回收备注', pad=((m_Pading["l"], m_Pading["r"]), (m_Pading["u"], m_Pading["d"])), size=(m_TextSize["x"], m_TextSize["y"])), sg.InputText(default_text='三天退还,交易码请粘贴至此进行查找',
+                                                                                                                                                          key='-BUYINREMARKS-', size=(m_InputSize["x"], m_InputSize["y"]))],
+
+            [sg.Text('买入件数', pad=((m_Pading["l"], m_Pading["r"]), (m_Pading["u"], m_Pading["d"])), size=(m_TextSize["x"], m_TextSize["y"])), sg.InputText(default_text=1,
+                                                                                                                                                            key='-GAMESNUM-', size=(m_InputSize["x"], m_InputSize["y"]))],
+
+
+            [sg.Button('m_买入',  size=(m_InputSize["x"] + \
                        m_TextSize["x"], m_InputSize["y"]))],
-            [sg.Button('修改',  size=(m_InputSize["x"] + \
-                       m_TextSize["x"], m_InputSize["y"]))],
-            [sg.Button('查找',  size=(m_InputSize["x"] + \
-                       m_TextSize["x"], m_InputSize["y"]))],
-            [sg.Button('显示',  size=(m_InputSize["x"] + \
-                       m_TextSize["x"], m_InputSize["y"]))],
-            [sg.Button('排序',  size=(m_InputSize["x"] + \
-                       m_TextSize["x"], m_InputSize["y"]))],
-            [sg.Button('清屏',  size=(m_InputSize["x"] + \
-                       m_TextSize["x"], m_InputSize["y"]))],
+
+
+
+
 
             [sg.Text('交易码', pad=((m_Pading["l"], m_Pading["r"]), (m_Pading["u"], m_Pading["d"])), size=(m_TextSize["x"], m_TextSize["y"])), sg.InputText(default_text='未生成',
                                                                                                                                                          key='-BUYINCODE-', size=(m_InputSize["x"], m_InputSize["y"]))],
             [sg.Text('交易时间', pad=((m_Pading["l"], m_Pading["r"]), (m_Pading["u"], m_Pading["d"])), size=(m_TextSize["x"], m_TextSize["y"])), sg.InputText(default_text='未生成',
                                                                                                                                                           key='-BUYINTIME-', size=(m_InputSize["x"], m_InputSize["y"]))],
+
+            [sg.Button('m_查找',  size=(m_InputSize["x"] + \
+                       m_TextSize["x"], m_InputSize["y"]))],
+
+            [sg.Button('m_卖出',  size=(m_InputSize["x"] + \
+                       m_TextSize["x"], m_InputSize["y"]))],
+            [sg.Button('m_清屏',  size=(m_InputSize["x"] + \
+                       m_TextSize["x"], m_InputSize["y"]))],
+
+
             [sg.Text('回收价格', pad=((m_Pading["l"], m_Pading["r"]), (m_Pading["u"], m_Pading["d"])), size=(m_TextSize["x"], m_TextSize["y"])), sg.InputText(default_text='未生成',
                                                                                                                                                           key='-BUYINPRICE-', size=(m_InputSize["x"], m_InputSize["y"]))],
             [sg.Text('现有库存', pad=((m_Pading["l"], m_Pading["r"]), (m_Pading["u"], m_Pading["d"])), size=(m_TextSize["x"], m_TextSize["y"])), sg.InputText(default_text='未生成',
@@ -284,7 +305,7 @@ class GUI:
                                                                                                                                                             key='-GAMESTOCKSIZEREAD-', size=(m_InputSize["x"], m_InputSize["y"]))],
 
             [sg.Text('终端', pad=((m_Pading["l"], m_Pading["r"]), (m_Pading["u"], m_Pading["d"])), size=(m_TextSize["x"], m_TextSize["y"]+6)), sg.Multiline(default_text='终端运行正常：\n',
-                                                                                                                                                          key='-TERMINAL-', size=(m_InputSize["x"], m_InputSize["y"]+6))],
+                                                                                                                                                          key='-TERMINAL-', size=(m_InputSize["x"], m_InputSize["y"]+30))],
 
             [sg.Exit('退出', button_color=(self.random(colors), self.random(colors)), pad=((m_Pading["l"], m_Pading["r"]), (m_Pading["u"], m_Pading["d"])), size=(
                 m_InputSize["x"]+m_TextSize["x"], m_InputSize["y"]+1))]
@@ -298,24 +319,24 @@ class GUI:
             if event == sg.WIN_CLOSED or event == '退出':
                 m_JRAW.clear('关闭前的操作数据\n' + terminal)
                 break
-            if event == '增加':
+            if event == 'm_买入':
                 m_JRAW.add(stockPath, path, str(values['-GAMENAME-']),
                            int(values['-MARKETPRICE-']),
                            values['-BUYINREMARKS-'],
                            int(values['-GAMESTOCKSIZEWRITE-']),
                            float(values['-COSTPROFIT-']), window, values)
 
-                print("--增加--")
+                print("--m_买入--")
 
-            if event == '删除':
+            if event == 'm_卖出':
                 print("退出程序3")
 
-            if event == '修改':
+            if event == 'm_增加/修改':
                 m_JRAW.modify(stockPath, values['-GAMENAME-'],
                               int(values['-GAMESTOCKSIZEWRITE-']), window,
                               values)
 
-            if event == '查找':
+            if event == 'm_查找':
                 result = m_JRAW.find(path, values['-GAMENAME-'],
                                      values['-BUYINREMARKS-'])
                 m_str = ""
@@ -325,13 +346,40 @@ class GUI:
 
                 self.terminal(m_str, window, values)
 
-            if event == '显示':
-                print("退出程序6")
+            if event == 'm_报价':
+                m_J = JsonReadAndWrite(values['-GAMENAME-'], 0)
+                if m_J.check() == 0:
 
-            if event == '排序':
+                    m_str = str(values['-GAMENAME-']) + "未在仓库中赋值"
+                    self.terminal(m_str, window, values)
+                else:
+                    m_P = ProfitAlgorithm()
+                    m_P.sellPrice = int(values['-MARKETPRICE-'])
+                    m_J = JsonReadAndWrite("", 0)
+                    m_J.GameName = str(values['-GAMENAME-'])
+                    m_P.hodingNumber = m_J.check()["库存"]
+                    m_P.hodingWant = m_J.check()["仓库容量"]
+                    m_P.costProfitWant = float(values['-COSTPROFIT-'])
+                    buyprice = m_P.costProfitGetPrice()
+
+                    window['-BUYINPRICE-'].update(buyprice)
+                    window['-GAMESTOCK-'].update(m_J.check()["库存"])
+                    window['-GAMESTOCKSIZEREAD-'].update(m_J.check()["仓库容量"])
+
+                    m_str = "执行关于：" + str(
+                        values['-GAMENAME-']) + " 的价格查询\n" + "报价为：" + str(
+                            m_P.costProfitGetPrice()) + "元 \n利润率设置：" + str(
+                                values['-COSTPROFIT-']) + "\n库存容量：" + str(
+                                    m_J.check()["仓库容量"]) + "\n当前库存" + str(
+                                        m_J.check()["库存"])
+                    self.terminal(m_str, window, values)
+
+                print("m_报价")
+
+            if event == 'm_总览':
                 print("退出程序7")
 
-            if event == '清屏':
+            if event == 'm_清屏':
                 m_JRAW.clear(values['-TERMINAL-'])
                 self.terminal("终端运行正常：\n", window, values)
                 terminal = '清屏前的操作数据\n' + values['-TERMINAL-']
@@ -347,6 +395,7 @@ class GUI:
         if strIn == "终端运行正常：\n":
 
             window['-TERMINAL-'].update(strIn)
+
             Stock_dataBase['terminal_Number'] = 0
             window.Refresh()
 
@@ -366,7 +415,11 @@ class ProfitAlgorithm:
     # hodingNumber 持有数量
     # hodingWant  最大库存
     # costProfitWant 期待收入率
-    def __init__(self, sellPrice, hodingNumber, hodingWant, costProfitWant):
+    def __init__(self=None,
+                 sellPrice=None,
+                 hodingNumber=None,
+                 hodingWant=None,
+                 costProfitWant=None):
         self.sellPrice = sellPrice
         self.hodingNumber = hodingNumber
         self.hodingWant = hodingWant
@@ -383,9 +436,11 @@ class ProfitAlgorithm:
         buyPrice = self.sellPrice - self.costProfitWant * self.sellPrice
         buyPrice = buyPrice - buyPrice * p
         if (buyPrice <= 0):
-            print("不再收购")
+            # print("不再收购")
+            return "不再收购"
         else:
-            print("收购价格：" + str(buyPrice))
+            # print("收购价格：" + str(buyPrice))
+            return buyPrice
 
     def hodingWantCount(self):
         p = self.hodingNumber / self.hodingWant
@@ -651,19 +706,43 @@ class JsonReadAndWrite:
         else:
             print("未找到文件")
 
-    # 收购价格 ↓
-    # PA = ProfitAlgorithm(sellPrice=305, hodingNumber=0,
-    #                      hodingWant=10, costProfitWant=0.5)
-    # PA.costProfitGetPrice()
+    def check(self):
+        res = {}
+        res["库存"] = 0
+        res["仓库容量"] = 0
+        if os.access(stockPath, os.F_OK):
+            with open(stockPath, 'r', encoding="utf-8") as load_f:
+                load_dict = json.load(load_f)
 
-    # 买入信息录入 ↓
-    # JRW = JsonReadAndWrite()
-    # JRW.buyJsonStockSize()
-    # GUI ↓
+                for i in load_dict:
+                    if i["游戏名称"] == self.GameName:
+                        res["库存"] = i["库存"]
+                        if i["仓库容量"] != 0:
+                            res["仓库容量"] = i["仓库容量"]
+                            print("库存 " + str(res["库存"]) + "\n仓库容量 " +
+                                  str(res["仓库容量"]))
+                            return res
+                        else:
+                            print(str(self.GameName) + "：仓库容量 还未赋值")
+                    else:
+                        print("请先录入" + str(self.GameName) + " 的仓库容量")
 
+                        return 0
+        else:
+            print("请先创建 GamesBuyStock.json 表单")
+
+
+# 收购价格 ↓
+# PA = ProfitAlgorithm(sellPrice=305, hodingNumber=0,
+#                      hodingWant=10, costProfitWant=0.5)
+# PA.costProfitGetPrice()
+# 买入信息录入 ↓
+# JRW = JsonReadAndWrite()
+# JRW.buyJsonStockSize()
+# GUI ↓
 
 m_s = SystemTest()
 m_s.test()
 
-# m_GUI = GUI()
-# m_GUI.show()
+m_GUI = GUI()
+m_GUI.show()
