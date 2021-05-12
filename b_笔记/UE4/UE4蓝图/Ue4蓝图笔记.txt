@@ -366,6 +366,27 @@ Api方程：
             开始和暂停调试旁边的小圆圈
         插件的加载：
             找到.uproject文件进行修改
+        插件更名：
+            ref： https://michaeljcole.github.io/wiki.unrealengine.com/Override_Built_In_Plugin/
+                1如果您的项目目录中尚不存在，则创建一个Plugins文件夹。
+                2将要覆盖的插件文件夹从Unreal Engine安装文件夹复制到项目的Plugins文件夹（例如C：\ Program Files \ Epic Games \ 4.9 \ Engine \ Plugins \ Experimental \ SimpleHMD-> C：\ Users \ pgomes \文档\虚幻项目\ plugin_override \插件\ SimpleHMD）。所有进一步的修改将在您项目的本地Plugins文件夹中。
+                3重命名插件文件夹（... \ Plugins \ SimpleHMD-> ... \ Plugins \ SimpleHMDX）。
+                4更改uplugin文件名以匹配新的插件名称（... \ Plugins \ SimpleHMD \ SimpleHMD.uplugin-> ... \ Plugins \ SimpleHMDX.uplugin）。
+                5使用文本编辑器编辑* .uplugin文件。修改FriendlyName和Module> Name属性（“ SimpleHMD”->“ SimpleHMDX”）。
+                6重命名* .Build.cs文件（SimpleHMD.Build.cs-> SimpleHMDX.Build.cs）。
+                7在公共头文件（... \ Public \ ISimpleHMDPlugin.h）中，更改与FModuleManager相关的函数调用参数以匹配您的新插件名称。在我们的SimpleHMD示例中：
+                FModuleManager :: LoadModuleChecked <ISimpleHMDPlugin>（“ SimpleHMD”）; //-> FModuleManager :: LoadModuleChecked <ISimpleHMDPlugin>（“ SimpleHMDX”）; // //和//返回FModuleManager :: Get（）。IsModuleLoaded（“ SimpleHMD”）; //->返回FModuleManager :: Get（）。IsModuleLoaded（“ SimpleHMDX”）;
+
+                8编辑* .Build.cs并修改PrivateIncludePaths引擎添加为相对于引擎文件夹而不是本地目录。在我们的示例中：
+                //使用System.IO添加到顶部；// //和//“ ../../../../Source/Runtime/Renderer/Private”，//-> Path.GetDirectoryName（RulesCompiler.GetModuleFilename（“ Renderer”））+“ / Private ”，
+
+                9仍在* .Build.cs中，更改类和构造函数的名称，以匹配您的新插件名称（SimpleHMD-> SimpleHMDX）。
+                将宏调用更改为IMPLEMENT_MODULE以引用您的新插件名称。在我们的示例中，编辑.. \ Private \ SimpleHMD.cpp
+                IMPLEMENT_MODULE（FSimpleHMDPlugin，SimpleHMD）//-> IMPLEMENT_MODULE（FSimpleHMDPlugin，SimpleHMDX）
+
+                10打开您的虚幻项目。系统将提示您构建新添加的插件。
+                导航到“窗口”>“插件”。应该有一个新的插件可用。勾选新插件的复选框，并确保未选中旧插件。
+                您现在应该准备修改插件，以便所做的更改仅影响本地项目。
 
         替换插件思路：
             文件a与b结构一样：

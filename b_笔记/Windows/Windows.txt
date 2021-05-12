@@ -64,7 +64,12 @@
             谷歌官方：
                   https://answers.microsoft.com/zh-hans/windows/forum/windows_10-other_settings/%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8/b6e42028-c8d3-4582-a20a-45b8f834971b
       通过ip访问文件夹：
-            \\ip地址\文件夹\子文件夹      
+            \\ip地址\文件夹\子文件夹
+      开机启动文件夹：
+            用户自启动：
+                  shell:startup
+            系统自启动：
+                  %programdata%\Microsoft\Windows\Start Menu\Programs\Startup
 
 Windows目录结构：
       \PerfLogs：
