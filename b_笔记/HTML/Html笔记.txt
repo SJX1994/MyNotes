@@ -469,6 +469,8 @@ H5:
                 取名字为“xx”的第一个值：
                     .getElementsByName(“xx”)[0].value;
     Node.js后端:
+        默认安装路径：
+            C:\Program Files (x86)\nodejs\
         概念：
             JavaScript 运行时环境,优化了I/O操作（例如从网络读取、访问数据库或文件系统）,客户端,服务器端的代码编写,通过npm托管的开源库
         helloWorld:
@@ -867,4 +869,26 @@ HTTP：
         解决方案：
             vscode插件加入：LiveServer
 
+    
+Adia项目:
+    图片预览：
+        wings的共享：
+            \\192.168.55.160\webs\public
+        ref：:
+            https://www.js-tutorials.com/jquery-tutorials/live-search-json-objects-data-using-jquery/
+        请求示例：
+            http://127.0.0.1/libmain/?sk=tree
+        拼接规则：
+
+            服务器 + AssetPath + AssetPreviewPath = 预览图片
+
+                服务器：
+                    http://192.168.10.7
+                AssetPath：
+                    /Assets/Materials/M_Atlas/M_Atlas_Tree/
+                AssetPreviewPath：
+                    M_Atlas_Tree_Leaf_1036_Preview.png
+
+        示例：
+            http://192.168.10.7/Assets/Materials/M_Atlas/M_Atlas_Tree/M_Atlas_Tree_Leaf_1036_Preview.png
     
