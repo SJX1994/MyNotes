@@ -1,0 +1,7 @@
+关闭前的操作数据
+终端运行正常：
+
+已生成基本json:
+/Users/caomenghan/Desktop/grapher/gitClone/pyMoneyOutSystem/GamesBuyStock.json+/Users/caomenghan/Desktop/grapher/gitClone/pyMoneyOutSystem/GamesBuy.json+/Users/caomenghan/Desktop/grapher/gitClone/pyMoneyOutSystem/GamesSellStock.json
+-----↑ 第1操作输出 ↑-----
+
