@@ -92,3 +92,7 @@ git国内镜像：
 		git clone https://gitclone.com/github.com/kubernetes/kubernetes.git
 	ref：
 		https://blog.csdn.net/networken/article/details/105122778
+
+公司git：
+	327279621@qq.com
+	Anjunyi55
