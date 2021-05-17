@@ -1,0 +1,16 @@
+
+概念：
+    10大主流系统：
+    ref：https://zhuanlan.zhihu.com/p/92899635
+        发行版：
+            无图形界面
+        Linux Mint：
+            Ubuntu的衍生版本，符合windows用户的操作习惯
+            缺点：
+                软件库数量不大
+        Manjaro：
+            惊人数量的软件库
+
+基本操作：
+
+服务器：
