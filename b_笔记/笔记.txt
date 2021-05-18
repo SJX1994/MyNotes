@@ -93,6 +93,12 @@ git国内镜像：
 	ref：
 		https://blog.csdn.net/networken/article/details/105122778
 
-公司git：
-	327279621@qq.com
-	Anjunyi55
+公司
+	git：
+		327279621@qq.com
+		Anjunyi55
+	ip：
+		p:
+			\\192.168.10.3
+进化星球动画预览：
+	https://www.evolution.land.l2me.com/land/5
