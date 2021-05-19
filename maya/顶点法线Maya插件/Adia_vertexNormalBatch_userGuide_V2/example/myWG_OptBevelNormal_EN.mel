@@ -1,0 +1,128 @@
+
+global proc myWG_OptBevelNormal(){
+    
+    
+	if (`window -q -exists myWG_OBN_Window`) deleteUI myWG_OBN_Window;
+	
+	string $s = "Optimize Bevel Normal";
+	window -title $s -menuBar true -maximizeButton 0 -minimizeButton 1 myWG_OBN_Window; 
+	columnLayout;
+	text -l "Select bevel polygons and then apply." ;
+	text -l "";
+	
+	rowLayout -numberOfColumns 2;
+	text -l "Threshold Angle" ;
+    string $angleFF = `floatField -v 80.0 -pre 2 myWG_OBN_Angle`;
+    setParent ..;
+    text -l "";
+    button -l "Apply" -bgc 1 0.65 0.65 -c "myWG_OptBevelNormal_execute()" -w 242;
+    
+    window -e -wh 245 140 myWG_OBN_Window;
+    showWindow myWG_OBN_Window;
+    
+}
+    
+    //--------------------------------------------------------------
+    
+global proc myWG_OptBevelNormal_execute(){
+    
+    float $fba = `floatField -q -value myWG_OBN_Angle`;
+    
+	
+	string $selList[] = `ls -sl -fl`;
+	string $noLock[];
+
+	//筛选出面
+	string $elm[] = `filterExpand -ex true -sm 34 $selList`;
+	//筛选出点
+	string $vtxlist[] = `polyListComponentConversion -ff -tv $elm`;
+	$vtxlist = `filterExpand -sm 31 -ex true $vtxlist`;
+	//遍历每个点
+	for($vtx in $vtxlist){
+		string $faceList[] = `polyListComponentConversion -fv -tf $vtx`;
+		$faceList = `filterExpand -sm 34 -ex true $faceList`;
+		//1筛选出选中面的相邻面 2选中的面
+		string $faceList2[] = stringArrayRemove($elm,$faceList);
+		string $faceList3[] = stringArrayRemove($faceList2,$faceList);
+		//选中面的法线信息
+		float $avNormal2[] = {0,0,0};
+		int $i = 0;
+		for($face in $faceList3){
+			
+			string $nrm[] = `polyInfo -faceNormals $face`;
+			
+			string $tkBuf[];
+			float $tNml[]={0,0,0};
+			tokenize $nrm[0] " " $tkBuf;
+			$tNml[0]+=((float)($tkBuf[2]));
+			$tNml[1]+=((float)($tkBuf[3]));
+			$tNml[2]+=((float)($tkBuf[4]));
+			
+			$avNormal2[0] += $tNml[0];
+			$avNormal2[1] += $tNml[1];
+			$avNormal2[2] += $tNml[2];
+			$i++;
+		}
+		
+		$avNormal2[0] = $avNormal2[0]/$i;
+		$avNormal2[1] = $avNormal2[1]/$i;
+		$avNormal2[2] = $avNormal2[2]/$i;
+		//$vec1 = <<$avNormal2[0],$avNormal2[1],$avNormal2[2]>>;	
+		//相邻面的法线信息
+		if(size($faceList2) == 0){
+			$faceList2 = $faceList;
+		}
+		float $avNormal[] = {0,0,0};
+		int $i = 0;
+		string $notApplyVtv[] = {};
+		for($face in $faceList2){
+			
+			string $nrm[] = `polyInfo -faceNormals $face`;
+			
+			string $tkBuf[];
+			float $tNml[]={0,0,0};
+			tokenize $nrm[0] " " $tkBuf;
+			$tNml[0]+=((float)($tkBuf[2]));
+			$tNml[1]+=((float)($tkBuf[3]));
+			$tNml[2]+=((float)($tkBuf[4]));
+			//转角度
+			//float $fba = `floatField -q -value foxCPN_fba`;
+			if(rad_to_deg(`angle <<$tNml[0],$tNml[1],$tNml[2]>> <<$avNormal2[0],$avNormal2[1],$avNormal2[2]>>`) < $fba){
+				$avNormal[0] += $tNml[0];
+				$avNormal[1] += $tNml[1];
+				$avNormal[2] += $tNml[2];
+				$i++;
+			}else{
+				
+				string $plcc1[] = `polyListComponentConversion -ff -tvf $face`;
+				$plcc1 = `filterExpand -sm 70 -ex true $plcc1`;
+				$notApplyVtv = stringArrayCatenate($notApplyVtv,$plcc1);
+			}
+		}
+
+		if($i){
+			
+			$avNormal[0] = $avNormal[0]/$i;
+			$avNormal[1] = $avNormal[1]/$i;
+			$avNormal[2] = $avNormal[2]/$i;
+			normalize($avNormal);
+			
+
+			string $plcc[] = `polyListComponentConversion -fv -tvf $vtx`;
+			$plcc = `filterExpand -sm 70 -ex true $plcc`;
+			
+
+			$plcc = stringArrayRemove($notApplyVtv,$plcc);
+
+
+			//polyNormalPerVertex -xyz $avNormal[0] $avNormal[1] $avNormal[2] $plcc;
+			polyNormalPerVertex -xyz $avNormal[0] $avNormal[1] $avNormal[2] $vtx;
+			
+		}
+		appendStringArray($noLock, $notApplyVtv, `size($notApplyVtv)`);
+		
+	}
+	select $noLock;
+	polyNormalPerVertex -ufn true;
+}
+myWG_OptBevelNormal;

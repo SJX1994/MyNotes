@@ -1,0 +1,78 @@
+global int $hardEdges_I_G=0;
+global int $softEdges_I_G=0;
+global string $needLockVertex_G[]={};
+proc Do()
+{
+    global string $needLockVertex_G[]={};
+    string $selectList[];
+    $selectList = `ls -selection -flatten`;
+    string $vertexs[];
+    $vertexs = `filterExpand -expand on -selectionMask 31 $selectList`;
+    for($vertex in $vertexs)
+    {
+        string $edges[]=`polyInfo -vertexToEdge $vertex`;
+        string $objectName[] = stringToStringArray($selectList[0], ".");
+        //polySelectConstraint -m 3 -t 0x8000 -sm 1;
+        string $edgesArray[] = stringToStringArray($edges[0], " ");
+        string $vertexName = fliter($edgesArray,$objectName[0]);
+        if($vertexName!="")
+        {
+            $needLockVertex_G[size($needLockVertex_G)] = $vertexName;
+        }
+    }
+    select -cl ;
+    for($v in $needLockVertex_G)
+    {
+        select -tgl $v;
+        $lock_B = `polyNormalPerVertex -q -allLocked`;
+        if($lock_B[0]==1)
+        {
+            select -d $v;
+        }else{
+            print($v+"\n");
+        }
+    }
+
+    
+    clear $needLockVertex_G;
+}
+proc string fliter(string $edgesArray[],string $objectName)
+{
+    global int $hardEdges_I_G;
+    global int $softEdges_I_G;
+    select -cl ;
+    for($i = 2; $i < size($edgesArray)-1;$i++)
+    {
+        string $edgeName = $objectName + ".e[" + $edgesArray[$i] + "]";
+        select -tgl $edgeName;
+    }
+    $edges = `polyInfo -ev`;
+    for($e in $edges)
+    {
+        string $ce = $e;
+        int $hardFound = `gmatch $ce "*Hard*"`;
+        if($hardFound)
+        {
+            $hardEdges_I_G=$hardEdges_I_G+1;
+        }else{
+            $softEdges_I_G=$softEdges_I_G+1;
+        }
+    }
+    //print("h++"+(string)($hardEdges_I_G));
+    //print("s--"+(string)($softEdges_I_G)+"\n");
+  
+    if($softEdges_I_G>=$hardEdges_I_G)
+    {
+        string $vNum[] = stringToStringArray($edgesArray[1],":");
+        string $vName = $objectName+".vtx["+$vNum[0]+"]";
+        $hardEdges_I_G=0;
+        $softEdges_I_G=0;
+        return $vName;
+        
+    }
+    $hardEdges_I_G=0;
+    $softEdges_I_G=0;
+    select -cl ; 
+    return "";
+}
+Do();

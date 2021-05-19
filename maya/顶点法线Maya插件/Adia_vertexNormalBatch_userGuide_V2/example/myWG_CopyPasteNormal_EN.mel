@@ -1,0 +1,279 @@
+global proc myWG_CopyPasteNormal(){
+    
+    
+	if (`window -q -exists myWG_CopyPaste_Window`) deleteUI myWG_CopyPaste_Window;
+	
+	string $s = "Copy and Paste Normal";
+	window -title $s -menuBar true -maximizeButton 0 -minimizeButton 1 myWG_CopyPaste_Window; 
+
+	columnLayout -adjustableColumn true;
+
+        text -l "Select polygon components and push button." ;
+        text -l "";
+		floatFieldGrp  -pre 3 -numberOfFields 3 -v1 0.0 -v2 1.0 -v3 0.0  -columnWidth 1 65 -columnWidth 2 65 -columnWidth 3 65 myWG_CPM_NormalValue;
+		text -l "" -h 2;
+		
+		button -h 23 -bgc 0.675 0.663 0.843 -label "Copy from selection" -command "myWG_CPN_CopyNormalValue()";
+
+		text -l "" -h 3;
+		separator -style "in" -w 375;
+		text -l "" -h 5;
+		
+		button -h 23 -bgc 0.675 0.663 0.843 -label "Paste normal value" -command "myWG_CPN_PasteNormalValue()";
+
+
+    
+    window -e -wh 280 130 myWG_CopyPaste_Window;
+    showWindow myWG_CopyPaste_Window;
+    
+}
+
+global proc myWG_CPN_CopyNormalValue(){
+	
+	
+	string $selList[] = `ls -sl -fl`;
+
+	
+	string $elm[] = `filterExpand -ex true -sm 34 $selList`;
+	if(size($elm) > 0){
+
+	
+		string $nrm[] = `polyInfo -faceNormals $elm[0]`;
+
+		//�������float�ɕϊ� //��������??���_���󑶎�
+		string $tkBuf[];
+		float $tNml[]={0,0,0};
+		tokenize $nrm[0] " " $tkBuf;
+		$tNml[0]+=((float)($tkBuf[2]));
+		$tNml[1]+=((float)($tkBuf[3]));
+		$tNml[2]+=((float)($tkBuf[4]));
+		
+		//�I�u�W�F�N�g�̖��O���擾 //����??�ʓI����
+		string $aObjName[] = stringToStringArray( $elm[0], ".");
+		
+		//�@���̒l���I�u�W�F�N�g�X�y�[�X���烏�[���h�X�y�[�X�ɕϊ� //���@?�I?��?�ۋ�????���E��?�󑶓���?
+		matrix $mNrm[1][4] = myWG_ObjToWorldSpace(
+			myWG_CreateVecMatrix($tNml[0],$tNml[1],$tNml[2])
+			,$aObjName[0]);
+
+		//�m�[�}���C�Y //?�ꉻ
+		float $fVec3[3] = <<$mNrm[0][0], $mNrm[0][1], $mNrm[0][2]>>;
+		normalize($fVec3);
+
+		//UI���X�V //��UI��?��
+		floatFieldGrp -e -v1 $fVec3[0] -v2 $fVec3[1] -v3 $fVec3[2] myWG_CPM_NormalValue;
+		return;
+	}
+
+	//���_�Ńt�B���^�����O //��?�_??
+	clear $elm;
+	string $elm[] = `filterExpand -ex true -sm 31 $selList`;
+	if(size($elm) > 0){
+
+		//�ŏ��̒��_�𒸓_�t�F�[�X�ɕϊ� //����꘢?�_????�_��
+		string $plcc[] = `polyListComponentConversion -fv -tvf $elm[0]`;
+		$plcc = `filterExpand -sm 70 -ex true $plcc`;
+		//���_�t�F�[�X�̖@���̍��v���v�Z //?�Z?�_�ʖ@?�I?��
+		int $i = 0;
+		float $sum_normal[] = {0, 0, 0};
+		for ( $vtxFace in $plcc )
+		{
+  			float $normal[3] = `polyNormalPerVertex -q -xyz $vtxFace`;
+			$sum_normal[0] += $normal[0];
+			$sum_normal[1] += $normal[1];
+			$sum_normal[2] += $normal[2];
+			$i++;
+		}
+		
+		//���_�t�F�[�X�̕��ς��Ƃ�
+		float $tNml[]={0,0,0};
+		$tNml[0] = $sum_normal[0]/$i;
+		$tNml[1] = $sum_normal[1]/$i;
+		$tNml[2] = $sum_normal[2]/$i;
+		
+		//�I�u�W�F�N�g�̖��O���擾
+		string $aObjName[] = stringToStringArray( $elm[0], ".");
+		
+		//�@���̒l���I�u�W�F�N�g�X�y�[�X���烏�[���h�X�y�[�X�ɕϊ�
+		matrix $mNrm[1][4] = myWG_ObjToWorldSpace(myWG_CreateVecMatrix($tNml[0],$tNml[1],$tNml[2]),$aObjName[0]);
+
+		//�m�[�}���C�Y
+		float $fVec3[3] = <<$mNrm[0][0], $mNrm[0][1], $mNrm[0][2]>>;
+		normalize($fVec3);
+
+		//UI���X�V
+		floatFieldGrp -e -v1 $fVec3[0] -v2 $fVec3[1] -v3 $fVec3[2] myWG_CPM_NormalValue;
+
+		return;
+	}
+
+	//���_�t�F�[�X�Ńt�B���^�����O
+	clear $elm;
+	string $elm[] = `filterExpand -ex true -sm 70 $selList`;
+	if(size($elm) > 0){
+
+		//�ŏ��̒��_�t�F�[�X�̖@���̒l���擾
+  		float $tNml[3] = `polyNormalPerVertex -q -xyz $elm[0]`;
+		
+		//�I�u�W�F�N�g�̖��O���擾
+		string $aObjName[] = stringToStringArray( $elm[0], ".");
+		
+		//�@���̒l���I�u�W�F�N�g�X�y�[�X���烏�[���h�X�y�[�X�ɕϊ�
+		matrix $mNrm[1][4] = myWG_ObjToWorldSpace(myWG_CreateVecMatrix($tNml[0],$tNml[1],$tNml[2]),$aObjName[0]);
+
+		//�m�[�}���C�Y
+		float $fVec3[3] = <<$mNrm[0][0], $mNrm[0][1], $mNrm[0][2]>>;
+		normalize($fVec3);
+
+		//UI���X�V
+		floatFieldGrp -e -v1 $fVec3[0] -v2 $fVec3[1] -v3 $fVec3[2] myWG_CPM_NormalValue;
+
+		return;
+	}
+
+	print("Cannot get normal. Select polygon face, vertex, or vertexface.");
+
+}
+
+global proc myWG_CPN_PasteNormalValue(){
+
+	//�I�����擾
+	string $selList[] = `ls -sl`;
+	//���ꂼ��̃R���|�[�l���g���擾
+	string $sCompList[] = `filterExpand -ex true -sm 31 -sm 32 -sm 34 -sm 70 $selList`;
+	if(size($sCompList)){
+		//�I�u�W�F���Ƃɗv�f�𕪗�
+		string $sVtxF_c[] = myWG_classifyWithObj(`polyListComponentConversion -toVertexFace $sCompList`);
+		//�I�u�W�F�N�g�̐����擾
+		int $i = size($sVtxF_c) / 2;
+		//UI�̗v�f���擾
+		float $xyz[] = `floatFieldGrp -q -v myWG_CPM_NormalValue`;
+		for($n=0; $n<$i; $n++){
+			//���[���h��Ԃ���I�u�W�F�N�g��Ԃ�
+			matrix $mNrm[1][4] = myWG_WorldToObjSpace(myWG_CreateVecMatrix($xyz[0],$xyz[1],$xyz[2]),$sVtxF_c[$n*2]);
+			//�m�[�}���C�Y����
+			float $fVec3[3] = <<$mNrm[0][0], $mNrm[0][1], $mNrm[0][2]>>;
+			normalize($fVec3);
+			//�v�f��I������
+			string $sStr[];
+			tokenizeList($sVtxF_c[$n*2 + 1],$sStr);
+			select $sStr;
+			//�m�[�}����K�p����
+			polyNormalPerVertex -xyz $fVec3[0] $fVec3[1] $fVec3[2];
+		}	
+	}
+}
+
+/** 
+* �x�N�g���̍s��̍쐬
+* @param x���� $x{float}
+* @param y���� $y{float}
+* @param z���� $z{float}
+* @return �x�N�g���̍s�� {matrix[1][4]}
+**/
+global proc matrix myWG_CreateVecMatrix(float $x, float$y, float$z)
+{
+	matrix $mRes_Mtx[1][4]=<<$x,$y,$z,0>>;
+
+	return($mRes_Mtx);
+}
+
+/** 
+* �I�u�W�F�N�g�̋t�s��̎擾
+* @param �I�u�W�F�N�g�� $sObj {string} 
+* @return �I�u�W�F�N�g�̋t�s�� {matrix[4][4]}
+**/
+global proc matrix myWG_GetObjInvMatrix(string $sObj)
+{
+	//�I�u�W�F�N�g�̋t�s����擾
+	float $fMat[] = `getAttr ($sObj+".inverseMatrix")`;
+	matrix $mMat[4][4]=<<
+	$fMat[0],$fMat[4],$fMat[8],$fMat[12];
+	$fMat[1],$fMat[5],$fMat[9],$fMat[13];
+	$fMat[2],$fMat[6],$fMat[10],$fMat[14];
+	$fMat[3],$fMat[7],$fMat[11],$fMat[15]>>;
+
+	return($mMat);
+}
+
+/** 
+* �I�u�W�F�N�g�X�y�[�X���烏�[���h�X�y�[�X�ɕϊ�
+* @param ���W $mIn_Mtx{matrix[1][4]}
+* @param �I�u�W�F�N�g�� $sObj {string} 
+* @return ���[���h���W {matrix[1][4]}
+**/
+global proc matrix myWG_ObjToWorldSpace(matrix $mIn_Mtx,string $sObj)
+{
+	
+	matrix $mMtx[4][4] = myWG_GetObjInvMatrix($sObj);
+	matrix $mRes_Mtx[1][4]=$mIn_Mtx*$mMtx;
+
+	return($mRes_Mtx);
+}
+
+/** 
+* ���[���h�X�y�[�X����I�u�W�F�N�g�X�y�[�X�ɕϊ�
+* @param ���W $mIn_Mtx{matrix[1][4]}
+* @param �I�u�W�F�N�g�� $sObj {string} 
+* @return ���[�J�����W {matrix[1][4]}
+**/
+global proc matrix myWG_WorldToObjSpace(matrix $mIn_Mtx,string $sObj)
+{
+	matrix $mMtx[4][4] = myWG_GetObjMatrix($sObj);
+	matrix $mRes_Mtx[1][4]=$mIn_Mtx*$mMtx;
+
+	return($mRes_Mtx);
+}
+
+/** 
+* �I�u�W�F�N�g�̍s��̎擾
+* @param �I�u�W�F�N�g�� $sObj {string} 
+* @return �I�u�W�F�N�g�̍s�� {matrix[4][4]}
+**/ 
+global proc matrix myWG_GetObjMatrix(string $sObj)
+{
+	//�I�u�W�F�N�g�̍s����擾
+	float $fMat[] = `getAttr ($sObj+".matrix")`;
+	matrix $mMat[4][4]=<<
+	$fMat[0],$fMat[4],$fMat[8],$fMat[12];
+	$fMat[1],$fMat[5],$fMat[9],$fMat[13];
+	$fMat[2],$fMat[6],$fMat[10],$fMat[14];
+	$fMat[3],$fMat[7],$fMat[11],$fMat[15]>>;
+
+	return($mMat);
+}
+
+/** 
+* �z��̒��̗v�f���I�u�W�F���Ƃ̔z��ɂ���B
+* @param �v�f�̔z�� $slist {string[]} 
+* @return �I�u�W�F���Ƃ̔z��@{string[]}
+**/
+global proc string[] myWG_classifyWithObj(string $slist[])
+{
+	//�߂�l������
+	string $Res[] ;
+	//���_�R���|�[�l���g�Ńt�B���^�����O���\�[�g
+	string $sArr[] = sort($slist);
+	//�I�u�W�F��������
+	string $sObjName = "";
+	//
+	string $sCrntObjName[];
+	int $i=-1;
+	string $sNameArray[];
+	if(size($sArr)){
+		for($sElm in $sArr){
+			$sNameArray = stringToStringArray($sElm, ".");
+			if($sNameArray[0] != $sObjName){
+				$i++;
+				$sObjName = $sNameArray[0];
+				$Res[$i*2]= $sNameArray[0];
+				$Res[$i*2+1]= $sElm;
+			}else{
+				$Res[$i*2+1] = $Res[$i*2+1] + " " + $sElm;
+			}
+		}
+	}
+	return($Res);
+}
+
+myWG_CopyPasteNormal();

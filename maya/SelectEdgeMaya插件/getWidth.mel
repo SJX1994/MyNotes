@@ -1,0 +1,209 @@
+global string $faces_G[];
+global string $facesDel_G[];
+global string $face_G[];
+global string $objectName_G[];
+//VertexNormalBatch
+global proc VertexNormalSort(){
+    if(`window -query -exists adia_selectEdgeFace_Window`)
+    deleteUI adia_selectEdgeFace_Window;
+    string $s = "Adia_selectEdgeFace";
+    window -title $s -menuBar true -maximizeButton true -minimizeButton true adia_selectEdgeFace_Window;
+    columnLayout -adjustableColumn true;
+        floatFieldGrp -precision 3 -numberOfFields 1 -extraLabel "cm"-label 
+        "Filter less than" -value1 100.0  -columnWidth 1 65 adia_NormalValue;
+        floatFieldGrp -precision 3 -numberOfFields 1 -extraLabel "cm"-label "Face area" -value1 0.0  -columnWidth 1 65 -en off adia_NormalValue2;
+        checkBox -label "DeletOther" -v off DeleteOther;
+        button -height 23 -width 23 -backgroundColor 255 241 155 -label"Get area"
+        -command "Do()";
+        text -label " " -en off;
+        button -height 23 -width 23 -backgroundColor 255 241 155 -label"Filter area"
+        -command "Do2()";
+        text -label " " -en off;
+    window -edit -widthHeight 600 210 adia_selectEdgeFace_Window;
+    showWindow adia_selectEdgeFace_Window;
+}
+proc Do()
+{
+    string $selectList[];
+    $selectList = `ls -selection -flatten`;
+    string $element[];
+    $element = `filterExpand -expand on -selectionMask 34 $selectList`;
+    if(size($element)==1)
+    {
+          float $faceWidth =  getWidth($element[0]);
+          float $faceArea =  getArea($element[0]);
+          floatFieldGrp -e -v1 $faceWidth adia_NormalValue2;
+    }
+    if(size($element)>1)
+    {
+        float $widths[];
+        for($i=0;$i<size($element);$i++)
+        {
+            float $faceWidth =  getWidth($element[$i]);
+            $widths[size($widths)]=$faceWidth;
+        }
+        $widths = `sort $widths`;
+        float $max = $widths[size($widths)-1];
+        float $min = $widths[0];
+         floatFieldGrp -e -v1 $max adia_NormalValue2;
+    }
+}
+proc Do2()
+{
+    global string $faces_G[];
+    global string $facesDel_G[];
+    global string $face_G[];
+    global string $objectName_G[];
+    string $selectList[];
+    $selectList = `ls -selection -flatten`;
+    string $element[];
+    $element = `filterExpand -expand on -selectionMask 34 $selectList`;
+    if(size($element)>0)
+    {
+        if(`checkBox -q -v DeleteOther`==on)
+        { 
+            for($e in $element)
+            {
+                float $faceWidth=getWidth($e);
+                float $UIsize =`floatFieldGrp -q -v1 adia_NormalValue`;
+                string $faceName = $objectName_G[0]+".f["+$face_G[0]+"]";
+                if($faceWidth<=$UIsize)
+                {
+                    $faces_G[size($faces_G)] = $faceName;
+                }
+                else
+                {
+                    $facesDel_G[size($facesDel_G)]=$faceName;
+                }
+                clear $objectName_G;
+                clear $face_G;
+            }
+        }else{
+            for($e in $element)
+            {
+                float $faceWidth=getWidth($e);
+                float $UIsize =`floatFieldGrp -q -v1 adia_NormalValue`;
+                if($faceWidth<=$UIsize)
+                {
+                    string $faceName = $objectName_G[0]+".f["+$face_G[0]+"]";
+                    $faces_G[size($faces_G)] = $faceName;
+                }
+                clear $objectName_G;
+                clear $face_G;
+            }
+        }
+        print(selectMaya($facesDel_G,"d"));
+        print(selectMaya($faces_G,"s"));
+    }
+}
+VertexNormalSort();
+////tool
+proc string selectMaya(string $arg[],string $op)
+{
+    string $msg;
+    switch ($op){
+        case "d":
+            select -cl;
+            for($ele in $arg)
+            {
+                if(catch(`select -tgl $ele`))
+                {
+                    print("erro");
+                }
+                else{
+                    select -add $ele;
+                }
+            }
+            delete;
+            pause -sec 1;
+            clear $arg;
+            $msg = "delSuccess"+"\n";
+        break;
+        case "s":
+            select -cl;
+            for($ele in $arg)
+            {
+                if(catch(`select -tgl $ele`))
+                {
+                    print("erro");
+                }
+                else{
+                    select -add $ele;
+                }
+            }
+            pause -sec 1;
+            clear $arg;
+            $msg = "selectSuccess"+"\n";
+        break;
+    }
+    return $msg;
+}
+proc float getWidth(string $e)
+{
+    global string $face_G[];
+    global string $objectName_G[];
+    $objectName_G = stringToStringArray($e, ".");
+    string $sFaceVertexNormal[]=`polyInfo -faceToVertex $e`; 
+    string $vertex[] = stringToStringArray($sFaceVertexNormal[0], " ");
+    $face_G = stringToStringArray($vertex[1],":");
+    string $vName0 =  $objectName_G[0]+".vtxFace["+ $vertex[2] +"]["+$face_G[0]  +"]";
+    string $vName1 =  $objectName_G[0]+".vtxFace["+ $vertex[3] +"]["+$face_G[0]  +"]";
+    string $vName2 =  $objectName_G[0]+".vtxFace["+ $vertex[4] +"]["+$face_G[0]  +"]";
+    string $pointPosName1 = $objectName_G[0]+".vtx["+ $vertex[2] +"]";
+    string $pointPosName2 = $objectName_G[0]+".vtx["+ $vertex[3] +"]";
+    string $pointPosName3 = $objectName_G[0]+".vtx["+ $vertex[4] +"]";
+    float  $pointPos1[] = `pointPosition -l $pointPosName1` ;
+    float  $pointPos2[] = `pointPosition -l $pointPosName2` ;
+    float  $pointPos3[] = `pointPosition -l $pointPosName3` ;
+    return adia_CountWidth($pointPos1,$pointPos2,$pointPos3);
+}
+proc float getArea(string $e)
+{
+    global string $face_G[];
+    global string $objectName_G[];
+    $objectName_G = stringToStringArray($e, ".");
+    string $sFaceVertexNormal[]=`polyInfo -faceToVertex $e`; 
+    string $vertex[] = stringToStringArray($sFaceVertexNormal[0], " ");
+    $face_G = stringToStringArray($vertex[1],":");
+    string $vName0 =  $objectName_G[0]+".vtxFace["+ $vertex[2] +"]["+$face_G[0]  +"]";
+    string $vName1 =  $objectName_G[0]+".vtxFace["+ $vertex[3] +"]["+$face_G[0]  +"]";
+    string $vName2 =  $objectName_G[0]+".vtxFace["+ $vertex[4] +"]["+$face_G[0]  +"]";
+    string $pointPosName1 = $objectName_G[0]+".vtx["+ $vertex[2] +"]";
+    string $pointPosName2 = $objectName_G[0]+".vtx["+ $vertex[3] +"]";
+    string $pointPosName3 = $objectName_G[0]+".vtx["+ $vertex[4] +"]";
+    float  $pointPos1[] = `pointPosition -l $pointPosName1` ;
+    float  $pointPos2[] = `pointPosition -l $pointPosName2` ;
+    float  $pointPos3[] = `pointPosition -l $pointPosName3` ;
+    return adia_CountArea($pointPos1,$pointPos2,$pointPos3);
+}
+proc float adia_CountWidth(float $a[], float $b[],float $c[])
+{
+    vector $av =  $a;
+    vector $bv =  $b;
+    vector $cv =  $c;
+    vector $res1 = mag($av-$bv);
+    vector $res2 = mag($bv-$cv);
+    if($res1>$res2)
+    {
+        return $res2;
+    }else
+    {
+        return $res1;
+    }
+}
+proc float adia_CountArea(float $a[], float $b[],float $c[])
+{
+    float $area = -1;
+    float $side[3];
+    $side[0] = sqrt(pow($a[0]-$b[0],2)+pow($a[1]-$b[1],2)+pow($a[2]-$b[2],2));
+    $side[1] = sqrt(pow($a[0]-$c[0],2)+pow($a[1]-$c[1],2)+pow($a[2]-$c[2],2));
+    $side[2] = sqrt(pow($c[0]-$b[0],2)+pow($c[1]-$b[1],2)+pow($c[2]-$b[2],2));
+    if($side[0]+$side[1]<=$side[2]||$side[0]+$side[2]<=$side[1]||$side[1]+$side[2]<=$side[0])
+    {
+        return $area; 
+    }
+    //s=sqr(p*(p-a)(p-b)(p-c));
+    float $p = ($side[0]+$side[1]+$side[2])/2;
+    $area = sqrt($p*($p-$side[0])*($p-$side[1])*($p-$side[2]));
+    return $area*2;
+}

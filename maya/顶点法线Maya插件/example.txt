@@ -1,0 +1,16 @@
+
+main----------------mat3:ag_bldgmid06_a_wall_d_mt
+d_mt
+
+sub----------------mat3:ag_bldgmid06_a_wall_d_b
+
+subSub----------------mat3:place2dTexture51
+
+sub----------------mat3:ag_bldgmid06_a_wall_d_n
+
+subSub----------------mat3:place2dTexture52
+
+sub----------------mat3:ag_bldgmid06_a_wall_d_mro
+
+subSub----------------mat3:place2dTexture53
+END
