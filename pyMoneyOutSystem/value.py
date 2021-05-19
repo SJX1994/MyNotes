@@ -439,7 +439,7 @@ class GUI:
                 else:
                     m_P = ProfitAlgorithm()
                     m_P.sellPrice = int(values['-MARKETPRICE-'])
-                    m_J = JsonReadAndWrite("", 0)
+                    m_J = JsonReadAndWrite()
                     m_J.GameName = str(values['-GAMENAME-'])
                     m_P.hodingNumber = m_J.check()["库存"]
                     m_P.hodingWant = m_J.check()["仓库容量"]
@@ -449,6 +449,10 @@ class GUI:
                     window['-BUYINPRICE-'].update(buyprice)
                     window['-GAMESTOCK-'].update(m_J.check()["库存"])
                     window['-GAMESTOCKSIZEREAD-'].update(m_J.check()["仓库容量"])
+                    m_J.BuyInPrice = buyprice
+                    m_J.SellForPrice = int(values['-MARKETPRICE-'])
+                    m_J.StockSize = int(values['-GAMESTOCKSIZEWRITE-'])
+                    m_J.update()
 
                     m_str = "执行关于：" + str(
                         values['-GAMENAME-']) + " 的价格查询\n" + "报价为：" + str(
@@ -535,7 +539,7 @@ class ProfitAlgorithm:
 
 
 class JsonReadAndWrite:
-    def __init__(self=None, GameName=None, StockSize=None, StockPath=None, BuyInPrice=None, SellForPrice=None, uuid=None, window=None, values=None, **BuyInRemarks):
+    def __init__(self=None, GameName=None, StockSize=None, StockPath=None, BuyInPrice=None, SellForPrice=None, uuid=None, window=None, values=None,  **BuyInRemarks):
         self.GameName = GameName
         self.StockSize = StockSize
         self.StockPath = StockPath
@@ -548,8 +552,32 @@ class JsonReadAndWrite:
             setattr(self, BuyInRemarkTitle, BuyInRemarkValue)
 
         print('初始化成功 买入系统已经录入')
+    # 更新json信息
 
-    # 关于仓库的操作 ↓
+    def update(self):
+        if os.access(stockPath, os.F_OK):
+            with open(stockPath, 'r', encoding='utf-8') as load_f:
+                load_dict = json.load(load_f)
+                for i in load_dict:
+                    print(i)
+                    if i["游戏名称"] == self.GameName:
+                        exist = True
+                        i["卖出价格"] = self.SellForPrice
+                        i["买入价格"] = self.BuyInPrice
+
+                        i["仓库容量"] = int(self.StockSize)
+                        i["最后更新时间"] = str(datetime.now())[:-7]
+
+                        # return(str(self.GameName)+"存在游戏库")
+                    else:
+                        exist = False
+            with open(stockPath, 'w', encoding='utf-8') as outfile:
+                json.dump(load_dict,
+                          outfile,
+                          ensure_ascii=False,
+                          indent=4)
+        # 关于仓库的操作 ↓
+
     def buyJsonStockSize(self):
         # ----↓ 写入数据 ↓-----
         Time = str(datetime.now())[:-7]
@@ -747,29 +775,28 @@ class JsonReadAndWrite:
             gui.terminal(terminalOut + terminalOut1, window, values)
 
     def addInStock(self):
-        exist = True
+        exist = 0
         if os.access(self.StockPath, os.F_OK):
             with open(self.StockPath, 'r', encoding='utf-8') as load_f:
                 load_dict = json.load(load_f)
-            for i in load_dict:
-                print(i)
-                if i["游戏名称"] == self.GameName:
-                    exist = True
-                    i["卖出价格"] = self.SellForPrice
-                    i["买入价格"] = self.BuyInPrice
-                    i["仓库容量"] = int(self.StockSize)
-                    i["最后更新时间"] = str(datetime.now())[:-7]
+                for i in load_dict:
+                    print(i)
+                    if i["游戏名称"] == self.GameName:
 
+                        i["卖出价格"] = self.SellForPrice
+                        i["买入价格"] = self.BuyInPrice
+
+                        i["仓库容量"] = int(self.StockSize)
+                        i["最后更新时间"] = str(datetime.now())[:-7]
+                        exist += 1
+                        with open(stockPath, 'w', encoding='utf-8') as outfile:
+                            json.dump(load_dict,
+                                      outfile,
+                                      ensure_ascii=False,
+                                      indent=4)
                     # return(str(self.GameName)+"存在游戏库")
-                else:
-                    exist = False
-            with open(stockPath, 'w', encoding='utf-8') as outfile:
-                json.dump(load_dict,
-                          outfile,
-                          ensure_ascii=False,
-                          indent=4)
 
-            if exist == False:
+            if exist == 0:
                 with open(self.StockPath, 'w', encoding='utf-8') as dump_f:
                     Stock_Append_default["游戏名称"] = self.GameName
                     Stock_Append_default["买入价格"] = self.BuyInPrice
@@ -781,7 +808,7 @@ class JsonReadAndWrite:
                     load_dict.append(Stock_Append_default)
                     json.dump(load_dict, dump_f,
                               ensure_ascii=False, indent=4)
-                    exist = True
+                    exist = 1
         else:
             # 创建表单
             with open(stockPath, 'w+', encoding='utf-8') as dump_f:
@@ -1037,18 +1064,31 @@ class JsonReadAndWrite:
             return str("已生成基本json:\n"+stockPath+"+"+path+"+"+sellPath)
 
     def prettyTable(slef, gameNames, stocks, buyprice, sellprice, times):
-        table = PrettyTable(['编号', '名称', '库存', '买入价格', '卖出价格', '更新时间'])
+        # table = PrettyTable(['编号', '名称', '库存', '买入价格', '卖出价格', '更新时间'])
+
+        # for i in range(len(gameNames)):
+        #     if i == 0:
+        #         continue
+        #     table.add_row([str(i), str(gameNames[i]), str(
+        #         stocks[i]), str(buyprice[i]), str(sellprice[i]+5.5), str(times[i])])
+        # table2 = PrettyTable(['我的购买规则', '我的出售规则', '数据更新'])
+        # a = '私信 带壳寄送\n 48小时内打钱.\n第二次出售24小时打钱\n 寄送地址：\n 南京市雨花台区新亭大街66号 \n 朗诗绿色街区 \n10幢1单元701室 \n --两件包邮--\n 独立id 随时可查 欢迎咨询 \n 不在报价单的游戏也收购\n南京的开车上门取 \n当面给钱'
+        # b = '有货情况下 私信 地址\n 交两倍定金\n 第二次购买 或 熟人\n免定金 \n'
+        # c = '更新规则：\n 每5天清一次库存 \n 每天12点前更新报价\n熟人小刀 \n 小小副业'
+        # table2.add_row([str(a), str(b), str(c)])
+
+        table = PrettyTable(['编号', '名称', '库存', '买入价格', '更新时间'])
 
         for i in range(len(gameNames)):
             if i == 0:
                 continue
             table.add_row([str(i), str(gameNames[i]), str(
-                stocks[i]), str(buyprice[i]), str(sellprice[i]+5.5), str(times[i])])
-        table2 = PrettyTable(['我的购买规则', '我的出售规则', '数据更新'])
-        a = '私信 带壳寄送\n 48小时内打钱.\n第二次出售24小时打钱\n 寄送地址：\n 南京市雨花台区新亭大街66号 \n 朗诗绿色街区 \n10幢1单元701室 \n --两件包邮--\n 独立id 随时可查 欢迎咨询 \n 不在报价单的游戏也收购\n南京的开车上门取 \n当面给钱'
+                stocks[i]), str(buyprice[i]),  str(times[i])])
+        table2 = PrettyTable(['我的回收规则', '数据更新'])
+        a = '私信 带壳寄送\n 48小时内付款.\n第二次出售24小时付款\n 寄送地址：\n 南京市雨花台区新亭大街66号 \n 朗诗绿色街区 \n10幢1单元701室 \n --两件包邮--\n 独立id 随时可查 欢迎咨询 \n 不在报价单的游戏也收购\n南京的开车上门取 \n当面付款'
         b = '有货情况下 私信 地址\n 交两倍定金\n 第二次购买 或 熟人\n免定金 \n'
-        c = '更新规则：\n 每5天清一次库存 \n 每天12点前更新报价\n熟人小刀 \n 小小副业'
-        table2.add_row([str(a), str(b), str(c)])
+        c = '更新规则：\n 库存和报价挂钩 \n 每天12点前更新报价\n熟人小刀 \n 小小副业\n tel & weChat :15365119616 \n. .\nv'
+        table2.add_row([str(a), str(c)])
 
         print(table)
         print(table2)
