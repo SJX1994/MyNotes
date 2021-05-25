@@ -1,0 +1,261 @@
+
+
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140402\119_deco_fountain_02\t006_imperial_isle  *  ['2014/04/02  13:06           247,636 deco_fountain_02.mb']
+
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140402\123_deco_relic_crate_01\t006_imperial_isle  *  ['2014/04/02  13:09           130,076 deco_relic_crate_01.mb']
+
+
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140402\129_veg_melone_03\t006_imperial_isle_vegetation  *  ['2014/04/01  13:10           174,876 veg_melone_03.mb']
+
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140402\131_veg_pumpkin_02\t006_imperial_isle_vegetation  *  ['2014/04/01  13:11           205,736 veg_pumpkin_02.mb']
+
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140402\143_deco_relic_book_table_01\t006_imperial_isle  *  ['2014/04/01  13:06           109,692 deco_relic_book_table_01.mb']
+
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140403\001_m002_deco_basket_01\m002_mine  *  ['2014/04/03  14:48           191,356 m002_deco_basket_01.mb']
+
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140403\016_m007_deco_burlap_sack_01\m007_atlantis_hub  *  ['2014/04/03  14:32           181,484 m007_deco_burlap_sack_01.mb']
+
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140403\018_m007_deco_relic_telescope_01\m007_atlantis_hub  *  ['2014/04/03  14:30           128,400 m007_deco_relic_telescope_01.mb']
+
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140403\038_m010_scrap_04\m010_dwarf_battlefield  *  ['2014/04/02  10:30           276,116 m010_scrap_04.mb']
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140403\039_deco_shelf_01\t000_general  *  ['2014/03/31  11:32           408,852 deco_shelf_01.mb']
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140403\040_deco_spinning_wheel_01\t000_general  *  ['2014/04/02  11:07           263,388 deco_spinning_wheel_01.mb']
+
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140403\052_deco_bucket_01\t003_outdoor  *  ['2014/04/02  13:39           142,632 deco_bucket_01.mb']
+
+
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140403\057_deco_gravestone_03\t003_outdoor  *  ['2014/04/02  15:33           155,552 deco_gravestone_03.mb']
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140403\058_deco_hay_bale_01\t003_outdoor  *  ['2014/04/02  16:22           269,664 deco_hay_bale_01.mb']
+
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140403\065_s01_deco_barrow_01\t003_outdoor_01_peat  *  ['2014/04/02  16:55           225,656 s01_deco_barrow_01.mb']
+
+ 
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140403\069_s05_deco_tavern_bench_01\t003_outdoor_05_merchant  *  ['2014/04/02  17:19           145,848 s05_deco_tavern_bench_01.mb']
+
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140403\071_s05_stationery_note_var_01\t003_outdoor_05_merchant  *  ['2014/04/02  17:54           147,716 s05_stationery_note_var_01.mb']
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140403\072_s05_stationery_pile\t003_outdoor_05_merchant  *  ['2014/04/02  18:03           195,536 s05_stationery_pile.mb']
+
+
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140403\181_deco_leg_01\t009_dwarf_dark  *  ['2014/03/27  11:59           286,072 deco_leg_01.mb']
+
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140403\183_deco_dragon_head_02\t009_dwarf_dark_factory  *  ['2014/04/03  10:57           185,368 deco_dragon_head_02.mb']
+
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140416\003_m003_deco_bookshelf_02\m003_palace_northlands  *  ['2014/04/16  10:05           456,844 m003_deco_bookshelf_02.mb']
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140416\004_m004_deco_egg_01\m004_spiders  *  ['2014/04/16  14:55           365,884 m004_deco_egg_01.mb']
+
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140416\011_m006_veg_mushroom_06\m006_imperial_lava  *  ['2014/04/16  10:28           127,912 m006_veg_mushroom_06.mb']
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140416\012_m007_deco_pot_01\m007_atlantis_hub  *  ['2014/04/16  10:33           170,840 m007_deco_pot_01.mb']
+
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140416\017_m007_deco_marktstand_02\m007_atlantis_hub  *  ['2014/04/16  10:39           169,800 m007_deco_marktstand_02.mb']
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140416\019_m007_deco_vase_01\m007_atlantis_hub  *  ['2014/04/16  10:43           203,708 m007_deco_vase_01.mb']
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140416\024_m007_seat_old_02\m007_atlantis_hub  *  ['2014/04/16  10:50           158,988 m007_seat_old_02.mb']
+
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140416\027_m007_table_02\m007_atlantis_hub  *  ['2014/04/16  10:57           142,304 m007_table_02.mb']
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140416\030_m010_deco_engineer_leftleg_intact\m010_dwarf_battlefield  *  ['2014/04/16  11:04           331,396 m010_deco_engineer_leftleg_intact.mb']
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140416\031_m010_deco_engineer_rightleg_intact\m010_dwarf_battlefield  *  ['2014/04/16  11:13           329,616 m010_deco_engineer_rightleg_intact.mb']
+
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140416\043_s10_deco_troll_totem_01\t003_outdoor_10_wilderness  *  ['2014/04/16  13:12           574,332 s10_deco_troll_totem_01.mb']
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140416\061_tile_pier_railing_03\t003_outdoor  *  ['2014/04/16  13:20           127,028 tile_pier_railing_03.mb']
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140416\066_s01_deco_peatpack_03\t003_outdoor_01_peat  *  ['2014/04/16  13:29           181,216 s01_deco_peatpack_03.mb']
+
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140416\076_s05_stationery_vase_02_var_01\t003_outdoor_05_merchant  *  ['2014/04/16  14:26           160,408 s05_stationery_vase_02_var_01.mb']
+
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140418\085_deco_mushroom_green_04\t004_cave  *  ['2014/04/18  11:38           120,224 deco_mushroom_green_04.mb']
+
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140418\091_s03_deco_junk_05\t004_cave_03_witchcraft  *  ['2014/04/18  13:29           177,220 s03_deco_junk_05.mb']
+
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140418\095_deco_fence_01\t005_northlands_coast  *  ['2014/04/18  14:27           131,280 deco_fence_01.mb']
+
+ 
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140418\098_deco_ice_crystal_05\t005_northlands_coast  *  ['2014/04/18  14:48           202,316 deco_ice_crystal_05.mb']
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140418\099_veg_tree_spruce_07\t005_northlands_coast  *  ['2014/04/18  14:54           108,752 veg_tree_spruce_07.mb']
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140421\103_deco_carrier_01\t005_northlands_coast  *  ['2014/04/21  10:34           215,140 deco_carrier_01.mb']
+
+
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140421\106_s04_deco_ice_cadaver_02\t005_northlands_coast_04_corpses  *  ['2014/04/21  13:25           574,576 s04_deco_ice_cadaver_02.mb']
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140421\107_s04_deco_ice_deadking_01\t005_northlands_coast_04_corpses  *  ['2014/04/21  13:18           834,356 s04_deco_ice_deadking_01.mb']
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140421\108_s04_deco_ice_lich_01\t005_northlands_coast_04_corpses  *  ['2014/04/21  13:23           393,944 s04_deco_ice_lich_01.mb']
+
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140421\116_s04_deco_ice_stiff_06\t005_northlands_coast_04_corpses  *  ['2014/04/21  17:41           440,176 s04_deco_ice_stiff_06.mb']
+
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140421\151_deco_temple_pillar_broken_03\t007_atlantis  *  ['2014/04/21  13:51           125,548 deco_temple_pillar_broken_03.mb']
+
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140421\155_house_pillar_02_var_02\t007_atlantis  *  ['2014/04/21  14:02           191,496 house_pillar_02_var_02.mb']
+
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140421\164_deco_petrified_atlantide_10\t007_atlantis  *  ['2014/04/21  15:37           659,796 deco_petrified_atlantide_10.mb']
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140421\165_deco_petrified_human_01\t007_atlantis  *  ['2014/04/21  15:48           471,968 deco_petrified_human_01.mb']
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140421\166_deco_scroll_podium\t007_atlantis  *  ['2014/04/21  15:53           106,724 deco_scroll_podium.mb']
+
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140421\168_deco_snail_02\t007_atlantis  *  ['2014/04/21  16:02           135,116 deco_snail_02.mb']
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140421\169_deco_throne_01\t007_atlantis  *  ['2014/04/21  16:05           562,652 deco_throne_01.mb']
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140421\170_deco_travelpoint_01\t007_atlantis  *  ['2014/04/21  16:07           130,784 deco_travelpoint_01.mb']
+
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140421\172_deco_barrel_02\t008_dwarf_dale  *  ['2014/04/21  16:32           157,988 deco_barrel_02.mb']
+
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140421\176_deco_shnowdwarf_01\t008_dwarf_dale  *  ['2014/04/21  16:57           187,516 deco_shnowdwarf_01.mb']
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140421\178_deco_icicle_03\t008_dwarf_dale_snow  *  ['2014/04/21  17:04           133,880 deco_icicle_03.mb']
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140421\179_deco_box_01\t009_dwarf_dark  *  ['2014/04/21  17:08           115,356 deco_box_01.mb']
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140421\180_deco_chest_01\t009_dwarf_dark  *  ['2014/04/21  17:11           133,628 deco_chest_01.mb']
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140421\182_deco_transporter_01\t009_dwarf_dark  *  ['2014/04/21  17:21           203,632 deco_transporter_01.mb']
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140425\118_deco_cart_01\t006_imperial_isle  *  ['2014/04/25  10:52           121,912 deco_cart_01.mb']
+
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140425\124_deco_ruins_small_end_02\t006_imperial_isle  *  ['2014/04/25  13:37           106,024 deco_ruins_small_end_02.mb']
+
+
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140425\127_deco_wine_barrel_02\t006_imperial_isle  *  ['2014/04/25  14:59           140,480 deco_wine_barrel_02.mb']
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140425\132_deco_blocker_01\t006_imperial_isle  *  ['2014/04/25  15:05           158,276 deco_blocker_01.mb']
+
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140425\139_deco_lattice_15\t006_imperial_isle  *  ['2014/04/25  15:10           197,312 deco_lattice_15.mb']
+
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140425\142_deco_palace_pots_03\t006_imperial_isle  *  ['2014/04/25  15:52           148,844 deco_palace_pots_03.mb']
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140425\144_deco_totem_banner_01\t006_imperial_isle  *  ['2014/04/25  15:59           238,012 deco_totem_banner_01.mb']
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140425\145_deco_petrified_cyclops_01\t007_atlantis  *  ['2014/04/25  16:24           859,108 deco_petrified_cyclops_01.mb']
+ F:\Producer_Backup_20150429\Art\Bigpoint\drasa_online\20140425\146_deco_petrified_gorgon_01\t007_atlantis  *  ['2014/04/25  16:43           424,680 deco_petrified_gorgon_01.mb']
+
+ F:\Producer_Backup_20150429\Art\Bigpoint\DSO\2013_12_04\rabbit n chicken\rabbit  *  ['2013/12/04  18:34           108,296 rabbit.mb']
+ F:\Producer_Backup_20150429\Art\Bigpoint\DSO\2013_12_18\fat demon  *  [' 2013/12/18  16:42        22,879,658 fat demon.psd', ' 2013/12/18  17:28           617,202 fat demon_bump.psd', ' 2013/12/18  17:28           718,730 fat demon_color.psd', ' 2013/12/18  17:28           325,679 fat demon_spec.psd', '   2013/12/17  17:26           786,476 fat demon_bump.tga', ' 2013/12/18  16:37           786,476 fat demon_color.tga', ' 2013/12/18  16:36           786,476 fat demon_spec.tga']
+ F:\Producer_Backup_20150429\Art\Bigpoint\DSO\2013_12_18\weapon\buckler  *  [' 2013/12/18  17:52        12,253,924 buckler.psd', ' 2013/12/18  18:05           384,723 buckler_bump.psd', ' 2013/12/18  18:03         1,468,070 buckler_color.psd', ' 2013/12/18  18:07           512,540 buckler_spec.psd', '   2013/12/18  18:04           786,476 buckler_bump.tga', ' 2013/12/18  18:03           786,476 buckler_color.tga', ' 2013/12/18  18:02           786,476 buckler_spec.tga']
+ F:\Producer_Backup_20150429\Art\Bigpoint\DSO\2013_12_18\weapon\pistol  *  [' 2013/12/18  18:04       107,434,697 pistol.psd', ' 2013/12/18  17:59           644,864 pistol_bump.psd', ' 2013/12/18  17:58           801,334 pistol_color.psd', ' 2013/12/18  17:58           262,073 pistol_spec.psd', '   2013/12/18  17:34           786,476 pistol_bump.tga', ' 2013/12/18  17:29           786,476 pistol_color.tga', ' 2013/12/18  17:50           786,476 pistol_spec.tga']
+ F:\Producer_Backup_20150429\Art\Bigpoint\DSO\2013_12_18\weapon\rifle  *  [' 2013/12/18  18:01        45,711,134 rifle.psd', ' 2013/12/18  18:02         1,605,510 rifle_color.psd', ' 2013/12/18  18:02         1,247,163 rifle_normal.psd', ' 2013/12/18  18:02           572,414 rifle_spec.psd', '   2013/12/18  17:27           786,476 rifle_color.tga', ' 2013/12/18  16:28           786,476 rifle_normal.tga', ' 2013/12/18  17:58           786,476 rifle_spec.tga']
+ F:\Producer_Backup_20150429\Art\Bigpoint\DSO\2013_12_18\weapon\tool  *  [' 2013/12/18  17:52        16,553,398 tool.psd', ' 2013/12/18  18:09           597,103 tool_bump.psd', ' 2013/12/18  18:10           757,840 tool_color.psd', ' 2013/12/18  18:06           418,923 tool_spec.psd', '   2013/12/18  18:08           786,476 tool_bump.tga', ' 2013/12/18  18:09           786,476 tool_color.tga', ' 2013/12/18  18:08           786,476 tool_spec.tga']
+
+
+
+ F:\Producer_Backup_20150429\Art\Bigpoint\DSO\2014_06_25\ranger_male_beard_03  *  ['2014/06/24  10:37           119,128 ranger_male_beard_03.mb',' 2014/06/16  09:23           504,629 ranger_male_beard_03_bump.psd', ' 2014/06/15  16:33         3,491,376 ranger_male_beard_03_color.psd', ' 2014/06/24  15:44           288,921 ranger_male_beard_03_spec.psd', '   2014/06/25  00:06            86,435 ranger_male_beard_03.jpg']
+
+ F:\Producer_Backup_20150429\Art\Bigpoint\DSO\2014_06_25\ranger_male_hair_03  *  ['2014/06/19  10:22           140,540 ranger_male_hair_03.mb']
+
+ F:\Producer_Backup_20150429\Art\Bigpoint\DSO\2014_06_25\warrior_female_hair_05  *  ['2014/06/24  10:08           132,392 warrior_female_hair_05.mb',' 2014/06/24  03:51           596,084 warrior_female_hair_05_bunp.psd', ' 2014/06/24  03:48         3,019,459 warrior_female_hair_05_color.psd', ' 2014/06/24  03:53           215,183 warrior_female_hair_05_spec.psd', '   2014/06/24  03:57            98,427 warrior_female_hair_05.jpg']
+
+ F:\Producer_Backup_20150429\Art\Bigpoint\DSO\2014_06_25\warrior_male_beard_03  *  ['2014/06/20  02:42           118,532 warrior_male_beard_03.mb',' 2014/06/17  01:00           663,239 warrior_male_beard_03_bump.psd', ' 2014/06/16  22:26         3,500,198 warrior_male_beard_03_color.psd', ' 2014/06/17  01:03           240,458 warrior_male_beard_03_spec.psd', '   2014/06/19  10:26            96,683 warrior_male_beard_03.jpg']
+
+ F:\Producer_Backup_20150429\Art\Bigpoint\DSO\2014_06_25\warrior_male_hair_03  *  ['2014/06/24  14:09            96,388 warrior_male_hair_03.mb',' 2014/06/22  12:20           612,594 warrior_male_hair_03_bump.psd', ' 2014/06/22  04:19         5,092,674 warrior_male_hair_03_color.psd', ' 2014/06/22  12:19           252,152 warrior_male_hair_03_spec.psd', '   2014/06/22  12:25            95,386 warrior_male_hair_03.jpg']
+
+ F:\Producer_Backup_20150429\Art\Bigpoint\DSO\2014_07_14\mage_female_hair_04  *  ['2014/07/03  23:43           104,176 mage_female_hair_04.mb',' 2014/07/04  17:08           620,302 mage_female_hair_04_bump.psd', ' 2014/07/04  17:06         4,384,886 mage_female_hair_04_color.psd', ' 2014/07/04  17:08           239,487 mage_female_hair_04_spec.psd', '   2014/07/04  17:13           100,452 mage_female_hair_04.jpg']
+
+ F:\Producer_Backup_20150429\Art\Bigpoint\DSO\2014_07_14\mage_male_beard_03  *  ['2014/07/04  23:13            97,244 mage_male_beard_03.mb',' 2014/07/04  23:11           450,237 mage_male_beard_03_bump.psd', ' 2014/07/04  23:04         2,652,217 mage_male_beard_03_color.psd', ' 2014/07/04  23:10           147,659 mage_male_beard_03_spec.psd', '   2014/07/04  23:15            75,073 mage_male_beard_03.jpg']
+
+ F:\Producer_Backup_20150429\Art\Bigpoint\DSO\2014_07_14\mage_male_hair_03  *  ['2014/07/06  00:02           110,936 mage_male_hair_03.mb',' 2014/07/11  16:09           676,467 mage_male_hair_03_screenshot.JPG', '   2014/05/11  12:55           393,260 mage_male_hair_03_bump.tga', ' 2014/07/11  15:55           524,332 mage_male_hair_03_color.TGA', ' 2014/05/13  01:47           393,260 mage_male_hair_03_spec.tga']
+
+
+ F:\Producer_Backup_20150429\Art\Bigpoint\DSO\2014_07_14\npc_male_beard_11  *  ['2014/07/14  00:54           193,168 npc_male_beard_11.mb']
+
+
+ F:\Producer_Backup_20150429\Art\Bigpoint\DSO\2014_07_14\ranger_female_hair_05  *  ['2014/07/05  00:08           105,920 ranger_female_hair_05.mb',' 2014/06/24  03:52           596,084 ranger_female_hair_05_bunp.psd', ' 2014/07/04  23:59         3,215,434 ranger_female_hair_05_color.psd', ' 2014/06/24  03:53           215,183 ranger_female_hair_05_spec.psd', '   2014/07/05  00:08            98,877 ranger_female_hair_05.jpg']
+
+
+ F:\Producer_Backup_20150429\Art\Bigpoint\DSO\2014_07_21\npc_king_beard_01  *  ['2014/07/21  01:35           467,780 npc_king_beard_01.mb']
+ F:\Producer_Backup_20150429\Art\Bigpoint\DSO\2014_07_21\npc_king_hair_01  *  ['2014/07/21  01:32            73,472 npc_king_hair_01.mb']
+
+ F:\Producer_Backup_20150429\Art\Bigpoint\DSO\2014_07_21\npc_male_hair_21  *  ['2014/07/16  17:56            86,152 npc_male_hair_21.mb']
+ F:\Producer_Backup_20150429\Art\Bigpoint\DSO\2014_07_21\npc_princealdret_hair_00  *  ['2014/07/20  15:26            87,176 npc_prince_aldret_hair_00.mb']
+ F:\Producer_Backup_20150429\Art\Bigpoint\DSO\2014_07_21\npc_prince_aldret_beard_00  *  ['2014/07/20  11:55            72,840 npc_prince_aldret_beard_00.mb']
+ F:\Producer_Backup_20150429\Art\Bigpoint\DSO\2014_07_21\npc_tailor_beard_01  *  ['2014/07/21  01:33            97,828 npc_tailor_beard_01.mb']
+ F:\Producer_Backup_20150429\Art\Bigpoint\DSO\2014_07_30\npc_easter2012_merchant_ambassador_beard  *  ['2014/07/21  01:55            80,744 npc_easter2012_merchant_ambassador_beard.mb']
+ F:\Producer_Backup_20150429\Art\Bigpoint\DSO\2014_07_30\npc_female_hair_09  *  ['2014/07/30  10:12            85,632 npc_female_hair_09.mb']
+ F:\Producer_Backup_20150429\Art\Bigpoint\DSO\2014_08_12\npc_easter2012_merchant_ambassador_hair  *  ['2014/08/12  16:04        13,149,436 npc_easter2012_merchant_ambassador_hair.mb']
+ F:\Producer_Backup_20150429\Art\Bigpoint\Merc\20140410\berserk\model  *  ['2014/04/10  18:22            97,724 berserkweapon_01.mb', '2014/04/10  18:20           291,660 berserk_01.mb']
+
+
+ F:\Producer_Backup_20150429\Art\Capcom\20140826\Milestone1\player_weapon\lbg111\Models  *  ['2014/08/13  10:21           292,668 lbg111.mb']
+
+ F:\Producer_Backup_20150429\Art\Daqri\2014_09_03\Three-Headed Dragon  *  [' 2014/08/27  15:39       128,525,284 Three-Headed Dragon.ZTL', '   2014/09/03  15:24           696,286 Three-Headed Dragon.jpg']
+
+ F:\Producer_Backup_20150429\Art\Daqri\2014_09_05\Aquatic Dragon  *  [' 2014/08/22  10:26       512,209,416 Aquatic Dragon.ZTL', '   2014/09/05  15:28           705,390 Aquatic  Dragon.jpg', ' 2014/08/22  10:36           277,814 Aquatic Dragon.jpg']
+ F:\Producer_Backup_20150429\Art\Daqri\2014_09_09  *  ['2014/09/09  16:12         4,049,940 ice_breathing_ Extended Idle.mb', '2014/09/09  16:10         4,021,876 ice_breathing_Iidle.mb']
+
+ F:\Producer_Backup_20150429\Art\Daqri\2014_09_12\Animation\Ice-Breathing Dragon  *  ['2014/09/13  09:12         4,852,104 Ice-Breathing Dragon.mb']
+
+
+
+ F:\Producer_Backup_20150429\Art\Daqri\2014_10_13\Animation\Knight  *  ['2014/10/13  11:40         3,485,496 Knight.mb', '2014/09/29  14:43         1,870,872 Knight_Rig.mb']
+
+ F:\Producer_Backup_20150429\Art\Daqri\2014_10_14\Chimera  *  ['2014/10/14  17:48         8,008,728 Chimera.mb', '2014/09/23  17:57         4,251,476 Chimera_Rig.mb']
+ F:\Producer_Backup_20150429\Art\Daqri\2014_10_14\Gargoyle  *  ['2014/10/14  18:00         5,907,616 Gargoyle.mb', '2014/09/23  17:11         2,971,084 Gargoyle_Rig.mb']
+
+
+
+
+ F:\Producer_Backup_20150429\Art\Daqri\2014_10_16\Three_Headed Dragon  *  ['2014/10/16  11:34         4,646,208 Three_Headed Dragon.mb', '2014/10/16  11:49         2,803,648 Three_Headed Dragon_Rig.mb']
+
+
+
+ F:\Producer_Backup_20150429\Art\Daqri\2014_10_20\Animation\Fire Breathing Dragon  *  ['2014/10/20  18:17         4,663,220 Fire-breathing Dragon.mb', '2014/10/17  14:34         2,704,684 Fire-Breathing Dragon_rig.mb']
+ F:\Producer_Backup_20150429\Art\Daqri\2014_10_20\Animation\Phoenix  *  ['2014/10/20  17:56         5,151,616 Phoenix.mb', '2014/10/20  13:42         2,544,512 Phoenix_Rig.mb']
+ F:\Producer_Backup_20150429\Art\Daqri\2014_10_20\Animation\Wizard  *  ['2014/10/20  14:15         4,371,836 Wizard.mb', '2014/10/16  17:34         3,207,436 Wizard_Rig.mb']
+
+ F:\Producer_Backup_20150429\Art\Daqri\2014_10_21\Barbie-9  *  ['2014/10/21  15:21         2,321,068 Barbie-9.mb']
+ F:\Producer_Backup_20150429\Art\Daqri\2014_10_21\Griffon  *  ['2014/10/21  18:00         3,885,064 Griffon.mb', '2014/10/14  16:11         2,345,256 Griffon_Rig.mb']
+
+ F:\Producer_Backup_20150429\Art\Daqri\2014_10_21\Kraken  *  ['2014/10/21  09:39         5,008,996 Kraken.mb', '2014/10/16  13:41         3,093,488 Kraken_Rig.mb']
+ F:\Producer_Backup_20150429\Art\Daqri\2014_10_21\Medusa  *  ['2014/10/21  18:08         5,401,020 Medusa.mb', '2014/09/26  17:34         2,864,872 Medusa_Rig.mb']
+ F:\Producer_Backup_20150429\Art\Daqri\2014_10_22\Horse  *  ['2014/10/22  13:45         3,555,504 Horse.mb', '2014/10/22  14:16         2,595,900 Horse_rig.mb']
+ F:\Producer_Backup_20150429\Art\Mixamo\20130703\gear_flower_3  *  ['2013/07/03  19:21           282,384 gear_flower_3.mb']
+
+ F:\Producer_Backup_20150429\Art\Mixamo\20130719\character-firefly turn  *  ['2013/07/19  16:20           644,172 character-firefly turn.mb']
+
+ F:\Producer_Backup_20150429\Art\Mixamo\20130722\character-girl turn  *  [' 2013/07/23  14:56        10,905,266 HHH.ma']
+
+
+ F:\Producer_Backup_20150429\Art\Mixamo\20130813\Standard Male  *  ['2013/08/13  13:25       132,536,828 Standard Male_blendshapes.mb']
+ F:\Producer_Backup_20150429\Art\Mixamo\20130813\Standard_Female  *  ['2013/08/13  17:59        64,655,072 Standard_Female_blendshapes.mb']
+
+ F:\Producer_Backup_20150429\Art\Zynga\ZooVille\2012_03_28\Zoo_PandaAdult_Ortho  *  [' 2012/03/28  13:11           198,759 Zoo_PandaAdult_Ortho.ma', '   2012/03/28  17:53         7,576,672 Zoo_PandaAdult_Ortho.psd', '   2012/03/28  18:19         1,048,620 Zoo_PandaAdult_Ortho.tga']
+ F:\Producer_Backup_20150429\Art\腾讯\天天飞车\2014_09_01\甄姬  *  ['2014/09/01  13:29         7,232,632 甄姬.mb']
+ F:\Producer_Backup_20150429\Art\腾讯\微和\20140730\16两座跑车\2zuopao\scenes  *  ['2014/07/25  17:47         5,059,228 2zuo_yellow.mb']
+ F:\Producer_Backup_20150429\Art\腾讯\微和\20140730\19普通战斗机\wh_feiji\scenes  *  ['2014/06/11  16:34           474,904 wh_feiji002_ai_003.mb', '2014/07/17  09:22           480,216 wh_feiji002_ai_black.mb', '2014/07/17  09:58           475,280 wh_feiji002_ai_zise.mb']
+ F:\Producer_Backup_20150429\Art\腾讯\微和\20140730\20机器人\wh_jiqiren\scenes  *  ['2014/06/04  20:06           471,144 wh_jiqirenfasheqi_ai_001.mb', '2014/07/17  11:24           474,944 wh_jiqirenfasheqi_green.mb', '2014/07/17  12:00           474,956 wh_jiqirenfasheqi_purple.mb']
+ F:\Producer_Backup_20150429\Art\腾讯\微和\20140730\21短管坦克\wh_tanke\scenes  *  ['2014/06/11  16:30           531,828 wh_tanke_ani.mb', '2014/07/17  13:25           533,184 wh_tanke_ani2.mb', '2014/07/17  14:08           533,416 wh_tanke_yellow.mb']
+ F:\Producer_Backup_20150429\Art\腾讯\微和\20140730\22蜜蜂\wh_mifen\scenes  *  ['2014/06/10  10:00           814,136 wh_mifeng011_ai_tx.mb', '2014/07/16  11:28           818,040 wh_mifeng012_ai_tx.mb', '2014/07/16  11:41           818,124 wh_mifeng013_ai_tx.mb', '2014/07/17  15:09           820,408 wh_mifeng_green.mb', '2014/07/17  14:47           820,568 wh_mifeng_pink.mb', '2014/07/21  13:59           820,748 wh_mifeng_purple.mb']
+ F:\Producer_Backup_20150429\Art\腾讯\微和\20140730\23飞毯\wh_Feitan\scenes  *  ['2014/07/22  16:45         3,552,856 FeiTan009_tx_huangise.mb', '2014/07/21  16:31         3,553,284 FeiTan009_tx_zise.mb']
+ F:\Producer_Backup_20150429\Art\腾讯\微和\20140730\24食人花\wh_shirenhua\scenes  *  ['2014/07/21  14:46         1,126,212 wh_Piranha_02.mb', '2014/07/21  15:48         1,126,288 wh_Piranha_03.mb', '2014/07/21  15:42         1,126,196 wh_Piranha_04.mb', '2014/07/21  15:59         1,165,012 wh_Piranha_tu_huangse.mb', '2014/07/21  16:10         1,185,216 wh_Piranha_tu_lanse.mb', '2014/07/21  16:05         1,175,080 wh_Piranha_tu_zise.mb']
+ F:\Producer_Backup_20150429\Art\腾讯\微和\20140730\25史莱姆\wh_shilaimu\scenes  *  ['2014/07/21  14:21           617,076 LvSeGuai_008.mb', '2014/07/21  14:27           616,944 LvSeGuai_009.mb', '2014/07/21  14:47           617,000 LvSeGuai_010.mb']
+ F:\Producer_Backup_20150429\Art\腾讯\微和\20140730\26矿车\wh_caikuangche\sences  *  ['2014/06/11  18:02           651,976 MineCar_an_005.mb', '2014/07/24  19:01           630,948 MineCar_an_006_green.mb', '2014/07/24  15:33           630,940 MineCar_an_006_red.mb']
+ F:\Producer_Backup_20150429\Art\腾讯\微和\20140730\27UFO\wh_UFO\Scenes  *  ['2014/06/12  19:34           961,868 UFO03.mb', '2014/07/24  19:52           965,244 UFO_gold.mb', '2014/07/24  20:02           965,244 UFO_gray.mb']
+ F:\Producer_Backup_20150429\Art\腾讯\微和\20140730\28螃蟹\wh_pangxie\scenes  *  ['2014/06/09  14:14           607,500 WH_pangxie_mo_ai02.mb', '2014/07/24  20:24           623,620 WH_pangxie_purple.mb']
+ F:\Producer_Backup_20150429\Art\腾讯\微和\20140730\29小魔鬼\wh_xiaomogui\scenes  *  ['2014/06/09  21:27           866,892 wh_xiaomogui.mb', '2014/07/24  20:38           892,984 wh_xiaomogui_black.mb', '2014/07/24  20:44           893,000 wh_xiaomogui_red.mb']
+ F:\Producer_Backup_20150429\Art\腾讯\微和\20140730\30云\wh_yun\scenes  *  ['2014/06/10  15:53           515,688 WH_yun_an_004.mb', '2014/07/24  21:19           526,184 WH_yun_an_pink.mb', '2014/07/24  21:32           526,184 WH_yun_an_yellow.mb']
+
+
+
+
+ F:\Producer_Backup_20150429\Art\腾讯\炫斗\3D角色\2014_03_27\布雷泽D\Model  *  ['2014/03/27  18:04         2,083,500 布雷泽D.mb']
+
+
+ F:\Producer_Backup_20150429\Art\腾讯\炫斗\3D角色\最终文件\buleze_D\Model  *  [' 2014/03/20  18:31        90,260,617 buleze_04.ZTL']
+ F:\Producer_Backup_20150429\Art\腾讯\炫斗\3D角色\最终文件\cangmuxun_C\Model  *  [' 2014/03/11  15:45        58,695,222 cangmuxun_C.ZTL', ' 2014/03/11  18:59        17,100,110 weapon.ZTL']
+ F:\Producer_Backup_20150429\Art\腾讯\炫斗\3D角色\最终文件\new_blue\Model  *  ['2014/03/12  14:42         3,932,268 new_blue.mb']
+ F:\Producer_Backup_20150429\Art\腾讯\炫斗\3D角色\最终文件\女法师\Model  *  ['2014/03/21  17:31         2,984,212 nvfashi.mb']
+ F:\Producer_Backup_20150429\Art\腾讯\炫斗\3D角色\最终文件\蛇吻  *  [' 2014/02/17  18:20       207,915,029 shewen.ZTL']
+
+
+ 
+ F:\Producer_Backup_20150429\Art\腾讯\魔方预研角色\2014_09_15\六七月\叶老板pose\yelaoban_pose\scenes  *  ['2014/07/28  09:11        65,341,496 pose_render5.mb']
+ F:\Producer_Backup_20150429\Art\腾讯\魔方预研角色\2014_09_15\六七月\女主发型\Boy&Girl\scenes  *  ['2014/07/11  14:35        51,636,528 girl_rig_new.mb']
+ F:\Producer_Backup_20150429\Art\腾讯\魔方预研角色\2014_09_15\六七月\小丑\xiaochou_final\scenes  *  ['2014/06/04  18:36         9,090,672 xiaochou.mb']
+ F:\Producer_Backup_20150429\Art\腾讯\魔方预研角色\2014_09_15\六七月\男女主pose\Boy&Girl\scenes  *  ['2014/07/15  17:45       149,112,776 boy_pose1_v5.mb', '2014/07/15  16:38       200,670,564 boy_pose2_v5.mb', '2014/07/16  17:33       135,893,484 boy_pose3_v6.mb', '2014/07/10  09:05       147,785,448 boy_rig_new.mb', '2014/07/15  17:31        52,645,084 girl_pose1_v5.mb', '2014/07/15  16:26        52,568,148 girl_pose2_v5.mb', '2014/07/16  18:02        49,350,436 girl_pose3_v5.mb', '2014/07/11  14:35        51,636,528 girl_rig_new.mb']
+ F:\Producer_Backup_20150429\CG\PremiumAgency\PSSH\2013_09_13\Reference\Chara\ABD\scenes  *  ['2013/09/13  13:57         5,634,868 ABD.mb']
+ F:\Producer_Backup_20150429\CG\PremiumAgency\PSSH\2013_09_13\Reference\Chara\CHA\scenes  *  ['2013/09/13  17:08        17,930,744 CHA.mb']
+
+ F:\Producer_Backup_20150429\CG\PremiumAgency\PSSH\2013_09_13\Reference\Chara\FLR\scenes  *  ['2013/09/12  11:52         1,548,568 FLR.mb']
+
+ F:\Producer_Backup_20150429\CG\PremiumAgency\PSSH\2013_11_01\Reference\Chara\CRP\scenes\temp  *  ['2013/09/06  12:43           788,908 CRP.mb']
+ F:\Producer_Backup_20150429\CG\PremiumAgency\PSSH\2013_11_05  *  [' 2013/11/05  16:10            45,675 CRP_C01_A01_POLY.ma', ' 2013/11/05  15:47        95,620,470 CRP_C02_A02.ma', ' 2013/11/05  16:04            33,607 CRP_C02_A02_POLY.ma']
+ F:\Producer_Backup_20150429\CG\PremiumAgency\PSSH\2013_11_05\2013.11.05\maya  *  [' 2013/11/05  18:36       111,099,217 N_REN_GAKE_C012_A01.ma']
+ F:\Producer_Backup_20150429\CG\PremiumAgency\PSSH\2013_11_13  *  [' 2013/11/13  17:38         1,079,149 CRP_instance.ma']
+
+ F:\Producer_Backup_20150429\CG\PremiumAgency\（寂静岭）品质修正\提交\2014_03_21\N_REN_GAKE_MAYA\Reference\BG\bgCLI\scenes  *  ['2013/12/16  14:36     1,267,766,608 bgCLI_C011_clear.mb', '2013/12/16  14:41     1,267,538,364 bgCLI_C012_clear.mb', '2013/12/19  16:39     1,267,292,736 bgCLI_C012_clear_Smooth.mb', '2013/12/16  14:44     1,267,970,416 bgCLI_C014_clear.mb', '2013/12/12  10:42     1,267,969,796 bgCLI_C01C07C010C013_new_clear.mb', '2013/12/17  16:29     1,267,979,968 bgCLI_C01C07C010C013_new_clear_Smooth.mb', '2013/11/15  18:36     1,271,117,788 bgCLI_C02_new.mb', '2013/12/12  13:38     1,268,270,568 bgCLI_C02_new_clear.mb', '2013/12/13  14:36     1,269,936,340 bgCLI_C03_new_clear.mb', '2013/12/14  14:08     1,267,765,868 bgCLI_C05C06_clear.mb', '2013/12/17  18:02       215,773,312 bgCLI_C08_clear.mb', '2013/12/16  14:35     1,267,929,312 bgCLI_C09_clear.mb', '2013/12/18  13:36     1,267,939,196 bgCLI_C09_clear_Smooth.mb']
+ F:\Producer_Backup_20150429\CG\PremiumAgency\（寂静岭）品质修正\提交\2014_05_29\N_REN_GAKE\Reference\BG\bgCLI\scenes  *  ['2013/12/16  14:36     1,267,766,608 bgCLI_C011_clear.mb', '2013/12/16  14:41     1,267,538,364 bgCLI_C012_clear.mb', '2013/12/19  16:39     1,267,292,736 bgCLI_C012_clear_Smooth.mb', '2013/12/16  14:44     1,267,970,416 bgCLI_C014_clear.mb', '2013/12/12  10:42     1,267,969,796 bgCLI_C01C07C010C013_new_clear.mb', '2013/12/17  16:29     1,267,979,968 bgCLI_C01C07C010C013_new_clear_Smooth.mb', '2013/12/12  13:38     1,268,270,568 bgCLI_C02_new_clear.mb', '2013/12/13  14:36     1,269,936,340 bgCLI_C03_new_clear.mb', '2013/12/14  14:08     1,267,765,868 bgCLI_C05C06_clear.mb', '2013/12/17  18:02       215,773,312 bgCLI_C08_clear.mb', '2013/12/16  14:35     1,267,929,312 bgCLI_C09_clear.mb', '2013/12/18  13:36     1,267,939,196 bgCLI_C09_clear_Smooth.mb']
+ F:\Producer_Backup_20150429\CG\PremiumAgency\（寂静岭）品质修正\提交\2014_05_29\N_REN_GAKE\Reference\BG\Prop\CARc  *  ['2014/05/29  10:08         4,481,940 CARc_C01_fix_clear.mb']
+ F:\Producer_Backup_20150429\CG\PremiumAgency\（寂静岭）品质修正\提交\2014_05_29\N_REN_GAKE\sourceimages  *  [' 2012/07/27  17:09            77,283 Human_Female_90291.eye_bump.jpg', ' 2012/07/31  16:18           179,065 Human_Female_90291.eye_color.jpg', ' 2009/10/12  22:07           124,633 Human_Female_90291_gums_color.jpg', ' 2012/07/10  13:12           148,248 Human_Female_90291_teeth_color.v02.jpg', '   2012/08/02  17:16        50,331,692 Body_Diff.TGA', ' 2012/07/27  17:06        50,331,692 Body_Nor.TGA', ' 2012/07/27  17:05        67,108,908 Body_Spe.tga', ' 2012/07/27  17:09        50,331,692 Coat_Diff.tga', ' 2012/07/27  17:09        50,331,692 Coat_nor.tga', ' 2012/07/27  17:10        50,331,692 Coat_spe.tga', ' 2012/07/27  17:09           786,476 eye_Spe.tga', ' 2012/07/27  17:11        67,108,908 FaceNor.tga', ' 2012/08/03  13:25        50,331,692 face_Diff.TGA', ' 2012/07/27  17:08        50,331,692 face_nor.TGA', ' 2012/08/03  11:05        50,331,692 face_Spe.tga', ' 2012/08/03  16:42        12,582,956 face_Spe_2k.tga', ' 2012/11/19  11:31           236,588 hair_C_bmp_03.tga', ' 2012/07/27  17:08         1,200,044 hair_C_col_01.tga', ' 2012/07/27  17:08         1,200,044 hair_C_col_04.tga', ' 2012/07/27  17:11           900,044 hair_C_spe_01.tga', ' 2010/07/15  17:59           315,436 hair_C_spe_03.tga', ' 2012/07/27  17:11           900,044 hair_C_spe_04.tga', ' 2012/08/03  14:27        67,108,908 Hair_Diff.TGA', ' 2012/07/27  17:06        67,108,908 Hair_Nor.tga', ' 2012/07/27  17:07        67,108,908 Hair_Spe.tga', ' 2012/08/02  17:24        50,331,692 HandCol.tga', ' 2012/07/27  17:12        67,108,908 HandSpe.tga', ' 2012/08/02  09:38        50,331,692 Hand_col.tga', ' 2012/07/27  17:09           786,476 Human_Female_90291.eye_amb.tga', ' 2012/07/27  17:07        50,331,692 Jewelry_ Nor.tga', ' 2012/07/27  17:04        50,331,692 Jewelry_Diff.tga', ' 2012/07/27  17:04        50,331,692 Jewelry_spe.tga', ' 2012/06/13  14:06           786,476 jms_eye_col_v01.tga', ' 2012/06/13  19:36           786,476 jms_eye_ref_v01.tga', ' 2013/11/07  09:44        12,582,956 jms_face_v02_amb.tga', ' 2013/11/12  17:35         8,388,652 jms_face_v02_bump.tga', ' 2013/11/12  17:05        12,582,956 jms_face_v02_spc.tga', ' 2013/11/12  17:04        12,582,956 jms_face_v02_spc_02.tga', ' 2013/01/18  19:36        12,582,956 jms_face_v04_col.tga', ' 2012/05/31  16:45           900,044 jms_hair_kiwa_col.tga', ' 2013/11/11  16:43           900,044 jms_hair_v03_alp.tga', ' 2012/11/19  11:31           236,588 jms_hair_v03_bmp.tga', ' 2012/06/05  14:28           900,044 jms_hair_v03_col.tga', ' 2012/05/30  18:28           900,044 jms_hair_v03_spc.tga', ' 2012/11/19  11:31           900,044 jms_hair_v04_spc.tga', ' 2012/07/26  19:04         3,145,772 jms_hand_col_v02.tga', ' 2012/07/26  19:12         3,145,772 jms_hand_spc_v01.tga', ' 2012/06/04  10:21        12,582,956 jms_jacket_v01_nom.tga', ' 2013/11/07  09:44        27,000,044 jms_jacket_v02_spc.tga', ' 2013/11/07  09:44        27,000,044 jms_jacket_v03_col.tga', ' 2013/11/07  09:43        12,582,956 jms_mouse_v01_spc.tga', ' 2013/11/07  09:43        27,000,044 jms_pants_v01_nom.tga', ' 2013/11/07  09:42        27,000,044 jms_pants_v02_col.tga', ' 2013/11/07  09:42        27,000,044 jms_pants_v02_spc.tga', ' 2013/11/07  09:41        12,582,956 jms_shirts_v01_bmp.tga', ' 2013/11/07  09:41        12,582,956 jms_shirts_v02_col.tga', ' 2013/11/07  09:40        12,582,956 jms_shirts_v02_spc.tga', ' 2013/11/07  09:39        12,582,956 jms_shoes_v01_col.tga', ' 2013/11/07  09:38        12,582,956 jms_shoes_v01_nom.tga', ' 2013/11/07  09:38        12,582,956 jms_shoes_v01_spc.tga', ' 2012/07/27  17:05        12,582,956 mra_face_v02_amb.tga', ' 2012/07/27  17:07        12,582,956 mra_mouse_v01_spc.tga', ' 2012/07/27  17:10        50,331,692 Skirt_Diff.tga', ' 2012/07/27  17:08        50,331,692 Skirt_nor.tga', ' 2012/07/27  17:11        50,331,692 Skirt_spe.tga']
+ F:\Producer_Backup_20150429\CG\PremiumAgency\（寂静岭）品质修正\提交\old\2014_02_12  *  ['2013/12/19  17:28       117,148,520 park_DF_C02_CHA.mb', '2013/12/14  18:41       330,403,040 park_DF_C02_ENV.mb']
+ F:\Producer_Backup_20150429\CG\RIFT\2011_05_04  *  ['2011/05/04  18:29        10,450,812 elf_female.mb']
+ F:\Producer_Backup_20150429\CG\RIFT\2011_05_05\Scenes  *  ['2011/05/05  18:07        36,226,428 Akylios_Highres.mb']
+ F:\Producer_Backup_20150429\CG\RIFT\2011_05_12\high_elf\scenes  *  ['2011/05/12  18:25        15,921,224 high_elf.mb']
+ F:\Producer_Backup_20150429\CG\RIFT\2011_08_09\Eth Mage\scenes  *  ['2011/08/09  18:11        66,438,436 Pose_A_Render.mb', '2011/08/09  18:24        62,500,824 Pose_B_Render.mb', '2011/08/09  18:29        57,689,588 Pose_C_Render.mb']
+ F:\Producer_Backup_20150429\CG\雪狼\MoYing\scenes  *  ['2014/04/23  18:34        14,758,668 moying.mb']
+ F:\Producer_Backup_20150429\CG\雪狼\ShaoYue\scenes  *  ['2014/04/04  09:54        26,571,368 sy_xiugai.mb']
+ F:\Producer_Backup_20150429\CG\雪狼\TieXin\scenes  *  ['2014/03/19  13:50        24,678,908 tiexin_AO.mb', '2014/04/01  18:22        15,338,488 tiexin_model.mb', '2014/04/01  17:43        17,528,080 tiexin_model_render.mb']
+ F:\Producer_Backup_20150429\CG\雪狼\TieXin\scenes\incrementalSave  *  ['2015/10/21  18:26    <DIR>          tiexin_model_render.mb']
+ F:\Producer_Backup_20150429\Producer_Group\Project List\WB test\sample\Sample\scene  *  ['2010/08/12  20:12           420,940 Nimble Costume 3.mb']
+ F:\Producer_Backup_20150429\Producer_Group\Project List\WB test\WB_Test06242010\Example Maya files  *  ['2010/06/10  16:08           110,236 GroundPlane_4_AO.mb', '2010/06/14  18:08         1,591,752 Light_Lowpoly_Garment.mb', '2010/06/10  16:02       305,922,456 Nimble_HighPoly_nude.mb', '2010/06/10  15:56           952,804 Nimble_lowpoly_w_Skeleton.mb']
