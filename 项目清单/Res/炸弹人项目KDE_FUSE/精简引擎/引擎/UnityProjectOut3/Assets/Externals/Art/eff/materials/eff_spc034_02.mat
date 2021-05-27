@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: eff_spc034_02
+  m_Shader: {fileID: 4800000, guid: ebacdf160e7e9c145896b6e2a507b599, type: 3}
+  m_ShaderKeywords: _HX_DISSOLVE_CUTOUT_OFF _HX_DISSOLVE_MAP_UV0
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 3250
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _DissolveMap:
+        m_Texture: {fileID: 2800000, guid: aa8cce75e4a96224b869d0c6587fa306, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 6dba45601d231a24198855c1ec3f13d2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _ColorStrength: 1
+    - _DissolveThreshold: 0.019
+    - _GradientRange: 0.192
+    m_Colors:
+    - _TextureTilingOffset: {r: 1, g: 1, b: 0, a: 0}
+    - _TintColor: {r: 0.6534799, g: 0.7851556, b: 0.8396226, a: 1}

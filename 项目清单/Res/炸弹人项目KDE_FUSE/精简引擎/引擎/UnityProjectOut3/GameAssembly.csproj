@@ -1,0 +1,2066 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <RootNamespace></RootNamespace>
+    <ProjectGuid>{9FEE187D-8C47-5A66-04C2-980CB10A0E14}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AssemblyName>GameAssembly</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <BaseDirectory>.</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;UNITY_2019_4_1;UNITY_2019_4;UNITY_2019;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;PLATFORM_STANDALONE;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_4_6;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_VSTU;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;HX_DEBUG;HX_PROFILE;UNITY_POST_PROCESSING_STACK_V2;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Temp\bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoConfig>true</NoConfig>
+    <NoStdLib>true</NoStdLib>
+    <AddAdditionalExplicitAssemblyReferences>false</AddAdditionalExplicitAssemblyReferences>
+    <ImplicitlyExpandNETStandardFacades>false</ImplicitlyExpandNETStandardFacades>
+    <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <UnityProjectGenerator>Unity/VSTU</UnityProjectGenerator>
+    <UnityProjectGeneratorVersion>4.9.1.0</UnityProjectGeneratorVersion>
+    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
+    <UnityVersion>2019.4.1f1</UnityVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="UnityEngine">
+      <HintPath>D:\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>D:\Unity\Editor\Data\Managed/UnityEditor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Scripts\Game\Controllers\Achievement\BattleAchievementManageHost.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Achievement\BattleAchievementManageHostInner.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Achievement\BattleAchievementMessages.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Achievement\BattleAchievementReceiver.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\AreaGate\AreaGate.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\AreaGate\AreaGateController.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\AreaGate\AreaGateControllerHost.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\AreaGate\AreaGateInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\BattleEffect\BattleEffectController.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\BattleEffect\BattleEffectControllerInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Block\AbstractBlock.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Block\AbstractBlockController.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Block\AbstractBlockControllerInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Block\AbstractBlockControllerMessages.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Block\AbstractBlockControllerPressureDrop.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Block\AbstractBlockInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Block\AbstractBlockSlave.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Block\AbstractBlockSlaveInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Block\BlockAlgorithm\Block.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Block\BlockAlgorithm\BlockAlgorithmFactory.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Block\BlockAlgorithm\Goal.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Block\BlockAlgorithm\IBlockAlgorithm.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Block\BlockAlgorithm\Slope.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Block\BlockController.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Block\BlockControllerHost.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Block\BlockControllerHostInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Block\BlockControllerInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Block\BlockMaster.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Block\BlockMasterInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Block\BlockSkinComposition.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Block\BlockSlave.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Block\BlockSlaveInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Block\Pressure\IPressureAlgorithm.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Block\Pressure\ImmediateAllPressure.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Block\Pressure\PressureAlgorithmFactory.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Block\Pressure\VortexPressure.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Block\PressureBlockMaster.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Block\PressureBlockSlave.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Bomb\AbstractBomb.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Bomb\AbstractBombClient.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Bomb\AbstractBombClientInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Bomb\AbstractBombController.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Bomb\AbstractBombControllerInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Bomb\AbstractBombControllerMessages.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Bomb\AbstractBombInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Bomb\AbstractBombRequest.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Bomb\BombComponent.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Bomb\BombController.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Bomb\BombControllerHost.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Bomb\BombControllerHostInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Bomb\BombControllerHostRequest.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Bomb\BombControllerInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Bomb\BombMaster.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Bomb\BombMasterInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Bomb\BombPreAppear.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Bomb\BombSkinComposition.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Bomb\BombSlave.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Bomb\BombSlaveInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Bomb\BombState\AbstractBombClientStateLift.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Bomb\BombState\AbstractBombClientStatePreAction.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Bomb\BombState\AbstractBombState.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Bomb\BombState\AbstractBombStateLift.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Bomb\BombState\BombMasterStateLift.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Bomb\BombState\BombStateBind.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Bomb\BombState\BombStateFall.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Bomb\BombState\BombStateFly.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Bomb\BombState\BombStatePlaced.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Bomb\BombState\BombStateSlide.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Bomb\BombState\IAbstractBombClientStatusAppliableState.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Bomb\BombType\AbstractBombType.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Bomb\BombType\BombTypeElasticity.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Bomb\BombType\BombTypeNormal.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Bomb\IBombContact.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Bomb\IBombContactController.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Bomb\IBombUser.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Bomb\IBombUserController.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\BomberPass\BattleEvaluationManageHost.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\BomberPass\BattleEvaluationManageHostInner.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\BomberPass\BattleEvaluationMessages.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\BomberPass\BattleEvaluationReceiver.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\BomberPass\BomberPassManageHost.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\BomberPass\BomberPassProgress.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\BomberPass\BomberPassReceiver.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\BomberPass\ChallengeFactory.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\BomberPass\ChallengeManageHost.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\BomberPass\ChallengeManageHostInner.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\BomberPass\ChallengeManageMessages.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\BomberPass\ChallengeReceiver.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Camera\BattleCameraController.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Camera\BattleCameraControllerInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Camera\DemoCameraMove.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Common\AbstractUnitComponent.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Common\AnimEventReceiver.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Common\ApplicationDef.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Common\AreaGateDef.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Common\BattleCommand.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Common\BattleDef.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Common\BattleManageHost.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Common\BlockDef.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Common\BombDef.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Common\BomberPassDef.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Common\CharacterDef.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Common\CollisionEventReceiver.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Common\CutsceneDef.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Common\FireDef.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Common\ICarriageControllerAccessor.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Common\IController.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Common\IControllerAccessor.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Common\ISoundLabelGetter.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Common\ItemDef.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Common\LouieDef.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Common\ObjMove.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Common\ReleaseConditionDef.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Common\RepeatAction.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Common\RewardDef.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Cutscene\Actor\AppearCutActor.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Cutscene\Actor\CutActorBase.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Cutscene\Actor\CutscenePropsInfo.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Cutscene\Actor\VictoryCutActor.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Cutscene\Playables\SoundEffectPlayableAsset.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Cutscene\Playables\SoundEffectPlayableBehaviour.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Cutscene\Sequence\AbstractAppearCutTimeline.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Cutscene\Sequence\AbstractCutTimeline.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Cutscene\Sequence\AbstractCutsceneBase.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Cutscene\Sequence\AppearCutActorTimeline.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Cutscene\Sequence\AppearCutEnvTimeline.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Cutscene\Sequence\AppearCutTimeline.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Cutscene\Sequence\AppearCutUITimeline.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Cutscene\Sequence\AppearCutscene.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Cutscene\Sequence\AppearMultiCutTimeline.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Cutscene\Sequence\AppearSuccessionCutTimeline.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Cutscene\Sequence\VictoryCutscene.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Cutscene\SignalMarker\ResetSpringBonePoseMarker.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Cutscene\TimelineAnalize\TimelineActivationTrackAnalyze.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Cutscene\TimelineAnalize\TimelineAnalyze.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Cutscene\TimelineAnalize\TimelineAnimationTrackAnalyze.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Cutscene\TimelineAnalize\TimelineControlTrackAnalyze.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Cutscene\Widget\AbstractCutsceneEnv.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Cutscene\Widget\AppearCutRenderer.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Cutscene\Widget\AppearCutsceneEnv.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Cutscene\Widget\CameraEventReceiver.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Cutscene\Widget\CutCameraSet.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Cutscene\Widget\CutsceneRenderer.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Cutscene\Widget\GatherColorAndSilhouetteRenderTexture.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Cutscene\Widget\ParentSizeScaleFit.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Cutscene\Widget\ShiftShadowParamController.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Cutscene\Widget\VictoryCutsceneEnv.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Decal\DecalContent\DecalBombBurn.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Decal\DecalController.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Decal\DecalDef.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Decal\DecalMap\DecalMap.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Decal\DecalMap\DecalMapDef.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Decal\DecalMap\DecalMapIndex.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Decal\DecalModule\AutoEndDecalModule.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Decal\DecalModule\DecalSubModule\DecalModuleCurves.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Decal\DecalModule\DecalSubModule\DecalModuleFlexible.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Decal\DecalModule\DecalSubModule\DecalModuleRange.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Decal\DecalModule\FadeFactorScalingDecalModule.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Decal\DecalModule\RandomRotationDecalModule.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Decal\DecalResource.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Decal\Decals\AbstractDecal.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Decal\Decals\AbstractDecalHub.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Decal\Decals\Decal.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Decal\Decals\DecalHub.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Decal\Decals\SimpleDecal.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Decal\Decals\SimpleDecalHub.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Enemy\AbstractEnemy.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Enemy\AbstractEnemyInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Enemy\Controller\EnemyController.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Enemy\Controller\EnemyControllerHost.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Enemy\EnemyDef.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Enemy\EnemyMaster.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Enemy\EnemyMasterInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Enemy\EnemyMessage.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Enemy\EnemySlave.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Enemy\EnemySlaveInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Enemy\EnemyUtils.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Enemy\Skill\AbstractEnemySkillStates.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Enemy\Skill\Eat\AbstractEnemySkillEat.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Enemy\Skill\Eat\EnemyMasterSkillEat.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Enemy\Skill\Eat\EnemySlaveSkillEat.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Enemy\Skill\IEnemySkill.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Enemy\Skill\Rush\AbstractEnemySkillRush.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Enemy\Skill\Rush\EnemyMasterSkillRush.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Enemy\Skill\Rush\EnemySlaveSkillRush.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Enemy\Skill\Shot\AbstractEnemyBullet.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Enemy\Skill\Shot\AbstractEnemySkillShot.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Enemy\Skill\Shot\EnemyMasterSkillShot.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Enemy\Skill\Shot\EnemySlaveSkillShot.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Enemy\State\EnemyMasterState.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Enemy\State\EnemySlaveState.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Environment\BoarderModels.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Environment\EnvArea.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Environment\EnvBorder.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Environment\EnvGate.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Environment\EnvScene.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Environment\EnvSceneInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Fire\AbstractFire.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Fire\AbstractFireController.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Fire\AbstractFireControllerInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Fire\FireController.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Fire\FireControllerHost.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Fire\FireControllerHostInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Fire\FireControllerInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Fire\FireMaster.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Fire\FireMasterInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Fire\FireSlave.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Fire\FireSlaveInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\GamerStats\GamerStatsCtrlHost.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\GamerStats\GamerStatsReceiver.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Input\BattleInput.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Input\BattleInputController.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Item\AbstractItem.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Item\AbstractItemController.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Item\AbstractItemControllerMessages.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Item\AbstractItemInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Item\AbstractItemRequest.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Item\BonusItemReserveProcess.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Item\ItemComponent.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Item\ItemController.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Item\ItemControllerHost.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Item\ItemControllerHostInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Item\ItemControllerInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Item\ItemEffect\ItemEffect.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Item\ItemEffect\ItemEffectChangeBombMax.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Item\ItemEffect\ItemEffectChangeBombType.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Item\ItemEffect\ItemEffectChangeFireFull.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Item\ItemEffect\ItemEffectChangeFirepower.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Item\ItemEffect\ItemEffectChangeKick.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Item\ItemEffect\ItemEffectChangePowerGlove.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Item\ItemEffect\ItemEffectChangePunch.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Item\ItemEffect\ItemEffectChangeSpeedLevel.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Item\ItemEffect\ItemEffectCrystal.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Item\ItemEffect\ItemEffectKey.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Item\ItemEffect\ItemEffectLife.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Item\ItemEffect\ItemEffectLouieEgg.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Item\ItemEffect\ItemEffectSkull.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Item\ItemMaster.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Item\ItemMasterInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Item\ItemSlave.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Item\ItemSlaveInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Item\ItemState\AbstractItemState.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Item\ItemState\ItemSlaveStatePreAction.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Item\ItemState\ItemStateFall.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Item\ItemState\ItemStateFly.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Item\ItemUtils.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Louie\AbstractLouie.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Louie\AbstractLouieClient.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Louie\AbstractLouieClientInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Louie\AbstractLouieClientStates.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Louie\AbstractLouieController.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Louie\AbstractLouieInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Louie\LouieController.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Louie\LouieControllerHost.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Louie\LouieHost.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Louie\LouieHostStates.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Louie\LouieMaster.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Louie\LouieMasterStates.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Louie\LouieMessages.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Louie\LouieSlave.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Louie\LouieSlaveStates.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Louie\Skills\AbstractLouieSkillMessages.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Louie\Skills\AbstractLouieSkillStates.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Louie\Skills\ILouieSkill.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Louie\Skills\SkillHighSpeedDash\AbstractLouieClientSkillHighSpeedDash.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Louie\Skills\SkillHighSpeedDash\AbstractLouieSkillHighSpeedDash.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Louie\Skills\SkillHighSpeedDash\LouieHostSkillHighSpeedDash.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Louie\Skills\SkillHighSpeedDash\LouieMasterSkillHighSpeedDash.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Louie\Skills\SkillHighSpeedDash\LouieSlaveSkillHighSpeedDash.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Map\Map.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Map\MapController.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Map\MapDebug.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Map\MapDef.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Map\MapInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Map\MapLoader.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Map\MapRandomItemDeployProcess.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Map\MapUtils.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\MinionShutter\MinionShutter.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\MinionShutter\MinionShutterControllerHost.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Npc\INpcUnit.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Npc\NPCVision.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Npc\Npc.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Npc\NpcActionFsm.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Npc\NpcController.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Npc\NpcDef.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Npc\NpcJudgeFsm.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\OutOfFieldPlayer\AbstractOutOfFieldPlayer.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\OutOfFieldPlayer\AbstractOutOfFieldPlayerClient.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\OutOfFieldPlayer\AbstractOutOfFieldPlayerClientInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\OutOfFieldPlayer\AbstractOutOfFieldPlayerInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\OutOfFieldPlayer\OutOfFieldPlayerController.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\OutOfFieldPlayer\OutOfFieldPlayerControllerHost.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\OutOfFieldPlayer\OutOfFieldPlayerHost.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\OutOfFieldPlayer\OutOfFieldPlayerHostInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\OutOfFieldPlayer\OutOfFieldPlayerMaster.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\OutOfFieldPlayer\OutOfFieldPlayerMasterInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\OutOfFieldPlayer\OutOfFieldPlayerNetMessages.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\OutOfFieldPlayer\OutOfFieldPlayerSlave.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\AnimStateBehaviour\ResetCharacterPerformanceBehaviour.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\AppealLoader.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\AttachEffectToOtherPlayer.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Boss\PlayerMasterBossBattle.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Castle\AbstractPlayerCastleState.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Castle\AbstractPlayerClientRuleEffectCstlHyper.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Castle\AbstractPlayerRuleEffectCstlHyper.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Castle\Arc\AbstractPlayerClientCastleArc.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Castle\Arc\PlayerHostCastleArc.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Castle\Arc\PlayerMasterCastleArc.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Castle\Arc\PlayerSlaveCastleArc.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Castle\CastleSkillLoader.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Castle\CastleSkillState.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Castle\ICastleSkillState.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Castle\PlayerHostRuleEffectCstlHyper.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Castle\PlayerMasterRuleEffectCstlHyper.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Castle\PlayerRuleEffect.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Castle\PlayerSlaveRuleEffectCstlHyper.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\CharacterMove.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\CharacterStagingAsset.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Components\CarriageComponent.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Components\HeadComponent.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Components\PlayerComponent.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Controller\AbstractPlayerController.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Controller\AbstractPlayerControllerInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Controller\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Controller\PlayerControllerHost.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\CostumeLoader.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\ICarriageCharacter.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\ICarriageCharacterClient.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\IOperatorCharacter.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\IPlayerEffector.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\IPlayerEffectorController.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Player\AbstractCharacterEffect.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Player\AbstractPlayer.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Player\AbstractPlayerClient.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Player\AbstractPlayerClientEventInvokers.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Player\AbstractPlayerClientInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Player\AbstractPlayerClientStates.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Player\AbstractPlayerInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Player\AbstractPlayerMessages.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Player\AbstractPlayerStatus.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Player\PlayerHost.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Player\PlayerHostInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Player\PlayerHostStates.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Player\PlayerHostStatus.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Player\PlayerItem.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Player\PlayerMaster.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Player\PlayerMasterInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Player\PlayerMasterStates.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Player\PlayerMasterStatus.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Player\PlayerSlave.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Player\PlayerSlaveInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Player\PlayerSlaveStates.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Player\PlayerSlaveStatus.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\PlayerComposition.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\PlayerDef.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\PropLoader.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\AbstractPlayerSkillMessages.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\AbstractSkillState.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\IPlayerSkill.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\ISkillState.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillAreaOfFear\AbstractPlayerClientSkillAreaOfFear.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillAreaOfFear\AbstractPlayerSkillAreaOfFear.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillAreaOfFear\AbstractPlayerSkillAreaOfFearInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillAreaOfFear\PlayerHostSkillAreaOfFear.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillAreaOfFear\PlayerMasterSkillAreaOfFear.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillAreaOfFear\PlayerSlaveSkillAreaOfFear.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillAreaOfStatusEffect\AbstractPlayerClientSkillAreaOfStatusEffect.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillAreaOfStatusEffect\AbstractPlayerSkillAreaOfStatusEffect.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillAreaOfStatusEffect\AbstractPlayerSkillAreaOfStatusEffectInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillAreaOfStatusEffect\PlayerHostSkillAreaOfStatusEffect.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillAreaOfStatusEffect\PlayerMasterSkillAreaOfStatusEffect.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillAreaOfStatusEffect\PlayerSlaveSkillAreaOfStatusEffect.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillAttract\AbstractPlayerClientSkillAttract.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillAttract\AbstractPlayerSkillAttract.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillAttract\PlayerHostSkillAttract.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillAttract\PlayerMasterSkillAttract.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillAttract\PlayerSlaveSkillAttract.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillDominateOverSkill\AbstractPlayerClientSkillDominateOverSkill.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillDominateOverSkill\AbstractPlayerSkillDominateOverSkill.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillDominateOverSkill\AbstractPlayerSkillDominateOverSkillInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillDominateOverSkill\AbstractPlayerSkillDominateOverSkillListenersImpl.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillDominateOverSkill\IDominatableSkill.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillDominateOverSkill\PlayerHostSkillDominateOverSkill.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillDominateOverSkill\PlayerMasterSkillDominateOverSkill.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillDominateOverSkill\PlayerSlaveSkilDominateOverSkill.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillFollowHero\AbstractPlayerClientSkillFollowHero.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillFollowHero\AbstractPlayerSkillFollowHero.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillFollowHero\AbstractPlayerSkillFollowHeroInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillFollowHero\PlayerHostSkillFollowHero.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillFollowHero\PlayerMasterSkillFollowHero.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillFollowHero\PlayerSlaveSkillFollowHero.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillGallopingAttack\AbstractPlayerClientSkillGallopingAttack.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillGallopingAttack\AbstractPlayerSkillGallopingAttack.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillGallopingAttack\PlayerHostSkillGallopingAttack.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillGallopingAttack\PlayerMasterSkillGallopingAttack.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillGallopingAttack\PlayerSlaveSkillGallopingAttack.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillHighSpeedDash\AbstractPlayerClientSkillHighSpeedDash.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillHighSpeedDash\AbstractPlayerSkillHighSpeedDash.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillHighSpeedDash\PlayerHostSkillHighSpeedDash.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillHighSpeedDash\PlayerMasterSkillHighSpeedDash.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillHighSpeedDash\PlayerSlaveSkillHighSpeedDash.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillHookLeap\AbstractPlayerClientSkillHookLeap.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillHookLeap\AbstractPlayerSkillHookLeap.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillHookLeap\PlayerHostSkillHookLeap.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillHookLeap\PlayerMasterSkillHookLeap.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillHookLeap\PlayerSlaveSkillHookLeap.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillID.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillKiller\AbstractPlayerClientSkillKiller.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillKiller\AbstractPlayerSkillKiller.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillKiller\PlayerHostSkillKiller.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillKiller\PlayerMasterSkillKiller.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillKiller\PlayerSlaveSkillKiller.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillShot\AbstractPlayerClientSkillShot.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillShot\AbstractPlayerSkillShot.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillShot\AbstractPlayerSkillShotInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillShot\PlayerHostSkillShot.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillShot\PlayerMasterSkillShot.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillShot\PlayerSlaveSkilShot.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillSneaking\AbstractPlayerClientSkillSneaking.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillSneaking\AbstractPlayerSkillSneaking.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillSneaking\PlayerHostSkillSneaking.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillSneaking\PlayerMasterSkillSneaking.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillSneaking\PlayerSlaveSkillSneaking.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillSourceOfSick\AbstractPlayerClientSkillSourceOfSick.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillSourceOfSick\AbstractPlayerSkillSourceOfSick.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillSourceOfSick\PlayerHostSkillSourceOfSick.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillSourceOfSick\PlayerMasterSkillSourceOfSick.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillSourceOfSick\PlayerSlaveSkillSourceOfSick.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillState.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillToBeMist\AbstractPlayerClientSkillToBeMist.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillToBeMist\AbstractPlayerSkillToBeMist.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillToBeMist\PlayerHostSkillToBeMist.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillToBeMist\PlayerMasterSkillToBeMist.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\Skills\SkillToBeMist\PlayerSlaveSkillToBeMist.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\StatusEffects\IStatusEffectUser.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\StatusEffects\PlayerStatusEffect.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\StatusEffects\StatusEffectHero\AbstractPlayerClientStatusEffectHero.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\StatusEffects\StatusEffectHero\AbstractPlayerStatusEffectHero.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\StatusEffects\StatusEffectHero\PlayerHostStatusEffectHero.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\StatusEffects\StatusEffectHero\PlayerMasterStatusEffectHero.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\StatusEffects\StatusEffectHero\PlayerSlaveStatusEffectHero.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\StatusEffects\StatusEffectIrregularTimerBomb\AbstractPlayerClientStatusEffectIrregularTimerBomb.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\StatusEffects\StatusEffectIrregularTimerBomb\AbstractPlayerStatusEffectIrregularTimerBomb.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\StatusEffects\StatusEffectIrregularTimerBomb\PlayerHostStatusEffectIrregularLongTimerBomb.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\StatusEffects\StatusEffectIrregularTimerBomb\PlayerHostStatusEffectIrregularShortTimerBomb.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\StatusEffects\StatusEffectIrregularTimerBomb\PlayerMasterStatusEffectIrregularLongTimerBomb.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\StatusEffects\StatusEffectIrregularTimerBomb\PlayerMasterStatusEffectIrregularShortTimerBomb.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\StatusEffects\StatusEffectIrregularTimerBomb\PlayerSlaveStatusEffectIrregularLongTimerBomb.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\StatusEffects\StatusEffectIrregularTimerBomb\PlayerSlaveStatusEffectIrregularShortTimerBomb.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\StatusEffects\StatusEffectSickBase\AbstractStatusEffectSickBase.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\StatusEffects\StatusEffectSickBase\StatusEffectSick\AbstractPlayerClientStatusEffectSick.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\StatusEffects\StatusEffectSickBase\StatusEffectSick\AbstractPlayerStatusEffectSick.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\StatusEffects\StatusEffectSickBase\StatusEffectSick\PlayerHostStatusEffectSick.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\StatusEffects\StatusEffectSickBase\StatusEffectSick\PlayerMasterStatusEffectSick.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\StatusEffects\StatusEffectSickBase\StatusEffectSick\PlayerSlaveStatusEffectSick.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\StatusEffects\StatusEffectSickBase\StatusEffectSkull\AbstractPlayerClientStatusEffectSkull .cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\StatusEffects\StatusEffectSickBase\StatusEffectSkull\AbstractPlayerStatusEffectSkull.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\StatusEffects\StatusEffectSickBase\StatusEffectSkull\PlayerHostStatusEffectSkull .cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\StatusEffects\StatusEffectSickBase\StatusEffectSkull\PlayerMasterStatusEffectSkull.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\StatusEffects\StatusEffectSickBase\StatusEffectSkull\PlayerSlaveStatusEffectSkull.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\StatusEffects\StatusEffectSkillSeal\AbstractPlayerClientStatusEffectSkillSeal.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\StatusEffects\StatusEffectSkillSeal\AbstractPlayerStatusEffectSkillSeal.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\StatusEffects\StatusEffectSkillSeal\PlayerHostStatusEffectSkillSeal.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\StatusEffects\StatusEffectSkillSeal\PlayerMasterStatusEffectSkillSeal.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Player\StatusEffects\StatusEffectSkillSeal\PlayerSlaveStatusEffectSkillSeal.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\PlayerItemDrop\AbstractPlayerItemDropController.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\PlayerItemDrop\PlayerItemDrop.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\PlayerItemDrop\PlayerItemDropController.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\PlayerItemDrop\PlayerItemDropCtrlHost.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Prop\CharacterEffect.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Prop\CharacterProp.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Prop\CharacterPropAnimation.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Prop\StretchPropWidget.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Rule\AbstractRule.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Rule\AbstractRuleController.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Rule\AbstractRuleControllerRuleParams.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Rule\AbstractRuleMaster.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Rule\AbstractRuleSlave.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Rule\RuleBr\AbstractRuleBrSlave.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Rule\RuleBr\RuleBrCommon.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Rule\RuleBr\RuleBrScore\RuleBrScore.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Rule\RuleBr\RuleBrScore\RuleBrScoreMaster.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Rule\RuleBr\RuleBrScore\RuleBrScoreSlave.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Rule\RuleController.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Rule\RuleCstl\AbstractRuleCstlSlave.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Rule\RuleCstl\RuleCstlCommon.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Rule\RuleCstl\RuleCstlRace\RuleCstlRace.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Rule\RuleCstl\RuleCstlRace\RuleCstlRaceMaster.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Rule\RuleCstl\RuleCstlRace\RuleCstlRaceSlave.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Rule\RuleCtrlHost.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Rule\RuleGp\AbstractRuleGpSlave.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Rule\RuleGp\RuleGpBasic\RuleGpBasic.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Rule\RuleGp\RuleGpBasic\RuleGpBasicMaster.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Rule\RuleGp\RuleGpBasic\RuleGpBasicSlave.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Rule\RuleGp\RuleGpCommon.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Rule\RuleGp\RuleGpCrystal\RuleGpCrystal.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Rule\RuleGp\RuleGpCrystal\RuleGpCrystalMaster.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Rule\RuleGp\RuleGpCrystal\RuleGpCrystalSlave.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Rule\RuleGpUtils.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Rule\RuleStd\AbstractRuleStdSlave.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Rule\RuleStd\RuleStdBasic\RuleStdBasic.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Rule\RuleStd\RuleStdBasic\RuleStdBasicMaster.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Rule\RuleStd\RuleStdBasic\RuleStdBasicSlave.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Rule\RuleStd\RuleStdCommon.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\StageEdit\StageEditUtils.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Story\StoryDef.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\StrayMinion\AbstractStrayMinion.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\StrayMinion\AbstractStrayMinionInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\StrayMinion\IMinionFollowTarget.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\StrayMinion\StrayMinionController.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\StrayMinion\StrayMinionControllerHost.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\StrayMinion\StrayMinionDef.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\StrayMinion\StrayMinionMaster.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\StrayMinion\StrayMinionMasterState.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\StrayMinion\StrayMinionMessage.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\StrayMinion\StrayMinionSlave.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\StrayMinion\StrayMinionSlaveInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\StrayMinion\StrayMinionSlaveState.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\Unit\UnitDef.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\VFX\DataObject\MapSDFEffectDataObject.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\VFX\DataObject\SingleComputeDataObject.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\VFX\DataObject\SingleVFXDataObject.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\VFX\EffectComponent\AbstractEffectComponentBase.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\VFX\EffectComponent\BreakBlockEffectComponent.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\VFX\EffectComponent\GrassEffectComponent.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\VFX\EffectComponent\MapSDFEffectComponent.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\VFX\EffectComponent\SDFViewEffectComponent.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\VFX\EffectComponent\WindFieldEffectComponent.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\VFX\VFXController.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\VFX\VFXDefine.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\VFX\VFXUtils.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\AbstractScriptableData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\Character\AnimationProps\PropAsset.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\Character\AttatchObjects\EffectAsset.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\Accessory\AccessoryCategoryUIDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\Accessory\AccessoryInfoDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\Accessory\AccessoryUIDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\Achievement\AchievementDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\Battle\BattleCameraDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\Bomb\BombSkinInfoDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\Bomb\BombSkinUIDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\BomberPass\BomberPassInfoDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\BomberPass\BomberPassRewardDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\BomberPass\ChallengeInfoDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\BomberPass\SeasonDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\Boss\BossRobotVoiceDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\Character\AppealAnimationDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\Character\AppealPoseUIDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\Character\CastleSkillDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\Character\CharacterInfoDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\Character\CharacterStatusDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\Character\CharacterUIDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\Character\CharacterVoiceDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\Character\LouieInfoDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\Costume\CostumeIdGroupDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\Costume\CostumeInfoDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\Costume\CostumeUIDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\Cutscene\AppearCutDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\Cutscene\AppearCutUIDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\Cutscene\CutsceneTimelineDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\Cutscene\VictoryCutDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\Cutscene\VictoryCutUIDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\Enemy\EnemyInfoDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\Grade\GradeGroupDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\Grade\GradeInfoDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\Grade\GradePromotionInfoDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\Grade\GradeRewardDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\IData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\Item\ItemInfoDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\Map\MapEquipmentItemDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\Map\MapIdGroupDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\Map\MapInfoDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\Map\MapResourceDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\Map\MapUIDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\Map\StoryMapInfoDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\Movie\MovieDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\ReleaseCondition\ReleaseConditionDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\Shop\ShopPopTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\Shop\ShopProductDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\Sound\BattleMusicDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\StageEdit\StageEditTemplateMapDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\StageEdit\StageEditTemplateMapUIDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\Story\StoryFlowDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\Story\WorldInfoDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\StrayMinion\StrayMinionDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\UI\AreaUIDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\UI\BattleMusicUIDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\UI\BattleMusicWorkUIDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\UI\LanguageUIDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\UI\PlayerIconDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\UI\RegionUIDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\UI\SpeechBalloonDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\UI\SpeechBalloonUIDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\UI\TipsTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\UI\TitlePanelDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\UI\TitlePanelUIDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DataTables\VFX\VFXObjectDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DefDatas\Achievement\AchievementDetailDefData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DefDatas\Battle\BattleCameraDefData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DefDatas\Battle\BattleDefData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DefDatas\Battle\BattleRateDefData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DefDatas\Battle\BrBattleDefData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DefDatas\Battle\CstlBattleDefData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DefDatas\Battle\GPBattleDefData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DefDatas\Battle\StdBattleDefData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DefDatas\Bomb\BombDefData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DefDatas\BomberPass\BattleEvaluationDefData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DefDatas\BomberPass\BomberPassProgressDefData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DefDatas\BomberPass\BomberPassPurchaseDefData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DefDatas\Boss\BossRobotDefData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DefDatas\Cutscene\CutsceneDefData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DefDatas\Enemy\Skill\EnemySkillEatDefData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DefDatas\Enemy\Skill\EnemySkillRushDefData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DefDatas\Enemy\Skill\EnemySkillShotDefData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DefDatas\Fire\FireDefData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DefDatas\Grade\GradeDefData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DefDatas\Grade\GradePointDefData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DefDatas\Item\ItemDefData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DefDatas\Louie\Skill\LouieSkillHighSpeedDashDefData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DefDatas\Npc\NpcDefData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DefDatas\Player\CastleSkill\CastleSkillArcAssetDefData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DefDatas\Player\CastleSkill\CastleSkillArcDefData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DefDatas\Player\OutOfFieldPlayerDefData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DefDatas\Player\PlayerDefData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DefDatas\Player\Skill\PlayerSkillAreaOfFearDefData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DefDatas\Player\Skill\PlayerSkillAreaOfIrregularTimerBombDefData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DefDatas\Player\Skill\PlayerSkillAttractDefData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DefDatas\Player\Skill\PlayerSkillDominateOverSkillDefData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DefDatas\Player\Skill\PlayerSkillFollowHeroDefData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DefDatas\Player\Skill\PlayerSkillGallopingAttackDefData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DefDatas\Player\Skill\PlayerSkillHighSpeedDashDefData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DefDatas\Player\Skill\PlayerSkillHookLeapDefData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DefDatas\Player\Skill\PlayerSkillKillerDefData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DefDatas\Player\Skill\PlayerSkillShotDefData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DefDatas\Player\Skill\PlayerSkillSneakingDefData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DefDatas\Player\Skill\PlayerSkillSourceOfSickDefData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DefDatas\Player\Skill\PlayerSkillToBeMistDefData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DefDatas\Player\StatusEffect\PlayerStatusEffectSickDefData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DefDatas\StrayMinion\StrayMinionDefData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\DefDatas\UI\PadIconDefData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\Fire\MiniMapFireDefData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\Locales\LocaleDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\Locales\LocaleDef_Linux64.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\Locales\LocaleDef_PS4.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\Locales\LocaleDef_Stadia.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\Locales\LocaleDef_Switch.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\Locales\LocaleDef_Win64.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\Locales\LocaleDef_XboxOne.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\Map\BlockSettingData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\Map\BlockShapeData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\Map\MapData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\Map\MapDataInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\Map\MapResourceData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\Map\MapResourceDataInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\Map\PartsParameterData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\Map\TemplateUGCData.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\Player\Skill\AbstractPlayerSkillAssets.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\Player\Skill\PlayerSkillAreaOfFearAssets.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\Player\Skill\PlayerSkillAreaOfStatusEffectAssets.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\Player\Skill\PlayerSkillAttractAssets.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\Player\Skill\PlayerSkillDominateOverSkillAssets.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\Player\Skill\PlayerSkillFollowHeroAssets.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\Player\Skill\PlayerSkillGallopingAttackAssets.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\Player\Skill\PlayerSkillHighSpeedDashAssets.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\Player\Skill\PlayerSkillHookLeapAssets.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\Player\Skill\PlayerSkillKillerAssets.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\Player\Skill\PlayerSkillShotAssets.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\Player\Skill\PlayerSkillSneakingAssets.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\Player\Skill\PlayerSkillSourceOfSickAssets.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\Player\Skill\PlayerSkillToBeMistAssets.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\StaffCredits\StaffCreditDataTable.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\StageEdit\WallPartsShapeList.cs" />
+    <Compile Include="Assets\Scripts\Game\Datas\Subtitle\SubtitleData.cs" />
+    <Compile Include="Assets\Scripts\Game\Debugs\DebugDrawGUI.cs" />
+    <Compile Include="Assets\Scripts\Game\Debugs\DebugDrawGUIEditorWindow.cs" />
+    <Compile Include="Assets\Scripts\Game\Debugs\DebugMenu\AbstractDebugInputField.cs" />
+    <Compile Include="Assets\Scripts\Game\Debugs\DebugMenu\DebugCustomInputField.cs" />
+    <Compile Include="Assets\Scripts\Game\Debugs\DebugMenu\DebugInputFieldFloat.cs" />
+    <Compile Include="Assets\Scripts\Game\Debugs\DebugMenu\DebugInputFieldInt.cs" />
+    <Compile Include="Assets\Scripts\Game\Debugs\DebugMenu\DebugMenuBool.cs" />
+    <Compile Include="Assets\Scripts\Game\Debugs\DebugMenu\DebugMenuButton.cs" />
+    <Compile Include="Assets\Scripts\Game\Debugs\DebugMenu\DebugMenuFloat.cs" />
+    <Compile Include="Assets\Scripts\Game\Debugs\DebugMenu\DebugMenuHierarchy.cs" />
+    <Compile Include="Assets\Scripts\Game\Debugs\DebugMenu\DebugMenuInt.cs" />
+    <Compile Include="Assets\Scripts\Game\Debugs\DebugMenu\DebugMenuLabel.cs" />
+    <Compile Include="Assets\Scripts\Game\Debugs\DebugMenu\DebugMenuManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Debugs\DebugMenu\DebugStandardUICreator.cs" />
+    <Compile Include="Assets\Scripts\Game\Debugs\DebugMenu\IAddableDebugMenu.cs" />
+    <Compile Include="Assets\Scripts\Game\Debugs\IDrawableGUI.cs" />
+    <Compile Include="Assets\Scripts\Game\Graphics\DifferedBlitCopyDepthTest.cs" />
+    <Compile Include="Assets\Scripts\Game\Graphics\GameRenderDef.cs" />
+    <Compile Include="Assets\Scripts\Game\Graphics\IRenderCommandIssuer.cs" />
+    <Compile Include="Assets\Scripts\Game\Graphics\PostProcessing\DepthOfFieldFocusDistanceCalculator.cs" />
+    <Compile Include="Assets\Scripts\Game\Graphics\PostProcessing\PostProcessVolumeParamAdapter.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\Account\AccountId.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\Account\AccountManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\Account\AccountManagerNativeBindings.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\Account\AccountName.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\Account\FriendManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\Account\FriendManagerGgp.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\Account\FriendManagerSwitch.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\Account\FriendManagerWin.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\Achievement\AchievementManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\Achievement\AchievementManagerGgp.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\Achievement\AchievementManagerInnner.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\Achievement\AchievementManagerWin.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\BombDataManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\BombDataManagerInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\BomberPassDataManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\BomberPassDataManagerInner.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\CampaignManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\CharacterDataManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\CharacterDataManagerInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\ContentManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\ContentManagerInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\ContentManagerQuality.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\CutsceneManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\DefineManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\EnemyDataManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\EnemyDataManagerInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\GameRenderPipelineManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\GameSceneManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\GameSceneManagerAdditiveSceneProcess.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\GameSceneManagerInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\GameVFXManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\GamerStats\GamerStatsManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\GamerStats\GamerStatsPlatform.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\GradeDataManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\IAP\IAPManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\IAP\IAPManagerGgp.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\IAP\IAPManagerWin.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\IAP\PurchaseProductManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\Input\InputAdapter.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\Input\InputAdapterEvents.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\Input\InputAdapterKeyBoardAndMouseDef.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\Input\InputAxes.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\Input\KeyConfig.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\Input\KeyConfigGameDef.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\Input\KeyConfigPlatformDef.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\Input\VibrationUtils.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\KPI\IKPIAnalyticsSerializer.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\KPI\IKPIAnalyticsUploader.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\KPI\KPIAnalyticsAggregator.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\KPI\KPIAnalyticsClientData.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\KPI\KPIAnalyticsClientDataHost.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\KPI\KPIAnalyticsClientDataSender.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\KPI\KPIAnalyticsHostData.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\KPI\KPIAnalyticsKeyCrypter.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\KPI\KPIAnalyticsPublishedMsgReceiver.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\KPI\KPIAnalyticsPublisher.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\KPI\KPIAnalyticsReport.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\KPI\KPIAnalyticsSerializer.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\KPI\KPIAnalyticsUploadStatus.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\KPI\KPIAnalyticsUploaderClient.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\KPI\KPIAnalyticsUploaderServer.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\KPI\KPIAnalyticsUtilities.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\LocaleManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\LoggerManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\LouieDataManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\LouieDataManagerInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\MapDataManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\MapDataManagerInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\MovieManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\Network\BackfillManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\Network\GgpNetManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\Network\INetworkMsgAdapter.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\Network\INetworkMsgAdapterClient.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\Network\INetworkMsgAdapterOffline.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\Network\INetworkMsgAdapterServer.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\Network\InviteContext.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\Network\MatchmakingManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\Network\MultiplayInfoManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\Network\NetworkConfig.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\Network\NetworkManagerClient.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\Network\NetworkMsgAdapterClient.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\Network\NetworkMsgAdapterOffline.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\Network\NetworkMsgAdapterServer.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\OSNotificationReceiver.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\QualityManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\RandomMatchManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\ResourceManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\SaveData\SaveDataDebugMenus.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\SaveData\SaveDataManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\SaveData\SaveDataPlatform.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\SaveData\SaveDataUpgrader.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\SaveData\SaveGameData.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\SaveData\SaveKeyBoardConfigData.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\SaveData\SaveMapData.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\SaveData\SavePadConfigData.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\SaveData\SaveSystemData.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\SceneBackground.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\SceneTransition.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\ServerAppArgsManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\Sound\SoundManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\Sound\SoundManagerInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\StationedUIManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\Story\StoryManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\StrayMinionDataManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\UIContentManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\UIContentManagerInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\UIDataManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Managers\UIDataManagerInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Profiles\ProfileReceiver.cs" />
+    <Compile Include="Assets\Scripts\Game\Profiles\ProfileUI.cs" />
+    <Compile Include="Assets\Scripts\Game\Profiles\ProfileUITimeText.cs" />
+    <Compile Include="Assets\Scripts\Game\Profiles\ShowProfileManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\AbstractSceneBase.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\BattleCommon\Logic\AbstractBattleLogic.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\BattleCommon\Logic\AbstractBattleLogicCreateState.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\BattleCommon\Logic\AbstractBattleLogicDestroyState.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\BattleCommon\Logic\AbstractBattleLogicInner.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\BattleCommon\Logic\AbstractBattleLogicParam.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\BomberPass\BomberPassLogic.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\BomberPass\BomberPassScene.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\BomberPass\UI\BomberPassUI.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\BomberPass\UI\BomberPassUIInteraction.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\BomberPass\UI\BomberPassWindow.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\BomberPass\UI\GoldPassPurchasePerformance.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\BomberPass\UI\IRewardContext.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\BomberPass\UI\MultiLinePassGrid.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\BomberPass\UI\NewSeasonOpeningPerformance.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\BomberPass\UI\PassGridHeader.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\BomberPass\UI\RewardContainer.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\BomberPass\UI\RewardContextFactory.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\DressUp\DressUpLogic.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\DressUp\DressUpScene.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\DressUp\UI\DressUpPlayerCockpit.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\DressUp\UI\DressUpUI.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\DressUp\UI\DressUpUIInteraction.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\DressUp\UI\DressUpWindow.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Entry\EntryPrefabReferences.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Entry\EntryScene.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Entry\EntryUI.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Entry\FirstOptionDialog.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\MainMenu\MainMenuLogic.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\MainMenu\MainMenuScene.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\MainMenu\UI\MainMenuUI.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\MainMenu\UI\MainMenuUIDialog.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\MainMenu\UI\MainMenuUIInteraction.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\MainMenu\UI\TitlePerformance.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Movie\MoviePlayLogic.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Movie\MoviePlayScene.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Movie\UI\MoviePlayUI.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Movie\UI\MoviePlayUIInteraction.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBattleCommon\AbstractBattleScene.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBattleCommon\Logic\NetBattleLogic.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBattleCommon\Logic\NetBattleLogicAppearState.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBattleCommon\Logic\NetBattleLogicBattleDeployState.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBattleCommon\Logic\NetBattleLogicBattleState.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBattleCommon\Logic\NetBattleLogicCreateState.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBattleCommon\Logic\NetBattleLogicDestroyState.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBattleCommon\Logic\NetBattleLogicInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBattleCommon\Logic\NetBattleLogicServerDebugs.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBattleCommon\Logic\NetBattleLogicVictoryState.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBattleCommon\Logic\WatchCamera.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBattleCommon\UI\AbstractNetBattleUI.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBattleCommon\UI\AbstractNetBattleUIInteraction.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBattleCommon\UI\AbstractResultInnerPanel.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBattleCommon\UI\AbstractResultPanel.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBattleCommon\UI\AbstractResultPlayerUI.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBattleCommon\UI\BattleCountDownPerformance.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBattleCommon\UI\BattleOperationFrames.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBattleCommon\UI\BattlePerformanceEventTrigger.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBattleCommon\UI\CharacterOverHeadUI.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBattleCommon\UI\Cockpit\AbstractPlayerCockpit.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBattleCommon\UI\Cockpit\BattleTimer.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBattleCommon\UI\Cockpit\PointStock.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBattleCommon\UI\Cockpit\SpeechBalloonFrame.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBattleCommon\UI\Cockpit\StatusUIEffect.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBattleCommon\UI\Cockpit\StatusUIEffectController.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBattleCommon\UI\CountSlot.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBattleCommon\UI\DigitCountSlot.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBattleCommon\UI\GpRoundChangePerformance.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBattleCommon\UI\PausePanel.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBattleCommon\UI\ResultMenuPanel.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBattleCommon\UI\SuppliablePerformance.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBattleCommon\UI\SuppliableText.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBrBattle\NetBrBattleScene.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBrBattle\UI\BrBattleSurvivorPerformance.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBrBattle\UI\BrBonusPerformance.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBrBattle\UI\BrCharacterOverHeadUI.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBrBattle\UI\BrGradePromotionChallengeTelopPerformance.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBrBattle\UI\BrLosePerformance.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBrBattle\UI\BrMiniMapItemPatternPerformance.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBrBattle\UI\BrMiniMapUI.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBrBattle\UI\BrMiniMapUIController.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBrBattle\UI\BrMiniMapUIFramePerformance.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBrBattle\UI\BrMovementCountDownPerformance.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBrBattle\UI\BrPausePanel.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBrBattle\UI\BrPausePanelRankDisplay.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBrBattle\UI\BrPhasePerformance.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBrBattle\UI\BrPlayerCountDisplay.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBrBattle\UI\BrSpeechController.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBrBattle\UI\BrWarningPerformance.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBrBattle\UI\Cockpit\BrPlayerCockpit.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBrBattle\UI\NetBrBattleUI.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBrBattle\UI\Result\BrResultAfterWatchPanel.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBrBattle\UI\Result\BrResultPanel.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBrBattle\UI\Result\BrResultPanelBattleEvaluationPanel.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBrBattle\UI\Result\BrResultPanelBattleEvaluationTextRefs.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBrBattle\UI\Result\BrResultPanelBomberPassRankRefs.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBrBattle\UI\Result\BrResultPanelChallengePanel.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBrBattle\UI\Result\BrResultPanelGradePanel.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBrBattle\UI\Result\BrResultPanelRankPanel.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBrBattle\UI\Result\CountUpText.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBrBattle\UI\Result\GradePromotionChallengeOccuredPerformance.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBrBattle\UI\Result\GradePromotionChallengeStamp.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetBrBattle\UI\Result\GradePromotionSuccessPerformance.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetCstlBattle\NetCstlBattleScene.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetCstlBattle\UI\CstlBattleEndPerformance.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetCstlBattle\UI\CstlBattleRulePerformance.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetCstlBattle\UI\CstlCharacterOverHeadUI.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetCstlBattle\UI\CstlCountDownPerformance.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetCstlBattle\UI\CstlMiniMapUI.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetCstlBattle\UI\CstlMiniMapUIController.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetCstlBattle\UI\CstlPlayerCockpit.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetCstlBattle\UI\CstlRestTreasurePerformance.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetCstlBattle\UI\CstlResultPanel.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetCstlBattle\UI\CstlVictoryPerformance.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetCstlBattle\UI\CstlWeaponUI.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetCstlBattle\UI\NetCstlBattleUI.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetCstlBattle\UI\TreasureIcon.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetGpBattle\NetGpBattleScene.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetGpBattle\UI\AbstractNetGpBattleRuleUI.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetGpBattle\UI\Basic\NetGpBattleBasicRuleUI.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetGpBattle\UI\Crystal\CrystalPoint.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetGpBattle\UI\Crystal\NetGpBattleCrystalRuleUI.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetGpBattle\UI\GpCharacterOverHeadUI.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetGpBattle\UI\GpPerfectPerformance.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetGpBattle\UI\GpPlayerCockpit.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetGpBattle\UI\GpResultPanel.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetGpBattle\UI\GpResultPlayerUI.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetGpBattle\UI\GpTotalPointDisplay.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetGpBattle\UI\MVPPerformance.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetGpBattle\UI\NetGpBattleUI.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetGpBattle\UI\PerfectLinePerformance.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetStdBattle\NetStdBattleScene.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetStdBattle\UI\NetStdBattleBattleRoyaleRuleUI.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetStdBattle\UI\NetStdBattleUI.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetStdBattle\UI\StdCharacterOverHeadUI.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetStdBattle\UI\StdGetStarPerformance.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetStdBattle\UI\StdPlayerCockpit.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetStdBattle\UI\StdResultPanel.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetStdBattle\UI\StdResultPanelPlayerPanel.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetStdBattle\UI\StdResultPlayerUI.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\NetReadyManageHost.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\NetReadyManageHostFixedMemberInfoReceptionState.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\NetReadyManageHostInners.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\NetReadyManageHostVariableMemberInfoReceptionState.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\NetworkReadyLogic.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\NetworkReadyLogicInner.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\NetworkReadyLogicRandomMatchState.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\NetworkReadyLogicRoomMatchState.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\NetworkReadyMessage.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\NetworkReadyScene.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\RoomManageHost.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\UI\Dialogs\InputRoomNumberDialog.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\UI\Dialogs\NotifyNotFoundRoomDialog.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\UI\Dialogs\NumberKeyboard.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\UI\NetworkReadyUI.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\UI\NetworkReadyUIInteraction.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\UI\Panels\AbstractCharacterSelectBandPanel.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\UI\Panels\AbstractCharacterSelectPanel.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\UI\Panels\BrCharacterSelectBandPanel.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\UI\Panels\BrCharacterSelectPanel.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\UI\Panels\CharacterSelect\BattleReadyCountDownPerformance.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\UI\Panels\CharacterSelect\CharacterFace.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\UI\Panels\CharacterSelect\CharacterSelectMainWindow.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\UI\Panels\CharacterSelect\CharacterSelectSubWindow.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\UI\Panels\CharacterSelect\NetReadyWindowRefs.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\UI\Panels\CharacterSelect\StandbyLabel.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\UI\Panels\CharacterSelect\States\StandbyState.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\UI\Panels\CharacterSelect\States\WaitForBattleState.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\UI\Panels\CharactreSelectBand\NetReadyGPCharacterSelectBandRefs.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\UI\Panels\CstlCharacterSelectBandPanel.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\UI\Panels\CstlCharacterSelectPanel.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\UI\Panels\GpCharacterSelectBandPanel.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\UI\Panels\GpCharacterSelectPanel.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\UI\Panels\GpTeamSelectPanel.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\UI\Panels\NetworkReadyRoomParams.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\UI\Panels\Room\AbstractRoomInnerPanel.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\UI\Panels\Room\ChatEventMessage.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\UI\Panels\Room\ChatPanel.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\UI\Panels\Room\ChatSpeechBalloon.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\UI\Panels\Room\ChatSpeechButton.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\UI\Panels\Room\ChatWindow.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\UI\Panels\Room\MapPlate.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\UI\Panels\Room\MapSelectPanel.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\UI\Panels\Room\MemberManagePanel.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\UI\Panels\Room\RandomMapPlate.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\UI\Panels\Room\RoomMemberMenu.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\UI\Panels\Room\RoomMemberPlate.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\UI\Panels\Room\RoomMemberPlateGroup.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\UI\Panels\Room\RoomWindow.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\UI\Panels\Room\RuleChangePanel.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\UI\Panels\Room\RuleChangePanelInner.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\UI\Panels\Room\RuleInfoBoard.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\UI\Panels\RoomPanel.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\UI\Panels\StdCharacterSelectBandPanel.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\UI\Panels\StdCharacterSelectPanel.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\UI\Panels\TeamSelect\GpTeamSelectWindow.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\NetworkReady\UI\Panels\TeamSelect\GpTeamSelector.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Other\OtherLogic.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Other\OtherLogicStaffCredit.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Other\OtherScene.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Other\UI\OtherPanel.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Other\UI\OtherUI.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Other\UI\OtherUIInteraction.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Other\UI\OtherUIStaffCredit.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Other\UI\OtherUIValueChanges.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Reset\ResetScene.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Reset\ResetUtils.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\SceneList.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Server\ServerDebugDef.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Server\ServerLog.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Server\ServerScene.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Server\ServerSession.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Shop\ShopLogic.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Shop\ShopScene.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Shop\UI\ProductData\ProductViewSelector.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Shop\UI\ProductData\ShopAccessoryContext.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Shop\UI\ProductData\ShopAppealPoseContext.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Shop\UI\ProductData\ShopAppearPoseContext.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Shop\UI\ProductData\ShopBombSkinContext.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Shop\UI\ProductData\ShopBomberPassContext.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Shop\UI\ProductData\ShopCharacterContext.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Shop\UI\ProductData\ShopContextFactory.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Shop\UI\ProductData\ShopCostumeContext.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Shop\UI\ProductData\ShopGroupContext.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Shop\UI\ProductData\ShopMusicContext.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Shop\UI\ProductData\ShopPlayerIconContext.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Shop\UI\ProductData\ShopProductData.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Shop\UI\ProductData\ShopSpeechBalloonContext.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Shop\UI\ProductData\ShopTitlePanelContext.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Shop\UI\ProductData\ShopVictoryPoseContext.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Shop\UI\ScrollAnimPlayer.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Shop\UI\ShopPanel.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Shop\UI\ShopPopSelector.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Shop\UI\ShopUI.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Shop\UI\ShopUIInteraction.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Shop\UI\SwitchedIconController.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Shop\UI\SwitchedIconElement.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Shop\UI\Windows\AbstractShopWindow.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Shop\UI\Windows\ShopProductDetailsWindow.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Shop\UI\Windows\ShopProductListWindow.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Shop\UI\Windows\ShopPurchaseDialog.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\StageEdit\Map\StageEditDef.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\StageEdit\Map\StageEditMapController.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\StageEdit\Map\StageEditMapControllerCommand.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\StageEdit\Map\StageEditMapControllerRenderer.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\StageEdit\Map\StageEditMapControllerSave.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\StageEdit\Map\StageEditMapObject.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\StageEdit\SaveLoad\StageEditLogicAbstractSaveLoadState.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\StageEdit\SaveLoad\StageEditLogicLoadState.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\StageEdit\SaveLoad\StageEditLogicSaveState.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\StageEdit\StageEditLogic.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\StageEdit\StageEditScene.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\StageEdit\UI\AbstractStageEditWindow.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\StageEdit\UI\StageEditMainWindow.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\StageEdit\UI\StageEditMainWindowEffect.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\StageEdit\UI\StageEditMainWindowSelect.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\StageEdit\UI\StageEditUI.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\StageEdit\UI\StageEditUIDialog.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\StageEdit\UI\StageEditUIInteraction.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\StageEditReady\StageEditReadyLogic.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\StageEditReady\StageEditReadyScene.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\StageEditReady\UI\StageEditImageChanger.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\StageEditReady\UI\StageEditReadyTemplateWindow.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\StageEditReady\UI\StageEditReadyUI.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\StageEditReady\UI\StageEditReadyUIDialog.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\StageEditReady\UI\StageEditReadyUIInteraction.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\StageEditReady\UI\StageEditReadyWindow.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Story\Camp\StoryCampLogic.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Story\Camp\StoryCampScene.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Story\Explore\StoryExploreLogic.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Story\Explore\StoryExploreScene.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Story\SaveData\StorySaveDataLogic.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Story\SaveData\StorySaveDataScene.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Story\WorldMap\StoryWorldMapLogic.cs" />
+    <Compile Include="Assets\Scripts\Game\Scenes\Story\WorldMap\StoryWorldMapScene.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\AbstractSceneUIBase.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\AbstractSceneUIBaseInteraction.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\CustomImage.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\CustomInputModule.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\CustomLayoutGroup.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\DashBoard\DashBoard.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\DirectivityAnimator.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\ElementSelector\ElementController.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\ElementSelector\ElementSelector.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\ElementSelector\IUsableElement.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\ElementSelector\IUsableElementContext.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\ElementSelector\TextElement.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\ISpriteListener.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\ImageAndTextConnecter.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\ImagePostLoader.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\ItemizedMenuCursor.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\LevelMeter.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\LevelMeterColorUnit.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\LocaleString.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\LocaleStringOmit.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\MoveEventTrigger.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\MultipleScrollStrings.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\MusicPlayer.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\NewReleasedFeature.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\ObliqueEffect.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\ObliqueGridLayoutGroup.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\ObliqueLayoutGroup.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\ParameterChangablePerformance.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\ParameterChangablePerformanceSupplier.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\PerformanceSpawner.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\PremiumFeature.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\QuadrangleImage.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\RandomAppearMoveObject.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\RandomPerformanceFromText.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\RectWindowLayoutSystem.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\ScenePanel\AnimatableScenePanel.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\ScenePanel\ScenePanel.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\ScenePanel\ScenePanelController.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\ScrollDialog.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\AbstractAssetLoader.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\AbstractCharacterSelectBandRefs.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\AbstractDressListColumn.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\AbstractDressListColumnContent.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\AbstractSelectWindowBase.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\AbstractWindowBase.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\CharacterModelView.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\CharacterModelViewAccessoryView.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\CharacterModelViewAppealPoseView.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\CharacterModelViewAppearPoseView.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\CharacterModelViewBombSkinView.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\CharacterModelViewCamera.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\CharacterModelViewCostumeView.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\CharacterModelViewModelRotate.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\CharacterModelViewPostEffectCamera.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\CharacterModelViewVictoryPoseView.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\CharacterSelectBand.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\CinematicDisplay.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\CinematicFade.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\Contexts\AbstractIdElementContext.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\Contexts\AccessoryCategoryElementContext.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\Contexts\AccessoryElementContext.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\Contexts\AppealPoseDirectionElementContext.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\Contexts\AppealPoseElementContext.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\Contexts\AppearPoseElementContext.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\Contexts\BombSkinElementContext.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\Contexts\CharacterElementContext.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\Contexts\CharacterSettingElementContext.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\Contexts\CharacterTypeElementContext.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\Contexts\CostumeElementContext.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\Contexts\DressTypeElementContext.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\Contexts\MusicElementContext.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\Contexts\MusicPlayBattleModeElementContext.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\Contexts\PlayerIconElementContext.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\Contexts\PlayerSettingElementContext.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\Contexts\SpeechBalloonDirectionElementContext.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\Contexts\SpeechBalloonElementContext.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\Contexts\TitlePanelElementContext.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\Contexts\VictoryPoseElementContext.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\DirectionalFrames.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\DressListColumn.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\DressListColumnMulti.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\DressListIconColumnContent.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\DressListTitlePanelColumn.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\DressListWindow.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\IContextAccessor.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\IconElement.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\IconElementContextSort.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\InnerPanels\CharacterIntroductionPanel.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\LocaleIconElement.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\ProductModelView.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\ProductModelViewBombSkinView.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\SelectWindowFooter.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\SelectWindowReferences.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\States\AbstractDressSelectState.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\States\AbstractSelectState.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\States\AccessoryCategorySelectState.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\States\AccessorySelectState.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\States\AppealPoseDirectionSelectState.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\States\AppealPoseSelectState.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\States\AppearPoseSelectState.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\States\BombSkinSelectState.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\States\CharacterSelectState.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\States\CharacterSettingSelectState.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\States\CharacterTypeSelectState.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\States\CostumeSelectState.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\States\DressTypeSelectState.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\States\IDressEventListener.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\States\ISelectWindowState.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\States\IWindowState.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\States\MusicPlayBattleModeSelectState.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\States\MusicSelectState.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\States\PlayerIconSelectState.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\States\PlayerSettingSelectState.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\States\SpeechBalloonDirectionSelectState.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\States\SpeechBalloonSelectState.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\States\TitlePanelSelectState.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\States\VictoryPoseSelectState.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\StatusActionIcon.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\StatusDisplay.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\ViewerWindows\AbstractCharacterViewerWindow.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\ViewerWindows\AbstractFocusableViewerWindow.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\ViewerWindows\AbstractViewerWindow.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\ViewerWindows\AccessoryCategoryViewerWindow.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\ViewerWindows\AccessoryViewerWindow.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\ViewerWindows\AppealPoseDirectionViewerWindow.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\ViewerWindows\AppealPoseViewerWindow.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\ViewerWindows\AppearPoseViewerWindow.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\ViewerWindows\BombSkinViewerWindow.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\ViewerWindows\CharacterIllustViewerWindow.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\ViewerWindows\CharacterModelViewerWindow.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\ViewerWindows\CharacterSettingViewerWindow.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\ViewerWindows\CharacterTypeViewerWindow.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\ViewerWindows\CostumeViewerWindow.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\ViewerWindows\DressTypeViewerWindow.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\ViewerWindows\IElementViewerWindowContext.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\ViewerWindows\MusicPlayBattleModeViewerWindow.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\ViewerWindows\MusicViewerWindow.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\ViewerWindows\OnlyBombSkinViewerWindow.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\ViewerWindows\PlayerIconViewerWindow.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\ViewerWindows\PlayerSettingViewerWindow.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\ViewerWindows\SpeechBalloonDirectionViewerWindow.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\ViewerWindows\SpeechBalloonViewerWindow.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\ViewerWindows\TitlePanelViewerWindow.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectWindow\ViewerWindows\VictoryPoseViewerWindow.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectableAnimationEventTrigger.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectableCaptionEventTrigger.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectableColorEventTrigger.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectableSEEventTrigger.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectorCursor\NavigationCursor.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SelectorCursor\NavigationCursorController.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SimpleDialog.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SimplePerformance.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SingleAnimator.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SizeScaleFitter.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SpriteContentLoader.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SpriteContentLoaderMultiListener.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\SwitchImage.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\TextAutoScrollSynchronizer.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\TextPrefferdSizeFitter.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\TextScrollView.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\UIScaleController.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Components\UsingObjectParentController.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\DialogController.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\EventSystemUtils.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\HidableUIElement.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\KeyConfigDef.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\LocaleUtils.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\PlatformImageLoader.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\BomberPassInfoBoard\BomberPassInfoBoard.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\BomberPassInfoBoard\BomberPassInfoBoardsHead.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\BomberPassInfoBoard\ChallengeDisplay.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\BomberPassInfoBoard\ChallengeInfoBoard.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\BomberPassInfoBoard\GradeInfoBoard.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\BomberPassInfoBoard\GradePromotionChallengeDisplay.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\BomberPassInfoBoard\StationedInfoBoard.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\BomberPassInfoBoard\SwitchedIconGroup.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\Challenge\ChallengeInfoUtils.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\Challenge\ChallengeUpdateColumn.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\Challenge\ChallengeUpdateDialog.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\Common\PriceText.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\GameSceneManager\LoadingIcon.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\GameSceneManager\LoadingIconGroup.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\GameSceneManager\Tips.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\GameSceneManager\TipsContents.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\GoldPassRecommendDialog.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\MainMenu\ConsentNoticeDialog.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\MainMenu\ListSelector.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\MainMenu\ListSelectorItem.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\MainMenu\MessageBox.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\MainMenu\PremiumDetailDialog.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\MainMenu\PremiumRecommendDialog.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\MainMenu\SplashLogo.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\MainMenu\TutorialDialog.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\Music\MusicContentViewer.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\Music\MusicSeekBar.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\Music\MusicSimpleVisualizer.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\Music\PlayList\MusicDetailDialog.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\Music\PlayList\MusicPlayListDialog.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\Music\PlayList\PlayListElement.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\Music\PlayList\PlayListElementDetailFrame.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\Music\PlayList\State\AddPlayListState.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\Music\PlayList\State\EditPlayListState.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\Music\PlayList\State\ViewPlayListState.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\Other\DialogEvent.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\Other\HorizontalValueChanger.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\Other\KeyAssignButton.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\Other\KeyAssignCategoryHeaderElement.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\Other\KeyAssignElement.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\Other\KeyConfigPanel.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\Other\StaffCredit.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\Other\StaffCreditColumn.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\PadIndicator.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\PlayerInfoPlate.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\RankUp\GetRewardPerformance.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\RankUp\GetRewardPerformanceContexts.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\RankUp\NewCharacterPerformance.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\RankUp\RankUpPerformances.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\RankUp\RewardIconElement.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\SceneFooterUI.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\SceneHeaderUI.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\StageEdit\AbstractStageEditParamWindowTab.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\StageEdit\ItemAppearFrequencySelector.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\StageEdit\PartsParameterSelector.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\StageEdit\StageEditMenuPanel.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\StageEdit\StageEditPalette.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\StageEdit\StageEditPanelElement.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\StageEdit\StageEditParamWindowElemListTab.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\StageEdit\StageEditParamWindowItemTab.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\StageEdit\StageEditParameterWindow.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\StageEdit\StageEditPartsParamElement.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\StageEdit\StageEditSaveLoadElement.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\StageEdit\StageEditSaveLoadElementList.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\StageEdit\StageEditSaveLoadWindow.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\StageEdit\StageEditSubMenuPanel.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\StationedUI\GetRewardModelRoot.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\StationedUI\NotifyPurchaseDialog.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\StationedUI\StationedUI.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\Prefabs\TitlePanelFrame.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\RegionalOptionCreator.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\UIDef.cs" />
+    <Compile Include="Assets\Scripts\Game\UIs\UIUtils.cs" />
+    <Reference Include="UnityEngine">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AIModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ARModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ARModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AccessibilityModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AccessibilityModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AndroidJNIModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AndroidJNIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClothModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ClothModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterInputModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterInputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterRendererModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterRendererModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CrashReportingModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.CrashReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DSPGraphModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.DSPGraphModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DirectorModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.DirectorModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GameCenterModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.GameCenterModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GridModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.GridModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HotReloadModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.HotReloadModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.InputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.LocalizationModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.LocalizationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PerformanceReportingModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.PerformanceReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ProfilerModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ProfilerModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ScreenCaptureModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteMaskModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteShapeModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteShapeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.StreamingModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.StreamingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubstanceModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SubstanceModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubsystemsModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SubsystemsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TLSModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TLSModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainPhysicsModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainPhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TextCoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TilemapModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TilemapModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UIElementsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UNETModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UNETModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UmbraModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UmbraModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityAnalyticsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityConnectModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityTestProtocolModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityTestProtocolModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VFXModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.VFXModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VRModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.VRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VehiclesModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.VehiclesModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.VideoModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.WindModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.XRModule">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.VR">
+      <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Graphs">
+      <HintPath>D:/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+      <HintPath>D:/Unity/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
+      <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
+    </Reference>
+    <Reference Include="TexturePackerImporter">
+      <HintPath>I:/unityPorject/PaoPaoTang/goTest/UnityProjectOut/Assets/Externals/Art/eff/Adia_Tools/codeandweb.com/Editor/TexturePackerImporter.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Api.CommonProtos">
+      <HintPath>I:/unityPorject/PaoPaoTang/goTest/UnityProjectOut/Assets/Scripts/Plugins/Google.Api.CommonProtos.1.7.0/lib/net45/Google.Api.CommonProtos.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Api.Gax">
+      <HintPath>I:/unityPorject/PaoPaoTang/goTest/UnityProjectOut/Assets/Scripts/Plugins/Google.Api.Gax.2.10.0/lib/net45/Google.Api.Gax.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Api.Gax.Grpc">
+      <HintPath>I:/unityPorject/PaoPaoTang/goTest/UnityProjectOut/Assets/Scripts/Plugins/Google.Api.Gax.Grpc.2.10.0/lib/net45/Google.Api.Gax.Grpc.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis">
+      <HintPath>I:/unityPorject/PaoPaoTang/goTest/UnityProjectOut/Assets/Scripts/Plugins/Google.Apis.1.41.1/lib/net45/Google.Apis.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.PlatformServices">
+      <HintPath>I:/unityPorject/PaoPaoTang/goTest/UnityProjectOut/Assets/Scripts/Plugins/Google.Apis.1.41.1/lib/net45/Google.Apis.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Core">
+      <HintPath>I:/unityPorject/PaoPaoTang/goTest/UnityProjectOut/Assets/Scripts/Plugins/Google.Apis.Core.1.41.1/lib/net45/Google.Apis.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Cloud.Iam.V1">
+      <HintPath>I:/unityPorject/PaoPaoTang/goTest/UnityProjectOut/Assets/Scripts/Plugins/Google.Cloud.Iam.V1.1.3.0/lib/net45/Google.Cloud.Iam.V1.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Cloud.PubSub.V1">
+      <HintPath>I:/unityPorject/PaoPaoTang/goTest/UnityProjectOut/Assets/Scripts/Plugins/Google.Cloud.PubSub.V1.1.1.0/lib/net45/Google.Cloud.PubSub.V1.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth">
+      <HintPath>I:/unityPorject/PaoPaoTang/goTest/UnityProjectOut/Assets/Scripts/Plugins/Grpc.Auth.1.22.0/lib/net45/Google.Apis.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth.PlatformServices">
+      <HintPath>I:/unityPorject/PaoPaoTang/goTest/UnityProjectOut/Assets/Scripts/Plugins/Grpc.Auth.1.22.0/lib/net45/Google.Apis.Auth.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Grpc.Auth">
+      <HintPath>I:/unityPorject/PaoPaoTang/goTest/UnityProjectOut/Assets/Scripts/Plugins/Grpc.Auth.1.22.0/lib/net45/Grpc.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Grpc.Core">
+      <HintPath>I:/unityPorject/PaoPaoTang/goTest/UnityProjectOut/Assets/Scripts/Plugins/Grpc.Core.1.22.1/lib/net45/Grpc.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Grpc.Core.Api">
+      <HintPath>I:/unityPorject/PaoPaoTang/goTest/UnityProjectOut/Assets/Scripts/Plugins/Grpc.Core.Api.1.22.1/lib/net45/Grpc.Core.Api.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Interactive.Async">
+      <HintPath>I:/unityPorject/PaoPaoTang/goTest/UnityProjectOut/Assets/Scripts/Plugins/System.Interactive.Async.3.2.0/lib/net45/System.Interactive.Async.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Unsafe">
+      <HintPath>I:/unityPorject/PaoPaoTang/goTest/UnityProjectOut/Library/PackageCache/com.unity.burst@1.1.1/Unity.Burst.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+      <HintPath>I:/unityPorject/PaoPaoTang/goTest/UnityProjectOut/Library/PackageCache/com.unity.collections@0.0.9-preview.20/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.NRefactory">
+      <HintPath>I:/unityPorject/PaoPaoTang/goTest/UnityProjectOut/Library/PackageCache/com.unity.render-pipelines.core@7.3.1/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf">
+      <HintPath>I:/unityPorject/PaoPaoTang/goTest/UnityProjectOut/Packages/com.unity.ucg.matchmaking/Runtime/Google.Protobuf/lib/net45/Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>I:/unityPorject/PaoPaoTang/goTest/UnityProjectOut/Packages/newtonsoft.json/lib/net45/Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Runtime.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Xml.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics.Vectors">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Microsoft.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Primitives">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/Microsoft.Win32.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="netstandard">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/netstandard.dll</HintPath>
+    </Reference>
+    <Reference Include="System.AppContext">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.AppContext.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Concurrent">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Collections.Concurrent.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.NonGeneric">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Collections.NonGeneric.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Specialized">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Collections.Specialized.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ComponentModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.EventBasedAsync">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ComponentModel.EventBasedAsync.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Primitives">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ComponentModel.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.TypeConverter">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ComponentModel.TypeConverter.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Console">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Console.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Common">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Data.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Contracts">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Debug">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.Debug.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.FileVersionInfo">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.FileVersionInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Process">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.Process.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.StackTrace">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.StackTrace.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.TextWriterTraceListener">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.TextWriterTraceListener.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Tools">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.Tools.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.TraceSource">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.TraceSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing.Primitives">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Drawing.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Dynamic.Runtime">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Dynamic.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Globalization.Calendars">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Globalization.Calendars.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Globalization">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Globalization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Globalization.Extensions">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Globalization.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression.ZipFile">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.Compression.ZipFile.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.DriveInfo">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.FileSystem.DriveInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.FileSystem.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Watcher">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.FileSystem.Watcher.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.IsolatedStorage">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.IsolatedStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.MemoryMappedFiles">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.MemoryMappedFiles.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Pipes">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.Pipes.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.UnmanagedMemoryStream">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.UnmanagedMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq.Expressions">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Linq.Expressions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq.Parallel">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Linq.Parallel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq.Queryable">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Linq.Queryable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Rtc">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Http.Rtc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.NameResolution">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.NameResolution.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.NetworkInformation">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.NetworkInformation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Ping">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Ping.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Primitives">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Requests">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Requests.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Security">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Sockets">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Sockets.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.WebHeaderCollection">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.WebHeaderCollection.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.WebSockets.Client">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.WebSockets.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.WebSockets">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.WebSockets.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ObjectModel">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Emit">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.Emit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Emit.ILGeneration">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.Emit.ILGeneration.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Emit.Lightweight">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.Emit.Lightweight.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Extensions">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Primitives">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Resources.Reader">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Resources.Reader.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Resources.ResourceManager">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Resources.ResourceManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Resources.Writer">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Resources.Writer.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.VisualC">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.CompilerServices.VisualC.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Extensions">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Handles">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Handles.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.InteropServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.WindowsRuntime">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.InteropServices.WindowsRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Numerics">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Formatters">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Serialization.Formatters.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Json">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Serialization.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Primitives">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Serialization.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Xml">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Serialization.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Claims">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Claims.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.Algorithms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Csp">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.Csp.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.X509Certificates.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Principal.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.SecureString">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.SecureString.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.Duplex">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ServiceModel.Duplex.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.Http">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ServiceModel.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.NetTcp">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ServiceModel.NetTcp.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.Primitives">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ServiceModel.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.Security">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ServiceModel.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Text.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding.Extensions">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Text.Encoding.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.RegularExpressions">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Text.RegularExpressions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Overlapped">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.Overlapped.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Parallel">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.Tasks.Parallel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Thread">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.Thread.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.ThreadPool">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.ThreadPool.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Timer">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.Timer.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.ReaderWriter">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.ReaderWriter.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.XDocument">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XDocument.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.XmlDocument">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XmlDocument.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.XmlSerializer">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XmlSerializer.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.XPath">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XPath.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.XPath.XDocument">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XPath.XDocument.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityScript">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/UnityScript.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityScript.Lang">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/UnityScript.Lang.dll</HintPath>
+    </Reference>
+    <Reference Include="Boo.Lang">
+      <HintPath>D:/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Postprocessing.Runtime">
+      <HintPath>I:/unityPorject/PaoPaoTang/goTest/UnityProjectOut/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Timeline">
+      <HintPath>I:/unityPorject/PaoPaoTang/goTest/UnityProjectOut/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ucg.QoS">
+      <HintPath>I:/unityPorject/PaoPaoTang/goTest/UnityProjectOut/Library/ScriptAssemblies/Unity.ucg.QoS.dll</HintPath>
+    </Reference>
+    <Reference Include="unity.ucg.mmconnector">
+      <HintPath>I:/unityPorject/PaoPaoTang/goTest/UnityProjectOut/Library/ScriptAssemblies/unity.ucg.mmconnector.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Ucg.Matchmaking">
+      <HintPath>I:/unityPorject/PaoPaoTang/goTest/UnityProjectOut/Library/ScriptAssemblies/UnityEngine.Ucg.Matchmaking.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Ucg.Usqp">
+      <HintPath>I:/unityPorject/PaoPaoTang/goTest/UnityProjectOut/Library/ScriptAssemblies/Unity.Ucg.Usqp.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Stadia.Interop">
+      <HintPath>I:/unityPorject/PaoPaoTang/goTest/UnityProjectOut/Library/ScriptAssemblies/Unity.Stadia.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="Fuse.HDRPExtend.Runtime">
+      <HintPath>I:/unityPorject/PaoPaoTang/goTest/UnityProjectOut/Library/ScriptAssemblies/Fuse.HDRPExtend.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.HighDefinition.Runtime">
+      <HintPath>I:/unityPorject/PaoPaoTang/goTest/UnityProjectOut/Library/ScriptAssemblies/Unity.RenderPipelines.HighDefinition.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>I:/unityPorject/PaoPaoTang/goTest/UnityProjectOut/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>I:/unityPorject/PaoPaoTang/goTest/UnityProjectOut/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="HxSystemAssembly.csproj">
+      <Project>{614289FC-0059-149B-151B-713B2B1C31BC}</Project>
+      <Name>HxSystemAssembly</Name>
+    </ProjectReference>
+    <ProjectReference Include="NSKDPluginAssembly.csproj">
+      <Project>{027D2071-FE8E-506E-A1E8-F584AEE22858}</Project>
+      <Name>NSKDPluginAssembly</Name>
+    </ProjectReference>
+    <ProjectReference Include="USndPluginAssembly.csproj">
+      <Project>{23BFC74A-315E-0A90-54B4-2D1D3426AE8D}</Project>
+      <Name>USndPluginAssembly</Name>
+    </ProjectReference>
+    <ProjectReference Include="SSSAssembly.csproj">
+      <Project>{FCE5E372-E267-ADC2-8C44-6FADAB154081}</Project>
+      <Name>SSSAssembly</Name>
+    </ProjectReference>
+    <ProjectReference Include="MultiplayAssembly.csproj">
+      <Project>{2986A712-23AB-30F6-1D65-D88A3A96C1FE}</Project>
+      <Name>MultiplayAssembly</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityChanSpringBoneAssembly.csproj">
+      <Project>{028C1115-96C2-E63D-0BF2-7DCB350A0A5D}</Project>
+      <Name>UnityChanSpringBoneAssembly</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="GenerateTargetFrameworkMonikerAttribute" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

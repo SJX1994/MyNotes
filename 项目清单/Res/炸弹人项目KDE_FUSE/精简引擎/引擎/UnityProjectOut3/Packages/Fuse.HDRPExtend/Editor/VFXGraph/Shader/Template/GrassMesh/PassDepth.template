@@ -1,0 +1,15 @@
+Pass
+{		
+	Tags { "LightMode"="DepthOnly" }
+
+	ZWrite On
+	Blend Off
+	
+	HLSLPROGRAM
+	#define VFX_PASSDEPTH VFX_PASSDEPTH_ACTUAL
+// Å´ Modified by HexaDrive.
+	${VFXInclude("../fuse.hdrpextend/Editor/VFXGraph/Shader/Template/GrassMesh/PassDepthOrMV.template")}
+// Å™ Modified by HexaDrive.
+
+	ENDHLSL
+}

@@ -1,0 +1,50 @@
+.gridLayout
+{
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 250px);
+}
+
+.gridLayout li
+{
+	list-style-type: none;
+}
+
+.contentItem
+{
+	display: block;
+	width: 100%;
+	text-align: center;
+	cursor: pointer;
+	
+}
+
+.contentItem h3
+{
+	margin-block-start: 0;
+	margin-block-start: 0;
+	text-decoration: none;
+	width: 80%;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	
+}
+
+.contentItem .previewFrame
+{
+	width: 200px;
+	height: 200px;
+	display: table;
+	margin: 0 25px 0 25px;
+}
+
+.contentItem .previewFrame .imgContanier
+{
+	display: table-cell;
+	vertical-align: middle;
+	width: 100%;
+}
+
+.contentItem .previewFrame .imgContanier img
+{
+	width: 100%;
+}

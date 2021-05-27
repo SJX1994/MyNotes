@@ -1,0 +1,4 @@
+ヘキサドライブによる編集内容
+maximum global shader keywordsのエラー回避のために以下のフォルダを削除
+
+Shaders

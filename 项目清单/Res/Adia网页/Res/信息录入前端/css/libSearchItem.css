@@ -1,0 +1,34 @@
+.searchbox {
+	width: 75%;
+	height: 50px;
+	margin: auto auto auto auto;
+	font-family: 'Microsoft YaHei';
+	font-size: 20px;
+	position: relative;
+}
+
+.searchinput {
+	width: 70%;
+	height: 100%;
+	border: 3px solid #0d67dc;
+	float: left;
+	padding: 0 20px 0 20px;
+	font-size: 20px;
+	border-radius: 15px;
+	outline: none;
+	min-width: 250px;
+}
+
+.searchbtn {
+	width: 20%;
+	height: 100%;
+	background: #0D67DC;
+	color: white;
+	text-align: center;
+	cursor: pointer;
+	border-radius: 15px;
+	position: absolute;
+	right: 3%;
+	font-size: 25px;
+	outline: none;
+}

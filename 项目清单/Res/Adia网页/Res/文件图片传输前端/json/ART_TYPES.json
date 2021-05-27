@@ -1,0 +1,50 @@
+{
+      "result": true,
+      "data": [
+            {
+                  "AssetTypeName": "DEFAULT",
+                  "AssetTypeName_zh_CN": "默认(未知)",
+                  "AssetTypeID": 0
+            },
+            {
+                  "AssetTypeName": "MATERIAL",
+                  "AssetTypeName_zh_CN": "材质",
+                  "AssetTypeID": 10
+            },
+            {
+                  "AssetTypeName": "TEXTURE",
+                  "AssetTypeName_zh_CN": "贴图",
+                  "AssetTypeID": 20
+            },
+            {
+                  "AssetTypeName": "MODEL",
+                  "AssetTypeName_zh_CN": "模型",
+                  "AssetTypeID": 30
+            },
+            {
+                  "AssetTypeName": "ALTAS",
+                  "AssetTypeName_zh_CN": "图集",
+                  "AssetTypeID": 40
+            },
+            {
+                  "AssetTypeName": "VIDEO",
+                  "AssetTypeName_zh_CN": "视频",
+                  "AssetTypeID": 50
+            },
+            {
+                  "AssetTypeName": "SCRIPT",
+                  "AssetTypeName_zh_CN": "脚本",
+                  "AssetTypeID": 60
+            },
+            {
+                  "AssetTypeName": "PLUGIN",
+                  "AssetTypeName_zh_CN": "插件",
+                  "AssetTypeID": 70
+            },
+            {
+                  "AssetTypeName": "ARTICLE",
+                  "AssetTypeName_zh_CN": "文档",
+                  "AssetTypeID": 80
+            }
+      ]
+}

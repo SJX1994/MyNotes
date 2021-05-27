@@ -1,0 +1,146 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-2085713503465401188
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da692e001514ec24dbc4cca1949ff7e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 2
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: eff_gimk_cano000_05_G5
+  m_Shader: {fileID: -6465566751694194690, guid: 8cae6e2468e920940943bd9c2e866ea6,
+    type: 3}
+  m_ShaderKeywords: _BLENDMODE_ADD _DOUBLESIDED_ON _ENABLE_FOG_ON_TRANSPARENT _SURFACE_TYPE_TRANSPARENT
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 1
+  m_CustomRenderQueue: 3000
+  stringTagMap:
+    MotionVector: User
+    RenderType: Transparent
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  - TransparentBackface
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Texture2D_5036F60E:
+        m_Texture: {fileID: 2800000, guid: 02e32d3e38d16f34dbdcf8e26b096275, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_70FB2CC1:
+        m_Texture: {fileID: 2800000, guid: 257579b07c39c924d972b07b7e97555e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_DD50F8E2:
+        m_Texture: {fileID: 2800000, guid: 29a849a94f3833a44a98983de38f68a6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_EB04C692:
+        m_Texture: {fileID: 2800000, guid: 054ad2d391b86ff45b0ed14cb509a25c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Boolean_37D56654: 1
+    - Boolean_38262820: 1
+    - Boolean_5C7A9DC0: 0
+    - Boolean_60DF2C29: 0
+    - Boolean_688C5F48: 1
+    - Boolean_7B4C37F4: 1
+    - Boolean_87D9663B: 0
+    - Boolean_A2E2FE0D: 0
+    - Boolean_A64F0108: 0
+    - Boolean_B88ED9CA: 0
+    - Boolean_B9587D0C: 1
+    - Boolean_DA9540CD: 0
+    - Boolean_F9B498D2: 1
+    - Boolean_FCD686A5: 0
+    - Vector1_1B1C0139: 0
+    - Vector1_1C6D9CB8: 3
+    - Vector1_29ABCAF4: 1
+    - Vector1_2E731362: 0
+    - Vector1_433F8FBD: -0.14
+    - Vector1_464744F3: 0
+    - Vector1_542B9E69: 0
+    - Vector1_5B33EAE9: 0
+    - Vector1_5C7CB452: 0
+    - Vector1_5E34DA67: 0
+    - Vector1_6CFFF9B2: 0
+    - Vector1_898EADC8: 1
+    - Vector1_902D40C4: 0
+    - Vector1_92EEE446: -0.5
+    - Vector1_A1F22D25: 1
+    - Vector1_A74CF0B9: 1
+    - Vector1_AEC46955: 0
+    - Vector1_B75CF57A: 0
+    - Vector1_B9A92F68: 0.15
+    - Vector1_D62CFFAC: 0
+    - Vector1_EAC30593: 1
+    - Vector1_EFE0B39D: 1
+    - Vector1_EFF78036: 0
+    - Vector1_F1FD5ACA: 1
+    - Vector1_F3D83573: 0
+    - Vector1_F9C42B81: 0
+    - _AlphaCutoffEnable: 0
+    - _AlphaDstBlend: 1
+    - _AlphaSrcBlend: 1
+    - _BlendMode: 1
+    - _CullMode: 0
+    - _CullModeForward: 0
+    - _DoubleSidedEnable: 1
+    - _DoubleSidedNormalMode: 2
+    - _DstBlend: 1
+    - _EnableFogOnTransparent: 1
+    - _ReceivesSSR: 0
+    - _RenderQueueType: 5
+    - _RequireSplitLighting: 0
+    - _SrcBlend: 1
+    - _StencilRef: 0
+    - _StencilRefDepth: 0
+    - _StencilRefDistortionVec: 4
+    - _StencilRefGBuffer: 2
+    - _StencilRefMV: 32
+    - _StencilWriteMask: 6
+    - _StencilWriteMaskDepth: 8
+    - _StencilWriteMaskDistortionVec: 4
+    - _StencilWriteMaskGBuffer: 14
+    - _StencilWriteMaskMV: 40
+    - _SurfaceType: 1
+    - _TransparentBackfaceEnable: 0
+    - _TransparentCullMode: 2
+    - _TransparentSortPriority: 0
+    - _TransparentZWrite: 0
+    - _UseShadowThreshold: 0
+    - _ZTestDepthEqualForOpaque: 4
+    - _ZTestGBuffer: 4
+    - _ZTestTransparent: 4
+    - _ZWrite: 0
+    m_Colors:
+    - Color_2795E492: {r: 95.87451, g: 95.87451, b: 95.87451, a: 1}
+    - Color_AC677156: {r: 95.87451, g: 95.87451, b: 95.87451, a: 0}
+    - Vector2_16F50420: {r: 1, g: 1, b: 0, a: 0}
+    - Vector2_342347CC: {r: 3, g: 0, b: 0, a: 0}
+    - Vector2_41C0F2DB: {r: 1, g: 1, b: 0, a: 0}
+    - Vector2_5AD4D712: {r: -1, g: -1, b: 0, a: 0}
+    - Vector2_87680D8C: {r: -1, g: 0, b: 0, a: 0}
+    - Vector2_A48D9AC6: {r: -1, g: 0, b: 0, a: 0}
+    - Vector2_A506F1DE: {r: 0, g: 0, b: 0, a: 0}
+    - Vector4_16BDBDA1: {r: 1, g: 1, b: 0, a: 0}
+    - Vector4_5BF3E43C: {r: 1, g: 1, b: 0.8, a: 0.81}
+    - Vector4_5FC3682F: {r: 1, g: 1, b: 0, a: 0}
+    - Vector4_E58E2FC: {r: 1, g: 1, b: 0, a: 0}
+    - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}

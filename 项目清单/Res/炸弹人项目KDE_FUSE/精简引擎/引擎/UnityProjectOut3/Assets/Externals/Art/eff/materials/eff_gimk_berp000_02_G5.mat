@@ -1,0 +1,128 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7294743839922841459
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da692e001514ec24dbc4cca1949ff7e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 2
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: eff_gimk_berp000_02_G5
+  m_Shader: {fileID: -6465566751694194690, guid: a8ff8482d0cd3ee429c6ec19ae8a550c,
+    type: 3}
+  m_ShaderKeywords: _BLENDMODE_ADD _DOUBLESIDED_ON _ENABLE_FOG_ON_TRANSPARENT _SURFACE_TYPE_TRANSPARENT
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 1
+  m_CustomRenderQueue: 3000
+  stringTagMap:
+    MotionVector: User
+    RenderType: Transparent
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  - TransparentBackface
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Texture2D_5676832D:
+        m_Texture: {fileID: 2800000, guid: 70f9c9fdfbbf9bb409cf5851811a3233, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_6D101BC6:
+        m_Texture: {fileID: 2800000, guid: bb06e969f10dc5e4d991df0f57625513, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Boolean_1365908C: 0
+    - Boolean_2BB71DB5: 0
+    - Boolean_36E4B6CF: 0
+    - Boolean_44687E02: 0
+    - Boolean_A4D04210: 0
+    - Vector1_149C4ACA: 1.2
+    - Vector1_2439B11D: 1
+    - Vector1_289BF495: 10
+    - Vector1_3A3F75: 1
+    - Vector1_3C839F1E: 4
+    - Vector1_5E542E30: 1.4
+    - Vector1_72AF3F3F: 0
+    - Vector1_85BAB4D0: 10
+    - Vector1_8CE4CA40: 0
+    - Vector1_9AFE39F4: 0
+    - Vector1_A6508338: 1
+    - Vector1_C9C9D138: 0
+    - Vector1_D3ECE700: 1
+    - Vector1_DF538EC2: 0
+    - Vector1_E0723E3B: 0
+    - Vector1_EE41B9EF: 0
+    - Vector1_F20EFB0D: 1.5
+    - Vector1_F21EC075: 4
+    - Vector1_FBBD90B4: 0
+    - _AlphaCutoffEnable: 0
+    - _AlphaDstBlend: 1
+    - _AlphaSrcBlend: 1
+    - _BlendMode: 1
+    - _CullMode: 0
+    - _CullModeForward: 0
+    - _DoubleSidedEnable: 1
+    - _DoubleSidedNormalMode: 2
+    - _DstBlend: 1
+    - _EnableFogOnTransparent: 1
+    - _ReceivesSSR: 0
+    - _RenderQueueType: 5
+    - _RequireSplitLighting: 0
+    - _SrcBlend: 1
+    - _StencilRef: 0
+    - _StencilRefDepth: 0
+    - _StencilRefDistortionVec: 4
+    - _StencilRefGBuffer: 2
+    - _StencilRefMV: 32
+    - _StencilWriteMask: 6
+    - _StencilWriteMaskDepth: 8
+    - _StencilWriteMaskDistortionVec: 4
+    - _StencilWriteMaskGBuffer: 14
+    - _StencilWriteMaskMV: 40
+    - _SurfaceType: 1
+    - _TransparentBackfaceEnable: 0
+    - _TransparentCullMode: 2
+    - _TransparentSortPriority: 0
+    - _TransparentZWrite: 0
+    - _UseShadowThreshold: 0
+    - _ZTestDepthEqualForOpaque: 4
+    - _ZTestGBuffer: 4
+    - _ZTestTransparent: 4
+    - _ZWrite: 0
+    m_Colors:
+    - Color_12EE111: {r: 135.58704, g: 135.58704, b: 135.58704, a: 0}
+    - Color_34F89467: {r: 0.7490196, g: 0, b: 0, a: 1}
+    - Color_611FAC28: {r: 0, g: 0, b: 191.74902, a: 1}
+    - Vector2_127BFF5C: {r: 1, g: 1, b: 0, a: 0}
+    - Vector2_400AA2CD: {r: 1, g: 1, b: 0, a: 0}
+    - Vector2_4A186D6C: {r: 0.5, g: 0, b: 0, a: 0}
+    - Vector2_4C560AAF: {r: 0, g: 0, b: 0, a: 0}
+    - Vector2_6CCCFB5C: {r: 0.8, g: 0.3, b: 0, a: 0}
+    - Vector2_76B68D02: {r: 0, g: 1, b: 0, a: 0}
+    - Vector2_803DC3BC: {r: 1, g: 1, b: 0, a: 0}
+    - Vector2_8BFBCA0A: {r: 0, g: 0, b: 0, a: 0}
+    - Vector2_9548497B: {r: 0, g: 0, b: 0, a: 0}
+    - Vector2_B1476414: {r: 0, g: 0, b: 0, a: 0}
+    - Vector2_DE2841A: {r: 0, g: 0.5, b: 0, a: 0}
+    - Vector2_F8FC6A55: {r: 0, g: 0.5, b: 0, a: 0}
+    - Vector4_2B05734D: {r: 0, g: 0, b: 0, a: 0}
+    - Vector4_2F14D994: {r: 1, g: 1, b: 0, a: 0}
+    - Vector4_6DDEF325: {r: 1, g: 1, b: 0, a: 0}
+    - Vector4_D3F116DF: {r: 1, g: 1, b: 0, a: 0}
+    - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
