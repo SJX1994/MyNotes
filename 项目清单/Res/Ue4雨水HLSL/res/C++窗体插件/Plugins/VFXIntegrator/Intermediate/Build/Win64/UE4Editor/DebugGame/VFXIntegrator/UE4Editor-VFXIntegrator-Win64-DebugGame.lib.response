@@ -1,0 +1,13 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-VFXIntegrator-Win64-DebugGame.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"I:\ue4\test1\MyProjectTest1\Intermediate\Build\Win64\MyProjectTest1Editor\DebugGame\UnrealEd\SharedPCH.UnrealEd.NonOptimized.ShadowErrors.h.obj"
+"I:\ue4\test1\MyProjectTest1\Plugins\VFXIntegrator\Intermediate\Build\Win64\UE4Editor\DebugGame\VFXIntegrator\Module.VFXIntegrator.cpp.obj"
+"I:\ue4\test1\MyProjectTest1\Plugins\VFXIntegrator\Intermediate\Build\Win64\UE4Editor\DebugGame\VFXIntegrator\Default.rc2.res"
+/OUT:"I:\ue4\test1\MyProjectTest1\Plugins\VFXIntegrator\Intermediate\Build\Win64\UE4Editor\DebugGame\VFXIntegrator\UE4Editor-VFXIntegrator-Win64-DebugGame.lib"
+/INCLUDE:IMPLEMENT_MODULE_VFXIntegrator

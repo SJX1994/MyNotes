@@ -1,0 +1,38 @@
+1.安全打开模式：file open>取消GeneralOpitions的Execute script nodes
+——1.1 open首选项>取消GeneralOpitions的Execute script nodes的勾选
+——1.2 关闭窗口
+
+2.已感染的文件清除病毒：
+——2.1 windows>animationEditors>ExpressionEditor
+——2.2 SelectFilter=ByScriptNodeName
+——2.3 如果ScriptNodes不为空，搜索并且选中：breed_gene / vaccine_gene，delete掉
+——2.4 关闭窗口
+
+代码测试：
+
+import maya.cmds as cmds;
+from math import pow,sqrt;
+version = "安全打开";
+
+
+def safeOpen(*arg):
+    
+    print"安全打开"
+    
+    return;
+    
+def Close(*arg):
+    
+    print"取消"
+    
+    return;
+ 
+NameCheckWin=cmds.window(version);
+cmds.window( NameCheckWin, edit=True, widthHeight=(300, 100) );
+cmds.columnLayout(rs=10);
+cmds.text(version);
+cmds.rowColumnLayout( numberOfColumns=2,cs=[2,10],rs=[1,10]);
+
+cmds.button(label="安全模式打开",command=safeOpen);
+cmds.button(label="取消",command=Close);
+cmds.showWindow(NameCheckWin);

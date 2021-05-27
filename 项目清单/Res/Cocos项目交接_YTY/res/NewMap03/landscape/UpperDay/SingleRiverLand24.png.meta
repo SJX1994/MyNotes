@@ -1,0 +1,34 @@
+{
+  "ver": "2.3.3",
+  "uuid": "91428fac-6ded-43de-8773-ad38c4ae9248",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "platformSettings": {},
+  "subMetas": {
+    "SingleRiverLand24": {
+      "ver": "1.0.4",
+      "uuid": "6407ec02-7976-4c23-b8b7-768a28685b58",
+      "rawTextureUuid": "91428fac-6ded-43de-8773-ad38c4ae9248",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": -8.5,
+      "offsetY": -19,
+      "trimX": 38,
+      "trimY": 46,
+      "width": 101,
+      "height": 83,
+      "rawWidth": 194,
+      "rawHeight": 137,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

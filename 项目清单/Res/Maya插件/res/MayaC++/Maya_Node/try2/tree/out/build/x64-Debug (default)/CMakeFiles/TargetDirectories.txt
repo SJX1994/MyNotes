@@ -1,0 +1,3 @@
+C:/Users/adia1785/Desktop/任务/a长期任务/MayaC++/Maya_Node/try2/tree/out/build/x64-Debug (default)/CMakeFiles/TreeGenerator.dir
+C:/Users/adia1785/Desktop/任务/a长期任务/MayaC++/Maya_Node/try2/tree/out/build/x64-Debug (default)/CMakeFiles/edit_cache.dir
+C:/Users/adia1785/Desktop/任务/a长期任务/MayaC++/Maya_Node/try2/tree/out/build/x64-Debug (default)/CMakeFiles/rebuild_cache.dir

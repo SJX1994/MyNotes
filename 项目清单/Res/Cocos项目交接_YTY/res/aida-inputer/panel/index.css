@@ -1,0 +1,30 @@
+:host {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.toolbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    padding: 10px;
+}
+
+#view {
+    flex: 1;
+
+    padding: 10px;
+    padding-top: 0px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+span {
+    margin-right: 0.25em;
+}
+

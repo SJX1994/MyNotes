@@ -1,0 +1,25 @@
+{
+      "name": "aida-inputer",
+      "version": "0.0.1",
+      "description": "关于cocos色块项目的导入插件",
+      "author": "沈捷翔1785",
+      "main": "main.js",
+      "main-menu": {
+            "AdiaPackages/GUI": {
+                  "message": "aida-inputer:open-init"
+            },
+            "AdiaPackages/CreatAnimtionClip": {
+                  "message": "aida-inputer:creat-animation"
+            },
+            "AdiaPackages/CreatPrefab": {
+                  "message": "aida-inputer:creat-prefab"
+            }
+      },
+      "panel": {
+            "main": "panel/index.js",
+            "type": "dockable",
+            "title": "aida-inputer",
+            "width": 600,
+            "height": 400
+      }
+}

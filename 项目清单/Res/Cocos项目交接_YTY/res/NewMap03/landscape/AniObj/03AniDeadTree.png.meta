@@ -1,0 +1,34 @@
+{
+  "ver": "2.3.3",
+  "uuid": "21e56a7f-e848-4d8e-abca-f1add73222cf",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "platformSettings": {},
+  "subMetas": {
+    "03AniDeadTree": {
+      "ver": "1.0.4",
+      "uuid": "b246e261-0477-4982-9af4-1027f9413ddf",
+      "rawTextureUuid": "21e56a7f-e848-4d8e-abca-f1add73222cf",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 97,
+      "height": 50,
+      "rawWidth": 97,
+      "rawHeight": 50,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

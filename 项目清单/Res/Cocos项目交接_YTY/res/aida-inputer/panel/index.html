@@ -1,0 +1,17 @@
+<div id="view">
+      <div style="margin-top:5; vertical-align: middle; height: 40;">
+            排除查找路径(已排除assets/resources文件夹)多个用';'隔开：<ui-input id="sourcePath" style="width: 50%;"
+                  placeholder='assets/*/*' v-on:blur="sourcePathChange">
+            </ui-input>
+            <ui-button id="saveConfig" style="vertical-align: middle;" v-on:confirm="saveConfigBtnClick">录入名称
+            </ui-button>
+      </div>
+
+
+</div>
+<div style="width: 100%; height: 150px;margin: 0 0 0 0 ;">
+      <hr style="margin: 0 0 0 0 ;" />
+      <h2 style="margin: 0 0 0 0">日志:</h2>
+      <textarea class="flex-1 " id="logTextArea" v-model="logView"
+            style="width: 100%; height: 120px; background: #252525;	resize: none; color: #fd942b;	border-color: #fd942b;"></textarea>
+</div>
