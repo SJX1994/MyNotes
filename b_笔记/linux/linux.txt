@@ -53,6 +53,30 @@
                         传输速度：
                             Mbps:
                                 Mega Bit per second 每秒 1 Mega 的传输量
+           个人电脑架构：
+                  X86 电脑的 Intel 架构：
+                    北桥：
+                    南桥：
+                    南北连接：
+                        直接媒体接口（Direct Media Interface，DMI）：
+                            1.0:
+                                传输速度：
+                                    10 Giga*bit/s or 1.16 Giga*Byte/s or 1.16 GHz     
+                            2.0:
+                                传输速度：
+                                    2 Giga*Byte/s or 2GB/s
+                            3.0:
+                                传输速度：
+                                    8 Giga*Byte/s or 8GB/s
+                                    
+                        视频连接器（flexible_display_interface，FDI）：
+                            CPU 与 HD Graphics 的南北桥通信渠道
+                            2010:
+                                传输速度：
+                                    2.7Gbit/s
+                                    
+                  
+                 
                         
                         
                         
