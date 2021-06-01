@@ -41,6 +41,20 @@
                         1 Exa = 1024 Peta
                         1 Zetta = 1024 Exa
                         
+                    速度单位：
+                        通常使用10进制
+                        运算速度：
+                            Hz：
+                                每秒事件发生次数
+                            kHz:10^3
+                            MHz:10^6
+                            GHz:10^9
+                            THz:10^12
+                        传输速度：
+                            Mbps:
+                                Mega Bit per second 每秒 1 Mega 的传输量
+                        
+                        
                         
                         
                         
