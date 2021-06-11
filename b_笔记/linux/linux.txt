@@ -95,7 +95,9 @@
                                             协议层
                                                 用于维持缓存一致性
                                         2017年被UPI取代
-                            ram
+                            ram：
+                                通電時才能記錄與使用，斷電後資料就消失，挥发性
+                                Dynamic Random Access Memory, DRAM
                             gpu
                             ...
                     南桥：
