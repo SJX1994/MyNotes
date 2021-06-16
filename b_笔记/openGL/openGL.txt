@@ -1,4 +1,4 @@
-openGL:
+openGL（GLSL,OpenGL Shading Language）:
   概念：
     用于渲染2D、3D矢量图形的跨语言、跨平台的应用程序编程接口（API）
   命名：
@@ -10,3 +10,7 @@ openGL:
         EXT
       标准拓展：
         ARB
+  mac：
+    vscode环境配置:
+      https://zhuanlan.zhihu.com/p/151384233
+   
