@@ -16,8 +16,9 @@ openGL（GLSL,OpenGL Shading Language）:
     2d：
       https://www.udemy.com/course/making-glsl-shaders-for-2d-game-development/
       13美元
-    全栈：
       https://youtu.be/NQ-g6v7GtoI
+    全栈：
+     
   mac：
     vscode环境配置:
       https://zhuanlan.zhihu.com/p/151384233
