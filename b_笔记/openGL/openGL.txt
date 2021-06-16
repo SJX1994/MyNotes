@@ -10,6 +10,8 @@ openGL（GLSL,OpenGL Shading Language）:
         EXT
       标准拓展：
         ARB
+  在线：
+    https://shdr.bkcore.com/
   mac：
     vscode环境配置:
       https://zhuanlan.zhihu.com/p/151384233
