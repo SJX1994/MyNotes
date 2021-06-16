@@ -12,6 +12,10 @@ openGL（GLSL,OpenGL Shading Language）:
         ARB
   在线：
     https://shdr.bkcore.com/
+  教程：
+    2d：
+      https://www.udemy.com/course/making-glsl-shaders-for-2d-game-development/
+      13美元
   mac：
     vscode环境配置:
       https://zhuanlan.zhihu.com/p/151384233
