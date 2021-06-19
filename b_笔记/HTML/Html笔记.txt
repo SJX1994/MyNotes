@@ -870,12 +870,17 @@ HTTP：
             vscode插件加入：LiveServer
 
 插件：
-    tampermonkey：
+    tampermonkey（油猴）：
+
         正常：
             https://greasyfork.org/zh-CN
 
         不可描述：
             https://sleazyfork.org/zh-CN
+    wiki离线：
+    	
+	https://wiki.kiwix.org/wiki/Content_in_all_languages/zh-cn
+	
 
 
     

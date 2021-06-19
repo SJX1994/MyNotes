@@ -1,0 +1,25 @@
+openGL（GLSL,OpenGL Shading Language）:
+  概念：
+    用于渲染2D、3D矢量图形的跨语言、跨平台的应用程序编程接口（API）
+  命名：
+    接口：
+      给予开发公司命名标识符：
+        例如：
+          NVIDIA:NV
+      多个供应商认同：
+        EXT
+      标准拓展：
+        ARB
+  在线：
+    https://shdr.bkcore.com/
+  教程：
+    2d：
+      https://www.udemy.com/course/making-glsl-shaders-for-2d-game-development/
+      13美元
+      https://youtu.be/NQ-g6v7GtoI
+    全栈：
+     
+  mac：
+    vscode环境配置:
+      https://zhuanlan.zhihu.com/p/151384233
+   
