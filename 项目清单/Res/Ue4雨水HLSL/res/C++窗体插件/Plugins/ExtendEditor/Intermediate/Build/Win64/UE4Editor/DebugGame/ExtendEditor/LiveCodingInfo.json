@@ -1,0 +1,10 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.ExtendEditor.cpp.obj": [
+			"ExtendEditor.cpp.obj",
+			"ExtendEditorCommands.cpp.obj",
+			"ExtendEditorStyle.cpp.obj"
+		]
+	}
+}

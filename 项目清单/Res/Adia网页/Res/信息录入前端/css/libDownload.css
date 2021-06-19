@@ -1,0 +1,32 @@
+.downloadSetting {
+  /*  background-color: #4C8FFF; */
+  width: 100%;
+}
+
+/* 修改复选框的大小，一定要w和h同时修改才会生效 */
+.downloadSetting input[type=checkbox] {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+}
+
+/* 保证文字和复选框对齐 */
+.downloadSetting label {
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+}
+
+/* outline保证在点击时不出现矩形包围框 */
+.downloadTryBtn{
+  height: 50px;
+  width: 150px;
+  border-radius: 25px;
+  font-size: 25px;
+  outline:none;
+}
+
+/* 点击时改变颜色 */
+.downloadTryBtn:active{
+  background-color: #4C8FFF;
+}

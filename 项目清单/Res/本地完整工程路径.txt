@@ -1,0 +1,30 @@
+﻿`0.maya安全导入插件：C:\Users\adia1785\Desktop\任务\z已完成\安全导入maya
+`1.高企申报表：C:\Users\adia1785\Desktop\任务\z已完成\软著
+`2.aida信息录入html前端信息录入开发：C:\Users\adia1785\Desktop\任务\共享\webs\public
+`3.HighWireVFXNiagara：C:\Users\adia1785\Desktop\任务\z已完成\HighWireNiagaraVFX\项目计划文件\文档 + C:\Users\adia1785\Desktop\任务\共享\AK47_fireMuzzle_preview_22.10.20
+`4.HighWireVFXNiagara项目排期excel(vba):E:\VFX\HighWireNiagaraVFX\项目计划文件\vbaFile
+`4.1.Niagara范例工程制作：E:\VFX\HighWireNiagaraVFX\Niagara学习\UE4niagara\NiagaraRyan
+`5.往期作品批量整理python+cmd+excel(vba): C:\Users\adia1785\Desktop\任务\a长期任务\艺术家参考库\vba-files
+`6.Maya顶点法线优化（mel）：C:\Users\adia1785\Desktop\任务\aa短期任务\顶点法线Maya插件\Adia_vertexNormalBatch_userGuide_V1
+`7.击打皮肤：C:\Users\adia1785\Desktop\任务\共享\UE425
+`8.树叶SD文件：C:\Users\adia1785\Desktop\任务\z已完成\软著\高企申报_申报稿\UI\SD
+`9.maya材质球信息导出：C:\Users\adia1785\Desktop\任务\a长期任务\材质球信息导出
+`10.maya倒角面筛选：C:\Users\adia1785\Desktop\任务\aa短期任务\SelectEdgeMaya插件
+`11.maya删除UVeditor第一个uvSet：C:\Users\adia1785\Desktop\任务\a长期任务\删除默认UVSet
+`12.qaMaya软硬边检查工具：C:\Users\adia1785\Desktop\任务\aa短期任务\软硬边检测法线工具
+`13.封装maya工具架&创建窗体安装程序：C:\Users\adia1785\Desktop\任务\a长期任务\MayaC++\Maya_Node\Adia_PlugIns_V2
+I:\maya\PlugCpp
+`14.UE4雨水材质制作与调整，已经完成包含：水滴低落，雨点在干表面形成，积水雨点水晕，Niagara表面流体附着，Niagara雨水点云遮蔽：E:\VFX\AllMat\AllMat
+`15.hexoMB网页搭建：D:\\hexoInit\
+`16.python艺术家材质库处理：E:\艺术家数据库
+`17.跳板网站前端：E:\webUserGuide\PicShowHtml\PicShow
+`17.Cocos项目:
+	创建方法与流程：D:\HexoInit\source\_posts\CocosTiled_Contents.md
+	工程文件：E:\Cocos\2-1_1\evolutionary-planet_2021\EvolutionaryPlanet\CocosCreatorSourceCode\assets\resources\NewMap
+	重新命名美术素材：E:\Cocos\2-1_1\evolutionary-planet_2021\EvolutionaryPlanet\CocosCreatorSourceCode\assets\resources\NewMap\整理\reName.py
+	参考图导入Tiled：E:\Cocos\2-1_1\evolutionary-planet_2021\EvolutionaryPlanet\CocosCreatorSourceCode\assets\resources\NewMap\整理\地图规划\mapMaker.py
+`18.炸弹人项目：I:\unityPorject\PaoPaoTang
+`19.Ue4C++插件：I:\ue4\test1\MyProjectTest1\Plugins
+`20.文件图片传输：E:\webUserGuide\UP_LOAD
+21.unity卡通水shaderGraph：I:\unityPorject\test\URPtest
+

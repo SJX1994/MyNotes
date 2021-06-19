@@ -869,6 +869,15 @@ HTTP：
         解决方案：
             vscode插件加入：LiveServer
 
+插件：
+    tampermonkey：
+        正常：
+            https://greasyfork.org/zh-CN
+
+        不可描述：
+            https://sleazyfork.org/zh-CN
+
+
     
 Adia项目:
     图片预览：

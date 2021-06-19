@@ -1,0 +1,86 @@
+global string $gShelfTopLevel;
+string $shelves[] = `tabLayout -q -childArray $gShelfTopLevel`;
+int $counter=0;
+int $btmCounter=0;
+string $imageSet = "vertexNormalEdit.png";
+string $buttonLab = "Edge&Normal_Checker";
+string $buttonAnnotation = "Edge&Normal_Checker(PleaseReadUserGuide)";
+string $script = "global int $hardEdges_I_G=0; \n global int $softEdges_I_G=0; \n global string $needLockVertex_G[]={}; \n proc Do() \n { \n     global string $needLockVertex_G[]={}; \n     string $selectList[]; \n     $selectList = `ls -selection -flatten`; \n     string $vertexs[]; \n     $vertexs = `filterExpand -expand on -selectionMask 31 $selectList`; \n     for($vertex in $vertexs) \n     { \n         string $edges[]=`polyInfo -vertexToEdge $vertex`; \n         string $objectName[] = stringToStringArray($selectList[0], \".\"); \n         //polySelectConstraint -m 3 -t 0x8000 -sm 1; \n         string $edgesArray[] = stringToStringArray($edges[0], \" \"); \n         string $vertexName = fliter($edgesArray,$objectName[0]); \n         if($vertexName!=\"\") \n         { \n             $needLockVertex_G[size($needLockVertex_G)] = $vertexName; \n         } \n     } \n     select -cl ; \n     for($v in $needLockVertex_G) \n     { \n         select -tgl $v; \n         $lock_B = `polyNormalPerVertex -q -allLocked`; \n         if($lock_B[0]==1) \n         { \n             select -d $v; \n         }else{ \n             print($v+\"\\n\"); \n         } \n     } \n     clear $needLockVertex_G; \n } \n proc string fliter(string $edgesArray[],string $objectName) \n { \n     global int $hardEdges_I_G; \n     global int $softEdges_I_G; \n     select -cl ; \n     for($i = 2; $i < size($edgesArray)-1;$i++) \n     { \n         string $edgeName = $objectName + \".e[\" + $edgesArray[$i] + \"]\"; \n         select -tgl $edgeName; \n     } \n     $edges = `polyInfo -ev`; \n     for($e in $edges) \n     { \n         string $ce = $e; \n         int $hardFound = `gmatch $ce \"*Hard*\"`; \n         if($hardFound) \n         { \n             $hardEdges_I_G=$hardEdges_I_G+1; \n         }else{ \n             $softEdges_I_G=$softEdges_I_G+1; \n         } \n     } \n     //print(\"h++\"+(string)($hardEdges_I_G)); \n     //print(\"s--\"+(string)($softEdges_I_G)+\"\\n\"); \n     if($softEdges_I_G>=$hardEdges_I_G) \n     { \n         string $vNum[] = stringToStringArray($edgesArray[1],\":\"); \n         string $vName = $objectName+\".vtx[\"+$vNum[0]+\"]\"; \n         $hardEdges_I_G=0; \n         $softEdges_I_G=0; \n         return $vName; \n     } \n     $hardEdges_I_G=0; \n     $softEdges_I_G=0; \n     select -cl ;  \n     return \"\"; \n } \n Do();";
+for($s in $shelves)
+{
+    if($s=="Adia_Tools")
+    {
+        string $shelfButtons[] = `shelfLayout -q -childArray "Adia_Tools"`;
+        for($b in $shelfButtons)
+        {
+            string $label;
+            if(`objectTypeUI -isType "shelfButton" $b`)
+            {
+                $label = `shelfButton -q -label $b`;
+                if($label==$buttonLab)
+                {
+                   
+                    deleteUI $b;
+                     
+                }
+                else{
+                    if($btmCounter==0)
+                    {
+                        string $myButton = `shelfButton
+                        -parent "Adia_Tools"           
+                        -enable 1
+                        -width 34
+                        -height 34
+                        -manage 1
+                        -visible 1
+                        -annotation $buttonAnnotation
+                        -label $buttonLab
+                        -image1 $imageSet
+                        -style "iconOnly"
+                        -command $script`;
+                        $btmCounter++;
+                    }else
+                    {
+                        print("got same shelfButton");
+                    }
+                
+                }
+            }
+        }
+        if(size($shelfButtons)==0)
+        {
+            string $myButton = `shelfButton
+            -rpt true
+            -parent "Adia_Tools"           
+            -enable 1
+            -width 34
+            -height 34
+            -manage 1
+            -visible 1
+            -annotation $buttonAnnotation
+            -label $buttonLab
+            -image1 $imageSet
+            -style "iconOnly"
+            -command  $script`;
+        }
+    }else{
+        $counter++;
+        if($counter==size($shelves))
+        {
+            addNewShelfTab "Adia_Tools";
+            string $myButton = `shelfButton
+            -rpt true
+            -parent "Adia_Tools"           
+            -enable 1
+            -width 34
+            -height 34
+            -manage 1
+            -visible 1
+            -annotation $buttonAnnotation
+            -label $buttonLab
+            -image1 $imageSet
+            -style "iconOnly"
+            -command  $script`;
+        }
+    }
+}

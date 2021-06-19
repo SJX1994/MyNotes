@@ -1,0 +1,125 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-3563906027468318191
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da692e001514ec24dbc4cca1949ff7e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 2
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: eff_gol000_12_G5
+  m_Shader: {fileID: -6465566751694194690, guid: 4f7e42573e1721d4ba4186a853110e25,
+    type: 3}
+  m_ShaderKeywords: _BLENDMODE_ALPHA _ENABLE_FOG_ON_TRANSPARENT _SURFACE_TYPE_TRANSPARENT
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 3000
+  stringTagMap:
+    MotionVector: User
+    RenderType: Transparent
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  - TransparentBackface
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Texture2D_5036F60E:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_6D101BC6:
+        m_Texture: {fileID: 2800000, guid: c5e38fec0656b6a47b220b2895f371ca, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_70FB2CC1:
+        m_Texture: {fileID: 2800000, guid: 59567ca3df7433d44ac9d3dd1d5ece85, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_DD50F8E2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Boolean_A5269996: 0
+    - Boolean_A64F0108: 0
+    - Boolean_B9587D0C: 0
+    - Boolean_DA9540CD: 0
+    - Boolean_FCD686A5: 0
+    - Vector1_1B1C0139: 0
+    - Vector1_1C6D9CB8: 0
+    - Vector1_29ABCAF4: 1
+    - Vector1_433F8FBD: 0
+    - Vector1_464744F3: 0
+    - Vector1_542B9E69: 0
+    - Vector1_6D82F782: 0
+    - Vector1_A74CF0B9: 4
+    - Vector1_B9A92F68: 0
+    - Vector1_D62CFFAC: 0
+    - Vector1_EAC30593: 1
+    - Vector1_EFF78036: 0
+    - _AlphaCutoffEnable: 0
+    - _AlphaDstBlend: 10
+    - _AlphaSrcBlend: 1
+    - _BlendMode: 0
+    - _CullMode: 2
+    - _CullModeForward: 2
+    - _DoubleSidedEnable: 0
+    - _DoubleSidedNormalMode: 2
+    - _DstBlend: 10
+    - _EnableFogOnTransparent: 1
+    - _ReceivesSSR: 0
+    - _RenderQueueType: 5
+    - _RequireSplitLighting: 0
+    - _SrcBlend: 1
+    - _StencilRef: 0
+    - _StencilRefDepth: 0
+    - _StencilRefDistortionVec: 4
+    - _StencilRefGBuffer: 2
+    - _StencilRefMV: 32
+    - _StencilWriteMask: 6
+    - _StencilWriteMaskDepth: 8
+    - _StencilWriteMaskDistortionVec: 4
+    - _StencilWriteMaskGBuffer: 14
+    - _StencilWriteMaskMV: 40
+    - _SurfaceType: 1
+    - _TransparentBackfaceEnable: 0
+    - _TransparentCullMode: 2
+    - _TransparentSortPriority: 0
+    - _TransparentZWrite: 0
+    - _UseShadowThreshold: 0
+    - _ZTestDepthEqualForOpaque: 4
+    - _ZTestGBuffer: 4
+    - _ZTestTransparent: 4
+    - _ZWrite: 0
+    m_Colors:
+    - Color_10B4DB3E: {r: 1, g: 1, b: 1, a: 0}
+    - Color_12EE111: {r: 16.94838, g: 16.94838, b: 16.94838, a: 0}
+    - Color_2795E492: {r: 23.968628, g: 23.968628, b: 23.968628, a: 1}
+    - Color_6AF78D12: {r: 1, g: 1, b: 1, a: 0}
+    - Color_D610645F: {r: 1, g: 1, b: 1, a: 0}
+    - Vector2_41C0F2DB: {r: 0, g: 1, b: 0, a: 0}
+    - Vector2_58F81FD9: {r: 1, g: 1, b: 0, a: 0}
+    - Vector2_737A5AB1: {r: 0, g: 0.5, b: 0, a: 0}
+    - Vector2_87680D8C: {r: 1, g: 1, b: 0, a: 0}
+    - Vector2_A48D9AC6: {r: 1, g: 1, b: 0, a: 0}
+    - Vector2_A506F1DE: {r: 0, g: 0.1, b: 0, a: 0}
+    - Vector4_16BDBDA1: {r: 1, g: 1, b: 0, a: 0}
+    - Vector4_5BF3E43C: {r: 1, g: 1, b: 0, a: 0}
+    - Vector4_5FC3682F: {r: 1, g: 1, b: 0, a: 0}
+    - Vector4_6DDEF325: {r: 1, g: 1, b: 0, a: 0}
+    - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}

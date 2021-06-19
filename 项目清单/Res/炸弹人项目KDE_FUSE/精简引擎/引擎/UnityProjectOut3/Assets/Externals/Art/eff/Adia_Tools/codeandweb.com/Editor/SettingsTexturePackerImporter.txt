@@ -1,0 +1,15 @@
+version: 2
+importPivots: 1
+tpsheetFileNames:
+- Assets/codeandweb.com/Example/SpriteSheet/sprites.tpsheet
+- Assets/Externals/Art/eff/prefab/Adia_Prefab/AllTexture.tpsheet
+- Assets/Externals/Art/eff/textures/Adia_textures/AllTexture.tpsheet
+textureFileNames:
+- Assets/codeandweb.com/Example/SpriteSheet/sprites.png
+- Assets/Externals/Art/eff/prefab/Adia_Prefab/AllTexture.png
+- Assets/Externals/Art/eff/textures/Adia_textures/AllTexture.png
+normalmapFileNames:
+- Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
+- 
+- 
+enableDebugOutput: 0

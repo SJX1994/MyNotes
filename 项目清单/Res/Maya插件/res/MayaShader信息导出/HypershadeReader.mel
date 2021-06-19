@@ -1,0 +1,278 @@
+    global proc HypershadeReader(){
+        if(`window -query -exists adia_HypershadeReader_Window`)
+        deleteUI adia_HypershadeReader_Window;
+        string $s = "Adia_vertexNormalBatch";
+        
+        window -title $s -menuBar true -maximizeButton true -minimizeButton true adia_HypershadeReader_Window;
+        columnLayout -adjustableColumn true;
+            text -label "Refer the manual to use" -en off;
+            // radioButtonGrp -label "Mode：" -numberOfRadioButtons 4
+            // -labelArray4 "1 Hardening" "2 soften" "Copy vertex normal" "Paste vertex normal" -sl 1
+            // adia_Select;
+            // textFieldGrp    -label "MatTitle：" -text "100.0"  -columnWidth 1 65  adia_MatTitle;
+            textFieldGrp    -label "SeectedObj" -text "0.0"  -columnWidth 1 65 -en off adia_SeectedObj;
+            
+            text -label " " -en off;
+            button -height 23 -width 23 -backgroundColor 255 241 155 -label "Run"
+            -command "Do()";
+            text -label " " -en off;
+        window -edit -widthHeight 600 210 adia_HypershadeReader_Window;
+        showWindow adia_HypershadeReader_Window;
+    }
+    global string $G_pathNameS;
+    global string $G_writeTo[]={"start"};
+
+
+    global proc Do()
+    {
+        global string $G_pathNameS;
+        global string $G_writeTo[];
+        string $selectObjects[]=`ls -selection `;
+        
+        string $o;
+        for($o in $selectObjects)
+        {
+            if(catch(`textFieldGrp -edit -tx $o adia_SeectedObj`))
+            {
+                textFieldGrp -edit -tx "null" adia_SeectedObj;
+            }
+            else{
+                textFieldGrp -edit -tx $o adia_SeectedObj;
+            }
+        
+            string $MatName = getSurfaceShader($o);
+            string $list[] = `listConnections -type file $MatName`;
+
+            print("\n"+"main----------------"+$MatName+"\n");
+            string $s = "main----------------"+$MatName;
+            saveFile($s,0);
+            string $a[] = `listAttr $MatName`;
+            
+            for($i in $a)
+            {
+                printInformation($MatName,$i);           
+            }
+            
+            
+            
+
+            for($l in $list)
+            {
+                //$l =`nodeType $l`;
+                
+            
+                print("\n"+"sub----------------"+$l+"\n");
+                string $s = "sub----------------"+$l;
+                saveFile($s,0);
+                string $a2[] = `listAttr $l`;
+                //print($a2);
+                for($i in $a2)
+                {
+                    printInformation($l,$i);
+                }
+                
+                string $list2[] = `listConnections -type place2dTexture $l`;
+                print("\n"+"subSub----------------"+$list2[0]+"\n");
+                string $s = "subSub----------------"+$list2[0];
+                saveFile($s,0);
+                string $a3[] = `listAttr $list2[0]`;
+                //print($a3);
+                for($i in $a3)
+                {
+                    printInformation($list2[0],$i);
+                }
+                
+                
+            }
+        
+        }
+        saveFile("END",1);
+        confirmDialog -message $G_pathNameS -title "Your save Path:" -button "cool";
+
+    }
+
+    proc printInformation(string $MatName,string $i)
+    {
+        string $Delimiter = ",";
+        global string $G_writeTo[];
+        if(catch(`getAttr -type ($MatName+"."+$i)`))
+        {
+            
+        }else{
+            //print($i+$Delimiter+ `getAttr -type ($MatName+"."+$i)`+"\n");
+            switch((string)(`getAttr -type ($MatName+"."+$i)`))
+            {
+                case "bool":
+                    //print("bool");
+                    int $ib = ` getAttr($MatName+"."+$i)`;
+                    print("\n"+$i+":::"+$ib+"\n");
+                    string $s = $i+$Delimiter+$ib;
+                    saveFile($s,0);
+                break;
+                case "byte":
+                    //print("byte");
+                    int $iby = ` getAttr($MatName+"."+$i)`;
+                    print("\n"+$i+":::"+$iby+"\n");
+                    string $s = $i+$Delimiter+$iby;
+                    saveFile($s,0);
+                break;
+                case "string":
+                    //print("string");
+                    string $is = ` getAttr($MatName+"."+$i)`;
+                    print("\n"+$i+":::"+$is+"\n");
+                    string $s = $i+$Delimiter+$is;
+                    saveFile($s,0);
+                break;
+                case "char":
+                    //print("char");
+                    string $ic = ` getAttr($MatName+"."+$i)`;
+                    print("\n"+$i+":::"+$ic+"\n");
+                    string $s = $i+$Delimiter+$ic;
+                    saveFile($s,0);
+                break;
+                case "stringArray":
+                    //print("stringArray");
+                    string $isa = stringArrayToString(` getAttr($MatName+"."+$i)`, "///");
+                    print("\n"+$i+":::"+$isa+"\n");
+                    string $s = $i+$Delimiter+$isa;
+                    saveFile($s,0);
+                break;
+                case "message":
+                    //print("message");
+                    string $iun = ` getAttr -type ($MatName+"."+$i)`;
+                    print("\n"+$i+":::"+$iun+"\n");
+                    string $s = $i+$Delimiter+$iun;
+                    saveFile($s,0);
+                break;
+                case "enum":
+                    //print("enum");
+                    string $iee = ` getAttr($MatName+"."+$i)`;
+                    print("\n"+$i+":::"+$iee+"\n");
+                    string $s = $i+$Delimiter+$iee;
+                    saveFile($s,0);
+                break;
+                case "long":
+                    //print("long");
+                    int $il = ` getAttr($MatName+"."+$i)`;
+                    print("\n"+$i+":::"+$il+"\n");
+                    string $s = $i+$Delimiter+$il;
+                    saveFile($s,0);
+                break;
+                 case "short":
+                    //print("short");
+                    int $iss = ` getAttr($MatName+"."+$i)`;
+                    print("\n"+$i+":::"+$iss+"\n");
+                    string $s = $i+$Delimiter+$iss;
+                    saveFile($s,0);
+                break;
+                case "float":
+                    //print("float");
+                    float $if = ` getAttr($MatName+"."+$i)`;
+                    print("\n"+$i+":::"+$if+"\n");
+                    string $s = $i+$Delimiter+$if;
+                    saveFile($s,0);
+                break;
+                case "float3":
+                    //print("float3");
+                    string  $ifa = floatArrayToString(` getAttr($MatName+"."+$i)`,"///");
+                     print("\n"+$i+":::"+$ifa+"\n");
+                     string $s = $i+$Delimiter+$ifa;
+                    saveFile($s,0);
+                break;
+                case "TdataCompound":
+                    //print("TdataCompound");
+                    string $iunn = ` getAttr -type ($MatName+"."+$i)`;
+                    print("\n"+$i+":::"+$iunn+"\n");
+                    string $s = $i+$Delimiter+$iunn;
+                    saveFile($s,0);
+                break;
+                case "float2":
+                    //print("float2");
+                    string  $ifaa = floatArrayToString(` getAttr($MatName+"."+$i)`,"///");
+                    print("\n"+$i+":::"+$ifaa+"\n");
+                    string $s = $i+$Delimiter+$ifaa;
+                    saveFile($s,0);
+                break;
+                case "generic":
+                    //print("generic");
+                    string $iunnn = ` getAttr -type ($MatName+"."+$i)`;
+                    print("\n"+$i+":::"+$iunnn+"\n");
+                    string $s = $i+$Delimiter+$iunnn;
+                    saveFile($s,0);
+                break;
+                case "Int32Array":
+                    //print("Int32Array");
+                    string  $iia = intArrayToString(` getAttr($MatName+"."+$i)`,"///");
+                    print("\n"+$i+":::"+$iia+"\n");
+                    string $s = $i+$Delimiter+$iia;
+                    saveFile($s,0);
+                break;
+                case "double":
+                    //print("double");
+                    float $id = ` getAttr($MatName+"."+$i)`;
+                    print("\n"+$i+":::"+$id+"\n");
+                    string $s = $i+$Delimiter+$id;
+                    saveFile($s,0);
+                break;
+                case "doubleAngle":
+                    //print("doubleAngle");
+                    float $ida = ` getAttr($MatName+"."+$i)`;
+                    print("\n"+$i+":::"+$ida+"\n");
+                    string $s = $i+$Delimiter+$ida;
+                    saveFile($s,0);
+                break;
+                default:
+                    print("not include:"+$i+":::"+ `getAttr -type ($MatName+"."+$i)`+"\n");
+                    string $s = "not include:"+$i+":::"+ `getAttr -type ($MatName+"."+$i)`+"\n";
+                    saveFile($s,0);
+                break;
+            }
+        }
+    }
+
+    proc string getSurfaceShader (string $objName) {
+
+        // This assumes you want ONLY the shape node at the selected level of the
+        // hierarchy, for the object whose transform name is passed in as the argument.
+
+        string $myShapeNode[] = `listRelatives -children -shapes $objName`;
+        string $mySGs[] = `listConnections -type shadingEngine $myShapeNode[0]`;
+        string $surfaceShader[] = `listConnections ($mySGs[0] + ".surfaceShader")`;
+        return $surfaceShader[0];
+    }
+
+    proc saveFile(string $printS,int $stop)
+    {
+        global string $G_pathNameS;
+        global string $G_writeTo[];
+        $G_writeTo[size($G_writeTo)] = $printS;
+        switch($stop)
+        {
+            case 1:
+
+                string $G_pathNameS = stringArrayToString(`filePathEditor -query    -listDirectories ""`,"");
+                $G_pathNameS=$G_pathNameS+"/";
+                $exampleFileName = ( $G_pathNameS + "example.csv" );
+                $fileId=`fopen $exampleFileName "w"`;
+
+                for($line in $G_writeTo)
+                {
+                    $line = $line + "\n";
+                    fprint $fileId $line;
+                }
+                fclose $fileId; 
+
+                
+                clear $G_writeTo;
+            break;
+            default:
+                print("go");
+            break;
+        }
+        
+        
+        
+    }
+
+
+    HypershadeReader();

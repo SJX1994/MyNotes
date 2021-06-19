@@ -1,0 +1,44 @@
+.tab {
+  position:relative;
+  left: 20px;
+  display: flexbox;
+}
+
+.tabHeader {
+  display: inline-block;
+  background-color: #d5d5d5;
+/*  border: 1px solid #000000; */
+  padding: 2.5px 0 2.5px 0;
+/*  width: 100%; */
+}
+
+.tabHeader ul {
+  padding: 0;
+  margin: 0;
+}
+
+.tabHeader ul li {
+  float: left;
+  list-style: none;
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+  margin: 0 10px 0 10px;
+}
+
+.tabHeader ul .active {
+  background: #4c8fff;
+}
+
+.tabContent {
+  width: 100%;
+  min-width: 400px;
+  min-height: 320px;
+  background-color: #d5d5d5;
+  max-width: 800px;
+  max-height: 400px;
+}
+
+.tabContent li {
+	padding: 0 20px;
+}

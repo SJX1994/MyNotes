@@ -1,7 +1,12 @@
 
 概念：
+
+    学习路线图：
+        https://newimg.jspang.com/linux-image01.png
+
     10大主流系统：
-    ref：https://zhuanlan.zhihu.com/p/92899635
+        ref：
+            https://zhuanlan.zhihu.com/p/92899635
         发行版：
             无图形界面
         Linux Mint：
@@ -10,6 +15,41 @@
                 软件库数量不大
         Manjaro：
             惊人数量的软件库
+            缺点:
+                --
+        Ubuntu：
+            社区支持非常完善
+            缺点：
+                不是很稳定
+        Solus：
+            简洁快速
+            缺点：
+                运行效率很低
+                软件数量少
+        Debian：
+            精简而稳定
+            缺点：
+                没有专业的技术支持
+        Arch Linux：
+            拥有最庞大的软件库
+            缺点：
+                定制化程度太高了，安装起来也有一定难度
+        puppy Linux： 
+            Puppy是格外的小
+            缺点：
+                源码编译
+        Lubuntu：
+            轻快简洁
+            缺点：
+                安装少
+        deepin:
+            与Windows相同的体验
+            缺点：
+                --
+
+    远程系统：
+        购买折扣：
+            https://www.zhihu.com/question/403832988
 
 基本操作：
 

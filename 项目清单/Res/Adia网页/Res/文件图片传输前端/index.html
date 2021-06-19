@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+	<meta charset="utf-8">
+	<!-- Redirect page after 3 seconds -->
+	<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+	<link rel="stylesheet" href="../UPLOAD/css/w3.css">
+	<link rel="stylesheet" href="../UPLOAD/css/myStyleA.css">
+	<link rel="stylesheet" href="../UPLOAD/css/tagsTree.css">
+</head>
+<style>
+	/* testHere */
+</style>
+<script src="js/jquery-1.11.1.min.js"></script>
+
+
+<body>
+
+	<header class="w3-container" style="background-color: rgb(153, 153, 153);">
+		<h1 class="fixed-t2">Header</h1>
+		<!-- <button class="w3-btn w3-gray w3-text-white txtStyle3" onclick="submitFunction()">Click me</button> -->
+	</header>
+	<nav class="w3-sidebar w3-card-2" style="height: 100%;width: 25%;background-color: rgb(159,88,88);">
+		<div>
+			<h1 class="fixed-t1">Sider</h1>
+		</div>
+
+	</nav>
+	<!-- <nav class="R"></nav> -->
+	<div style="margin-left:25%" style="background-color: rgb(230, 76, 76);display:inline;float:left;">
+		<div id="subLeft" class="subLeft">
+
+			<form style="margin-left: 0px;">
+
+				<label for="sourceName" class="txtStyle1" required>资源名称</label>
+
+				<input class="txtStyle1" type="text" name="sourceName" value="输入内容" required></br>
+
+				<div class="drawLine"></div>
+
+				<label for="projectName" class="txtStyle1">项目名称</label>
+				<input class="txtStyle1" type="text" name="projectName" value="项目名称"></br>
+
+				<div class="drawLine"></div>
+				<!-- 资源预览图按钮html START -->
+				<label for="sourcePreview" class="txtStyle1">资源预览</label>
+				<label id="sourcePreviewText" for="sourcePreview"
+					class="w3-btn w3-gray w3-text-white fileUpLoad">
+					资源预览图
+				</label>
+				<input id="sourcePreview" name="sourcePreview" type="file" readonly=true
+					accept=".bmp,.jpg,.png,.tif,.gif,.pcx,.tga,.exif,.fpx,.svg,.psd,.cdr,.pcd,.dxf,.ufo,.eps,.ai,.raw,.WMF,.webp,.avif"
+					multiple>
+				<!-- 资源预览图按钮html END -->
+
+				<div class="drawLine">
+					<div class="txtStyle2" id="InfoPreview">预览图的信息</div></br>
+				</div>
+				</br>
+				</br>
+
+				<!-- 资源打包按钮html START -->
+				<label for="sourcePackage" class="txtStyle1">资源打包</label>
+				<label id="sourcePackageText" for="sourcePackage"
+					class="w3-btn w3-gray w3-text-white fileUpLoad">
+					资源打包
+				</label>
+				<input id="sourcePackage" name="sourcePackage" type="file" readonly=true multiple
+					accept=".zip,.7z,.rar">
+				<!-- 资源打包按钮html END -->
+
+				<div class="drawLine">
+
+					<div class="txtStyle2" id="InfoPreview2">资源包的信息</div></br>
+				</div>
+				</br>
+				</br>
+				<label id="ele1" for="sourceType" class="txtStyle1" style="width: auto;">资源类型</label>
+				<div id="ele2" class="custom-select" style="width:130px;">
+					<select name="sourceType" id="sourceTypes">
+						<option class="ifFail" value="0">贴图</option>
+						<option class="ifFail" value="10">模型</option>
+						<option class="ifFail" value="20">原画</option>
+						<option class="ifFail" value="30">其他</option>
+					</select>
+				</div>
+
+				<div class="drawLine"></div>
+
+				<textarea class="txtStyle2 " name="sourceDescription" type="textarea"
+					style="width:100%;height: 150px;" id="textarea">录入标签 </textarea>
+				</br>
+
+				<input class="w3-btn w3-gray w3-text-white txtStyle3" type="button" value="确认上传"
+					onclick="submitFunction()">
+
+
+			</form>
+
+		</div>
+
+	</div>
+	<div style="margin-left:65%;" style="background-color:green;display:inline;float:left;">
+
+		<div id="subRight" class="subRight">
+			<form style="margin-left: 
+			0px;">
+				<div class="subb">
+
+					<div id="fitImg" style="border: 0px solid rgb(0, 0, 0);padding-top: 3px">
+
+						<input name="map" type="image" id="imagePreview" src="../UPLOAD/img/img1.png">
+					</div>
+					</br>
+					<div class="tag">
+						<h6>常用标签</h6>
+
+						<ul id="myUL">
+							<li><span class="tagscc caret">卡车</span>
+								<ul class="nested">
+
+									<li class="tags">卡车1</li>
+									<li class="tags">卡车2</li>
+									<li class="tags">卡车2</li>
+									<li class="tags">卡车2</li>
+									<li><span class="tagss caret">大卡车</span>
+										<ul class="nested">
+
+											<li class="tags">大卡车1</li>
+											<li class="tags">大卡车2</li>
+											<li class="tags">大卡车3</li>
+											<li class="tags">大卡车4</li>
+											<li class="tags">大卡车5</li>
+
+
+										</ul>
+
+
+									</li>
+
+									<li><span class="tagss caret">大卡车2</span>
+										<ul class="nested">
+
+											<li class="tags">大卡车21</li>
+											<li class="tags">大卡车22</li>
+											<li class="tags">大卡车23</li>
+											<li class="tags">大卡车24</li>
+											<li class="tags">大卡车25</li>
+
+
+										</ul>
+
+
+									</li>
+								</ul>
+
+
+							</li>
+							<li><span class="tagscc caret">汽车</span>
+								<ul class="nested">
+
+									<li class="tags">汽车1</li>
+									<li class="tags">汽车2</li>
+									<li class="tags">汽车3</li>
+									<li class="tags">汽车4</li>
+									<li class="tags">汽车5</li>
+									<li class="tags">汽车6</li>
+									<li class="tags">汽车7</li>
+									<li class="tags">汽车8</li>
+								</ul>
+
+
+							</li>
+							<li><span class="tagscc caret">跑车</span>
+								<ul class="nested">
+
+									<li class="tags">跑车1</li>
+									<li class="tags">跑车2</li>
+									<li class="tags">跑车3</li>
+									<li class="tags">跑车4</li>
+									<li class="tags">跑车5</li>
+									<li class="tags">跑车6</li>
+									<li class="tags">跑车7</li>
+									<li class="tags">跑车8</li>
+								</ul>
+
+
+							</li>
+
+						</ul>
+
+
+
+
+
+
+
+					</div>
+
+
+
+				</div>
+
+
+			</form>
+
+		</div>
+	</div>
+	<script src=" js/customSelect.js"><noscript>浏览器不支持js</noscript>
+	</script>
+	<script src="js/tagsManager.js"></script>
+	<script src="js/submitFileManager.js"></script>
+	<script src="js/jsonInterface.js"></script>
+	<script>
+		function submitFunction() {
+			// var string = "" + document.getElementsByClassName("select-selected")[0].id;
+			// alert("submitFunction:" + string);
+
+			var AssetName = "" + document.getElementsByName("sourceName")[0].value;
+
+			var SourceName = "" + document.getElementsByName("projectName")[0].value;
+
+			var AssetPreview = document.getElementById("sourcePreview").files;
+
+			var AssetZipFile = document.getElementById("sourcePackage").files;
+
+			var AssetTags = "" + document.getElementsByName("sourceDescription")[0].value;
+
+			var AssetType = document.getElementsByClassName("select-selected")[0].id;
+
+			//安全校验
+
+			if (AssetType == "") {
+				AssetType = 0;
+			}
+			if (AssetTags.indexOf("录入标签 ") >= 0) {
+				AssetTags = AssetTags.replace("录入标签 ", "");
+			}
+
+			//post
+
+			var fd = new FormData();
+
+			fd.append("AssetName", AssetName);
+			fd.append("SourceName", SourceName);
+			//fd.append("AssetPreview", AssetPreview);
+			$.each(AssetPreview, function (indexInArray, valueOfElement) {
+				fd.append("AssetPreview", valueOfElement);
+			});
+			//fd.append("AssetZipFile", AssetZipFile);
+			$.each(AssetZipFile, function (indexInArray, valueOfElement) {
+				fd.append("AssetZipFile", valueOfElement);
+			});
+			fd.append("AssetTags", AssetTags);
+			fd.append("AssetType", AssetType);
+			//console.log(AssetPreview);
+			console.log(AssetZipFile);
+			asset_add(fd);
+		}
+
+		function asset_add(info) {
+			var urlink = 'http://192.168.55.127/asset/asset_add'
+			$.ajax({
+				url: urlink,
+				type: 'post',
+				processData: false,
+				contentType: false,
+				data: info,
+				success: function (data) {
+					console.log("已上传至： " + urlink + "  成功的内容：");
+					for (var value of info.values()) {
+						console.log(value);
+					}
+
+				},
+				error: function (request, status, error) {
+					console.log("已上传至： " + urlink + "  失败的内容：");
+
+					for (var value of info.values()) {
+						console.log(value);
+					}
+				}
+
+			});
+		}
+	</script>
+
+</body>
+
+</html>

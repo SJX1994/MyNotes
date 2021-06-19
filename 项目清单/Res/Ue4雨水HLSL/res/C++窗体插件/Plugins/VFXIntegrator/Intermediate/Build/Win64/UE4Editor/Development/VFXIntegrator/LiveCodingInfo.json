@@ -1,0 +1,12 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.VFXIntegrator.cpp.obj": [
+			"SAssetPerforceChecker.cpp.obj",
+			"SVFXIntegratorWidget.cpp.obj",
+			"VFXIntegrator.cpp.obj",
+			"VFXIntegratorCommands.cpp.obj",
+			"VFXIntegratorStyle.cpp.obj"
+		]
+	}
+}

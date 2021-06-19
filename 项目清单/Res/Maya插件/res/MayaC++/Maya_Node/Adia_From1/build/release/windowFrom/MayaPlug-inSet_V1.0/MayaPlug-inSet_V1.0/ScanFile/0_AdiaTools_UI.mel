@@ -1,0 +1,27 @@
+global proc VertexNormalSort(){
+    if(`window -query -exists Adia_PlugIns`)
+    deleteUI Adia_PlugIns;
+    string $s = "Adia_PlugIns_V1";
+    
+    window -title $s -menuBar true -maximizeButton false -minimizeButton true Adia_PlugIns;
+    columnLayout -adjustableColumn true;
+        
+        button -height 23 -width 23 -backgroundColor 255 241 155 -label "vertexNormalBatch"
+        -command "vertexNormalBatch";
+        text -label "" -en off;
+        button -height 23 -width 23 -backgroundColor 255 241 155 -label "getWidth"
+        -command "getWidth";
+        text -label "" -en off;
+        button -height 23 -width 23 -backgroundColor 255 241 155 -label "deletUvSet"
+        -command "deletUvSet";
+        text -label "" -en off;
+        button -height 23 -width 23 -backgroundColor 255 241 155 -label "edgeNormalChecker"
+        -command "edgeNormalChecker";
+        text -label "" -en off;
+        
+        
+    window -edit -widthHeight 300 210 Adia_PlugIns;
+    showWindow Adia_PlugIns;
+}
+
+VertexNormalSort();

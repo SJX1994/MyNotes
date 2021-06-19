@@ -1,0 +1,224 @@
+.header_subPage_PMdataCheck {
+	padding: 80px;
+	/* some padding */
+	text-align: center;
+	/* center the text */
+	background: #1abc9c;
+	/* green background */
+	color: white;
+	/* white text color */
+
+}
+
+.header_subPage_PMdataCheck h1 {
+	font-size: 30px;
+}
+
+/* Style the top navigation bar */
+.navbar {
+	overflow: hidden;
+	/* Hide overflow */
+	background-color: #333;
+	/* Dark background color */
+}
+
+/* Style the navigation bar links */
+.navbar a {
+	float: left;
+	/* Make sure that the links stay side-by-side */
+	display: block;
+	/* Change the display to block, for responsive reasons (see below) */
+	color: white;
+	/* White text color */
+	text-align: center;
+	/* Center the text */
+	padding: 14px 14px;
+	/* Add some padding */
+	text-decoration: none;
+	/* Remove underline */
+}
+
+/* Right-aligned link */
+.navbar a.right {
+	float: right;
+	/* Float a link to the right */
+}
+
+/* Change color on hover/mouse-over */
+.navbar a:hover {
+	background-color: #ddd;
+	/* Grey background color */
+	color: black;
+	/* Black text color */
+}
+
+/* Ensure proper sizing */
+* {
+	box-sizing: border-box;
+}
+input, textarea {
+display: block;
+justify-content: center;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* 适配 */
+
+	@media screen and (max-width: 700px) {
+		.row {
+			flex-direction: column;
+		}
+	}
+
+	/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+	@media screen and (max-width: 400px) {
+		.navbar a {
+			float: none;
+			width: 100%;
+		}
+	}
+
+	/* ----------------------------------------- */
+	/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+	@media screen and (max-width: 600px) {
+
+		.column,
+		input[type=submit] {
+			width: 100%;
+			margin-top: 0;
+		}
+	}
+
+
+/* 样式 */
+
+/* Column container */
+.row {
+	display: flex;
+	/* flex-wrap: wrap; */
+	justify-content: center;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+	flex: 30%;
+	/* Set the width of the sidebar */
+	background-color: #f1f1f1;
+	/* Grey background color */
+	padding: 30px;
+	/* Some padding */
+}
+
+/* Main column */
+.main {
+	flex: 70%;
+	/* Set the width of the main content */
+	background-color: white;
+	/* White background color */
+	padding: 20px;
+	/* Some padding */
+	
+}
+
+.footer {
+	padding: 20px;
+	/* Some padding */
+	text-align: center;
+	/* Center text*/
+	background: #ddd;
+	/* Grey background */
+}
+
+/* ----------------------------------------- */
+/* Style inputs */
+input[type=text],
+select,
+textarea {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	margin-top: 6px;
+	margin-bottom: 16px;
+	resize: vertical;
+}
+
+input[type=submit] {
+	background-color: #4CAF50;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	cursor: pointer;
+}
+
+input[type=submit]:hover {
+	background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.container {
+	border-radius: 5px;
+	background-color: #f2f2f2;
+	padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+	float: left;
+	width: 50%;
+	margin-top: 6px;
+	padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+	padding: 0px;
+}
+.div{
+	
+	    width:20%;
+	    height:45px;
+	    line-height:36px;/**设置行高和控件高一样，这是内部文字才能垂直居中*/
+		
+	    overflow:hidden;/**为了防止内容超出容器或者产生自动换行，这样就达不到垂直居中效果了*/
+	    margin: 15 auto;/**让div在页面中居中显示*/
+	    background-color:#ffffff;/**背景颜色*/
+	    border:solid 15px #ffffff;
+	    border-width:1px 1px 0px 1px;
+		text-align: center;
+	
+}
+#wrapper {
+    width: 550px;
+    height: 100px;
+    border: 1px solid #000000;
+    margin: 0 auto;
+}
+#progressbar {
+    width: 180px;
+    height: 20px;
+    margin: 0 auto;
+    margin-top: 40px;
+    border: 1px solid #000000;
+}
+/* 设置进度条动画 */
+#fill {
+    animation: move 2s;
+    text-align: center;
+    background-color: #6caf00;
+    color: #ffffff;
+}
+
+/* 实现元素宽度过度的动画效果 */
+@keyframes move {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}

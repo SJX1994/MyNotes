@@ -1,0 +1,86 @@
+global string $gShelfTopLevel;
+string $shelves[] = `tabLayout -q -childArray $gShelfTopLevel`;
+int $counter=0;
+int $btmCounter=0;
+string $imageSet = "removeShrinkWrapInnerObject.png";
+string $buttonLab = "UVSetEditorPlus";
+string $buttonAnnotation = "UVSetEditorPlus(PleaseReadUserGuide)";
+string $script = "global proc VertexNormalSort(){\n        if(`window -query -exists adia_myVertexNormalSort_Window`)\n        deleteUI adia_myVertexNormalSort_Window;\n        string $s = \"Adia_UV Set Editor Plus\";\n        window -title $s -menuBar true -maximizeButton true -minimizeButton true adia_myVertexNormalSort_Window;\n        columnLayout -adjustableColumn true;\n            text -label \"Refer the manual to use\" -en off;\n            textFieldGrp    -label \"Move Top\" -text \"UV name\" -columnWidth 2 120 -columnWidth 1 60 -columnAlign 1 \"center\" -columnAlign 2 \"center\" -rat 1 \"both\" 10 adia_YourUVname ;\n            button -height 24 -width 24 -backgroundColor 255 241 155 -label \"Run\"\n            -command \"Do()\";\n            text -label \" \" -en off;\n        window -edit -widthHeight 330 90 adia_myVertexNormalSort_Window;\n        showWindow adia_myVertexNormalSort_Window;\n}\nglobal proc Do()\n{\n    string $selectObjects[]=`ls -selection `;\n    string $o;\n    for($i=0;$i<size($selectObjects);$i++)\n    {\n        string $uvNameWantUp = `textFieldGrp -q -tx adia_YourUVname`;\n        string $name = $selectObjects[$i];\n        if(size($selectObjects)>1)\n        {\n            $firstUvName =`getAttr $name.uvSet[0].uvSetName`;\n            for($f in $firstUvName)\n            {\n                if(`objExists $f`)\n                {\n                }else{\n                    if(catch(`polyUVSet -reorder -uvSet $f -nuv $uvNameWantUp`))\n                    {\n                        print(\"catch\");\n                    }else{\n                        polyUVSet -delete -uvSet $f;\n                        updateUvSetEditor;\n                    }\n                }\n            }\n            break;\n        }else{\n            string $firstUvName =`getAttr $name.uvSet[0].uvSetName`;\n            print($firstUvName);\n            print($uvNameWantUp);\n            polyUVSet -reorder -uvSet $firstUvName -nuv $uvNameWantUp;\n            polyUVSet -delete -uvSet $firstUvName;\n            pause -sec 1;\n            updateUvSetEditor;\n        }\n    }\n}\nglobal proc DeleteWindow(string $windowName)\n{\n    string $windows[] = `lsUI -windows`;\n    $windows = stringArrayRemove($windowName,$windows);\n    deleteUI $windows;\n}\nVertexNormalSort();";
+for($s in $shelves)
+{
+    if($s=="Adia_Tools")
+    {
+        string $shelfButtons[] = `shelfLayout -q -childArray "Adia_Tools"`;
+        for($b in $shelfButtons)
+        {
+            string $label;
+            if(`objectTypeUI -isType "shelfButton" $b`)
+            {
+                $label = `shelfButton -q -label $b`;
+                if($label==$buttonLab)
+                {
+                   
+                    deleteUI $b;
+                     
+                }
+                else{
+                    if($btmCounter==0)
+                    {
+                        string $myButton = `shelfButton
+                        -parent "Adia_Tools"           
+                        -enable 1
+                        -width 34
+                        -height 34
+                        -manage 1
+                        -visible 1
+                        -annotation $buttonAnnotation
+                        -label $buttonLab
+                        -image1 $imageSet
+                        -style "iconOnly"
+                        -command $script`;
+                        $btmCounter++;
+                    }else
+                    {
+                        print("got same shelfButton");
+                    }
+                
+                }
+            }
+        }
+        if(size($shelfButtons)==0)
+        {
+            string $myButton = `shelfButton
+            -rpt true
+            -parent "Adia_Tools"           
+            -enable 1
+            -width 34
+            -height 34
+            -manage 1
+            -visible 1
+            -annotation $buttonAnnotation
+            -label $buttonLab
+            -image1 $imageSet
+            -style "iconOnly"
+            -command  $script`;
+        }
+    }else{
+        $counter++;
+        if($counter==size($shelves))
+        {
+            addNewShelfTab "Adia_Tools";
+            string $myButton = `shelfButton
+            -rpt true
+            -parent "Adia_Tools"           
+            -enable 1
+            -width 34
+            -height 34
+            -manage 1
+            -visible 1
+            -annotation $buttonAnnotation
+            -label $buttonLab
+            -image1 $imageSet
+            -style "iconOnly"
+            -command  $script`;
+        }
+    }
+}

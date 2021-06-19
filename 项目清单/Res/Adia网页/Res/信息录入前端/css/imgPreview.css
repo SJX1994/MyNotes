@@ -1,0 +1,17 @@
+.imgframe{
+	width: 400px;
+	height: 400px;
+	border: 1px solid #000000;
+	display: table;
+}
+
+.imgframe #imgContanier{
+	display: table-cell;
+	vertical-align: middle;
+	width: 100%;
+}
+
+.imgframe #imgContanier img{
+	width: 100%;	
+	cursor: move;
+}

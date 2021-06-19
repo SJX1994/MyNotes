@@ -11,6 +11,9 @@
         <(代码)>
 
 windows开发环境配置：
+    ref：   
+        https://youtu.be/UfQGYI1pLPk
+
     IDE(可以选择VisualStudio),APP(Maya软件),DEVKIT(Maya软件：对应版本),文档(Maya软件：对应版本)
         (*)
         1.DEVKIT(Maya软件：对应版本)

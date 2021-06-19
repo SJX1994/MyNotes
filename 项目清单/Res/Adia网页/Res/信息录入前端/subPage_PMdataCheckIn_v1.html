@@ -1,0 +1,332 @@
+<head>
+	<title>PM产品信息录入</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style type="text/css">
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="css/subPage_PMdataCheckIn.css" />
+</head>
+<body>
+	<div class="header_subPage_PMdataCheck">
+		<h1>PM产品信息录入</h1>
+	</div>
+	<div class="navbar">
+		<a href="#">Back</a>
+		<a href="#">Asset</a>
+		<a href="#">Price</a>
+		<a href="#" class="right">Home</a>
+		<a href="http://127.0.0.1:8848/public/about.html" class="right">About</a>
+	</div>
+	<div class="navbar row">
+		<div class="row" style="width: 30%;float: left;">
+			<input type="text" name="name" id="submissions" style="width:100%;height: 40%;margin: 30px;margin-top: 35px;margin-right: 0;"
+			 placeholder="填入想创建的表单数量">
+
+			<input id="creatBaseSubmissions" type="submit" value="创建表单" style="width:100%;height: 40%;margin: 30px;margin-top: 35px;margin-left: 0;">
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="main" id="root">
+
+
+
+			<div>
+				暂无可提交信息
+
+			</div>
+
+
+
+
+		</div>
+
+	</div>
+	<div class="footer">
+		<h2>
+			<input id="SubmitTable" type="submit" value="提交表单">
+		</h2>
+		
+	</div>
+	<p id="demo">
+		1
+		</p>
+
+</body>
+<script type="text/javascript" src="./js/jquery-1.11.1.min.js">
+</script>
+<script type="text/javascript" src = "js/jquery.serializejson.js">
+</script>
+<script type="text/javascript">
+	/* 参数名称修改 */
+	function FromInfor(name,type,remarks)
+	{
+		this.name = name;
+		this.type = type;
+		this.remarks = remarks;
+	}
+	const fromNaming = new FromInfor(':产品代号','产品类型','产品备注')
+	
+	var clicked = false;
+	var count = 0;
+	/* 用户输入安全校验 */
+	document.getElementById("creatBaseSubmissions").onclick = function() {
+		clicked = true;
+		var a = document.getElementById("submissions").value;
+		a = parseInt(a);
+		if (typeof(a) == "number") {
+
+			if (isNaN(a) || a == 0||a>300) {
+				alert("请输入有效数字");
+			} else {
+				var main = document.getElementById("root");
+				while (main.hasChildNodes()) //当elem下还存在子节点时 循环继续
+				{
+					main.removeChild(main.firstChild);
+				}
+				count = 0;
+				creatDiv(a - 1);
+			}
+
+		} else {
+			alert("请输入有效数字");
+		}
+
+
+
+
+	};
+
+	function creatDiv(a) {
+
+		/* TODO从数据库读取类型 */
+		var typesOfOptions = "3D建模艺术作品,2D原画艺术作品,Ue4引擎材质,Unity引擎材质,Maya插件脚本,3DMax插件脚本";
+		var arrTypesOfOptions = typesOfOptions.split(",");
+
+		/* 安全异步执行 */
+		window.setTimeout(function() {
+			console.log("步骤1完成");
+			/* 创建 */
+			for (var i = 0; i <= a; i++) {
+
+				var row = document.createElement('div');
+				row.id = "row" + String(i);
+				row.className = "row";
+
+				var div = document.createElement('div');
+				div.id = "column" + String(i);
+				div.className = "row";
+				/* document.getElementsByTagName('body')[0].appendChild(div); */
+				document.getElementsByClassName('main')[0].appendChild(div);
+
+				var form = document.createElement('form');
+				form.id = "form_PMcheckIn" + String(i);
+				form.action = "/action_page.php";
+				form.className = "row";
+				form.style.width = "100%";
+
+				/* document.getElementById('column'+String(i))[0].appendChild(form); */
+				div.parentNode.insertBefore(form, div);
+
+				var label = document.createElement('label');
+				label.id = "label" + String(i);
+				label.textContent = String(i) + fromNaming.name;
+				label.className = "div";
+				div.parentNode.insertBefore(label, div);
+
+
+				var input = document.createElement('input');
+				input.id = "inputCodename" + String(i);
+				input.placeholder = "例如:UBI_ProjectB_Name" + String(i);
+				/* input.name = "产品代号" + String(i); */
+				input.name = "ProductCode";
+				input.itemType = "text";
+				input.className = "div";
+				input.itemType = "text";
+				input.itemValue = "12321312";
+				input.checked = true;
+				div.parentNode.insertBefore(input, div);
+
+				var labelS = document.createElement('label');
+				labelS.id = "labelS" + String(i);
+				labelS.textContent = fromNaming.type;
+				labelS.className = "div";
+
+
+
+				div.parentNode.insertBefore(labelS, div);
+
+				var select = document.createElement('select');
+				select.id = "select" + String(i);
+				select.className = "div";
+				/* select.name = "所属类型"; */
+				select.name ="ProductType"
+				div.parentNode.insertBefore(select, div);
+				for (var ii = 0; ii <= arrTypesOfOptions.length; ii++) {
+					var option0 = document.createElement('option');
+					option0.id = "option" + String(i) + "_" + arrTypesOfOptions[ii];
+					option0.itemValue = arrTypesOfOptions[ii];
+					option0.textContent = arrTypesOfOptions[ii];
+					
+					select.parentNode.insertBefore(option0, select);
+				}
+
+				/* 备注 */
+				var labelT = document.createElement('label');
+				labelT.id = "labelT" + String(i);
+				labelT.textContent = fromNaming.remarks;
+				labelT.className = "div";
+				div.parentNode.insertBefore(labelT, div);
+
+				var textarea = document.createElement('textarea');
+				textarea.id = "textarea" + String(i);
+				/* textarea.className = "div"; */
+				textarea.placeholder = "关于产品 " + String(i) + " 的备注";
+				textarea.style.height = "100%";
+				textarea.style.width = "100%";
+				textarea.name = "ProductRemarks";
+				div.parentNode.insertBefore(textarea, div);
+
+
+			}
+			window.setTimeout(function() {
+
+				console.log("步骤2完成");
+				/* 重新设置父子级 */
+				for (var i = 0; i <= a; i++) {
+					var row = document.getElementById("row" + String(i));
+
+
+
+
+					var form = document.getElementById("form_PMcheckIn" + String(i));
+					var div = document.getElementById("column" + String(i));
+
+
+
+					div.appendChild(form);
+
+					var label = document.getElementById("label" + String(i));
+					form.appendChild(label);
+
+					var input = document.getElementById("inputCodename" + String(i));
+					form.appendChild(input);
+
+					var labelS = document.getElementById("labelS" + String(i));
+					form.appendChild(labelS);
+
+					var select = document.getElementById("select" + String(i));
+					form.appendChild(select);
+					for (var ii = 0; ii <= arrTypesOfOptions.length; ii++) {
+
+						var option0 = document.getElementById("option" + String(i) + "_" + arrTypesOfOptions[ii]);
+						select.appendChild(option0);
+					}
+					/* 备注 */
+					var labelT = document.getElementById("labelT" + String(i));
+					form.appendChild(labelT);
+					var textarea = document.getElementById("textarea" + String(i));
+					form.appendChild(textarea);
+				}
+
+				window.setTimeout(function() {
+					alert(a + 1 + "张新表单创建成功")
+				}, 100)
+			}, 100)
+		}, 100)
+
+
+
+
+	}
+
+	document.getElementById("SubmitTable").onclick = function() {
+		if (clicked == false) {
+			alert("请先创建表单");
+		} else {
+			var a = document.getElementById("submissions").value;
+
+			var lable = document.getElementById("inputCodename0").value;
+			lable = "" + lable;
+			/* var outPutToServer = {产品代号:+lable,产品全称:+lable};
+			
+			var outPutToServerJSON = JSON.stringify(outPutToServer);
+			
+			document.getElementById("demo").innerHTML = outPutToServerJSON; */
+			
+			 
+			
+			/* var obj = $('form_PMcheckIn0').serializeJSON();
+			var jsonString = JSON.stringify(obj);
+			document.getElementById("demo").innerHTML = jsonString; */
+			
+			/* var element = document.getElementById('form_PMcheckIn0');
+			if(element==null)
+			{
+				alert("没找到表单")
+			}else{
+				var html = element.outerHTML;
+				var data = { html:html };
+				var json = JSON.stringify(data);
+				document.getElementById("demo").innerHTML = json;
+			} */
+			for(var i=0; i<=a;i++)
+			{
+				
+				var formData = JSON.stringify($("#form_PMcheckIn"+String(i)).serializeArray());
+				document.getElementById("demo").innerHTML = formData;
+			}
+			/* -------将表单数组打散成obj------- */
+			$.fn.serializeObject = function(){
+			    var o = {};
+			    var a = this.serializeArray();
+			    $.each(a, function() {
+			        if (o[this.name] !== undefined) {
+			            if (!o[this.name].push) {
+			                o[this.name] = [o[this.name]];
+			            }
+			            o[this.name].push(this.value || '');
+			        } else {
+			            o[this.name] = this.value || '';
+			        }
+			    });
+			    return o;
+			}
+			/* ------------------------------------ */
+			var objArr =[];
+			var formData ={};
+			for(var i=0; i<=a-1;i++)
+			{
+				
+				/* formData = $("#form_PMcheckIn"+String(i)).serializeArray(); */
+				formData = $('#form_PMcheckIn'+String(i)).serializeObject();
+				objArr.push(formData);
+				if(i/a == 1)
+				{
+					alert("提交成功");
+				}
+			}
+			objArr = JSON.stringify(objArr);
+			document.getElementById("demo").innerHTML = objArr;
+			
+			
+			/* window.setTimeout(function() {
+				console.log(1)
+				window.setTimeout(function() {
+					console.log(2)
+					window.setTimeout(function() {
+						console.log(3)
+					}, 50)
+				}, 50)
+			}, 50) */
+
+
+		}
+	}
+	
+	
+</script>

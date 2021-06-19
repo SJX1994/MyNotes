@@ -1,0 +1,158 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Entry.unity
+    guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 539e0257031ef8a47ba9a07da8f8a0d0
+  - enabled: 1
+    path: Assets/Scenes/NetworkReady.unity
+    guid: 33afff1ebf27e5b48a5d01e78a80a0ac
+  - enabled: 1
+    path: Assets/Scenes/NetStdBattle.unity
+    guid: 916ebc836db5eb845b29a7dc38a6d2f5
+  - enabled: 1
+    path: Assets/Scenes/NetStdBattle_G5.unity
+    guid: 1fe59c1951ac9d144baae1567e32e142
+  - enabled: 1
+    path: Assets/Scenes/NetGpBattle.unity
+    guid: 6a597fac09b1429448faa9d76a8397e8
+  - enabled: 1
+    path: Assets/Scenes/NetBrBattle.unity
+    guid: b44f3957e065c42498001798e8962315
+  - enabled: 1
+    path: Assets/Scenes/NetCstlBattle.unity
+    guid: 7f31dd0d43bf00a4a9653c8fa0c3f6c5
+  - enabled: 1
+    path: Assets/Scenes/NetCstlBattle_G5.unity
+    guid: 4105e83c21879374590f0dfa726c518d
+  - enabled: 1
+    path: Assets/Scenes/DressUp.unity
+    guid: ca44c9d018d21ec469c58313fccc1b25
+  - enabled: 1
+    path: Assets/Scenes/BomberPass.unity
+    guid: 53471dabf1597d34bb70bc42fcef24b2
+  - enabled: 1
+    path: Assets/Scenes/Shop.unity
+    guid: e36a7c1cb5617f0408469ecc7adfc0b2
+  - enabled: 1
+    path: Assets/Scenes/Other.unity
+    guid: ac7da8a9fc102194e923a073ae8ff61a
+  - enabled: 1
+    path: Assets/Scenes/StageEdit.unity
+    guid: a68e8876dba260d439bd325127bcd6e7
+  - enabled: 1
+    path: Assets/Scenes/StageEditReady.unity
+    guid: ee482ad0b9b74bd42a72cbd6f3cccaf9
+  - enabled: 1
+    path: Assets/Scenes/MoviePlay.unity
+    guid: 0b75a63dae615554fae432d11f039caf
+  - enabled: 1
+    path: Assets/Scenes/StorySaveData.unity
+    guid: 6a93c2c795cbe3e4986c7adcd75f11a7
+  - enabled: 1
+    path: Assets/Scenes/StoryWorldMap.unity
+    guid: 54e74687572adb644a53345077d2aa17
+  - enabled: 1
+    path: Assets/Scenes/StoryCamp.unity
+    guid: 90ba2eef0e26d134697d2c9efd656410
+  - enabled: 1
+    path: Assets/Scenes/StoryExplore.unity
+    guid: a53333e0270d6834aab721579f2d2c99
+  - enabled: 1
+    path: Assets/Scenes/Dummy.unity
+    guid: 372bf6f2a12efdc408a31abbf69ea66a
+  - enabled: 1
+    path: Assets/Scenes/Reset.unity
+    guid: e668c65d9175b154297f008a1ebf0ad1
+  - enabled: 1
+    path: Assets/TestScenes/Network/ChatTest/ChatTest.unity
+    guid: 2cab7ecc751182245ab4fd1733af9134
+  - enabled: 1
+    path: Assets/TestScenes/Network/NetPlayTest/NetPlayTestClient.unity
+    guid: e492ce864423543428f3167ff600669f
+  - enabled: 1
+    path: Assets/TestScenes/Network/NetPlayTest/NetPlayTestServer.unity
+    guid: a3d3ea157fd425245a036675785e009e
+  - enabled: 1
+    path: Assets/TestScenes/Input/InputTest/InputTest.unity
+    guid: 95698e21e76f7f94a96a5fcccf23fb76
+  - enabled: 1
+    path: Assets/TestScenes/Input/VibrationTest/VibrationTest.unity
+    guid: 00753bfc5d6998f42a9a3bc700d02da3
+  - enabled: 1
+    path: Assets/TestScenes/Sound/SoundTest.unity
+    guid: fd417288346be8645abb4ed52cab6c19
+  - enabled: 1
+    path: Assets/TestScenes/SaveData/SaveDataTest.unity
+    guid: 7ce559e87d10d154c88281b3282ca7c4
+  - enabled: 1
+    path: Assets/TestScenes/Battle/Scenes/OfflineStdBattleTest.unity
+    guid: 1be3eb8239849b443808c02ba5296b21
+  - enabled: 1
+    path: Assets/TestScenes/Graphics/MeshBatchingRenderer/Scenes/MeshBatchingRendererTest.unity
+    guid: 6bf36086f18a245478c991a3a86516a5
+  - enabled: 1
+    path: Assets/TestScenes/Graphics/MeshBatchingRenderer/Scenes/MeshBatchingRendererPropertyTestScene.unity
+    guid: 6b649438c23be5148b8f0a12639d57d9
+  - enabled: 1
+    path: Assets/TestScenes/Graphics/BatchRenderingParticleEffect/Scenes/BatchRenderingParticleEffect.unity
+    guid: 28a02d0aa23b878488b9cd19e120cb44
+  - enabled: 1
+    path: Assets/TestScenes/Player/PlayerTest/Scenes/PlayerTest.unity
+    guid: 233d18ee1a3fcdf479fb66d237ab261e
+  - enabled: 1
+    path: Assets/TestScenes/Player/PlayerSkillTest/Scenes/PlayerSkillTest.unity
+    guid: 209878913cbe5964f888bfd8d77f824d
+  - enabled: 1
+    path: Assets/TestScenes/Item/ItemPrefabInstancingPreview/Scenes/ItemPrefabInstancingPreview.unity
+    guid: d95102d3ac45658488d56d9eb53c279a
+  - enabled: 1
+    path: Assets/TestScenes/Cutscene/CutsceneTest.unity
+    guid: e39f5c42521334749ab587cc17ac6c47
+  - enabled: 1
+    path: Assets/TestScenes/Bomb/BombTest/Scenes/BombTest.unity
+    guid: a061b51f284e22e4ca7d096dc5217cb2
+  - enabled: 1
+    path: Assets/TestScenes/GameScene/LoadAdditiveSceneTest/LoadAdditiveSceneTest.unity
+    guid: 9287a521caa999744960d9a53ef39ca6
+  - enabled: 1
+    path: Assets/TestScenes/BomberPass/BomberPassTest.unity
+    guid: a85df767d9c5b4f4e947e5af549db91a
+  - enabled: 1
+    path: Assets/TestScenes/BomberPass/RankUp/RankUpTest.unity
+    guid: 1a81316313502314e9b4f02fa16171ab
+  - enabled: 1
+    path: Assets/TestScenes/Grade/GradeTest.unity
+    guid: 87241fcc2bd57d04e9b619c36f2040b2
+  - enabled: 1
+    path: Assets/TestScenes/Network/SendReceiveMsgTest/SendReceiveMsgTest.unity
+    guid: c29f6cc9e9ba6a04a810e875db4cbb3f
+  - enabled: 1
+    path: Assets/TestScenes/HDRP/HdrpTest_G5.unity
+    guid: a37a74933858c584fbfb4862bcd30fe3
+  - enabled: 1
+    path: Assets/Scenes/Server.unity
+    guid: 03d1e183d871d034d92250f058cb072f
+  - enabled: 1
+    path: Assets/TestScenes/Battle/Scenes/OfflineStdBattleTest_G5.unity
+    guid: bdaafe8afc870d040bf4af235e921ed1
+  - enabled: 1
+    path: Assets/TestScenes/Graphics/VFXPreview/VFXTestScene_G5.unity
+    guid: 37b7b69bd0953da4b8d46cc2e4747d5b
+  - enabled: 1
+    path: Assets/TestScenes/Boss/BossTest/Scenes/BossTest.unity
+    guid: 7c2299f4e12846643a532c97b461b6c6
+  - enabled: 1
+    path: Assets/TestScenes/Enemy/Scenes/EnemyTest.unity
+    guid: 68d5aec692269594aa796d9546accd7a
+  - enabled: 1
+    path: Assets/TestScenes/StrayMinion/Scenes/StrayMinionTest.unity
+    guid: f07291bd104aeaf45b7970f0452e4ce8
+  m_configObjects: {}

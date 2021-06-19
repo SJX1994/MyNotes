@@ -1,0 +1,279 @@
+global proc myWG_CopyPasteNormal(){
+    
+    
+	if (`window -q -exists myWG_CopyPaste_Window`) deleteUI myWG_CopyPaste_Window;
+	
+	string $s = "Copy and Paste Normal";
+	window -title $s -menuBar true -maximizeButton 0 -minimizeButton 1 myWG_CopyPaste_Window; 
+
+	columnLayout -adjustableColumn true;
+
+        text -l "Select polygon components and push button." ;
+        text -l "";
+		floatFieldGrp  -pre 3 -numberOfFields 3 -v1 0.0 -v2 1.0 -v3 0.0  -columnWidth 1 65 -columnWidth 2 65 -columnWidth 3 65 myWG_CPM_NormalValue;
+		text -l "" -h 2;
+		
+		button -h 23 -bgc 0.675 0.663 0.843 -label "Copy from selection" -command "myWG_CPN_CopyNormalValue()";
+
+		text -l "" -h 3;
+		separator -style "in" -w 375;
+		text -l "" -h 5;
+		
+		button -h 23 -bgc 0.675 0.663 0.843 -label "Paste normal value" -command "myWG_CPN_PasteNormalValue()";
+
+
+    
+    window -e -wh 280 130 myWG_CopyPaste_Window;
+    showWindow myWG_CopyPaste_Window;
+    
+}
+
+global proc myWG_CPN_CopyNormalValue(){
+	
+	//選択を取得 //?取??
+	string $selList[] = `ls -sl -fl`;
+
+	//フェースでフィルタリング //按照面??
+	string $elm[] = `filterExpand -ex true -sm 34 $selList`;
+	if(size($elm) > 0){
+
+		//フェースの法線を取得 //取得所??面的法?
+		string $nrm[] = `polyInfo -faceNormals $elm[0]`;
+
+		//文字列をfloatに変換 //将字符串??浮点数并存取
+		string $tkBuf[];
+		float $tNml[]={0,0,0};
+		tokenize $nrm[0] " " $tkBuf;
+		$tNml[0]+=((float)($tkBuf[2]));
+		$tNml[1]+=((float)($tkBuf[3]));
+		$tNml[2]+=((float)($tkBuf[4]));
+		
+		//オブジェクトの名前を取得 //存取??面的名字
+		string $aObjName[] = stringToStringArray( $elm[0], ".");
+		
+		//法線の値をオブジェクトスペースからワールドスペースに変換 //将法?的?从?象空????世界空?并存入矩?
+		matrix $mNrm[1][4] = myWG_ObjToWorldSpace(
+			myWG_CreateVecMatrix($tNml[0],$tNml[1],$tNml[2])
+			,$aObjName[0]);
+
+		//ノーマライズ //?一化
+		float $fVec3[3] = <<$mNrm[0][0], $mNrm[0][1], $mNrm[0][2]>>;
+		normalize($fVec3);
+
+		//UIを更新 //在UI上?示
+		floatFieldGrp -e -v1 $fVec3[0] -v2 $fVec3[1] -v3 $fVec3[2] myWG_CPM_NormalValue;
+		return;
+	}
+
+	//頂点でフィルタリング //按照?点??
+	clear $elm;
+	string $elm[] = `filterExpand -ex true -sm 31 $selList`;
+	if(size($elm) > 0){
+
+		//最初の頂点を頂点フェースに変換 //将第一个?点????点面
+		string $plcc[] = `polyListComponentConversion -fv -tvf $elm[0]`;
+		$plcc = `filterExpand -sm 70 -ex true $plcc`;
+		//頂点フェースの法線の合計を計算 //?算?点面法?的?合
+		int $i = 0;
+		float $sum_normal[] = {0, 0, 0};
+		for ( $vtxFace in $plcc )
+		{
+  			float $normal[3] = `polyNormalPerVertex -q -xyz $vtxFace`;
+			$sum_normal[0] += $normal[0];
+			$sum_normal[1] += $normal[1];
+			$sum_normal[2] += $normal[2];
+			$i++;
+		}
+		
+		//頂点フェースの平均をとる
+		float $tNml[]={0,0,0};
+		$tNml[0] = $sum_normal[0]/$i;
+		$tNml[1] = $sum_normal[1]/$i;
+		$tNml[2] = $sum_normal[2]/$i;
+		
+		//オブジェクトの名前を取得
+		string $aObjName[] = stringToStringArray( $elm[0], ".");
+		
+		//法線の値をオブジェクトスペースからワールドスペースに変換
+		matrix $mNrm[1][4] = myWG_ObjToWorldSpace(myWG_CreateVecMatrix($tNml[0],$tNml[1],$tNml[2]),$aObjName[0]);
+
+		//ノーマライズ
+		float $fVec3[3] = <<$mNrm[0][0], $mNrm[0][1], $mNrm[0][2]>>;
+		normalize($fVec3);
+
+		//UIを更新
+		floatFieldGrp -e -v1 $fVec3[0] -v2 $fVec3[1] -v3 $fVec3[2] myWG_CPM_NormalValue;
+
+		return;
+	}
+
+	//頂点フェースでフィルタリング
+	clear $elm;
+	string $elm[] = `filterExpand -ex true -sm 70 $selList`;
+	if(size($elm) > 0){
+
+		//最初の頂点フェースの法線の値を取得
+  		float $tNml[3] = `polyNormalPerVertex -q -xyz $elm[0]`;
+		
+		//オブジェクトの名前を取得
+		string $aObjName[] = stringToStringArray( $elm[0], ".");
+		
+		//法線の値をオブジェクトスペースからワールドスペースに変換
+		matrix $mNrm[1][4] = myWG_ObjToWorldSpace(myWG_CreateVecMatrix($tNml[0],$tNml[1],$tNml[2]),$aObjName[0]);
+
+		//ノーマライズ
+		float $fVec3[3] = <<$mNrm[0][0], $mNrm[0][1], $mNrm[0][2]>>;
+		normalize($fVec3);
+
+		//UIを更新
+		floatFieldGrp -e -v1 $fVec3[0] -v2 $fVec3[1] -v3 $fVec3[2] myWG_CPM_NormalValue;
+
+		return;
+	}
+
+	print("Cannot get normal. Select polygon face, vertex, or vertexface.");
+
+}
+
+global proc myWG_CPN_PasteNormalValue(){
+
+	//選択を取得
+	string $selList[] = `ls -sl`;
+	//それぞれのコンポーネントを取得
+	string $sCompList[] = `filterExpand -ex true -sm 31 -sm 32 -sm 34 -sm 70 $selList`;
+	if(size($sCompList)){
+		//オブジェごとに要素を分離
+		string $sVtxF_c[] = myWG_classifyWithObj(`polyListComponentConversion -toVertexFace $sCompList`);
+		//オブジェクトの数を取得
+		int $i = size($sVtxF_c) / 2;
+		//UIの要素を取得
+		float $xyz[] = `floatFieldGrp -q -v myWG_CPM_NormalValue`;
+		for($n=0; $n<$i; $n++){
+			//ワールド空間からオブジェクト空間に
+			matrix $mNrm[1][4] = myWG_WorldToObjSpace(myWG_CreateVecMatrix($xyz[0],$xyz[1],$xyz[2]),$sVtxF_c[$n*2]);
+			//ノーマライズする
+			float $fVec3[3] = <<$mNrm[0][0], $mNrm[0][1], $mNrm[0][2]>>;
+			normalize($fVec3);
+			//要素を選択する
+			string $sStr[];
+			tokenizeList($sVtxF_c[$n*2 + 1],$sStr);
+			select $sStr;
+			//ノーマルを適用する
+			polyNormalPerVertex -xyz $fVec3[0] $fVec3[1] $fVec3[2];
+		}	
+	}
+}
+
+/** 
+* ベクトルの行列の作成
+* @param x成分 $x{float}
+* @param y成分 $y{float}
+* @param z成分 $z{float}
+* @return ベクトルの行列 {matrix[1][4]}
+**/
+global proc matrix myWG_CreateVecMatrix(float $x, float$y, float$z)
+{
+	matrix $mRes_Mtx[1][4]=<<$x,$y,$z,0>>;
+
+	return($mRes_Mtx);
+}
+
+/** 
+* オブジェクトの逆行列の取得
+* @param オブジェクト名 $sObj {string} 
+* @return オブジェクトの逆行列 {matrix[4][4]}
+**/
+global proc matrix myWG_GetObjInvMatrix(string $sObj)
+{
+	//オブジェクトの逆行列を取得
+	float $fMat[] = `getAttr ($sObj+".inverseMatrix")`;
+	matrix $mMat[4][4]=<<
+	$fMat[0],$fMat[4],$fMat[8],$fMat[12];
+	$fMat[1],$fMat[5],$fMat[9],$fMat[13];
+	$fMat[2],$fMat[6],$fMat[10],$fMat[14];
+	$fMat[3],$fMat[7],$fMat[11],$fMat[15]>>;
+
+	return($mMat);
+}
+
+/** 
+* オブジェクトスペースからワールドスペースに変換
+* @param 座標 $mIn_Mtx{matrix[1][4]}
+* @param オブジェクト名 $sObj {string} 
+* @return ワールド座標 {matrix[1][4]}
+**/
+global proc matrix myWG_ObjToWorldSpace(matrix $mIn_Mtx,string $sObj)
+{
+	
+	matrix $mMtx[4][4] = myWG_GetObjInvMatrix($sObj);
+	matrix $mRes_Mtx[1][4]=$mIn_Mtx*$mMtx;
+
+	return($mRes_Mtx);
+}
+
+/** 
+* ワールドスペースからオブジェクトスペースに変換
+* @param 座標 $mIn_Mtx{matrix[1][4]}
+* @param オブジェクト名 $sObj {string} 
+* @return ローカル座標 {matrix[1][4]}
+**/
+global proc matrix myWG_WorldToObjSpace(matrix $mIn_Mtx,string $sObj)
+{
+	matrix $mMtx[4][4] = myWG_GetObjMatrix($sObj);
+	matrix $mRes_Mtx[1][4]=$mIn_Mtx*$mMtx;
+
+	return($mRes_Mtx);
+}
+
+/** 
+* オブジェクトの行列の取得
+* @param オブジェクト名 $sObj {string} 
+* @return オブジェクトの行列 {matrix[4][4]}
+**/ 
+global proc matrix myWG_GetObjMatrix(string $sObj)
+{
+	//オブジェクトの行列を取得
+	float $fMat[] = `getAttr ($sObj+".matrix")`;
+	matrix $mMat[4][4]=<<
+	$fMat[0],$fMat[4],$fMat[8],$fMat[12];
+	$fMat[1],$fMat[5],$fMat[9],$fMat[13];
+	$fMat[2],$fMat[6],$fMat[10],$fMat[14];
+	$fMat[3],$fMat[7],$fMat[11],$fMat[15]>>;
+
+	return($mMat);
+}
+
+/** 
+* 配列の中の要素をオブジェごとの配列にする。
+* @param 要素の配列 $slist {string[]} 
+* @return オブジェごとの配列　{string[]}
+**/
+global proc string[] myWG_classifyWithObj(string $slist[])
+{
+	//戻り値が入る
+	string $Res[] ;
+	//頂点コンポーネントでフィルタリング＆ソート
+	string $sArr[] = sort($slist);
+	//オブジェ名が入る
+	string $sObjName = "";
+	//
+	string $sCrntObjName[];
+	int $i=-1;
+	string $sNameArray[];
+	if(size($sArr)){
+		for($sElm in $sArr){
+			$sNameArray = stringToStringArray($sElm, ".");
+			if($sNameArray[0] != $sObjName){
+				$i++;
+				$sObjName = $sNameArray[0];
+				$Res[$i*2]= $sNameArray[0];
+				$Res[$i*2+1]= $sElm;
+			}else{
+				$Res[$i*2+1] = $Res[$i*2+1] + " " + $sElm;
+			}
+		}
+	}
+	return($Res);
+}
+
+myWG_CopyPasteNormal();

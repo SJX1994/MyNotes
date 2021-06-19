@@ -1,0 +1,14 @@
+{
+	SubShader
+	{	
+		${VFXInclude("Shaders/VFXParticleHeader.template")}
+// Å´ Modified by HexaDrive.
+		${VFXInclude("../fuse.hdrpextend/Editor/VFXGraph/Shader/Template/GrassMesh/PassSelection.template")}
+		${VFXInclude("../fuse.hdrpextend/Editor/VFXGraph/Shader/Template/GrassMesh/PassDepth.template"),IS_OPAQUE_PARTICLE}
+		${VFXInclude("../fuse.hdrpextend/Editor/VFXGraph/Shader/Template/GrassMesh/PassVelocity.template"),USE_MOTION_VECTORS_PASS}
+		${VFXInclude("../fuse.hdrpextend/Editor/VFXGraph/Shader/Template/GrassMesh/PassGBuffer.template"),IS_OPAQUE_NOT_SIMPLE_LIT_PARTICLE}
+		${VFXInclude("../fuse.hdrpextend/Editor/VFXGraph/Shader/Template/GrassMesh/PassForward.template")}
+		${VFXInclude("../fuse.hdrpextend/Editor/VFXGraph/Shader/Template/GrassMesh/PassShadowCaster.template"),USE_CAST_SHADOWS_PASS}
+// Å™ Modified by HexaDrive.
+	}
+}

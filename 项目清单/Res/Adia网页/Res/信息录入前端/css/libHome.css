@@ -1,0 +1,26 @@
+.banner {
+    min-height: 500px;
+}
+
+.span_1_of_1 {
+    padding: 7em 0 0 0;
+}
+
+.span_1_of_1 h2 {
+    color: #FFF;
+    font-size: 2.7em;
+    margin-bottom: 2%;
+    font-weight: 100;
+    text-align: center;
+    line-height: 1.5em;
+    text-shadow: #000 1px 0 0, #000 0 1px 0, #000 -1px 0 0, #000 0 -1px 0;
+}
+
+.banner {
+   background: url(../images/home.jpg)no-repeat center top;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    min-height: 600px;
+}

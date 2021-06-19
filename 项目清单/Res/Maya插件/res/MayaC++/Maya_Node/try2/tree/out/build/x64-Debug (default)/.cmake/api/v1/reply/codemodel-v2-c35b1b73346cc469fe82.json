@@ -1,0 +1,59 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.17"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "TreeGenerator",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "TreeGenerator::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-TreeGenerator-Debug-2844fedc6f433fdb56b3.json",
+					"name" : "TreeGenerator",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/adia1785/Desktop/任务/a长期任务/MayaC++/Maya_Node/try2/tree/out/build/x64-Debug (default)",
+		"source" : "C:/Users/adia1785/Desktop/任务/a长期任务/MayaC++/Maya_Node/try2/tree"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 1
+	}
+}

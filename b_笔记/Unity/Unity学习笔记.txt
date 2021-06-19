@@ -96,6 +96,10 @@ MonoDevelop：
                     右上角第一个
                         选择
         显示线框：
+        particle:
+            粒子系统参照：
+                ref：
+                    https://www.bilibili.com/read/cv3942583/
             
     插件：
         MagicaCloth：
@@ -104,6 +108,9 @@ MonoDevelop：
                     50元
                 官方：
                     25美元一位
+        
+        shaderGraph：
+            
 
 版本控制：
     gitignore：

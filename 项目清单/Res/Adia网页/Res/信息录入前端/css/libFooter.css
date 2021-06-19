@@ -1,0 +1,21 @@
+.footer{
+	background: #555;
+    padding: 25px 0;
+    text-align: center;
+}
+
+.footer p {
+    color: #fff;
+    font-size: 0.85em;
+    margin: 1em 0 0 0;
+}
+
+.footer #rpbug{
+	    color: #fff;
+    font-size: 0.85em;
+	text-decoration:none;
+	float:right;
+	cursor:pointer;
+	margin: 0 50px 50px 0;
+	text-align: center;
+}

@@ -1,0 +1,31 @@
+ Volume in drive C has no label.
+ Volume Serial Number is DA18-EBFA
+
+ Directory of C:\Users\adia1785\Desktop\PlugCpp\2019\MayaPlug-inSet_V1.0\ScanFile
+
+2020/12/17  14:05             1,049 0_AdiaTools_UI.mel
+               1 File(s)          1,049 bytes
+
+ Directory of C:\Users\adia1785\Desktop\PlugCpp\2019\MayaPlug-inSet_V1.0\ScanFile\1_Adia_vertexNormalBatch_userGuide_V2
+
+2020/12/11  09:55            14,604 Adia_vertexNormalBatch_userGuide_V2_main.mel
+               1 File(s)         14,604 bytes
+
+ Directory of C:\Users\adia1785\Desktop\PlugCpp\2019\MayaPlug-inSet_V1.0\ScanFile\2_Adia_getWidth_Main_V1
+
+2020/12/04  15:58            10,472 Adia_getWidth_Main.mel
+               1 File(s)         10,472 bytes
+
+ Directory of C:\Users\adia1785\Desktop\PlugCpp\2019\MayaPlug-inSet_V1.0\ScanFile\3_aida_DeletUvSet_Main_V1
+
+2020/12/17  09:13             4,941 aida_DeletUvSet_Main.mel
+               1 File(s)          4,941 bytes
+
+ Directory of C:\Users\adia1785\Desktop\PlugCpp\2019\MayaPlug-inSet_V1.0\ScanFile\4_EdgeNormal_Checker_main_V1
+
+2020/12/10  13:20             4,984 EdgeNormal_Checker_main.mel
+               1 File(s)          4,984 bytes
+
+     Total Files Listed:
+               5 File(s)         36,050 bytes
+               0 Dir(s)  247,710,334,976 bytes free

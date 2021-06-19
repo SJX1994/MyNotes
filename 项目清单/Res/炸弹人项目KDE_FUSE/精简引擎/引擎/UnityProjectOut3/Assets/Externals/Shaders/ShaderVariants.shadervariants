@@ -1,0 +1,365 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!200 &20000000
+ShaderVariantCollection:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ShaderVariants
+  m_Shaders:
+  - first: {fileID: 4800000, guid: e19260be124325b4fbeff414bbc3fbe8, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 4
+      - keywords: _EMISSION
+        passType: 4
+      - keywords: _METALLICGLOSSMAP
+        passType: 4
+      - keywords: _METALLICGLOSSMAP _NORMALMAP
+        passType: 4
+      - keywords: _EMISSION _METALLICGLOSSMAP _NORMALMAP
+        passType: 4
+      - keywords: _ALPHATEST_ON _METALLICGLOSSMAP _NORMALMAP
+        passType: 4
+      - keywords: SUBSURFACE_ALBEDO TRANSMISSION _METALLICGLOSSMAP _NORMALMAP
+        passType: 4
+      - keywords: _ALPHAPREMULTIPLY_ON
+        passType: 4
+      - keywords: 
+        passType: 5
+      - keywords: _EMISSION
+        passType: 5
+      - keywords: _METALLICGLOSSMAP
+        passType: 5
+      - keywords: _METALLICGLOSSMAP _NORMALMAP
+        passType: 5
+      - keywords: _EMISSION _METALLICGLOSSMAP _NORMALMAP
+        passType: 5
+      - keywords: _ALPHATEST_ON _METALLICGLOSSMAP _NORMALMAP
+        passType: 5
+      - keywords: SUBSURFACE_ALBEDO TRANSMISSION _METALLICGLOSSMAP _NORMALMAP
+        passType: 5
+      - keywords: _ALPHAPREMULTIPLY_ON
+        passType: 5
+      - keywords: 
+        passType: 8
+      - keywords: _EMISSION
+        passType: 8
+      - keywords: _METALLICGLOSSMAP
+        passType: 8
+      - keywords: _METALLICGLOSSMAP _NORMALMAP
+        passType: 8
+      - keywords: _EMISSION _METALLICGLOSSMAP _NORMALMAP
+        passType: 8
+      - keywords: _ALPHATEST_ON _METALLICGLOSSMAP _NORMALMAP
+        passType: 8
+      - keywords: SUBSURFACE_ALBEDO TRANSMISSION _METALLICGLOSSMAP _NORMALMAP
+        passType: 8
+      - keywords: _ALPHAPREMULTIPLY_ON
+        passType: 8
+      - keywords: 
+        passType: 10
+      - keywords: _EMISSION
+        passType: 10
+      - keywords: _METALLICGLOSSMAP
+        passType: 10
+      - keywords: _METALLICGLOSSMAP _NORMALMAP
+        passType: 10
+      - keywords: _EMISSION _METALLICGLOSSMAP _NORMALMAP
+        passType: 10
+      - keywords: _ALPHATEST_ON _METALLICGLOSSMAP _NORMALMAP
+        passType: 10
+      - keywords: SUBSURFACE_ALBEDO TRANSMISSION _METALLICGLOSSMAP _NORMALMAP
+        passType: 10
+      - keywords: _ALPHAPREMULTIPLY_ON
+        passType: 10
+  - first: {fileID: 4800000, guid: a3e45a6699b0626459baf4a9856c3280, type: 3}
+    second:
+      variants:
+      - keywords: _ALPHABLEND_ON
+        passType: 8
+      - keywords: _ALPHABLEND_ON _HX_DISSOLVE_MAP_UV0
+        passType: 8
+  - first: {fileID: 4800000, guid: 6545b356d9421be40bd260d320473845, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+      - keywords: _EMISSION
+        passType: 0
+      - keywords: _ALPHATEST_ON
+        passType: 0
+      - keywords: _HX_DISSOLVE_MAP_UV0
+        passType: 0
+      - keywords: _ALPHATEST_ON _HX_DISSOLVE_MAP_UV0
+        passType: 0
+      - keywords: _ALPHATEST_ON _EMISSION _HX_DISSOLVE_MAP_UV0
+        passType: 0
+      - keywords: _HX_DISSOLVE_CUTOUT_OFF _HX_DISSOLVE_MAP_UV0
+        passType: 0
+      - keywords: _ALPHABLEND_ON
+        passType: 0
+      - keywords: _ALPHABLEND_ON _HX_DISSOLVE_MAP_UV0
+        passType: 0
+  - first: {fileID: 4800000, guid: 767874c181e91ee4daafd4a171c8afd1, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 172f3a8e40865d740afc938ef92dbf06, type: 3}
+    second:
+      variants:
+      - keywords: _HX_DISSOLVE_MAP_UV0
+        passType: 0
+      - keywords: _ALPHATEST_ON _HX_DISSOLVE_MAP_UV0
+        passType: 0
+      - keywords: _HX_DISSOLVE_CUTOUT_OFF _HX_DISSOLVE_MAP_UV0
+        passType: 0
+  - first: {fileID: 4800000, guid: 3821a43f1f9e29c4095cf40cbcf0b8f6, type: 3}
+    second:
+      variants:
+      - keywords: TRANSMISSION _METALLICGLOSSMAP _NORMALMAP
+        passType: 4
+      - keywords: TRANSMISSION _GLOSSYREFLECTIONS_OFF _METALLICGLOSSMAP _NORMALMAP
+        passType: 4
+      - keywords: TRANSMISSION _ALPHATEST_ON _METALLICGLOSSMAP _NORMALMAP
+        passType: 4
+      - keywords: SUBSURFACE_ALBEDO TRANSMISSION _METALLICGLOSSMAP _NORMALMAP
+        passType: 4
+      - keywords: TRANSMISSION _METALLICGLOSSMAP _NORMALMAP
+        passType: 5
+      - keywords: TRANSMISSION _GLOSSYREFLECTIONS_OFF _METALLICGLOSSMAP _NORMALMAP
+        passType: 5
+      - keywords: TRANSMISSION _ALPHATEST_ON _METALLICGLOSSMAP _NORMALMAP
+        passType: 5
+      - keywords: SUBSURFACE_ALBEDO TRANSMISSION _METALLICGLOSSMAP _NORMALMAP
+        passType: 5
+      - keywords: TRANSMISSION _METALLICGLOSSMAP _NORMALMAP
+        passType: 8
+      - keywords: TRANSMISSION _GLOSSYREFLECTIONS_OFF _METALLICGLOSSMAP _NORMALMAP
+        passType: 8
+      - keywords: TRANSMISSION _ALPHATEST_ON _METALLICGLOSSMAP _NORMALMAP
+        passType: 8
+      - keywords: SUBSURFACE_ALBEDO TRANSMISSION _METALLICGLOSSMAP _NORMALMAP
+        passType: 8
+      - keywords: TRANSMISSION _METALLICGLOSSMAP _NORMALMAP
+        passType: 10
+      - keywords: TRANSMISSION _GLOSSYREFLECTIONS_OFF _METALLICGLOSSMAP _NORMALMAP
+        passType: 10
+      - keywords: TRANSMISSION _ALPHATEST_ON _METALLICGLOSSMAP _NORMALMAP
+        passType: 10
+      - keywords: SUBSURFACE_ALBEDO TRANSMISSION _METALLICGLOSSMAP _NORMALMAP
+        passType: 10
+  - first: {fileID: 4800000, guid: 48afc91f63a673145b1f426026710cd3, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 0952151a876a0854abc01990e535486a, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+      - keywords: _EMISSION
+        passType: 0
+      - keywords: _HX_DISSOLVE_MAP_UV0
+        passType: 0
+      - keywords: _ALPHATEST_ON _HX_DISSOLVE_MAP_UV0
+        passType: 0
+      - keywords: _ALPHABLEND_ON
+        passType: 0
+      - keywords: _ALPHABLEND_ON _EMISSION
+        passType: 0
+      - keywords: _ALPHABLEND_ON _HX_DISSOLVE_MAP_UV0
+        passType: 0
+      - keywords: _HX_DISSOLVE_CUTOUT_ON _HX_DISSOLVE_MAP_UV0
+        passType: 0
+  - first: {fileID: 4800000, guid: f9f72fe5018076149bb890682443b436, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: cbc53fee7213ece4a9a491ff4f3bbb15, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: cb9a0c7a2300f7e47961b004ae9d0e75, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+      - keywords: _EMISSION
+        passType: 0
+      - keywords: _HX_DISSOLVE_CUTOUT_OFF _HX_DISSOLVE_MAP_UV0
+        passType: 0
+      - keywords: _ALPHAMODULATE_ON
+        passType: 0
+  - first: {fileID: 4800000, guid: ebacdf160e7e9c145896b6e2a507b599, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+      - keywords: _HX_DISSOLVE_MAP_UV0
+        passType: 0
+      - keywords: _EMISSION _HX_DISSOLVE_CUTOUT_OFF _HX_DISSOLVE_MAP_UV0
+        passType: 0
+      - keywords: _HX_DISSOLVE_CUTOUT_ON _HX_DISSOLVE_MAP_UV0
+        passType: 0
+      - keywords: _EMISSION _HX_DISSOLVE_CUTOUT_ON _HX_DISSOLVE_MAP_UV0
+        passType: 0
+  - first: {fileID: 4800000, guid: 1c587bc1e9ec9364e8b6e5665c29ee49, type: 3}
+    second:
+      variants:
+      - keywords: _HX_DISSOLVE_MAP_UV0
+        passType: 4
+      - keywords: _HX_DISSOLVE_MAP_UV1
+        passType: 4
+  - first: {fileID: 4800000, guid: 4c57d5658587c284a92d65062e52f871, type: 3}
+    second:
+      variants:
+      - keywords: _METALLICGLOSSMAP _NORMALMAP
+        passType: 4
+      - keywords: _EMISSION _METALLICGLOSSMAP _NORMALMAP
+        passType: 4
+      - keywords: _ALPHATEST_ON _EMISSION _METALLICGLOSSMAP _NORMALMAP
+        passType: 4
+      - keywords: _METALLICGLOSSMAP _NORMALMAP
+        passType: 5
+      - keywords: _EMISSION _METALLICGLOSSMAP _NORMALMAP
+        passType: 5
+      - keywords: _ALPHATEST_ON _EMISSION _METALLICGLOSSMAP _NORMALMAP
+        passType: 5
+      - keywords: _METALLICGLOSSMAP _NORMALMAP
+        passType: 8
+      - keywords: _EMISSION _METALLICGLOSSMAP _NORMALMAP
+        passType: 8
+      - keywords: _ALPHATEST_ON _EMISSION _METALLICGLOSSMAP _NORMALMAP
+        passType: 8
+      - keywords: _METALLICGLOSSMAP _NORMALMAP
+        passType: 10
+      - keywords: _EMISSION _METALLICGLOSSMAP _NORMALMAP
+        passType: 10
+      - keywords: _ALPHATEST_ON _EMISSION _METALLICGLOSSMAP _NORMALMAP
+        passType: 10
+  - first: {fileID: 4800000, guid: 6c2d939d0faf582449673a65586affe2, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+      - keywords: _ALPHATEST_ON _HX_DISSOLVE_MAP_UV0
+        passType: 0
+  - first: {fileID: 4800000, guid: 4986eb9b87b4d9d429236414d6a88b9b, type: 3}
+    second:
+      variants:
+      - keywords: _MASKMAP _METALLICGLOSSMAP _NORMALMAP_TANGENT_SPACE
+        passType: 4
+      - keywords: _MASKMAP _METALLICGLOSSMAP _NORMALMAP _NORMALMAP_G4 _NORMALMAP_TANGENT_SPACE
+        passType: 4
+      - keywords: _MASKMAP _MATERIAL_FEATURE_SUBSURFACE_SCATTERING _MATERIAL_FEATURE_TRANSMISSION
+          _METALLICGLOSSMAP _NORMALMAP _NORMALMAP_G4 _NORMALMAP_TANGENT_SPACE _THICKNESSMAP
+        passType: 4
+      - keywords: _EMISSION _EMISSIVE_COLOR_MAP _MASKMAP _METALLICGLOSSMAP _NORMALMAP_TANGENT_SPACE
+        passType: 4
+      - keywords: _EMISSION _EMISSIVE_COLOR_MAP _MASKMAP _METALLICGLOSSMAP _NORMALMAP
+          _NORMALMAP_G4 _NORMALMAP_TANGENT_SPACE
+        passType: 4
+      - keywords: _ALPHAPREMULTIPLY_ON _BLENDMODE_ALPHA _BLENDMODE_PRESERVE_SPECULAR_LIGHTING
+          _ENABLE_FOG_ON_TRANSPARENT _NORMALMAP_TANGENT_SPACE _SURFACE_TYPE_TRANSPARENT
+        passType: 4
+      - keywords: _ALPHAPREMULTIPLY_ON _BLENDMODE_ALPHA _BLENDMODE_PRESERVE_SPECULAR_LIGHTING
+          _EMISSIVE_COLOR_MAP _ENABLE_FOG_ON_TRANSPARENT _NORMALMAP_TANGENT_SPACE
+          _SURFACE_TYPE_TRANSPARENT
+        passType: 4
+      - keywords: _MASKMAP _METALLICGLOSSMAP _NORMALMAP_TANGENT_SPACE
+        passType: 5
+      - keywords: _MASKMAP _METALLICGLOSSMAP _NORMALMAP _NORMALMAP_G4 _NORMALMAP_TANGENT_SPACE
+        passType: 5
+      - keywords: _MASKMAP _MATERIAL_FEATURE_SUBSURFACE_SCATTERING _MATERIAL_FEATURE_TRANSMISSION
+          _METALLICGLOSSMAP _NORMALMAP _NORMALMAP_G4 _NORMALMAP_TANGENT_SPACE _THICKNESSMAP
+        passType: 5
+      - keywords: _EMISSION _EMISSIVE_COLOR_MAP _MASKMAP _METALLICGLOSSMAP _NORMALMAP_TANGENT_SPACE
+        passType: 5
+      - keywords: _EMISSION _EMISSIVE_COLOR_MAP _MASKMAP _METALLICGLOSSMAP _NORMALMAP
+          _NORMALMAP_G4 _NORMALMAP_TANGENT_SPACE
+        passType: 5
+      - keywords: _ALPHAPREMULTIPLY_ON _BLENDMODE_ALPHA _BLENDMODE_PRESERVE_SPECULAR_LIGHTING
+          _ENABLE_FOG_ON_TRANSPARENT _NORMALMAP_TANGENT_SPACE _SURFACE_TYPE_TRANSPARENT
+        passType: 5
+      - keywords: _ALPHAPREMULTIPLY_ON _BLENDMODE_ALPHA _BLENDMODE_PRESERVE_SPECULAR_LIGHTING
+          _EMISSIVE_COLOR_MAP _ENABLE_FOG_ON_TRANSPARENT _NORMALMAP_TANGENT_SPACE
+          _SURFACE_TYPE_TRANSPARENT
+        passType: 5
+      - keywords: _MASKMAP _METALLICGLOSSMAP _NORMALMAP_TANGENT_SPACE
+        passType: 8
+      - keywords: _MASKMAP _METALLICGLOSSMAP _NORMALMAP _NORMALMAP_G4 _NORMALMAP_TANGENT_SPACE
+        passType: 8
+      - keywords: _MASKMAP _MATERIAL_FEATURE_SUBSURFACE_SCATTERING _MATERIAL_FEATURE_TRANSMISSION
+          _METALLICGLOSSMAP _NORMALMAP _NORMALMAP_G4 _NORMALMAP_TANGENT_SPACE _THICKNESSMAP
+        passType: 8
+      - keywords: _EMISSION _EMISSIVE_COLOR_MAP _MASKMAP _METALLICGLOSSMAP _NORMALMAP_TANGENT_SPACE
+        passType: 8
+      - keywords: _EMISSION _EMISSIVE_COLOR_MAP _MASKMAP _METALLICGLOSSMAP _NORMALMAP
+          _NORMALMAP_G4 _NORMALMAP_TANGENT_SPACE
+        passType: 8
+      - keywords: _ALPHAPREMULTIPLY_ON _BLENDMODE_ALPHA _BLENDMODE_PRESERVE_SPECULAR_LIGHTING
+          _ENABLE_FOG_ON_TRANSPARENT _NORMALMAP_TANGENT_SPACE _SURFACE_TYPE_TRANSPARENT
+        passType: 8
+      - keywords: _ALPHAPREMULTIPLY_ON _BLENDMODE_ALPHA _BLENDMODE_PRESERVE_SPECULAR_LIGHTING
+          _EMISSIVE_COLOR_MAP _ENABLE_FOG_ON_TRANSPARENT _NORMALMAP_TANGENT_SPACE
+          _SURFACE_TYPE_TRANSPARENT
+        passType: 8
+      - keywords: _MASKMAP _METALLICGLOSSMAP _NORMALMAP_TANGENT_SPACE
+        passType: 10
+      - keywords: _MASKMAP _METALLICGLOSSMAP _NORMALMAP _NORMALMAP_G4 _NORMALMAP_TANGENT_SPACE
+        passType: 10
+      - keywords: _MASKMAP _MATERIAL_FEATURE_SUBSURFACE_SCATTERING _MATERIAL_FEATURE_TRANSMISSION
+          _METALLICGLOSSMAP _NORMALMAP _NORMALMAP_G4 _NORMALMAP_TANGENT_SPACE _THICKNESSMAP
+        passType: 10
+      - keywords: _EMISSION _EMISSIVE_COLOR_MAP _MASKMAP _METALLICGLOSSMAP _NORMALMAP_TANGENT_SPACE
+        passType: 10
+      - keywords: _EMISSION _EMISSIVE_COLOR_MAP _MASKMAP _METALLICGLOSSMAP _NORMALMAP
+          _NORMALMAP_G4 _NORMALMAP_TANGENT_SPACE
+        passType: 10
+      - keywords: _ALPHAPREMULTIPLY_ON _BLENDMODE_ALPHA _BLENDMODE_PRESERVE_SPECULAR_LIGHTING
+          _ENABLE_FOG_ON_TRANSPARENT _NORMALMAP_TANGENT_SPACE _SURFACE_TYPE_TRANSPARENT
+        passType: 10
+      - keywords: _ALPHAPREMULTIPLY_ON _BLENDMODE_ALPHA _BLENDMODE_PRESERVE_SPECULAR_LIGHTING
+          _EMISSIVE_COLOR_MAP _ENABLE_FOG_ON_TRANSPARENT _NORMALMAP_TANGENT_SPACE
+          _SURFACE_TYPE_TRANSPARENT
+        passType: 10
+  - first: {fileID: 4800000, guid: 322a3855d6c7d99438e6a5c56df5759d, type: 3}
+    second:
+      variants:
+      - keywords: _EMISSION _METALLICGLOSSMAP _NORMALMAP
+        passType: 4
+      - keywords: _EMISSION _METALLICGLOSSMAP _NORMALMAP
+        passType: 5
+      - keywords: _EMISSION _METALLICGLOSSMAP _NORMALMAP
+        passType: 8
+      - keywords: _EMISSION _METALLICGLOSSMAP _NORMALMAP
+        passType: 10
+  - first: {fileID: 4800000, guid: d2deb5dd9f492314cacdae661fd8ae86, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 4
+      - keywords: 
+        passType: 5
+      - keywords: 
+        passType: 8
+      - keywords: 
+        passType: 10
+  - first: {fileID: 4800000, guid: da23c4fcd4dad46489b8b4b23328b5d8, type: 3}
+    second:
+      variants:
+      - keywords: _MASKMAP _METALLICGLOSSMAP _NORMALMAP _NORMALMAP_G4 _NORMALMAP_TANGENT_SPACE
+        passType: 4
+      - keywords: _MASKMAP _METALLICGLOSSMAP _NORMALMAP _NORMALMAP_G4 _NORMALMAP_TANGENT_SPACE
+        passType: 5
+      - keywords: _MASKMAP _METALLICGLOSSMAP _NORMALMAP _NORMALMAP_G4 _NORMALMAP_TANGENT_SPACE
+        passType: 8
+      - keywords: _MASKMAP _METALLICGLOSSMAP _NORMALMAP _NORMALMAP_G4 _NORMALMAP_TANGENT_SPACE
+        passType: 10

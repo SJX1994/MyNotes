@@ -1,0 +1,14 @@
+div{
+    width:95%;
+    height:40px;
+    line-height:36px;/**设置行高和控件高一样，这是内部文字才能垂直居中*/
+    overflow:hidden;/**为了防止内容超出容器或者产生自动换行，这样就达不到垂直居中效果了*/
+    margin: 0 auto;/**让div在页面中居中显示*/
+    background-color:#ffffff;/**背景颜色*/
+    border:solid 1px #f5f5f5;
+    border-width:1px 0px 0px 1px;
+}
+
+p{
+    margin-left:2.5%;
+}

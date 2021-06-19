@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<linker>
+  <!-- ↓JsonDotNetフォルダに入っていたもの -->
+  <assembly fullname="System">
+    <type fullname="System.ComponentModel.TypeConverter" preserve="all" />
+    <!-- <namespace fullname="System.ComponentModel" preserve="all" /> -->
+  </assembly>
+  <!-- ↑JsonDotNetフォルダに入っていたもの -->
+  <!-- ↓Cloud.PubSub用に追加したもの -->
+  <assembly fullname="Google.Api.CommonProtos" preserve="all" />
+  <assembly fullname="Google.Api.Gax" preserve="all" />
+  <assembly fullname="Google.Api.Gax.Grpc" preserve="all" />
+  <assembly fullname="Google.Apis" preserve="all" />
+  <assembly fullname="Google.Apis.Core" preserve="all" />
+  <assembly fullname="Google.Cloud.Iam.V1" preserve="all" />
+  <assembly fullname="Google.Cloud.PubSub.V1" preserve="all" />
+  <assembly fullname="Grpc.Auth" preserve="all" />
+  <assembly fullname="Grpc.Core" preserve="all" />
+  <assembly fullname="Grpc.Core.Api" preserve="all" />
+  <assembly fullname="Google.Apis.Auth" preserve="all" />
+  <assembly fullname="Google.Apis.PlatformServices" preserve="all" />
+  <assembly fullname="Google.Apis.Auth.PlatformServices" preserve="all" />
+  <assembly fullname="System.Interactive.Async" preserve="all" />
+  <assembly fullname="Google.Protobuf" preserve="all" />
+  <!-- ↑Cloud.PubSub用に追加したもの -->
+</linker>

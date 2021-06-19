@@ -1,0 +1,93 @@
+/*
+脚本转melCommand的方法：
+1.找到脚本中所有"在前面加上\
+2.找到脚本中的所有换行替换成 $特殊符号
+3.找到脚本中 $特殊符号 替换成"\n"
+4.（非必选）所有的正则表达式前添加\
+*/
+global string $gShelfTopLevel;
+string $shelves[] = `tabLayout -q -childArray $gShelfTopLevel`;
+int $counter=0;
+int $btmCounter=0;
+string $imageSet = "faces_NEX.png";
+string $buttonLab = "SelectChamferedSurface";
+string $buttonAnnotation = "SelectChamferedSurface(PleaseReadUserGuide)";
+string $script = "global string $faces_G[];\nglobal string $facesDel_G[];\nglobal string $face_G[];\nglobal string $objectName_G[];\n//VertexNormalBatch\nglobal proc VertexNormalSort(){\n    if(`window -query -exists adia_selectEdgeFace_Window`)\n    deleteUI adia_selectEdgeFace_Window;\n    string $s = \"Adia_selectEdgeFace\";\n    window -title $s -menuBar true -maximizeButton true -minimizeButton true adia_selectEdgeFace_Window;\n    columnLayout -adjustableColumn true;\n        floatFieldGrp -precision 3 -numberOfFields 1 -extraLabel \"cm\"-label \n        \"Filter less than\" -value1 100.0  -columnWidth 1 65 adia_NormalValue;\n        floatFieldGrp -precision 3 -numberOfFields 1 -extraLabel \"cm\"-label \"Face area\" -value1 0.0  -columnWidth 1 65 -en off adia_NormalValue2;\n        checkBox -label \"DeletOther\" -v off DeleteOther;\n        button -height 23 -width 23 -backgroundColor 255 241 155 -label\"Get area\"\n        -command \"Do()\";\n        text -label \" \" -en off;\n        button -height 23 -width 23 -backgroundColor 255 241 155 -label\"Filter area\"\n        -command \"Do2()\";\n        text -label \" \" -en off;\n    window -edit -widthHeight 600 210 adia_selectEdgeFace_Window;\n    showWindow adia_selectEdgeFace_Window;\n}\nproc Do()\n{\n    string $selectList[];\n    $selectList = `ls -selection -flatten`;\n    string $element[];\n    $element = `filterExpand -expand on -selectionMask 34 $selectList`;\n    if(size($element)==1)\n    {\n          float $faceWidth =  getWidth($element[0]);\n          float $faceArea =  getArea($element[0]);\n          floatFieldGrp -e -v1 $faceWidth adia_NormalValue2;\n    }\n    if(size($element)>1)\n    {\n        float $widths[];\n        for($i=0;$i<size($element);$i++)\n        {\n            float $faceWidth =  getWidth($element[$i]);\n            $widths[size($widths)]=$faceWidth;\n        }\n        $widths = `sort $widths`;\n        float $max = $widths[size($widths)-1];\n        float $min = $widths[0];\n         floatFieldGrp -e -v1 $max adia_NormalValue2;\n    }\n}\nproc Do2()\n{\n    global string $faces_G[];\n    global string $facesDel_G[];\n    global string $face_G[];\n    global string $objectName_G[];\n    string $selectList[];\n    $selectList = `ls -selection -flatten`;\n    string $element[];\n    $element = `filterExpand -expand on -selectionMask 34 $selectList`;\n    if(size($element)>0)\n    {\n        if(`checkBox -q -v DeleteOther`==on)\n        { \n            for($e in $element)\n            {\n                float $faceWidth=getWidth($e);\n                float $UIsize =`floatFieldGrp -q -v1 adia_NormalValue`;\n                string $faceName = $objectName_G[0]+\".f[\"+$face_G[0]+\"]\";\n                if($faceWidth<=$UIsize)\n                {\n                    $faces_G[size($faces_G)] = $faceName;\n                }\n                else\n                {\n                    $facesDel_G[size($facesDel_G)]=$faceName;\n                }\n                clear $objectName_G;\n                clear $face_G;\n            }\n        }else{\n            for($e in $element)\n            {\n                float $faceWidth=getWidth($e);\n                float $UIsize =`floatFieldGrp -q -v1 adia_NormalValue`;\n                if($faceWidth<=$UIsize)\n                {\n                    string $faceName = $objectName_G[0]+\".f[\"+$face_G[0]+\"]\";\n                    $faces_G[size($faces_G)] = $faceName;\n                }\n                clear $objectName_G;\n                clear $face_G;\n            }\n        }\n        print(selectMaya($facesDel_G,\"d\"));\n        print(selectMaya($faces_G,\"s\"));\n    }\n}\nVertexNormalSort();\n////tool\nproc string selectMaya(string $arg[],string $op)\n{\n    string $msg;\n    switch ($op){\n        case \"d\":\n            select -cl;\n            for($ele in $arg)\n            {\n                if(catch(`select -tgl $ele`))\n                {\n                    print(\"erro\");\n                }\n                else{\n                    select -add $ele;\n                }\n            }\n            delete;\n            pause -sec 1;\n            clear $arg;\n            $msg = \"delSuccess\"+\"\\n\";\n        break;\n        case \"s\":\n            select -cl;\n            for($ele in $arg)\n            {\n                if(catch(`select -tgl $ele`))\n                {\n                    print(\"erro\");\n                }\n                else{\n                    select -add $ele;\n                }\n            }\n            pause -sec 1;\n            clear $arg;\n            $msg = \"selectSuccess\"+\"\\n\";\n        break;\n    }\n    return $msg;\n}\nproc float getWidth(string $e)\n{\n    global string $face_G[];\n    global string $objectName_G[];\n    $objectName_G = stringToStringArray($e, \".\");\n    string $sFaceVertexNormal[]=`polyInfo -faceToVertex $e`; \n    string $vertex[] = stringToStringArray($sFaceVertexNormal[0], \" \");\n    $face_G = stringToStringArray($vertex[1],\":\");\n    string $vName0 =  $objectName_G[0]+\".vtxFace[\"+ $vertex[2] +\"][\"+$face_G[0]  +\"]\";\n    string $vName1 =  $objectName_G[0]+\".vtxFace[\"+ $vertex[3] +\"][\"+$face_G[0]  +\"]\";\n    string $vName2 =  $objectName_G[0]+\".vtxFace[\"+ $vertex[4] +\"][\"+$face_G[0]  +\"]\";\n    string $pointPosName1 = $objectName_G[0]+\".vtx[\"+ $vertex[2] +\"]\";\n    string $pointPosName2 = $objectName_G[0]+\".vtx[\"+ $vertex[3] +\"]\";\n    string $pointPosName3 = $objectName_G[0]+\".vtx[\"+ $vertex[4] +\"]\";\n    float  $pointPos1[] = `pointPosition -l $pointPosName1` ;\n    float  $pointPos2[] = `pointPosition -l $pointPosName2` ;\n    float  $pointPos3[] = `pointPosition -l $pointPosName3` ;\n    return adia_CountWidth($pointPos1,$pointPos2,$pointPos3);\n}\nproc float getArea(string $e)\n{\n    global string $face_G[];\n    global string $objectName_G[];\n    $objectName_G = stringToStringArray($e, \".\");\n    string $sFaceVertexNormal[]=`polyInfo -faceToVertex $e`; \n    string $vertex[] = stringToStringArray($sFaceVertexNormal[0], \" \");\n    $face_G = stringToStringArray($vertex[1],\":\");\n    string $vName0 =  $objectName_G[0]+\".vtxFace[\"+ $vertex[2] +\"][\"+$face_G[0]  +\"]\";\n    string $vName1 =  $objectName_G[0]+\".vtxFace[\"+ $vertex[3] +\"][\"+$face_G[0]  +\"]\";\n    string $vName2 =  $objectName_G[0]+\".vtxFace[\"+ $vertex[4] +\"][\"+$face_G[0]  +\"]\";\n    string $pointPosName1 = $objectName_G[0]+\".vtx[\"+ $vertex[2] +\"]\";\n    string $pointPosName2 = $objectName_G[0]+\".vtx[\"+ $vertex[3] +\"]\";\n    string $pointPosName3 = $objectName_G[0]+\".vtx[\"+ $vertex[4] +\"]\";\n    float  $pointPos1[] = `pointPosition -l $pointPosName1` ;\n    float  $pointPos2[] = `pointPosition -l $pointPosName2` ;\n    float  $pointPos3[] = `pointPosition -l $pointPosName3` ;\n    return adia_CountArea($pointPos1,$pointPos2,$pointPos3);\n}\nproc float adia_CountWidth(float $a[], float $b[],float $c[])\n{\n    vector $av =  $a;\n    vector $bv =  $b;\n    vector $cv =  $c;\n    vector $res1 = mag($av-$bv);\n    vector $res2 = mag($bv-$cv);\n    if($res1>$res2)\n    {\n        return $res2;\n    }else\n    {\n        return $res1;\n    }\n}\nproc float adia_CountArea(float $a[], float $b[],float $c[])\n{\n    float $area = -1;\n    float $side[3];\n    $side[0] = sqrt(pow($a[0]-$b[0],2)+pow($a[1]-$b[1],2)+pow($a[2]-$b[2],2));\n    $side[1] = sqrt(pow($a[0]-$c[0],2)+pow($a[1]-$c[1],2)+pow($a[2]-$c[2],2));\n    $side[2] = sqrt(pow($c[0]-$b[0],2)+pow($c[1]-$b[1],2)+pow($c[2]-$b[2],2));\n    if($side[0]+$side[1]<=$side[2]||$side[0]+$side[2]<=$side[1]||$side[1]+$side[2]<=$side[0])\n    {\n        return $area; \n    }\n    //s=sqr(p*(p-a)(p-b)(p-c));\n    float $p = ($side[0]+$side[1]+$side[2])/2;\n    $area = sqrt($p*($p-$side[0])*($p-$side[1])*($p-$side[2]));\n    return $area*2;\n}";
+for($s in $shelves)
+{
+    if($s=="Adia_Tools")
+    {
+        string $shelfButtons[] = `shelfLayout -q -childArray "Adia_Tools"`;
+        for($b in $shelfButtons)
+        {
+            string $label;
+            if(`objectTypeUI -isType "shelfButton" $b`)
+            {
+                $label = `shelfButton -q -label $b`;
+                if($label==$buttonLab)
+                {
+                   
+                    deleteUI $b;
+                     
+                }
+                else{
+                    if($btmCounter==0)
+                    {
+                        string $myButton = `shelfButton
+                        -parent "Adia_Tools"           
+                        -enable 1
+                        -width 34
+                        -height 34
+                        -manage 1
+                        -visible 1
+                        -annotation $buttonAnnotation
+                        -label $buttonLab
+                        -image1 $imageSet
+                        -style "iconOnly"
+                        -command $script`;
+                        $btmCounter++;
+                    }else
+                    {
+                        print("got same shelfButton");
+                    }
+                
+                }
+            }
+        }
+        if(size($shelfButtons)==0)
+        {
+            string $myButton = `shelfButton
+            -rpt true
+            -parent "Adia_Tools"           
+            -enable 1
+            -width 34
+            -height 34
+            -manage 1
+            -visible 1
+            -annotation $buttonAnnotation
+            -label $buttonLab
+            -image1 $imageSet
+            -style "iconOnly"
+            -command  $script`;
+        }
+    }else{
+        $counter++;
+        if($counter==size($shelves))
+        {
+            addNewShelfTab "Adia_Tools";
+            string $myButton = `shelfButton
+            -rpt true
+            -parent "Adia_Tools"           
+            -enable 1
+            -width 34
+            -height 34
+            -manage 1
+            -visible 1
+            -annotation $buttonAnnotation
+            -label $buttonLab
+            -image1 $imageSet
+            -style "iconOnly"
+            -command  $script`;
+        }
+    }
+}
