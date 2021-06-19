@@ -1,0 +1,63 @@
+文档规则：
+    注释：
+        (这是注释)
+    省略：
+        ...
+    包含：
+        <
+    值：
+        >
+    代码：
+        <(代码)>
+
+VSCode:
+    中文教程：
+        https://segmentfault.com/a/1190000019171886
+    默认快捷键：
+        自动换行：
+            Alt+z
+        格式化代码：
+            Shift+Alt+F
+    File-Preference-setting：
+        打开setting.json:
+            Ctrl+P:-键入：setting.json(右上角按钮转换到UI界面)
+            修改格式：
+                <(
+                    "功能名称"："状态"
+                )>
+        
+        Editor.formatOnSave:
+            保存时自动格式化代码
+        标签：
+            workbench.editor.tabSizing: shrink:
+                标签栏的对其形式
+            workbench.editor.wrapTabs：
+                显示多个标签
+        Editor.tabsize:
+            回撤后的距离
+        Ctrl+F:
+            正则表达式：
+                ^\s*(?=\r?$)\n：
+                    删除无效回行
+    操作：
+        python导入库：
+            settings.json:
+               "python.autoComplete.extraPaths": [
+                    "~/google-cloud-sdk/platform/google_appengine/lib/webapp2-2.5.2",
+                    "~/google-cloud-sdk/platform/google_appengine",
+                    "~/google-cloud-sdk/lib",
+                    "~/google-cloud-sdk/platform/google_appengine/lib/endpoints-1.0",
+                    "~/google-cloud-sdk/platform/google_appengine/lib/protorpc-1.0"
+                ], 
+        删除所有注释：
+            https://blog.csdn.net/yjjjjz/article/details/89521414
+
+VStudio:
+    快捷键：
+        自動排版	Ctrl +K +D or Alt + Shift + F
+        註解	Ctrl + K + C or Ctrl + /
+        取消註解	Ctrl + K + U or Ctrl + /
+        反白區塊轉為大寫	CTRL + SHIFT + U
+        反白區塊轉為小寫	CTRL + U
+        減少縮排	SHIFT + Tab 
+        查看定義	F12

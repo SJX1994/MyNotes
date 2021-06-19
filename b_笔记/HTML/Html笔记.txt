@@ -1,0 +1,908 @@
+文档规则：
+    注释：
+        (这是注释)
+    省略：
+        ...
+    包含：
+        <
+    值：
+        >
+    代码：
+        <(代码)>
+
+
+H5:
+    CORS(Cross-origin resource sharing):
+        概念：
+            跨域资源共享
+    CSS:
+        格式：
+            根据tag写样式：
+                bodytag的样式：
+                    body {
+                        margin: 0;
+                    }
+                bodytag下的div的样式：
+                    body div {
+                        margin: 0;
+                    }
+                class"haha"的样式：
+                    .haha {
+                        margin: 0;
+                    }
+                class"haha"下div的样式：
+                    .haha div {
+                        margin: 0;
+                    }
+                class"haha1"和"haha2"共同的的样式：
+                    .haha1.haha2{
+                        margin: 0;
+                    }
+                id"ele1"的样式：
+                    #ele1{
+                        display: inline-block;
+                        margin-right: 0px;
+                        width: 200px;
+                    }
+
+        api:
+            overflow:
+                overflow-y:
+                overflow-x:
+            float: 
+                left;
+            clear: 
+                left;
+            ::before:
+                选择器将某些内容插入到每一个被选择的元素之前
+            ::after:
+                则是将某些内容插入到被选择的元素之后
+            position:
+                ex:
+                    h2
+                        {
+                        position:absolute;
+                        left:100px;
+                        top:150px;
+                        }
+                absolute:
+                    生成绝对定位的元素，第一个父元素进行定位。
+                    参数：
+                        "left", "top", "right","bottom"
+                fixed:
+                    生成绝对定位的元素，相对于浏览器窗口进行定位。
+                    参数：
+                        "left", "top", "right","bottom"
+                relative：
+                    生成相对定位的元素，以自己为中心向外增加像素。
+                    参数：
+                        "left", "top", "right","bottom"
+                static：
+                    没有定位，正常显示
+                inherit：
+                    从父元素继承position 
+            text:
+                text-decoration：
+                    none：
+                        标准文本
+                    underline：
+                        下划线
+                    overline：
+                        上划线
+                    line-through：
+                        划掉
+                    blink：
+                        闪烁
+                    inherit：
+                        继承父级
+                text-align:
+                    center:
+                        居中
+                    left,right：
+                        左右
+                    justify:
+                        贴边
+                    initial：
+                        自动
+                    inherit：
+                        跟随父级
+            textarea:
+                resize:
+                    none:不做重新排布
+            line:
+                line-hight:
+                    行间距
+            word-wrap:
+                break-word:断词
+                normal:不断词
+            transform:
+                none:
+                    不加入转换
+                matrix(n,n,n,n,n,n)：
+                    使用6元矩阵定义2D转换
+                translate(x,y):
+                    定义了平面坐标中的位置，2元参数可以使用百分比来完成
+            margin:
+                距离
+                margin-top: 0px;
+                margin-bottom: 100px;
+                margin-right: 150px;
+                margin-left: 80px;
+            form:
+            font:
+                size:字体大小
+                family：字体样式
+                weight：描边加粗？
+            display：
+                inline：
+                    将元素显示为嵌入式元素（如<span>）。 任何高度和宽度属性均无效
+                block：
+                    将元素显示为块元素（如<p>）。 它从新的一行开始，并占据整个宽度
+                contents：
+                    使容器消失，使子元素的子元素在DOM中更上一层
+                flex：
+                    flex显示模式
+                grid：
+                    网格显示模式
+                inline-block：
+                    将元素显示为内联级块容器。 元素本身被格式化为内联元素，但是可以应用高度和宽度值
+                inline-flex：       
+                inline-grid：
+                inline-table：
+                list-item：
+                run-in：
+                table：
+                table-caption：
+                table-column-group：
+                table-header-group：
+                table-footer-group：
+                table-row-group：
+                table-cell：
+                table-column：
+                table-row：
+                none：
+                initial：
+                inherit：
+            background-image:
+                url:
+                    ../:
+                        1次:
+                            本地
+                        2词:
+                            浏览器
+            li：
+                list-style-type
+                list-style-position
+                list-style-image
+            pointer-events:
+                是否可以点击 
+                none;
+        技巧:
+            div并排显示:
+                #subRight,#subLeft {
+                    
+                    float:left;
+                    border:0px solid red;
+                    padding:0px;
+                }
+
+
+
+                
+    html:
+        api:
+            <ul>:
+                用于创建无序列表
+                <li>:
+                    与ul一起使用联合创建无序列表
+                    如...
+                <ol>:
+                    创建有序列表
+                    如123
+            <meta>:
+                标准元数据的全局属性
+                例如：
+                    <meta charset="utf-8">
+                    <!-- Redirect page after 3 seconds -->
+                    <meta http-equiv="refresh" content="3;url=https://www.mozilla.org">
+                算法：
+                    http-equiv：
+                        content-security-policy：
+                            指定文档的内容策略
+                        content-type：
+                            指定文档的编码方式如：utf8
+                        default-style：
+                            指定css
+                        refresh：
+                            指定文档刷新或者指向网站
+                        name：
+                            "viewport":
+                                针对移动设备做的优化
+            <link>:
+                指定当前文档/资源/链接/之间的关系
+                rel:
+            <style>:
+                格式：
+                    stylename1:value;stylename2:value;
+            <iframe>:
+            <form>:
+                概念：
+                    php表单
+                    w3c:
+                        https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_form_checkbox
+                action：
+                    将表单传入url
+                method:
+                    get:
+                        直接添加书签
+                    post:
+                        修改现有书签
+                格式：
+                    <form action="/action_page.php">
+                        <label for="fname">First name:</label><br>
+                        <input type="text" id="fname" value="John"><br><br>
+                        <input type="submit" value="Submit">
+                    </form>
+            <input>:
+                type：
+                    <input type="button">
+                    <input type="checkbox">
+                    <input type="color">
+                    <input type="date">
+                    <input type="datetime-local">
+                    <input type="email">
+                    <input type="file">
+                        multiple：
+                            允许多个文件上传
+                        accept:
+                            概念：
+                                限制文件上传的格式
+                            例如：
+                                accept=".xls,.xlsx" 
+                    <input type="hidden">
+                    <input type="image">
+                    <input type="month">
+                    <input type="number">
+                    <input type="password">
+                    <input type="radio">
+                    <input type="range">
+                    <input type="reset">
+                    <input type="search">
+                    <input type="submit">
+                    <input type="tel">
+                    <input type="text">
+                    <input type="time">
+                    <input type="url">
+                    <input type="week">
+                checked:
+                    对于比如checkbox和radio有效
+                disabled：
+                    变灰无法选择
+                max：
+                    输入的最大值
+                maxlength：
+                    输入的字符位数
+                min：
+                    输入的最小值
+                pattern：
+                    用正则表达式来检查输入值
+                readonly：
+                    无法修改的值
+                required：
+                    必须输入 否则无法提交
+                size:
+                    输入长度
+                step：
+                    增长区间
+                value:
+                    默认值
+            <datalist>:
+                下拉选框，针对input
+                <option>:选项
+
+            <select>:
+
+
+            pageYOffset:
+                =scrollY
+
+        文字处理：
+            <br>:
+                换行
+            &nbsp:
+                空格
+            <p>:
+                正文
+            <h(n)>:
+                标题越小越大
+        操作：
+
+            在html中嵌入Html：
+                <(    
+                    <iframe  width="954" height="100%" src="Drip.html" name="targetframe" allowTransparency="true" scrolling="yes" frameborder="0" onload="this.style.height=(this.contentWindow.document.body.scrollHeight+20)+'px';">
+                    </iframe>
+                )>
+            在html中嵌入折叠块：
+                标签法：
+                    <(
+                        <details>
+                            <summary>
+                            (点击展开)
+                            </summary>
+                            (内容)
+                        </details>
+                    )> 
+                css+toggle法(树形结构)：
+                    https://www.w3schools.com/howto/howto_js_treeview.asp
+
+            在html中获取后端数据：
+                
+    js:
+        语法：
+            let：
+                定义区域变量
+            var：
+                定义全局变量
+            三元条件运算符：
+                格式：
+                    条件？true执行：false执行
+                例子：
+                    var age = 26;
+                    var beverage = (age >= 21) ? "Beer" : "Juice";
+                    console.log(beverage); // "Beer"
+        操作：
+            开关动画:
+                https://blog.csdn.net/u013347241/article/details/51915821
+            自定义下拉菜单：
+                https://www.w3schools.com/howto/howto_custom_select.asp
+            隐藏或显示：
+                <input type="button" id="toggler" value="Toggler" onClick="action();" />
+                <input type="button" id="togglee" value="Togglee" />
+
+                <script>
+                    var hidden = false;
+                    function action() {
+                        hidden = !hidden;
+                        if(hidden) {
+                            document.getElementById('togglee').style.visibility = 'hidden';
+                        } else {
+                            document.getElementById('togglee').style.visibility = 'visible';
+                        }
+                    }
+                </script>
+        
+
+        其他：
+            取小数整数：
+                https://github.com/akira-cn/FE_You_dont_know/issues/5
+            lambda表达式：
+                概念：
+                    没有名字的函数，多用于只出现一次计算的函数，这样不会新增函数名来污染环境
+                示例：
+                    console.log(materials.map(material => material.length));
+            回调：
+                概念：传递方法，多用于观察者模式
+                示例：
+                    //函数2
+                    var test = function(abc){
+                        abc('Helloworld');
+                    };
+                    //函数2的调用
+                    test( function(words) {console.log(words);}  );
+            关于动态加载：
+            一次性：
+                    insertToHtml
+                如果不是一次性的使用：
+                    createElement+appendChild+insertBefore
+            Cookies：
+                    网页中的临时缓存,是键值对,以及需要传入一个保存时间,需要本地LocalHost
+            LocalHost：
+                Python：
+                    1.cmd导航到目录
+                    2.py -m http.server 1234
+                    3.浏览器中键入：http://localhost:1234/  or http://192.168.55.100:1234/
+            
+                
+            Vue.js:
+        api：
+            .parentElement:
+                获取当前元素的父级元素;
+            .children:
+                获取当前元素的子元素(数组);
+            .setTimeOut:
+                等待x秒:
+                   setTimeout(() => {
+                            $('.tags').click(
+                                function (param) {
+                                        alert("click");
+                                }
+                            );
+                    }, 2000);
+            .querySelector():
+                拥有这个style的所有元素
+            .replace():
+                概念：
+                    修改string
+                例子：
+                    修改.到' ':
+                        mystring = mystring.replace(/\./g,' ')
+
+            decodeURIComponent():
+                用于解码由encodeURIComponent 方法或者其它类似方法编码的部分统一资标识符
+            RegExpObject：
+                概念：
+                    正则表达式检索工具
+                .exec(XX):
+                    查找xx是否存在
+            JSON:
+                stringify:
+                    JSON转换String
+                parse:
+                    转成json,可以通过键值对访问
+                Object.keys('json文件').length：
+                    内容数量
+            .toString()：
+                转换数字为字符串
+            typeof(XX):
+                XX的类型
+            array:
+                .push('xx'):
+                    在数组中加入：xx
+                .includes():
+                    用法：
+                        1：
+                            var fruits = ["Banana", "Orange", "Apple", "Mango"];
+                            var n = fruits.includes("Banana");
+                            输出：ture
+                        2：
+                            var fruits = ["Banana", "Orange", "Apple", "Mango"];
+                            var n = fruits.includes("Banana"，3); //检查第三位
+                            输出：false
+                数组去重：
+                    let chars = ['A', 'B', 'A', 'C', 'B'];
+                    let uniqueChars = [...new Set(chars)];
+            .onchange():
+                回调函数
+            .innerHTML():
+                更换文本
+            .getElementsByName():
+                取名字为“xx”的第一个值：
+                    .getElementsByName(“xx”)[0].value;
+    Node.js后端:
+        默认安装路径：
+            C:\Program Files (x86)\nodejs\
+        概念：
+            JavaScript 运行时环境,优化了I/O操作（例如从网络读取、访问数据库或文件系统）,客户端,服务器端的代码编写,通过npm托管的开源库
+        helloWorld:
+            在目录下创建Nodejs运行库：
+                列出依赖的软件包package.json:
+                    创建:
+                        cmd: npm init
+                    必填：
+                        <(
+                            {
+                                "name": "webtest",
+                                "version": "1.0.0",
+                            }
+                        )>
+                    修改：
+                        cmd：
+                            npm set init.author.email "example-user@example.com"
+                            npm set init.author.name "example_user"
+                            npm set init.license "MIT"
+                    自定义脚本：
+                        <(
+                            "scripts": {
+                                "watch": "webpack --watch --progress --colors --config webpack.conf.js",
+                                "dev": "webpack --progress --colors --config webpack.conf.js",
+                                "prod": "NODE_ENV=production webpack -p --config webpack.conf.js",
+                            },
+                        )>
+                        调用：
+                            $ npm run watch
+                            $ npm run dev
+                            $ npm run prod
+                    
+                创建依赖库：
+                    右键powerShell：
+                        cmd：npm install
+                    package-lock.json:
+                        目的：
+                            锁定依赖项
+                        生成：
+                            再次cmd：npm install
+                
+            运行helloWorld：
+                创建helloWorld.js：
+                    <(
+                        const http = require('http')
+
+                        const hostname = '127.0.0.1'
+                        const port = 3000
+
+                        const server = http.createServer((req, res) => {
+                        res.statusCode = 200
+                        res.setHeader('Content-Type', 'text/plain')
+                        res.end('helloSJX\n')
+                        })
+
+                        server.listen(port, hostname, () => {
+                        console.log(`服务器运行在 http://${hostname}:${port}/`)
+                        })
+                    )>
+                运行：
+                    cmd：
+                        node helloWorld
+                关闭：
+                    按键：
+                        Ctrl+C
+                    命令行：
+                        process.exit('退出码')
+                        或者
+                        process.exitCode = 1
+                        不同退出码的含义：
+                            http://nodejs.cn/api/process.html#process_exit_codes
+        npm包管理：
+            下载：
+                npm install <package-name>
+                全局安装：
+                    npm install -g xx
+            更新：
+                npm update <package-name>
+            卸载：
+                npm uninstall <package-name>
+                移除package.json中的文件：
+                    npm uninstall -S <package-name>
+                只移除文件中的依赖项：
+                    npm uninstall -D <package-name>
+                全局移除：
+                    npm uninstall -g <package-name>
+        npm命令行：
+            依赖项：
+                cmd：npm list
+                依赖项深度：
+                    cmd：npm list --depth=0
+        npx命令行：
+            意义：
+                无需安装直接运行
+            示例：
+                npx xxx
+            运行git:
+                npx https://gist.github.com/zkat/4bc19503fe9e9309e2bfaa2c58074d32
+
+    LazyLoad：
+        
+
+MarkDown:
+    Python：markDown转Html：
+        环境安装：
+            cmd:
+                pip：
+                    版本升级：
+                        py -m pip install --upgrade pip
+                    安装markDown库：
+                        py -m pip install markdown
+                    安装代码高亮库：
+                        py -m pip install Pygments
+        使用：
+            py -m markdown 你的markDown文件.md > out.html
+        在线转Html：
+            https://dillinger.io/
+
+    使用：
+        链接：(尽量使用图床，本地图片需要和md在同一路径下)
+            <(
+            ![任意文字](任意路径 "任意注释")
+            )>
+        vscode中预览：
+            Open Preview (Ctrl+Shift+V) or use the Command Palette (Ctrl+Shift+P) to run the Markdown: Open Preview to the Side command (Ctrl+K V).
+
+
+jquery：
+    概念：
+        一个JavaScript的函数库，写的少做的多
+        包含功能：
+            HTML元素选取，
+            HTML元素操作，
+            CSS操作，
+            HTML事件函数，
+            JavaScript特效和动画，
+            HTML DOM (Document Object Model) 遍历和修改：
+                HTML 和 XML 文档的编程接口
+            AJAX：
+                概念：
+                    可以仅向服务器发送并取回必须的数据，并在客户端采用JavaScript处理来自服务器的回应。因为在服务器和浏览器之间交换的数据大量减少，服务器回应更快了。同时，很多的处理工作可以在发出请求的客户端机器上完成，因此Web服务器的负荷也减少了。
+                全称：
+                    Asynchronous JavaScript and XML 异步加载
+                上传基本格式：
+                    $.ajax({
+                        url: urlink,
+                        type: 'post',
+                        processData: false,
+                        contentType: false,
+                        data: info,
+                        success: function (data) {
+                            console.log("已上传至： " + urlink + "  成功的内容：");
+                            for (var value of info.values()) {
+                                console.log(value);
+                            }
+
+                        },
+                        error: function (request, status, error) {
+                            console.log("已上传至： " + urlink + "  失败的内容：");
+
+                            for (var value of info.values()) {
+                                console.log(value);
+                            }
+                        }
+
+                    });
+                包含ajax功能的api：
+                    $.getJSON：
+                        
+                注意事项：
+                    1.files上传需要套一个for循环，单个file上传，不能以数组的形式上传，不然无法识别
+
+
+            Utilities：
+                以 $ 开头的工具集
+    加载：
+        <script src="js/jquery-1.11.1.min.js"></script>
+    api:
+        .getJson():
+            执行条件：
+                前提条件是发布到端口
+            参数：
+                执行成功：
+                    .done(function(param){})
+                执行失败：
+                    .fail(function(param){})
+
+        .hide():
+            消失
+        #id:
+            $('#test').text("123");
+        .text:
+            $('#test').text("123");
+        .css():
+            调用css
+        .toggleClass('css'):
+            像开关一样使用class（css）
+            采用css
+        .removeClass('css'):
+            移除css
+        .hasClass('css'):
+            是否存在css
+        .indexOf('x'):
+            字符串中是否存在x
+        .attr():
+            获取匹配元素集中第一个元素的属性值，或者为每个匹配元素设置一个或多个属性。
+        .append():
+            举例：
+                $( ".inner" ).append( "<p>Test</p>" );
+    生命周期：
+        开始加载时注册：
+            $(document).ready(function() {
+                //dosomething
+            });
+    格式：
+        click：
+            传入：
+                标签+class
+            例子：
+            $('li.tags').click(
+					function () {
+						alert('hihihi');
+					}
+				);
+        name：
+            类型为td：
+            $('td[name ="tcol1"]')：
+                // 名字为tcol1的
+            $('td[name^="tc"]' )：
+                // 名字开头为tc的
+            $('td[name$="ol"]' )：
+                // 结束为ol的
+            $('td[name*="tcol"]' )：
+                // 包含tcol的
+        修改值：
+            例如：
+                修改value：
+                    .val(newText)
+                修改text：
+                    .text(newText)
+    操作：
+        加载预览图：
+            url：
+                https://stackoverflow.com/questions/4459379/preview-an-image-before-it-is-uploaded/4459419#4459419
+            代码：
+                js：
+                    function readURL(input) {
+                    if (input.files && input.files[0]) {
+                        var reader = new FileReader();
+                        
+                        reader.onload = function(e) {
+                        $('#blah').attr('src', e.target.result);
+                        }
+                        
+                        reader.readAsDataURL(input.files[0]); // convert to base64 string
+                    }
+                    }
+
+                    $("#imgInp").change(function() {
+                    readURL(this);
+                    });
+                html：
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+                    <form runat="server">
+                    <input type='file' id="imgInp" />
+                    <img id="blah" src="#" alt="your image" />
+                    </form>
+
+
+
+Hexo:（https://hexo.io/docs）（基于yml格式）
+    基于nodeJS
+    安装：
+        1.安装nodeJS框架
+            cmd:node -v (检测)
+        2.安装git环境
+            cmd:git version (检测)
+        3.安装Hexo:cmd:
+            npm install -g hexo -cli(安装)
+            hexo -v(检测)
+        4.初始化：
+            cmd：hexo init（可以选择加文件名,hexo文件将会创建在文件名的目录下）
+    目录结构：
+        node_module:
+            nodeJs模块，以及hexo工程文件
+        scaffolds:
+            模板文件夹
+                基础支持：
+                    title：
+                        - 缩略标题
+                    tags:
+                        - 标签1
+                        - 标签2
+                    categories:
+                        - 分类
+                        - 子分类
+        source：(重要)
+            博客主要存放地址
+        themes：
+            css样式主题
+                1.克隆下工程文件(包含：)
+                2.在根config.yml中theme赋值为：包含工程文件的文件名
+            
+        _config.yml：(重要)
+            设置文件（控制样式主题...）：
+
+                Site：
+                    title：
+                        网页的头文件
+                    subtitle:
+                        次级标题
+                    description：
+                        描述
+                    keywords：
+                        检索关键词
+                    autor：
+                        姓名
+                    language：
+                        网站语言https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+                    timeZone：
+                        时区
+                URL:(分享到公网的设置)
+                    ...
+                Directory：(文件读取路径)
+                    ...
+                Writing：(书写格式)
+                    ...
+                Home page setting：(主页index设置)
+                    ... 
+                Category & Tag:(分类和标签)
+                    ...
+                Date / Time format(时间格式)
+                    ...
+                Pagination:(每页显示的最大数量)
+                    ... 
+                Extensions:(拓展名)
+                    ...
+                    
+                
+        .gitignore:
+            git忽略上传的文件
+        db.json：
+            模板数据库文件
+        package.json：
+            控制所有依赖的版本
+    开启：
+        1.cmd D:\Hexo\node_modules\.bin (.bin目录下)
+        2.hexo server(此操作将打开4000端口)
+
+    命令行：
+        https://hexo.io/docs/commands
+    
+    插件安装：
+        hexo-filter-nofollow（安全性白名单）：
+            cmd：cd /var/www/hexo
+            cmd: npm i hexo-filter-nofollow --save
+
+    常用句式：
+        站内链接：
+              {% post_link mb名称 链接名称 %}
+                链接名称可以不填写
+
+HTTP：
+    概念：
+        超文本传输协议：万维网数据通信的基础，让所有用户可以轻松访问资源的超链接
+        万维网与互联网：
+            互联网：
+                通过TCP/IP协议实现的数据传输集合体
+            万维网：
+                互联网的超集，把无数网络站点的集合，万维网是对互联网的应用
+    历史：
+        HTTP 0:
+            1989年由IETF，W3C共同开发
+        HTTP 1.1:
+            1997年备用协议，1999年被淘汰
+        HTTP 2:
+            2015年发布，50%以上网站使用，由 ALPN 和 TLS 来支持
+        概念拓展：
+            IETF(Internet Engineering Task Force ):
+                对所有人开放的互联网工程任务组，关注互联网体系结构的演进和互联网的平稳运行
+            W3C(World Wide Web Consortium)：
+                W3C制定的网络标准似乎并非强制，而只是推荐标准，因此部分网站仍然不能完全实现这些标准
+            TLS(Transport Layer Security):
+                传输层安全性协议，前身是SSL，SSL由IETF标准化成TLS
+            ALPN(Application-Layer Protocol Negotiation)：
+    结构：
+        分布式，协作式
+    设计模式：
+        响应式编程：
+            上一个任务执行结果的反馈就是一个事件，这个事件的到来将会触发下一个任务的执行。
+    遇到的问题：
+        用vscode报错：
+            跨域请求失败：CORS失败
+        原因：
+            缺失IDE，没有发布到端口
+        解决方案：
+            vscode插件加入：LiveServer
+
+插件：
+    tampermonkey（油猴）：
+
+        正常：
+            https://greasyfork.org/zh-CN
+
+        不可描述：
+            https://sleazyfork.org/zh-CN
+    wiki离线：
+    	
+	https://wiki.kiwix.org/wiki/Content_in_all_languages/zh-cn
+	
+
+
+    
+Adia项目:
+    图片预览：
+        wings的共享：
+            \\192.168.55.160\webs\public
+        ref：:
+            https://www.js-tutorials.com/jquery-tutorials/live-search-json-objects-data-using-jquery/
+        请求示例：
+            http://127.0.0.1/libmain/?sk=tree
+        拼接规则：
+
+            服务器 + AssetPath + AssetPreviewPath = 预览图片
+
+                服务器：
+                    http://192.168.10.7
+                AssetPath：
+                    /Assets/Materials/M_Atlas/M_Atlas_Tree/
+                AssetPreviewPath：
+                    M_Atlas_Tree_Leaf_1036_Preview.png
+
+        示例：
+            http://192.168.10.7/Assets/Materials/M_Atlas/M_Atlas_Tree/M_Atlas_Tree_Leaf_1036_Preview.png
+    

@@ -1,0 +1,25 @@
+文档规则：
+    注释：
+        (这是注释)
+    省略：
+        ...
+    包含：
+        <
+    值：
+        >
+    代码：
+        <(代码)>
+TiledMap：https://doc.mapeditor.org/en/stable/manual/layers/
+    项目路径:
+        已有范例：E:\Cocos\2-1\evolutionary-planet_2021\EvolutionaryPlanet\CocosCreatorSourceCode\assets\resources\Atlantis
+
+    新建项目：
+    操作：快捷键：https://doc.mapeditor.org/en/latest/manual/keyboard-shortcuts/
+        印章笔刷： 
+            开启：B
+            画线：shift+LM
+            画空心圆：Ctrl+Shift+LM
+            开启随机模式：D;选中多个图块集
+    Java插件编写：https://doc.mapeditor.org/en/latest/reference/scripting/#startup-script
+        范例：https://www.youtube.com/watch?v=WMTv6QsAp0I
+    

@@ -1,0 +1,641 @@
+文档规则：
+    注释：
+        (这是注释)
+    省略：
+        ...
+    包含：
+        <
+    值：
+        >
+    代码：
+        <(代码)>
+
+UE4自带材质节点/函数封装：
+    视觉：
+        基类：
+            Multiple:
+                图片：
+                    正片叠底
+                数字：
+                    >0:
+                        强度
+                    <1:
+                        反向
+            Append:
+                附加参数的个数
+            Add：
+                变亮/变暗（如果图片叠加）
+                相加（如果图片不叠加）
+            Subtract:
+                颜色加深（对色）
+                减法
+            power：
+                拉大颜色差(>1)
+                减弱效果(<1)
+
+            oneMinus：
+                颠倒黑白
+
+            Desaturation：
+                降低饱和度
+           
+            Max:
+                a：遮罩 b:图片
+                图片保留遮罩的黑色部分
+            Min：
+                a：遮罩 b:图片
+                图片去除遮罩的黑色部分
+            Divide:
+                作为被除的图像：
+                    >1:
+                    颜色变暗
+                    <1:
+                    颜色变量
+                作为除的图像：
+                    <1:
+                    颜色反转
+                    >1:
+                    反转变亮
+                除数作为遮罩：
+                    提取不透明部分
+            
+        封装类：
+            视觉函数：
+                SpiralBlur：
+                    模糊TexObject
+                ComputeMipLevel:
+                    输出渐层分层
+                Distance_Blend:
+                    距离决定表现方程
+                CustomRotator:
+                    旋转TextureSample
+            方法函数：
+                blend angle corrected normals：
+                    合并法线图
+                CheckerPattern：
+                    检查当前结果
+            
+            
+            
+        
+    数学：
+        Sine：
+            波形
+            ConstantBiasScale:
+                用于控制波形变化
+        Lerp：
+            A,B,alpha
+            根据alpha在A,B之间做线性插值遮罩
+        BreakOutFloatXComponents：
+            拆分成X个浮点数
+        Subtract：
+            偏移数值
+        Saturate:
+            限制值在0-1(无消耗)
+        Frac：
+            只输出小数部分
+        componentMask：
+            只输出指定参数
+        Sign：
+            返回-1，0，1,分别取决与<0,=0,>0
+        round:
+            四舍五入到Int
+        PI：
+            输出一个乘以Pi的值
+        Normalize:
+            归一化
+        Distance：
+            距离
+        3ColorBlend:
+            组合V3
+
+    空间：
+        VertexNormalWS：
+            获取空间法线方向
+        TexCoord/TextureCoord：
+            3维映射2维坐标
+        WorldPosition(absoluteWorldPosition):
+            每个像素点在世界空间的绝对坐标
+        TextureObject:
+            不能提供arba，只能提供平面纹理，需要结合TextureSample使用。
+        TetxureSample:
+            常规Texture2D,包含agba,和法线信息
+        SceneTexture:
+            后处理：
+                接入UV坐标
+                    UMaterialExpressionSceneTexture:
+                        SceneTextureId:PostProcessInput0
+        
+
+    
+    逻辑：
+        StaticSwitchParameter:
+            布尔返回两个结果中的一个
+        
+    
+    landSpace：
+        LandSpaceLayerBlend：
+        LandSpaceLayerCoords:
+
+    操作：
+        Input：
+            传1-4个浮点数
+            各种纹理
+            布尔值
+        MaterialFunctionCall：
+            传入封装好的方程
+        DebugXValue：
+            直接在材质上显示数值
+        PlotFunctionOnGraph:
+            数据可视化成图表
+        Panner(坐标动画):
+            输入坐标，时间得到UV动画
+
+    常用方程：
+        获得法线贴图：
+            (G*2-1,B*2-1,1)
+        循环动画：
+            Frac(Time)
+        时间差动画：
+            灰度图+Time
+        世界坐标遮罩：
+            绝对世界坐标*(xy/zy/xz)*(放大每个像素)
+        世界方向遮罩：
+            顶部遮罩：
+                Mask(VertexNormalWS,B)
+            四面遮罩：
+                topMask（顶部遮罩）= Abs(Mask(VertexNormalWS,B))
+                saturate(Lerp(3.5,-1.5,topMask))
+        遮罩采用：
+            lerp根据 遮罩（alpha）遮罩出底图和遮罩内容
+        法线合并：
+            Add后,将蓝色通道单独分出，设为1
+            如果有透明通道,使用lerp函数,以通道为mask,叠加两个normal,alpha
+        作用于UV表面：
+            TextureCoord与颜色相加
+        
+        
+        
+Ue4材质球设置：
+    Material材质：
+        MatrialDomain:
+            Surface:
+                用于几何
+            DeferredDecals:
+                用于DecalActor
+                遮罩：
+                    1.选定需要成为遮罩的材质
+                    2.Rendering
+                        取消勾选ReceivesDecals
+            LightFunction:
+                ？
+            PostProcess:
+                后处理管线中混合
+            UserInterface:
+                用于UI
+        blendMode:
+            Opaque:
+                不透明,是开销最小的材质模式,逐像素渲染，无论材质节点多复杂，渲染一个像素的时间始终相同。
+            Masked:
+                按照透明度创建像素，不透明区域越大，消耗越大，只有100%和0%
+            Translucent：
+                消耗最大的材质模式，无论是否透明都会进行检测，产生额外消耗
+                Translucency:(半透明光照，？傅立叶不透明度贴图实现)
+                    实际应用于体积雾的丁达尔效应，逐像素的半透明光照反射
+                    Volumetric NonDirectional:
+                        无方向体积光计算，用于：烟雾，灰尘
+                    Volumetric Directional:
+                        有方向体积光计算，默认方向面向相机，？bGenerateSphericalParticleNormals可以更改点法线方向
+                    Volumetric PerVertex NonDirectional:
+                        逐像素计算无方向体积光，比Volumetric NonDirectional开销更小，弊端：远处光照无法计算
+                    Volumetric PerVertex Directional:
+                        逐像素计算有方向体积光，比Volumetric Directional开销更小，弊端：远处光照无法计算
+                    Surface Translucency Volume:
+                        逐面计算光照，像素成本低。用于水和玻璃
+                    Surface Forward Shading:
+                        逐面计算光照，逐像素分配权重。开销最大的渲染方式
+            Additive:
+                剔除黑色像素，比Translucent消耗小
+            Modulate:
+                叠加黑色像素，比Translucent消耗小
+        Translucency：
+            ResponsiveAA(勾选后：取消抗锯齿):
+                用于过小的粒子,节省性能开销
+            
+Ue4 GroomSystem:
+    概念：
+        用于处理Alembic(.abc)文件。
+    
+    Alembic(.abc):
+        由来：
+            是几何和动画的开放式交换格式。它最初是由Sony Pictures Imageworks和Industrial Light＆Magic的团队开发的。
+        概念：
+            与obj,Fbx相同,采用分层采样数据存储格式。在内存和磁盘空间方面非常高效
+    新型hair系统：
+        概念：
+            与传统面片透明头发不同，groom材质可以控制每根头发的渲染，它集成了Niagara系统。
+        流程：https://docs.unrealengine.com/en-US/WorkingWithContent/Hair/QuickStart/index.html
+            范例：https://www.youtube.com/watch?v=o5mrMIXhxSQ&ab_channel=MarvelMaster
+
+            开始：
+                开启：
+                    UE4：
+                        plugin：
+                            开启Groom两个插件
+                        ProjectSettings：
+                            Rendering：
+                                Optimizations - enable Support Compute Skincache
+                            Animation：
+                                Performance - disable Tick Animation on Skeletal Mesh Init
+            Maya：
+                0.*需要设置Z轴朝上,windos-首选项
+                1.在XGen中创建Groom
+                    Modle:
+
+                    XGen：
+                        Generate:
+                            1.1：XgenEditor：
+                                调整参数:https://www.youtube.com/watch?v=rfxt0ubgLXc
+                                    XGen操作:
+                                        创建：
+                                            UsingAttributesControlledByExpressions:
+                                                通过表达式来控制形状
+                                            
+                                        ControlThePrimitivesBy:
+                                            XGenShelfTab:
+                                                SculptGuides:通过权重弯曲发丝
+                                            上方图形界面：
+                                                
+                                                PlacingAndShapingGuides:
+                                                    通过几何表面生成XGen
+                                                        AddOrMoveGuide:创建或移动
+                                                            创建完成后支持缩放旋转
+                                            下方参数设置：
+                                                Primitives：
+                                                    GeneratorAttributes：
+                                                        Density:头发密度
+                                                        Mask:创建一个生长头发区域的遮罩
+                                                            ToolSetting:打开控制笔刷
+                                                            点击保存遮罩生效
+                                                        Rebuild:重新排布控制点
+                                                    PrimitiveAttributes:
+                                                        Length/Width:头发长度宽度
+                                                        ModifierCVCount:头发分段数
+
+                                                    RegionControl:
+                                                        Mask:
+                                                        Map:区域性遮罩
+                                                Modifiers:总体塑形
+                                                    创建：
+                                                        Clumping(聚合发型)：
+                                                            SetupMaps:
+                                                                笔刷创建
+                                                            NoiseEffect:
+                                                                Noise:生成噪点
+                                                                NoiseFrequency:过程噪点
+
+
+
+
+
+                                            右键：
+                                                GuideControlPoint:
+                                                    以控制点控制发丝生成
+                                    范例：
+                                        大波浪：
+                                            调高Length和ModifierCVCount,再调高Modofoers_Clumping_NoiseFrequency
+                                                
+
+
+                            1.2：CovertToInteractiveGroomOptions:
+                                勾选OutputPerfix
+                                转换成交互式Groom
+                            1.3:选中交互式节点：
+                                Cache-ExportCache:
+                                    setting:
+                                        GeneralOptions:
+                                            CurrentFrame(勾选)
+                                        AdvancedOptions:
+                                            WriteFinalWidth(勾选)
+                2.导出.abc材质
+            UE4:
+                1.配置好Groom环境，导入.abc
+                    详见此栏目下的"开始"
+                2.在Groom组件中设置参数
+                    
+                3.和模型结合
+                    右键绑定模型
+                4.转移蒙皮
+                    
+                5.调整或配置头发的材质球
+                    HairAttributes：
+                    
+                6.设置头发的物理属性
+            结束：
+    右键：
+        Rebuild：
+            重新导入.abc
+        CreateBinding:
+            创建绑定
+        CreateTextures：
+            生成图集
+
+Ue4 NiagaraSystem:
+    FlagsNodes：
+        Flags：
+            EmitterSetting:
+                Emitter：
+                SimTarget:
+                        CPU:
+                            可以计算碰撞
+                        GPU:
+                            无法计算碰撞
+                                FixedBounds:
+                                    数值小会影响相机渲染角度，在不可见的时候将不进行渲染
+                
+            EmitterSpawn:
+                SpawnMSVertexAniamtionToolsMorphTargetParticles:
+                    (粒子依附于形状,可实现点云)
+                particle.position:
+                    设置坐标
+                
+
+
+            EmitterUpdate:
+            ParticalSpawn:
+                SetNewExitingParameters:
+                    (设置参数)
+                AddVelocity:
+                    添加方向与力
+                InitializeMeshReproductionSprite:
+                    (粒子依附于形状,可实现Mesh点云)
+                Sphere Location:
+                    生成形状
+                Particle:
+                    Color
+                    Lifetime
+                    SpriteSize
+
+
+            ParticalUpdate:
+                CurlNoiseForce:
+                    实时扰动粒子
+                CameraOffset:
+                    粒子与相机的距离
+            
+            共有：
+                RecreateCameraProjection:
+                    相机映射
+
+
+        FunctionNodes:
+            Color from Curve:
+                V3 UI 变 插值UI
+            RandomRange'X':
+                V1/V2/V3 钳制随机
+            Vector'X'DFromFloat/VectorFormFloat:
+                V2/V3...同质化
+            MakeVectorFromLinearColorRGB:
+                V3 To RGB
+       
+    ScriptNodes:
+        变量：
+            Module:
+                SkeletalMesh(骨骼模型)
+            Particles：
+                NormalizedAge(归一化粒子寿命)
+                Color
+        函数：
+            SkeletonMesh.RandomTriCoord:
+                输入：mesh，输出：世界坐标下mesh上的随机位置
+            Color.BreakLinearColor:
+                拆分颜色
+            Tangent(degree):
+                返回一个期望的度数
+
+    基础操作：
+
+        -声明变量:
+            在Windows>Parameters下创建变量，拖动到 NS 下对应的 NE 下
+        -NiagaraScript：
+            申明对应类型的变量需要拉出线才可以申请
+        -debug With AttributeSpreadsheet
+            Windows>AttributeSpreadsheet>Capture
+    高级操作：
+        -在CPU模式下,点云动画:
+            在Niagara中：
+                申明一个 SkeletalMesh 变量,赋值给 ParticaleSpawn>InitializeMeshReproductionSprite 和 ParticaleUpdate>UpdateMeshReproductionSprite
+            在场景中：
+                带入Niagara 和 SkeletalMesh
+                SkeletalMesh设置:
+                    Animation：
+                        AnimationMode:
+                            UseAnimationAsset
+                        AnimtoPlay:
+                            将AS(AnimationSequance)带入
+                    Rendering：
+                        Visible:
+                            false
+                    Optimization:
+                        VisibilityBaseAnimTickOption:
+                            AlwaysTickPoseAndRefreshBones
+        -让粒子根据贴图生成（黑色为alpha0，白色相反）:
+                ParticaleSpawn:
+                    1.set一个Vector2重命名：UV
+                    2.set一个Position,HlSL表达式：float3(Particles.UV,0.0)*400
+                ParticleUpdate:
+                    1.SampleTexture:
+                        Texture:需要粒子聚合成的贴图
+                        UV：particles.UV
+                    2.Color(最后渲染)：
+                        ScaleColor：节点方程:MakeVectorFromLinearColorRGB>节点方程：SampleColor
+                进阶：让粒子根据贴图生成全息影像：
+                    1.创建ScenceCapture2D
+                    2.创建RenderTargetTexture
+                        CaptureSource:SenceColor(HDR)inRGB,SceneDepthInA.(将深度信息存放在Alpha通道中)
+
+                    ParticleUpdate:
+                        +RecreateCameraProjection:
+                            DepthValue:
+                                +(节点方程)MakeFloatFromLinearColor
+                                +(节点方程,将RenderTarget赋给之前创建的Texture)
+                            ProjectSpaceUVLocation:UV(2d生成创建的V2)
+                            Transform:
+                                ForwardVector:
+                                    0,0,-1
+                                RightVector:
+                                    0,1,0
+                                UpVector:
+                                    1,0,0
+                    高阶：
+                        控制全息点阵
+                                
+Ue4 PostProcess:
+    概念:
+        生命周期：
+            在渲染场景之前
+        应用：
+            光晕，环境光遮蔽，调色
+    操作：
+        创建：
+            PlaceActors中创建PostProcessVolume
+    UI面板：
+        PostProcessVolumeSettings:
+            InfiniteExtent(Unbound):
+                设置全局后处理
+        ColorGrading:
+            Global:
+                Saturation:
+                    饱和度
+                Contrast:
+                    对比度
+            （-针对性调色-）
+            Shadows:
+            Midtones:
+            Highlights:
+            （-针对性调色-）
+            WhiteBalance:
+                Temp:
+                    白平衡（色温）
+            Misc:
+                SceneColorTint:
+                    调色后处理
+                ColorGradingLUT(ColorLookupTables):
+                    用于调色，减少色彩误差：
+                        下载UE4色卡,在PS中将滤镜应用于色卡,导出色卡,导入UE4
+                        https://docs.unrealengine.com/en-US/RenderingAndGraphics/PostProcessEffects/UsingLUTs/index.html
+        Film:
+            调色
+        Lens（滤镜）：
+            Bloom（模糊滤镜）：
+                应用：气氛、增强光照
+                Advanced:
+                    光晕尺寸
+
+            DirtMask(镜头灰尘):
+                DirtMaskTexture:
+                    自定义镜头灰尘        
+                        
+            Exposure:
+                滤镜转化速度
+                Advanced:
+                    白天晚上滤镜
+            LensFlagre(耀斑)：
+                Intensity(强度)
+                BokehShape(形状贴图)
+            DepthOfField:
+                FocalDistance(焦点距离):
+            Camera：
+                Aperture(F-stop)(光圈，模糊度):
+        RenderingFeatures:
+            AmbientOcclusion:
+                Intensity:
+                    AO贴图(环境光遮蔽)强度
+            GlobalIllumination:
+                IndirectLightingIntensity(全局光照强度)
+            MotionBlur(运动模糊):
+            RenderingFeatures(屏幕百分比):
+            ScreenSpaceReflection(全局反射质量):
+            PostProcessMaterials(自定义材质混合屏幕后处理)：
+
+                
+Ue4 AtmosphericFog(大气系统)          
+    作用：
+        控制光照和环境贴图
+    操作：
+        开启(环境受光照影响)：
+            Light下AtmosphereAndCloud勾选
+    Atmosphere:
+        光照强度
+        雾化强度
+        天空贴图的位置
+    
+Ue4 光照系统
+    贴士：
+        1.减少光照重叠可以减少计算量
+        2.Static模式最快渲染不可实时更改,Stationary更改光照颜色强度,Moveable最慢渲染完全实时
+        3.每个模型都可以自定义光照质量,光照质量过高会渲染的很慢，不统一会出现接缝
+    基础光照：
+        SkyLight：
+            可以造成室内全局反射
+        SpotLight(投射光):
+            Light：
+                距离,角度
+            LightProfiles(自定义光照):
+                IESTexture:
+                    https://docs.unrealengine.com/en-US/BuildingWorlds/LightingAndShadows/IESLightProfiles/index.html
+                    IES光照渲染模型.渲染速度比LightFunction更快
+        DirectionalLight:
+            CascadedShadowMaps(阴影控制):
+                DynamicShadowDistanceStationaryLight:
+                    动态光照质量(优化实时开销)
+                DistanceFadeoutFraction:
+                    阴影渐变
+    光照增强：
+        LightmassImportanceVolume:
+            光照细节区域(优化实时开销)
+        LightmassPortal:
+            光照穿过区域优化
+        WorldSerrings>Lightmass:
+            全局光照设置
+        SphereReflectionCapture(反射球):
+            ReflectionCapture:
+                InfluenceRadius:
+                    反射强度
+                ReflectionSourceType:
+                    场景反光
+                    天空图片盒子反光(IBLR)
+        IES自定义光照：
+            SpotLight>LightProfiles
+        
+Ue4 景观系统：
+
+Ue4 顶点动画：
+    控制：
+        url：
+            https://docs.unrealengine.com/en-US/AnimatingObjects/Sequencer/HowTo/GeometryCacheTrack/index.html
+        核心：
+            创建animation>Level Sequence>track>Geometry Cache 
+    导入：
+        取消勾选FlattenTracks    
+
+UE4Hlsl代码:
+
+UE4UI操作：
+    操作视窗：
+        右上角切换三视图
+            三视图模式下鼠标中键是尺子
+    创建一个相机贴图：
+        1.创建ScenceCapture2D
+        2.创建RenderTarget
+        3.RenderTarget赋值给ScenceCapture2D
+    存档点：
+        Window>SaveCurrtenAs
+    进入电影模式：
+        Reference：
+        https://docs.unrealengine.com/en-US/AnimatingObjects/Sequencer/HowTo/CineCameraActors/index.html
+        1.Cinematics>AddLevelSequence
+        2.创建：CineCameraActor
+        3.Track>ActorToSequencer>Add'xx'
+    产品级渲染：
+        BuildOpition>LightQuality>ProudectLevel
+
+顶点：
+    参考：
+        https://zhuanlan.zhihu.com/p/103546030
+        http://image.diku.dk/projects/media/morten.mikkelsen.08.pdf
+        http://mikktspace.com/
+        https://github.com/teared/mikktspace-for-houdini/tree/master/source
+    属性：
+        顶点位置坐标
+        顶点UV1/UV2
+        顶点颜色
+        顶点法线：
+            三维向量
+        顶点切线：
+            垂直于法线的向量
+        顶点副法线：
+
+项目参考：
+    雨水材质（顶面水波纹+顶面积水+侧面水流）：
+        https://youtu.be/fYGOZYST-oQ

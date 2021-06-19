@@ -1,0 +1,45 @@
+报错：
+      errno 10054：
+            原因：
+                  上传大小限制
+            解决方法：
+                  git init
+                  git config http.postBuffer 524288000
+      Logon failed, use ctrl+c to cancel basic credential prompt：
+            原因：
+                  可能：git升级后必须从网页登陆
+                        详细：
+                              https://stackoverflow.com/questions/64962533/logon-failed-use-ctrlc-to-cancel-basic-credential-prompt
+                        解决方案：
+                              git update-git-for-windows
+                              勾选：
+                                    GitCredentialManagerCore
+                              
+
+                  可能2：凭证不正确
+                        解决方案1： 
+                              删除凭证：
+                                    删除 AppData\Local\GitCredentialManager目录下的tenant.cache文件
+                        解决方案2：
+                              关闭验证弹窗（暂时解决）：
+                                    git config --system --unset credential.helper
+      
+      Failed to connect to github.com port 443: Timed out:
+            代理不通报错：
+                  参考：https://blog.csdn.net/u011476390/article/details/93411139
+
+mac:
+      生成ssh：
+            报错：
+                  remote: Invalid username or password.
+                  fatal: Authentication failed for 'https://github.com/mohamad-wael/tmp.git/'
+            解决方案1：
+            https://twiserandom.com/git/github-error-remote-invalid-username-or-password-a-solution/index.html                  
+      mac开发套装（包含git）：
+            终端：
+                  xcode-select --install
+                  sudo xcode-select -s /Library/Developer/CommandLineTools
+      简单的提交拉取推送：
+            ref：
+                  https://blog.csdn.net/jiangyu1013/article/details/83622179
+            

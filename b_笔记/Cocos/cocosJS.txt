@@ -1,0 +1,277 @@
+文档规则：
+    注释：
+        (这是注释)
+    省略：
+        ...
+    包含：
+        <
+    值：
+        >
+    代码：
+        <(代码)>
+
+Cocos:
+    引擎节点：
+        Node：基础信息(位置缩放)
+        Sprite：
+        Animation
+    TS:
+        概念：是javaScript的超集，适用于任何浏览器
+        代码：
+            代码提示：
+                creator.d.ts
+            类：
+                extends:
+                    类的父子关系
+                export:
+                    导出可以被外部调用
+                    default:
+                        默认导出单个可用值
+                        调用：
+                            import cube from './my-module.js';//如果是TS就不加后缀
+                            console.log(cube('abc')); 
+                    {}:
+                        导出自指定类
+                        范例：
+                            // 'parentModule.js'
+                            export { myFunction, myVariable } from 'childModule1.js';
+                            export { myClass } from 'childModule2.js';
+                        调用：
+                            import { myFunction, myVariable, myClass } from 'parentModule.js'
+            api：
+                Node.js:
+                    本地文件:
+                        读：
+                            const fs = require('fs');
+                            fs.renameSync('path.txt', fileA, (err) => {
+                                    if (err) Editor.log(err);
+                                    throw err;
+                            });
+                    计时器：
+                        schedule:
+                            概念：
+                                和setTimeout与setInterval相似,用来控制事件调用间隔
+                            示例0：
+                                //延迟2秒执行一次
+                                component.scheduleOnce(function() {
+                                    // 这里的 this 指向 component
+                                    this.doSomething();
+                                }, 2);
+                            示例1：
+                                //每隔5秒调用一次
+                                component.schedule(function() {
+                                    // 这里的 this 指向 component
+                                    this.doSomething();
+                                }, 5);
+                            示例2：
+                                //10秒之后，每隔5秒调用一次，总共执行3次
+                                 // 以秒为单位的时间间隔
+                                 var interval = 5;
+                                 // 重复次数
+                                 var repeat = 3;
+                                 // 开始延时
+                                 var delay = 10;
+                                 component.schedule(function() {
+                                     // 这里的 this 指向 component
+                                     this.doSomething();
+                                 }, interval, repeat, delay);
+                            取消计时器：
+                                this.count = 0;
+                                this.callback = function () {
+                                    if (this.count === 5) {
+                                        // 在第六次执行回调时取消这个计时器
+                                        this.unschedule(this.callback);
+                                    }
+                                    this.doSomething();
+                                    this.count++;
+                                }
+                                component.schedule(this.callback, 1);
+                    window:
+                        概念：与浏览器对话
+                            
+            基本逻辑：
+                for循环：
+                    for (let i = 0; i < mapW; i++) {}
+                匿名函数：
+                    var baz1 = function() { 
+                        var foo = 10; 
+                        var bar = 2; 
+                        return foo * bar; 
+                        }; 
+                switch Case条件判断:
+                    switch(expression) {
+                        case x:
+                            // code block
+                            break;
+                        case y:
+                            // code block
+                            break;
+                        default:
+                            // code block
+                        }
+
+            操作：
+                异步：
+                    var delay = (function () {
+                            var timer = 0;
+                            return function (callback, ms) {
+                                clearTimeout(timer);
+                                timer = setTimeout(callback, ms);
+                            };
+                    })();
+                    调用：
+                        delay(function () {
+                              //dosomething
+                        }, 500)
+
+    动画：
+        本项目动画：
+            TS:
+                实现关键字：
+                    LAND_TYPE_DATA
+                    loadBuilding()
+            动画预制体.prefab：
+                命名:
+                    白天：
+                        ''
+                    黑夜：
+                        'xxx_night'
+                路径：
+                    ...\evolutionary-planet_2021\EvolutionaryPlanet\CocosCreatorSourceCode\assets\resources\Preform
+                挂载：
+                    Node基础节点：
+                            位置缩放信息
+                    Sprite节点：
+                            spriteFrame:
+                                路径：
+                                    ...\evolutionary-planet_2021\EvolutionaryPlanet\CocosCreatorSourceCode\assets\resources\Atlantis\landscape
+                                设置：
+                                    Type：
+                                        Sprite
+                                    WrapMode:
+                                        Clamp
+                                    FilterMode：
+                                        Bilinear
+                                    Packable：
+                                        true
+                                    'else'：
+                                        false
+
+                            Type:
+                                SIMPLE
+                            SizeMode:
+                                TRIMMED
+                            Trim:
+                                true
+                            Blend:
+                                SrcBlendFactor:
+                                    SRC_ALPHA
+                                DstBlendFactor:
+                                    ONE_MINUS_SRC_ALPHA
+                            Materials:
+                                路径：
+                                    D:\Cocos\CocosCreater\CocosDashboard\resources\.editors\2.2.2\resources\static\default-assets\resources\materials\builtin-2d-sprite
+                    Animation节点：
+                        DefaultClip：
+                            路径：
+                                ...\evolutionary-planet_2021\EvolutionaryPlanet\CocosCreatorSourceCode\assets\resources\animation
+                            动画：
+                                手动编辑：
+
+                        Clips:
+                            1：
+                                ...\evolutionary-planet_2021\EvolutionaryPlanet\CocosCreatorSourceCode\assets\resources\animation
+                        PlayOnLoad:
+                            true
+    网络：
+        token：
+            身份验证令牌
+    工程文件结构：
+        assets(资源文件夹):
+            作用：
+                储存本地资源,脚本，第三方库，一些后缀的文件无法读取，如（.psd/.tps）
+            meta：
+                自动生成,存储资源配置，索引信息
+                作用：
+                    防止资源冲突，文件丢失，组件属性丢失
+                uuid：
+                    每个文件通过唯一的id定位,因此可以随意删除移动文件
+                更新时机：
+                    打开工程时
+                    更新资源时
+                    删除资源时
+                出错：
+                    1.uuid冲突：
+                        报错：
+                            uuid collision
+                        出现原因：
+                            复制了相同的meta文件
+                        解决方案：
+                            根据冲突的uuid找到重复的资源，删除meta，让引擎更新
+                    2.uuid发生变化：
+                        报错：
+                            图片/参数 丢失
+                        出现原因：
+                            没有生成meta文件的资源，被协同工作者引用并传回
+                        解决方案：
+                            1.提交前确保生成meta文件
+                            2.如果有只新增的meta文件,和初次提交者核实,并且要求提交meta文件,并且删除自己本地的meta文件     
+        library(资源库):
+            根据assets自动生成的最终游戏发布时依赖的环境,如果出现报错，删除后就会自动生成
+        local(本地设置):
+            储存了本机设置
+        packages(拓展插件文件夹):
+            插件格式：
+                文件夹：
+                    main.js
+                    package.json
+            api:
+                官方：
+                    https://docs.cocos.com/creator/manual/zh/extension/api/asset-db/asset-db-main.html
+                中文笔记：
+                    https://www.cnblogs.com/kingBook/p/13321430.html
+                细节：
+                    Editor：
+                        assetdb：
+                            接受以db开头的路径：
+                            refresh：
+
+
+        settings(构建发布相关设置):
+        temp(缓存文件，可以在关闭引擎后删除):
+        project.json(验证软件合法性):
+        build(构建目录)
+        .gitignore(git不提交的文件)：
+            除了：assets、packages、settings、project.json都不提交
+    加载速度优化：
+        瀑布图：
+            可视化时间：
+                谷歌F12-->network
+        前端：
+            减少drawcall：
+                减少碎图：
+                    texturePackage优化资源：
+                开启动态合图：
+                    代码：
+                        cc.macro.CLEANUP_IMAGE_CACHE = false;
+                        cc.dynamicAtlasManager.enabled = true;
+                        cc.dynamicAtlasManager.maxFrameSize = 2048;
+        后端：
+            Gzip：
+            Perload：
+            gulp内联脚本：
+                减少服务器请求次数
+            
+        代码优化：
+
+    其他：
+        alpha混合模式问题：
+            表现：
+                会出现白边
+            原因：
+                photoshop和cocos Alpha混合模式不同 导致
+            解决方法：
+                在cocos中勾选 Permultiply Alpha
+            PermultiplyAlpha:
+                普通alpha只是一张没有透明度的mask遮罩成的
+                PermultiplyAlpha是带有透明度的mask遮罩成的

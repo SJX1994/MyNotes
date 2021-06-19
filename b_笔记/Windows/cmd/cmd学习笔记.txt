@@ -1,0 +1,72 @@
+文档规则：
+    注释：
+        (这是注释)
+    省略：
+        ...
+    包含：
+        <
+    值：
+        >
+    代码：ren
+        <(代码)>
+操作：
+    获取当前目录：
+        set mypath=%cd%
+        @echo %mypath%
+        pause
+batch：
+    move：
+        移动
+        ex：
+            move \data\*.xls \second_q\reports\
+    del:
+        删除
+        /f：
+            强制删除
+            ex：
+                del /f file.txt
+
+    ren：
+        批量修改后缀名 例子：
+            ren *.ans *.out 
+        重命名：
+            ren (file located)CCC_a003.jpg a003.CCC.jpg
+    CHCP 65001：
+        转成中文字符
+    dir /s ：
+        输出文件信息：
+            例子：
+                dir /s *.ma *.psd *.ZTL *.jpg *.ai *.max *.obj *.tga *.mp3 *.wmv *.avi *.docx *.pdf *.dmp *.mov *.gif *.psb >pathCollition.txt
+    shutdown:
+        -a:
+            取消关机
+        -s：
+            关机
+            -t:
+                时间
+                -c：
+                    备注
+        
+    mkdir:
+        创建文件夹
+
+    npm：
+        NodeJS的安装包管理器
+        install：
+            安装NodeJS——SDK
+        -g typescript：
+            ts编译器下载
+            tsc：
+                ts编译码
+        init:
+            初始化NodeJS框架
+
+PowerShell:
+
+Win+R：
+    开机启动项：
+        shell:startup
+    正在运行的服务：
+        msconfig
+    本地服务：
+        Services.msc

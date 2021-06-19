@@ -1,0 +1,280 @@
+文档规则：
+    注释：
+        (这是注释)
+    省略：
+        ...
+    包含：
+        <
+    值：
+        >
+    代码：
+        <(代码)>
+
+问题：
+      桌面图标排列错乱：
+            解决方案：
+                  GUI：
+                        1.windows启动了自动排列功能
+                                    桌面右键>查看>自动排列图标(取消勾选)
+
+                        2.启动项或者服务在更改桌面排列方式：
+                                    1.Win+R 输入 msconfig
+                                    2.服务>隐藏所有Microsoft服务>全部禁用
+                                    3.任务管理器>启动>禁用所有
+
+                  PowerShell：
+                        1.健康扫描：
+                              1.右键左下角Windows图标,选择MicrosoftPowershell(管理员)
+                              2.逐一执行命令：
+                                    Dism /Online /Cleanup-Image /CheckHealth
+                                    Dism /Online /Cleanup-Image /ScanHealth
+                                    Dism /Online /Cleanup-Image /RestoreHealth
+                                    sfc /scannow
+      无法启动服务：
+            解决方案：
+                  GUI： 
+                        1.Win+R > Services.msc
+                        2.找到相应服务并且启动
+      
+      C盘空间不足修改安装路径：
+            解决方案：
+                  mklink /j "C:\user\data" "E:\user\data"
+                  >>>创建联接
+            详细：
+                  mklink：
+                        /?:帮助
+                        /D：创建目录符号链接
+                        /H: 创建硬链接
+                        /J：创建目录联接
+      修改盘符：
+            进入盘符编辑界面命令：
+                  >diskpart
+            查看现有盘符页面：
+                  >list volume
+            选择一个盘符3：
+                  >select volume 3
+            改变盘符为L：
+                  >assign letter=L
+      破解软件被windowsDefender阻挡：
+            Windows安全中心：
+                  病毒和威胁防护：
+                        “病毒和威胁防护设置”：
+                              实时保护：关闭
+      默认浏览器修改：
+            谷歌官方：
+                  https://answers.microsoft.com/zh-hans/windows/forum/windows_10-other_settings/%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8/b6e42028-c8d3-4582-a20a-45b8f834971b
+      通过ip访问文件夹：
+            \\ip地址\文件夹\子文件夹
+      开机启动文件夹：
+            用户自启动：
+                  shell:startup
+            系统自启动：
+                  %programdata%\Microsoft\Windows\Start Menu\Programs\Startup
+
+Windows目录结构：
+      \PerfLogs：
+            包含Windows性能日志，默认为空
+      \Program Files：
+            32位体系结构：所有程序（16位和32位）都安装在此文件夹中。
+            64位体系结构：此文件夹中安装了64位程序。
+      \Program Files(x86)：
+            出现在Windows的64位版本上。 即使16位程序不在64位Windows上运行，默认情况下也会在此文件夹中安装32位和16位程序。
+      \ProgramData(hidden):
+            包含预期由计算机程序访问的程序数据，而不管它们在其运行上下文中的用户帐户如何。 例如，程序可能会存储操作连接到计算机的DVD刻录机或图像扫描仪所需的特定信息，因为所有用户都在使用它们。 Windows本身使用此文件夹。 例如，Windows Defender将其病毒定义存储在\ ProgramData \ Microsoft \ Windows Defender中。 程序无权在此文件夹中存储文件，但有权创建子文件夹并在其中存储文件。 文件的组织由开发人员决定。
+      \Users:
+            \userName:
+                  用户配置文件文件夹。每个子用户单独享有一个配置文件夹
+            \公共：     
+                  a NTFS symbolic link to "C:\ProgramData"
+            \Default(hidden):
+                  an NTFS junction point to "Default" folder
+      \Public:
+            该文件夹用作计算机用户共享文件的缓冲区。默认情况下，所有可以登录到计算机的用户都可以访问此文件夹。同样，默认情况下，此文件夹是通过网络共享的，拒绝了对该文件夹的匿名访问(没有受密码保护的账户)
+            Roaming：
+                  用于漫游配置文件的基于网络的登录。数据同步会保存在这里
+            Local：
+                  本地文件不会联网
+            LocalLow：
+                  本地文件不会联网
+
+      [username]\AppData:
+            该文件存储每个应用程序的数据和设置。
+      \Windows:
+            windows的创世文件
+      \System:
+            aka:
+                  \System\System32\SysWOW64：
+                        32，64 位系统的依赖库，存储了一些dll运行依赖库，当windows在windows文件夹下找不到依赖库的时候，就会在这里找
+      \WinSxS:
+            windows的所有组件都安装于此
+
+
+PowerShell：
+      概念：
+            基于.net框架
+      cmd：
+            概念：
+                  作为PowerShell的子集
+
+.net:
+      概念：
+            支持任何面向对象编程语言
+      发行商：
+            微软
+      致力于：
+            敏捷软件开发（协作方式）:
+                  参考：
+                        https://zh.wikipedia.org/wiki/%E6%95%8F%E6%8D%B7%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91
+                  概念:
+                        程序员团队 与 业务专家 之间紧密协作，面对面沟通，频繁交付新的软件版本，紧凑而自我组织型团队，更好的适应需求变化
+                  适用性：
+                        * 组织必须支持谈判
+                        * 人员彼此信任
+                        * 人少但精干
+                        * 开发人员可以做决定
+                        * 满足成员之间快速沟通的环境
+                  项目管理工具：
+                        * 版本控制集成
+                        * 进度跟踪
+                        * 工作分配
+                        * 集成发布
+                        * 迭代规则
+                  价值观：
+                        * 个人与交互：
+                              每个开发者的 自我动机 沟通 是重要的。
+                        * 工作软件：
+                              利用软件，试图保持外部文件的轻量化。
+                        * 客户协作：
+                              让客户加入到开发的过程中。
+                        * 回应变化：
+                              快速响应变化并使之可持续发展。
+            快速应用开发（工作方式）：
+                  参考：
+                        https://zh.wikipedia.org/wiki/%E5%BF%AB%E9%80%9F%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F%E9%96%8B%E7%99%BC
+                  概念：
+                        最小幅的规划，并迅速完成原型。
+            跨平台：
+                  概念：
+                        不同硬件可以运行的软件
+                  实例：
+                        数据库管理系统(DBMS):
+                              MySQL：Solaris、Linux、Windows、FreeBSD
+                              Oracle：Solaris、Linux、Windows
+                        网站/程序服务器：
+                              Apache：Solaris、Linux、Windows、FreeBSD
+                              Tomcat：Linux、Windows、FreeBSD
+                        浏览器：
+                              Mozilla Firefox：Linux、FreeBSD、Solaris、AIX、Windows
+                              Opera：Windows、Linux、Mac、FreeBSD、Solaris、BeOS、OS/2、QNX、Symbian
+                              Chrome：Windows、Linux、Mac、FreeBSD
+                              QupZilla:Windows、Linux、OS/2、Haiku
+                        编程语言：
+                              C语言、C++、Java、Perl、Tcl、Erlang、PHP、Ruby、Lisp、Python、Delphi+Kylix、REALbasic
+            网络透明化
+            有助于互联网和内部网应用迅捷开发的技术
+      组成：
+            CLI:
+                  概念：
+                        通用语言基础架构(CommonLanguageInfrastructure)
+                        由 微软 惠普 因特尔 联合倡议的开放技术规范
+            CLR:
+                  概念：
+                        通用运行语言库(CommonLanguageRuntime)
+                        是CLI的实例，定义了一个代码运行的环境
+                  .NET Core:
+                        概念：
+                              贯彻.net理念的实现版本，托管计算机的软件框架
+                        案例：
+                              构建一个3d引擎：
+                                   博客：https://www.cnblogs.com/savorboard/p/net-core-game-engine.html
+                                   作者git：https://github.com/mellinoe/CrazyCore
+Mono:
+      读档：
+            https://en.wikipedia.org/wiki/MonoDevelop
+            https://en.wikipedia.org/wiki/Mono_(software)
+      组成：
+            核心组件(CoreCo,ponents)：
+                  C#编译器： 符合CLI
+                  虚拟机+核心类库：符合CLI
+
+            开发堆栈(Mono/Linus/GNOME development stack)：
+                  GNOME的开源库和应用程序开发工具：
+                        GUI：用户图形界面
+                        Mozilla：渲染引擎
+                        Unix：集成库
+                        数据库连接库：
+                              微软SQL服务
+                              MySQL
+                              ODBC
+                              Oracle
+                              PorstgreSQL
+                              SQLite
+                              ...
+                        安全堆栈
+                        RelaxNG：XML语言模式
+                        Mono网站跟踪数据库开发组件
+
+
+
+
+            微软兼容性堆栈(Microsoft compatibility stack)：
+                  .Net移植程序(未涵盖进CLI协议)：
+                        ADO.NET
+                        ASP.NET
+                        Windows窗体
+      框架架构：
+            代码执行引擎：
+            类库：
+            基类库：
+            .NET兼容性类库：
+            Mono特定类库：
+            Mono和.NET跨平台类库：
+            Unix类库：
+            特定平台的类库(Mac,ios,Android):
+            CLI程序集：
+            CLI元数据：
+            Mono公共语言运行：
+            .NET通用语言运行时兼容：
+            Mono增强组件：
+            Mono.SIMD支持：
+            COM操作：
+            安全性代码：
+
+
+GNOME:
+      概念：
+            由redHat组织开发的软件框架，主要用于Linux的桌面环境
+      产品：
+            CoreAPP:
+                  致力于开发一套解决GNOME核心应用程序的程序
+            Games:
+                  重写了GNOMEApp用在游戏领域
+            DevelopmentTool:
+                  作为集成开发环境存在
+
+
+实用工具：
+      窗口管理：
+            https://windowtop.info/
+
+
+needSort：
+https://github.com/Paolo-Maffei/OpenNT
+
+http://www.blinkenlights.com/classiccmp/gateswhine.html
+
+https://en.wikipedia.org/wiki/Directory_structure
+
+https://www.westga.edu/its/assets-its/docs/understanding_directory_structure_windows.pdf
+
+作者：范德成
+链接：https://www.zhihu.com/question/49719195/answer/117683672
+来源：知乎
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+作为Windows老用户我也来回答一下：
+system32 相当于Unix中的/bin和/sbin，但原则上只包含系统程序，不包含应用程序。原来在16位Windows上， 所有系统文件都放在\WINDOWS目录里的，后来到了Windows 95/98开始，32位的系统程序（exe/dll等）默认放在\WINDOWS\system32目录。在NT系列里，基本上都是32位系统程序，所有大多数都在\WINNT\system32（后来变成了\WINDOWS\system32，又后来变成了\Windows\System32）目录。
+Installer Cache从字面上理解，是Windows Installer安装msi/msp的缓存文件。
+WinSxS 是side-by-side assembly的意思，基本上系统文件的各个版本（包括初始版本和补丁版本）、一些共享文件的各个版本（如VCRedist）可以被安装进去。不同版本用于服务对版本需求不同的程序。这个目录是为了解决DLL hell问题而诞生的。为什么 etc 底下只有几个文件？因为主要指用来保存网络相关的配置。其他配置都放在注册表里。可能和当初Windows的POSIX子系统有关。在Windows 2000上安装一个系统组件，叫Services for Unix，就可以用一个Korn Shell来访问到POSIX子系统。最新版本的可能不叫SFU了，你查一下，应该还是能找到的。（SFU和Windows 10里面的WSL [Windows Subsystem for Linux]无关，是两个不同的东西。）
+ProgramData 是以前的\Documents and Settings\All Users\Application Data，也就是应用程序设置和数据部分。All Users的用户文档部分分到了\Users\Public，如\Users\Public\Documents等。Program Files则是应用程序的程序部分。Common Files放一些应用程序厂商自己的共享库和共享文件。为什么Documents and Settings被改成了Users？因为Documents and Settings太长，不方便用，而且还带空格，让Java等源代码非常不方便从中编译。更早的NT 4里面这个目录叫\WINNT\Profiles，后来改到\Documents and Settings的。总体思想就是改进，把不好用的改进。当然，偶尔也会在改进途中引入其他的不好用。
+补充一点：Users\<user_name>\AppData\Roaming是针对网络同步的用户肖像文件（user profile）中，会同步的部分（这个功能在Windows 2000中就有）。AppData\Local则不会自动同步。Roaming对应于老的\Documents and Settings\<user_name>\Application Data，而Local对应于\Documents and Settings\<user_name>\Local Settings\Application Data。另外，有些程序沿用把配置数据放在/home/<user_name>/.<app_name>的习惯，在Windows下也把配置数据放在\Users\<user_name>\.<app_name>下面。

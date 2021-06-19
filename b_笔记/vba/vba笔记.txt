@@ -1,0 +1,357 @@
+vba范例：
+      For循环：
+
+            Sub 循环()
+
+                  Dim i, sum As Integer
+
+                  i = 0
+
+                  sum = 0
+
+                  For i = 1 To 31
+
+                        Sheets(2).Cells(i, 6) = "" & i
+
+                  Next i
+
+            End Sub
+
+      增删改查：
+                        'Option Explicit
+            Public GV As Variables_Global
+
+
+            Type Variables_Global
+
+            shtName As String
+            nameTitle As String
+            typeName As Variant
+            initialValue As Variant
+            addNew As Integer
+            deletNew As Integer
+            addNewDefaultOpition As Integer
+            fromChangeRow As Integer
+            toChangeRow As Integer
+            changeTo As Integer
+            
+            
+            
+            End Type
+
+            Private Sub Init()
+            
+            
+            GV.shtName = "Sheet1"
+            
+            GV.nameTitle = "项目名 "
+            
+            GV.typeName = Array("3d建模", "2d原画", "zbRrush笔刷", "类型4", "类型5")
+            
+            GV.initialValue = Array("2", "1100")
+            
+            GV.addNew = 5
+            
+            GV.deletNew = 1
+            
+            GV.addNewDefaultOpition = 3
+            
+            '改
+            GV.fromChangeRow = 1006 + 1
+            
+            GV.toChangeRow = 937 + 1
+            
+            GV.changeTo = 2
+            
+            
+            End Sub
+
+
+            '初次建立表格
+
+            Sub Main()
+            
+            
+            
+            Delet (0)
+            
+            Init
+            
+            Log ("初始化成功")
+            
+            
+            
+            
+            RowNum_Creat (0)
+            
+            ComboBox_Create (0)
+            
+            ComboBox_CheckIn
+            
+            
+            
+            End Sub
+            Sub Change()
+            Init
+            Dim myDropDown As Shape
+            Dim sName As String
+            
+            '更改
+                  For i = GV.fromChangeRow To GV.toChangeRow
+                        'Set sName = ActiveSheet.Shape(i).Name
+                        ActiveSheet.Shapes("Combo Box " & i).OLEFormat.Object.ListIndex = GV.changeTo
+                        
+                  
+                  Next
+                  '关联
+                  ComboBox_CheckIn
+            End Sub
+            Sub Add()
+
+            Init
+            ComboBox_Create (GV.addNew)
+            RowNum_Creat (GV.addNew)
+            '关联
+            ComboBox_CheckIn
+            
+            End Sub
+
+            Sub Delete()
+
+            Init
+            Delet (GV.deletNew)
+            
+            End Sub
+
+            Sub ReflashType()
+
+            Init
+            ComboBox_Create (-1)
+            
+            End Sub
+
+
+
+
+
+
+
+
+
+
+            Private Sub Log(tex)
+
+            MsgBox (tex)
+            
+            End Sub
+
+
+            Private Sub RowNum_Creat(Number As Integer)
+            
+            Select Case Number
+            
+            Case 0
+            
+
+                  Set sht = ThisWorkbook.Worksheets(GV.shtName)
+                  
+                  For i = GV.initialValue(0) To GV.initialValue(1)
+            
+                        ActiveSheet.Cells(i, 1) = GV.nameTitle & i - 1 & ":"
+                  Next
+                  
+            Case 1 To 9999
+            
+                  For i = ActiveSheet.UsedRange.Rows.Count To ActiveSheet.UsedRange.Rows.Count + Number
+            
+                        ActiveSheet.Cells(i, 1) = GV.nameTitle & i - 1 & ":"
+                        
+                  Next
+                  
+            Case Else
+                  
+                  Log ("RowNum_Creat_请输入数字")
+                  
+            End Select
+
+            
+            
+            
+            End Sub
+            Private Sub ComboBox_CheckIn()
+
+            
+            
+            
+            For i = 2 To ActiveSheet.UsedRange.Rows.Count
+            
+                  ActiveSheet.Shapes("Combo Box " & i).ControlFormat.LinkedCell = "$D$" & i
+                  
+            
+            Next
+            
+            End Sub
+
+            Private Sub ComboBox_Create(Number As Integer)
+            
+            'PURPOSE: Create a form control combo box and position/size it
+
+            Dim Cell As Range
+            Dim sht As Worksheet
+            Dim myDropDown As Shape
+            Dim myArray As Variant
+            
+            
+            
+            
+            'myArray = Array("Q1", "Q2")
+            Select Case Number
+            
+            Case -1
+                  
+                  Set sht = ActiveSheet
+                  
+            
+                  
+            '刷新
+                  For i = 2 To sht.UsedRange.Rows.Count
+                        
+                        
+                        Dim myArrayElement As Integer
+                        '记录
+                        myArrayElement = Range("D" & i & ":D" & i).Value
+                        
+                        
+                        'Create & Dimension to a Specific Cell Range
+                        Set Cell = Range("D" & i & ":D" & i)
+                        
+                        Set myDropDown = ActiveSheet.Shapes("Combo Box " & i)
+                        
+                        myDropDown.ControlFormat.LinkedCell = "$ C $ & i"
+                        
+                        myDropDown.OLEFormat.Object.List = GV.typeName
+                        
+                        myDropDown.OLEFormat.Object.ListIndex = myArrayElement
+                        
+                  
+                  Next
+                  '关联
+                  ComboBox_CheckIn
+            Case 0
+                  
+                  Set sht = ActiveSheet
+            
+                  For i = 2 To sht.UsedRange.Rows.Count
+                  
+                        'Create & Dimension to a Specific Cell Range
+                        Set Cell = Range("D" & i & ":D" & i)
+                        
+                        With Cell
+                        ActiveSheet.DropDowns.Add(.Left, .Top, .Width, .Height).Name = "Combo Box " & i
+                        
+                        End With
+                        
+                        Set myDropDown = ActiveSheet.Shapes("Combo Box " & i)
+                        
+                        myDropDown.ControlFormat.LinkedCell = "$ C $ & i"
+                        
+                        myDropDown.OLEFormat.Object.List = GV.typeName
+                        
+                        myDropDown.OLEFormat.Object.ListIndex = 1
+                        
+                  
+                  Next
+            
+            Case 1 To 9999
+            
+                  
+                  
+                  For i = ActiveSheet.UsedRange.Rows.Count + 1 To ActiveSheet.UsedRange.Rows.Count + Number
+                  
+                        'Create & Dimension to a Specific Cell Range
+                        Set Cell = Range("D" & i & ":D" & i)
+                        
+                        With Cell
+                        ActiveSheet.DropDowns.Add(.Left, .Top, .Width, .Height).Name = "Combo Box " & i
+                        
+                        End With
+                        
+                        Set myDropDown = ActiveSheet.Shapes("Combo Box " & i)
+                        
+                        myDropDown.ControlFormat.LinkedCell = "$ C $ & i"
+                        
+                        myDropDown.OLEFormat.Object.List = GV.typeName
+                        
+                        myDropDown.OLEFormat.Object.ListIndex = GV.addNewDefaultOpition
+                  
+                  Next
+                  
+                  
+            Case Else
+                  
+                  Log ("ComboBox_Create_请输入数字")
+                  
+            End Select
+            
+            
+
+            End Sub
+
+            Private Sub Delet(Number As Integer)
+
+            ' Set sht = ThisWorkbook.Worksheets(GV.shtName)
+            
+            
+            Dim shp As Shape
+            
+            Dim dd As Shape
+            Select Case Number
+            Case 0
+                  'DeletAllText
+                  For i = 2 To ActiveSheet.UsedRange.Rows.Count
+                        With Range("A" & i & ":D" & i)
+                        .ClearContents
+                        End With
+                  Next
+                  
+                  'DeletAllDropDowns
+                  For Each shp In ActiveSheet.Shapes
+            
+                        If Left(shp.Name, 6) = "Button" Then
+                        Else
+                              shp.Delete
+                        End If
+                        
+                        
+
+                  Next shp
+                  
+            '    Case 1
+            '
+            '         Log ("Delet_表头不可以删除")
+                  
+            Case 1 To 1000
+            
+                  'DeletSeletRowCell
+                  For i = ActiveSheet.UsedRange.Rows.Count - (Number - 1) To ActiveSheet.UsedRange.Rows.Count
+                  
+                        With Range("A" & i & ":D" & i)
+                        
+                              .ClearContents
+                              
+                        End With
+                  
+                  'DeletSeletRowShap
+                  
+                        ActiveSheet.Shapes("Combo Box " & i).Delete
+                  Next
+                  
+            Case Else
+            
+                  Log ("Delet_请输入数字")
+                  
+            End Select
+            
+                  
+            
+            End Sub

@@ -1,0 +1,451 @@
+文档规则：
+    注释：
+        (这是注释)
+    省略：
+        ...
+    包含：
+        <
+    值：
+        >
+    代码：
+        <(代码)>
+py命令行：
+    安装插件：
+        <(py -m pip install xxx)>
+    检查版本：
+         <(py --version )>
+Python组件：
+    lxml:
+        读写(适用于.tmx)：
+            tree = etree.parse(path)
+            root = tree.getroot()
+            body = root[1]
+
+            print(len(body))
+
+            for item in body:
+                for it in item:
+
+                    for i in it:
+
+                        print(i.attrib['name'])
+            
+            tree.write(path, encoding='utf-8')
+
+    pip:
+        插件安装路径：
+
+    translate-toolkit:
+        功能：
+            文件格式转换工具：
+            质量检查工具：
+            计数 术语提取：
+            多文本格式：
+            多语言检测和支持：
+            代码检索：
+            工具的类和方程的构建：
+        tmx读写组件：
+            教程：
+                https://stackoverflow.com/questions/20356149/tmxtranslation-memory-exchange-files-in-python
+    csv：
+        读：
+            参数：
+                skipinitialspace：
+                    跳过开头空格
+            例子：
+                import csv
+                with open('eggs.csv', newline='') as csvfile:
+                    spamreader = csv.reader(csvfile, delimiter=' ', quotechar='|')
+                    for row in spamreader:
+                        print(', '.join(row))
+        写：
+            参数:
+            例子：
+                
+
+    zipfile(https://docs.python.org/3/library/zipfile.html):
+        read：
+        open：
+        close:
+        infolist:
+            概念：
+                返回压缩文件内的内容信息集
+            内容：
+                文件名字、文件模式、外部算法、文件尺寸
+            例子：
+                zipfile.ZipFile('M_Surface_Wood_1003_ms.zip','r').infolist();
+        namelist:
+            概念：
+                返回压缩文件内的内容名字
+            例子：
+                zipfile.ZipFile('M_Surface_Wood_1003_ms.zip','r').namelist();
+        extract:
+            概念：
+                解压目标文件
+            完整构造：
+                ZipFile.extract（member，path = None，pwd = None ）
+            拆解：
+                member：
+                    成员名称
+                path：
+                    路径
+                pwd：
+                    密码
+        extractall:
+            概念：
+                解压所有文件
+        ZipFile:
+            概念：
+                打开一个zip文件进行读、写、追加 文件
+            完整构造：
+            zipfile.ZipFile(file, mode='r', compression=ZIP_STORED, allowZip64=True, compresslevel=None, *, strict_timestamps=True)
+            拆解：
+                必填：
+                    file：以字符串写入路径
+                    mode：
+                        'r':
+                            读取已有文件
+                        'w':
+                            截获目标文件，并写入新文件
+                        'a':
+                            为已有文件增添新内容
+                        'x':
+                            创建并写入新文件
+                选填：
+                    compression：
+                        压缩文件类型
+                    allowZip64：
+                        大于4.2G的文件将使用Zip64来压缩
+                    compresslevel：
+                        作用于写入时的压缩级别:
+                            ZIP_DEFLATED:0~9
+                            ZIP_BZIP2:1~9
+                    strict_timestamps:
+                        写入时修改压缩文件的时间戳
+
+    Json(https://docs.python.org/3/library/json.html):
+        dump:
+            概念：
+                写入
+            完整形态：
+
+        dumps:
+            概念：
+                写入多个
+        load:
+            概念：
+                读取
+        loads:
+            概念：
+                读取多个
+        JSONDecoder:
+            概念：
+                JSON解码器
+            decode:
+                指定解码类型（例如：decode("utf-8")）
+            raw_decode:
+        JSONEncoder：
+            概念：
+                JSON编码器
+            default:
+            encode:
+            iterencode:
+        json读取格式：
+            json['xx']:
+                名为xx的第一级目录下的内容
+
+    os(https://docs.python.org/3/library/os.html?highlight=os#module-os):
+        概念：
+            操作路径和命令行读取文件相似
+        listdir：
+            例子：
+                os.listdir(path)
+        scandir(比listdir高效)：
+            例子:
+                os.scandir(path)
+            close：
+                用with显式调用：
+                <(
+                    with os.scandir(path) as it:
+                        for entry in it:
+                            if not entry.name.startswith('.') and entry.is_file():
+                                print(entry.name)
+                )>
+        walk:
+            概念：
+                子目录以及内容获取
+            实例：
+                for root, dirs, files in os.walk(myPath):
+                    for f in files:
+                        print(os.path.join(root, f))
+                    for d in dirs:
+                        print(os.path.join(root, d))
+        path:
+            join:
+                路径+后缀
+            basename:
+                去除路径
+        rename：
+            重命名
+        remove：
+            删除
+        rmdir:
+            删除目录(文件夹)
+        sep:
+            根据操作系统给出相应的分隔符
+        exists:
+            isExist = os.path.exists(path)
+            >>>true
+        操作：
+            反向获取路径：
+                for root, dirs, files in os.walk(getoutPath):
+                    for f in files:
+                        fName = os.path.join(root, f)
+                        print(fName)
+    
+
+    processBar:
+        https://pypi.org/project/progressbar2/
+
+    
+
+    PIL图像识别库：
+        api:
+            https://pillow.readthedocs.io/en/stable/reference/Image.html#examples
+        安装：
+            py -m pip install Pillow
+
+    numpy数组编辑:
+        安装：
+            py -m pip install numpy
+        操作：
+            容差：
+                <(
+                    import numpy
+                    def RGB_to_ColorCode(argument, deviation):
+                        arg = numpy.array(argument)
+                        rgb = [212, 142, 108]
+                        r = numpy.where(
+                            numpy.logical_and(arg >= rgb[0]-deviation, arg <= rgb[0]+deviation)
+                        )
+                        g = numpy.where(
+                            numpy.logical_and(arg >= rgb[1]-deviation, arg <= rgb[1]+deviation)
+                        )
+
+                        if (arg[r].size > 0):
+                            print(arg[r])
+                        else:
+                            print("no")
+                    argg = [212, 142, 108]
+                    print(RGB_to_ColorCode(argg, 2))
+                )>
+            是否存在：
+                <(
+                    import numpy
+                    arg = numpy.array([212,121,221])
+                    if(arg == 212).any():
+                    return "1"
+                )>
+
+
+    翻译工具：
+        谷歌翻译库：https://www.jianshu.com/p/2f9a2b4c3aa3
+            安装插件：
+                pip install googletrans
+            翻译中文示例：
+                from googletrans import Translator
+                translator = Translator()
+                print(translator.translate('星期日').text)  
+            翻译英文示例：
+                from googletrans import Translator
+                translator = Translator()
+                print(translator.translate('Sunday', dest='zh-CN').text)
+            检测源文本语言：
+                from googletrans import Translator
+                translator = Translator()
+                print(translator.detect('일요일'))
+
+
+    webCrawler:
+        scrapy:
+            链接：
+                https://www.digitalocean.com/community/tutorials/how-to-crawl-a-web-page-with-scrapy-and-python-3
+                https://scrapy-chs.readthedocs.io/zh_CN/0.24/intro/tutorial.html
+        requests(测试手机号：13357822022)：
+        Twilio()：
+            链接：
+                https://youtu.be/NdeaVOtmWH8
+        
+    pysimplegui:
+        案例:
+            https://blog.csdn.net/u014197096/article/details/108089785
+        日语api：
+            http://www.k-techlabo.org/www_python/PySimpleGUI.pdf
+
+    
+        
+
+
+
+
+常用工具api：
+    *:
+        可变参数：
+            ref：   
+                https://n3xtchen.github.io/n3xtchen/python/2014/08/08/python-args-and-kwargs
+    [:]:
+        切片数组
+        例子：
+            [:-1]:
+                切片倒数第一个元素
+            [:19]:
+                切片正数19个元素
+    pathlib：
+        概念：
+            根据文件反向获取路径
+        更好的方法：
+            for root, dirs, files in os.walk(getoutPath):
+                for f in files:
+                    fName = os.path.join(root, f)
+    sched:
+        事件系统
+    open:
+        创建：
+            open("xxx.txt","w+")
+
+    shutil(https://docs.python.org/zh-cn/3/library/shutil.html):
+        复制黏贴:
+            代码：
+                copy2(src, dst);
+            例子：
+                import shutil
+                shutil.copy2('/src/dir/file.ext', '/dst/dir/newname.ext') # complete target filename given
+                shutil.copy2('/src/file.ext', '/dst/dir') # target filename is /dst/dir/file.ext
+    round(xx):
+        概念：
+            四舍五入小数位
+    strip()：
+        概念：
+            删除空格
+        用法：
+            s.lstrip:
+                删除左边空格
+            s.rstrip:
+                删除右边空格re
+            s.strip()：
+                删除左右空格
+        其他方法：
+            <(
+                a = 'hello world'
+                a.replace(' ', '')
+            )>
+    endsWith:
+        name1.endswith('.zip')
+    type：
+        概念：
+            检测类型
+        用法：
+            type(obj)
+    in:
+        概念：
+            用于检查list中的元素
+    Dictionary(字典:https://www.programiz.com/python-programming/dictionary)：
+        概念：
+            无序的项目集合，字典的每一项都有key/value
+        基本操作：
+            创建：
+                <(
+                    Dictionary = {}
+                )>
+            访问：
+                <(
+                    my_dict = {'name': 'Jack', 'age': 26}
+                    # Output: Jack
+                    print(my_dict['name'])
+                    # Output: 26
+                    print(my_dict.get('age'))
+                )>
+                
+            更改：
+                <(
+                    my_dict = {'name': 'Jack', 'age': 26}
+                    # update value
+                    my_dict['age'] = 27
+                )>
+            删除：
+            <(
+                my_dict = {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+                my_dict.pop(4)
+                # Output: {1: 1, 2: 4, 3: 9, 5: 25}
+                print(squares)
+            )>
+        setdefault：
+            重新排序/新的指向性Key
+        update:
+            合并两个字典
+
+    .name:
+        返回一个字符串
+    .path:
+        返回一个路径
+    .stat:
+        返回状态
+    set():
+        创建一个无序不重复元素集，可进行关系测试，删除重复数据，还可以计算交集、差集、并集等
+    str:
+        str(obj):
+            强转字符串
+        .maketrans():
+            概念：
+                是一种替换字符或者类型的映射,需要结合translate一起用
+            示例1：
+                s = "abc123"
+                str.maketrans(intab, outtab)
+                #intab -- 字符串中要替代的字符组成的字符串。
+                #outtab -- 相应的映射字符的字符串。
+                res = s.translate(remove_digits)
+                >>>abc
+        .digits:
+            概念：
+                过滤数字
+
+    range(X):
+        0-X
+    with:
+        替代try catch
+    list：
+        .append():
+            增加一个元素或者在数组中添加一个数组
+        .extend():
+            混合数组
+        .clear():
+            清空数组
+    len():
+        数组/字符串 长度：
+            len(value)
+
+
+操作：
+    写入.TMX文件(tiledMap)：
+        代码：
+            tree = etree.parse(path)
+            root = tree.getroot()
+            body = root[3]
+
+            print(len(body))
+
+            for item in body:
+
+                for it in item:
+
+                    for i in it:
+
+                        print(i.attrib['value'])
+                        i.attrib['value'] = "MagicTown"+
+
+            tree.write(path, encoding='utf-8')
+    vsCode无法运行python：
+        pip install ipython
+        pip install ipykernel
+        pip install --upgrade ipython
+        pip install --upgrade ipykernel

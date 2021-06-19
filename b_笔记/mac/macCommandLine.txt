@@ -1,0 +1,35 @@
+科普：
+  DNS:
+    Domain Name System (DNS):
+      是互联网的一项服务。它作为将域名和IP地址相互映射的一个分布式数据库，能够使人更方便地访问互联网。
+
+操作：
+  问题：
+    443端口连接报错
+    解决：
+      原因：
+        中国的墙
+      解决方案：
+        设置DNS为114.114.114.114或者8.8.8.8
+  问题：
+    无法连接github
+    解决：
+      原因：
+        host中权限不足
+      解决方案：
+        添加可信DNS：
+          1.sudo vi /etc/hosts
+          2.输入i编辑host
+          3.访问：
+            3.1：https://github.com.ipaddress.com/
+            3.2：https://fastly.net.ipaddress.com/github.global.ssl.fastly.net#ipinfo
+            复制得到的ip地址
+          4.添加到host格式：
+            140.82.113.4 github.com
+            199.232.69.194 github.global.ssl.fastly.net
+            esc 退出编辑模式
+            键入 :wq 包含冒号
+            修改host成功
+          5.输入指令刷新dns， say后面选填，问题解决！
+            sudo killall -HUP mDNSResponder;say DNS cache has been flushed
+    

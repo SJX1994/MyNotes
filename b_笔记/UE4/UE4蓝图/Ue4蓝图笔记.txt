@@ -1,0 +1,398 @@
+文档阅读规则：
+    注释：
+        (这是注释)
+    省略：
+        ...
+    包含：
+        <
+    值：
+        >
+    代码：
+        <(代码)>
+
+
+C++基础：
+    Ue4框架基础：
+        https://docs.unrealengine.com/zh-CN/InteractiveExperiences/Framework/index.html
+    Unity与ue4编码对比：
+        https://docs.unrealengine.com/zh-CN/Basics/UnrealEngineForUnityDevs/index.html
+    符号：
+        *：
+            用法：
+                1.用作乘法
+                    例子：
+                        x=y*z;
+                2.乘法赋值运算
+                    例子：
+                        x*=y;
+                3.注释
+                    例子：
+                        /*注释*/
+                4.指针的声明
+                    例子：
+                        int *p; (指向一个整数类型的指针)
+                5.复合指针
+                    例子：
+                        int **p; (指向一个指向整数类型的指针的指针)
+                6.解引用
+                    例子：
+                        x=*p;(把指针p指向的值赋值给x)
+                    例子0：
+                       if(USceneComponent* R = GetRootComponent())
+                       (USceneComponent* R返回一个指向USceneComponent结构的指针给R,并且判断这个结构指针是否是GetRootComponent())
+            
+        &：
+            用法：
+                1.逻辑与
+                    例子：
+                        if( (a>1) && (b<0) )
+                2.位运算与
+                    例子：
+                        x=a & b;
+                3.逻辑与赋值
+                    例子：
+                        x& = y;
+                4.求地址运算符
+                    例子：
+                        p= &x; (把x的地址赋给p)
+        
+        ->:
+            概念：
+                指针指向结构体
+        
+
+
+
+
+
+Api方程：
+    AActor:
+        概念：
+            所有可以在场景中放置和生成的基类
+        GetRootComponent：
+            返回actor的所有组件
+        GetWorld：
+            检查actor是否在场景中
+        GetActorLocation:
+            获取actor的位置信息
+
+    APawn:
+        概念：
+            所有Actor可以获取组件的基类
+
+    FVector：
+        概念：
+            3D空间中矢量的基类,由V3浮点组成
+        GetSafeNormal：
+            返回归一化的向量
+        Rotation：
+            返回向量的旋转角度
+
+    USceneComponent:
+        概念：
+            可以获取场景中所有的坐标和附件，但不进行渲染和碰撞(筛选用)
+        SetWorldRotation:
+            返回世界空间下的旋转角度
+        GetComponentLocation：
+            返回世界坐标下的坐标信息
+
+    UGameplayStatics:
+        概念:
+            静态的实用游戏函数封装集
+        GetPlayerPawn：
+            获取第N个组件
+            例子0：
+                GetPlayerPawn(GetWorld(),0)
+    UWorld:
+        概念：？
+        GetWorld：？
+
+
+
+
+流程控制：
+    Super:
+        通过调用父类重写子类
+
+生命周期：
+    ref：
+        https://docs.unrealengine.com/zh-CN/InteractiveExperiences/Framework/GameFlow/index.html
+
+    编辑器：
+        1.StartEngine(Editor):
+        2.Init(UEditorEngine)
+        3.Start(UEngine)
+        4.点击Play
+        5.CreateUGameInstance
+        6.InitializePIE(UGameInstance)
+        7.Init(UGameInstance)
+        8.UOnlineSession
+        9.CreatePIEGameInstance(UEditorEngin)
+        10.StartPIEGameInstance(UEditorEngin)
+    独立程序：
+        1.StartEngine(Editor):
+        2.Init(UEditorEngine)
+        3.CreateUGameInstance:
+        4.InitStandalone(UGameInstance)
+        5.Init(UGameInstance)
+        6.UOnlineSession
+        7.Start(UEngine)
+    共有：
+        BeginPlay(UWorld):
+            执行一次，通过Super每次开始时调用自己
+        StartPlay(AGameMode):
+        StartMatch(AGameMode):
+        SpawnActors:
+        Ticky(float DeltaTime):
+            执行每一帧，通过Super和DeltaTime每帧调用自己
+        
+            
+操作：
+    实时编程：
+        开启：
+            Edit>EditorPreferences>General_LiveCoding>General>EnableLiveCoding
+        Ctrl+Alt+F11:
+            在VisualStudio中运行项目后,在引擎中进行实时代码更新
+    蓝图项目转C++：
+        1.打开项目,File>NewC++Class>None>CreateClass
+        2.关闭引擎
+        3.项目目录>右键.uproject>GenerateVisualStudioProjectFiles.
+            如果没有:
+                1.Editor Preferences -> Sources and set it to Visual Studio 2017
+                2.Take this file: "C:\Program Files (x86)\Epic Games\Launcher\Engine\Binaries\Win64\UnrealVersionSelector.exe".
+                    And paste it into "C:\Program Files\Epic Games\UE_4.15\Engine\Binaries\Win64" then double click it.
+        4.双击.sln程序集
+        5.VisualStudio解决方案>构建配置：Development>右键build
+            构建文件：https://github.com/EpicGames/UnrealEngine
+            选择：DebugGame Editor
+    插件：
+        创建一个插件：
+            创建：
+                Edit>Plugins>NewPlugin>选择类型
+                VisualStudio:
+                    在Plugins中找到 创建好的插件
+                Ue4:
+                    在ContentBrowser右下角找到ViewOptions>开启ShowPlugInContent
+                创建插件中的C++代码：
+                    File > New C++ Class > 找到对应插件
+        插件的加载：
+            找到.uproject文件进行修改
+
+    通过组件获取Actor：
+        if (USceneComponent* RootComp = AActor::GetRootComponent())
+        {
+            ...
+        }
+    打包/迁移 资产：
+        只能低版本向高版本迁移，不可逆
+
+引擎结构：
+    根目录：
+        Engine：
+            包含构成引擎的所有源代码、内容等。
+
+        Templates：
+            创建新项目时可用的项目模板集合。
+
+        GenerateProjectFiles.bat：
+            用于创建在Visual Studio中使用引擎和游戏所需的UE4解决方案和项目文件。
+            请参阅IDE的项目文件以了解详细信息。
+
+        UE4Games.uprojectdirs：
+            这是帮助文件，用于帮助引擎发现位于子目录中的项目。
+    通用目录：
+        Binaries：
+            包含 可执行文件 或 编译期间 创建的其他文件。 
+        Build：
+            包含构建引擎或游戏所需的文件，包括特定平台所需的文件。
+        Config:
+            配置文件，用于设置用来控制引擎行为的值。
+        Content:
+            保存引擎或游戏的内容，包括资源包和贴图。
+        DerivedDataCache:
+            加载时针对引用内容生成的派生数据文件。
+        Intermediate:
+            包含构建引擎或游戏时生成的临时文件。在游戏目录中，着色器存储在Intermediate目录中。
+        Saved:
+            包含自动保存、配置（.ini）文件和日志文件。此外，Engine > Saved 目录还包含崩溃日志、硬件信息和Swarm选项与数据。 
+        Source:
+            包含引擎或游戏的所有源文件，包括引擎源代码、工具和游戏类等。
+            Engine：
+                Developer：
+                    编辑器和引擎共同使用的文件。
+                Editor：
+                    仅供编辑器使用的文件。
+                Programs：
+                    引擎或编辑器使用的外部工具。
+                Runtime：
+                    仅供引擎使用的文件。
+            Game：
+                Classes:
+                    包含所有游戏类标头（.h）文件。 
+                Private:
+                    包含所有 .cpp 文件，包括游戏类实现文件和模块实现文件。 
+                Public:
+                    包含模块标头文件。 
+    引擎目录：
+        Documentation：
+            包含引擎文档，包括源文件和发布的文件。
+
+        HTML：
+            发布的HTML文档文件。
+
+        Source：
+            源markdown文档文件。
+
+        Extras：
+            其他帮助和实用程序文件。
+
+        Plugins：
+            包含引擎中使用的插件。
+
+        Programs：
+            包含UE4根目录中存储的项目以及其他虚幻程序（如UnrealFrontend和UnrealHeaderTool）的配置文件和日志文件。
+
+        Shaders：
+            保存引擎的着色器源文件（.usf）。
+    游戏项目目录：
+        Binaries
+
+            包含可执行文件或编译期间创建的其他文件。
+
+        Config
+
+            游戏的默认项目设置。
+
+        Content
+
+            包含引擎或游戏的内容，包括资源包和贴图。
+
+        External dependencies
+
+            显示公共引擎标头文件（仅在Visual Studio中可见）。
+
+        Intermediate
+
+            包含UnrealBuildTool生成的文件，如Visual Studio项目文件。这些文件可以删除并重新构建。
+
+        Saved
+
+            包含引擎生成的文件，如配置文件和日志。这些文件可以删除并重新构建。
+
+        Source
+
+            包含游戏模块对象类文件。
+    解决方案目录:
+        Classes
+
+            包含游戏对象类定义（.h 文件）。
+
+        Config
+
+            游戏的默认项目设置。
+
+        External dependencies
+
+            显示公共引擎标头文件（仅在Visual Studio中可见）。
+
+        Private
+
+            包含私有游戏对象类实现文件（.cpp 文件）。
+
+        Public
+
+            包含公共游戏对象类实现文件（.cpp 文件）。
+
+模块：
+    ReferenceViewer：
+        软性引用：
+            A 通过间接机制（例如字符串形式的对象路径）来引用对象 B
+        硬性引用：
+             A 引用对象 B，并导致对象 B 在对象 A 加载时加载
+        todo写：
+            https://docs.unrealengine.com/zh-CN/Basics/ContentBrowser/AssetConsolidationTool/index.html
+        
+    插件编写：
+        开发付费教程：
+            https://www.aboutcg.org/courseDetails/510/introduce
+                账号：752523247/15365119616
+                密码：Carsa5th22
+        
+        环境：
+            https://docs.unrealengine.com/zh-CN/ProductionPipelines/ScriptingAndAutomation/index.html
+        PythonEditor:
+            vscode：
+                自动补全：
+                    https://qiita.com/dolphinkyotopenguin/items/c39976f3b72f44bd935a
+            输入方法：
+                输出日志（Output Log）
+                文件（File）
+
+        内置开发工具：
+            插件UI界面的接口名称：
+                EditorPreferences:
+                    General-Miscellaneous(杂项)-Display UIExtension Points
+            widget拾取器,获取程序运算生命周期：
+                windows:
+                    DeveloperTools-widgetReflector
+        创建：
+            方法：
+                创建一个插件：
+                    插件类型：
+                        Blank：
+                            用最少的代码创建一个空白插件。 如果要从头开始设置所有内容或正在制作非可视插件，请选择此选项。使用此模板创建的插件将显示在编辑器的插件列表，但不会注册任何按钮或菜单项
+                        ContentOnly：
+                            创建一个只能包含内容的空白插件。
+                        Basic(Editor Toolbar Button)：
+                            创建一个将在级别编辑器中的工具栏上添加按钮的插件。 首先在创建的 OnButtonClick \事件中实现一些操作。
+                        Advanced：
+                            创建一个插件，该插件将向级别编辑器中的工具栏添加一个按钮，单击该按钮时将召唤一个空的独立选项卡窗口。
+                        BPLib：
+                            创建一个包含蓝图功能库的插件。 如果要创建静态蓝图节点，请选择此项。
+                        EditorMode ：
+                            创建一个具有编辑器模式的插件。 这将包括一个工具包示例，用于指定将显示在\模式\选项卡（在Foliage，Landscape等旁边）中的UI。包括非常基本的UI，可演示编辑器的交互作用以及撤消/重做功能的用法。
+                        ThirdParty ：
+                            创建一个使用包含的第三方库的插件。 这可以用作如何自己包含，加载和使用第三方库的示例。
+
+                    创建：
+                        Edit>Plugins>NewPlugin>选择类型
+                        VisualStudio:
+                            在Plugins中找到 创建好的插件
+                        Ue4:
+                            在ContentBrowser右下角找到ViewOptions>开启ShowPlugInContent
+                        创建插件中的C++代码：
+                            File > New C++ Class > 找到对应插件
+        更新代码：
+            开始和暂停调试旁边的小圆圈
+        插件的加载：
+            找到.uproject文件进行修改
+        插件更名：
+            ref： https://michaeljcole.github.io/wiki.unrealengine.com/Override_Built_In_Plugin/
+                1如果您的项目目录中尚不存在，则创建一个Plugins文件夹。
+                2将要覆盖的插件文件夹从Unreal Engine安装文件夹复制到项目的Plugins文件夹（例如C：\ Program Files \ Epic Games \ 4.9 \ Engine \ Plugins \ Experimental \ SimpleHMD-> C：\ Users \ pgomes \文档\虚幻项目\ plugin_override \插件\ SimpleHMD）。所有进一步的修改将在您项目的本地Plugins文件夹中。
+                3重命名插件文件夹（... \ Plugins \ SimpleHMD-> ... \ Plugins \ SimpleHMDX）。
+                4更改uplugin文件名以匹配新的插件名称（... \ Plugins \ SimpleHMD \ SimpleHMD.uplugin-> ... \ Plugins \ SimpleHMDX.uplugin）。
+                5使用文本编辑器编辑* .uplugin文件。修改FriendlyName和Module> Name属性（“ SimpleHMD”->“ SimpleHMDX”）。
+                6重命名* .Build.cs文件（SimpleHMD.Build.cs-> SimpleHMDX.Build.cs）。
+                7在公共头文件（... \ Public \ ISimpleHMDPlugin.h）中，更改与FModuleManager相关的函数调用参数以匹配您的新插件名称。在我们的SimpleHMD示例中：
+                FModuleManager :: LoadModuleChecked <ISimpleHMDPlugin>（“ SimpleHMD”）; //-> FModuleManager :: LoadModuleChecked <ISimpleHMDPlugin>（“ SimpleHMDX”）; // //和//返回FModuleManager :: Get（）。IsModuleLoaded（“ SimpleHMD”）; //->返回FModuleManager :: Get（）。IsModuleLoaded（“ SimpleHMDX”）;
+
+                8编辑* .Build.cs并修改PrivateIncludePaths引擎添加为相对于引擎文件夹而不是本地目录。在我们的示例中：
+                //使用System.IO添加到顶部；// //和//“ ../../../../Source/Runtime/Renderer/Private”，//-> Path.GetDirectoryName（RulesCompiler.GetModuleFilename（“ Renderer”））+“ / Private ”，
+
+                9仍在* .Build.cs中，更改类和构造函数的名称，以匹配您的新插件名称（SimpleHMD-> SimpleHMDX）。
+                将宏调用更改为IMPLEMENT_MODULE以引用您的新插件名称。在我们的示例中，编辑.. \ Private \ SimpleHMD.cpp
+                IMPLEMENT_MODULE（FSimpleHMDPlugin，SimpleHMD）//-> IMPLEMENT_MODULE（FSimpleHMDPlugin，SimpleHMDX）
+
+                10打开您的虚幻项目。系统将提示您构建新添加的插件。
+                导航到“窗口”>“插件”。应该有一个新的插件可用。勾选新插件的复选框，并确保未选中旧插件。
+                您现在应该准备修改插件，以便所做的更改仅影响本地项目。
+
+        替换插件思路：
+            文件a与b结构一样：
+            1.通过referenceViewer抓到a引用路径
+            2.如果b的a引用路径不为空，则复制并重命名b到a
+            3.每个文件夹下，通过replaceReference方法，选择重命名的文件保留
+            
+
+            
