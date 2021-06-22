@@ -24,6 +24,9 @@ openGL（GLSL,OpenGL Shading Language）:
       https://youtu.be/NQ-g6v7GtoI
     全栈：
       https://learnopengl.com/Introduction
+  其他：
+    二进制着色器:
+      为了反复读取代码，在编译一次后产生的二进制文件保存，下次直接读取二进制着色器
   mac：
     vscode环境配置:
       https://zhuanlan.zhihu.com/p/151384233

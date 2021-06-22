@@ -257,6 +257,10 @@ GNOME:
       窗口管理：
             https://windowtop.info/
 
+makefile:
+      概念：
+            makefile关系到整个工程的编译规则
+            定义了一系列的规则来指定，哪些文件需要先编译，哪些文件需要后编译，哪些文件需要重新编译
 
 needSort：
 https://github.com/Paolo-Maffei/OpenNT
