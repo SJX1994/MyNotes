@@ -70,6 +70,16 @@
                   shell:startup
             系统自启动：
                   %programdata%\Microsoft\Windows\Start Menu\Programs\Startup
+      查看：
+            SN编号（主板ID）：
+                  cmd：
+                        wmic bios get serialnumber
+            硬盘：
+                  PowerShell：
+                        Get-PhysicalDisk
+                  类型：
+                        SSD是固态
+                        HDD是机械
 
 Windows目录结构：
       \PerfLogs：
