@@ -1,5 +1,14 @@
-# kanzi学习笔记
+# kanzi 3.6.13学习笔记
++ 文档
+  + 着色器：
+    + file:///D:/softWare/Kanzi/Documentation/zh-cn/Content/Working%20with/Shaders/Editing%20shaders.htm#Shader2
+    
+  + JS脚本：
+    + file:///D:/softWare/Kanzi/Documentation/zh-cn/Content/Working%20with/Scripts/Reference%20for%20scripting.htm
 
+  + 节点信息：
+    + file:///D:/softWare/Kanzi/Documentation/zh-cn/Default.htm#Reference/Property%20types%20reference.htm%3FTocPath%3D%25E5%258F%2582%25E8%2580%2583%7C_____17
+  
 + kanzi软件历史
   - 母公司：
     * Rightware:
@@ -132,6 +141,7 @@
             + Kanzi Studio工程目录
               + .kzproj
                 + 工程文件,XML格式
+                + （TODO）后期可以尝试用python解析，达成一些批量操作
               + .kzproj_1/2/3/4...
                 + 自动备份文件
               + .lock
@@ -180,6 +190,13 @@
           + 创建和修改内容：
             + 创建：
               + 所有提供的节点：
+                + Screen
+                  + Window：
+                    + 调节输出屏幕大小
+                + RootPage：
+                  + PageHost:
+                    + DefaultSubpage:
+                      + 默认页面
                 + 内容控制节点：
                   + Image
                   + Model
@@ -197,9 +214,11 @@
                   + Slider 2D
                   + Toggle button 3D
                   + Toggle button 2D
+                    + 2D切换按钮
                   + Toggle Button
                   + Toggle Button Group 3D
                   + Toggle Button Group 2D
+                    + 2D切换按钮组
                   + Toggle Button Group
                 + 布局控制节点：
                   + Dock Layout
@@ -229,6 +248,8 @@
                     + Spot Light
                     + Scene
                       + 用于展示3D内容
+                + 3D kanzi 物体
+                  + Plane
               + Alt+右键：
                 + 显示所有可以创建内容
             + 修改：
@@ -240,27 +261,116 @@
                 + Ctrl + H
             + 其他：
               + Project下的Screen会被加载到目标设备的内存中
-      + Prefab：
+      + Prefabs：
         + 预制体，构造并统一创建接口
+        + UI:
+          + 右下角配置预设件
       + Properties:
         + 节点属性编辑
+          + 节点信息：
+            + 见文档
           + 编辑
             + Add Properties window
               + （在面板右下角）添加其他属性
-      + NodeComponents：
+            + 每个属性右边向上的箭头
+              + 变成公开变量（实例化预制体）
+      + Node Components：
         + 节点组件：
-          + 触发器
+          + 触发器 Trigger
+            + 生命周期：
+              + 输入（接收）
+                + 用户输入（触摸/鼠标）
+              + 输入操纵器（发送）
+                + 例如手势，长按，短按，可以使用API添加更多操纵器
+              + 消息（接受）
+                + 消息通过隧道和冒泡进程在节点之间传递
+              + 触发器（执行）
+                + 触发器对消息或事件作出反应，并应用逻辑，可以使用 Kanzi Engine API 定义哪些消息会触发反应。
+              + 动作
+                + 触发器的结果
             + 通用
               + WirteLog
                 + Macros(指令宏)
-          + 动画
+              + Navigate To Nest
+                + 指向下一个
+              + ExecuteScript
+                + 使用自定义脚本
+              + Go to State
+                + 指向某个状态机的状态
+          + 动画 Animation
       + Preview:
         + 预览
+          + 快速对其：
+            + 9宫格图标
+          + 快速选择：
+            + 右键元素
+        + 模式：
+          + Node tool 节点工具
+            + 2D：
+              + 移动选定的节点
+              + 旋转选定的节点
+              + 缩放选定的节点
+              + 对其工具
+              + 水平拉伸
+              + 垂直拉伸
+              + 填充拉伸
+              + 布局：
+                + 通过xy布局变换
+                  + 受到布局影响
+                + 通过xy渲染变换
+                  + 不受布局影响
+                + 通过xy做拉伸，缩放
+              + 坐标吸附。
+            + 3D：
+              + 使用世界坐标定位
+              + 使用本地坐标定位
+              
+          + Grid Layout 2D tool 2D 网格布局工具
+            + 创建一个布局宽度
+            
+          + Text Block 2D tool 2D 文本块工具
+            + 快速创建2D文本块
+          + Stack Layout 2D tool 2D 堆栈布局工具
+            + 快速创建一个堆栈布局
+          + Flow Layout 2D tool 2D 流布局工具
+            + 快速创建一个流布局
+          + Camera 摄像机
+            + 存储当前相机位置
+            + 重置当前相机位置
+            + 创建一个新相机
+            + 相机控制模式：
+              + 围绕查看
+              + 自由移动
+            + 选择相机
+            + 设置视野
         + 分析
           + Borders of 2D nodes
             + 显示所有2D物体的线框
+
       + Library:
         + 创建和编辑资源(动画，笔刷，材质，纹理，渲染通道)
+        + Materials and Tetxures
+          + 材质球
+            + ColorBrush 颜色笔刷
+              + 单色填充2D节点，可以应用背景颜色
+            + Texture Brush 纹理笔刷
+              + 纹理填充2D节点
+            + Material Brush 材质笔刷
+              + 材质填充2D节点，将TypeMat填入
+          + 编码
+            + Material Type
+              + VertexShader
+                + 直接编辑GLSL顶点代码
+              + FragmentShader
+              + MaterialTypeMaterial
+        + Resource Files:
+          + Scripts:
+            + 存放JS脚本（使用 Google 的 V8 JavaScript 引擎）
+            + 操作：
+              + 注释：
+                + Ctrl+K+C
+              + 取消注释
+                + Ctrl+K+U
       + Dictionaries:
         + 创建固定类型的键值对
       + Pages：
@@ -272,7 +382,15 @@
       + Assets：
         + Assets 从工程中导入的资产
       + StateTools:
-        + 动画管理器
+        + 状态机
+          + 设置状态
+            + 选中具体Project中的物体后，设置状态
+          + 设置转换 State Transition Editor
+            + 右键添加状态
+            + StateTransitionEditor
+              + Add Transition Animation:
+                + 添加自定义动画
+              + 
     
 ---
 ## 学习日志
@@ -293,3 +411,39 @@
 - 2021/6/23:
   - 针对`项目工程`的 目录结构，文件作用，配置信息，崩溃措施 简单了解
   - 在Studio中 尝试了`Project面板`下所有可用的节点
+
+- 2021/6/24:
+  
+  - 教程:
+    - Kanzi Studio 使用入门（初级）
+      - 第 1 步 - 创建工程
+      - 第 2 步 - 创建和修改内容
+      - 第 3 步 - 创建用户界面结构
+      - 第 4 步 - 创建交互
+      - 第 5 步 - 创建和使用资源
+      - 第 6 步 - 添加应用程序状态
+    - 在 Kanzi Studio 中创建应用程序（初级）
+      - 第 1 步 - 创建新工程并导入资产
+      - 第 2 步 - 创建应用程序结构
+      - 第 3 步 - 创建在页面 (Page) 节点之间导航的控件
+      
+  - 其他
+    - 尝试写了简单的 glsl
+    - 尝试写了简单的 js  
+    - 简单解析.kzproj 的XML结构
+
+- 2021/6/24:
+  - 教程:
+    - 在 Kanzi Studio 中创建应用程序（初级）
+      - 第 3 步 - 创建在页面 (Page) 节点之间导航的控件
+      - 第 4 步 - 创建Car 页面的状态
+      - 第 5 步 - 创建Media 页面的内容
+
+  - 其他：
+    - 练习状态机的转换动画
+
+---
+
+- 建议
+  - 是否考虑加入粒子系统
+    - 有插件
