@@ -24,6 +24,31 @@ openGL（GLSL,OpenGL Shading Language）:
       https://youtu.be/NQ-g6v7GtoI
     全栈：
       https://learnopengl.com/Introduction
+      进度：
+        入门-openGL
+      笔记：
+        入门：
+          OpenGL：
+            其他：
+              OpenGL仅仅是一个规范
+              OpenGL库由显卡制造商编写
+              当 OpenGL 显示出它不应该出现的奇怪行为时，这很可能是显卡制造商（或开发/维护库的人）的错。
+              OpenGL规范文档:
+                https://www.khronos.org/registry/OpenGL/specs/gl/glspec33.core.pdf
+              使用最新版本的 OpenGL 的功能时，只有最现代的显卡才能运行您的应用程序。
+            扩展
+              开发人员可以直接拓展opengl
+            状态机
+               OpenGL 本身就是一个大型状态机 ！
+               OpenGL的状态 通常被称为OpenGL语境.
+            对象
+              OpenGL 库是用 C 编写的，并允许在其他语言中进行许多派生，但它的核心仍然是一个 C 库。
+
+          创建一个窗口：
+            
+
+
+            
   其他：
     二进制着色器:
       为了反复读取代码，在编译一次后产生的二进制文件保存，下次直接读取二进制着色器
