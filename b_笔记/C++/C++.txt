@@ -1,4 +1,13 @@
-
+学习网址：
+      https://github.com/Light-City/CPlusPlusThings
+      笔记：
+            const：     
+                  不能被修改的值，为了增加代码健壮性
+                  首次声明前面加：extern，之后就不能修改了
+                  不变类型：
+                        char const* a;
+                  或者不变常量：
+                        char* const a;
 标识符：
       &:
             返回值的地址

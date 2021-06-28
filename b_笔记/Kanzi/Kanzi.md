@@ -391,7 +391,12 @@
               + Add Transition Animation:
                 + 添加自定义动画
               + 
-    
+    + c++程序：
+      + 先在studio操作，完了导出.kzb,等待visualStudio编辑
+        + 字典：
+          + project 右键 Alias，再在编译器通过 字符串 调用修改
+      + 打开 visual Studio 2017 打开 ..\Projects\HelloWorld\Application\configs\platforms\win32,配置见文档，debug模式运行
+      + 
 ---
 ## 学习日志
 
