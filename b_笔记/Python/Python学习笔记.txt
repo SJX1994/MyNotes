@@ -33,7 +33,10 @@ Python组件：
             tree.write(path, encoding='utf-8')
 
     pip:
-        插件安装路径：
+        install:
+            插件安装路径：
+        show + <name>:
+            包信息
 
     translate-toolkit:
         功能：

@@ -395,7 +395,7 @@
       + 先在studio操作，完了导出.kzb,等待visualStudio编辑
         + 字典：
           + project 右键 Alias，再在编译器通过 字符串 调用修改
-      + 打开 visual Studio 2017 打开 ..\Projects\HelloWorld\Application\configs\platforms\win32,配置见文档，debug模式运行
+      + 打开 visual Studio 2017 打开 ..\Projects\HelloWorld\Application\configs\platforms\win32,（详细配置见文档）平台工具集选2015 v140，2015 debug模式运行
       + 
 ---
 ## 学习日志
@@ -447,6 +447,32 @@
   - 其他：
     - 练习状态机的转换动画
 
+- 2021/6/28:
+  - 教程:
+    - 在 Kanzi Studio 中创建应用程序（初级）
+      - 第 6 步 - 部署应用程序
+    - 材质和纹理（初级）
+      - 第 1 步 - 导入内容并创建背景
+      - 第 2 步 - 创建车身的材质类型和纹理
+      - 第 3 步 - 设置轮胎、轮毂和镀铬零部件的材质
+      - 第 4 步 - 定义车窗和大灯玻璃的材质属性
+      - 第 5 步 - 调整材质
+    - Hello World! (API)
+      - 第 1 步 - 创建含 C++ 应用程序的工程并打印到调试控制台
+      - 第 2 步 - 使用 Kanzi Engine API 设置属性值
+    - 应用程序逻辑 (API)
+      - 第 1 步 - 使用 Kanzi Engine API 加载 Kanzi 二进制文件
+      - 第 2 步 - 访问 Kanzi Studio 工程中创建的内容
+      - 第 3 步 - 创建预设件实例并从文件系统加载图像
+      - 第 4 步 - 创建选择小组件的交互处理程序
+
+- 2021/6/29:
+  - 教程:
+    - 应用程序逻辑 (API)
+      - 第 6 步 - 构建应用程序并将其部署到 Android 设备
+  - 其他：
+    - 配置安卓打包环境
+    - 温故C++语法
 ---
 
 - 建议
