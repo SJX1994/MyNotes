@@ -1,4 +1,7 @@
 {
       "liveServer.settings.port": 5501,
-      "git.ignoreLimitWarning": true
+      "git.ignoreLimitWarning": true,
+      "files.associations": {
+            "cstdint": "cpp"
+      }
 }

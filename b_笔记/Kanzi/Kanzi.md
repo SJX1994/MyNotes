@@ -185,6 +185,9 @@
           + Timeline
   + 工作：
     + 常用面板：
+      + 工程选项卡：
+        + showInPreview
+          + 在预览窗口显示工程
       + Projet：
         + 节点控制面板
           + 创建和修改内容：
@@ -250,6 +253,9 @@
                       + 用于展示3D内容
                 + 3D kanzi 物体
                   + Plane
+                + 工程操作：
+                  + PrefabPlaceholder 2d
+                    + 为当前项目创建一个2d渲染框，可以渲染其他子项目
               + Alt+右键：
                 + 显示所有可以创建内容
             + 修改：
@@ -265,6 +271,10 @@
         + 预制体，构造并统一创建接口
         + UI:
           + 右下角配置预设件
+        + 工程：
+          + PrefabProperties
+            + VisibilityAcrossProjects:
+              + public 公开使用
       + Properties:
         + 节点属性编辑
           + 节点信息：
@@ -297,13 +307,17 @@
                 + 使用自定义脚本
               + Go to State
                 + 指向某个状态机的状态
+              + OnPropertyChange：
+                + 设置一个变量当他变化执行脚本
           + 动画 Animation
       + Preview:
-        + 预览
+        + 预览子菜单
           + 快速对其：
             + 9宫格图标
           + 快速选择：
             + 右键元素
+          + Restart
+            + 回到面板的初始状态
         + 模式：
           + Node tool 节点工具
             + 2D：
@@ -357,20 +371,24 @@
               + 纹理填充2D节点
             + Material Brush 材质笔刷
               + 材质填充2D节点，将TypeMat填入
-          + 编码
-            + Material Type
-              + VertexShader
-                + 直接编辑GLSL顶点代码
-              + FragmentShader
-              + MaterialTypeMaterial
-        + Resource Files:
-          + Scripts:
-            + 存放JS脚本（使用 Google 的 V8 JavaScript 引擎）
-            + 操作：
-              + 注释：
-                + Ctrl+K+C
-              + 取消注释
-                + Ctrl+K+U
+        + ProjectReference:
+          + 项目导入/合并
+        + ProjectReference
+          + 引用其他工程的资源
+        + 编码
+          + Material Type
+            + VertexShader
+              + 直接编辑GLSL顶点代码
+            + FragmentShader
+            + MaterialTypeMaterial
+          + Resource Files:
+            + Scripts:
+              + 存放JS脚本（使用 Google 的 V8 JavaScript 引擎）
+              + 操作：
+                + 注释：
+                  + Ctrl+K+C
+                + 取消注释
+                  + Ctrl+K+U
       + Dictionaries:
         + 创建固定类型的键值对
       + Pages：
@@ -379,13 +397,19 @@
           + 点击“+”号添加页面
           + Space + 鼠标左 平移 / 鼠标中键
           + Shift + Alt + 鼠标左 缩放 / 鼠标滚轮
+        + coverToPageHost:
+          + page 和 host 的区别在于 host 可以管理子pages
       + Assets：
         + Assets 从工程中导入的资产
       + StateTools:
         + 状态机
+          + 子顶栏：
+            + 选择触发开关
           + 设置状态
             + 选中具体Project中的物体后，设置状态
           + 设置转换 State Transition Editor
+            + 左边对状态做简单设置
+              + 开始时间 运动方式...
             + 右键添加状态
             + StateTransitionEditor
               + Add Transition Animation:
@@ -473,6 +497,18 @@
   - 其他：
     - 配置安卓打包环境
     - 温故C++语法
+
+- 2021/6/30:
+  - 教程:
+    - 应用程序逻辑 (API)
+      - 第 6 步 - 构建应用程序并将其部署到 Android 设备
+        - 环境配置后，报 cstdint: No such file or directory 的错误（基本库找不到，不知道什么原因）和 谢琳琳 沟通协助没有解决，所以暂缓
+    - 组合工程 (高级)
+    - 使用 JavaScript 设置状态（初级）
+    - 含页面节点的应用程序流（初级）
+      - 第 1 步 - 在页面 (Pages) 窗口创建应用程序结构
+      - 第 2 步 - 创建应用程序导航
+ 
 ---
 
 - 建议

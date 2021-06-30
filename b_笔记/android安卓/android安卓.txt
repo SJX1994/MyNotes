@@ -1,0 +1,11 @@
+安卓 studoid UI：
+      配置 sdk NDK:
+            https://github.com/Light-City/CPlusPlusThings
+            File->Project Structure
+
+报错：
+      缺少ant文件
+      解决：
+            https://stackoverflow.com/questions/43648201/cannot-find-build-xml-error-building-android-sdk-sample/47821206#47821206
+      原因：
+            新版安卓没有ant工具了
