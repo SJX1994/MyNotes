@@ -3,5 +3,6 @@
       "git.ignoreLimitWarning": true,
       "files.associations": {
             "cstdint": "cpp"
-      }
+      },
+      "python.formatting.provider": "autopep8"
 }

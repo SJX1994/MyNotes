@@ -46,4 +46,8 @@ mac:
       简单的提交拉取推送：
             ref：
                   https://blog.csdn.net/jiangyu1013/article/details/83622179
+
+
+
+git config --global --edit
             

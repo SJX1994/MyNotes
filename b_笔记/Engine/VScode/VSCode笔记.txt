@@ -18,6 +18,10 @@ VSCode:
             Alt+z
         格式化代码：
             Shift+Alt+F
+        收起所有代码：
+            Ctrl+K+0
+        展开所有代码：
+            Ctrl+K+J
     File-Preference-setting：
         打开setting.json:
             Ctrl+P:-键入：setting.json(右上角按钮转换到UI界面)
@@ -51,7 +55,10 @@ VSCode:
                 ], 
         删除所有注释：
             https://blog.csdn.net/yjjjjz/article/details/89521414
-
+        收起所有代码：
+            Ctrl+K+0
+        展开所有代码：
+            Ctrl+K+J
 VStudio:
     快捷键：
         自動排版	Ctrl +K +D or Alt + Shift + F

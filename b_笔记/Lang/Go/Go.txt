@@ -1,0 +1,5 @@
+GO:
+      属于纯后端语言，支持多核编程，google明星团队 C语言创始人主导开发
+
+官方教程：
+      https://tour.go-zh.org/welcome/1

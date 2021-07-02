@@ -1,0 +1,14 @@
+GUI:
+      右侧缩略图：
+            工具_选项_文件编辑器 -> 选项对应的语言(Basic, C#, C/C++....) -> 行为 -> 使用垂直滚动条的缩略图模式（M）
+      大写文本：
+            shift+ctrl+u
+VStudio:
+    快捷键：
+        自動排版	Ctrl +K +D or Alt + Shift + F
+        註解	Ctrl + K + C or Ctrl + /
+        取消註解	Ctrl + K + U or Ctrl + /
+        反白區塊轉為大寫	CTRL + SHIFT + U
+        反白區塊轉為小寫	CTRL + U
+        減少縮排	SHIFT + Tab 
+        查看定義	F12
