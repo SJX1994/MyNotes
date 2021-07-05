@@ -63,8 +63,8 @@ class HtmlHacker():
                         continue
 
 
-# fp = FilePath()
-# fp.thisPath()
-h = HtmlHacker('D:\softWare\Kanzi\Documentation\zh-cn\Content\Tutorials')
-h.local()
+fp = FilePath()
+fp.thisPath()
+# h = HtmlHacker('D:\softWare\Kanzi\Documentation\zh-cn\Content\Tutorials')
+# h.local()
 
