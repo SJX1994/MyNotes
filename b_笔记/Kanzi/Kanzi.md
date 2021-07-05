@@ -368,33 +368,42 @@
             + 显示所有2D物体的线框
       + Library:
         + 创建和编辑资源(动画，笔刷，材质，纹理，渲染通道)
-        + StateManagers
-          + 可以批量设置按钮状态
-        + PropertyTypes
-          + 可以批量创建属性
-            + enum
-              + 储存无限多的键值对
-        + Animations
-          + AnimationClip双击编辑
-        + Materials and Tetxures
-          + 材质球
-            + ColorBrush 颜色笔刷
-              + 单色填充2D节点，可以应用背景颜色
-            + Texture Brush 纹理笔刷
-              + 纹理填充2D节点
-            + Material Brush 材质笔刷
-              + 材质填充2D节点，将TypeMat填入
-        + ProjectReference:
-          + 项目导入/合并
-        + ProjectReference
-          + 引用其他工程的资源
-        + 编码
-          + Material Type
-            + VertexShader
-              + 直接编辑GLSL顶点代码
-            + FragmentShader
-            + MaterialTypeMaterial
-          + Resource Files:
+          + Trajectories
+            + 实例化各种形态的滑轨
+          + Styles：
+            + 创建模板
+              + 通过节点PrefabView来实现
+          + Themes：
+            + 用于承载Styles的变化
+            + ThemeEditor
+              + CreatTheme 添加一个主题
+          + StateManagers
+            + 可以批量设置按钮状态
+          + PropertyTypes
+            + 可以批量创建属性
+              + enum
+                + 储存无限多的键值对
+          + Animations
+            + AnimationClip双击编辑
+          + Materials and Tetxures
+            + 材质球
+              + ColorBrush 颜色笔刷
+                + 单色填充2D节点，可以应用背景颜色
+              + Texture Brush 纹理笔刷
+                + 纹理填充2D节点
+              + Material Brush 材质笔刷
+                + 材质填充2D节点，将TypeMat填入
+          + ProjectReference:
+            + 项目导入/合并
+          + ProjectReference
+            + 引用其他工程的资源
+          + 编码
+            + Material Type
+              + VertexShader
+                + 直接编辑GLSL顶点代码
+              + FragmentShader
+              + MaterialTypeMaterial
+            + Resource Files:
             + Scripts:
               + 存放JS脚本（使用 Google 的 V8 JavaScript 引擎）
               + 操作：
@@ -555,6 +564,16 @@
       - 第 2 步  - 对已完成的插值作出反应（NodeComponents条件触发器）
     - 3D 模型旋转（高级）（滑动与旋转绑定）
 
+- 2021/7/5:
+  - 教程：
+    - 平移、缩放、轻敲
+      - 第 1 步 - 平移地图
+      - 第 2 步 - 缩放和旋转地图
+      - 第 3 步 - 长按以放置别针
+    - 创建滑块
+    - 创建切换按钮
+    - 教程：为应用程序制定主题
+      - 第 1 步 - 为组合仪表创建主题
 - 阶段总结：
 
   - 教程：创建全屏泛光效果
@@ -665,7 +684,7 @@
     - 第 4 步 - 创建弹出窗口
 
 
-  - 教程：平移、缩放、轻敲
+  - 教程：平移、缩放、轻敲(完成)
     - 第 1 步 - 平移地图
     - 第 2 步 - 缩放和旋转地图
     - 第 3 步 - 长按以放置别针
@@ -710,7 +729,7 @@
     - 第 2 步 - 微调动画
 
 
-  - 教程：创建滑块
+  - 教程：创建滑块 (完成)
 
 
   - 教程：使用状态机控制您的应用程序 (完成)
@@ -723,15 +742,16 @@
     - 第 2 步 - 应用模具
 
 
-  - 教程：为应用程序制定主题
+  - 教程：为应用程序制定主题 (进行中)
     - 第 1 步 - 为组合仪表创建主题
     - 第 2 步 - 为汽车车型创建主题
     - 第 3 步 - 导出并使用 API 设置应用程序主题
   
 
 
-  - 教程：创建切换按钮
-    - 
+  - 教程：创建切换按钮 (完成)
+    - s
+    
 ---
 
 - 建议

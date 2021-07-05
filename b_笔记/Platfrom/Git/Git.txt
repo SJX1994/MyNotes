@@ -2,6 +2,8 @@
 操作：
       创建修改独立分支：
             https://www.freecodecamp.org/news/git-clone-branch-how-to-clone-a-specific-branch/
+      检查ssh：
+            
 报错：
       errno 10054：
             原因：
@@ -31,6 +33,17 @@
       Failed to connect to github.com port 443: Timed out:
             代理不通报错：
                   参考：https://blog.csdn.net/u011476390/article/details/93411139
+
+      
+      Connection reset by 52.74.223.119 port 22:
+            原因：
+                  22号端口被封住
+            解决办法：
+                  如果修改不了host
+                  尝试：
+                        https://www.cnblogs.com/Diamond-sjh/p/11352156.html
+                        高级设置灰色：
+                              https://blog.csdn.net/qq_40846017/article/details/105351900
 
 mac:
       生成ssh：
