@@ -17,7 +17,9 @@ py命令行：
         <(py -m pip install xxx)>
     检查版本：
          <(py --version )>
-Python组件：
+Python库：
+    PyTorch：
+        人工智能库
     lxml:
         读写(适用于.tmx)：
             tree = etree.parse(path)
