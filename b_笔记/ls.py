@@ -3,6 +3,7 @@ import pathlib
 from re import escape
 import lxml
 import scrapy
+import sys
 
 
 class FilePath:
@@ -63,8 +64,15 @@ class HtmlHacker():
                         continue
 
 
-fp = FilePath()
-fp.thisPath()
+class DesktopWife():
+    # tut from : https://github.com/CharlesPikachu/Tools/blob/master/DesktopPet/DesktopPet.py
+    def __init__(self, parent, **kwargs):
+        super(DesktopWife, self).__init__(parent)
+
+# 文件读取 ↓
+# fp = FilePath()
+# fp.thisPath()
 # h = HtmlHacker('D:\softWare\Kanzi\Documentation\zh-cn\Content\Tutorials')
 # h.local()
 
+# 桌面精灵 ↓

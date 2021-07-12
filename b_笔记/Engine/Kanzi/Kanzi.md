@@ -397,17 +397,71 @@
               + Material Brush 材质笔刷
                 + 材质填充2D节点，将TypeMat填入
           + ProjectReference:
-            + 项目导入/合并
-          + ProjectReference
-            + 引用其他工程的资源
+            + 项目导入/合并 引用其他工程的资源
           + Rendering
             + ObjectSources
               + TagFilper
                 + 收集被分配标签的节点
+          + Localization
+            + 本地化翻译
           + 编码
             + Material Type
               + VertexShader
                 + 直接编辑GLSL顶点代码
+                + 案例：
+                  + 深度+贴图：
+                  
+                    + v：
+                          attribute vec3 kzPosition;
+                          attribute vec2 kzTextureCoordinate0;
+                          uniform highp mat4 kzProjectionCameraWorldMatrix;
+                          uniform mediump vec2 TextureOffset;
+                          uniform mediump vec2 TextureTiling;
+
+                          varying mediump vec2 vTexCoord;
+
+                          void main()
+                          {
+                              precision mediump float;
+                              
+                              vTexCoord = kzTextureCoordinate0*TextureTiling + TextureOffset;
+                              gl_Position = kzProjectionCameraWorldMatrix * vec4(kzPosition.xyz, 1.0);
+                          }
+
+                          
+                    + f：
+                    
+                        uniform sampler2D Texturesjx;
+                        uniform lowp float BlendIntensity123;
+                        varying mediump vec2 vTexCoord;
+                        uniform mediump vec4 _Diffuse;
+                        uniform mediump vec4 _OutlineColor;
+                        uniform lowp float _OutlineScale;
+
+
+                        void main()
+                        {
+                            precision lowp float;
+                            
+                            float near = 0.1;
+                            float far = 50.0;
+                            float z = gl_FragCoord.z * 2.0 - 1.0; // Back to NDC
+                            float m =  (2.0 * near) / (far + near - z * (far - near));
+                            
+                            vec4 color = texture2D(Texturesjx, vTexCoord);
+                            
+                            vec4 Z = vec4( vec3(m)*12.0,1.0);
+                            
+                            vec4 zz = vec4(1.0)-pow(Z,vec4(1.0));
+                            
+                            gl_FragColor.rgba = color.rgba;
+                            gl_FragColor.rgba = zz ;
+                            gl_FragColor.rgba = color.rgba + zz ;
+                            
+                            
+                            
+                        }
+
               + FragmentShader
               + MaterialTypeMaterial
             + Resource Files:
@@ -463,6 +517,7 @@
           + project 右键 Alias，再在编译器通过 字符串 调用修改
       + 打开 visual Studio 2017 打开 ..\Projects\HelloWorld\Application\configs\platforms\win32,（详细配置见文档）平台工具集选2015 v140，2015 debug模式运行
 + 总结
+
   + view 
     + UI
       + Project
@@ -636,6 +691,52 @@
       - 第 3 步 - 定义和使用静态列表数据源
 
 
+
+
+  - 2021/7/8:
+    - 教程：使用 JavaScript 创建演示模式 (未复现)
+      - 第 1 步 - 创建演示模式
+      - 第 2 步 - 控制演示模式
+      
+    - 教程：本地化您的应用程序
+      - 第 1 步 - 本地化文本和纹理内容
+      - 第 2 步 - 为其他地区创建地区包
+      - 第 3 步 - 加载地区包
+
+    - 教程：为从右向左书写地区本地化应用程序 (部分未复现)
+        - 第 1 步 - 准备从右向左书写地区的应用程序
+        - 第 2 步 - 定义从右向左书写地区的应用程序布局
+        - 第 3 步 - 加载地区并实例化预设件
+
+  - 2021/7/9:
+
+    - 拖放 (部分未复现)
+      - 第 1 步 - 准备内容
+      - 第 2 步 - 实现拖放功能
+      - 第 3 步 - 动画化用户拖动的按钮
+      
+    - 使用键盘输入来导航应用程序 (部分未复现)
+      - 第 1 步 - 使用键盘键在页面 (Page) 节点之间导航
+      - 第 2 步 - 为Home 屏幕创建键盘导航
+      - 第 3 步 - 使用键盘键在空调设置中导航
+      - 第 4 步 - 使用键盘键滚动
+      
+    - 全部 教程 完成
+
+  - 2021/7/12:
+
+    - 1.尝试了在3D软件里做骨骼动画导入到Kanzi
+      - 结果：
+        - 支持带有蒙皮权重的骨骼动画 导入/编辑/状态机/事件 操作
+        - 不支持IK控制
+
+    - 2.尝试了 glsl 深度计算
+      - 结果：
+        - 对深度信息的 颜色减淡/拉大色差/叠加 的操作
+        - 结合贴图信息进行渲染
+
+
+
 - 阶段总结：
 
   - 教程：创建全屏泛光效果 (完成)
@@ -663,12 +764,12 @@
     - 第 3 步 - 定义和使用静态列表数据源
 
 
-  - 教程：使用 JavaScript 创建演示模式
+  - 教程：使用 JavaScript 创建演示模式 (完成 not try)
     - 第 1 步 - 创建演示模式
     - 第 2 步 - 控制演示模式
 
 
-  - 教程：拖放
+  - 教程：拖放 (完成 not try)
     - 第 1 步 - 准备内容
     - 第 2 步 - 实现拖放功能
     - 第 3 步 - 动画化用户拖动的按钮
@@ -713,7 +814,7 @@
     - 第 2 步  - 对已完成的插值作出反应
 
 
-  - 教程：使用键盘输入来导航应用程序
+  - 教程：使用键盘输入来导航应用程序 (完成 not rty)
     - 第 1 步 - 使用键盘键在页面 (Page) 节点之间导航
     - 第 2 步 - 为Home 屏幕创建键盘导航
     - 第 3 步 - 使用键盘键在空调设置中导航
@@ -728,13 +829,13 @@
     - 异步加载和部署资源
 
 
-  - 教程：本地化您的应用程序
+  - 教程：本地化您的应用程序 (完成)
     - 第 1 步 - 本地化文本和纹理内容
     - 第 2 步 - 为其他地区创建地区包
     - 第 3 步 - 加载地区包
 
 
-  - 教程：为从右向左书写地区本地化应用程序
+  - 教程：为从右向左书写地区本地化应用程序 (完成 not try)
     - 第 1 步 - 准备从右向左书写地区的应用程序
     - 第 2 步 - 定义从右向左书写地区的应用程序布局
     - 第 3 步 - 加载地区并实例化预设件

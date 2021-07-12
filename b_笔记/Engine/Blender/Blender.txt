@@ -1,0 +1,25 @@
+教程：
+      基础：
+            https://www.blenderguru.com/
+
+      软件架构学习：
+            https://www.zhihu.com/question/265810473
+      
+操作：
+      blenderToMaya:
+            https://youtu.be/eJGliDhBCq8
+      骨骼绑定：
+            https://youtu.be/SBYb1YmaOMY
+
+UI界面:
+      顶栏：
+
+      工作区：
+            3D视图区
+            大纲视图
+            属性编辑器
+            时间轴
+      状态栏：
+            键位映射
+            状态信息
+            资源信息

@@ -62,6 +62,9 @@ openGL（GLSL,OpenGL Shading Language）:
     关键字：
       blit：
         含义是内存中图像的位块传输
+    深度测试：
+      https://learnopengl-cn.readthedocs.io/zh/latest/04%20Advanced%20OpenGL/01%20Depth%20testing/
+    
             
 
 
