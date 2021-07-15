@@ -735,8 +735,58 @@
         - 对深度信息的 颜色减淡/拉大色差/叠加 的操作
         - 结合贴图信息进行渲染
 
+  - 2021/7/13:
+    - 0页的拖动逻辑
+    - 切图
+    
+  - 2021/7/13:
+    - 协助 书俊 制作模型
+    - 上下翻页 + 左右滑动预览 (初步，用js方法实现，明天尝试下用 Scroll View 2D)
 
 
+
+  - 2021/7/15:
+    
+    - 开始制作按钮插件
+    
+    - 为了方便编写插件：
+      - 根据文档 结合泛亚一期的Launcher 尝试理解还原插件的类图：
+    
+      - 管理：
+            shared_ptr(用于管理资源管理的类)：
+                  
+                  → makeEditorInfo（反射函数名）：
+                        PropertyTypeEditorInfoSharedPtr的构造：
+                        类型：
+                              PropertyTypeEditorInfo：
+                                    包含字典AttributeDictionary：
+                                          所有插件展示信息
+
+      - 功能：
+            Module(功能模块类):
+                  getMetaclassesOverride(可重写的虚函数)
+            Metaclass(功能检查模块):
+                  预处理：
+                        KZ_METACLASS_BEGIN + KZ_METACLASS_END：
+                              声明元素
+                        KZ_METACLASS_PROPERTY_TYPE：
+                              注册属性
+                        KZ_METACLASS_MESSAGE_TYPE：
+                              注册消息
+                        KZ_METACLASS_METHOD：
+                              注册MetaMethod
+      - 传递：
+            MessageArgument(消息传递的基类):
+                  MessageArgumentsBaseMetaclassWrapper(结构体)：
+                        包含：
+                        getStaticMetaclass(自定义的一条消息)
+            MethodArguments(检查消息传递)：
+                  getArgument():
+                        获取参数值
+                  setArgument():
+                        设置参数值
+            MetaMethod():
+                  TODO 比较复杂暂时没看懂,等具体用到填上
 - 阶段总结：
 
   - 教程：创建全屏泛光效果 (完成)

@@ -64,6 +64,8 @@ openGL（GLSL,OpenGL Shading Language）:
         含义是内存中图像的位块传输
     深度测试：
       https://learnopengl-cn.readthedocs.io/zh/latest/04%20Advanced%20OpenGL/01%20Depth%20testing/
+    阴影：
+      https://learnopengl-cn.readthedocs.io/zh/latest/05%20Advanced%20Lighting/03%20Shadows/02%20Point%20Shadows/
     
             
 
