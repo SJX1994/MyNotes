@@ -775,6 +775,15 @@
                               注册消息
                         KZ_METACLASS_METHOD：
                               注册MetaMethod
+            PropertyType(实例化几乎所有函数类型):
+                  比如：
+                    Object(友元)
+                    Node(友元)
+                    friend class AbstractPropertyType
+                    FixedString
+                    ...
+
+
       - 传递：
             MessageArgument(消息传递的基类):
                   MessageArgumentsBaseMetaclassWrapper(结构体)：
@@ -787,6 +796,15 @@
                         设置参数值
             MetaMethod():
                   TODO 比较复杂暂时没看懂,等具体用到填上
+
+  - 2021/7/26:
+    - 764优先
+      - 侧边顶部反射
+      - 红色反射（天空盒子）
+      - 反射太弱
+      - 完全一样
+    - 707
+      
 - 阶段总结：
 
   - 教程：创建全屏泛光效果 (完成)

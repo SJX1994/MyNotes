@@ -12,3 +12,6 @@ VStudio:
         反白區塊轉為小寫	CTRL + U
         減少縮排	SHIFT + Tab 
         查看定義	F12
+
+断点异常设置：
+      https://blog.csdn.net/u010821666/article/details/78512900
