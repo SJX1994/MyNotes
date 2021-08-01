@@ -138,3 +138,6 @@ openGL ES(OpenGL for Embedded Systems ):
         调试和健壮性功能可实现更轻松的代码开发和安全执行。
    《 OpenGL ES 3.0编程指南 》：
       
+操作：
+  可视化顶点法线：(TODO)
+    https://learnopengl.com/Advanced-OpenGL/Geometry-Shader
