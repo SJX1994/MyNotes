@@ -88,7 +88,7 @@
     - Tutorials
       - 教程资产
   + C盘：
-    + 共享文件（%ProgramData%\Rightware）：
+    + 共享文件（%ProgramData%Rightware）：
     
       - Kanzi
         * 注册码 激活码
@@ -97,7 +97,7 @@
         * 配置各种编程语言的环境变量
       
       - KanziStudio的首选项
-        - %AppData%\Rightware\<KanziVersion>\userPreferences.xml
+        - %AppData%Rightware<KanziVersion>userPreferences.xml
         
     + 私有文件：
       - KanziStudioLogs
@@ -515,7 +515,7 @@
       + 先在studio操作，完了导出.kzb,等待visualStudio编辑
         + 字典：
           + project 右键 Alias，再在编译器通过 字符串 调用修改
-      + 打开 visual Studio 2017 打开 ..\Projects\HelloWorld\Application\configs\platforms\win32,（详细配置见文档）平台工具集选2015 v140，2015 debug模式运行
+      + 打开 visual Studio 2017 打开 ..ProjectsHelloWorldApplicationconfigsplatformswin32,（详细配置见文档）平台工具集选2015 v140，2015 debug模式运行
 + 总结
 
   + view 
@@ -992,3 +992,23 @@
 - 建议
   - 是否考虑加入粒子系统
     - 有插件
+  
+- 修改：
+
+  - a柱子颜色调整暗 (完成) A pillar color to black/ darker
+  
+  - 定制化玻璃反光  (完成) - Make all windows a less transparent, and darken the tint. The goal is to make the inside headrests and high floor less visible. Maybe that inside high floor should be completely matte black./ - Windshield reflections lacking
+  
+  - 前窗金属贴条+金属部件的反射细节 (完成) -All chrome should reflect a live environment. If high-gloss chrome cannot have active reflections in it (reflections moving when rotating vehicle) , then we need to make all chrome not reflect dark things.  It’s particularly a problem on the chrome piece right below front grille.
+  
+  - 后灯灯光+后灯第二条LED调暗 (完成) - Tail light tune more red /-If there’s glow on horizontal headlight bar, then we need glow on the back horizontal taillight bar for consistency. Front glow is a bit too large, we need to reduce glow intensity a bit.
+     
+  - 内部车机纯黑 (完成) -Make all windows a less transparent, and darken the tint. The goal is to make the inside headrests and high floor less visible. Maybe that inside high floor should be completely matte black. / - Adjust the interior to black/ as dark as possible 
+  
+  - 修复部分顶点法线 (完成) - fix some vertex normal
+
+  - 前车灯横向灯亮度调暗(完成) -If there’s glow on horizontal headlight bar, then we need glow on the back horizontal taillight bar for consistency. Front glow is a bit too large, we need to reduce glow intensity a bit.
+
+  - 删除后车横向纹理(完成) -On the back of side window chrome, there no longer these horizontal graphics stripes. Please delete these, thanks.
+
+  - 红色车身(完成) - Can the body color be changed to these 7 color options?  Can we see this demo with a red car Sports series (Red Carpet TC) ?

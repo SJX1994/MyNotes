@@ -21,6 +21,8 @@ openGL（GLSL,OpenGL Shading Language）:
     https://shdr.bkcore.com/
   
   教程：
+    雨水效果：
+      https://seblagarde.wordpress.com/2013/01/03/water-drop-2b-dynamic-rain-and-its-effects/
     PBR:
       教程：
         https://learnopengl-cn.github.io/07%20PBR/01%20Theory/
