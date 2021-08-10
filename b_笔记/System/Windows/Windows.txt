@@ -80,6 +80,8 @@
                   类型：
                         SSD是固态
                         HDD是机械
+      没有权限修改：
+            https://jingyan.baidu.com/article/7c6fb428286e6480642c9030.html
 
 Windows目录结构：
       \PerfLogs：

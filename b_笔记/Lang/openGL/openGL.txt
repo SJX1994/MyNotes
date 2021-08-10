@@ -139,7 +139,59 @@ openGL ES(OpenGL for Embedded Systems ):
         高级纹理目标，例如纹理缓冲区、多样本二维数组和立方体贴图数组
         调试和健壮性功能可实现更轻松的代码开发和安全执行。
    《 OpenGL ES 3.0编程指南 》：
-      
+
+通用概念：
+  dot：
+    点积 ：
+      输入两个向量 输出一个数字
+      例子：
+        向量 (3, 2) 和 (2, 4)： 3*2 + 2*4 = 14。
+      意义：
+        1.找出两个点之间 相对Y轴的位置关系（之前还是之后）
+        2.向量方向：结果为 0 代表垂直 结果为 + 代表同向 结果为 - 代表相反
+        3.计算对象与角色的角度 acos(x · y / ‖x‖ * ‖y‖) * 180 / pi
+  向量相加：
+    几何意义：
+      1.收尾相接的三角形
+  向量*数字：
+    几何意义：
+      +：
+        延长
+      -：
+        反向
+  max：
+    返回两个值中较大的一个
+
 操作：
   可视化顶点法线：(TODO)
     https://learnopengl.com/Advanced-OpenGL/Geometry-Shader
+
+  光照：
+    锥形光照：
+      高光.0 =  max(0,点乘(归一化(视线法线),归一化(视线方向+光照方向)));
+      锥光效果 = 点乘(归一化的 锥光方向 , 归一化的 锥光视线方向);
+      光照衰减 = 锥光效果 / (光照衰减.x + 光照衰减.y * 锥光视线方向.xyz  + 光照衰减.z * 锥光视线方向.xyz);
+      光照 = (漫反射.rgb * 光照点乘法线.0 + 镜面反射.rgb * 高光.0) * 光照衰减 * 灯光颜色;
+
+      浮点数：光照点乘法线
+
+  计算两点之间的距离：
+    √((vx-kx)²+(vy-ky)²+(vz-kz)²)
+    例子：
+      v = (0, 0, 0) 和 k = (3, 4, 0)
+      disVK = √((0–3)²+(0–4)²+(0–0)²)
+      disVK = 5
+    代码：
+      public float Square(float value) 
+      { 
+          return value * value; 
+      } 
+
+      public float Distance(Vector3 from, Vector3 to) 
+      { 
+          return Mathf.Sqrt( 
+              Square(from.x - to.x) + 
+              Square(from.y - to.y) + 
+              Square(from.z - to.z) 
+          ) ; 
+      } 

@@ -21,3 +21,10 @@
             局部空间
             烘培轴枢
             网格-传递属性
+      
+      显示属性：
+
+Mel:
+      API:
+            Ref: 
+                  https://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/Commands/
