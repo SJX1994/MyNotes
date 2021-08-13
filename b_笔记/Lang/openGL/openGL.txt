@@ -21,6 +21,10 @@ openGL（GLSL,OpenGL Shading Language）:
     https://shdr.bkcore.com/
   
   教程：
+    顶点变换：
+      https://www.3dgep.com/understanding-the-view-matrix/
+        矩阵：
+          https://blog.csdn.net/u012501459/article/details/12945149
     雨水效果：
       https://seblagarde.wordpress.com/2013/01/03/water-drop-2b-dynamic-rain-and-its-effects/
     PBR:
@@ -84,6 +88,7 @@ openGL（GLSL,OpenGL Shading Language）:
 
       计算机呈像显示：
         https://web.stanford.edu/class/ee367/
+  
   关键环节：
     关键字：
       blit：
@@ -195,3 +200,59 @@ openGL ES(OpenGL for Embedded Systems ):
               Square(from.z - to.z) 
           ) ; 
       } 
+
+  坐标转换：
+
+      矩阵*位置
+
+      例如：
+        世界坐标 到 相机坐标
+        物体坐标->世界坐标->相机坐标：
+          世界中的位置 = 物体到世界的矩阵 * 物体位置
+          相机中的位置 = 世界到相机的矩阵 * 世界中的位置
+  
+  矩阵变化：
+    方便计算用的 4X4 矩阵：
+      4X4:
+        1.如果不用4x4没法获得 严格三角型
+        2. 也是为了复合变换
+      位移:
+        1 0 0 Tx
+        0 1 0 Ty
+        0 0 1 Tx
+        0 0 0 1
+      缩放:
+        x 0 0 0
+        0 y 0 0
+        0 0 z 0
+        0 0 0 1
+      旋转:
+        沿x：
+          1 0 0 0
+          0 c -s 0
+          0 s c 0
+          0 0 0 1
+        沿y：
+          c 0 s 0
+          0 1 0 0
+          -s 0 c 0
+          0 0 0 1
+        沿z：
+          c -s 0 0
+          s c 0 0
+          0 0 1 0
+          0 0 0 1
+
+      指定轴旋转：
+        pow(x,2)(1-cos)+cos, xy(1-cos)-z*sin, xz(1-cos)+y*sin,0
+        xy(1-cos)+z*sin , pow(y,2)(1-cos)+cos,zy(1-cos)-x*sin,0
+        xz(1-cos)-y*sin,yz(1-cos)-x*sin,pow(z,2)(1-cos)+cos,0
+        0,0,0,1
+      操作：
+        逆矩阵：
+          inverse();
+
+  旋转方式:
+    矩阵旋转
+    欧拉角旋转
+    四元数旋转

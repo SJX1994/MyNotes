@@ -17,14 +17,24 @@
             修改顶点法线方向来优化
 
       复制顶点法线：
-            镜像，反转法线
+            网格-镜像，反转法线
             局部空间
             烘培轴枢
             网格-传递属性
       
       显示属性：
 
+      欧拉万向锁：
+            按E+鼠标左键
+            欧拉万向锁的层级
+            原理：
+                  https://www.bilibili.com/video/BV1YJ41127qe/?spm_id_from=333.788.recommend_more_video.-1
+            做动画角度最小的放中间
+      批量合并顶点：
+            编辑网格-> 合并:设置阈值
 Mel:
       API:
             Ref: 
                   https://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/Commands/
+
+通用：
