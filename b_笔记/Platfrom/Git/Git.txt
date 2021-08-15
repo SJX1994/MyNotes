@@ -81,4 +81,4 @@ git config --global --edit
 
 更新：
       2021年最新token方式：
-            https://stackoverflow.com/questions/7438313/pushing-to-git-returning-error-code-403-fatal-http-request-failed
+           https://stackoverflow.com/questions/68775869/support-for-password-authentication-was-removed-please-use-a-personal-access-to
