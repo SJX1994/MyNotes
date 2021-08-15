@@ -1,4 +1,10 @@
 
+我的git：
+      752523247@qq.com
+      Carsa5th22
+      personalToken：
+            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
+
 操作：
       创建修改独立分支：
             https://www.freecodecamp.org/news/git-clone-branch-how-to-clone-a-specific-branch/
@@ -72,4 +78,7 @@ mac:
 
 
 git config --global --edit
-            
+
+更新：
+      2021年最新token方式：
+            https://stackoverflow.com/questions/7438313/pushing-to-git-returning-error-code-403-fatal-http-request-failed
