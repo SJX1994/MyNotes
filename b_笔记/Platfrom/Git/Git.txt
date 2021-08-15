@@ -59,6 +59,15 @@ mac:
       简单的提交拉取推送：
             ref：
                   https://blog.csdn.net/jiangyu1013/article/details/83622179
+                  
+                  git add .
+                  
+                  git commit -m "说明、注释"
+
+                  git pull origin master
+
+                  git push origin master
+
 
 
 
