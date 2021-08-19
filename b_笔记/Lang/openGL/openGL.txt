@@ -146,6 +146,15 @@ openGL ES(OpenGL for Embedded Systems ):
    《 OpenGL ES 3.0编程指南 》：
 
 通用概念：
+  GPU的单元:
+    SM：
+      shader复杂度决定了sm吞吐量
+  D3D12：
+    约等于DX12是图形API
+  Vulkan API:
+    更高级的图形api支持光追之类的高级功能，在任何设备上都可以支持（ps xbox switch）
+  ARRAY_BUFFER：
+    一个面片由8个byte组成，2个三角形，6个顶点，2个法线向量 一个byte存储0-256
   dot：
     点积 ：
       输入两个向量 输出一个数字
@@ -172,6 +181,8 @@ openGL ES(OpenGL for Embedded Systems ):
     https://learnopengl.com/Advanced-OpenGL/Geometry-Shader
 
   光照：
+    计算反射角：
+      reflect 
     锥形光照：
       高光.0 =  max(0,点乘(归一化(视线法线),归一化(视线方向+光照方向)));
       锥光效果 = 点乘(归一化的 锥光方向 , 归一化的 锥光视线方向);
@@ -253,6 +264,86 @@ openGL ES(OpenGL for Embedded Systems ):
           inverse();
 
   旋转方式:
+    欧拉角：
+      万象锁：
+        顺xyz的层级顺序，当xy呈现-90度时出现（3d动画、maya中可以复现）
+    四元数
     矩阵旋转
-    欧拉角旋转
-    四元数旋转
+
+调试：
+  Nsight:
+    配置：
+      https://developer.nvidia.com/nsight-tools-visual-studio-integration
+    使用手册：
+      https://docs.nvidia.com/nsight-graphics/UserGuide/
+    坑：
+      下载 Nsight Graphics
+      还需要下载 Nsight Remote Monitor
+      通过TCP/IP连接
+    帧调试模式：
+      输出数据：
+        实时渲染调用
+        绑定的纹理 集合图形
+        Pixel History 
+        识别性能瓶颈和 GPU 利用率
+        离线协作和分析的 C++ Capture 导出
+      使用场景：
+        猜测有渲染精度和同步问题
+        几何问题
+        混合问题
+        同步问题
+      使用方法：
+        查看所有资源：
+          Frame Debugger > All Resources
+        检查API：
+          OpenglGL:
+            渲染管线：
+              Vtx Spec (Vertex Specification)：vertex attributes, vertex array object state, element array buffer, and draw indirect buffer.
+              VS (Vertex Shader)：Vertex shader state, including attributes, samplers, uniforms
+              TCS (Tessellation Control Shader)：attributes, samplers, uniforms, control state
+              TES (Tessellation Evaluation Shader)：Tessellation evaluation shader state, including attributes, samplers, uniforms, evaluation state, etc.
+              GS (Geometry Shader)：
+              XFB (Transform Feedback)：
+              Raster (Rasterizer)：Rasterizer state, including point, line, and polygon state, culling state, multisampling state, etc.
+              FS (Fragment Shader)：
+              Pix Ops (Pixel Operations)： blend settings, depth and stencil state
+              FB (Framebuffer)：屏幕空间的渲染
+            缓存：
+              Textures：纹理采样器
+              Images：图像缓存
+              Buffers：缓冲区
+              Program：程序绑定
+              Pixels：像素打包和解包
+        GPU CPU 消耗时间：
+          Frame Debugger > API Statistics
+        事件和消耗的分布关系：
+          Frame Debugger > Batch Histogram
+        可视化当前渲染：
+          Frame Debugger > Current Target
+        查看事件：
+          Frame Debugger > Events
+        查看几何信息：
+          Frame Debugger > Geometry
+          可以查看法线 点云 面 ...
+        硬件统计：
+          Frame Debugger > Range Profiler
+
+    帧分析模式：
+      使用场景：
+        检查硬件性能瓶颈：
+          受否受限于GPU，是否受限于SM约束，单元的性能
+        最昂贵的绘制调用
+        GPU单元使用情况
+        Nsight Graphics也会稍微降低帧率
+
+    着色器分析模式：
+      （目前只支持D3D12 Vulkan）
+      可以定位失速原因
+      可以定位高消耗的方法
+      可以看源代码
+    生成 C++ 捕获：
+      保存一个确定性应用程序以进行后续性能分析
+      参考点
+      错误报告
+
+     

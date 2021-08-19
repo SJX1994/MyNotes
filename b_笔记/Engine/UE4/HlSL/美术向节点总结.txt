@@ -58,6 +58,8 @@ UE4自带材质节点/函数封装：
                     反转变亮
                 除数作为遮罩：
                     提取不透明部分
+            参考：
+                https://blog.csdn.net/chy555chy/article/details/54015816
             
         封装类：
             视觉函数：
