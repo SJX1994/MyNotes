@@ -1,4 +1,5 @@
             global int $troggle = 0;
+            global float $disForMerg = 0.0;
             global proc VertexNormalSort(){
                   if(`window -query -exists adia_myVertexNormalSort_Window`)
                   deleteUI adia_myVertexNormalSort_Window;
@@ -9,8 +10,12 @@
                         -command "Merg";
                         text -label " " -en off;
                   columnLayout -adjustableColumn true;
-                        button -height 23 -width 23 -backgroundColor 255 241 155 -label "MergVert"
-                        -command "MergVert";
+                        button -height 23 -width 23 -backgroundColor 255 241 155 -label "GetVerts"
+                        -command "GetVerts";
+                        text -label " " -en off;
+                  columnLayout -adjustableColumn true;
+                        button -height 23 -width 23 -backgroundColor 255 241 155 -label "MergVerts"
+                        -command "MergVerts";
                         text -label " " -en off;
                   columnLayout -adjustableColumn true;
                         button -height 23 -width 23 -backgroundColor 255 241 155 -label "Show"
@@ -59,7 +64,7 @@
                   
                   
             }
-            proc MergVert()
+            proc GetVerts()
             {
                   string $selectList[]; 
                   vector  $vertexPos;
@@ -68,6 +73,7 @@
                   //key is elementVertexs value is vertexPos
                   string $vertexName[];
                   string $vertexName2[];
+                  global float $disForMerg ;
 
                   $selectList = `ls -selection -flatten`;
                   $elementVertexs = `filterExpand -expand on -selectionMask 31 -selectionMask 70 $selectList`; 
@@ -92,6 +98,7 @@
                         for( $ii=0 ; $ii<size($vertexPoss) ; $ii++)
                         {
                             float $dis =  getDistance($vertexPoss[$i],$vertexPoss[$ii]);
+                            
                             int $found = floatArrayContains( $dis, $diss );
                             if($dis != 0 && $found != 1)
                             {
@@ -119,7 +126,15 @@
                   print($vertexPoss);
                   print("dis: \n");
                   print($diss);
+                  $disForMerg = $newDiss[0];
                   
+            }
+            proc MergVerts()
+            {
+                  global float $disForMerg ;
+                  $disForMerg += 1.0;
+                  print($disForMerg);
+                  polyMergeVertex  -d $disForMerg -am 1;
             }
             //math
             proc float getDistance(vector $x, vector $y)

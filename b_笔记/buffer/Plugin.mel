@@ -52,23 +52,34 @@
             string $selectList[]; 
             $selectList = `ls -selection -flatten`; 
             $elementVertex = `filterExpand -expand on -selectionMask 31 -selectionMask 70 $selectList`;
-      if(size($elementVertex)>1) 
+      if(size($elementVertex)>=1) 
          { 
-             $vertexNormal_1 = `polyNormalPerVertex -q -xyz $elementVertex[0]`;
-             $vertexNormal_2 = `polyNormalPerVertex -q -xyz $elementVertex[1]`; 
-             print(" Value 1 :"+"x:"+ $vertexNormal_1[0]  +"__y:"+$vertexNormal_1[1]  +"__z:"+$vertexNormal_1[2]+"\n"); 
-             print(" Value 2 :"+"x:"+ $vertexNormal_2[0]  +"__y:"+$vertexNormal_2[1]  +"__z:"+$vertexNormal_2[2]+"\n");
-             $vertexNormal_mid[0] =($vertexNormal_1[0] + $vertexNormal_2[0]) /2;
-             $vertexNormal_mid[1] =($vertexNormal_1[1] + $vertexNormal_2[1]) /2;
-             $vertexNormal_mid[2] =($vertexNormal_1[2] + $vertexNormal_2[2]) /2;
-             print(" Value mid :"+"x:"+ $vertexNormal_mid[0]  +"__y:"+$vertexNormal_mid[1]  +"__z:"+$vertexNormal_mid[2]+"\n");
-             polyNormalPerVertex -xyz $vertexNormal_mid[0] $vertexNormal_mid[1] $vertexNormal_mid[2] $elementVertex[0]; 
-             polyNormalPerVertex -xyz $vertexNormal_mid[0] $vertexNormal_mid[1] $vertexNormal_mid[2] $elementVertex[1]; 
+             if (size($elementVertex)==1)
+             {
+                 AveragePolygonNormals;
+             }else
+             {
+                 $vertexNormal_1 = `polyNormalPerVertex -q -xyz $elementVertex[0]`;
+                $vertexNormal_2 = `polyNormalPerVertex -q -xyz $elementVertex[1]`; 
+                print(" Value 1 :"+"x:"+ $vertexNormal_1[0]  +"__y:"+$vertexNormal_1[1]  +"__z:"+$vertexNormal_1[2]+"\n"); 
+                print(" Value 2 :"+"x:"+ $vertexNormal_2[0]  +"__y:"+$vertexNormal_2[1]  +"__z:"+$vertexNormal_2[2]+"\n");
+                $vertexNormal_mid[0] =($vertexNormal_1[0] + $vertexNormal_2[0]) /2;
+                $vertexNormal_mid[1] =($vertexNormal_1[1] + $vertexNormal_2[1]) /2;
+                $vertexNormal_mid[2] =($vertexNormal_1[2] + $vertexNormal_2[2]) /2;
+                print(" Value mid :"+"x:"+ $vertexNormal_mid[0]  +"__y:"+$vertexNormal_mid[1]  +"__z:"+$vertexNormal_mid[2]+"\n");
+                polyNormalPerVertex -xyz $vertexNormal_mid[0] $vertexNormal_mid[1] $vertexNormal_mid[2] $elementVertex[0]; 
+                polyNormalPerVertex -xyz $vertexNormal_mid[0] $vertexNormal_mid[1] $vertexNormal_mid[2] $elementVertex[1]; 
+             }
+             
 
-         } else
+             
+
+         } 
+         else
          {
             print("select 2 vertexNormal");
          }
+        
 
      }
      proc hardening() 

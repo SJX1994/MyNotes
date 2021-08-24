@@ -84,10 +84,12 @@ openGL（GLSL,OpenGL Shading Language）:
         https://web.stanford.edu/class/cs248/lectures.html
       
       图形成像：
-        https://web.stanford.edu/class/cs248/lectures.html
+       https://web.stanford.edu/class/cs148/lectures.html
 
       计算机呈像显示：
         https://web.stanford.edu/class/ee367/
+
+      
   
   关键环节：
     关键字：
@@ -267,9 +269,24 @@ openGL ES(OpenGL for Embedded Systems ):
     欧拉角：
       万象锁：
         顺xyz的层级顺序，当xy呈现-90度时出现（3d动画、maya中可以复现）
-    四元数
+    四元数:
+      化简公式：
+        1-2*pow(y,2)-2*pow(z,2)    2xy -2sz  2xz + 2sy   0
+        2xy + 2sz                  1-2*pow(x,2)-2*pow(z,2)
+        公式参考：
+          http://www.songho.ca/opengl/gl_quaternion.html
+          https://www.geeks3d.com/20141201/how-to-rotate-a-vertex-by-a-quaternion-in-glsl/
+      文档参考
+        https://krasjet.github.io/quaternion/quaternion.pdf
+
+      视频参考
+        https://www.bilibili.com/video/BV1SW411y7W1
     矩阵旋转
 
+  降低饱和度Desaturation：
+    vec3 color = texture2D( sampler , uv ).rgb;
+    vec3 gray = vec3( dot( color , vec3( 0.2126 , 0.7152 , 0.0722 ) ) );
+    fragColor = vec4( mix( color , gray , desaturationFactor ) , 1.0 );
 调试：
   Nsight:
     配置：
