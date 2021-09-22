@@ -18,6 +18,10 @@
                         -command "MergVerts";
                         text -label " " -en off;
                   columnLayout -adjustableColumn true;
+                        button -height 23 -width 23 -backgroundColor 255 241 155 -label "SafeDel"
+                        -command "SafeDel";
+                        text -label " " -en off;
+                  columnLayout -adjustableColumn true;
                         button -height 23 -width 23 -backgroundColor 255 241 155 -label "Show"
                         -command "Show";
                         text -label " " -en off;
@@ -25,6 +29,169 @@
                   showWindow adia_myVertexNormalSort_Window;
             }
 
+            proc SafeDel()
+            {
+                  $selectList = `ls -selection -flatten`;
+                  string $selectBuffer[];
+                  for($i=0;$i<size($selectList);$i++)
+                  {     
+                        
+                        
+                        $VN =   `polyNormalPerVertex -q -freezeNormal $selectList[$i]`;
+                        // print("aaaaa\n");
+                        // print( $selectList[$i] +"\n");
+                        // print(size($VN));
+                        if(size($VN)>1)
+                        {
+                              select -d $selectList[$i]; 
+                        }
+                        // print("aaaaa\n");
+                        $selectBuffer = `ls -selection -flatten`;
+                  }
+
+                  $selectList2 = `ls -selection -flatten`;
+                   $elementVertexs = `filterExpand -expand on -selectionMask 31  $selectList2`;
+                  string $objectName[] = stringToStringArray($selectList2[0], ".");
+                  for($i=0;$i<size($elementVertexs);$i++)
+                  {
+                        $faces = `polyListComponentConversion -toFace $selectList2[$i] `;
+                        vector $posY = `pointPosition -w $elementVertexs[$i]`;
+                        
+                        for($f in $faces)
+                        {
+                              
+                              //$MaxDis = 0.0;
+                              $MaxAngle = 0.0;
+                              $MaxVert = " ";
+
+                              $vertexs = `polyInfo -faceToVertex $f `;
+                              string $vertex[] = stringToStringArray($vertexs[0], " ");
+                              string $pointPosName [4];
+                              $pointPosName[0] = $objectName[0]+".vtx["+ $vertex[2] +"]";
+                              $pointPosName[1] = $objectName[0]+".vtx["+ $vertex[3] +"]";
+                              $pointPosName[2] = $objectName[0]+".vtx["+ $vertex[4] +"]";
+                              $pointPosName[3] = $objectName[0]+".vtx["+ $vertex[5] +"]";
+
+                              //polySubdivideFacet -dv 1 -m 1 -n $f;
+                              //polySplit $f;
+                              polyConnectComponents -ch 1 $pointPosName[1] $pointPosName[2] $pointPosName[3];
+                              
+                              //      for($j=0;$j<size($pointPosName);$j++)
+                              //       {
+                              //             vector $posX = `pointPosition -w $pointPosName[$j]`;
+                              //             vector $posY = `pointPosition -w $elementVertexs[$i]`;
+
+                              //             float $x = $posX.x;
+                              //             float $y = $posX.y;
+                              //             float $z = $posX.z;
+                              //             float $x2 = $posY.x;
+                              //             float $y2 = $posY.y;
+                              //             float $z2 = $posY.z;
+                              //             $angle = 
+                              //             `angleBetween 
+                              //             -euler 
+                              //             -v1 $x $y $z
+                              //             -v2 $x2 $y2 $z2`;
+
+                              //             print("bbbbb\n");
+                              //             float $EAngle0 = $angle[0] ;
+                              //             float $EAngle1 = $angle[1] ;
+                              //             float $EAngle2 = $angle[2] ;
+                              //             print( abs($EAngle0+$EAngle1+$EAngle2)  );
+                              //             print("\nbbbbbb\n");
+
+                              //             $OLD_angle = $MaxAngle;
+                              //             $NEW_angle = abs($EAngle0+$EAngle1+$EAngle2);
+                                          
+
+                              //             if( $OLD_angle >= $NEW_angle  )
+                              //             {
+                              //                   $MaxAngle =  $OLD_angle;
+                                                
+                              //             }else
+                              //             {
+                              //                   $MaxAngle = $NEW_angle;
+                              //                   $MaxVert = $pointPosName[$j];
+                              //             }
+
+                                          
+                              //       }
+                              //       select -add  $MaxVert;
+                              //       select -add  $elementVertexs[$i];
+
+                              // for($j=0;$j<size($pointPosName);$j++)
+                              // {
+                                   
+                                    
+                              //             if($j<3)
+                              //             {
+                              //                   vector $posX = `pointPosition -w $pointPosName[$j]`;
+                              //                   // vector $posX2 = `pointPosition -w $pointPosName[$j+1]`;
+                              //                   float $OldDis;
+                              //                   // if($j=0)
+                              //                   // {
+                              //                   //       $OldDis = getDistance($posX,$posY);
+                              //                   // }else
+                              //                   // {
+                              //                   //       $OldDis = $MaxVert;
+                              //                   // }
+                              //                   $OldDis = $MaxDis;
+                              //                   $NewDis = getDistance($posY,$posX);
+
+                                               
+
+                                                
+                              //                   //$MaxVert = $pointPosName[$j];
+
+                              //                   if( $OldDis >= $NewDis )
+                              //                   {
+                              //                         $MaxDis = $OldDis;
+                              //                         $MaxVert = $pointPosName[$j];
+
+                              //                         print("cccccc\n");
+                              //                         print( $MaxDis );
+                              //                         print("\ncccccc\n");
+                                                      
+                              //                   }else if( $OldDis <= $NewDis )
+                              //                   {
+                              //                         $MaxDis = $NewDis;
+                              //                         $MaxVert = $pointPosName[$j+1];
+
+                              //                         print("cccccc\n");
+                              //                         print( $MaxDis );
+                              //                         print("\ncccccc\n");
+                              //                   }
+
+                              //                   print("bbbbb\n");
+                              //                   print( $MaxVert +"\n");
+                              //                   print("bbbbbb\n");
+                                                
+                              //             }
+                                   
+                              // }
+                              // select -add  $MaxVert;
+                              
+                              
+                        }
+                       
+                        
+                      
+                        //polySplitVertex $elementVertexs[i] ;
+                  }
+                  
+                 select -r $selectBuffer; 
+                  for($s in $selectBuffer)
+                  {
+                        
+                        print("cccccc\n");
+                        print($s);
+                        print("\ncccccc\n");
+                  }
+
+                  
+
+                  
+            }
 
             proc Merg()
             {
@@ -54,11 +221,12 @@
                         polyOptions -sizeNormal 22.0;
                               setPolygonDisplaySettings("vNormal");
                         polyOptions -displayNormal true;
-                              
+                        TogglePolygonFaceTrianglesDisplay;
                         $troggle=1;
                   }else{
                         polyOptions -displayNormal false;
                         polyOptions -sizeVertex 9.0;
+                        TogglePolygonFaceTrianglesDisplay;
                         $troggle=0;
                   }
                   
@@ -132,9 +300,10 @@
             proc MergVerts()
             {
                   global float $disForMerg ;
-                  $disForMerg += 1.0;
-                  print($disForMerg);
-                  polyMergeVertex  -d $disForMerg -am 1;
+                  float $dis =  $disForMerg + 1.0;
+                  print("disMerg: \n");
+                  print($dis);
+                  polyMergeVertex  -d $dis -am 1;
             }
             //math
             proc float getDistance(vector $x, vector $y)

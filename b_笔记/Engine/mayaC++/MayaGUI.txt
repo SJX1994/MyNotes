@@ -5,7 +5,9 @@
                   https://knowledge.autodesk.com/zh-hans/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2019/CHS/Maya-Basics/files/GUID-092344A4-0BFB-4C1A-8C10-1017AC92BBC4-htm.html
             编辑_LOD_GenerateLODMesh
 
-编辑器：
+编辑器：    
+      保存面板(代码)：
+            saveAllShelves $gShelfTopLevel;
       随时间自动保存：
             https://knowledge.autodesk.com/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2020/ENU/Maya-ManagingScenes/files/GUID-BF903937-BAAD-4E28-ADE3-592EB0F8AAA5-htm.html#:~:text=Select%20Windows%20%3E%20Settings%2FPreferences%20%3E,Autosave%20section%2C%20turn%20on%20Enable.&text=See%20the%20Autosave%20section%20of,a%20description%20of%20these%20options.
       
@@ -30,11 +32,58 @@
             原理：
                   https://www.bilibili.com/video/BV1YJ41127qe/?spm_id_from=333.788.recommend_more_video.-1
             做动画角度最小的放中间
+
       批量合并顶点：
             编辑网格-> 合并:设置阈值
+
+      烘培顶点动画：
+            Cache > Geometry Cache > Create new cache
+      烘培动画：      
+            https://knowledge.autodesk.com/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2020/ENU/Maya-Animation/files/GUID-72394768-6DD7-4676-857F-B0468509CFF6-htm.html
+            混合变形：
+                  
+                  https://youtu.be/L2Qnuve7sY4
+
+                  创建：
+                        变形(创建)-混合变形 3个物体 
+                  修改：
+                        在 通道层编辑器
+                  添加：
+                        编辑-混合变形-添加
+                  编辑：
+                        窗口——动画编辑器——形变编辑器
+                        
+                        眉毛 胡子之类：
+                              窗口——常规编辑器——连接编辑器
+      预览多重采样抗锯齿：
+            操作面板——渲染器——viewport2.0——抗锯齿
+
+      穿透选择：
+            只选择正面：
+                  TAB+鼠标左键
+            基于相机选择：
+                  Ctrl + Shift + Right Click 
+                  _ Select
+                  _ Camera_Based Selection
+
+      
+
+
+
 Mel:
       API:
             Ref: 
                   https://help.autodesk.com/cloudhelp/2019/ENU/Maya-Tech-Docs/Commands/
 
+            filterExpand 选择遮罩：
+                  https://help.autodesk.com/cloudhelp/2016/ENU/Maya-Tech-Docs/Commands/filterExpand.html
+
+            faceVertexNoraml:
+                  http://ewertb.mayasound.com/mel/mel.005.php
+
+            polyListComponentConversion:
+                  类型转换
 通用：
+      great youtube：
+            中文：
+                  https://www.youtube.com/channel/UC8uSIqyCFzO3gvOPgfhyouQ

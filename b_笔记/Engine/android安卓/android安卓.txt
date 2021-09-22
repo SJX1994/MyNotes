@@ -2,10 +2,41 @@
       配置 sdk NDK:
             https://github.com/Light-City/CPlusPlusThings
             File->Project Structure
+      UI:
+            View:
+                  ToolWindows:
+                        Project:
+                              app:
+                                    java:
+                                          com.xxx.xxx:
+                                                MainActive:
+                                                      入口
+                                    res:
+                                          layout:
+                                                avtive_main.xml:
+                                                      UI布局：
+                                                      Design：
+                                                            Palette:
+                                                                  各种组件
+                                                            ComponentTree:
+                                    manifests:
+                                          AndroidManifest.xml:
+                                                定义组件的 清单文件
+                                    Gradle Scripts：
+                                          build.gradle：
+                                                构建应用的方式
 
 报错：
       缺少ant文件
-      解决：
-            https://stackoverflow.com/questions/43648201/cannot-find-build-xml-error-building-android-sdk-sample/47821206#47821206
-      原因：
-            新版安卓没有ant工具了
+            解决：
+                  https://stackoverflow.com/questions/43648201/cannot-find-build-xml-error-building-android-sdk-sample/47821206#47821206
+            原因：
+                  新版安卓没有ant工具了
+      无法下载Plugin：
+            Appearance & Behavior:
+                  System Settings HTTP Proxy:
+                        Auto-detect
+      
+      报缺少插件 重新安装：
+            删除：
+                  C:\Users\YourUserName\AppData\Roaming\Google\AndroidStudioPreview4.X\disabled_plugins.txt

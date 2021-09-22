@@ -3,3 +3,92 @@
 完成-窗户反射 Windshield no reflection
 完成-轮胎明显 Tyres not obvious 
 -Headlamps materials too see through
+
+一半_1、轮胎反射效果和后胎UV坐标调整
+2、分离模型前脸金属材质
+完成_3、dusk光照效果优化
+完成_4、玻璃分界线
+5、bloom减弱锯齿
+
+
+连续折射
+光线修正
+轮胎shadow
+
+后备箱动画：
+      动画更快
+      开箱进度条
+
+UI：
+      out slow （EastOut）
+
+2021/9/6: 
+      1.Rim Light incorrect  (fix)
+      2.Warm Light
+            Too hot along the front (fix)
+            Saturation on the light, intensity too strong (fix)
+            There should be some ‘blue’ on the hood & back in some angles (fix)
+      3.Rear C-Pillar – some surfacing looks like it shouldn’t be there (need after Reduce the number of model faces)
+      4.Highlight along rear fender & rear arch is not smooth, broken execution (need after Reduce the number of model faces)
+      5.B-pillar plastic trim is obvious – make dark (fix)
+      6.Chrome piece is very bright on bodyside when other elements are dark (fix)
+      7.Vehicle appears to be different perspective relative to the elliptical disk (i.e. Front wheel lifts when rotating) (fix)
+
+2021/9/22:
+      Welcome/Farewell
+
+      China team working on solution, plan to show demo next week
+      .MOV file is the non-compressed version that suppliers should leverage as baseline
+      For Farewell – TBC, but expect different to Welcome, possibly shorter, but still expect interaction with Door Deco ambient lighting.
+      
+
+      Contrast
+
+      Send email with corrected Ergo assessment values to the team – Jeffrey Yao
+      Grey Base value 2.0, Ergo should offer some options as the phone number value is not high purpose/prioritised info in vehicle. Investigate options – Jeffrey Yao
+      Studio prefer to maintain the distinction in bridghtness/grey between caller ID (name) vs phone number
+      
+
+      Assets
+
+      CDX707 HMI animations – Nico will cascade the 9/15 date to Fantasy to deliver
+      747 Themes C/O 707, however as 747 is BEV, differences are RTTs, secondary gauge layer, range start, DAT placements. Cut assets available from Global HMI team. Lisa Gao
+      747 Features – refer to separate email to Lisa Gao
+      
+
+      Vehicle Model - TS Kanzi team
+
+      Ellipse:
+
+      Appears to be leaning to the left. Should be horizontal in all cases. Check Focal length and camera angle
+      Different colour, very subtle layers, with contrasting pink and blue background. Adjust according to reference picture
+      
+
+      Scale of the vehicle in Controller appears incorrect:
+
+      Check gap to 4 cards on top and base persistent bar.
+      Adjust according to reference picture provided
+      
+
+      Side by Side comparison:
+
+            Frame 4, Fender to the Rear Surfacing. Check all cutlines. Front door to Rear door.
+            Frame 314, Front Fender to Front Door highlights not flowing through
+            Frame 27, 314, Rear Quarter Window has some material shade that shouldn’t be there. TS to check model after meeting
+            Frame 299, B & C pillar glossiness lacking
+            Frame 719, Light too hot on vehicle
+            Frame 510, Top of hood light too hot
+            Frame 448, Adjust Glow to the Chrome Front bar lower
+            Frame 458, Weird shadows on the rear Door
+            Frame 132, More red light on the Right side
+            Frame 186, Stop light too illuminated, adjust to match LHS model
+            Frame 594, Warm Light lacking on the Fender – check light height
+            Frame 700, Bottom of the vehicle has a part floating / reflection – shouldn’t be there
+            
+
+            Other videos:
+
+            Incoming Phone call – 500ms is preferred
+            Call Exchange – add slight delay to the head icon (Doraemon) so it is chasing the disk when move to the left. For soft buttons coming in, bottom button should come first. For soft buttons moving out, bottom button should leave first
+            Phone Selection Menu – 500ms preferred
+            Device Change Drop down menu – 200ms preferred. Check with HMI team on the device speed calculate by window size option.      

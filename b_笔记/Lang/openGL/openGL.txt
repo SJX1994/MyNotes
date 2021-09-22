@@ -89,7 +89,12 @@ openGL（GLSL,OpenGL Shading Language）:
       计算机呈像显示：
         https://web.stanford.edu/class/ee367/
 
-      
+    youtube:
+      Ben Cloward
+      Freya Holmér
+    
+    变量：
+      https://colin1994.github.io/2017/11/11/OpenGLES-Lesson04/
   
   关键环节：
     关键字：
@@ -177,6 +182,14 @@ openGL ES(OpenGL for Embedded Systems ):
         反向
   max：
     返回两个值中较大的一个
+  normalize:
+    ref:
+      http://www.fundza.com/vectors/normalize/index.html
+    
+    归一化后的向量.x = x/向量长度
+    x = x(old) / sqrt((ax * ax) + (ay * ay) + (az * az))
+    y = y(old) / sqrt((ax * ax) + (ay * ay) + (az * az))
+    z = z(old) / sqrt((ax * ax) + (ay * ay) + (az * az))
 
 操作：
   可视化顶点法线：(TODO)
@@ -287,7 +300,15 @@ openGL ES(OpenGL for Embedded Systems ):
     vec3 color = texture2D( sampler , uv ).rgb;
     vec3 gray = vec3( dot( color , vec3( 0.2126 , 0.7152 , 0.0722 ) ) );
     fragColor = vec4( mix( color , gray , desaturationFactor ) , 1.0 );
+
+  贝塞尔曲线：
+    https://ciechanow.ski/drawing-bezier-curves/
+    https://youtu.be/aVwxzDHniEw
+    
+    实现：
+    https://community.khronos.org/t/trouble-using-tessellation-to-draw-cubic-bezier-curves/74817
 调试：
+
   Nsight:
     配置：
       https://developer.nvidia.com/nsight-tools-visual-studio-integration
