@@ -40,3 +40,6 @@
       报缺少插件 重新安装：
             删除：
                   C:\Users\YourUserName\AppData\Roaming\Google\AndroidStudioPreview4.X\disabled_plugins.txt
+      
+      openGl显示奇怪：
+            可能是Windows上编译变量重名，贯穿整个定义域

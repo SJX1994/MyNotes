@@ -1,4 +1,5 @@
 # kanzi 3.6.13学习笔记
+激活码：3404-9800-5938-7033(一年)
 + 文档
   + 着色器：
     + file:///D:/softWare/Kanzi/Documentation/zh-cn/Content/Working%20with/Shaders/Editing%20shaders.htm#Shader2

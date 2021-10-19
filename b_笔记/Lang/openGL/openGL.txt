@@ -307,6 +307,11 @@ openGL ES(OpenGL for Embedded Systems ):
     
     实现：
     https://community.khronos.org/t/trouble-using-tessellation-to-draw-cubic-bezier-curves/74817
+
+  卷积降噪：
+    ref：
+      https://segmentfault.com/a/1190000037749983
+  
 调试：
 
   Nsight:

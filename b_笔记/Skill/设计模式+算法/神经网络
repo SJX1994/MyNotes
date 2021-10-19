@@ -1,0 +1,47 @@
+Neural Networks
+      Nvidia：
+            NVIDIA Canvas：
+            Kaolin：
+                  base：
+                        pyTorch库：
+                              基于Torch开源机器学习库，用于计算机视觉自然语言处理，FacebookAI实验室研发
+                        Tensorflow：
+                  结构：
+                        Nvidia Omniverse Kaolin App：
+                              3D 数据集可视化工具（包含训练期间的模型）
+                        Nvidia Kaolin 库
+                              PyTorch 的变种接口，支持3D 点云 网格 体素 DIB-R kaolinRender 3D数据集 加载3D模型 
+                  环境：
+                        py 3.7
+                              ANACONDA:
+                                    Py 和 R 的科学计算 
+                                    环境变量：
+                                          path 添加 C:\ProgramData\Anaconda3\condabin\ 
+                                          cmd 输入 conda init
+                                    配置环境：
+                                          cmd 输入：
+                                                conda init
+                                                conda activate YourEnvermont
+                                                pip install tensorflow
+                                                conda install mat
+                                                conda install pandas
+                                          在home下安装：
+                                                jupyter lab:
+                                                      基于web的开发环境
+                                                      Jupyter Notebook:
+                                                            开源 Web 应用程序,
+
+                                          
+                        pytorch 1.70
+                        CUDA 11.2
+                        Nvidia Kaolin Library
+                        Nvidia Omniverse Launcher 
+
+            OMNIVERSE CREATE(全方位创造):
+                  以交互方式实时组装、照明、模拟和渲染场景。
+
+      Unity:
+            ML-Agents package:
+                  
+      Ref：
+            improved differential renderer(差分渲染器)

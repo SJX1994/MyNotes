@@ -73,16 +73,27 @@ UI：
       Side by Side comparison:
 
             Frame 4, Fender to the Rear Surfacing. Check all cutlines. Front door to Rear door.
+            挡泥板后表面。 检查所有切割线。 前门到后门。
             Frame 314, Front Fender to Front Door highlights not flowing through
+            前挡泥板到前门的亮点没有流过
             Frame 27, 314, Rear Quarter Window has some material shade that shouldn’t be there. TS to check model after meeting
+            后四分之一窗有一些不应该存在的材料阴影。 TS 会后检查模型
             Frame 299, B & C pillar glossiness lacking
+            B&C柱光泽度不足
             Frame 719, Light too hot on vehicle
+            车灯太热
             Frame 510, Top of hood light too hot
+            引擎盖顶部灯太热
             Frame 448, Adjust Glow to the Chrome Front bar lower
+            将 Glow 调整到 Chrome Front 栏下方
             Frame 458, Weird shadows on the rear Door
+            后门上奇怪的阴影
             Frame 132, More red light on the Right side
+            右侧更多红灯
             Frame 186, Stop light too illuminated, adjust to match LHS model
+            刹车灯太亮，调整以匹配 LHS 型号
             Frame 594, Warm Light lacking on the Fender – check light height
+            挡泥板上缺少暖光——检查灯的高度
             Frame 700, Bottom of the vehicle has a part floating / reflection – shouldn’t be there
             
 
@@ -91,4 +102,38 @@ UI：
             Incoming Phone call – 500ms is preferred
             Call Exchange – add slight delay to the head icon (Doraemon) so it is chasing the disk when move to the left. For soft buttons coming in, bottom button should come first. For soft buttons moving out, bottom button should leave first
             Phone Selection Menu – 500ms preferred
-            Device Change Drop down menu – 200ms preferred. Check with HMI team on the device speed calculate by window size option.      
+            Device Change Drop down menu – 200ms preferred. Check with HMI team on the device speed calculate by window size option.  
+
+2021/9/23: 
+      见飞书QQ
+
+2021/10/18: 
+
+      Controller Launcher 3D model Demo review: (控制器启动器 3D 模型演示评论)
+
+            Taillamps and Headlamps more illuminated, in particular the daytime running lamps is a feature piece always on. 
+            尾灯和前大灯的亮度更高，尤其是日间行车灯始终亮着。
+            完成
+            Tyre Pressure kPA lines rotating appears permanently attached to tyre, not elegant execution. Suggests to reference GT500 where the info could be floating balloons dynamically. Studio requests TS to provide 1-2 proposals for review
+            轮胎压力 kPA 线旋转似乎永久附着在轮胎上，而不是优雅的执行。 建议参考GT500，其中信息可以是动态浮动气球。 Studio要求TS提供1-2个提案进行审核
+            同事
+            UI/UE document requested and need HMI team to support 
+            已请求 UI/UE 文档并需要 HMI 团队支持      
+            同事
+            Keep the vehicle centered on the screen, not too high.
+            保持车辆在屏幕中央，不要太高。
+            同事
+            Vehicle camera angle should match latest released reference, so the roof shouldn’t be visible as much, vehicle should be more eye level.
+            车载摄像头的角度应该与最新发布的参考相匹配，所以车顶不应该那么明显，车辆应该更接近视线。
+            同事
+            Introduce very slow motion rotation when in idle menu (maybe start with 80-100 focal length and check)
+            在空闲菜单中引入非常慢的动作旋转（可能从 80-100 焦距开始并检查）
+            同事
+      3D car model standalone: (独立的 3D 汽车模型：)
+
+            Wheel – please add silver disk brake & callipers – current wheels look hollow. (车轮 – 请添加银色盘式制动器和卡钳 – 当前车轮看起来空心。)
+            完成
+            Wheel arch Frt & RR should be body colour – currently too dark ( 轮拱 Frt 和 RR 应该是车身颜色——目前太暗了 )
+            完成
+            Studio requests TS to share another video with open trunk + rotation, open door + rotation ( Studio 请求 TS 分享另一个视频，打开后备箱+旋转，开门+旋转 )
+            同事

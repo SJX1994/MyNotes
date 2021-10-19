@@ -4,6 +4,8 @@
             官方：
                   https://knowledge.autodesk.com/zh-hans/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2019/CHS/Maya-Basics/files/GUID-092344A4-0BFB-4C1A-8C10-1017AC92BBC4-htm.html
             编辑_LOD_GenerateLODMesh
+      骨骼动画：
+            https://youtu.be/1wvdQy2Fdhw
 
 编辑器：    
       保存面板(代码)：
@@ -66,9 +68,92 @@
                   _ Select
                   _ Camera_Based Selection
 
+      模型显示黑色线框无法选中：
+
+            1.未分组
+                   ctrl + A 调出该网格的属性编辑器 添加到组别
+            2.设置成模板
+                  对象显示-模板
+      maya依存关系图：
+            打开“Hypergraph”（“窗口 > 常规编辑器 > Hypergraph: 连接”(Window > General Editors > Hypergraph: Connections)）。
+            选择“Hypergraph”中的以下菜单项之一：
+            选择“图表 > 输入和输出连接”(Graph > Input and Output Connections)，以显示引向节点的输入链和从节点引出的输出链。
+            选择“图表 > 输入连接”(Graph > Input Connections)，以显示引向节点的输入链。
+            选择“图表 > 输出连接”(Graph > Output Connections)，以显示从节点引出的输出链。
       
+      删除融合目标节点：
+            动画模式下——变形——编辑——融合变形——移除
 
+VRay渲染器：
+      简介：
+            V-ray离线渲染光追技术，多CPU，GPU 分布式渲染，多插件兼容，可编程着色器渲染管线
+            wiki：
+                  1997年发行，发行商：美国 Chaos Group
+      设置安装：
+            盗版：
+            启用：
+                  windows-settingPreferece-Plugin manager:
+                        vray for maya. mll
+                        vray volum grid.mll
+                        xgen vray.mll
+                  render Setting:
+                        render Useing:
+                              vray
+                        
+      Coding:
+            命令：
+            SDK：
+            Python：
+                  offical reference：
+                        https://docs.chaosgroup.com/display/VMAYA/Python+Access+to+the+Translated+V-Ray+Scene
+      渲染设置：
+            Common:
+                  Image file output:
+                        file name prefix:
+                              输出图片名称
+                        Version Label:
+                        Image Format:
+                              图片格式
+                  Animation：
+                        渲染动画
+                  RenderableCamera：
+                        目标相机
+                  Resolution:
+                        品质
+                  
+            VRay:
+                  ProductionRenderer：
+                        选择cpu or gpu ( CUDA 英伟达架构 )
+                  V-Ray render devices：
+                        渲染硬件选择
+                  Image sampler：
+                        图片采样
+                  
+                  
+            GI(全局光照):
 
+                  
+            Settings:
+            Overrides:
+                  Camera：
+                        运动模糊
+                  Environment:
+                        环境映射
+            RenderElement（渲染管线）:
+                  
+            IPR（实时渲染）:
+
+      工具栏：
+            VRay:
+                  V-RayFrameBuffer:
+                        实时预览渲染
+      视口快捷键：
+            Start/Stop V-Ray Viewport IPR：
+                  开启实时渲染
+      属性栏：
+            AttributeEditor:
+                  调整灯光属性
+            
 
 Mel:
       API:
@@ -83,7 +168,15 @@ Mel:
 
             polyListComponentConversion:
                   类型转换
+
+            listAttr：
+                  显示所有属性：
+                        https://help.autodesk.com/cloudhelp/2017/ENU/Maya-Tech-Docs/Commands/listAttr.html
 通用：
       great youtube：
             中文：
                   https://www.youtube.com/channel/UC8uSIqyCFzO3gvOPgfhyouQ
+报错：
+      The plug-in has detected mesh nodes with unsupported operators that affect the vertex and/or face count. To correct this, delete the Non-deformer history before exporting. The following nodes will not be processed：
+      解决方法：
+            在绑定之前，应该始终删除网格上的历史记录
