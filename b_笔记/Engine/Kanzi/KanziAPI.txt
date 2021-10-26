@@ -70,3 +70,14 @@ kzb访问:
 系统：
       内存管理：
             dynamic_pointer_cast(获取地址内容)
+
+报错：
+      常见：
+            找不到kzjs_GL_vs2015_Release.dll报错解决方案
+            工作目录：..\..\..\bin
+            环境：PATH=$(ProjectDir)$(KanziEnginePath)$(KanziDllPath);$(ProjectDir)$(PluginDllPath)
+
+            找不到插件dll解决方案
+            将Application下插件中Win32文件夹的dll文件
+            复制到
+            Application下output文件夹Win32/GL_vs2015_Release_DLL中

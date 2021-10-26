@@ -1,0 +1,12 @@
+python：
+     
+      Matplotlib:
+            安装：
+                  pip install matplotlib
+            简介：
+                  数值数学扩展 NumPy 的绘图 Matplotlib 库
+      opencv:
+            安装：
+                  pip install opencv-python
+            简介：
+                  主要针对实时计算机视觉的编程函数库。
