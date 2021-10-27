@@ -62,6 +62,14 @@ batch：
                 ts编译码
         init:
             初始化NodeJS框架
+    
+    cd:
+        跑到目录下：
+        
+        /d :
+            盘符
+        "path":
+            目标路径
 
 PowerShell:
 
