@@ -14,6 +14,11 @@
       检查ssh：
             
 报错：
+      无法访问：
+            修改host：
+                  https://zhuanlan.zhihu.com/p/107334179
+            vpn测速工具：
+                  http://ping.chinaz.com/github.com
       errno 10054：
             原因：
                   上传大小限制

@@ -312,6 +312,19 @@ openGL ES(OpenGL for Embedded Systems ):
     ref：
       https://segmentfault.com/a/1190000037749983
   
+  本地矩阵：
+      mat4 objectSpaceMatrix()
+      {
+          mat4 objSpaceMat  = mat4(
+            vec4 ( 0.5,  0.5, 0.5 , 1.0),
+              vec4  (-0.5,  0.5, 0.5, 1.0),
+              vec4  ( 0.5, -0.5, 0.5, 1.0),
+            vec4   (-0.5, -0.5, 0.5, 1.0)
+          );
+          return objSpaceMat;
+      }
+    ref：
+      https://stackoverflow.com/questions/16225815/object-world-camera-and-projection-spaces-in-opengl
 调试：
 
   Nsight:
