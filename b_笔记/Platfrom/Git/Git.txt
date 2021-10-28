@@ -60,6 +60,29 @@
                         高级设置灰色：
                               https://blog.csdn.net/qq_40846017/article/details/105351900
 
+      Large files detected. You may want to try Git Large File Storage：
+            超过100mb解决方法(超过1GB就要收费)：
+                  下载：https://git-lfs.github.com/
+                  安装： 
+                        $ cd {REPO}
+                        $ git lfs install
+                  回滚提交：
+                        $ cd {REPO}
+                        $ git reset --soft HEAD^
+                  大文件提交：
+                        $ cd {REPO}
+                        $ git lfs track {LARGE_FILE}            
+                        $ git add .gitattributes   
+
+                        $ git add {LARGE_FILE}                 
+                        $ git commit -m 'I added {LARGE_FILE}.' 
+                  REF:
+                        https://qiita.com/kanaya/items/ad52f25da32cb5aa19e6
+
+                  Pakes/OpenGLCourse.mp4
+
+
+
 mac:
       生成ssh：
             报错：
@@ -83,15 +106,28 @@ mac:
                   git pull origin master
 
                   git push origin master
-      生成ssh：
-            $ git config --global user.name "xxx"
-            $ git config --global user.email "xxx.mail@xxx.com"
+      ssh:
+            ref：
+                  https://www.jianshu.com/p/31cbbbc5f9fa
+            检查ssh：
+                  ls -al ~/.ssh
+                  (如果有直接设置)
 
-            cd ~/.ssh
-            
-            $ ssh-keygen -t rsa -C "xxx.mail@xxx.com"
+            生成ssh：
+                  $ git config --global user.name "xxx"
+                  $ git config --global user.email "xxx.mail@xxx.com"
 
-            ~/.ssh
+                  cd ~/.ssh
+                  
+                  $ ssh-keygen -t rsa -C "xxx.mail@xxx.com"
+
+                  ~/.ssh
+
+            设置ssh：
+                  # start the ssh-agent in the background
+                  eval "$(ssh-agent -s)"
+                  Agent pid 59566
+                  ssh-add ~/.ssh/id_rsa
 
 
 

@@ -4,5 +4,5 @@
       "files.associations": {
             "cstdint": "cpp"
       },
-      "python.formatting.provider": "autopep8"
+      "python.formatting.provider": "black"
 }
