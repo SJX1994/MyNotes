@@ -43,6 +43,8 @@ VSCode:
             正则表达式：
                 ^\s*(?=\r?$)\n：
                     删除无效回行
+                [^\x00-\xff]：
+                    查找所有中文
     操作：
         python导入库：
             settings.json:

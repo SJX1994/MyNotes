@@ -137,3 +137,71 @@ UI：
             完成
             Studio requests TS to share another video with open trunk + rotation, open door + rotation ( Studio 请求 TS 分享另一个视频，打开后备箱+旋转，开门+旋转 )
             同事
+
+2021/11/1:
+      Frame 9:
+
+            Lower side body need spear – outline needs to be straighten. Chrome piece along body side needs to be brighter
+            侧面下部金属感（独立反光遮罩）
+            光线轮廓拉直（删除梯形算法代码）————————————————————————————————————完成
+            
+            B & C pillar – Blue hue on the top half of the exterior trim. Shouldn’t be there
+            B&C黑色反光(反光颜色遮罩) ————————————————————————————————————完成
+      
+
+
+      Frame 161:
+
+            Rear Stop Light too bright, needs to be darker per reference
+            Lower light strips above exhaust pipe also too bright
+            刹车亮度渐变（圆形遮罩） ————————————————————————————————————完成
+            Badges missing – check texture files
+            贴图显示不全（增加贴图的显示和明暗色差） ————————————————————————————————————制作中
+            Chrome bar needs to be more visible – too dark almost body colour
+            底部显亮（增加反射）
+
+      Frame 533:
+
+            Adjust texture
+            前车灯厚度（调整模型）
+            Chrome piece bottom of grille need to be brighter
+            下部金属（定制反光遮罩）
+      
+
+      Frame 32:
+
+            Tyre – Rubber on the tyre has an arch that shouldn’t be there. Try to remove.
+            尝试删除贴图上的文字（PS删除）
+            Disk Brake needs to darken – too light grey currently
+            刹车片颜色调整暗（调整亮度）
+            Front & Rear door handles missing
+            门把手贴图（增加贴图的显示和明暗色差）
+            Wheel Arch gap uneven in height (looks like heavy load in rear)
+            车模重心（调整旋转车模）————————————————————————————————————完成
+      
+
+      5 Exterior Colours
+
+            00:19 (White)
+
+            Front hood has black shadow shouldn’t be there
+            黑色斑纹（猜测是颜色越界导致）
+            Side strips along body side top and bottom of A->B->C pillar has colour separation. Need to check Piano Black – reflective
+            abc分色（天空盒子位置没有调整）
+
+            Burgundy – body colour seems too light – needs to be darker
+            调颜色
+
+            Door Handles missing
+            同上 F32
+
+            Headlamp – DTRL stripe need to be consistent bright across entire stripe. Currently you can see sections
+            同上 F533
+
+            Front camera sensors area lower bumper too dark – need to be able to see the sensors / front camera
+            同上 F161
+
+            Last week Tyre request based on GT650 reference – need UE update from HMI team @Gao, Lisa (L.) & Wang Jing Jing
+            
+
+            Studio team to review remaining 4 videos and provide feedback offline @Nguyen, Nicholas (N.)@Thetard, Nicolas (NT.)

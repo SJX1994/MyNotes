@@ -7,7 +7,12 @@
       骨骼动画：
             https://youtu.be/1wvdQy2Fdhw
 
-编辑器：    
+编辑器： 
+      3D绘制贴图工具：
+            渲染模式：
+                  3D绘制工具：
+                        FileTexture：
+                              承载信息的贴图设置
       保存面板(代码)：
             saveAllShelves $gShelfTopLevel;
       随时间自动保存：

@@ -153,6 +153,15 @@ openGL ES(OpenGL for Embedded Systems ):
    《 OpenGL ES 3.0编程指南 》：
 
 通用概念：
+  Element Buffer Objects(EBO):
+    元素缓冲对象：
+      存储重复绘制的顶点
+  Vertex Array Objects(VAOs):
+    顶点数组对象:
+      存储完整渲染对象的信息
+  Vertex Buffer Objects(VBOs):
+    顶点缓冲区对象:
+      一个描述顶点的坐标，另一个描述与每个顶点关联的颜色。VBO 还可以存储法线、texcoords、索引等信息。
   GPU的单元:
     SM：
       shader复杂度决定了sm吞吐量

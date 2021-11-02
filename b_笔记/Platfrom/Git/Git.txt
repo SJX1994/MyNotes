@@ -13,6 +13,12 @@
       创建修改独立分支：
             https://www.freecodecamp.org/news/git-clone-branch-how-to-clone-a-specific-branch/
       检查ssh：
+      
+      创建gitignore：
+            创建文本文件 gitignore.txt
+            在文本编辑器中打开它并添加您的规则，然后保存并关闭
+            按住 SHIFT，右键单击您所在的文件夹，然后选择在此处打开命令窗口
+            然后在命令行中重命名文件，使用 ren gitignore.txt .gitignore
             
 报错：
       无法访问：
