@@ -142,7 +142,7 @@ UI：
       Frame 9:
 
             Lower side body need spear – outline needs to be straighten. Chrome piece along body side needs to be brighter
-            侧面下部金属感（独立反光遮罩）
+            侧面下部金属感（独立反光遮罩）————————————————————————————————————完成
             光线轮廓拉直（删除梯形算法代码）————————————————————————————————————完成
             
             B & C pillar – Blue hue on the top half of the exterior trim. Shouldn’t be there
@@ -154,28 +154,28 @@ UI：
 
             Rear Stop Light too bright, needs to be darker per reference
             Lower light strips above exhaust pipe also too bright
-            刹车亮度渐变（圆形遮罩） ————————————————————————————————————完成
+            刹车亮度渐变（遮罩） ————————————————————————————————————完成
             Badges missing – check texture files
-            贴图显示不全（增加贴图的显示和明暗色差） ————————————————————————————————————制作中
+            贴图显示不全（增加AO贴图的显示和明暗色差） ————————————————————————————————————完成
             Chrome bar needs to be more visible – too dark almost body colour
-            底部显亮（增加反射）
+            底部显亮（增加反射+AO）————————————————————————————————————完成
 
       Frame 533:
 
             Adjust texture
-            前车灯厚度（调整模型）
+            前车灯厚度（调整模型）————————————————————————————————————完成
             Chrome piece bottom of grille need to be brighter
-            下部金属（定制反光遮罩）
+            下部金属（定制反光,反光算法+ao）————————————————————————————————————完成
       
 
       Frame 32:
 
             Tyre – Rubber on the tyre has an arch that shouldn’t be there. Try to remove.
-            尝试删除贴图上的文字（PS删除）
+            尝试删除贴图上的文字（PS删除）————————————————————————————————————完成
             Disk Brake needs to darken – too light grey currently
-            刹车片颜色调整暗（调整亮度）
+            刹车片颜色调整暗（调整亮度）————————————————————————————————————完成
             Front & Rear door handles missing
-            门把手贴图（增加贴图的显示和明暗色差）
+            门把手贴图（增加贴图的显示和明暗色差）————————————————————————————————————完成
             Wheel Arch gap uneven in height (looks like heavy load in rear)
             车模重心（调整旋转车模）————————————————————————————————————完成
       
@@ -185,9 +185,9 @@ UI：
             00:19 (White)
 
             Front hood has black shadow shouldn’t be there
-            黑色斑纹（猜测是颜色越界导致）
+            黑色斑纹（猜测是颜色越界导致）————————————————————————————————————完成
             Side strips along body side top and bottom of A->B->C pillar has colour separation. Need to check Piano Black – reflective
-            abc分色（天空盒子位置没有调整）
+            abc分色（天空盒子位置没有调整）————————————————————————————————————完成
 
             Burgundy – body colour seems too light – needs to be darker
             调颜色
@@ -205,3 +205,5 @@ UI：
             
 
             Studio team to review remaining 4 videos and provide feedback offline @Nguyen, Nicholas (N.)@Thetard, Nicolas (NT.)
+
+            后处理光晕贴图反射

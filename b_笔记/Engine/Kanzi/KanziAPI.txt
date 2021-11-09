@@ -70,6 +70,9 @@ kzb访问:
 系统：
       内存管理：
             dynamic_pointer_cast(获取地址内容)
+      cfg：
+            系统调试：
+                  PerformanceInfoLevel = 2
 
 报错：
       常见：

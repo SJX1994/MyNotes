@@ -25,6 +25,96 @@
                                     Gradle Scripts：
                                           build.gradle：
                                                 构建应用的方式
+android studio：
+      測試:
+            GPU Debug:
+                  ref:
+                        https://developer.android.com/agi
+            abd:
+                  android debug bridge:
+                        路径：
+                              android_sdk/platform-tools/
+                        概念：
+                              设备通讯工具
+                  命令：
+                        adb devices：
+                              设备连接列表
+                        adb tcpip 5555：
+                              设备监听端口
+                        adb connect device_ip_address:5555：
+                              通过IP地址连接到设备
+                        adb -s xxx1 uninstall xxx2:
+                              删除应用
+                              xxx1 为设备 xxx2 应用
+                        adb install -r -t <pathOfApp>:
+                              安装pathOfApp
+                        adb shell pm list packages > your_text_file_name.txt:
+                              抓包名输出到 目标目录的 your_text_file_name
+                        adb shell dumpsys SurfaceFlinger --latency SurfaceView[包名]：
+                              测试fps
+      系统：
+            .gradle:
+                  ref:
+                        https://www.cnblogs.com/shihuvini/p/10077425.html
+                  path:
+                        C:\Users\ts\.gradle
+                  
+
+      项目：(*为需要关注的文件)
+           
+                  .idea
+                        系统生成的配置目录（版权 字典 编译信息 ...）
+                  build
+                        系统自动生成的编译目录
+                  *gradle:
+                        是独立的第三方 构建自动化工具 支持Java、Kotlin、Groovy、Scala、C / C++、JavaScript
+                        控制从编译和打包到测试、部署和发布任务中的开发过程
+
+                  模组中:
+                        build：
+                              系统自动生成当前模组的编译目录
+                        *libs:
+                              jar包存放目录（目前移到gradle）
+                        *src:
+                              源码 资源目录
+                              androidTest：
+                                    系统生成的测试目录
+                              *main：
+                                    主目录
+                                    java：
+                                          java代码目录
+                                    res：
+                                          资源文件目录
+                                    Manifest:
+                                          Andriod程序的入口点，一个 XML 文件，其中包含有关 Android 应用程序的重要元数据。这包括包名称、活动名称、主要活动（应用程序的入口点）、Android 版本支持、硬件功能支持、权限和其他配置。
+
+                              build.gradle:
+                                    当前模组的Gradle编译文件
+                              proguard-rules.pro:
+                                    混淆文件,命令行工具，它通过压缩字节码和混淆类、字段和方法的名称来减少应用程序的大小。
+                                    ProGuard 為 GuardSquare 公司開源工具
+                              模块.iml:
+                                    当前模组的配置文件
+
+                  .iml:
+                        项目空间的配置文件
+                  *build.gradle:
+                        项目空间的Gradle编译文件
+                  gradle.properties:
+                        gradle的属性文件
+                  gradlew:
+                        gradlew信息文件
+                  gradlew.bat:
+                        gradlew的执行文件
+                  local.properties:
+                        本地属性
+                  setting.gradle:
+                        添加和删除模组
+                  
+      External Libraries:
+            SDK JDK 注释 其他第三方库            
+                              
+
 
 报错：
       缺少ant文件
@@ -43,3 +133,36 @@
       
       openGl显示奇怪：
             可能是Windows上编译变量重名，贯穿整个定义域
+      未经授权Unauthorized:
+            在手机上授权：
+                  设置 > 系统 > 开发者选项 > USB 调试
+      
+kanzi配置android:
+      1、 下载android sdk
+            检查方法：
+                  Tools:
+                        SDK Manager:
+                              System Settings:
+                                    AndroidSDK:
+
+      2、 下载Java sdk
+            检查方法：
+                  File:
+                        ProjectStuart:
+                              GradleSetting:
+                                    GradleJDK
+      3、 配置环境变量，java  adb (android sdk):
+            java:
+            android debug bridge:
+                  路径：
+                        android_sdk/platform-tools/
+                  概念：
+                        设备通讯工具
+      4、 安装android studio
+
+      1、覆盖kanzi-android 组件:
+
+      2、使用android studio 打开 android_gradle 工程
+      3、如果有引用3方插件，需要修改cmakeList.txt
+
+      4、 run or build
