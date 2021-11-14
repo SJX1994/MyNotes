@@ -6,6 +6,8 @@
 #include "Packages/com.unity.render-pipelines.lightweight/ShaderLibrary/SurfaceInput.hlsl"
 
 CBUFFER_START(UnityPerMaterial)
+//sjx_input
+    float _SJX_Coustom_Float;
 float4 _BaseMap_ST;
 half4 _BaseColor;
 half4 _SpecColor;

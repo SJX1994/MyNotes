@@ -1,4 +1,5 @@
-﻿Shader "SJX/SJX_shader_test"
+﻿// unity 2019 .1.4f1 LWRP
+Shader "SJX/SJX_shader_test"
 {
     Properties
     {
