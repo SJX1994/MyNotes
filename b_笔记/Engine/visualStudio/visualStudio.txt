@@ -17,6 +17,14 @@ VStudio:
                   项目——属性
             编码格式：
                   工具——自定义——命令———菜单栏：文件—添加命令——文件——高级保存选项
-
-断点异常设置：
-      https://blog.csdn.net/u010821666/article/details/78512900
+      报错：
+            断点异常设置：
+                  https://blog.csdn.net/u010821666/article/details/78512900
+            项目文件不完整，缺少预期导入：
+                  .csproj : error  :Project file is incomplete. Expected imports are missing
+                  缺少Microsoft.AspNetCore相关版本引起的。
+                  解决方案：
+                        打开项目“.csproj”文件，查看所需Microsoft.AspNetCore版本，发现当前项目中为2.1.2。
+                        打开CMD命令提示窗口，输入dotnet --info查看当前系统安装的所有Microsoft.AspNetCore版本，发现缺少2.1.2版本。无法运行dotnet命令的参照解决办法：https://www.cnblogs.com/bossing/p/12551000.html
+                        下载缺少的Microsoft.AspNetCore版本进行安装，下载地址：https://dotnet.microsoft.com/download/dotnet-core。
+                        安装完成后，重新打开项目，发现问题已经解决。

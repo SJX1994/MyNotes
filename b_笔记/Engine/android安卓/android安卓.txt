@@ -52,6 +52,8 @@ android studio：
                               抓包名输出到 目标目录的 your_text_file_name
                         adb shell dumpsys SurfaceFlinger --latency SurfaceView[包名]：
                               测试fps
+                        adb kill-server：
+                              关闭硬件服务
       系统：
             .gradle:
                   ref:
@@ -133,9 +135,12 @@ android studio：
       
       openGl显示奇怪：
             可能是Windows上编译变量重名，贯穿整个定义域
-      未经授权Unauthorized:
+      adb设备 未经授权Unauthorized:
             在手机上授权：
                   设置 > 系统 > 开发者选项 > USB 调试
+      adb设备 下线offline：
+            adb kill-server
+
       
 kanzi配置android:
       1、 下载android sdk
