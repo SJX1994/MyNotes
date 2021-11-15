@@ -146,3 +146,23 @@ Adia任务：
         https://www.codenong.com/cs105490621/
     编译dll：
         https://blog.csdn.net/Fenglele_Fans/article/details/82694333
+
+渲染管线：
+    LWRP:
+        自定义渲染管线（黑客行为）：
+            https://youtu.be/3TULxrZCAdM
+        HLSL:
+            高精准度： float
+            中等精度： half
+            低精度： fixed
+            整数（int数据类型）
+            复合向量/矩阵类型:
+                float3
+                float4x4
+
+
+报错：
+    无法确定预设文件位置类型 /Users/ myUserName /Library/Preferences/Unity/Editor-5.x/Presets/Default UnityEngine.GUIUtility:ProcessEvent(Int32, IntPtr)
+        转到您的注册表，Computer\HKEY_CURRENT_USER\Software\Unity Technologies\Unity Editor 5.x，并打开所有包含“CurrentLib”的键（例如我机器上的particleCurvesCurrentLib_h1743720187），然后将二进制字符串编辑为指向正确的路径。
+        ref：
+            https://answers.unity.com/questions/1566475/how-to-reset-unity-user-preferences.html
