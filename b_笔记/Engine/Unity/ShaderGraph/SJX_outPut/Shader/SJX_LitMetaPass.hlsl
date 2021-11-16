@@ -2,13 +2,19 @@
 #define LIGHTWEIGHT_LIT_META_PASS_INCLUDED
 
 #include "Packages/com.unity.render-pipelines.lightweight/ShaderLibrary/MetaInput.hlsl"
+#include "SJX_Vert/Vert.cginc"
+#include "SJX_Frag/Frag.cginc"
 
 Varyings LightweightVertexMeta(Attributes input)
 {
     Varyings output;
     
-    output.positionCS = MetaVertexPosition(input.positionOS, input.uvLM, input.uvDLM, unity_LightmapST);
-    output.uv = TRANSFORM_TEX(input.uv, _BaseMap);
+    half3 SJX_newPos = vert(input.positionOS.xyz);
+    input.positionOS.xyz = SJX_newPos;
+
+    output.positionCS = MetaVertexPosition(input.positionOS, input.uv1, input.uv2,
+        unity_LightmapST, unity_DynamicLightmapST);
+    output.uv = TRANSFORM_TEX(input.uv0, _BaseMap);
     return output;
 }
 

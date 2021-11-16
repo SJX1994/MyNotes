@@ -2,7 +2,8 @@
 #define LIGHTWEIGHT_FORWARD_LIT_PASS_INCLUDED
 
 #include "Packages/com.unity.render-pipelines.lightweight/ShaderLibrary/Lighting.hlsl"
-
+#include "SJX_Vert/Vert.cginc"
+#include "SJX_Frag/Frag.cginc"
 struct Attributes
 {
     float4 positionOS   : POSITION;
@@ -86,10 +87,11 @@ Varyings LitPassVertex(Attributes input)
     UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(output);
 
 
-    half3 newPos = input.positionOS.xyz;
-    newPos.xyz *= sin(_Time.yyy*half3(0.1,0.1,0.1));
+     
+    half3 SJX_newPos = vert(input.positionOS.xyz);
+    
 
-    VertexPositionInputs vertexInput = GetVertexPositionInputs(newPos.xyz);
+    VertexPositionInputs vertexInput = GetVertexPositionInputs(SJX_newPos.xyz);
 
 
     VertexNormalInputs normalInput = GetVertexNormalInputs(input.normalOS, input.tangentOS);
@@ -140,7 +142,10 @@ half4 LitPassFragment(Varyings input) : SV_Target
     half4 color = LightweightFragmentPBR(inputData, surfaceData.albedo, surfaceData.metallic, surfaceData.specular, surfaceData.smoothness, surfaceData.occlusion, surfaceData.emission, surfaceData.alpha);
 
     color.rgb = MixFog(color.rgb, inputData.fogCoord);
-    return color;
+
+    half4 SJX_newColor =  frag( color );
+
+    return SJX_newColor;
 }
 
 #endif

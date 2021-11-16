@@ -2,6 +2,8 @@
 #define LIGHTWEIGHT_DEPTH_ONLY_PASS_INCLUDED
 
 #include "Packages/com.unity.render-pipelines.lightweight/ShaderLibrary/Core.hlsl"
+#include "SJX_Vert/Vert.cginc"
+#include "SJX_Frag/Frag.cginc"
 
 struct Attributes
 {
@@ -26,12 +28,14 @@ Varyings DepthOnlyVertex(Attributes input)
 
     output.uv = TRANSFORM_TEX(input.texcoord, _BaseMap);
 
-    half3 newPos = input.position.xyz;
-    //newPos.xyz *= sin((_Time.yyy*_SJX_Coustom_Float)*half3(0.1,0.1,0.1));
-    newPos.xyz *= sin((_Time.yyy)*half3(0.1,0.1,0.1));
-    input.position.xyz = newPos.xyz;
+    // half3 newPos = input.position.xyz;
+    // //newPos.xyz *= sin((_Time.yyy*_SJX_Coustom_Float)*half3(0.1,0.1,0.1));
+    // newPos.xyz *= sin((_Time.yyy)*half3(0.1,0.1,0.1));
+    // input.position.xyz = newPos.xyz;
+     half3 SJX_newPos = vert(input.position.xyz);
 
-    output.positionCS = TransformObjectToHClip(input.position.xyz);
+    
+    output.positionCS = TransformObjectToHClip(SJX_newPos);
     return output;
 }
 
