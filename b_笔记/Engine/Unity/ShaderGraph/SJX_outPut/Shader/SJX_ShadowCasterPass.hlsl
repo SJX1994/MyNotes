@@ -2,7 +2,10 @@
 #define LIGHTWEIGHT_SHADOW_CASTER_PASS_INCLUDED
 
 #include "Packages/com.unity.render-pipelines.lightweight/ShaderLibrary/Core.hlsl"
-#include "Packages/com.unity.render-pipelines.lightweight/ShaderLibrary/Shadows.hlsl"
+#include "SJX_ShaderLib/Shadows.hlsl"
+
+#include "SJX_Vert/Vert.cginc"
+#include "SJX_Frag/FragShadow.cginc"
 
 float3 _LightDirection;
 
@@ -41,9 +44,15 @@ Varyings ShadowPassVertex(Attributes input)
     Varyings output;
     UNITY_SETUP_INSTANCE_ID(input);
 
-    half3 newPos = input.positionOS.xyz;
-    newPos.xyz *= sin(_Time.yyy*half3(0.1,0.1,0.1));
-    input.positionOS.xyz = newPos.xyz;
+
+
+    // half3 newPos = input.positionOS.xyz;
+    // newPos.xyz *= sin(_Time.yyy*half3(0.1,0.1,0.1));
+    // input.positionOS.xyz = newPos.xyz;
+
+    half3 SJX_newPos = vert(input.positionOS.xyz);
+
+    input.positionOS.xyz = SJX_newPos;
 
     output.uv = TRANSFORM_TEX(input.texcoord, _BaseMap);
     output.positionCS = GetShadowPositionHClip(input);
@@ -52,7 +61,14 @@ Varyings ShadowPassVertex(Attributes input)
 
 half4 ShadowPassFragment(Varyings input) : SV_TARGET
 {
+    //_BaseColor = float4(1.0,1.0,1.0,1.0);
+    
+
     Alpha(SampleAlbedoAlpha(input.uv, TEXTURE2D_ARGS(_BaseMap, sampler_BaseMap)).a, _BaseColor, _Cutoff);
+
+    
+    
+
     return 0;
 }
 

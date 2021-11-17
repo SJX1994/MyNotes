@@ -3,63 +3,63 @@ Shader "SJX/SJX_shader_test"
 {
     Properties
     {
-        //SJX自定义变量 在Debug模式下编辑：
+
+        //SJX自定义变量：
              _SJX_Coustom_Float("WorkflowMode", Float) = 1.0
+             [KeywordEnum(Off,On)]  _SJXworkFlow("SJXworkFlow",float) = 0
+        // Specular vs Metallic workflow
+            [HideInInspector] _WorkflowMode("WorkflowMode", Float) = 1.0
+            
+            [MainColor] _BaseColor("Color", Color) = (0.5,0.5,0.5,1)
+            [MainTexture] _BaseMap("Albedo", 2D) = "white" {}
 
-        // 镜面与金属工作流 Specular vs Metallic workflow
-        [HideInInspector] _WorkflowMode("WorkflowMode", Float) = 1.0
-        
-        [MainColor] _BaseColor("Color", Color) = (0.5,0.5,0.5,1)
-        [MainTexture] _BaseMap("Albedo", 2D) = "white" {}
+            _Cutoff("Alpha Cutoff", Range(0.0, 1.0)) = 0.5
 
-        _Cutoff("Alpha Cutoff", Range(0.0, 1.0)) = 0.5
+            _Smoothness("Smoothness", Range(0.0, 1.0)) = 0.5
+            _GlossMapScale("Smoothness Scale", Range(0.0, 1.0)) = 1.0
+            _SmoothnessTextureChannel("Smoothness texture channel", Float) = 0
 
-        _Smoothness("Smoothness", Range(0.0, 1.0)) = 0.5
-        _GlossMapScale("Smoothness Scale", Range(0.0, 1.0)) = 1.0
-        _SmoothnessTextureChannel("Smoothness texture channel", Float) = 0
+            [Gamma] _Metallic("Metallic", Range(0.0, 1.0)) = 0.0
+            _MetallicGlossMap("Metallic", 2D) = "white" {}
 
-        [Gamma] _Metallic("Metallic", Range(0.0, 1.0)) = 0.0
-        _MetallicGlossMap("Metallic", 2D) = "white" {}
+            _SpecColor("Specular", Color) = (0.2, 0.2, 0.2)
+            _SpecGlossMap("Specular", 2D) = "white" {}
 
-        _SpecColor("Specular", Color) = (0.2, 0.2, 0.2)
-        _SpecGlossMap("Specular", 2D) = "white" {}
+            [ToggleOff] _SpecularHighlights("Specular Highlights", Float) = 1.0
+            [ToggleOff] _EnvironmentReflections("Environment Reflections", Float) = 1.0
 
-        [ToggleOff] _SpecularHighlights("Specular Highlights", Float) = 1.0
-        [ToggleOff] _EnvironmentReflections("Environment Reflections", Float) = 1.0
+            _BumpScale("Scale", Float) = 1.0
+            _BumpMap("Normal Map", 2D) = "bump" {}
 
-        _BumpScale("Scale", Float) = 1.0
-        _BumpMap("Normal Map", 2D) = "bump" {}
+            _OcclusionStrength("Strength", Range(0.0, 1.0)) = 1.0
+            _OcclusionMap("Occlusion", 2D) = "white" {}
 
-        _OcclusionStrength("Strength", Range(0.0, 1.0)) = 1.0
-        _OcclusionMap("Occlusion", 2D) = "white" {}
+            _EmissionColor("Color", Color) = (0,0,0)
+            _EmissionMap("Emission", 2D) = "white" {}
 
-        _EmissionColor("Color", Color) = (0,0,0)
-        _EmissionMap("Emission", 2D) = "white" {}
+            // Blending state
+            [HideInInspector] _Surface("__surface", Float) = 0.0
+            [HideInInspector] _Blend("__blend", Float) = 0.0
+            [HideInInspector] _AlphaClip("__clip", Float) = 0.0
+            [HideInInspector] _SrcBlend("__src", Float) = 1.0
+            [HideInInspector] _DstBlend("__dst", Float) = 0.0
+            [HideInInspector] _ZWrite("__zw", Float) = 1.0
+            [HideInInspector] _Cull("__cull", Float) = 2.0
 
-        // 混合状态 Blending state
-        [HideInInspector] _Surface("__surface", Float) = 0.0
-        [HideInInspector] _Blend("__blend", Float) = 0.0
-        [HideInInspector] _AlphaClip("__clip", Float) = 0.0
-        [HideInInspector] _SrcBlend("__src", Float) = 1.0
-        [HideInInspector] _DstBlend("__dst", Float) = 0.0
-        [HideInInspector] _ZWrite("__zw", Float) = 1.0
-        [HideInInspector] _Cull("__cull", Float) = 2.0
-
-        _ReceiveShadows("Receive Shadows", Float) = 1.0        
-        //编辑模式 Editmode props
-        [HideInInspector] _QueueOffset("Queue offset", Float) = 0.0
-        
-        //过时的属性 ObsoleteProperties
-        [HideInInspector] _MainTex("BaseMap", 2D) = "white" {}
-        [HideInInspector] _Color("Base Color", Color) = (0.5, 0.5, 0.5, 1)
-        [HideInInspector] _GlossMapScale("Smoothness", Float) = 0.0
-        [HideInInspector] _Glossiness("Smoothness", Float) = 0.0
-        [HideInInspector] _GlossyReflections("EnvironmentReflections", Float) = 0.0
+            _ReceiveShadows("Receive Shadows", Float) = 1.0        
+            // Editmode props
+            [HideInInspector] _QueueOffset("Queue offset", Float) = 0.0
+            
+            // ObsoleteProperties
+            [HideInInspector] _MainTex("BaseMap", 2D) = "white" {}
+            [HideInInspector] _Color("Base Color", Color) = (0.5, 0.5, 0.5, 1)
+            [HideInInspector] _GlossMapScale("Smoothness", Float) = 0.0
+            [HideInInspector] _Glossiness("Smoothness", Float) = 0.0
+            [HideInInspector] _GlossyReflections("EnvironmentReflections", Float) = 0.0
     }
 
     SubShader
     {
-        //需要轻量级管道标签。 如果在图形设置中未设置轻量级渲染管线这个子着色器将失败。 可以在下面添加一个子着色器或回退到标准内置来实现这一点材质与轻量级渲染管道和内置 Unity 管道一起使用
         // Lightweight Pipeline tag is required. If Lightweight render pipeline is not set in the graphics settings
         // this Subshader will fail. One can add a subshader below or fallback to Standard built-in to make this
         // material work with both Lightweight Render Pipeline and Builtin Unity Pipeline
@@ -68,8 +68,6 @@ Shader "SJX/SJX_shader_test"
 
         // ------------------------------------------------------------------
         //  Forward pass. Shades all light in a single pass. GI + emission + Fog
-
-        // 前向渲染，所有的光照都在这个Pass中。GI（Global Illumination） + 散射 + 雾
         Pass
         {
             // Lightmode matches the ShaderPassName set in LightweightRenderPipeline.cs. SRPDefaultUnlit and passes with
@@ -124,11 +122,17 @@ Shader "SJX/SJX_shader_test"
 
                 #pragma vertex LitPassVertex
                 #pragma fragment LitPassFragment
+                
+                #pragma shader_feature _SJXWORKFLOW_OFF _SJXWORKFLOW_ON
+
                 //变量
                 #include "SJX_LitInput.hlsl"
                 //obj顶点片元通道
                 #include "SJX_LitForwardPass.hlsl"
-                    
+                // #if _SJXWORKFLOW_ON
+                //     #include "SJX_LitInput.hlsl"
+
+                // #endif
                 ENDHLSL
         }
 
@@ -205,7 +209,7 @@ Shader "SJX/SJX_shader_test"
             Name "Meta"
             Tags{"LightMode" = "Meta"}
 
-            Cull[_Cull]
+            Cull Off
 
             HLSLPROGRAM
             // Required to compile gles 2.0 with standard srp library
