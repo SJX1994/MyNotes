@@ -50,7 +50,7 @@ Varyings ShadowPassVertex(Attributes input)
     // newPos.xyz *= sin(_Time.yyy*half3(0.1,0.1,0.1));
     // input.positionOS.xyz = newPos.xyz;
 
-    half3 SJX_newPos = vert(input.positionOS.xyz);
+    half3 SJX_newPos = vert(input.positionOS.xyz,input.texcoord);
 
     input.positionOS.xyz = SJX_newPos;
 

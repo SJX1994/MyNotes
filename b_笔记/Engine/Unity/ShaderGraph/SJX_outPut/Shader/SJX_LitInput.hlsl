@@ -69,6 +69,7 @@ half SampleOcclusion(float2 uv)
 #endif
 #else
     return 1.0;
+    
 #endif
 }
 

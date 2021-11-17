@@ -9,8 +9,8 @@ Varyings LightweightVertexMeta(Attributes input)
 {
     Varyings output;
     
-    half3 SJX_newPos = vert(input.positionOS.xyz);
-    input.positionOS.xyz = SJX_newPos;
+    // half3 SJX_newPos = vert(input.positionOS.xyz);
+    // input.positionOS.xyz = SJX_newPos;
 
     output.positionCS = MetaVertexPosition(input.positionOS, input.uv1, input.uv2,
         unity_LightmapST, unity_DynamicLightmapST);

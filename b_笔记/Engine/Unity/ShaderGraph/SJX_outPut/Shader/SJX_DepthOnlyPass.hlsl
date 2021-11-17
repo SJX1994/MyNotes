@@ -32,7 +32,7 @@ Varyings DepthOnlyVertex(Attributes input)
     // //newPos.xyz *= sin((_Time.yyy*_SJX_Coustom_Float)*half3(0.1,0.1,0.1));
     // newPos.xyz *= sin((_Time.yyy)*half3(0.1,0.1,0.1));
     // input.position.xyz = newPos.xyz;
-     half3 SJX_newPos = vert(input.position.xyz);
+     half3 SJX_newPos = vert(input.position.xyz,input.texcoord);
 
     
     output.positionCS = TransformObjectToHClip(SJX_newPos);
