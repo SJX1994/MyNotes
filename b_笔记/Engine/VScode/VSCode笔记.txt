@@ -61,6 +61,8 @@ VSCode:
             Ctrl+K+0
         展开所有代码：
             Ctrl+K+J
+        对比代码：
+            Ctrl 选中两个文件 右键 对比
 VStudio:
     快捷键：
         自動排版	Ctrl +K +D or Alt + Shift + F

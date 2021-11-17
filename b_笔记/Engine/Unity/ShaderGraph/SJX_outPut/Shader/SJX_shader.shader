@@ -3,9 +3,10 @@ Shader "SJX/SJX_shader_test"
 {
     Properties
     {
-        //SJX自定义变量：
+        //SJX自定义变量 在Debug模式下编辑：
              _SJX_Coustom_Float("WorkflowMode", Float) = 1.0
-        // Specular vs Metallic workflow
+
+        // 镜面与金属工作流 Specular vs Metallic workflow
         [HideInInspector] _WorkflowMode("WorkflowMode", Float) = 1.0
         
         [MainColor] _BaseColor("Color", Color) = (0.5,0.5,0.5,1)
@@ -35,7 +36,7 @@ Shader "SJX/SJX_shader_test"
         _EmissionColor("Color", Color) = (0,0,0)
         _EmissionMap("Emission", 2D) = "white" {}
 
-        // Blending state
+        // 混合状态 Blending state
         [HideInInspector] _Surface("__surface", Float) = 0.0
         [HideInInspector] _Blend("__blend", Float) = 0.0
         [HideInInspector] _AlphaClip("__clip", Float) = 0.0
@@ -45,10 +46,10 @@ Shader "SJX/SJX_shader_test"
         [HideInInspector] _Cull("__cull", Float) = 2.0
 
         _ReceiveShadows("Receive Shadows", Float) = 1.0        
-        // Editmode props
+        //编辑模式 Editmode props
         [HideInInspector] _QueueOffset("Queue offset", Float) = 0.0
         
-        // ObsoleteProperties
+        //过时的属性 ObsoleteProperties
         [HideInInspector] _MainTex("BaseMap", 2D) = "white" {}
         [HideInInspector] _Color("Base Color", Color) = (0.5, 0.5, 0.5, 1)
         [HideInInspector] _GlossMapScale("Smoothness", Float) = 0.0
@@ -58,6 +59,7 @@ Shader "SJX/SJX_shader_test"
 
     SubShader
     {
+        //需要轻量级管道标签。 如果在图形设置中未设置轻量级渲染管线这个子着色器将失败。 可以在下面添加一个子着色器或回退到标准内置来实现这一点材质与轻量级渲染管道和内置 Unity 管道一起使用
         // Lightweight Pipeline tag is required. If Lightweight render pipeline is not set in the graphics settings
         // this Subshader will fail. One can add a subshader below or fallback to Standard built-in to make this
         // material work with both Lightweight Render Pipeline and Builtin Unity Pipeline
@@ -66,6 +68,8 @@ Shader "SJX/SJX_shader_test"
 
         // ------------------------------------------------------------------
         //  Forward pass. Shades all light in a single pass. GI + emission + Fog
+
+        // 前向渲染，所有的光照都在这个Pass中。GI（Global Illumination） + 散射 + 雾
         Pass
         {
             // Lightmode matches the ShaderPassName set in LightweightRenderPipeline.cs. SRPDefaultUnlit and passes with

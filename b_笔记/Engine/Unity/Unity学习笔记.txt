@@ -149,6 +149,9 @@ Adia任务：
 
 渲染管线：
     LWRP:
+        安装：
+            PackageManager：
+                LightweightRenderPipeline
         自定义渲染管线（黑客行为）：
             https://youtu.be/3TULxrZCAdM
         HLSL:
@@ -159,10 +162,21 @@ Adia任务：
             复合向量/矩阵类型:
                 float3
                 float4x4
+        unity GI （Global Illumination）:
+            全局光照：
+                光线相互之间的弹射
+
+
 
 
 报错：
-    无法确定预设文件位置类型 /Users/ myUserName /Library/Preferences/Unity/Editor-5.x/Presets/Default UnityEngine.GUIUtility:ProcessEvent(Int32, IntPtr)
+    无法确定预设文件位置类型 /Users/ myUserName /Library/Preferences/Unity/Editor-5.x/Presets/Default UnityEngine.GUIUtility:ProcessEvent(Int32, IntPtr)：
         转到您的注册表，Computer\HKEY_CURRENT_USER\Software\Unity Technologies\Unity Editor 5.x，并打开所有包含“CurrentLib”的键（例如我机器上的particleCurvesCurrentLib_h1743720187），然后将二进制字符串编辑为指向正确的路径。
         ref：
             https://answers.unity.com/questions/1566475/how-to-reset-unity-user-preferences.html
+
+    unityHub下载过于缓慢：
+        在C盘找到日志：
+            %APPDATA%\UnityHub\logs\info-log.json
+        可以看到Unity3d 2019.1.14f1的下载地址是：
+            https://download.unitychina.cn/download_unity/148b5891095a/Windows64EditorInstaller/UnitySetup64-2019.1.14f1.exe
