@@ -7,7 +7,9 @@
 
 CBUFFER_START(UnityPerMaterial)
 //sjx_input
-    float _SJX_Coustom_Float;
+    float _SJX_Coustom_Float_VertexAniSpeed;
+    float _SJX_Coustom_Float_FragPosTest;
+    sampler2D _SJX_ShadowMapTex;
 float4 _BaseMap_ST;
 half4 _BaseColor;
 half4 _SpecColor;

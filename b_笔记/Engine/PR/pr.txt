@@ -1,0 +1,8 @@
+
+
+问题：
+      安装失败：
+            1.删掉 C:\Program Files (x86)\Common Files\Adobe\caps 目录下的所有 .db 文件，重新安装即可。
+            2.windows+R键输入regedit弹出注册表编辑器,在HKEY_CURRENT_USER和HKEY_LOCAL_MACHINE里找到SOFTWARE里的Adobe项再在Adobe项里找到premiere pro删除就可以重新安装成功了。
+            3.删除文档中的Premiere Pro文件夹下的东西
+            3.https://kknews.cc/zh-hk/news/694agkq.html

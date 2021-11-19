@@ -1,0 +1,45 @@
+3D:
+      顶点
+            输入项：
+                  物体位置(Position)
+                  法线位置(Normal)
+                  切线位置(Tangent)
+                  权重(weight)
+                  矩阵索引(matrix indices)
+                  贴图坐标(texture coordinates)
+                  顶点色(vertex color)
+                  融合 位置 法线 切线 (MorphTarget)
+            公共项：
+                  贴图采样(sampler texture)
+                  不透明度(Opacity)
+                  世界矩阵(worldMatrix)
+                  相机矩阵(cameraMatrix)
+                  相机转世界矩阵(worldCameraMatrix)
+                  投影到相机矩阵(ProjectionCameraWorldMatrix)
+                  投影矩阵(ProjectionMatrix)
+                  法线矩阵(NormalMatrix)
+                  相机法线矩阵(CameraNormalMatrix)
+                  相机位置(CameraPosition)
+                  时间(Time)
+                  贴图大小(TextureSize)
+                  矩阵调色板(matrix Paletter)?
+                  相机距离(cameraNearFarPlane)
+                  融合权重(MorphWeight)
+                  视口坐标(viewPort)v4
+                  窗口坐标(window)v2
+            传递属性：
+                  varying
+      片元:
+            所有公共项
+            传递属性：
+                  varying
+
+      后处理：
+      缓存：
+2D:
+      图形绘制：
+            在片元中以UV为xy为坐标象限进行绘制
+
+
+特殊操作：
+

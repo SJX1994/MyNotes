@@ -1,7 +1,10 @@
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
 #ifndef FRAG
 #define FRAG
 
 #include "SJX_LitInput.hlsl"
+
 
 struct sinControllerFrag 
 {
@@ -73,7 +76,7 @@ float FragAni(float targetFloat  , sinController SC)
 {
     targetFloat =  targetFloat  + ( SC.A * sin (
                 (
-                  ( 2.0*PI/SC.B )  - (_Time.x * _SJX_Coustom_Float) + SC.C
+                  ( 2.0*PI/SC.B )  - (_Time.x *  _SJX_Coustom_Float_VertexAniSpeed) + SC.C
                 )
                 
             )
@@ -86,7 +89,28 @@ float FragAni(float targetFloat  , sinController SC)
     return targetFloat;
 }
 
-float4 frag(float4 color, float2 uv,float3 N ,float3 ObjectPos)
+inline float4 ProjectionToTextureSpace(float4 pos)
+{
+    //textureSpacePos
+    float4 TSP = pos;
+
+    #if defined(UNITY_HALF_TEXEL_OFFSET)
+
+        TSP.xy = float2(TSP.x,TSP.y * _ProjectionParams.x)+TSP.w * _ScreenParams.zw;
+
+    #else
+        TSP.xy = float2(TSP.x,TSP.y * _ProjectionParams.x)+TSP.w;
+    #endif
+    TSP.xy = float2(TSP.x/TSP.w,TSP.y/TSP.w)*0.5f;
+    return TSP;
+} 
+inline float4 UnityObjectToClipPos(in float3 pos)  
+{  
+    // More efficient than computing M*VP matrix product  
+    return mul(UNITY_MATRIX_VP, mul(unity_ObjectToWorld, float4(pos, 1.0)));  
+} 
+
+float4 frag(float4 color, float2 uv,float3 N ,float3 ObjectPos, float3 shadowPos)
 
 {
 
@@ -104,7 +128,7 @@ float4 frag(float4 color, float2 uv,float3 N ,float3 ObjectPos)
         float fade = 0.0;
         float fade2 = 0.0;
         ObjectPos = normalize(ObjectPos);
-
+        shadowPos = normalize(shadowPos);
 
         ObjectPos = matrixChange(
             float3(0.0,0.0,0.0),
@@ -134,7 +158,21 @@ float4 frag(float4 color, float2 uv,float3 N ,float3 ObjectPos)
         float Nmask =  smoothstep(-0.07,0.03,N.y).xxx;
 
         color.rg += (Saturate(fade.xxx) - Saturate(fade2.xxx))*Saturate(Nmask)*0.3;
-        
+
+        //color.rgb = step(_SJX_Coustom_Float_FragPosTest,shadowPos.xxx) ;
+
+        float4 MVPpos = UnityObjectToClipPos( float4(ObjectPos.xyz,1.0));
+
+
+
+        float4 ppos = ProjectionToTextureSpace(MVPpos);
+
+       // float3 lightColor = _LightColor0.rgb;
+        //color.rgba = tex2D( sampler_ShadowMap , uv);
+       //color.rgba =  unity_ShadowColor;
+
+       //unity_ShadowColor = float4(1.0,1.0,1.0,1.0);
+      
     return color;
 
 

@@ -165,6 +165,10 @@ Adia任务：
         unity GI （Global Illumination）:
             全局光照：
                 光线相互之间的弹射
+            阴影存在：
+                ShadowCaster
+                在C#中存的全局变量
+
 
 
 

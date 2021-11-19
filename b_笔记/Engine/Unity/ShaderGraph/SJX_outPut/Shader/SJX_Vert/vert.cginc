@@ -16,7 +16,7 @@ float vertexAni(float vertPos  , sinController SC)
 {
     vertPos =  vertPos  + ( SC.A * sin (
                 (
-                  ( 2.0*PI/SC.B )  - (_Time.x * _SJX_Coustom_Float) + SC.C
+                  ( 2.0*PI/SC.B )  - (_Time.x * _SJX_Coustom_Float_VertexAniSpeed) + SC.C
                 )
                 
             )

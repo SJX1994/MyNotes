@@ -5,7 +5,9 @@ Shader "SJX/SJX_shader_test"
     {
 
         //SJX自定义变量：
-             _SJX_Coustom_Float("WorkflowMode", Float) = 1.0
+             _SJX_Coustom_Float_VertexAniSpeed("sjx_VertexAniSpeed", Float) = 1.0
+             _SJX_Coustom_Float_FragPosTest("sjx_FragPosTest", Float) = 1.0
+             _SJX_ShadowMapTex("sjx_ShadowMapTex", 2D) = "white" {}
              [KeywordEnum(Off,On)]  _SJXworkFlow("SJXworkFlow",float) = 0
         // Specular vs Metallic workflow
             [HideInInspector] _WorkflowMode("WorkflowMode", Float) = 1.0
@@ -164,7 +166,7 @@ Shader "SJX/SJX_shader_test"
             #pragma fragment ShadowPassFragment
 
             #include "SJX_LitInput.hlsl"
-            //阴影顶点片元通道
+            //阴影
             #include "SJX_ShadowCasterPass.hlsl"
             ENDHLSL
         }

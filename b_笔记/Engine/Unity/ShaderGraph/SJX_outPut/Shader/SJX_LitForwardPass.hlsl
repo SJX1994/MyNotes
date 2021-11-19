@@ -1,7 +1,7 @@
 #ifndef LIGHTWEIGHT_FORWARD_LIT_PASS_INCLUDED
 #define LIGHTWEIGHT_FORWARD_LIT_PASS_INCLUDED
 
-#include "Packages/com.unity.render-pipelines.lightweight/ShaderLibrary/Lighting.hlsl"
+#include "SJX_ShaderLib/Lighting.hlsl"
 
 struct Attributes
 {
@@ -150,10 +150,27 @@ half4 LitPassFragment(Varyings input) : SV_Target
 
     color.rgb = MixFog(color.rgb, inputData.fogCoord);
 
-    half4 SJX_newColor = frag( color,input.uv,input.normalWS,input.VpositionOS );
-
+    #if defined(_MAIN_LIGHT_SHADOWS) && !defined(_RECEIVE_SHADOWS_OFF)
+        half4 SJX_newColor = frag( 
+            color,input.uv,
+            input.normalWS,
+            input.VpositionOS,
+            input.shadowCoord 
+            
+            );
+    #else
+        half4 SJX_newColor = frag( 
+            color,input.uv,
+            input.normalWS,
+            input.VpositionOS,
+            float4(0, 0, 0, 0)
+            
+            );
+    #endif
     
-
+  half3  ShadowColor = SJX_getShadowMask(input.shadowCoord,input.normalWS);
+  //TODO SJX
+  SJX_newColor.rgb = ShadowColor;
     return SJX_newColor;
 }
 
