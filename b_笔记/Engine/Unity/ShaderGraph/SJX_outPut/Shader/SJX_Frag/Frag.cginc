@@ -110,7 +110,7 @@ inline float4 UnityObjectToClipPos(in float3 pos)
     return mul(UNITY_MATRIX_VP, mul(unity_ObjectToWorld, float4(pos, 1.0)));  
 } 
 
-float4 frag(float4 color, float2 uv,float3 N ,float3 ObjectPos, float3 shadowPos)
+float4 frag(float4 color, float2 uv,float3 N ,float3 ObjectPos, float3 shadowMask)
 
 {
 
@@ -128,8 +128,7 @@ float4 frag(float4 color, float2 uv,float3 N ,float3 ObjectPos, float3 shadowPos
         float fade = 0.0;
         float fade2 = 0.0;
         ObjectPos = normalize(ObjectPos);
-        shadowPos = normalize(shadowPos);
-
+      
         ObjectPos = matrixChange(
             float3(0.0,0.0,0.0),
             float3(1.0,1.0,1.0),
@@ -168,10 +167,12 @@ float4 frag(float4 color, float2 uv,float3 N ,float3 ObjectPos, float3 shadowPos
         float4 ppos = ProjectionToTextureSpace(MVPpos);
 
        // float3 lightColor = _LightColor0.rgb;
-        //color.rgba = tex2D( sampler_ShadowMap , uv);
+       float4 mixTex = tex2D( _SJX_ShadowMapTex , uv);
        //color.rgba =  unity_ShadowColor;
 
        //unity_ShadowColor = float4(1.0,1.0,1.0,1.0);
+
+        color.rgb = lerp(color.rgb,mixTex.rrr-0.1,Saturate(pow(1.0-shadowMask.r,2.5)) );
       
     return color;
 

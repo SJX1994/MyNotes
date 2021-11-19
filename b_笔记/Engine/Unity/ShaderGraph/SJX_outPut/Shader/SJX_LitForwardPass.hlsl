@@ -149,15 +149,21 @@ half4 LitPassFragment(Varyings input) : SV_Target
    half4 color = LightweightFragmentPBR(inputData, surfaceData.albedo, surfaceData.metallic, surfaceData.specular, surfaceData.smoothness, surfaceData.occlusion, surfaceData.emission, surfaceData.alpha);
 
     color.rgb = MixFog(color.rgb, inputData.fogCoord);
-
+   
     #if defined(_MAIN_LIGHT_SHADOWS) && !defined(_RECEIVE_SHADOWS_OFF)
+         half3  ShadowMask = SJX_getShadowMask(input.shadowCoord,input.normalWS);
+         
         half4 SJX_newColor = frag( 
             color,input.uv,
             input.normalWS,
             input.VpositionOS,
-            input.shadowCoord 
-            
+           
+            ShadowMask
             );
+
+            
+            // //TODO SJX
+            // SJX_newColor.rgb = ShadowColor;
     #else
         half4 SJX_newColor = frag( 
             color,input.uv,
@@ -168,9 +174,8 @@ half4 LitPassFragment(Varyings input) : SV_Target
             );
     #endif
     
-  half3  ShadowColor = SJX_getShadowMask(input.shadowCoord,input.normalWS);
-  //TODO SJX
-  SJX_newColor.rgb = ShadowColor;
+  
+
     return SJX_newColor;
 }
 

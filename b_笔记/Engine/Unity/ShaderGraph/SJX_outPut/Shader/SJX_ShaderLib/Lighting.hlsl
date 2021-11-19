@@ -491,7 +491,7 @@ half3 SJX_getShadowMask(float4 shadowCoord ,half3 normalWS)
     half NdotL = saturate(dot(normalWS, mainLight.direction));
     //光照颜色
     float visibility = lightAttenuation * NdotL;
-    half3 SJX_addColor = lerp(half3(1.0,1.0,1.0),half3(0.0,1.0,0.0),1.0-visibility);
+    half3 SJX_addColor = lerp(half3(1.0,1.0,1.0),half3(0.0,0.0,0.0),1.0-visibility);
     return SJX_addColor;
 }
 
