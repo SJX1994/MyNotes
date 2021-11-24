@@ -4,5 +4,8 @@
       "files.associations": {
             "cstdint": "cpp"
       },
+      "files.exclude": {
+            "**/*.meta": true
+      },
       "python.formatting.provider": "black"
 }

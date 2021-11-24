@@ -40,6 +40,25 @@
       图形绘制：
             在片元中以UV为xy为坐标象限进行绘制
 
+渲染管线：
+      大型状态机：
+            Blit Render Pass:
+                  位块传送渲染通道
+                  使用某种特定材质在屏幕上位块传送一个或多个渲染通道或纹理。
+            Clear Render Pass:
+                  清除当前渲染上下文的部分或全部缓冲。您可以设置 Kanzi 清除颜色、深度和模具缓冲区的值。
+            Composition Target Render Pass:
+                  将自身及其子渲染通道渲染成合成目标。
+            Draw Objects Render Pass:
+                  允许您设置摄像机 (Camera) 节点来渲染特定对象源并控制视锥体剔除。
+            Draw Objects With Material Render Pass:
+            Group Render Pass:
+            Lagacy Render Pass (deprecated):
+                  一个封装好的渲染管线
+            Material Setup Render Pass:
+            Pipline State Render Pass:
+
+
 
 特殊操作：
 
