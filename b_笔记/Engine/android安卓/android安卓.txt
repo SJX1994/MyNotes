@@ -54,6 +54,13 @@ android studio：
                               测试fps
                         adb kill-server：
                               关闭硬件服务
+                        adb reboot：
+                              重启
+                        adb  shell am start com.rightware.kanzi.carinteractive/.CarInteractive：
+                              启动程序
+
+沈捷翔
+
       系统：
             .gradle:
                   ref:
