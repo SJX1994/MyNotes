@@ -212,6 +212,21 @@ Maya功能模块：
                 该缓存模式将数据直接存储在 GPU 上，这样速度更快，除非 GPU 内存受限。
 
 Maya插件：
+    使用:
+        脚本文件夹:
+            win
+                C:/Users/<username>/Documents/maya/<version>/scripts
+            mac
+                Library/Preferences/Autodesk/maya/<version>/scripts
+            Linux
+                $MAYA_APP_DIR/maya/<version>/scripts
+        插件mll文件夹:
+            win
+                C:/Users/<username>/Documents/maya/<version>/plug-ins
+            mac
+                Library/Preferences/Autodesk/maya/<version>/plug-ins
+            Linux
+                $MAYA_APP_DIR/maya/<version>/plug-ins
     UV插件集合：
         ref：
             https://www.highend3d.com/maya/script/nightshade-uv-editor-for-maya

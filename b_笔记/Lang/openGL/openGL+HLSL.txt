@@ -32,6 +32,8 @@ openGL（GLSL,OpenGL Shading Language）:
         https://learnopengl-cn.github.io/07%20PBR/01%20Theory/
         原文：
           https://learnopengl.com/PBR/Theory
+    水波纹（sin）：
+      https://catlikecoding.com/unity/tutorials/flow/waves/
 
     2d：
       https://www.udemy.com/course/making-glsl-shaders-for-2d-game-development/
@@ -89,9 +91,11 @@ openGL（GLSL,OpenGL Shading Language）:
       计算机呈像显示：
         https://web.stanford.edu/class/ee367/
 
-    youtube:
+    大V:
       Ben Cloward
       Freya Holmér
+      Catlike Coding
+      严令琪
     
     变量：
       https://colin1994.github.io/2017/11/11/OpenGLES-Lesson04/
@@ -199,8 +203,16 @@ openGL ES(OpenGL for Embedded Systems ):
     x = x(old) / sqrt((ax * ax) + (ay * ay) + (az * az))
     y = y(old) / sqrt((ax * ax) + (ay * ay) + (az * az))
     z = z(old) / sqrt((ax * ax) + (ay * ay) + (az * az))
-
+  mod：
+    取余
 操作：
+  PBR:
+    cook torrance brdf model 库克光照模型:
+      ref:
+        https://graphicscompendium.com/gamedev/15-pbr
+        https://garykeen27.wixsite.com/portfolio/cook-torrance-shading
+      背景：
+        1982 年，Robert Cook 和 Kenneth Torrance 发表了一个反射模型，该模型比 Phong 和 Blinn-Phong 模型更准确地代表了光反射的物理现实。
   结构体：
     https://www.khronos.org/opengl/wiki/Data_Type_(GLSL)
   可视化顶点法线：(TODO)
@@ -288,7 +300,8 @@ openGL ES(OpenGL for Embedded Systems ):
       操作：
         逆矩阵：
           inverse();
-
+  2D矩阵变化：
+    ref：https://learnopengl.com/Getting-started/Transformations
   旋转方式:
     欧拉角：
       万象锁：
@@ -336,6 +349,46 @@ openGL ES(OpenGL for Embedded Systems ):
       }
     ref：
       https://stackoverflow.com/questions/16225815/object-world-camera-and-projection-spaces-in-opengl
+
+  置换贴图：
+     texture displacements
+  
+  噪点图：
+    https://www.clicktorelease.com/blog/vertex-displacement-noise-3d-webgl-glsl-three-js/
+    柏林噪点：
+      Perlin noise
+    应用：
+      顶点噪点：
+        地形：
+          https://www.redblobgames.com/maps/terrain-from-noise/
+
+  RayMarching:
+    硬盘中的计算：
+      Signed distance functions(SDF):
+        用于创建3d形状最通用的方式：
+          用函数描绘物体：
+            球体：
+              a点 到 球心r的距离：
+                存在3中可能：
+                  length(A) - r < 0;
+                  length(A) - r = 0;
+                  length(A) - r > 0;
+              半径为123的球体：
+                float sphereSDF(float3 p) {     return length(p) - 1.0; }
+    渲染：
+      为了减少计算量：
+        光线不会全部反射到人眼，所以从人眼反推光线会大大减少计算量
+    
+    rayMarchingToZbuffer:
+      http://adrianb.io/2016/10/01/raymarching.html
+      https://github.com/Flafla2/Generic-Raymarch-Unity
+      https://medium.com/@calebleak/raymarching-voxel-rendering-58018201d9d6
+  
+  波纹：
+    格斯特纳波浪 Gerstner Waves：
+      用一个圆来描述波纹运动
+
+
 调试：
 
   Nsight:
@@ -412,6 +465,9 @@ openGL ES(OpenGL for Embedded Systems ):
       保存一个确定性应用程序以进行后续性能分析
       参考点
       错误报告
+
+格式：
+  GLB GLTF:
 
      
 优化：

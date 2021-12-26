@@ -149,6 +149,19 @@ Adia任务：
 
 渲染管线：
     LWRP:
+        着色器架构：
+            目标平台着色器平台：
+                2.0：
+                    全平台
+
+            前向渲染 ForwardLit：
+                顶点片元
+            阴影渲染 ShadowCaster：
+                顶点
+            深度渲染 DepthOnly：
+                顶点
+            全局信息 Meta：
+                顶点片元
         安装：
             PackageManager：
                 LightweightRenderPipeline
@@ -186,7 +199,90 @@ Adia任务：
                     Graphics：
                         找到渲染管线：
                             启用HDR
-                            
+    HDRP:
+        文件结构:
+            CoreRPLibrary/ShaderLibrary:
+
+                保存了大量的工具函数：光照计算工具函数，随机数计算，矩阵工具，坐标转换工具，风场，ParallaxOcclusionMapping等。
+
+            CoreRPLibrary/ShaderLibrary/API:
+
+                保存了跨平台函数的定义。
+
+            HDRP/Runtime/Material:
+
+                保存了HDRP中默认支持的材质Shader：Lit，LayeredLit，Stacklit等，都是和各自材质相关的计算。不同的材质中包含了不同的BSDF函数的实现、不同的BuiltinData的组织方式。
+
+            HDRP/Runtime/PostProcessing/Shaders:
+
+                后处理的Shader，HDRP中后处理全部使用ComputeShader。
+
+            HDRP/Runtime/RenderPipeline/ShaderPass:
+
+            ShaderPass的定义：包括了Vertex和Fragment程序的定义。
+
+            HDRP/Runtime/RenderPipeline/ShaderLibrary:
+
+                从C#当中设置的Shader参数，包括：各种变换矩阵、获取矩阵的函数、摄像机参数、场景参数、全部buffer、全局纹理、shader控制参数等。
+        核心技术：
+            TAA：
+                temporalAntialiasing：时效性抗锯齿,逐屏幕像素实时采样
+        着色器架构： 
+            目标平台着色器平台：
+                4.5：
+                    DirectX 11 功能级别 11+
+                    OpenGL 4.3+
+                    OpenGL ES 3.1
+                    Vulkan
+                    Metal
+            子着色器1：
+                ScenePickingPass：
+                    允许编辑器正确处理镶嵌对象和背面对象的拾取  
+                SceneSelectionPass:
+                    用于渲染对象的通道是ForwardOnly,选择通道着色器用于渲染一个带有对象 id 的缓冲区，稍后在场景视图中使用该对象 id 绘制轮廓
+                Gbuffer:
+                    通用概念：
+                        用于存储有关几何体的不同位信息，例如世界法线、基色、粗糙度等。 Unreal 在光照时对这些缓冲区进行采样计算以确定最终的阴影。
+                    HDRP概念：
+                        可以存储您想要的任何类型的数据，编写一个自定义 SRP，它可以让您完全控制 GBuffer 布局和格式。
+                        目前unity默认只开放4种数据通道：其中空闲的通道只有rt2
+                meta：
+                    计入全局缓存，用于物体之间的正确计算间接照明
+                ShadowCaster：
+                    用于将对象渲染到阴影贴图中
+                DepthOnly：
+                    渲染到深度缓冲区
+                MotionVectors：
+                    渲染每一个运动的物体，计算每像素运动向量，使用深度纹理来剔除不用计算的向量，避免过多占用算力
+                (一下决定了光追的正确性，渲染顺序必须按照如下排列)
+                TransparentDepthPrepass：
+                    将透明表面的多边形添加到深度缓冲区以改进其排序
+                TransparentBackface：
+                    为了正确的光追而存在，得在前向渲染之前处理才有效
+                Forward：
+                    根据影响对象的灯光，在一个或多个通道中渲染每个对象。
+                TransparentDepthPostpass：
+                    透明物体Postpass深度
+                RayTracingPrepass:
+                    递归渲染依赖这个pass，投射折射和反射光线，这个pass决定了光线可以撞击表面反射的次数
+                FullScreenDebug：
+                    可以单个输出所有pass的工作状况
+            子着色器2：
+                关于光追踪对RTX显卡的适配：
+                    IndirectDXR
+                    ForwardDXR
+                    GBufferDXR
+                    VisibilityDXR
+                    SubSurfaceDXR
+                    PathTracingDXR
+
+
+        渲染管线架构：       
+            光线追踪：
+
+        REF:
+            https://www.youtube.com/watch?v=ad9f_nKU0ZA
+            https://liangz0707.github.io/whoimi/blogs/HDRPsource/new2.HDRPShader%E5%BC%80%E5%8F%91%E8%AF%B4%E6%98%8E.html          
 
 
 

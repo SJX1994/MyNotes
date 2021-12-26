@@ -1,4 +1,5 @@
 # kanzi 3.6.13学习笔记
+
 激活码：3404-9800-5938-7033(一年)
 + 文档
   + 着色器：
@@ -1019,3 +1020,21 @@
   - 删除后车横向纹理(完成) -On the back of side window chrome, there no longer these horizontal graphics stripes. Please delete these, thanks.
 
   - 红色车身(完成) - Can the body color be changed to these 7 color options?  Can we see this demo with a red car Sports series (Red Carpet TC) ?
+
+
+83bf9-5d27e
+14afc-b3e62
+627f8-2b7b8
+beb84-a102d
+85677-af486
+aa432-26aab
+071f3-4e65e
+bd5e3-da691
+b0bec-7bf37
+2d2a7-2431b
+618e7-bf533
+e3e1b-88d8a
+cd3bd-3e095
+e5953-c0bec
+cecc9-a3318
+39ca4-b54dc

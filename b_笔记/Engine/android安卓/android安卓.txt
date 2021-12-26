@@ -59,7 +59,7 @@ android studio：
                         adb  shell am start com.rightware.kanzi.carinteractive/.CarInteractive：
                               启动程序
 
-沈捷翔
+
 
       系统：
             .gradle:

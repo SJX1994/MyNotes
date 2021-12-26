@@ -207,3 +207,12 @@ UI：
             Studio team to review remaining 4 videos and provide feedback offline @Nguyen, Nicholas (N.)@Thetard, Nicolas (NT.)
 
             后处理光晕贴图反射
+
+2021127:
+      前反光条为橙色          _完成
+      后反光条为深红色          _完成
+      前进风口为深黑色          _完成
+      前后门法线对齐          _完成
+      C柱车窗里面的细节          _完成
+      柱们的侧边反光条太亚光        _完成
+      车轮上方的车身高光删除         _完成
