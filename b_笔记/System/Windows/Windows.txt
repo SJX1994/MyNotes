@@ -82,7 +82,14 @@
                         HDD是机械
       没有权限修改：
             https://jingyan.baidu.com/article/7c6fb428286e6480642c9030.html
-
+      开机无法启动：
+            查看启动Log文档：
+                  type c:\Windows\System32\Logfiles\Srt\Srtrails.txt
+            多数是引导文件损坏：
+                  引导文件修复指令：
+                        bcdboot.exe
+      开始菜单的目录：
+            C:\ProgramData\Microsoft\Windows\Start Menu\Programs
 Windows目录结构：
       \PerfLogs：
             包含Windows性能日志，默认为空
@@ -268,6 +275,8 @@ GNOME:
 实用工具：
       窗口管理：
             https://windowtop.info/
+      PE系统：
+            寄存于U盘的微量操作系统
 
 makefile:
       概念：

@@ -35,10 +35,15 @@
                   http://ping.chinaz.com/github.com
       errno 10054：
             原因：
-                  上传大小限制
+                  1.上传大小限制
+                  2.SSL验证
             解决方法：
-                  git init
-                  git config http.postBuffer 524288000
+                  1.
+                        git init
+                        git config http.postBuffer 524288000
+                  2.
+                        git config --global http.sslVerify "false"
+
       Logon failed, use ctrl+c to cancel basic credential prompt：
             原因：
                   可能：git升级后必须从网页登陆
@@ -102,7 +107,7 @@ mac:
                   remote: Invalid username or password.
                   fatal: Authentication failed for 'https://github.com/mohamad-wael/tmp.git/'
             解决方案1：
-            https://twiserandom.com/git/github-error-remote-invalid-username-or-password-a-solution/index.html                  
+                  https://twiserandom.com/git/github-error-remote-invalid-username-or-password-a-solution/index.html                  
       mac开发套装（包含git）：
             终端：
                   xcode-select --install
@@ -127,6 +132,7 @@ mac:
                   (如果有直接设置)
 
             生成ssh：
+                  
                   $ git config --global user.name "xxx"
                   $ git config --global user.email "xxx.mail@xxx.com"
 
@@ -141,7 +147,22 @@ mac:
                   eval "$(ssh-agent -s)"
                   Agent pid 59566
                   ssh-add ~/.ssh/id_rsa
+      密钥：
+            类型：
 
+                  OpenSSH:
+                        d_rsa 是私钥 id_rsa.pub 是公钥
+                  
+                  PuTTY Private Key：
+                        .ppk 同时包含私钥和公钥
+                  
+                  pem：
+                        具有公共密钥的证书,SSH公钥,公钥私钥,具有公钥私钥的证书
+            转换：
+                  OpenSSH to PuTTY Private Key:
+                        1.下载：puttygen.exe (https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
+                        2.
+                        
 
 
 

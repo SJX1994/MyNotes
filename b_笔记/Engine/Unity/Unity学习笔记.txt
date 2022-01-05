@@ -200,6 +200,9 @@ Adia任务：
                         找到渲染管线：
                             启用HDR
     HDRP:
+        启用：
+            2020之后：
+                ttps://www.youtube.com/watch?v=ad9f_nKU0ZA
         文件结构:
             CoreRPLibrary/ShaderLibrary:
 
@@ -226,7 +229,7 @@ Adia任务：
                 从C#当中设置的Shader参数，包括：各种变换矩阵、获取矩阵的函数、摄像机参数、场景参数、全部buffer、全局纹理、shader控制参数等。
         核心技术：
             TAA：
-                temporalAntialiasing：时效性抗锯齿,逐屏幕像素实时采样
+                temporalAntialiasing：时效性抗锯齿,逐屏幕像素实时采样,进行延迟渲染
         着色器架构： 
             目标平台着色器平台：
                 4.5：
@@ -254,7 +257,9 @@ Adia任务：
                     渲染到深度缓冲区
                 MotionVectors：
                     渲染每一个运动的物体，计算每像素运动向量，使用深度纹理来剔除不用计算的向量，避免过多占用算力
-                (一下决定了光追的正确性，渲染顺序必须按照如下排列)
+                DistortionVectors：
+                    失去真向量，仅适用于透明对象
+                (以下决定了光追和阴影透明度的正确性，渲染顺序必须按照如下排列)
                 TransparentDepthPrepass：
                     将透明表面的多边形添加到深度缓冲区以改进其排序
                 TransparentBackface：
@@ -281,8 +286,10 @@ Adia任务：
             光线追踪：
 
         REF:
-            https://www.youtube.com/watch?v=ad9f_nKU0ZA
-            https://liangz0707.github.io/whoimi/blogs/HDRPsource/new2.HDRPShader%E5%BC%80%E5%8F%91%E8%AF%B4%E6%98%8E.html          
+            1.
+                https://www.youtube.com/watch?v=ad9f_nKU0ZA
+            2.
+                https://liangz0707.github.io/whoimi/blogs/HDRPsource/new2.HDRPShader%E5%BC%80%E5%8F%91%E8%AF%B4%E6%98%8E.html          
 
 
 

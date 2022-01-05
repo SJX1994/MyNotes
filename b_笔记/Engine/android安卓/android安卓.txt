@@ -147,6 +147,9 @@ android studio：
                   设置 > 系统 > 开发者选项 > USB 调试
       adb设备 下线offline：
             adb kill-server
+      过度绘制：
+            https://blog.csdn.net/zxc123e/article/details/71750786
+            https://developer.android.google.cn/topic/performance/vitals/render?hl=zh-cn#java
 
       
 kanzi配置android:
