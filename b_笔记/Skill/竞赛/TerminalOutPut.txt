@@ -1,0 +1,27 @@
+$ Running script...
+(running in 1.237305783 seconds...)
+
+Hello,World
+BinaryTree:Insert: creat root2creat
+BinaryTree:Insert: have root33add
+Tree:Insert: 
+ Last:33
+ Now:2
+Tree:Insert: LeftTree null can be Insert for 33creat LeftNode
+BinaryTree:Insert: have root22add
+Tree:Insert: 
+ Last:22
+ Now:2
+Tree:Insert: LeftTree already got one  for 22will be LeftNode
+Tree:Insert: 
+ Last:22
+ Now:33
+Tree:Insert: RightTree null can be Insert for 22creat RigtNode
+BinaryTree:Insert: have root1add
+Tree:Insert: 
+ Last:1
+ Now:2
+Tree:Insert: RightTree null can be Insert for 1creat RigtNode
+Totel get: 2 treeNodes
+
+$ 

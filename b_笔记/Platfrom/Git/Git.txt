@@ -15,6 +15,7 @@
             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
             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
             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
+            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
 
 操作：
       创建修改独立分支：
@@ -164,6 +165,21 @@ mac:
                         2.
                         
 
+Gerrit:
+      中科：
+[IssueID]:xxxx
+[Component]:Launcher
+[Module]:IVI
+[Type]:CODE
+[ITChecklistAddress]:N
+[OpenSourceInfo]:xx
+[DependsOn]:xxx
+[DetailInfo]:verify ok
+            git branch -a
+            git push origin HEAD:refs/for/RW_Queensland-dev
+
+
+GitLab:
 
 
 

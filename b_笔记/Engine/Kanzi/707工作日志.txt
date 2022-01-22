@@ -216,3 +216,34 @@ UI：
       C柱车窗里面的细节          _完成
       柱们的侧边反光条太亚光        _完成
       车轮上方的车身高光删除         _完成
+
+2022110：
+      Moon roof glass – too blue – need to adjust the amber lighting
+      车顶天窗 玻璃——太蓝——需要调整琥珀色灯光
+      -完成
+
+      Top down view on car the hood becomes too dark – update lighting
+      自上而下视角的汽车引擎盖变得太暗 - 更新照明
+      -完成
+
+      Rear type appears not centred – check position
+      后轮居中
+      -完成
+
+      Stripe on side vehicle along door panels & window should be black high gloss
+      沿门板和窗户的侧面车辆条纹应为黑色高光
+      -完成
+
+      Front Reflector needs darkening to match rear reflector (wheel arch)
+      前反射器需要变暗以匹配后反射器（轮拱）
+      -完成
+      
+      When in White colour, rear tailgate should not be body colour – please fix
+      白色时，后尾门不应与车身同色 - 请修复
+      -完成
+
+
+            
+2022/1/20:
+      
+

@@ -1,4 +1,5 @@
 openGL（GLSL,OpenGL Shading Language）:
+  ref：docs.GL
   概念：
     用于渲染2D、3D矢量图形的跨语言、跨平台的应用程序编程接口（API）
     需要选择一门语言来调用，多数使用C++
@@ -21,6 +22,8 @@ openGL（GLSL,OpenGL Shading Language）:
     https://shdr.bkcore.com/
   
   教程：
+    2D阴影：
+      https://www.shadertoy.com/view/4dfXDn
     顶点变换：
       https://www.3dgep.com/understanding-the-view-matrix/
         矩阵：
@@ -32,7 +35,7 @@ openGL（GLSL,OpenGL Shading Language）:
         https://learnopengl-cn.github.io/07%20PBR/01%20Theory/
         原文：
           https://learnopengl.com/PBR/Theory
-    水波纹（sin）：
+    水波纹（sin+ 格斯特纳 波浪 “Gerstner”）：
       https://catlikecoding.com/unity/tutorials/flow/waves/
 
     2d：
@@ -96,6 +99,11 @@ openGL（GLSL,OpenGL Shading Language）:
       Freya Holmér
       Catlike Coding
       严令琪
+      The Cherno 
+      ref:
+        https://www.patreon.com/m/78443/membership
+        https://www.twitch.tv/videos/1213264324
+
     
     变量：
       https://colin1994.github.io/2017/11/11/OpenGLES-Lesson04/
@@ -182,6 +190,7 @@ openGL ES(OpenGL for Embedded Systems ):
   dot：
     点积 ：
       输入两个向量 输出一个数字
+      计算投影
       例子：
         向量 (3, 2) 和 (2, 4)： 3*2 + 2*4 = 14。
       意义：
@@ -210,6 +219,7 @@ openGL ES(OpenGL for Embedded Systems ):
   mod：
     取余
 操作：
+
   PBR:
     cook torrance brdf model 库克光照模型:
       ref:
@@ -459,6 +469,26 @@ openGL ES(OpenGL for Embedded Systems ):
   波纹：
     格斯特纳波浪 Gerstner Waves：
       用一个圆来描述波纹运动
+      ref:
+        https://en.wikipedia.org/wiki/Trochoidal_wave
+      原理：
+        顶点：
+          https://blog.csdn.net/weixin_44749041/article/details/122424954
+        法线：
+          空间曲线微分
+          全微分方程的公式
+
+  解算：
+    布料解算：
+      关键词：
+        physics based animation(Kenney Erleben)
+          共轭梯度法：
+            https://youtu.be/eAYohMUpPMA
+        
+      ref详细见：
+        TSP_CSSE_45194(pdf)
+        算法库：
+          https://github.com/mmmovania/opencloth
 
   实时光散射效应：
     ref：
@@ -469,9 +499,34 @@ openGL ES(OpenGL for Embedded Systems ):
     缺点：
       采样数高，消耗片元的算力
       不能使用预计算来投射阴影
-    
+  
+  视差贴图 Parallax Mapping：
+    原理：
+      反向法线贴图
+    价值：
+      法线贴图只能模拟明暗，视差贴图可以模拟遮挡
+    实现：  
+      blender实现：
+        教程：
+          https://youtu.be/iSQGp6zHdyM
+        展示：
+          https://youtu.be/7k0e0JnPcH8
+    ref：
+      https://blog.csdn.net/HappyKocola/article/details/72812081
+
+  法线矩阵：
+    世界空间到相机空间转变：
+      求法：
+        相似矩阵：
+          http://www.lighthouse3d.com/tutorials/glsl-12-tutorial/the-normal-matrix/
+        特例：
+          https://lxjk.github.io/2017/10/01/Stop-Using-Normal-Matrix.html
 
 调试：
+  GLTF代码viewer：
+    
+    ref：
+      https://github.com/patriciogonzalezvivo/glslViewer/releases/tag/2.0.0
 
   Nsight:
     配置：
@@ -550,6 +605,13 @@ openGL ES(OpenGL for Embedded Systems ):
 
 格式：
   GLB GLTF:
+    .二进制文件
+    .glsl
+    .jpg文件
+  COLLADA™ ：.dae
+    定义了一个基于 XML 的模式，以便在应用程序之间轻松传输 3D 资产
+    ref: 
+      https://www.codeproject.com/Articles/625701/COLLADA-TinyXML-and-OpenGL
 
      
 优化：

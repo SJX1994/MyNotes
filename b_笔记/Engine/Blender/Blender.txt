@@ -10,6 +10,10 @@
             https://youtu.be/eJGliDhBCq8
       骨骼绑定：
             https://youtu.be/SBYb1YmaOMY
+      导出blenderShder to opengl：
+            https://cyclesformax.net/static/manual/blender_exporter/
+      blender映射maya键位:
+
 
 UI界面:
       顶栏：
@@ -23,3 +27,17 @@ UI界面:
             键位映射
             状态信息
             资源信息
+      shader:
+            Cycles节点系统：
+                  开源OSL代码：
+                        https://developer.blender.org/diffusion/B/browse/master/intern/cycles/kernel/shaders/;c1c6c11ca6c5f4cd775b787910fe69119b054af2
+            OSL开放着色语言：.osl .oso
+                  OSL 具有类似于 C 的语法以及其他着色语言。但是，它专为高级渲染算法而设计，并具有诸如 光辉闭合、BSDF(散射光线) 和延迟光线追踪等一流概念的功能。仅支持cpu渲染
+                  特色：
+                        表面和体积着色器计算 光辉闭合，而不是最终颜色。更正确的物理光照
+                        表面和体积着色器不会在灯光上循环或发射光线。
+                        表面着色器和灯光着色器是一回事。所有能见物都在发光
+                        透明度只是另一种照明。
+                        可以使用“光路表达式”指定渲染器输出 (AOV)。自定义光线向量的发射、散射方向
+                        OSL自动组成着色器网络，
+                        在 OSL 中，您可以在着色器中获取任何计算量的导数，并使用任意量作为纹理坐标并期望正确过滤。

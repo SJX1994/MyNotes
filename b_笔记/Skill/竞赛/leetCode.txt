@@ -1,0 +1,159 @@
+showmebug：
+      面试解bug
+            二叉树：
+                        // *
+                        //  * Definition for a binary tree node.
+                        //  * public class TreeNode {
+                        //  *     public int val;
+                        //  *     public TreeNode left;
+                        //  *     public TreeNode right;
+                        //  *     public TreeNode(int val=0, TreeNode left=null, TreeNode right=null) {
+                        //  *         this.val = val;
+                        //  *         this.left = left;
+                        //  *         this.right = right;
+                        //  *     }
+                        //  * }
+
+                        using System;
+                        //单个节点
+                        public class Tree {
+                        //构建树(数据，做分叉，右分叉)公私分明比较安全
+                        private int nodeData;
+                        
+                        public int NodeData
+                        {
+                              get{return nodeData;}
+                        }
+                        private Tree leftTree;
+                        public Tree LeftTree
+                        {
+                              get{return leftTree;}
+                              set{leftTree = value;}
+                        }
+                        private Tree rightTree;
+                        public Tree RightTree
+                        {
+                              get{return rightTree;}
+                              set{rightTree = value;}
+                        }
+                        
+                        public Tree (int nodeValue) {
+                              nodeData = nodeValue;
+                        }
+                        //增
+                        public void Insert(int newItem)
+                        {
+                              int currentNodeValue = nodeData;
+                              //安全校验
+                              if(newItem >= currentNodeValue)
+                              {
+                              //检查 与 生成
+                              if(leftTree==null)
+                              {
+                                    //没有就创建一个新的
+                                    Console.WriteLine("Insert: LeftTree null can be Insert" + newItem.ToString());
+                                    leftTree = new Tree(newItem);
+                              }
+                              else
+                              {
+                                    //有了就插入
+                                    Console.WriteLine("Insert: LeftTree already got one"+ newItem.ToString());
+                                    leftTree.Insert(newItem);
+                              }
+                              }else
+                              {
+                                    if(rightTree==null)
+                                    {
+                                    //没有就创建一个新的
+                                    Console.WriteLine("Insert: RightTree null can be Insert"+ newItem.ToString());
+                                    rightTree = new Tree(newItem);
+                                    }
+                                    else
+                                    {
+                                    //有了就插入
+                                    Console.WriteLine("Insert: RightTree already got one"+ newItem.ToString());
+                                    rightTree.Insert(newItem);
+                                    }
+                              }
+                        }
+                        //删
+                        //改
+                        //查
+                              //就单节点树的高度
+                              public int Height()
+                              {
+                              //递归检查 TODO
+                              return 0;
+                              }
+                              //就单节点自查节点数量
+                              public int NumberOfLeafNoeds()
+                              {
+                              //递归检查
+                              if (this.leftTree == null && this.rightTree == null)
+                              {
+                                    return 1; //found a leaf node
+                              }
+                              int leftLeaves = 0;
+                              int rightLeaves = 0;
+                              if (this.leftTree != null)
+                              {
+                                    leftLeaves = leftTree.NumberOfLeafNoeds();
+                              }
+                              if (this.rightTree != null)
+                              {
+                                    rightLeaves = rightTree.NumberOfLeafNoeds();
+                              }
+                              
+                              return leftLeaves + rightLeaves;
+                              }
+                        
+                        
+                        
+                        }
+                        //操作节点
+                        public class BinaryTree
+                        {
+                        private Tree root;
+                        public Tree Root
+                        {
+                        get{return root;}
+                        }
+                        //插入整颗树
+                        public void Insert(int data)
+                        {
+                        if(root != null)
+                        {
+                              root.Insert(data);
+                        }else
+                        {
+                              root = new Tree(data);
+                        }
+                        }
+                        //查找整颗树
+                        public int NumberOfLeafNodes()
+                        {
+                              if (root == null)
+                              { return 0; }
+                              return root.NumberOfLeafNoeds();
+                        }
+                        }
+                        public class Test
+                        {
+                        public static void Main()
+                        {
+                        Console.WriteLine("Hello,World");
+                        BinaryTree t = new BinaryTree();
+                        t.Insert(2);
+                        t.Insert(33);
+                        t.Insert(22);
+                        t.Insert(1);
+                        t.Insert(577);
+                        t.Insert(100);
+                        t.Insert(50);
+                        t.Insert(122);
+                        t.Insert(5);
+                        int treesNmb = t.NumberOfLeafNodes();
+                        Console.WriteLine("Totel get:" + treesNmb.ToString() + "treeNodes" );
+                        
+                        }
+                        }

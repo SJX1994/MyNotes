@@ -129,7 +129,90 @@
 	刹车盘红色
 	_完成
 	
+202216:
+	1. this grille surround line is bright chrome on LUX
+		LUX车型上这个格栅环绕线是亮铬
+		_完成
 
+	2. Make grille dark background a bit darker
+		使格栅暗背景更暗
+		_完成
+
+	3. This Lower chrome piece is bright all the way down
+		大幅降低下镀铬件亮度
+		_完成
+
+	4. License plate: same color as body
+		车牌和车身同色
+		_完成
+
+	5.Make darker red
+		车身后尾灯变深色
+		_完成
+
+	6.Darken the wheels a tiny bit
+		车轮降低一点亮度
+		_完成
+
+	7.Make pillar catch the same highlight as windows
+		B柱和车窗高光反射点相同
+
+	8.No red calipers on LUX
+		LUX 没有红色刹车片
+		_完成
+
+	9.In this view the tire is too bright
+		在某些角度轮胎太亮
+		_完成
+
+	10.Darken shadow and show shadow below bumpers
+		阴影变黑，并且符合车身长度
+		_完成
+
+
+
+2022114:
+      LUX：
+            Bumper vehicle RHS opening has foreign surface – to be removed
+            保险杠车辆 RHS 开口有异物表面 - 需要去除
+		-完成
+
+            Reflection from window to hood touchpoint needs adjustment
+            从窗口到引擎盖接触点的反射需要调整
+            ？？
+
+            Signature lights under headlamps need to be darker shade of grey
+            大灯下的标志性灯需要是较深的灰色阴影
+		-完成
+		
+            Lower Bumper should have a piece of piano black part and Chrome stripes extended to both ends. Refer to reference pictures in excel
+            下保险杠应该有一块钢琴黑色部分和延伸到两端的镀铬条纹。 参考excel中的参考图片
+		-完成
+
+            Wheel Surface need to adjust Silver and Black contrasting
+            轮面需要调整银色和黑色对比
+		-完成
+
+            Interior highlight too bright
+            内饰亮点太亮
+		-完成
+
+      SPORT:
+            Rear Tyre – lighting continuity issue on wheel arch – need to fix
+            后轮胎 - 轮拱上的照明连续性问题 - 需要修复
+		-完成
+
+            Chrome piece need to get darker (more like gunmetal) on rear qtr window, side door spear, Grille and badge
+            镀铬件需要变暗（更像青铜色）
+		-完成
+
+            Wheel Arch area need to be black against the wheel tyre, no reflection
+            轮拱区域对着轮子轮胎的部分是黑色的，没有反光
+		-完成
+
+            Side doors lower Spear appears a little too bright – adjust colour
+            侧门下矛看起来有点太亮了——调整颜色
+		-完成
 
 
 

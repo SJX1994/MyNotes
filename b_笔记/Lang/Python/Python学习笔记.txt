@@ -293,7 +293,21 @@ Python库：
     
         
 
-
+语法：
+    SwitchCase：
+         switch (month) {
+            case 1:  monthString = "January";
+                     break;
+            case 2:  monthString = "February";
+                     break;
+            case 3:  monthString = "March";
+            ...
+        }
+    return:
+        def add_one(x):
+            # No return statement at all
+            result = x + 1
+        
 
 
 常用工具api：
@@ -431,7 +445,15 @@ Python库：
     len():
         数组/字符串 长度：
             len(value)
-
+    switch case:
+        switch (month) {
+            case 1:  monthString = "January";
+                     break;
+            case 2:  monthString = "February";
+                     break;
+            case 3:  monthString = "March";
+            ...
+        }
 
 操作：
     写入.TMX文件(tiledMap)：

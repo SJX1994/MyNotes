@@ -142,7 +142,19 @@ varying vec3 m_objectPos;
     float m_frontMask(float size, float bright)
     {
 
-        return pow(min(Saturate(bright),dot(m_normal(),-normalize(vec3(ViewDirection.x,ViewDirection.y-16.0,ViewDirection.z-10.0)))),size);
+        return pow(
+            min(Saturate(bright)
+            ,
+
+            dot(
+
+                m_normal()
+                
+                ,-normalize(vec3(ViewDirection.x,ViewDirection.y-16.0,ViewDirection.z-10.0))
+                
+                )
+            
+            ),size);
     }
 
     vec4 m_texColor(sampler2D texture)

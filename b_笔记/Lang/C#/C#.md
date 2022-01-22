@@ -1,0 +1,46 @@
+C# 是微软对标 Java 创造的语言 所以语言特性比较相似
+
+语言特性：
+      C#语言是.NET框架中新一代的开发工具,简化了C++的类，命名空间，方法重载，异常处理 等
+
+      自动内存管理：
+            CLR内建垃圾收集器，生命周期结束后自动回收内存。
+      安全：
+            不支持指针，不存在 全局函数 全局变量。所有函数常量都必须在类中，避免命名冲突
+      设计目标：
+            一种简单、现代、通用、面向对象的编程语言。
+            增强软件的健壮性、持久性和程序员的生产力。
+            发适合在分布式环境（软件各司其职，不混杂功能在一个组件中）
+            可移植性（多平台适用）
+            支持国际化（多语言本地化）
+
+概念：
+      深拷贝：
+            相对独立
+            例：
+                  int a=12;
+                  int c=a;//进行了深拷贝
+                  c=232 //不影响a
+            原理：
+                  分配了两个 堆的地址
+      浅拷贝：
+            相互影响
+            例：
+                  public class YDog
+                  {
+                        public string Name { get; set; }
+                  }
+                  class Program
+                  {
+                        static void Main(string[] args)
+                        {
+                              YDog sourceP = new YDog() { Name = "大黄" };
+                              YDog copyP = sourceP; // 浅拷贝
+                              copyP.Name = "小黄"; // 拷贝对象改变Name值
+                              Console.WriteLine("YDog.Name: [SourceP: {0}] [CopyP:{1}]", sourceP.Name, copyP.Name);
+                              Console.Read();
+                              // 结果都是"小黄",因为实现的是浅拷贝，一个对象的改变都会影响到另一个对象
+                        }
+                  }
+            原理：
+                  分配了一个 堆的地址

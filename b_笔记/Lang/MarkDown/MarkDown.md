@@ -1,0 +1,28 @@
+MarkDown:
+    范例：
+        https://markdown-it.github.io/
+    Python：markDown转Html：
+        环境安装：
+            cmd:
+                pip：
+                    版本升级：
+                        py -m pip install --upgrade pip
+                    安装markDown库：
+                        py -m pip install markdown
+                    安装代码高亮库：
+                        py -m pip install Pygments
+        使用：
+            py -m markdown 你的markDown文件.md > out.html
+        在线转Html：
+            https://dillinger.io/
+
+    使用：
+        链接：(尽量使用图床，本地图片需要和md在同一路径下)
+            <(
+            ![任意文字](任意路径 "任意注释")
+            )>
+        vscode中预览：
+            Open Preview (Ctrl+Shift+V) or use the Command Palette (Ctrl+Shift+P) to run the Markdown: Open Preview to the Side command (Ctrl+K V).
+    插入本地图片：
+        ![](1.png)
+        ![](foldername/1.png)

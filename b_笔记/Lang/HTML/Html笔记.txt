@@ -600,7 +600,7 @@ MarkDown:
             )>
         vscode中预览：
             Open Preview (Ctrl+Shift+V) or use the Command Palette (Ctrl+Shift+P) to run the Markdown: Open Preview to the Side command (Ctrl+K V).
-
+    
 
 jquery：
     概念：
@@ -878,6 +878,8 @@ HTTP：
 
         正常：
             https://greasyfork.org/zh-CN
+        goodshit：
+            youtubu字幕翻译
 
         不可描述：
             https://sleazyfork.org/zh-CN

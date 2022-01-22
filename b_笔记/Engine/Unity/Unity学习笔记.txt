@@ -202,7 +202,9 @@ Adia任务：
     HDRP:
         启用：
             2020之后：
-                ttps://www.youtube.com/watch?v=ad9f_nKU0ZA
+                https://www.youtube.com/watch?v=ad9f_nKU0ZA
+            崩溃处理办法：
+                更改显卡设置，命令行启动
         文件结构:
             CoreRPLibrary/ShaderLibrary:
 
@@ -284,14 +286,203 @@ Adia任务：
 
         渲染管线架构：       
             光线追踪：
+        HDRP文档笔记：
+            通道纹理打包：
+                unity蒙版图Mask map：
+                    导入格式：
+                        线性色彩空间
+                    通道规则：
+                        R：金属的
+                        G：遮挡AO
+                        B：细节遮罩
+                        A：平滑度
+                unity细节图Detail map：
+                    通道规则：
+                        R：去色图
+                        G：法线 Y
+                        B：平滑度
+                        A：法线 X
 
+            Alpha Clipping
+            半透明剪裁
+                "不渲染"alpha值低于0.1的像素
+
+            Alpha Output
+            半透明输出选项
+                R11G11B10
+                    默认渲染方式，最小带宽的颜色缓冲格式 
+                    如果后处理格式为这个 将不处理任何 R16G16B16A16(带有alpha通道的屏幕像素)
+                    例如：
+                    深度变焦后处理
+                    如果不启用R16G16B16A16物体将边缘锐利内部模糊
+                    TAA(时间抗锯齿)不开启R16G16B16A16会产生边缘模糊的情况
+                R16G16B16A16
+                    所有alpha通道的 颜色缓冲格式
+
+            Ambient occlusion
+            环境光遮蔽：
+                不反射光照的遮罩，可以采用形如：xNormal，Substance Designer or Painter，Knald 来制作。
+                在2019版本中的unity 延迟渲染光照pass 会影响 自发光， 前向渲染pass 不会影响
+                Lit使用：
+                    环境光遮蔽在 MaskMap的绿色通道里读取：
+                    赋值后：
+                       Ambient Occlusion Remapping：
+                        通过插值调整范围 
+            Atmospheric Scattering
+            大气散射：
+                现象：
+                    大气散射是当悬浮在大气中的粒子向各个方向漫射（或散射）通过它们的一部分光时发生的现象。
+                    导致大气散射的自然效果示例包括雾、云或薄雾。
+                实现：
+                    高清晰度渲染管线 (HDRP) 通过将颜色叠加到对象上来模拟雾化效果，具体取决于对象与相机的距离。
+                    可以隐藏远处游戏对象的相机远平面剪裁，这在您减少相机的远剪裁平面以提高性能
+                    雾的密度 与 相机的距离 与 世界空间高度 呈正比。所有材质都与雾产生反应，
+                    雾可以使用 天空盒子 作为颜色来源。采样 天空盒子的 mipmap, 这样可以非常便宜的做出体积雾的效果
+            Anti-Aliasing
+            抗锯齿：
+                    锯齿：
+                        数字采样器试图采样真实世界并尝试数字化时 发生的偏差。
+                        例如：
+                            音频采样 
+                                采用：Nyquist rate 奈奎斯特率 的方法进行 完全描述给定信号的最小采样率，但对于图像计算量太大 -  ![](Img/Nyquist rate.jpg)（类似拟合？）
+                    unity的方法：
+                        快速近似抗锯齿 (FXAA)。
+                            在每个像素边缘平滑,最终图像会略微模糊，不适合大量镜面反射的场景
+                            这是HDRP最廉价的后处理抗锯齿
+
+                        时间抗锯齿 (TAA)。
+                            适用于缓慢运动物体的边缘，需要开启unity适量运动
+                            TAA是缓存了 帧历史缓冲区，所以当物体快速移动时 历史缓冲区的刷新 跟不上 速度就会出现重影。
+
+                        亚像素形态抗锯齿 (SMAA)。
+                            在图像的边界中找到图案 混合边界的像素
+                            适合平面卡通或干净的艺术风格
+
+                        多样本抗锯齿 (MSAA)。
+                            对像素内的多位置采样，并结合样本
+                            一种硬件抗锯齿，可以结合其他效果使用（除了TAA，因为MSAA不支持矢量运动效果采样）
+            Look-Up-Table
+            显示查找表：
+                可以接受所有PS里做的处理作为后处理输入到实时渲染引擎
+                定义：
+                    将一种颜色空间映射到另一种颜色空间
+                    3D LUT，它与立体3D图像无关，它指向的是色彩空间的3维分布矩阵。
+                opengl实现：
+                    https://zhuanlan.zhihu.com/p/43241990
+                可以用Ps之类的软件映射到unity
+            
+            AxF Shader
+            AxF材质：
+                Appearance eXchange Format
+                X-Rite 公司开发的一款 数字孪生物理世界材质
+                通过扫描真实材质 模拟 各向异性 扩散 法线 粗糙度 高光颜色等
+            
+            Building-For-Consoles
+            为不同终端配置：
+                PlayStation 4: com.unity.render-pipelines.ps4
+                PlayStation 5: com.unity.render-pipelines.ps5
+                Xbox One: com.unity.render-pipelines.xboxone
+                Game Core Xbox Series: com.unity.render-pipelines.gamecore
+                Game Core Xbox One: com.unity.render-pipelines.gamecore
+
+            Camera-relative rendering
+            相机关联渲染：
+                以相机为原点。
+                为了解决：
+                    浮点数的绝对精度随着数字变大而降低。游戏世界空间的原点离原点越远浮点数越不精确，比如：z-fight的重影。相机相关渲染将世界原点替换为相机的位置
+                对shader的影响:
+                    如果启用：
+                        `GetAbsolutePositionWS(PositionInputs.positionWS)` 返回非相机相关的世界空间位置。
+                        `GetAbsolutePositionWS(float3(0, 0, 0))` 返回等于
+                        `_WorldSpaceCameraPos` 的相机的世界空间位置。
+                        `GetCameraRelativePositionWS(_WorldSpaceCameraPos)` 返回 `float3(0, 0, 0)`
+                    如果禁用：
+                        `GetAbsolutePositionWS()` 和 `GetCameraRelativePositionWS()` 返回传递给它们的位置
+
+            Creating-a-Custom-Sky
+            自定义天空C#+HlSL:
+                C#创建实际渲染天空的类，将其渲染为用于照明的立方体贴图或用于背景的视觉效果。 这是您必须实现特定渲染功能的地方。
+                为天空实际创建着色器。 此着色器的内容取决于您要包含的效果。(例如： HDRI 图,一种360图)
+
+            CustomPass:
+            注入着色器：
+                概念：
+                    在渲染循环内的某些点注入shader 和 C#
+                    您能够绘制对象、执行全屏通道并读取一些相机缓冲区，如深度、颜色或法线。
+                    注入通过volumes（包裹盒）系统实现,
+                    可以渐变，由包裹盒实心与空心区分
+                    全局 包裹盒 优先于 本地 包裹盒
+                6个unity暴露的注入点（从上到下触发）：
+
+                    BeforeRendering
+                        可以取到的缓冲区：
+                            Depth (Write)
+                        描述：
+                            可以写入深度缓冲，可以用遮罩来做深度缓冲
+
+                    AfterOpaqueDepthAndNormal
+                        缓冲区：
+                            Depth (Read | Write), Normal + roughness (Read | Write)
+                        描述：
+                            您可以使用 DecodeFromNormalBuffer 和 EncodeIntoNormalBuffer 函数来读取/写入法线和粗糙度数据。
+
+                    BeforePreRefraction
+                        缓冲区：
+                            Color (no pyramid | Read | Write), Depth (Read | Write), Normal + roughness (Read)
+                        描述：
+                            缓冲区将包含所有不透明对象以及天空。
+                    BeforeTransparent
+                        缓冲区：
+                            Color (Pyramid | Read | Write), Depth (Read | Write), Normal + roughness (Read)
+                        描述：
+                            在这里，可以对我们用于透明折射的颜色进行采样。您还可以在此处绘制一些需要折射场景的透明对象（例如水）。
+                    BeforePostProcess
+                        缓冲区：
+                            Color (Pyramid | Read | Write), Depth (Read | Write), Normal + roughness (Read)
+                        描述：
+                            渲染所有HDR
+                    AfterPostProcess
+                        缓冲区：
+                            Color(Read | Write), Depth (Read)
+                        描述：
+                            深度是动态的
+                    ![FullScreenCustomPass_Inspector](IMG/FullScreenCustomPass_Inspector.png)
+                具体操作：
+                    添加 Custom Pass
+                    注入shander代码：
+                        Create/Shader/HDRP/Custom Renderers Pass.
+                        可引入变量（不够可以黑客）
+                            #define ATTRIBUTES_NEED_NORMAL
+                            #define ATTRIBUTES_NEED_TANGENT
+                            #define ATTRIBUTES_NEED_TEXCOORD0
+                            #define ATTRIBUTES_NEED_TEXCOORD1
+                            #define ATTRIBUTES_NEED_TEXCOORD2
+                            #define ATTRIBUTES_NEED_TEXCOORD3
+                            #define ATTRIBUTES_NEED_COLOR
+
+                            #define VARYINGS_NEED_POSITION_WS
+                            #define VARYINGS_NEED_TANGENT_TO_WORLD
+                            #define VARYINGS_NEED_TEXCOORD0
+                            #define VARYINGS_NEED_TEXCOORD1
+                            #define VARYINGS_NEED_TEXCOORD2
+                            #define VARYINGS_NEED_TEXCOORD3
+                            #define VARYINGS_NEED_COLOR
+                            #define VARYINGS_NEED_CULLFACE
+                        顶点
+                            AttributesMesh ApplyMeshModification(AttributesMesh input, float3 timeParameters)
+                        片元
+                             void GetSurfaceAndBuiltinData(FragInputs fragInputs, float3 viewDirection, inout PositionInputs posInput, out SurfaceData surfaceData, out BuiltinData builtinData)
+                    可编程渲染管线：
+                        可以使用C#
+                        或者ShaderGraph
         REF:
             1.
                 https://www.youtube.com/watch?v=ad9f_nKU0ZA
             2.
                 https://liangz0707.github.io/whoimi/blogs/HDRPsource/new2.HDRPShader%E5%BC%80%E5%8F%91%E8%AF%B4%E6%98%8E.html          
 
-
+            3.
+                ($Unity工程)Library\PackageCache\com.unity.render-pipelines.high-definition@7.7.1\Documentation~
 
 
 
