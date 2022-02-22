@@ -245,5 +245,19 @@ UI：
 
             
 2022/1/20:
-      
+      Full Screen mode – vehicle is too dark (hardly can see the hood and windscreen) – need to tune so more details are visible.
+      顶部视角 车窗和引擎盖加光照
+      -完成
+
+      Remove the Grey Triangles reflections on rear qtr glass @Jay Shen
+      删除三角反射
+      -完成
+
+      Wheels highlight try to keep more uniformed (currently unnatural with top light and dark lower) @Jay Shen
+      车轮均匀反射
+      -完成
+
+      Remove side markers – not in China market / MEA – @Liu, Andy (Gang) reconfirm status, @Jay Shen to update
+      移除侧边反光条
+      -完成
 

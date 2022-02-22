@@ -1,0 +1,239 @@
+//目标：在顶点位置生成模型
+//逻辑：
+//--------------------------------
+//    第一步：
+//    创建三维数组保存顶点位置信息
+//--------------------------------
+//    第二步：
+//    以数组长度复制模型
+//--------------------------------
+//    第三步：
+//    分配模型给每个数组中的顶点位置
+//命名 ：
+//   FBX：
+//     大多数 FBX SDK 类名称以 Fbx 开头。示例：FbxNode, FbxScene,FbxCamera
+//   p：
+//     传递给成员函数的参数以小写“P”开头。示例：pWriteFileFormat, pScene,pFilename
+//   l：
+//     局部变量以小写“L”开头。示例：lWriteFileFormat, lScene,lFilename
+//   g：
+//     全局变量以小写“G”开头。示例：gStart, gStop,gCurrentTime
+//   m：
+//     成员数据（成员变量）以小写“M”开头。示例：mDescription, mImportname,mSelect
+          
+            global vector $gVector[] = {};
+            global string $gTheSelected[] = {};
+            global int $gCounter = 0;
+            global int $gLeftOut = 0;
+
+            global proc Model2Vertex(){
+                  if(`window -query -exists adia_myVertexNormalSort_Window`)
+                  deleteUI adia_myVertexNormalSort_Window;
+                  string $s = "Model2Vertex";
+                  window -title $s -menuBar true -maximizeButton false -minimizeButton true adia_myVertexNormalSort_Window;
+                  columnLayout -adjustableColumn true;
+                        button -height 23 -width 23 -backgroundColor 255 241 155 -label "SaveVertexInfo"
+                        -command "SaveVertexInfo";
+                        text -label " " -en off;
+                  columnLayout -adjustableColumn true;
+                        button -height 23 -width 23 -backgroundColor 255 241 155 -label "CopyModel"
+                        -command "CopyModel";
+                        text -label " " -en off;
+                  columnLayout -adjustableColumn true;
+                        button -height 23 -width 23 -backgroundColor 255 241 155 -label "Model2VertexPos"
+                        -command "Model2VertexPos";
+                        text -label " " -en off;
+                  window -edit -widthHeight 600 300 adia_myVertexNormalSort_Window;
+                  showWindow adia_myVertexNormalSort_Window;
+            }
+            proc SaveVertexInfo()
+            {
+                  //初始化
+                  global vector $gVector[];
+                  global int $gCounter;
+                  global int $gLeftOut;
+                  //$gVector[0] = <<3.0,2.0,10.0>>;
+                  $gVector = {};
+                  $gCounter = 0;
+                  $gLeftOut = 0;
+                  string $lSelectList[]; 
+                  $lSelectList = `ls -selection -flatten`;
+                  $lElementVertexs = `filterExpand -expand on -selectionMask 31 -selectionMask 70 $lSelectList`; 
+                  if(size($lElementVertexs)>=1)
+                  {
+                        int $i;
+                        for ($i = 0; $i < size($lElementVertexs); $i++) {
+                              vector $mPos = `pointPosition -w $lElementVertexs[$i]`;
+                              $gVector[$i] = $mPos;
+                        }
+                        mDbug($gVector);
+                        print("顶点信息已保存,\n"+
+                        "切换到物体模式，\n"+
+                        "选择要 拷贝到顶点 的 物体\n"+
+                        "并执行下一步CopyModel");
+                  }else
+                  {
+                        print("请切换到顶点模式");
+                  }
+                 
+            }
+            proc CopyModel() 
+            {
+                  global vector $gVector[];
+                  global int $gCounter;
+                  global int $gLeftOut;
+                  global string $gTheSelected[];
+                  string $lModels[];
+                  string $lSelectList[];
+
+                  $lModels = {};
+                  $lSelectList = `ls -selection -flatten`;
+                  $lElement = `filterExpand -expand on -selectionMask 12 $lSelectList`; 
+                  $gTheSelected = $lElement;
+                
+                  int $i;
+                  if(size($gVector)>1000 && size($gTheSelected)==1)
+                  {
+                              int $mStep = size($gVector)/10;
+                              for($i = 0; $i < $mStep; $i++)
+                                    {
+                                          string $mModel[] = `duplicate -rr`;
+                                          $lModels[$i] = $mModel[0];
+                                          $gCounter+=1;
+                                          //todoCounter
+                                    }
+                                    select -r $lModels;
+                                    // CombinePolygons;
+                                    // delete -all -constructionHistory;
+                                    
+                  }
+                  else if(size($gVector)<1000 && size($gTheSelected)==1)
+                  {
+                              for($i = 0; $i < size($gVector); $i++)
+                              {
+                                    string $mModel[] = `duplicate -rr`;
+                                    $lModels[$i] = $mModel[0];
+                              }
+                              select -r $lModels;
+                  }
+                  else
+                  {
+                        print("请仅选择一个物体");
+                  }
+                  $gLeftOut += $gCounter;
+                        
+
+                  print("选择需要变换的物体\n"+
+                        "并执行下一步Model2VertexPos");
+                        
+                  
+                  
+                  
+            }
+            proc Model2VertexPos()
+            {
+                  global vector $gVector[];
+                  global string $gTheSelected[];
+                  global int $gCounter;
+                  global int $gLeftOut;
+                  string $lSelectList[];
+                  
+                  $lSelectList = `ls -selection -flatten`;
+                  $lElement = `filterExpand -expand on -selectionMask 12 $lSelectList`; 
+                  
+                  if($gLeftOut == $gCounter)//首次运行
+                  {
+                        int $i;
+                        for($i = 0; $i < $gCounter; $i++)
+                        {
+                              vector $mPos = $gVector[$i];
+                              string $mEle = $lElement[$i];
+                              float $mX = $mPos.x;
+                              float $mY = $mPos.y;
+                              float $mZ = $mPos.z;
+                              move -ws $mX $mY $mZ $mEle;
+                              
+                              
+                              
+                              // string $mChekerExist = mDbugWhatIs("$mEle");
+                              // if($mChekerExist=="Unknown")
+                              // {
+                                    
+                              //       print("坐标数量和所选物体不对应");
+                              //       break;
+                                          
+                              // }
+                        
+                        
+                        
+                        }
+                        
+                       
+                        $gCounter=0;
+                  }else
+                  {
+
+                        if($gLeftOut == size($gVector))//全部完成判定
+                        {
+                              print("已经全部完成位移");
+                              
+                        }else
+                        {
+                              int $i;
+                              int $j=0;
+                              
+                              for($i = $gLeftOut-$gCounter; $i < $gLeftOut; $i++)
+                              {
+                                    
+                                    vector $mPos = $gVector[$i];
+                                    string $mEle = $lElement[$j];
+                                    float $mX = $mPos.x;
+                                    float $mY = $mPos.y;
+                                    float $mZ = $mPos.z;
+                                    move -ws $mX $mY $mZ $mEle;
+                                    $j += 1;
+                                    
+                                    
+                                    // string $mChekerExist = mDbugWhatIs("$mEle");
+                                    // if($mChekerExist=="Unknown")
+                                    // {
+                                          
+                                    //       print("坐标数量和所选物体不对应");
+                                    //       break;
+                                                
+                                    // }
+                              
+                              
+                              
+                              }
+                              $gCounter=0;
+                        }
+                        
+                  }
+                  CombinePolygons;
+                  delete -all -constructionHistory;
+                  select -r $gTheSelected[0];
+                 
+            }
+//------------------------------Tool----------------------------------
+            proc mDbug(vector $lVector[])
+            {
+
+                  for($mVert in $lVector)
+                  {
+                        print("Hit: xyz: \n"+ $mVert.x + "\n" + $mVert.y + "\n" + $mVert.z + "\n");
+                  }
+                  
+                  
+            }
+            proc string mDbugWhatIs(string $WhatIs)
+            {
+
+                  string $mWhatIs = `whatIs $WhatIs`;
+                  return $mWhatIs;
+                  
+                  
+            }
+           
+//------------------------------Run----------------------------           
+            Model2Vertex();

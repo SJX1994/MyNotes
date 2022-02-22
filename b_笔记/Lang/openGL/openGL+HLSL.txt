@@ -167,7 +167,18 @@ openGL ES(OpenGL for Embedded Systems ):
         高级纹理目标，例如纹理缓冲区、多样本二维数组和立方体贴图数组
         调试和健壮性功能可实现更轻松的代码开发和安全执行。
    《 OpenGL ES 3.0编程指南 》：
-
+内置函数：
+  step：
+    拆分步径
+  smoothStep：
+    差值步径
+  floor:
+    只输出整数
+  Sign：  
+    只传出1 0 -1
+    可以用于辨别朝向
+  ref：
+    https://blog.csdn.net/hgl868/article/details/7876257
 通用概念：
   Element Buffer Objects(EBO):
     元素缓冲对象：
@@ -612,6 +623,77 @@ openGL ES(OpenGL for Embedded Systems ):
     定义了一个基于 XML 的模式，以便在应用程序之间轻松传输 3D 资产
     ref: 
       https://www.codeproject.com/Articles/625701/COLLADA-TinyXML-and-OpenGL
+  FBX：
+    格式规范：
+      2006年之后属于Autodesk，其许可证和软件本身仍然完全关闭。
+      FBX 有一个基于文本的 (ascii) 和一个二进制版本。
+    官方开发者文档：
+      3D 场景的 FBX 文件格式：
+        以二进制格式保存
+        储有关相机、灯光、网格、NURBS 和3D 场景的其他元素的数据。
+      使用 FBX 技术做什么：
+        允许访问:
+          Mesh - FbxMesh
+          Level of detail (LOD) groups - FbxLodGroup
+          Cameras (including stereo cameras for 3D) - FbxCamera
+          Lights and gobos - FbxLight, FbxGobo
+          NURBS - FbxNurbs, FbxNurbsCurve, FbxNurbsSurface, FbxTrimNurbsSurface
+          Texture mapping over a geometry - FbxTexture
+          Material mapping over a geometry - FbxSurfaceMaterial
+          Constraints - FbxConstraint
+          Vertex cache animation on the control points of a geometry - FbxDeformer
+          Scene settings that provide Up-Axis (X/Y/Z) and scene scaling (units) - FbxGlobalSettings, FbxAxisSystem
+          Transformation data including position, rotation, scale, parent - FbxNode
+          Markers - FbxMarker
+          Lines - FbxLine
+          Skeleton segments (root, limb, and limb node) - FbxSkeleton
+          Animation curves - FbxAnimCurve
+          Rest and bind poses for a list of nodes (bones and geometry) - FbxPose
+          中文：
+            网 -FbxMesh
+            详细级别 (LOD) 组 -FbxLodGroup
+            相机（包括 3D 立体相机） -FbxCamera
+            灯光和图案片 - FbxLight,FbxGobo
+            NURBS - FbxNurbs, FbxNurbsCurve, FbxNurbsSurface,FbxTrimNurbsSurface
+            几何上的纹理映射 -FbxTexture
+            几何上的材质映射 -FbxSurfaceMaterial
+            约束 -FbxConstraint
+            几何控制点上的顶点缓存动画 -FbxDeformer
+            提供上轴 (X/Y/Z) 和场景缩放（单位）的场景设置 - FbxGlobalSettings,FbxAxisSystem
+            包括位置、旋转、比例、父级的变换数据——FbxNode
+            标记 -FbxMarker
+            线条 -FbxLine
+            骨骼节段（根、肢和肢节点） -FbxSkeleton
+            动画曲线 -FbxAnimCurve
+            节点列表（骨骼和几何）的休息和绑定姿势 -FbxPose
+      SDK目录结构：
+        根目录：
+          FBX 分发目录的根目录。包含自述文件、许可证文本和卸载程序。
+          samples\：
+            示例程序，每个程序都在其自己的子文件夹中。包含 CMake 文件、源代码等。
+          include\：
+            FBX SDK 的头文件。
+          lib\：
+            FBX SDK 的运行时库。
+      变量命名含义：
+        FBX：
+          大多数 FBX SDK 类名称以 Fbx 开头。示例：FbxNode, FbxScene,FbxCamera
+        p：
+          传递给成员函数的参数以小写“P”开头。示例：pWriteFileFormat, pScene,pFilename
+        l：
+          局部变量以小写“L”开头。示例：lWriteFileFormat, lScene,lFilename
+        g：
+          全局变量以小写“G”开头。示例：gStart, gStop,gCurrentTime
+        m：
+          成员数据（成员变量）以小写“M”开头。示例：mDescription, mImportname,mSelect
+          
+      python：
+        ref：
+          官方：
+            https://help.autodesk.com/view/FBX/2020/ENU/?guid=FBX_Developer_Help_welcome_to_the_fbx_sdk_html
+          民间：
+            https://youtu.be/I3MCnmTw3V8
+            https://youtu.be/xLwJFtEc2Ws
 
      
 优化：

@@ -16,6 +16,7 @@ varying vec3 ViewDirectionSkyBox3;
 uniform mat4 WorldMatrix;
 uniform mat4 NormalMatrix;
 
+
 attribute vec2 TextureCoordinate0;
 uniform vec2 TextureTiling;
 uniform vec2 TextureOffset;
