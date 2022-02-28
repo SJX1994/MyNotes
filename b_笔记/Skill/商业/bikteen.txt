@@ -1,0 +1,37 @@
+网页：
+      网址：
+            https://bikteen.com
+      管理员入口：
+            https://bikteen.com/bik-admin/
+      基于Typecho拓展：
+            http://docs.typecho.org/doku.php
+      图床：
+            https://img.bikteen.com/SJX
+用户信息：
+      用户名：
+            SJX
+      电子邮箱：
+            shenjiexiang1994@gmail.com
+      昵称：
+            JXScientist
+      密码：
+            Carsa5th22
+      个人主页：
+            https://jiexiangshen.artstation.com
+工具：
+      谷歌流量检测：
+            https://analytics.google.com/analytics/web/
+      reference生成：
+            https://www.citethisforme.com/harvard/source-type
+      markdown范例:
+             https://markdown-it.github.io/
+idea尝试：
+      热词+单机游戏相关：
+            ref：
+                  谷歌
+                        https://trends.google.com/trends/?geo=CN
+                  百度
+                        https://index.baidu.com/v2/index.html#/
+                  steam
+                        https://steamcharts.com/top
+            

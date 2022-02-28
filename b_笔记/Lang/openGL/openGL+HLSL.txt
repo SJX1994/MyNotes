@@ -490,6 +490,14 @@ openGL ES(OpenGL for Embedded Systems ):
           全微分方程的公式
 
   解算：
+    GAMES-Webinar物理解算课程：
+      00简介：
+        知识准备：
+          数学：
+            线性代数
+            微积分
+            编程
+      ref： https://www.bilibili.com/video/BV12Q4y1S73g?share_source=copy_web
     布料解算：
       关键词：
         physics based animation(Kenney Erleben)

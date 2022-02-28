@@ -274,7 +274,13 @@ GNOME:
 
 实用工具：
       窗口管理：
-            https://windowtop.info/
+            windowTop：
+                  https://windowtop.info/
+                  正版官网：
+                        https://apsgo.com/
+                        秘钥：
+                              331-742-540-53-470-913-13-110-373-13-410-7
+
       PE系统：
             寄存于U盘的微量操作系统
 
