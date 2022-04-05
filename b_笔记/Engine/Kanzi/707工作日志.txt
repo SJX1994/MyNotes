@@ -261,3 +261,59 @@ UI：
       移除侧边反光条
       -完成
 
+2022/3/16:
+      车轮处无阴影
+            ——完成
+      轮胎倒影位置不对,遮挡关系不对
+            ——完成
+      车窗帘
+            -完成
+2022/3/22:
+      新颜色：
+            White Platinum
+            Infinite black
+            Chroma Caviar
+            Lustrous Gray
+            Jewel Sandstone
+            Red Capet TC
+            Diamond Red
+            Blue Diamond
+      头灯光影：
+            日行灯，slide 9，
+                  -完成
+            位置灯头灯，slide 10
+                  -完成
+            近光灯，slide 11
+                  -完成
+            远光灯，slide 12
+                  -完成
+            位置灯尾灯，slide 27
+            
+            灯光渲染管线重构
+
+            
+      高亮部件：
+            方向盘
+                  -完成
+            ABS
+                  -完成
+            发动机
+                  -完成
+
+2022/3/31:
+      指摘：
+            Please reduce the transparency if there is some parts yellow highlighted.
+            如果有一些黄色突出显示的部分，请降低透明度。
+                  -doing
+            The line on the mirror is too light. Please adjust it.
+            后视镜降低亮度
+                  -完成
+            The wheels are too dark
+            轮骨增强反光,像611
+                  -完成
+            The locker and charging port need to be polished.
+            油箱和充电口需要变浅
+                  -完成
+            A pillar is too gray. The piece on the top should be like color of A piece on body.
+            A柱变钢琴黑。上部金属反射
+                  -完成

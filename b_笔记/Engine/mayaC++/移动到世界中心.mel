@@ -1,0 +1,6 @@
+string $obj[]=`ls-sl`;
+for($aObj in $obj)
+{
+xform -cp $aObj;
+move -rpr 0 0 0 $aObj;
+}

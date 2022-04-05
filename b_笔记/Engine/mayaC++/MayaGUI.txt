@@ -64,12 +64,25 @@
                       变形——雕刻
                       选中曲线球 放大
             方法2：
-      
+      动力学：xgen + nhair
+            思路：
+                  选择面片 创建毛发系统（曲线） 或者 可以直接创建曲线
+                  获得曲线后 nhair 的毛发系统转给 曲线 并且编辑参数
+                  为毛发 赋予 nhair的 paint Effect 笔刷
+                  再由 nhair 生成的毛发编辑曲线 转成 曲线 删除编辑过程文件
+                  可以使用 扫描网格 或者 任何曲线到网格的方式 生成poly
+            ref：
+                  https://www.bilibili.com/video/BV1TR4y1J7Dh/
+
       ico 圆形：
             
                                                     
 
 编辑器： 
+      
+      创建UV（无UV）：
+            空格——UV——自动
+
       3D绘制贴图工具：
             渲染模式：
                   3D绘制工具：
@@ -80,6 +93,18 @@
       随时间自动保存：
             https://knowledge.autodesk.com/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2020/ENU/Maya-ManagingScenes/files/GUID-BF903937-BAAD-4E28-ADE3-592EB0F8AAA5-htm.html#:~:text=Select%20Windows%20%3E%20Settings%2FPreferences%20%3E,Autosave%20section%2C%20turn%20on%20Enable.&text=See%20the%20Autosave%20section%20of,a%20description%20of%20these%20options.
       
+      输出法线贴图：
+            右键“制定新材质”
+            渲染模式——照明/着色——传递贴图—
+            选择：目标网格——lowPoly
+            选择：源网格——highPoly
+            检查：
+                  在“目标网格”菜单下 显示设为 封套
+                  选择映射的大小
+            输出：
+                  传递贴图输出贴图 法线
+            ref：
+                  https://download.autodesk.com/us/maya/Maya_2012_GettingStarted_CS/index.html?url=files/GUID-267CCDE6-5697-4235-9728-805879FEBA2-244.htm,topicNumber=d28e26772
 
       检查IBL顶点色：
             阿诺德创建天空盒子
@@ -103,8 +128,12 @@
 
             复杂的模型可以用属性传递顶点色
       烘培顶点法线：
-            
+      
+      合并曲线：
+            曲线-吸附曲线
 
+      曲线转化曲面：
+            绘制曲线 —— 曲面>倒角 —— 
 
       显示属性：
 
@@ -246,8 +275,29 @@ VRay渲染器：
       属性栏：
             AttributeEditor:
                   调整灯光属性
-            
-
+阿诺德渲染器：
+      简介：
+            官方：是一款先进的 Monte Carlo 光线追踪渲染器，专为满足长篇动画和视觉效果的需求而构建。
+            做什么：
+                  管理项目：
+                        在 CPU 和 GPU 渲染之间无缝切换，以满足您对角色、风景和照明的制作需求，并在渲染头发、毛皮和皮肤等元素时获得优化的性能。
+                  集成和定制您的着色器：
+                        轻松将 Arnold 与所有顶级 3D 数字内容创建工具集成，获得开放和可扩展架构的可扩展性和自定义，并创建自定义着色器。
+            受众：
+                  Arnold 被电影、电视、游戏和设计可视化行业的 3D 建模师、动画师、灯光艺术家和 FX 艺术家使用。
+     
+      应用:
+            只有ai的材质球才能在阿诺德渲染器中显示半透明度            
+      编程：
+            编写语言：C++
+            特征：
+                  它的光线追踪引擎经过优化，可在由几何图元（包括多边形、头发样条线和体积）组成的 3D 场景中发送数十亿条空间不相干的光线。
+                  集成了OpenImageIO库
+                  具有完全可编程的API，并使用用 C++ 或开放着色语言编写的着色器定义材料和纹理。
+            范例：
+                  https://area.autodesk.com/m/leegriggs/tutorials/creating-a-shader
+      历史：
+            Arnold由 Marcos Fajardo 在西班牙创建，2021 年全球计算机图形学中使用最广泛的逼真渲染系统之一
 Mel:
       API:
             Ref: 

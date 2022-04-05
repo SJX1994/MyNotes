@@ -1,0 +1,44 @@
+iclone:
+      概述：
+            功能：
+                  人类和动物形象的完整面部和骨骼动画
+                  对口型唱
+                  导入包括FBX在内的标准 3D 文件类型
+                  用于编辑和合并动作的时间线
+                  用于字符交互的Python API 和脚本语言 ( Lua )
+                  应用标准动作捕捉文件
+                  以与玩电子游戏相同的方式控制动画场景的能力
+                  以及从 Google 3D Warehouse导入模型，以及许多其他功能
+            7代详细：
+                  界面：
+                        
+character-creator：
+      概述：
+            Character Creator 3 是一个完整的角色创建解决方案，供设计师轻松创建、导入和自定义风格化或逼真的角色资产，以用于 iClone、Maya、Blender、Unreal Engine 4、Unity 或任何其他 3D 工具。它将行业领先的管道连接到一个系统中，用于 3D 角色生成、动画、渲染和交互设计。
+      插件：
+            HeadShot：
+                  描述：
+                        基于照片生成头像
+                  操作：
+                        导入照片
+                        Active Sculpt Morph：
+                              编辑面部肌肉
+                              Modify：
+                                    morphs:
+                                          数值化移动骨骼
+                                    Attri：
+                                          编辑mesh 骨骼
+                                    MotionPose:
+                                          编辑动作
+                                    Appear:
+                                          substancePanter的材质球导入
+                                    Mat：
+                                          修改材质贴图
+                                    Physics：
+                                          绘制权重
+                                    
+                        Active Image Matching Tools:
+                              打开面部照片对照系统
+                        导出：
+                              到fbx：
+                              到iclone：

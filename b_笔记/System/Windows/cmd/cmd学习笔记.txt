@@ -80,3 +80,5 @@ Win+R：
         msconfig
     本地服务：
         Services.msc
+    重启资源管理器：
+        explorer

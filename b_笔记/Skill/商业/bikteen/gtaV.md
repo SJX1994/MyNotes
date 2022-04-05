@@ -1,3 +1,4 @@
+
 <h1 id="0"> 目录</h1> 
 
 > 使用网页的 文章目录 或者 本文内置链接 跳转 
@@ -29,16 +30,16 @@
 
 >**[`MacDonald`](#MacDonald)的原文描述：**
 
-对我来说，侠盗猎车手 V 最喜欢的`两个时刻`：
+- 对我来说，侠盗猎车手 V 最喜欢的`两个时刻`：
 
-`第一个时刻`：
+- `第一个时刻`：
 
-是来自游戏中期的[`任务:轻微颠簸`](#轻微颠簸)，我将一架 [`民用飞机`](#民用飞机) 飞入另一架 [`波音飞机`](#波音飞机)，与 `机组人员` 作战，劫持了那东西，之后躲避来袭[`军用战斗机`](#战斗机)，然后跳伞，看着它坠入海中。(MacDonald, 2022)
+  - 是来自游戏中期的[`任务:轻微颠簸`](#轻微颠簸)，我将一架 [`民用飞机`](#民用飞机) 飞入另一架 [`波音飞机`](#波音飞机)，与 `机组人员` 作战，劫持了那东西，之后躲避来袭[`军用战斗机`](#战斗机)，然后跳伞，看着它坠入海中。(MacDonald, 2022)
 
 <details>
-                            <summary><strong>
-                            点击展开以上描述对应图画：
-                            </strong>
+                            <summary >
+                            <strong style="background-color:black;color:grey;" >
+                            点击展开</strong> 以上描述对应图画：
                             </summary>
                             <img src="https://img.bikteen.com/images/2022/02/28/1.jpg">
                             <img src="https://img.bikteen.com/images/2022/02/28/2.jpg">
@@ -56,12 +57,12 @@
 
 关于此段的更多内容：[细化描述`第一个时刻`](#细化描述第一个时刻)
 
-`第二个时刻`：
+- `第二个时刻`：
 
-还有一次，当我开着越野车四处晃悠时，我被一条看起来像是通往[`圣安地列斯(San Andreas mountains)`](#圣安地列斯山脉)众多山脉之一的小路分散了注意力。原来那是一条小路，我花了 15 分钟后到达山顶，在那里我差点撞到一群[`徒步旅行者`](#徒步旅行者)。“又来！” 其中一个对我大喊大叫，好像他每次徒步旅行时都差点被像我这样的流氓开着[`全地形越野车`](#全地形越野车)碾过。
+  - 还有一次，当我开着越野车四处晃悠时，我被一条看起来像是通往[`圣安地列斯(San Andreas mountains)`](#圣安地列斯山脉)众多山脉之一的小路分散了注意力。原来那是一条小路，我花了 15 分钟后到达山顶，在那里我差点撞到一群[`徒步旅行者`](#徒步旅行者)。“又来！” 其中一个对我大喊大叫，好像他每次徒步旅行时都差点被像我这样的流氓开着[`全地形越野车`](#全地形越野车)碾过。
 
 <details>
-      <summary><strong>点击展开以上描述对应图画：</strong> </summary>
+      <summary><strong  style="background-color:black;color:grey;">点击展开</strong> 以上描述对应图画： </summary>
       <!-- https://img.bikteen.com/images/2022/02/28/2-1.jpg
       https://img.bikteen.com/images/2022/02/28/2-2.jpg
       https://img.bikteen.com/images/2022/02/28/2-3.png
@@ -85,61 +86,30 @@
 
 关于此段的更多内容：[细化描述`第二个时刻`](#细化描述第二个时刻)
 
-<!-- **描述对应图文：**
-
-![第一个时刻](https://img.bikteen.com/images/2022/02/28/1.jpg "第一个时刻")
-
-
-![第一个时刻](https://img.bikteen.com/images/2022/02/28/2.jpg "第一个时刻")
-
-我将一架 [`民用飞机`](#民用飞机) 飞入另一架 [`波音飞机`](#波音飞机)
-
-![第一个时刻](https://img.bikteen.com/images/2022/02/28/3.png "第一个时刻")
-
-![第一个时刻](https://img.bikteen.com/images/2022/02/28/4.jpg "第一个时刻")
-
-
-与 `机组人员` 作战，劫持了那东西
-
-![第一个时刻](https://img.bikteen.com/images/2022/02/28/5.jpg "第一个时刻")
-
-之后躲避来袭[`军用战斗机`](#战斗机)
-
-![第一个时刻](https://img.bikteen.com/images/2022/02/28/6.jpg "第一个时刻")
-
-然后跳伞，看着它坠入海中。
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/TNiPOeg9ZDc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-
->**[`MacDonald`](#MacDonald)的原文描述：**
-
-是来自游戏中期的[`任务:轻微颠簸`](#轻微颠簸)，我将一架 [`民用飞机`](#民用飞机) 飞入另一架 [`波音飞机`](#波音飞机)，与 `机组人员` 作战，劫持了那东西，之后躲避来袭[`军用战斗机`](#战斗机)，然后跳伞，看着它坠入海中。(MacDonald, 2022)
-
 >**细化描述：**
 
-<a id="细化描述第一个时刻"></a> **细化描述第一个时刻:**
+- <a id="细化描述第一个时刻"></a> **细化描述第一个时刻:**
 
 
 
-为取得军火的目的 [`主角之一`](https://gta.fandom.com/wiki/Trevor_Philips)飞向一架低速盘旋的[`货机`](#波音飞机)。为了避开雷达，[`主角`](https://gta.fandom.com/wiki/Trevor_Philips)贴紧地面低飞。当他绕过低空领域，他就接近了[`货机`](#波音飞机)。
+  - 为取得军火的目的 [`主角之一`](https://gta.fandom.com/wiki/Trevor_Philips)飞向一架低速盘旋的[`货机`](#波音飞机)。为了避开雷达，[`主角`](https://gta.fandom.com/wiki/Trevor_Philips)贴紧地面低飞。当他绕过低空领域，他就接近了[`货机`](#波音飞机)。
 
-当[`主角`](https://gta.fandom.com/wiki/Trevor_Philips)接近[[`货机`](#波音飞机)](#波音飞机)时，[`货机`](#波音飞机)机组人员命令他改变航向。在[`主角`](https://gta.fandom.com/wiki/Trevor_Philips)无视命令后，机组人员打开了货舱的后门，开始发射火箭并​​向[`主角`](https://gta.fandom.com/wiki/Trevor_Philips)飞机射击。[`主角`](https://gta.fandom.com/wiki/Trevor_Philips)直接驾驶他的[`民用飞机`](#民用飞机)撞入货舱，然后与雇佣兵搏斗，杀死了飞行员。[`主角`](https://gta.fandom.com/wiki/Trevor_Philips)控制了飞机并试图将其飞回新的目的地。
+  - 当[`主角`](https://gta.fandom.com/wiki/Trevor_Philips)接近[[`货机`](#波音飞机)](#波音飞机)时，[`货机`](#波音飞机)机组人员命令他改变航向。在[`主角`](https://gta.fandom.com/wiki/Trevor_Philips)无视命令后，机组人员打开了货舱的后门，开始发射火箭并​​向[`主角`](https://gta.fandom.com/wiki/Trevor_Philips)飞机射击。[`主角`](https://gta.fandom.com/wiki/Trevor_Philips)直接驾驶他的[`民用飞机`](#民用飞机)撞入货舱，然后与雇佣兵搏斗，杀死了飞行员。[`主角`](https://gta.fandom.com/wiki/Trevor_Philips)控制了飞机并试图将其飞回新的目的地。
 
-然而，他很快被两架美国空军 [`战斗机`](#战斗机)拦截，他们被勒令停到指定机场。[`主角`](https://gta.fandom.com/wiki/Trevor_Philips)拒绝服从，导致 战斗机 向[`货机`](#波音飞机)发射导弹并摧毁了其右舷发动机之一。[`主角`](https://gta.fandom.com/wiki/Trevor_Philips)被迫跳伞。飞机坠入海中，[`主角`](https://gta.fandom.com/wiki/Trevor_Philips)安全落地。(Fandom, 2022)
+  - 然而，他很快被两架美国空军 [`战斗机`](#战斗机)拦截，他们被勒令停到指定机场。[`主角`](https://gta.fandom.com/wiki/Trevor_Philips)拒绝服从，导致 战斗机 向[`货机`](#波音飞机)发射导弹并摧毁了其右舷发动机之一。[`主角`](https://gta.fandom.com/wiki/Trevor_Philips)被迫跳伞。飞机坠入海中，[`主角`](https://gta.fandom.com/wiki/Trevor_Philips)安全落地。(Fandom, 2022)
 [←官方定义](https://gta.fandom.com/wiki/Minor_Turbulence)
-> [返回继续阅读](#Mac评价描述_Part1)
+  - > [返回继续阅读](#Mac评价描述_Part1)
 
-<a id="细化描述第二个时刻"></a> **细化描述第二个时刻:**
+- <a id="细化描述第二个时刻"></a> **细化描述第二个时刻:**
 
-多的没有，玩的就是一个黑色幽默。体验的就是一个法外狂徒。沉浸的就是一个映射现实却又怪诞的GTA世界。
+  - 多的没有，玩的就是一个黑色幽默。体验的就是一个法外狂徒。沉浸的就是一个映射现实却又怪诞的GTA世界。
 
 **阅读延伸**
 
+- <a id="全地形越野车"></a> 载具：全地形越野车 延伸:
 
-<a id="全地形越野车"></a> 载具：全地形越野车 延伸:
-
-[官方定义](https://gta.fandom.com/wiki/Outlaw)
-[对应现实](https://can-am.brp.com/off-road/us/en/models/side-by-side-vehicles/maverick-x3.html)
+  - [官方定义](https://gta.fandom.com/wiki/Outlaw)
+  - [对应现实](https://can-am.brp.com/off-road/us/en/models/side-by-side-vehicles/maverick-x3.html)
 ```
 针对GTA5中全地形越野车我们抽选 Outlaw 来介绍：
       "Outlaw这款车型是现代牛仔的完美钢笼骏马。
@@ -182,12 +152,12 @@
 
 ```
 
-> [返回继续阅读](#Mac评价描述_Part1)
+  - > [返回继续阅读](#Mac评价描述_Part1)
 
 
-<a id="徒步旅行者"></a> 概念：徒步旅行者 延伸:
+- <a id="徒步旅行者"></a> 概念：徒步旅行者 延伸:
 
-[官方定义](https://gta.fandom.com/wiki/Hiking)
+  - [官方定义](https://gta.fandom.com/wiki/Hiking)
 ```
 官方对徒步旅行这项运动的定义：
       “这是孤独的精神病患者和有抱负的性犯罪者偏爱的运动。
@@ -206,36 +176,41 @@
 lol
 ```
 
-> [返回继续阅读](#Mac评价描述_Part1)
+  - > [返回继续阅读](#Mac评价描述_Part1)
 
-<a id="圣安地列斯山脉"></a> 地段:圣安地列斯 延伸:
+- <a id="圣安地列斯山脉"></a> 地段:圣安地列斯 延伸:
 
-[官方定义](https://gta.fandom.com/wiki/State_of_San_Andreas_(HD_Universe))
+  - [官方定义](https://gta.fandom.com/wiki/State_of_San_Andreas_(HD_Universe))
 ```
 圣安地列斯包括两个山脉：
       San Chianski Mountain Range 圣基安斯基山脉：
             圣基安斯基山脉是该州最长的山脉之一，山脉中几乎没有任何道路或文明，这意味着如果玩家在山区丢失车辆可能会被困。
       Tataviam Mountains 塔塔维亚姆山脉
             这里拥有一个土地法水库 Land Act Reservoir (Pacoima Reservoir)
-基于上面描述，怀疑Mac描述的应该是：圣基安斯基山脉，塔塔维亚姆山脉 开 全地形摩托 到山顶估计就3-4分钟左右,圣基安斯基山脉映射的是现实生活中美国的 San Jacinto Mountains (圣哈辛托山脉) 最高峰:3,302 米 全长:全长 1,500 公里（930 英里）
+基于上面描述，怀疑Mac描述的应该是：圣基安斯基山脉，
+塔塔维亚姆山脉 开 全地形摩托 到山顶估计就3-4分钟左右,
+圣基安斯基山脉映射的是现实生活中
+美国的 San Jacinto Mountains (圣哈辛托山脉)
+最高峰:3,302 米 
+全长:全长 1,500 公里（930 英里）
 ```
 
-> [返回继续阅读](#Mac评价描述_Part1)
+  - > [返回继续阅读](#Mac评价描述_Part1)
 
-<a id="轻微颠簸"></a> 任务:轻微颠簸 延伸:
+- <a id="轻微颠簸"></a> 任务:轻微颠簸 延伸:
 
-[官方定义](https://gta.fandom.com/wiki/Minor_Turbulence)
+  - [官方定义](https://gta.fandom.com/wiki/Minor_Turbulence)
 ```
 任务名: 我知道我赶不上了但它被我称做 轻微颠簸
 (I know I'm late but it's called minor turbulence)
 
 发生时间: 中期任务, 由 特雷弗 执行由 富兰克林 在 De Santa Residence 触发。
 ```
-> [返回继续阅读](#Mac评价描述_Part1)
+  - > [返回继续阅读](#Mac评价描述_Part1)
 
-<a id="民用飞机"></a> 载具：民用飞机 延伸:
+- <a id="民用飞机"></a> 载具：民用飞机 延伸:
 
-[官方定义](https://gta.fandom.com/wiki/Duster)
+  - [官方定义](https://gta.fandom.com/wiki/Duster)
 
 ```
 看起来像 Fleet Finch （Fleet Model 16）:
@@ -245,24 +220,25 @@ lol
 高空上限：3,200 米
 ```
 
-> [返回继续阅读](#Mac评价描述_Part1)
+  - > [返回继续阅读](#Mac评价描述_Part1)
 > 
-<a id="波音飞机"></a> 载具：波音飞机 延伸:
+- <a id="波音飞机"></a> 载具：波音飞机 延伸:
 
-[官方定义](https://gta.fandom.com/wiki/Cargo_Plane)
+  - [官方定义](https://gta.fandom.com/wiki/Cargo_Plane)
 
 ```
 看起来像 波音747-400:
-是波音747-300的改良增程型，通常进行货运任务。翼端加长1.8米并增加了翼尖小翼，需要两名飞行员。
+是波音747-300的改良增程型，通常进行货运任务。
+翼端加长1.8米并增加了翼尖小翼，需要两名飞行员。
 巡航速度：1224 千米/h
 普通飞行高度：10,000 米
 武器：机枪每门 280 发子弹和一个可安装在机身上的通用电气 30 毫米机炮吊舱
 ```
-> [返回继续阅读](#Mac评价描述_Part1)
+  - > [返回继续阅读](#Mac评价描述_Part1)
 
-<a id="战斗机"></a> 载具：战斗机 延伸:
+- <a id="战斗机"></a> 载具：战斗机 延伸:
 
-[官方定义](https://gta.fandom.com/wiki/P-996_LAZER)
+  - [官方定义](https://gta.fandom.com/wiki/P-996_LAZER)
 
 ```
 Northrop F-20 Tigershark:
@@ -272,18 +248,21 @@ Northrop F-20 Tigershark:
 
 ```
 
-> [返回继续阅读](#Mac评价描述_Part1)
+  - > [返回继续阅读](#Mac评价描述_Part1)
 
 <!-- ([Joe](https://www.rockpapershotgun.com/the-best-gta-5-mods), 2022) -->
-<a id="MacDonald"></a> 人物：MacDonald 延伸:
+- <a id="MacDonald"></a> 人物：MacDonald 延伸:
 
 ```
-拥有 15 年经验的电子游戏记者。英国人，女性，目前是卫报（Guardian）的游戏编辑。
+拥有 15 年经验的电子游戏记者。
+英国人，女性，目前是卫报（Guardian）的游戏编辑。
 ```
 
-> [返回继续阅读](#Mac评价描述_Part1)
+  - > [返回继续阅读](#Mac评价描述_Part1)
+  
 ### reference：
 <!-- Joe, D., 2022. The 26 best GTA 5 mods. [online] Rock Paper Shotgun. Available at: <https://www.rockpapershotgun.com/the-best-gta-5-mods> [Accessed 25 February 2022]. -->
+<!-- The Design Behind GTA： https://youtu.be/qUI0moGiNuw -->
 * MacDonald, K., 2022. Grand Theft Auto V Review - IGN. [online] IGN. Available at: [link](https://www.ign.com/articles/2013/09/16/grand-theft-auto-v-review) [Accessed 25 February 2022].
 * Fandom, F., 2022. Minor Turbulence. [online] GTA Wiki. Available at: [link](https://gta.fandom.com/wiki/Minor_Turbulence) [Accessed 25 February 2022].
 ---

@@ -19,18 +19,32 @@
 
 操作：
       创建修改独立分支：
-            https://www.freecodecamp.org/news/git-clone-branch-how-to-clone-a-specific-branch/
+            操作：
+                  git branch -a
+                  拉取：
+                        git clone --branch <branchname> <remote-repo-url>
+                  切换分支：
+                        git checkout 分支名
+            ref：https://www.freecodecamp.org/news/git-clone-branch-how-to-clone-a-specific-branch/
       检查ssh：
-      
+            
       创建gitignore：
             创建文本文件 gitignore.txt
             在文本编辑器中打开它并添加您的规则，然后保存并关闭
             按住 SHIFT，右键单击您所在的文件夹，然后选择在此处打开命令窗口
             然后在命令行中重命名文件，使用 ren gitignore.txt .gitignore
-            
+      重写commit：
+            git commit --amend -m "changeSomething"
+            ref:
+                  https://www.atlassian.com/git/tutorials/rewriting-history
+      文件夹改变：
+            cd /d/
+                  
 报错：
       无法访问：
             修改host：
+                  位置：
+                        C:\Windows\System32\drivers\etc
                   https://zhuanlan.zhihu.com/p/107334179
             vpn测速工具：
                   http://ping.chinaz.com/github.com

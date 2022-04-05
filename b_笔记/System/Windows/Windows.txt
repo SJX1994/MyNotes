@@ -134,7 +134,13 @@ PowerShell：
       cmd：
             概念：
                   作为PowerShell的子集
-
+ASP.net:
+      是一个开源的服务器端 Web 应用程序框架，专为Web 开发而设计，以生成动态网页。
+      SignalR ：
+            开源开放协议：
+                  集线器和客户端之间通信的协议规范也是开放的。
+            随时随地连接：
+                  借助适用于 JavaScript、.NET（C#、F# 和 Visual Basic）和 Java 的客户端 SDK，您可以连接到 SignalR 集线器并开始在几乎任何平台（包括 Web、移动设备、桌面和游戏）上接收实时消息。
 .net:
       概念：
             支持任何面向对象编程语言

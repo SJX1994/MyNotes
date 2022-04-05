@@ -123,8 +123,6 @@ android studio：
       External Libraries:
             SDK JDK 注释 其他第三方库            
                               
-
-
 报错：
       缺少ant文件
             解决：
@@ -181,3 +179,6 @@ kanzi配置android:
       3、如果有引用3方插件，需要修改cmakeList.txt
 
       4、 run or build
+
+安卓与c++通信：
+      jni
