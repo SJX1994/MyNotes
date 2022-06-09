@@ -11,6 +11,9 @@
         <(代码)>
 
 问题：
+      对比文件异同：
+            MD5/SHA1/SHA256 校验值：
+                  https://blog.csdn.net/xkwy100/article/details/80297968
       桌面图标排列错乱：
             解决方案：
                   GUI：
@@ -134,6 +137,11 @@ PowerShell：
       cmd：
             概念：
                   作为PowerShell的子集
+            
+            配置环境变量：
+                  bin目录的所在
+                  Path中设置快捷访问
+                  
 ASP.net:
       是一个开源的服务器端 Web 应用程序框架，专为Web 开发而设计，以生成动态网页。
       SignalR ：

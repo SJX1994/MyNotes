@@ -1,0 +1,14 @@
+string $obj[]=`ls-sl`;
+
+for($aObj in $obj)
+{
+    print($aObj);
+    string $oldName = $aObj;
+    string $newName = "";
+    string $buffer[];
+    $oldName = substituteAllString($oldName, ":", " ");
+    tokenize( $oldName ,$buffer);
+    print("\n"+ $buffer[0]);
+    $newName = $buffer[1];
+    rename $aObj $newName;    
+}

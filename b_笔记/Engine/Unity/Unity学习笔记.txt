@@ -484,6 +484,12 @@ Adia任务：
             3.
                 ($Unity工程)Library\PackageCache\com.unity.render-pipelines.high-definition@7.7.1\Documentation~
 
+案例：
+    获取麦克风：
+        https://youtu.be/dzD0qP8viLw
+
+    获取游戏时实时数据：
+        https://github.com/Tayx94/graphy
 
 
 报错：
@@ -497,3 +503,18 @@ Adia任务：
             %APPDATA%\UnityHub\logs\info-log.json
         可以看到Unity3d 2019.1.14f1的下载地址是：
             https://download.unitychina.cn/download_unity/148b5891095a/Windows64EditorInstaller/UnitySetup64-2019.1.14f1.exe
+
+
+wedding项目：
+    1.呼吸动画
+        -完成
+    2.互动动画
+        -完成
+    3.事件融合动画
+    4.弹幕互动位置绑定
+    5.弹幕逻辑
+    6.弹幕特效
+    7.背景着色器
+    8.开发者UI
+        -完成
+    9.接入收音

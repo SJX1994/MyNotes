@@ -4,3 +4,6 @@
             
             ref：
                   https://youtu.be/Vzvv0DfvJm8
+      生成法线贴图：
+            ref：
+                  https://www.mattrittman.com/create-normal-map-photoshop/

@@ -288,9 +288,9 @@ UI：
             远光灯，slide 12
                   -完成
             位置灯尾灯，slide 27
-            
+                  -完成
             灯光渲染管线重构
-
+                  -完成
             
       高亮部件：
             方向盘
@@ -317,3 +317,97 @@ UI：
             A pillar is too gray. The piece on the top should be like color of A piece on body.
             A柱变钢琴黑。上部金属反射
                   -完成
+2022/4/19:
+      指摘：
+            Wheels top need some polish.
+            车轮上方需要一些抛光-完成
+                  
+            Mirror need be brighter like reference.
+            后视镜需要像参考视频-完成
+
+            It’s hard to find the shape of engine. Please adjust it.
+            发动机的轮廓-完成
+
+            Adjust sunshade color, it can like eyeball with some blue and green, add some highlight.
+            遮阳帘不透明，可以带一些蓝色绿色的高光-完成
+
+            For the rear light, need more red. Current is too pink.
+            尾灯太粉，需要更红-完成
+
+2022/5/3:
+      Add some highlight around the engine.
+      在引擎周围添加一些轮廓光。
+            -完成
+
+      Reduce the triangles topology of the motor model.
+      重新整理马达的中心聚合拓扑结构
+            -完成
+
+      Sunshade is a little bit too blue. Please refer below for the color.
+      遮阳帘太蓝
+            -完成
+
+      Windows looks too black. There should exist some light reflection. Please also check rear window.
+      窗户太黑
+            -完成
+
+      Please update license plate part which looks like a black hole.
+      车牌太黑
+            -完成
+      
+      All the colors from middle up make the car look muddy. Please adjust it. 
+      
+
+      Lower emission for front chrome which below the front lights
+      前方镀铬移除自发光
+            -完成
+
+      Higher bright for front lights Ray. Remove ground reflection
+      头灯增强亮度.移除地面反射
+            -完成
+
+2022/5/5:
+      1.Please check the reflection at back door and button parts. There shows a black hole.
+      修改后门车尾反射的连贯性 和 润滑度
+
+      2.Please refer to the reference for below (vehicle exhaust pipe) parts reflection improvement.
+      排气管反射
+      -完成
+
+      3.Too black for below (front door Logo) part.
+      前门LOGO反射
+      -完成 2022/5/19 change
+
+      4.Below parts is too dark, black. Please add more light (reflection angle bring forward).
+      反射角度提前
+      -完成
+
+      5.Please improve below difference. (rear reflection bar more slimer reflection angle bring forward)
+      车尾反光
+      -完成
+
+      6.Add some glow, not light for below part. (colorful reflection for front chrome)
+      前方镀铬增加反射
+      -完成 2022/5/19 change
+
+      7.Add more light for vehicle hood 
+      引擎盖子无黑色
+      -完成
+
+      8.Slightly showing structure
+      轻微显示结构
+      -完成 2022/5/19 change
+
+      9.White paint light is too weak
+      白色车漆光线细节太弱
+      -完成 2022/5/19 change
+      
+      10.Excessively smooth for the front hood
+      前引擎盖光照过渡顺滑些
+      -完成 2022/5/19 change
+
+      11.Not balck inside vehicle
+      车内不要太黑
+      -完成 2022/5/19 change
+
+      6 update

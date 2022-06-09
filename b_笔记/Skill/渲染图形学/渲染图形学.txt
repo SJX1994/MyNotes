@@ -61,6 +61,11 @@
 
 
 特殊操作：
-
+      toneMap：（减少过曝）
+            https://zhuanlan.zhihu.com/p/21983679
+      模糊算法、景深：（变焦）
+            https://zhuanlan.zhihu.com/p/125744132
+      PS操作：
+            https://zhuanlan.zhihu.com/p/108820522
 ref:
       FORTICHE 法国

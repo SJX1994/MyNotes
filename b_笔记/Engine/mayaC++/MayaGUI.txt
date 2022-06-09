@@ -6,6 +6,8 @@
             编辑_LOD_GenerateLODMesh
       骨骼动画：
             https://youtu.be/1wvdQy2Fdhw
+            自动绑定网站：
+                  mixamo
       曲线建模：
             ref：
                   https://www.youtube.com/watch?v=ngIaju1eM7s
@@ -82,7 +84,10 @@
       
       创建UV（无UV）：
             空格——UV——自动
-
+      融合动画(blendshape):
+            变形——融合变形
+            增删：
+                  变形——编辑——融合变形
       3D绘制贴图工具：
             渲染模式：
                   3D绘制工具：
@@ -128,7 +133,7 @@
 
             复杂的模型可以用属性传递顶点色
       烘培顶点法线：
-      
+            网格-传递属性
       合并曲线：
             曲线-吸附曲线
 

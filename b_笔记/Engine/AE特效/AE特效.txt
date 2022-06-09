@@ -4,9 +4,21 @@ aeUI：
 插件下载：
       ref：
             https://www.smxae.com/
+            https://news.productioncrate.com/
 
       插件安装：  
 
 技能：
+      修改语言:
+            https://zhuanlan.zhihu.com/p/49746924     
+      jsx运行：
+            https://motioner.tw/resources/ae-scripts-install
+            17.0文档下载：
+            https://buildmedia.readthedocs.org/media/pdf/after-effects-scripting-guide/latest/after-effects-scripting-guide.pdf
       红巨人烟雾：
             https://www.youtube.com/watch?v=LDXD6j0760Y
+      制作序列帧表：
+            Sprite Sheet Generator
+            教程下载：
+                  https://news.productioncrate.com/download-free-sprite-sheet-generator-for-after-effects/
+            https://lesterbanks.com/2021/12/check-out-this-free-sprite-sheet-generator-for-after-effects/
