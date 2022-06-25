@@ -11,6 +11,108 @@ AMD icpc:
 Code Force：
 
 概念：
+      计算机存储：
+            基础单元：
+                  AND gate 与门:
+                        输入： 两股高电频
+                        输出： 一股高电频
+                        条件：
+                              仅当 与门 的所有输入均为高电平 (1) 时，才会产生高电平输出 (1),如果有一个低频电流,只输出低频电流
+                        表示：
+                              f(0,0) = 0;
+                              f(0,1) = 0;
+                              f(1,0) = 0;
+                              f(1,1) = 1;
+                        实现：      
+                              可以使用二极管 晶体管 NMOS(金属氧化物半导体场效应晶体管) 实现
+                  OR gate 或门:
+                        输入：两股电流
+                        输出：一股电流
+                        条件：
+                              只要有一个输入电流就会输出，如果门的一个或两个输入为 HIGH (1)，则产生 HIGH 输出 (1)。如果两个输入都不是高电平，则产生低电平输出 (0)。在另一种意义上，OR 函数有效地找到两个二进制数字之间的最大值
+                        表示：
+                              f(0,0) = 0;
+                              f(0,1) = 1;
+                              f(1,0) = 1;
+                              f(1,1) = 1;
+                        实现：
+                              CMOS
+                              NMOS
+                              BJT
+                              使用二极管
+                  NOT gate 非门:
+                        输入:一股电流
+                        输出：一股电流
+                        表示：
+                              f(0) = 1 
+                              f(1) = 0      
+            组合：
+                  SR LATCH 锁存器:
+                        概念：
+                              只要设备通电，就可以存储一位数据。顾名思义，闩锁用于“锁定”信息并固定到位。
+                        目的：
+                              存储一位数据
+                        实现：(伪代码)
+                              
+                              int g_frequency = 0.5;
+                              
+                              int SR_LATCH (int l_signal_set, int l_signal_reset)
+                              {
+                                    int m_highSignal = 1;
+                                    int m_lowSignal = 0;
+                                    int m_notReturn = NOT(l_signal_reset);
+                                    int m_andReturn =  AND(m_orReturn,m_notReturn);
+                                    int m_orReturn = OR(l_signal_set,SR_LATCH(l_signal_set,l_signal_reset));
+                                    return m_andReturn ;
+
+                              }
+
+                              int NOT (int l_signal)
+                              {
+                                    int m_highSignal = 1;
+                                    int m_lowSignal = 0;
+                                    if((float)l_signal > g_frequency)
+                                    {
+                                          return m_lowSignal;
+                                    }
+                                    else
+                                    {
+                                          return m_highSignal;
+                                    }
+                              }
+
+                              int AND (int l_signal_0, int l_signal_1 )
+                              {
+                                    int m_highSignal = 1;
+                                    int m_lowSignal = 0;
+
+                                    if((float)l_signal_0 > g_frequency && (float)l_signal_1 > g_frequency )
+                                    {
+                                          return m_highSignal; 
+                                    }
+                                    else
+                                    {
+                                          return m_lowSignal; 
+                                    }
+                              }
+
+                              int OR (int l_signal_0, int l_signal_1 )
+                              {
+                                    int m_highSignal = 1;
+                                    int m_lowSignal = 0;
+
+                                    if((float)l_signal_0 > g_frequency || (float)l_signal_1 > g_frequency )
+                                    {
+                                          return m_highSignal; 
+                                    }
+                                    else
+                                    {
+                                          return m_lowSignal; 
+                                    }
+                              }
+
+                                            
+
       位：
             一位就是一个坑 2进制 就有两种情况 3进制 就有3种情况
       进制：
@@ -25,3 +127,6 @@ Code Force：
             2^7 2^6 2^5 2^4 2^3 2^2 2^1 2^0
 
             0   0   0   0   1   0   0   1
+
+大V：
+      Ben Eater

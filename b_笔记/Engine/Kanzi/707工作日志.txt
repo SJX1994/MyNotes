@@ -104,8 +104,6 @@ UI：
             Phone Selection Menu – 500ms preferred
             Device Change Drop down menu – 200ms preferred. Check with HMI team on the device speed calculate by window size option.  
 
-2021/9/23: 
-      见飞书QQ
 
 2021/10/18: 
 

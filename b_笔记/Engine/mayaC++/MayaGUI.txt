@@ -81,7 +81,8 @@
                                                     
 
 编辑器： 
-      
+      烘焙AO：
+            https://youtu.be/N14WqEovkWs
       创建UV（无UV）：
             空格——UV——自动
       融合动画(blendshape):

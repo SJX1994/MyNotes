@@ -1,9 +1,11 @@
 
 操作：
       复制遮罩：
-            
+            选择——色彩范围
+            选择——选择遮住
             ref：
                   https://youtu.be/Vzvv0DfvJm8
+                  https://www.iskysoft.com/video-editing/remove-green-screen-photoshop.html#:~:text=Go%20to%20the%20%22Select%22%20menu,color%20range%20window%20shows%20white.
       生成法线贴图：
             ref：
                   https://www.mattrittman.com/create-normal-map-photoshop/

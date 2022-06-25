@@ -136,6 +136,8 @@ Adia任务：
         https://networm.me/2019/07/28/unity-particle-effect-profiler/
 
 插件：
+    Cloth-and-IK-Test：
+        https://github.com/SebLague/Cloth-and-IK-Test.git
     粒子特效性能测试：
         https://github.com/sunbrando/ParticleEffectProfiler
     复制粘贴：
@@ -148,6 +150,29 @@ Adia任务：
         https://blog.csdn.net/Fenglele_Fans/article/details/82694333
 
 渲染管线：
+    几何着色器：
+        关键字：
+            RWTexture2D<类型>:
+                概念:
+                    此存储类会导致内存同步在整个 GPU 上刷新数据，以便其他组可以看到写入。
+                操作：
+                    GetDimensions：
+                        //获取纹理大小信息。
+            numthreads：
+                概念：
+                    着色器所需要申请的线程大小
+                三维向量：
+                    int a,b,c
+                    [numthreads(a,b,c)] 
+                二位向量：
+                    int a,b
+                    [numthreads(a,b)] 
+            unit:
+                32 位无符号整数（范围：0 到 4294967295 十进制）
+    片元：
+        关键字：
+            Uniform：
+                统一是使用“统一”存储限定符声明的全局着色器变量。
     LWRP:
         着色器架构：
             目标平台着色器平台：
@@ -485,6 +510,31 @@ Adia任务：
                 ($Unity工程)Library\PackageCache\com.unity.render-pipelines.high-definition@7.7.1\Documentation~
 
 案例：
+    世界空间下Tileable 贴图坐标：
+        https://youtu.be/vIh_6xtBwsI
+    命名规范：
+        文件：
+            https://github.com/stillwwater/UnityStyleGuide
+        代码：
+            https://github.com/raywenderlich/c-sharp-style-guide
+
+    性能测试：
+        https://assetstore.unity.com/packages/tools/gui/graphy-ultimate-fps-counter-stats-monitor-debugger-105778
+        
+    几何着色器（计算着色器）：
+        https://youtu.be/EB5HiqDl7VE
+    raymatching：
+        云雾：
+            https://github.com/SebLague/Clouds
+        曼德尔球分形 Mandelbulb Fractals：
+            https://github.com/SebLague/Ray-Marching
+    c# 通过FBX——SDK导出：
+        // https://docs.unity3d.com/Packages/com.unity.formats.fbx@2.0/manual/devguide.html
+        // https://stackoverflow.com/questions/70110730/using-a-c-sharp-script-export-a-gameobject-as-an-fbx-during-runtime
+
+    通过几何着色器（computer shader） 保存gpu中的模型缓存中的信息到本地 （适用于各种过程动画）：
+        // https://gist.github.com/NedMakesGames/fef1bddca8061b21845dbe68d0cddfec
+
     获取麦克风：
         https://youtu.be/dzD0qP8viLw
 

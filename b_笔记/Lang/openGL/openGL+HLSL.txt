@@ -95,6 +95,8 @@ openGL（GLSL,OpenGL Shading Language）:
         https://web.stanford.edu/class/ee367/
 
     大V:
+      Ned Makes Games
+      Sebastian Lague
       Ben Cloward
       Freya Holmér
       Catlike Coding
@@ -233,6 +235,8 @@ openGL ES(OpenGL for Embedded Systems ):
 
   PBR:
     cook torrance brdf model 库克光照模型:
+      kanziPBR:
+        https://substance3d.adobe.com/tutorials/courses/the-pbr-guide-part-1
       ref:
         https://graphicscompendium.com/gamedev/15-pbr
         https://garykeen27.wixsite.com/portfolio/cook-torrance-shading
@@ -490,6 +494,8 @@ openGL ES(OpenGL for Embedded Systems ):
           全微分方程的公式
 
   解算：
+    unity布料解算：
+      https://github.com/SebLague/Cloth-and-IK-Test
     GAMES-Webinar物理解算课程：
       00简介：
         知识准备：
