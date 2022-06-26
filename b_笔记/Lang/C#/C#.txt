@@ -1,5 +1,9 @@
 C# 是微软对标 Java 创造的语言 所以语言特性比较相似
 
+关键字：
+      namespace：
+            https://www.programiz.com/csharp-programming/namespaces
+
 语言特性：
       C#语言是.NET框架中新一代的开发工具,简化了C++的类，命名空间，方法重载，异常处理 等
 

@@ -1,0 +1,5 @@
+游戏设计 GDD:
+      ref：(参考价值从高到低)
+            https://github.com/Roobyx/awesome-game-design
+            https://immersiongame.wordpress.com/2012/12/11/10-page-game-design-document/
+            https://www.slideshare.net/davewilliamharrison/ten-page-document
