@@ -147,6 +147,7 @@ mac:
                   (如果有直接设置)
 
             生成ssh：
+
                   
                   $ git config --global user.name "xxx"
                   $ git config --global user.email "xxx.mail@xxx.com"
