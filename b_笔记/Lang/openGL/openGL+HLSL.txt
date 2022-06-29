@@ -385,6 +385,9 @@ openGL ES(OpenGL for Embedded Systems ):
     实现：
     https://community.khronos.org/t/trouble-using-tessellation-to-draw-cubic-bezier-curves/74817
 
+  比尔定律（光线穿透折射） Beer's law:
+    ref：
+      https://byjus.com/physics/derivation-of-beer-lambert-law/
   卷积降噪：
     ref：
       https://segmentfault.com/a/1190000037749983
@@ -496,6 +499,7 @@ openGL ES(OpenGL for Embedded Systems ):
   解算：
     unity布料解算：
       https://github.com/SebLague/Cloth-and-IK-Test
+      https://github.com/Ninjajie/Fusion#cloth-plugin-user-guide
     GAMES-Webinar物理解算课程：
       00简介：
         知识准备：
@@ -538,6 +542,7 @@ openGL ES(OpenGL for Embedded Systems ):
           https://youtu.be/7k0e0JnPcH8
     ref：
       https://blog.csdn.net/HappyKocola/article/details/72812081
+      https://www.artstation.com/blogs/martinwiddowson/ZP4V/interior-mapping-and-building-tile-able-rooms-ue4
 
   法线矩阵：
     世界空间到相机空间转变：
@@ -546,6 +551,10 @@ openGL ES(OpenGL for Embedded Systems ):
           http://www.lighthouse3d.com/tutorials/glsl-12-tutorial/the-normal-matrix/
         特例：
           https://lxjk.github.io/2017/10/01/Stop-Using-Normal-Matrix.html
+  
+  平铺着色器：
+    ref:
+      https://www.artstation.com/blogs/martinwiddowson/qwoe/the-making-of-me-myself-die-part-1
 
 调试：
   GLTF代码viewer：

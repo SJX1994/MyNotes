@@ -1,0 +1,8 @@
+
+
+操作：
+      添加全局着色器(Global Shaders)：
+            概念：
+                  Global Shaders - 那些并非由材质编辑器创建的 Shader，通常是 compute shader 或者 post-process shader。这是基础类型的一种（比如：Global，Material，Mesh），其他一些基础类型将来再介绍。
+            ref：
+                  https://www.unrealengine.com/zh-CN/tech-blog/how-to-add-global-shaders-to-ue4

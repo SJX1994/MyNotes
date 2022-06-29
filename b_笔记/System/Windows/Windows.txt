@@ -158,6 +158,7 @@ ASP.net:
             敏捷软件开发（协作方式）:
                   参考：
                         https://zh.wikipedia.org/wiki/%E6%95%8F%E6%8D%B7%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91
+                        https://docs.microsoft.com/zh-cn/dotnet/fundamentals/
                   概念:
                         程序员团队 与 业务专家 之间紧密协作，面对面沟通，频繁交付新的软件版本，紧凑而自我组织型团队，更好的适应需求变化
                   适用性：

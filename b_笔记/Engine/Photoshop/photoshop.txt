@@ -9,3 +9,7 @@
       生成法线贴图：
             ref：
                   https://www.mattrittman.com/create-normal-map-photoshop/
+      
+      创建全色域色轮：
+            ref：
+                  https://youtu.be/1lWBL_OfzmM
