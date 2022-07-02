@@ -568,3 +568,14 @@ wedding项目：
     8.开发者UI
         -完成
     9.接入收音
+
+2022630官方技术分享：
+    三星SDK:
+        Adaptive Performance:
+            调节游戏性能，温控管理
+            framdebug?
+    URP:
+        MRTK
+        管线转换器 Converter
+        housing
+        figma
