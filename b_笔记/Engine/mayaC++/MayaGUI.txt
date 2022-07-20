@@ -142,7 +142,7 @@
             绘制曲线 —— 曲面>倒角 —— 
 
       显示属性：
-
+            Display-->Heads Up Display-->Poly Count
       欧拉万向锁：
             按E+鼠标左键
             欧拉万向锁的层级

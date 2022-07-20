@@ -1,4 +1,7 @@
 3D:
+      计算着色器:
+            以unity为例：
+                  允许用户申请GPU线程进行开发。
       几何着色器：
             以图元（通常是三角形）为单位进行操作
       顶点
@@ -69,5 +72,9 @@
             https://zhuanlan.zhihu.com/p/125744132
       PS操作：
             https://zhuanlan.zhihu.com/p/108820522
+
+动画：
+      面部表情：
+            避免表情僵硬 或者 作为UE参考用户心理的测量工具：FACS方案（Facial Action Coding System）
 ref:
       FORTICHE 法国
