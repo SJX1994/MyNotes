@@ -115,7 +115,10 @@ MonoDevelop：
         
         shaderGraph：
             
-
+    系统：
+        kernel：
+            它是操作系统和硬件之间的主要层，它有助于进程和内存管理、文件系统、设备控制和网络。
+            compute shader 用它访问GPU计算与缓存
 版本控制：
     gitignore：
         https://learn.unity.com/tutorial/project-architecture-unity-project-folder-structure?uv=4.x#5c7f8528edbc2a002053b672
