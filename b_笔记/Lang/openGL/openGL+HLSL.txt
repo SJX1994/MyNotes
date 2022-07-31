@@ -102,6 +102,10 @@ openGL（GLSL,OpenGL Shading Language）:
       Catlike Coding
       严令琪
       The Cherno 
+      Cyan
+      Ghislain Girardot
+      Chayan Vinayak
+      https://minionsart.github.io/tutorials/
       ref:
         https://www.patreon.com/m/78443/membership
         https://www.twitch.tv/videos/1213264324
