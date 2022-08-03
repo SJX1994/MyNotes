@@ -125,12 +125,23 @@
             网格-传递属性
       
       绘制顶点色：
+
             ref：
                   https://vimeo.com/98373299
             绘制：
                   网格显示——绘制顶点色工具
             显示：
                   工具设置——显示
+                  网格显示——切换显示颜色属性
+            批量：
+                  网格显示——应用颜色
+                  ref：
+                        https://knowledge.autodesk.com/zh-hans/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2020/CHS/Maya-Modeling/files/GUID-73C39180-81D8-4709-9756-FB7DB0A5E31B-htm.html
+            问题：
+                  切线不正确：
+                        取消导出的fbx网格三角化
+                  ref：
+                        https://youtu.be/bANGwlye9nM
 
             复杂的模型可以用属性传递顶点色
       烘培顶点法线：

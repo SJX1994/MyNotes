@@ -510,6 +510,10 @@ Adia任务：
                 ($Unity工程)Library\PackageCache\com.unity.render-pipelines.high-definition@7.7.1\Documentation~
 
 案例：
+    100个实用小框架：
+        https://www.bilibili.com/read/cv10038189/
+        数学小知识：
+            https://github.com/zalo/MathUtilities
     世界空间下Tileable 贴图坐标：
         https://youtu.be/vIh_6xtBwsI
     命名规范：
