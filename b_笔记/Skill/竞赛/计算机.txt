@@ -11,6 +11,12 @@ AMD icpc:
 Code Force：
 
 概念：
+      基础:计算机组成原理：
+            CrashCourse Computer Science:
+                  https://www.bilibili.com/video/BV1EW411u7th?p=2&vd_source=7073686d6514523bc306aa254d7744b5
+                  https://youtu.be/tpIctyqH29Q
+            计算机组成原理（唐朔飞）:
+                  https://www.bilibili.com/video/BV1WW411Q7PF?share_source=copy_web
       计算机存储：
             基础单元：
                   AND gate 与门:
@@ -130,3 +136,4 @@ Code Force：
 
 大V：
       Ben Eater
+      Siki学院

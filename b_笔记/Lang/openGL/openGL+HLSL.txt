@@ -102,6 +102,10 @@ openGL（GLSL,OpenGL Shading Language）:
       Catlike Coding
       严令琪
       The Cherno 
+      Cyan
+      Ghislain Girardot
+      Chayan Vinayak
+      https://minionsart.github.io/tutorials/
       ref:
         https://www.patreon.com/m/78443/membership
         https://www.twitch.tv/videos/1213264324
@@ -555,7 +559,15 @@ openGL ES(OpenGL for Embedded Systems ):
   平铺着色器：
     ref:
       https://www.artstation.com/blogs/martinwiddowson/qwoe/the-making-of-me-myself-die-part-1
-
+算法:
+  沃利噪声/噪点 worley noise：
+    概念：
+      是由引入的噪声函数 史蒂文·沃利 在1996年。 计算机图形学 它用于创建 程序纹理,即自动以任意精度创建的纹理，不必手动绘制。 Worley噪声接近模拟石头，水或生物细胞的纹理。
+    实现思路：
+      基本思想是获取空间中的随机点（二维或3维），然后对空间中的每个位置取距离dñ 到 ñ第三近点（例如第二近点），并使用它们的组合来控制颜色信息（请注意dn + 1 > dñ）。更确切地说：
+        在组织为网格单元的空间中随机分布特征点。实际上，这是在没有存储的情况下即时完成的（例如 程序噪声）。最初的方法考虑到每个单元的可变数量的种子点，以模仿Poisson分布，但是许多实现方式只是一个。
+        在运行时，提取距离dñ 从给定位置到 ñ最接近的种子点。可以通过访问当前单元格及其邻居来有效地完成此操作。
+        噪音 宽（x） 是正式的距离矢量，加上可能的相应种子编号，用户组合在一起即可产生颜色。百科全书  site:wikizhzh.top
 调试：
   GLTF代码viewer：
     
