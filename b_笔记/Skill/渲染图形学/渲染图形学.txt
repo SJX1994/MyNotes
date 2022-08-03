@@ -101,3 +101,6 @@
             https://zhuanlan.zhihu.com/p/108820522
 ref:
       FORTICHE 法国
+      https://paroj.github.io/gltut/
+      https://github.com/RayTracing/raytracing.github.io
+      https://www.pbr-book.org/
