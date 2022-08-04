@@ -14,6 +14,8 @@
         set mypath=%cd%
         @echo %mypath%
         pause
+    强制终止进程：
+        taskkill /im mspdbsrv.exe /F
 batch：
     move：
         移动

@@ -83,7 +83,15 @@ std关键字：
                   填充内存块
       chrono：
                   控制时间
-
+      动态记忆体配置：
+            malloc：
+                  void * malloc (size_t size)分配请求的内存并返回一个指向它的指针。
+            calloc：
+                  void *calloc(size_t nitems, size_t size)分配请求的内存并返回指向它的指针。malloc和calloc的区别在于 malloc 不会将内存设置为零，而 calloc 将分配的内存设置为零。
+            realloc：
+                  oid *realloc(void *ptr, size_t size)尝试调整ptr指向的内存块的大小，该内存块先前通过调用malloc或calloc分配。
+            free：
+                  void free (void *ptr) 释放先前通过调用 calloc、malloc 或 realloc 分配的内存。
 
 标识符：
       &:
@@ -99,6 +107,14 @@ std关键字：
       .     
             将整个方法全部传入 (内存使用效率不高)
 概念：
+      重用 re-use:
+            可重用代码是在多个功能中使用相似的代码。
+      死锁：
+            当多个进程试图同时访问同一个资源时，就会发生锁。
+      回调：
+            如果一个函数的引用作为参数传递给另一个函数来调用它，那么它将被称为回调函数。
+      硬编码：
+            是指将可能被视为输入或配置数据的内容直接嵌入程序或其他可执行对象的源代码
       面向对象编程：
             继承：
                   定义：
@@ -159,7 +175,10 @@ std关键字：
       任务调度：
 
       异步：
-            终端当前线程，执行回调
+            程序可以在等待响应的同时可以继续做其他事情。CPU就不会空闲了。wait
+            具体方法是开启多个线程。async
+            await是用来等待获取返回值
+            wait是直接堵塞一个线程
 
       线程：
             轻量的进程

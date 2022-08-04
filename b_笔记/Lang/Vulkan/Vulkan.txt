@@ -1,0 +1,19 @@
+wikipedia:
+      Vulkan 旨在提供更高的性能和更高效的CPU和GPU使用率.它为应用程序提供了比旧 API 更底层的 API。
+      特点：
+            预编译着色器：
+                  更容易地混淆专有的着色器代码。因为着色器不直接作为源代码存储。二进制格式的着色器。提高了应用程序初始化速度。
+            多线程友好设计：
+                  Direct3D 11 和 OpenGL 4 最初设计用于单核 CPU，Vulkan 在多核 CPU 上提供了改进的可扩展性。
+            降低 CPU 使用率：
+                  Vulkan 通过使用批处理和其他底层的优化来减少 CPU 的负载
+            跨平台：
+                  可在Android、Linux、BSD Unix、QNX、Nintendo Switch、 Raspberry Pi、Stadia、Fuchsia、Tizen、Windows 7、8、10和11上运行；MoltenVK为macOS、iOS提供免费许可的第三方支持和tvOS通过包装 Apple 的 Metal API。
+            统一API:
+                  Vulkan 为桌面和移动图形设备提供了一个单一的 API，而以前这些设备分别在 OpenGL 和OpenGL ES之间分离。
+
+官方教程：
+     官网：
+            
+            完成代码：
+                  https://github.com/Overv/VulkanTutorial/tree/master/code
