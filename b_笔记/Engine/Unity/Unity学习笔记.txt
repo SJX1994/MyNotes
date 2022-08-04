@@ -60,11 +60,7 @@
             Assembly-CSharp-vs.csproj & Assembly-CSharp.csproj:
                 是为JavaScript准备的
 
-    工程文件：
-        技巧：
-            不开工程的情况下看版本：
-                GOTO Your Project > Library Open any .Asset format file in notepad.
-                After opening the file you can see the unity version in the first line.
+
 
 MonoDevelop：
     概念：
@@ -115,10 +111,7 @@ MonoDevelop：
         
         shaderGraph：
             
-    系统：
-        kernel：
-            它是操作系统和硬件之间的主要层，它有助于进程和内存管理、文件系统、设备控制和网络。
-            compute shader 用它访问GPU计算与缓存
+
 版本控制：
     gitignore：
         https://learn.unity.com/tutorial/project-architecture-unity-project-folder-structure?uv=4.x#5c7f8528edbc2a002053b672
@@ -517,11 +510,10 @@ Adia任务：
                 ($Unity工程)Library\PackageCache\com.unity.render-pipelines.high-definition@7.7.1\Documentation~
 
 案例：
-    用compute shader 实现体积云：
-        ref：
-            https://youtu.be/4QOcCGI6xOU
-        
-
+    100个实用小框架：
+        https://www.bilibili.com/read/cv10038189/
+        数学小知识：
+            https://github.com/zalo/MathUtilities
     世界空间下Tileable 贴图坐标：
         https://youtu.be/vIh_6xtBwsI
     命名规范：

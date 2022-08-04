@@ -41,6 +41,11 @@
 
       后处理：
       缓存：
+      抗锯齿：
+            图像锐化：
+                  https://www.cnblogs.com/shuopython/p/16275887.html
+                  https://github.com/BradLarson/GPUImage/blob/master/framework/Source/GPUImageSharpenFilter.m
+                  https://segmentfault.com/a/1190000037749983
 2D:
       图形绘制：
             在片元中以UV为xy为坐标象限进行绘制
@@ -105,7 +110,32 @@
             Material Setup Render Pass:
             Pipline State Render Pass:
 
-
+性能优化：
+      遮挡剔除：
+            光栅化之前的OverDraw，减少绘制次数。注意半透明物体没有办法进入OverDraw的优化，慎用尤其是半透明的粒子系统，可能会造成性能爆炸。
+            相交的几何会发生另一个问题。在这里，透支变得不可预测，因为不能在同一次绘制调用中保证像素渲染顺序。
+            对于自相交的几何，还可以以合理的方式将其拆分为不同的几何块。在上一个屏幕截图的情况下，您可以将其完全分成四个平面，因此基于距离的排序将正确地完成其工作（请注意，这个操作将支付更多的Draw Call，以减少OverDraw，这个需要再实际项目中做平衡，看是CPU有余量还是GPU有余量，这里只作为例子介绍减少OverDraw的策略）。
+            
+            ref：
+                  https://thegamedev.guru/unity-gpu-performance/overdraw-optimization/#5-the-unity-overdraw-cheatsheet-for-2020
+                  https://www.guerrilla-games.com/read/practical-occlusion-culling-in-killzone-3
+                  https://www.youtube.com/watch?v=m0AQBWAbjpo
+                  file:///D:/softWare/Kanzi/Documentation/zh-cn/Content/Best%20practices/Measuring%20performance%20of%20your%20application.htm
+      浮点数精度：
+            根据实际渲染要求，按照最低标准限制每一个浮点数的精度。
+      减少纹理采样次数：
+            通过纹理划分(例如2*2，3*3，4*4)减少纹理采样次数。不采用UV重新排布以减少采样次数的原因：1 ：重新排布更耗时（3维软件中操作的时间，以及着色器中之前做好的纹理遮罩需要重新映射）2:北美输入的UV排布已经没有很多的面积浪费，基本是最优排布了。
+      算法时间复杂度优化：
+            利用renderDoc在PC环境测算每帧的以及渲染的每个步骤（从硬盘加载-矩阵转换-深度测试-顶点-片元-渲染管线-光栅化-后处理）的时间复杂度，我会针对时间复杂度高的部件，排查出相应的算法，以及渲染管线的渲染步骤，用“便宜”的方式取代“贵”的方式。
+      减少渲染像素
+            我会减少光栅化后渲染的像素数量（如2048/2倍=1024）同样的思路或者采用离屏渲染的手段，这个我们测试过，一定是可以把对应机型的帧率跑满的（但这得看客户对锯齿的包容度）。
+      减少batchCount
+            我会利用顶点色区分部件的手段，合并渲染批次，但保留目前的渲染效果，这个方法对整个渲染来说相当于重构是最伤经动骨，但也是最有效的可以明显减少batch count的（这个方法的风险点在于：第一：OpenGLES的着色器代码字数限制，第二：耗时会比较长）。
+      减少循环次数：
+            1.把着色器中片元的代码往顶点迁移，减少循环次数，从而降低时间复杂度，弊端：硬件环境下可能会出现因为循环次数过少，导致渲染精度或者效果不正确。
+            2.从3D软件中对模型减面，降低顶点的时间，空间复杂度（微量）。
+      算法+重构渲染管线/渲染方式：
+            类似于unity和unreal2022年推出的nanite算法，用算法进行动态曲面细分，动态纹理烘培，目标是1个batch count（这个实现周期会非常长，但十分有效）。
 
 特殊操作：
       toneMap：（减少过曝）
@@ -122,3 +152,6 @@
 
 ref:
       FORTICHE 法国
+      https://paroj.github.io/gltut/
+      https://github.com/RayTracing/raytracing.github.io
+      https://www.pbr-book.org/

@@ -58,7 +58,9 @@ android studio：
                               重启
                         adb  shell am start com.rightware.kanzi.carinteractive/.CarInteractive：
                               启动程序
-
+            在电脑上串流投屏：
+                  scrcpy：下载realase
+                  https://github.com/Genymobile/scrcpy
 
 
       系统：

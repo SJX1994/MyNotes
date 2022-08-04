@@ -583,6 +583,7 @@ openGL ES(OpenGL for Embedded Systems ):
       下载 Nsight Graphics
       还需要下载 Nsight Remote Monitor
       通过TCP/IP连接
+      需要将应用程序选择用 英伟达的显卡 跑
     帧调试模式：
       输出数据：
         实时渲染调用
@@ -648,7 +649,8 @@ openGL ES(OpenGL for Embedded Systems ):
       保存一个确定性应用程序以进行后续性能分析
       参考点
       错误报告
-
+  renderDoc:
+    
 格式：
   GLB GLTF:
     .二进制文件
