@@ -68,13 +68,20 @@
 
             compressed format 格式：
                   ASTC: Adaptive scalable texture compression 自适应可缩放纹理压缩
-                       是由 Jørn Nystad 等人开发的一种有损基于块的纹理压缩 算法。会增加体积大小但是减少显存大小
+                       是由 Jørn Nystad 等人开发的一种有损基于块的纹理压缩 算法。会增加体积大小但是减少显存大小，最大的优势可以自定义压缩块。
                        ASTC 于2012 年 8 月 6 日被Khronos Group采用为OpenGL和OpenGL ES的官方扩展。
                        支持算法的硬件：
                         apple GPU (LDR only),Arm Mali,Imagination PowerVR,Intel GPUs,Nvidia Tegra,Qualcomm Adreno (LDR only)
                         多样性：
                               ASTC 的主要设计目标是使内容开发人员能够更好地控制任何有损压缩方案中固有的空间/质量权衡。使用 ASTC，相邻比特率之间的比率约为 25%，从而降低了为给定纹理提高质量的成本。编码不同的资产通常需要不同的颜色格式。ASTC 允许多种输入格式选择，包括仅亮度、亮度 alpha、RGB、RGBA 和针对表面法线优化的模式。因此，设计人员可以选择最佳格式，而无需支持多种不同的压缩方案。比特率和颜色格式的选择不会相互制约，因此可以从大量的组合中进行选择。
                               以unity为例：https://developer.arm.com/documentation/102162/0002/Unity-and-ASTC
+                        天空盒：
+                              Opengl用的释放加载的图像：
+                                    stbi_load(“name.png”, &width, &height, &nrChannels, 0);
+                              压缩算法：
+                                    压缩块越大，压缩率约高
+                                    ref：
+                                    https://community.arm.com/arm-community-blogs/b/graphics-gaming-and-vr-blog/posts/high-quality-rgbm-texture-compression-with-astc
                   ATC: 
                         WebGL API的一部分，并公开了 3 种 ATC 压缩纹理格式。ATC 是一种专有的压缩算法，用于在手持设备上压缩纹理。压缩纹理减少了在 GPU 上存储纹理所需的内存量，从而允许更高分辨率的纹理或更多相同分辨率的纹理。
                   ETC编码: Ericsson Texture Compression

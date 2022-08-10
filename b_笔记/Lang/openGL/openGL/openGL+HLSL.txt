@@ -500,7 +500,8 @@ openGL ES(OpenGL for Embedded Systems ):
         顶点：
           https://blog.csdn.net/weixin_44749041/article/details/122424954
         法线：
-          空间曲线微分
+          空间曲线微分：
+            https://www.sohu.com/a/381434358_664523
           全微分方程的公式
 
   解算：
