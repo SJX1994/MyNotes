@@ -357,6 +357,9 @@ openGL ES(OpenGL for Embedded Systems ):
       操作：
         逆矩阵：
           inverse();
+  向量矩阵变化：
+    https://www.cnblogs.com/caster99/p/4787988.html
+    http://www.songho.ca/opengl/gl_normaltransform.html
   2D矩阵变化：
     ref：https://learnopengl.com/Getting-started/Transformations
   旋转方式:

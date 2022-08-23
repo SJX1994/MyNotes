@@ -26,6 +26,78 @@
             python中的 in 关键字的用法
 
 算法：
+    快速排序：
+        // 用 C++ 手动实现快速排序算法，要求时间复杂度尽量稳定，代码风格尽量简洁清晰，可以封装工具函数。Bonus. 把排序函数封装进独立的 class，要求尽量健壮和安全，在各种使用情况下都应有合理行为。
+            #include <iostream>
+            using namespace std;
+            int f_partition(int a[],int,int);
+            void f_quickSort(int a[],int,int);
+
+            int main()
+            {
+            int array[] = {3,1,2,34,43,23};
+            int len = sizeof(array)/sizeof(int);
+            cout << "原始数组：" << endl;
+            for(int i=0; i<len; i++)
+            {
+                cout<<array[i]<<"  ";
+            }
+            cout << "" << endl;
+            f_quickSort(array,0,len-1);
+            cout << "快排后数组：" << endl;
+            for(int i=0; i<len; i++)
+            {
+                cout<<array[i]<<"  ";
+            }
+            cout << "" << endl;
+            return 0;
+            }
+
+
+            void f_quickSort(int l_array[], int l_start , int l_end)
+            {
+            if(l_start >= l_end) return;
+            
+            // 分区数组
+            int m_p = f_partition(l_array,l_start,l_end);
+            // 从左边
+            f_quickSort(l_array,l_start,m_p-1);
+            // 从右边
+            f_quickSort(l_array,m_p+1,l_end);
+            }
+
+            int f_partition(int l_array[], int l_start,int l_end)
+            {
+            int m_pivot = l_array[l_start];
+            int m_count = 0;
+            for(int i = l_start + 1; i <= l_end; i++ )
+            {
+                if(l_array[i] <= m_pivot)
+                m_count ++;
+            }
+            // 给数字正确的索引
+            int m_pivotIndex = l_start + m_count;
+            swap(l_array[m_pivotIndex],l_array[l_start]);
+            
+            // 整理左右部分
+            int i = l_start, j = l_end;
+            while(i < m_pivotIndex && j > m_pivotIndex)
+            {
+                while(l_array[i] <= m_pivot)
+                {
+                    i++;
+                }
+                while(l_array[j] > m_pivot)
+                {
+                    j--;
+                }
+                if(i < m_pivotIndex && j > m_pivotIndex)
+                {
+                    swap(l_array[i++],l_array[j--]);
+                }
+            }
+            return m_pivotIndex;
+            }
     折半搜索
     汉诺塔算法
     并行计算
