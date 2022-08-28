@@ -39,7 +39,21 @@
                   https://www.atlassian.com/git/tutorials/rewriting-history
       文件夹改变：
             cd /d/
-                  
+Git关键字:
+    项目子菜单：
+        Code：
+            main:
+                切换分支
+            哈希值：
+                最后的变动和近期的变动
+            Code：
+                选择下载方式
+        Issues：
+
+        PullRequest:
+        Actions:
+        Security:
+        Insights:                  
 报错：
       无法访问：
             修改host：
@@ -179,6 +193,10 @@ mac:
                         1.下载：puttygen.exe (https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
                         2.
                         
+Apache Subversion:
+      
+
+
 
 Gerrit:
       中科：
