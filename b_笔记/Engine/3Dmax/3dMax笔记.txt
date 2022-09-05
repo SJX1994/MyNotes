@@ -1,0 +1,27 @@
+文档规则：
+    注释：
+        (这是注释)
+    省略：
+        ...
+    包含：
+        <
+    值：
+        >
+    代码：
+        <(代码)>
+3DMAX:
+    安装：
+        子目录无法使用:
+            原因：
+                注册表鼠标悬停延迟
+            解决方案：
+                1.创建一个。reg 键入代码：
+                    <(
+                        Windows Registry Editor Version 5.00
+
+                        [HKEY_CURRENT_USER\Control Panel\Desktop]
+
+                        "MenuShowDelay"="400"
+                    )>
+                2.打开注册表修改：
+                    HKEY_CURRENT_USER>>>Control>>>Desktop>>>MenuShowDelay:400

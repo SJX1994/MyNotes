@@ -1,0 +1,10 @@
+^F:\GITDEPTH\NOTES\AEANIMATIONTOOL\B_笔记\LANG\CMAKE\EXAMPLE\OUT\BUILD\CMAKEFILES\9B6F96111132B512FC346F9BBE57B3BE\GENERATE.STAMP.RULE
+setlocal
+D:\SoftWare\CMAKE\bin\cmake.exe -SF:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example -BF:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build/helloSJX.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

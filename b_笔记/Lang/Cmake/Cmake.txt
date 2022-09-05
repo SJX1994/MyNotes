@@ -1,0 +1,16 @@
+操作命令符：
+    -h
+        获取指令帮助
+    -S
+        后面跟source file
+    -B
+        后面跟build file
+    --version
+        获取版本
+    
+    
+        
+格式：
+    变量：
+        ${PROJECT_NAME}
+            Name of the project given to the project command.

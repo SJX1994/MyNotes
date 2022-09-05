@@ -1,0 +1,246 @@
+
+快捷键：
+    V 选择工具
+
+    A 直接选择工具
+
+    Y 魔棒工具
+
+    Q 套索工具
+
+    P 钢笔工具
+
+    H 抓手工具
+
+    Z 缩放工具
+
+    R 旋转工具
+
+    O 镜像工具
+
+    M 矩形工具
+
+    L 椭圆工具
+
+    B 画笔工具
+
+    N 铅笔工具
+
+    C 剪刀工具
+
+    T 文字工具
+
+    U 网络工具
+
+    G 渐变工具
+
+    I 吸管工具
+
+    W 混合工具
+
+    J 柱形图工具
+
+    E 自由变换工具
+
+    K 实时上色工具
+
+    S 比例缩放工具
+
+    Shift+~ 曲率工具
+
+    Shift+K 切片工具
+
+    Shift+C 锚点工具
+
+    Shift+O 画板工具
+
+    Shift+W 宽度工具
+
+    Shift+E 橡皮擦工具
+
+    Shift+N Shaper工具
+
+    Shift+P 透视网络工具
+
+    Shift+S 符号喷枪工具
+
+    Shift+M 形状生成器工具
+
+    Shift+B 斑点画笔工具
+
+    Shift+T 修饰文字工具
+
+    对象
+
+    Ctrl+G 编组
+
+    Ctrl+2 锁定对象
+
+    Ctrl+D 再次变换
+
+    Ctrl+3 隐藏所选对象
+
+    Alt+Ctrl+2 全部解锁
+
+    Alt+Ctrl+3 显示全部对象
+
+    Ctrl+Shift+G 取消编组
+
+    路径==>
+
+    连接 Ctrl+J
+
+    平均 Alt+Ctrl+J
+
+    编辑图案Shift+Ctrl+F8
+
+    混合==>
+
+    建立 Alt+Ctrl+B
+
+    释放 Alt+Ctrl+Shift+B
+
+    封套扭曲==>
+
+    用变形建立 Alt+Ctrl+Shift+W
+
+    用网絡建立 Alt+Ctrl+M
+
+    用顶层对象建立 Alt+Ctrl+C
+
+    实时上色建立 Alt+Ctrl+X
+
+    剪切蒙版==>
+
+    建立 Alt+Ctrl+7
+
+    释放 Alt+Ctrl+Shift+7
+
+    功能命令
+
+    . 渐变
+
+    ， 颜色
+
+    / 无
+
+    ] 增加直径
+
+    [ 减少直径
+
+    X 填色或描边
+
+    F 3屏模式切换
+
+    D 默认填色或描边
+
+    Tab 显示/隐藏所有面板
+
+    Shift+} 符号工具增加
+
+    Shift+{ 符号工具减少
+
+    Shift+D 切换绘图模式
+
+    Shift+X 互换填色或描边
+
+    Shift+Tab 显示/隐藏工具箱
+
+    编辑
+
+    Ctrl+K 常规
+
+    Ctrl+X 剪切
+
+    Ctrl+C 复制
+
+    Ctrl+V 粘贴
+
+    Ctrl+I 拼写检查
+
+    Ctrl+Z 还原键入
+
+    Ctrl+Shift+Z 重做
+
+    Ctrl+F 贴在原处前面
+
+    Ctrl+B 贴在原处后面
+
+    Ctrl+Shift+V 原处粘贴
+
+    Ctrl+Shift+K 颜色设置
+
+    Alt+Ctrl+Shift+K 键盘快捷键
+
+    Alt+Ctrl+Shift+V 在所有画板上粘贴
+
+    视图
+
+    Ctrl++ 放大
+
+    Ctrl+- 缩小
+
+    Ctrl+Y 轮廓
+
+    Ctrl+1 实际大小
+
+    Ctrl+H 隐藏边缘
+
+    Ctrl+” 显示网络
+
+    Alt+Ctrl+” 对齐点
+
+    Ctrl+U 智能参考线
+
+    Alt+Ctrl+Y 像素预览
+
+    Ctrl+E 在CPU上预览
+
+    Ctrl+Shift+” 对齐网络
+
+    Ctrl+Shift+H 隐藏画板
+
+    Ctrl+Shift+W 隐藏模板
+
+    Ctrl+0 画板适合窗口大小
+
+    Ctrl+Shift+B 隐藏定界框
+
+    Ctrl+Shift+Y 隐藏文本串接
+
+    Alt+Ctrl+G 隐藏渐变批注者
+
+    Alt+Ctrl+Shift+Y 叠印预览
+
+    Alt+Ctrl+0 全部适合窗口大小
+
+    Ctrl+Shift+D 显示透明度网络
+
+    标尺==>
+
+    隐藏标尺 Ctrl+R
+
+    更改为全局标尺 Alt+Ctrl+R
+
+文字工具：
+    创建路径文字：
+        官方：
+            https://helpx.adobe.com/cn/illustrator/user-guide.html/cn/illustrator/using/creating-type-path.ug.html
+        修改：  
+            “文字”>“路径文字”>“路径文件选项”
+        栅格化：
+            文字—创建轮廓
+        适应形状：
+            对象-封套扭曲-用顶层对象建立
+3D工具：
+    3d化：
+        效果-突出和斜角
+    解组：
+        对象-拓展外观        
+
+路径：
+    路径分割形状：
+        窗口-路径查找器
+
+铅笔：
+    铅笔平滑工具

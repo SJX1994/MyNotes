@@ -73,8 +73,27 @@ batch：
         "path":
             目标路径
 
+        ..:
+        返回上一层目录
+    ls:
+        检查目录下的文件
+    del "<filename>" ：
+        删除文件
+        /f:
+            强行删除
+    clear:
+        清除当前命令行
 PowerShell:
-
+    Get-Command:
+        反射命令
+    cat:
+        Get-Content
+        读取文件内容
+    echo:
+        Write-Output
+        例子：
+            '1'>data.cpp:
+                创建一个包含‘1’的.cpp file
 Win+R：
     开机启动项：
         shell:startup
