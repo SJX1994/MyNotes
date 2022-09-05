@@ -1,0 +1,24 @@
+# CMake generation dependency list for this directory.
+D:/SoftWare/CMAKE/share/cmake-3.24/Modules/CMakeCInformation.cmake
+D:/SoftWare/CMAKE/share/cmake-3.24/Modules/CMakeCXXInformation.cmake
+D:/SoftWare/CMAKE/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake
+D:/SoftWare/CMAKE/share/cmake-3.24/Modules/CMakeGenericSystem.cmake
+D:/SoftWare/CMAKE/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake
+D:/SoftWare/CMAKE/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake
+D:/SoftWare/CMAKE/share/cmake-3.24/Modules/CMakeRCInformation.cmake
+D:/SoftWare/CMAKE/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake
+D:/SoftWare/CMAKE/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake
+D:/SoftWare/CMAKE/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake
+D:/SoftWare/CMAKE/share/cmake-3.24/Modules/Compiler/MSVC-C.cmake
+D:/SoftWare/CMAKE/share/cmake-3.24/Modules/Compiler/MSVC-CXX.cmake
+D:/SoftWare/CMAKE/share/cmake-3.24/Modules/Compiler/MSVC.cmake
+D:/SoftWare/CMAKE/share/cmake-3.24/Modules/Platform/Windows-MSVC-C.cmake
+D:/SoftWare/CMAKE/share/cmake-3.24/Modules/Platform/Windows-MSVC-CXX.cmake
+D:/SoftWare/CMAKE/share/cmake-3.24/Modules/Platform/Windows-MSVC.cmake
+D:/SoftWare/CMAKE/share/cmake-3.24/Modules/Platform/Windows.cmake
+D:/SoftWare/CMAKE/share/cmake-3.24/Modules/Platform/WindowsPaths.cmake
+F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/CMakeLists.txt
+F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build/CMakeFiles/3.24.1/CMakeCCompiler.cmake
+F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build/CMakeFiles/3.24.1/CMakeCXXCompiler.cmake
+F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build/CMakeFiles/3.24.1/CMakeRCCompiler.cmake
+F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build/CMakeFiles/3.24.1/CMakeSystem.cmake

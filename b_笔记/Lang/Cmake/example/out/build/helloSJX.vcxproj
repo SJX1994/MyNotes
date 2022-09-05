@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5D5F0C60-F2BB-367E-8301-E307A9A04B94}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>helloSJX</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">helloSJX.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">helloSJX</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">helloSJX.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">helloSJX</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">helloSJX.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">helloSJX</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">helloSJX.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">helloSJX</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\Adder;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\Adder;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\Adder;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>Adder\Debug\adder.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/Adder;F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/Adder/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build/Debug/helloSJX.lib</ImportLibrary>
+      <ProgramDataBaseFile>F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build/Debug/helloSJX.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\Adder;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\Adder;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\Adder;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>Adder\Release\adder.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/Adder;F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/Adder/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build/Release/helloSJX.lib</ImportLibrary>
+      <ProgramDataBaseFile>F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build/Release/helloSJX.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\Adder;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\Adder;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\Adder;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>Adder\MinSizeRel\adder.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/Adder;F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/Adder/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build/MinSizeRel/helloSJX.lib</ImportLibrary>
+      <ProgramDataBaseFile>F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build/MinSizeRel/helloSJX.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\Adder;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\Adder;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\Adder;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>Adder\RelWithDebInfo\adder.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/Adder;F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/Adder/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build/RelWithDebInfo/helloSJX.lib</ImportLibrary>
+      <ProgramDataBaseFile>F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build/RelWithDebInfo/helloSJX.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\SoftWare\CMAKE\bin\cmake.exe -SF:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example -BF:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build --check-stamp-file F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeCInformation.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeRCInformation.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Compiler\MSVC.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Platform\Windows.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\3.24.1\CMakeCCompiler.cmake;F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\3.24.1\CMakeCXXCompiler.cmake;F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\3.24.1\CMakeRCCompiler.cmake;F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\3.24.1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\SoftWare\CMAKE\bin\cmake.exe -SF:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example -BF:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build --check-stamp-file F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeCInformation.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeRCInformation.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Compiler\MSVC.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Platform\Windows.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\3.24.1\CMakeCCompiler.cmake;F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\3.24.1\CMakeCXXCompiler.cmake;F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\3.24.1\CMakeRCCompiler.cmake;F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\3.24.1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\SoftWare\CMAKE\bin\cmake.exe -SF:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example -BF:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build --check-stamp-file F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeCInformation.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeRCInformation.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Compiler\MSVC.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Platform\Windows.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\3.24.1\CMakeCCompiler.cmake;F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\3.24.1\CMakeCXXCompiler.cmake;F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\3.24.1\CMakeRCCompiler.cmake;F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\3.24.1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\SoftWare\CMAKE\bin\cmake.exe -SF:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example -BF:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build --check-stamp-file F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeCInformation.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeRCInformation.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Compiler\MSVC.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Platform\Windows.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\3.24.1\CMakeCCompiler.cmake;F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\3.24.1\CMakeCXXCompiler.cmake;F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\3.24.1\CMakeRCCompiler.cmake;F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\3.24.1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\main.cpp" />
+    <ClCompile Include="F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\adder.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\ZERO_CHECK.vcxproj">
+      <Project>{6F072BB5-8EE1-3802-AEC6-39DEFD719780}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\Adder\adder.vcxproj">
+      <Project>{1166F6C5-5220-3BE2-90A6-B00B81EDE243}</Project>
+      <Name>adder</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

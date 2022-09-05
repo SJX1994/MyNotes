@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\9b6f96111132b512fc346f9bbe57b3be\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{7D493625-CD28-36D0-813A-04997DDC8142}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
