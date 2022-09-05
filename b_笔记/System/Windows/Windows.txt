@@ -11,6 +11,8 @@
         <(代码)>
 
 问题：
+      DNS刷新：
+	      ipconfig/flushdns
       对比文件异同：
             MD5/SHA1/SHA256 校验值：
                   https://blog.csdn.net/xkwy100/article/details/80297968

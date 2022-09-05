@@ -6,7 +6,7 @@
 学习网址：
       阅读代码：
             https://www.jianshu.com/p/7fe990b7aac3
-      https://github.com/Light-City/CPlusPlusThings
+            https://github.com/Light-City/CPlusPlusThings
       笔记：
             const：     
                   不能被修改的值，为了增加代码健壮性
@@ -203,5 +203,47 @@ std关键字：
                        4 链接载入可由代码控制
       编译步骤：
             .h .cpp源文件 - 预编译 - 编译 - 汇编 - .lib .dll 链接 - .exe
+写法：
+      class derived-class: access-specifier base-class:
+            属于 C++ 继承的范畴。
+            目的重用代码功能和提高执行效率
+            继承代表了 is a 关系。dog is a animal
+            access-specifier 可以定义为：
+                  public: 公有的，可以被任何程序访问
+                  protected: 受保护的，可以被本类和子类访问
+                  private: 私有的，只能被本类访问
+                  不定义默认为 private
+            ref：https://www.runoob.com/cplusplus/cpp-inheritance.html
       
+            ref:https://en.cppreference.com/w/cpp/language/virtual
 
+      virtual void f(int) override;
+            属于override的范畴
+            目的在头文件中定义函数，在派生类中实现函数
+            struct 写法：
+                  struct B
+                  {
+                        virtual void f(int);
+                  };
+                  
+                  struct D : B
+                  {
+                        virtual void f(int) override;  // OK, D::f(int) overrides B::f(int)
+                        virtual void f(long) override; // Error: f(long) does not override B::f(int)
+                  };
+            class 写法：
+                  B.h
+                        class B
+                        {
+                              virtual void f(int){}
+                        };
+                  D.h
+                        class D : B
+                        {
+                              virtual void f(int) override;
+                        };
+                  D.cpp
+                        void D::TestMe(int)
+                        {
+
+                        }

@@ -148,7 +148,7 @@ openGL ES(OpenGL for Embedded Systems ):
         多重采样
       +=1.1
         支持多纹理
-        支持mipmap（lod）
+        支持mipmap（图像的缩放预存储）
         顶点缓冲区
         状态查询
         用户剪辑平面
@@ -186,6 +186,14 @@ openGL ES(OpenGL for Embedded Systems ):
   ref：
     https://blog.csdn.net/hgl868/article/details/7876257
 通用概念：
+  纹理缩放：
+    放大：
+      基于纹理映射，将原像素映射到放大图像的对应像素位置，以原像素在放大图像上的相对位置，对剩余未填充像素的部分进行填充，如果用liner模式，就会与剩余像素做差值，如果选择nearst模式，就会选择临近的像素进行复制。
+    缩小：  
+      基于mipmap(GPU加速运算)对图像进行缩小，每四个像素缩放成一个像素,如果选择liner就会产生差值，如果选择nearst就会选择临近像素直接赋值,进行纹理映射。
+    ref：https://webgl2fundamentals.org/webgl/lessons/webgl-3d-textures.html
+  Framebuffer Object(FBO):
+    帧缓冲区对象是OpenGL 对象，它允许创建用户定义的帧缓冲区。使用它们，可以渲染到非默认帧缓冲区位置，从而在不干扰主屏幕的情况下进行渲染。
   Element Buffer Objects(EBO):
     元素缓冲对象：
       存储重复绘制的顶点

@@ -81,6 +81,8 @@
                                                     
 
 编辑器： 
+      UV映射：
+            UV-平面映射
       烘焙AO：
             https://youtu.be/N14WqEovkWs
       创建UV（无UV）：

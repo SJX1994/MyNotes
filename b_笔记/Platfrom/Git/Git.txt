@@ -39,6 +39,9 @@
                   https://www.atlassian.com/git/tutorials/rewriting-history
       文件夹改变：
             cd /d/
+      递归子模块：
+            git submodule init
+            git submodule update
                   
 报错：
       无法访问：

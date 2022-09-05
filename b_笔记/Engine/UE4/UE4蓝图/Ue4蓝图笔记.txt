@@ -148,6 +148,8 @@ Api方程：
         
             
 操作：
+    导出贴图/资产：
+        In “Content Browser” right mouse button click on needed texture. In menu “Asset Action → Export”.
     实时编程：
         开启：
             Edit>EditorPreferences>General_LiveCoding>General>EnableLiveCoding

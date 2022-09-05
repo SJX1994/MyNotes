@@ -71,8 +71,7 @@ Udemy
 Shader:
 	ChayanShader
 
-DNS刷新：
-	ipconfig/flushdns
+
 
 adia：
 	请假：

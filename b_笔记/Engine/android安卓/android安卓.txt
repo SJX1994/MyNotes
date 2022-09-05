@@ -27,6 +27,11 @@
                                                 构建应用的方式
 android studio：
       測試:
+            buildVariant:
+                  release:
+                        包体小
+                  debug:
+                        包体大
             GPU Debug:
                   ref:
                         https://developer.android.com/agi
@@ -61,7 +66,31 @@ android studio：
             在电脑上串流投屏：
                   scrcpy：下载realase
                   https://github.com/Genymobile/scrcpy
+            707车机测试：
+                  车机安装非签名应用:
+                        adb shell setprop bdcarsec.pm.uninstall 0 
+                        adb shell setprop bdcarsec.pm.install 0
+                        adb shell setprop bdcarsec.am.run.verifyprocess 0
+                        adb shell setprop bdcarsec.time.scan 0
+                  CPU测试方法：
+                        1. 使用top命令，查看应用的CPU占用率，然后将进程对应的CPU占用率更新到表格中
+                        2. DMIPS的计算方法，高通8155的DMIPS是105K+
+                        然后应用的DMIPS=105K * CPU利用率 / 800% (8核)
+                  GPU测试方法：
+                        cmd：
+                              // 进入 qnx
+                              adb root
+                              adb shell busybox telnet 10.1.0.5
+                              // qnx系统的cmd下输入：
+                                    // 密码
+                                    root
+                                    // 临时定频
+                                    echo gpu_perf_governor 1 > /dev/kgsl-control
 
+                                    // 在 qnx 下输入
+                                    echo gpu_set_log_level 4 > /dev/kgsl-control
+                                    echo gpubusystats 1000 > /dev/kgsl-control
+                                    slog2info -b KGSL -w
 
       系统：
             .gradle:
