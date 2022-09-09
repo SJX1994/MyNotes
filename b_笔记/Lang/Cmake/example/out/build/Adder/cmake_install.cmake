@@ -1,8 +1,8 @@
-# Install script for directory: F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/Adder
+# Install script for directory: D:/GitDepot/notes/AEanimationTool/b_笔记/Lang/Cmake/example/Adder
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/Project")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/helloSJX")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

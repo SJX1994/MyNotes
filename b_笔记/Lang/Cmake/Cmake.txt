@@ -1,16 +1,37 @@
 操作命令符：
-    -h
-        获取指令帮助
-    -S
-        后面跟source file
-    -B
-        后面跟build file
-    --version
-        获取版本
-    
+    cmake:
+        -h
+            获取指令帮助
+        -S
+            后面跟source file
+        -B
+            后面跟build file
+        --version
+            获取版本
+        操作：
+        上两级目录：
+            ../../
     
         
 格式：
     变量：
         ${PROJECT_NAME}
             Name of the project given to the project command.
+    接口：
+        message:
+            打印消息
+            格式：
+                message([<mode>] "message text" ...)
+                STATUS: 状态
+                FATAL_ERROR： 返回非零 退出代码
+                SEND_ERROR：继续处理，但跳过生成
+                WARNING：警告，继续处理。
+                AUTHOR_WARNING：
+                DEBUG：调试信息
+                TRACE：临时跟踪信息
+        find_package：
+            Module 模块模式:
+
+            Config 配置模式:
+                安装：
+                使用：

@@ -3,3 +3,11 @@ Opengl渲染器：
 
 ref:https://github.com/Illation/ETEngine
     https://github.com/TheCherno/OpenGL
+
+
+O3DE:
+    是一个免费的开源 3D 游戏引擎，由Linux 基金会的子公司 Open 3D Foundation 开发，并在Apache 2.0开源许可下分发。引擎的初始版本是Amazon Lumberyard的更新版本，由Amazon Games提供。自 2021 年 7 月 7 日起，可以使用该引擎的开发者预览版。
+    https://github.com/o3de/o3de
+    build：
+        https://www.bilibili.com/video/BV14h41167kj/?vd_source=7073686d6514523bc306aa254d7744b5
+        https://www.youtube.com/watch?v=lWhPwDYeuhc&t=1168s

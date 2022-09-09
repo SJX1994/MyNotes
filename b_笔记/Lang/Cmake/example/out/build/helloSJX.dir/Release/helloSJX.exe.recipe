@@ -2,10 +2,10 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\x64\Release\ZERO_CHECK</FullPath>
+      <FullPath>D:\GitDepot\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\x64\Release\ZERO_CHECK</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\Release\helloSJX.exe</FullPath>
+      <FullPath>D:\GitDepot\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\Release\helloSJX.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

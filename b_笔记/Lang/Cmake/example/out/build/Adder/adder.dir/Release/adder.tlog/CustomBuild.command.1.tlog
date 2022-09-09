@@ -1,6 +1,6 @@
-^F:\GITDEPTH\NOTES\AEANIMATIONTOOL\B_笔记\LANG\CMAKE\EXAMPLE\ADDER\CMAKELISTS.TXT
+^D:\GITDEPOT\NOTES\AEANIMATIONTOOL\B_笔记\LANG\CMAKE\EXAMPLE\ADDER\CMAKELISTS.TXT
 setlocal
-D:\SoftWare\CMAKE\bin\cmake.exe -SF:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example -BF:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build --check-stamp-file F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build/Adder/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/GitDepot/notes/AEanimationTool/b_笔记/Lang/Cmake/example -BD:/GitDepot/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build --check-stamp-file D:/GitDepot/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build/Adder/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

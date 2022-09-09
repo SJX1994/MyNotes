@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <PreferredToolArchitecture>x64</PreferredToolArchitecture>
   </PropertyGroup>
@@ -22,9 +22,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{1166F6C5-5220-3BE2-90A6-B00B81EDE243}</ProjectGuid>
-    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{B3F64D57-73DF-388A-B5C8-2D24B268107D}</ProjectGuid>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
     <Platform>x64</Platform>
     <ProjectName>adder</ProjectName>
     <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
@@ -33,22 +33,22 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -59,19 +59,19 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\Adder\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\GitDepot\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\Adder\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">adder.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">adder</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\Adder\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\GitDepot\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\Adder\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">adder.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">adder</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\Adder\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\GitDepot\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\Adder\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">adder.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">adder</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\Adder\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\GitDepot\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\Adder\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">adder.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">adder</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
@@ -200,11 +200,11 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\Adder\CMakeLists.txt">
+    <CustomBuild Include="D:\GitDepot\notes\AEanimationTool\b_笔记\Lang\Cmake\example\Adder\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/Adder/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/GitDepot/notes/AEanimationTool/b_笔记/Lang/Cmake/example/Adder/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-D:\SoftWare\CMAKE\bin\cmake.exe -SF:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example -BF:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build --check-stamp-file F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build/Adder/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/GitDepot/notes/AEanimationTool/b_笔记/Lang/Cmake/example -BD:/GitDepot/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build --check-stamp-file D:/GitDepot/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build/Adder/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -213,11 +213,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\Adder\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\GitDepot\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\Adder\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/Adder/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/GitDepot/notes/AEanimationTool/b_笔记/Lang/Cmake/example/Adder/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-D:\SoftWare\CMAKE\bin\cmake.exe -SF:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example -BF:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build --check-stamp-file F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build/Adder/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/GitDepot/notes/AEanimationTool/b_笔记/Lang/Cmake/example -BD:/GitDepot/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build --check-stamp-file D:/GitDepot/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build/Adder/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -226,11 +226,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\Adder\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\GitDepot\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\Adder\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/Adder/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/GitDepot/notes/AEanimationTool/b_笔记/Lang/Cmake/example/Adder/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-D:\SoftWare\CMAKE\bin\cmake.exe -SF:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example -BF:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build --check-stamp-file F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build/Adder/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/GitDepot/notes/AEanimationTool/b_笔记/Lang/Cmake/example -BD:/GitDepot/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build --check-stamp-file D:/GitDepot/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build/Adder/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -239,11 +239,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\Adder\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\GitDepot\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\Adder\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/Adder/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/GitDepot/notes/AEanimationTool/b_笔记/Lang/Cmake/example/Adder/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-D:\SoftWare\CMAKE\bin\cmake.exe -SF:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example -BF:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build --check-stamp-file F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build/Adder/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/GitDepot/notes/AEanimationTool/b_笔记/Lang/Cmake/example -BD:/GitDepot/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build --check-stamp-file D:/GitDepot/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build/Adder/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -252,17 +252,17 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\Adder\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\GitDepot\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\Adder\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\Adder\adder.cpp" />
-    <ClInclude Include="F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\Adder\adder.h" />
+    <ClCompile Include="D:\GitDepot\notes\AEanimationTool\b_笔记\Lang\Cmake\example\Adder\adder.cpp" />
+    <ClInclude Include="D:\GitDepot\notes\AEanimationTool\b_笔记\Lang\Cmake\example\Adder\adder.h" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\ZERO_CHECK.vcxproj">
-      <Project>{6F072BB5-8EE1-3802-AEC6-39DEFD719780}</Project>
+    <ProjectReference Include="D:\GitDepot\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\ZERO_CHECK.vcxproj">
+      <Project>{C90D0E42-710B-3AE1-835E-DE74CE5822B7}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>

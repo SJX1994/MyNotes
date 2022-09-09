@@ -6,6 +6,6 @@ int main()
 {
     std::cout << "Hello World SJX \n";
 
-    std::cout << add(123.0f, 1.0f) << '\n';
+    std::cout << add(13.0f, 1.0f) << '\n';
     return 0;
 }

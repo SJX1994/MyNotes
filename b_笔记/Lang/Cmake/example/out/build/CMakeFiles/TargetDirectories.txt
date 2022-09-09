@@ -1,4 +1,4 @@
-F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build/CMakeFiles/helloSJX.dir
-F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build/CMakeFiles/ALL_BUILD.dir
-F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build/CMakeFiles/ZERO_CHECK.dir
-F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build/Adder/CMakeFiles/adder.dir
+D:/GitDepot/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build/CMakeFiles/helloSJX.dir
+D:/GitDepot/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build/CMakeFiles/ALL_BUILD.dir
+D:/GitDepot/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build/CMakeFiles/ZERO_CHECK.dir
+D:/GitDepot/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build/Adder/CMakeFiles/adder.dir

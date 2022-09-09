@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\main.cpp">
+    <ClCompile Include="D:\GitDepot\notes\AEanimationTool\b_笔记\Lang\Cmake\example\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\adder.cpp">
+    <ClCompile Include="D:\GitDepot\notes\AEanimationTool\b_笔记\Lang\Cmake\example\adder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\CMakeLists.txt" />
+    <CustomBuild Include="D:\GitDepot\notes\AEanimationTool\b_笔记\Lang\Cmake\example\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{4C4E1136-5627-3BA3-9CFA-D1449EED9E6D}</UniqueIdentifier>
+      <UniqueIdentifier>{07701DF8-15DE-3E94-9433-9689435B0887}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

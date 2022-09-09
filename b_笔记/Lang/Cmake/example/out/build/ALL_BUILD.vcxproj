@@ -1,10 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <PreferredToolArchitecture>x64</PreferredToolArchitecture>
-  </PropertyGroup>
-  <PropertyGroup>
-    <ResolveNugetPackages>false</ResolveNugetPackages>
   </PropertyGroup>
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|x64">
@@ -25,9 +22,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{1E3453E7-9A76-3298-98FB-322C422C8BD1}</ProjectGuid>
-    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{2044707D-0310-31A3-A2DB-008287E54782}</ProjectGuid>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
     <Platform>x64</Platform>
     <ProjectName>ALL_BUILD</ProjectName>
     <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
@@ -36,22 +33,22 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Utility</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Utility</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
     <ConfigurationType>Utility</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
     <ConfigurationType>Utility</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -108,11 +105,11 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\CMakeLists.txt">
+    <CustomBuild Include="D:\GitDepot\notes\AEanimationTool\b_笔记\Lang\Cmake\example\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/GitDepot/notes/AEanimationTool/b_笔记/Lang/Cmake/example/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-D:\SoftWare\CMAKE\bin\cmake.exe -SF:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example -BF:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build --check-stamp-file F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/GitDepot/notes/AEanimationTool/b_笔记/Lang/Cmake/example -BD:/GitDepot/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build --check-stamp-file D:/GitDepot/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -120,12 +117,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeCInformation.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeRCInformation.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Compiler\MSVC.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Platform\Windows.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\3.24.1\CMakeCCompiler.cmake;F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\3.24.1\CMakeCXXCompiler.cmake;F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\3.24.1\CMakeRCCompiler.cmake;F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\3.24.1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\WindowsPaths.cmake;D:\GitDepot\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\3.22.2\CMakeCCompiler.cmake;D:\GitDepot\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\3.22.2\CMakeCXXCompiler.cmake;D:\GitDepot\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\3.22.2\CMakeRCCompiler.cmake;D:\GitDepot\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\3.22.2\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\GitDepot\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/GitDepot/notes/AEanimationTool/b_笔记/Lang/Cmake/example/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-D:\SoftWare\CMAKE\bin\cmake.exe -SF:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example -BF:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build --check-stamp-file F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/GitDepot/notes/AEanimationTool/b_笔记/Lang/Cmake/example -BD:/GitDepot/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build --check-stamp-file D:/GitDepot/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -133,12 +130,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeCInformation.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeRCInformation.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Compiler\MSVC.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Platform\Windows.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\3.24.1\CMakeCCompiler.cmake;F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\3.24.1\CMakeCXXCompiler.cmake;F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\3.24.1\CMakeRCCompiler.cmake;F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\3.24.1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\WindowsPaths.cmake;D:\GitDepot\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\3.22.2\CMakeCCompiler.cmake;D:\GitDepot\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\3.22.2\CMakeCXXCompiler.cmake;D:\GitDepot\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\3.22.2\CMakeRCCompiler.cmake;D:\GitDepot\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\3.22.2\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\GitDepot\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/GitDepot/notes/AEanimationTool/b_笔记/Lang/Cmake/example/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-D:\SoftWare\CMAKE\bin\cmake.exe -SF:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example -BF:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build --check-stamp-file F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/GitDepot/notes/AEanimationTool/b_笔记/Lang/Cmake/example -BD:/GitDepot/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build --check-stamp-file D:/GitDepot/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -146,12 +143,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeCInformation.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeRCInformation.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Compiler\MSVC.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Platform\Windows.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\3.24.1\CMakeCCompiler.cmake;F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\3.24.1\CMakeCXXCompiler.cmake;F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\3.24.1\CMakeRCCompiler.cmake;F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\3.24.1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\WindowsPaths.cmake;D:\GitDepot\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\3.22.2\CMakeCCompiler.cmake;D:\GitDepot\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\3.22.2\CMakeCXXCompiler.cmake;D:\GitDepot\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\3.22.2\CMakeRCCompiler.cmake;D:\GitDepot\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\3.22.2\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\GitDepot\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/GitDepot/notes/AEanimationTool/b_笔记/Lang/Cmake/example/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-D:\SoftWare\CMAKE\bin\cmake.exe -SF:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example -BF:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build --check-stamp-file F:/gitDepth/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/GitDepot/notes/AEanimationTool/b_笔记/Lang/Cmake/example -BD:/GitDepot/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build --check-stamp-file D:/GitDepot/notes/AEanimationTool/b_笔记/Lang/Cmake/example/out/build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -159,26 +156,26 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeCInformation.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeCXXInformation.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeCommonLanguageInclude.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeGenericSystem.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeInitializeConfigs.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeLanguageInformation.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeRCInformation.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeSystemSpecificInformation.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\CMakeSystemSpecificInitialize.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Compiler\MSVC-C.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Compiler\MSVC-CXX.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Compiler\MSVC.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Platform\Windows-MSVC-C.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Platform\Windows-MSVC-CXX.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Platform\Windows-MSVC.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Platform\Windows.cmake;D:\SoftWare\CMAKE\share\cmake-3.24\Modules\Platform\WindowsPaths.cmake;F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\3.24.1\CMakeCCompiler.cmake;F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\3.24.1\CMakeCXXCompiler.cmake;F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\3.24.1\CMakeRCCompiler.cmake;F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\3.24.1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\Platform\WindowsPaths.cmake;D:\GitDepot\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\3.22.2\CMakeCCompiler.cmake;D:\GitDepot\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\3.22.2\CMakeCXXCompiler.cmake;D:\GitDepot\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\3.22.2\CMakeRCCompiler.cmake;D:\GitDepot\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\3.22.2\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\GitDepot\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\ZERO_CHECK.vcxproj">
-      <Project>{6F072BB5-8EE1-3802-AEC6-39DEFD719780}</Project>
+    <ProjectReference Include="D:\GitDepot\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\ZERO_CHECK.vcxproj">
+      <Project>{C90D0E42-710B-3AE1-835E-DE74CE5822B7}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\Adder\adder.vcxproj">
-      <Project>{1166F6C5-5220-3BE2-90A6-B00B81EDE243}</Project>
+    <ProjectReference Include="D:\GitDepot\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\Adder\adder.vcxproj">
+      <Project>{B3F64D57-73DF-388A-B5C8-2D24B268107D}</Project>
       <Name>adder</Name>
     </ProjectReference>
-    <ProjectReference Include="F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\helloSJX.vcxproj">
-      <Project>{5D5F0C60-F2BB-367E-8301-E307A9A04B94}</Project>
+    <ProjectReference Include="D:\GitDepot\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\helloSJX.vcxproj">
+      <Project>{F94A7EEA-0B80-3D6B-A004-0608020B4A05}</Project>
       <Name>helloSJX</Name>
     </ProjectReference>
   </ItemGroup>

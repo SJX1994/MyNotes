@@ -81,6 +81,14 @@
                                                     
 
 编辑器： 
+      晶格变形：
+            变形 > (创建)晶格
+            ref：
+                  https://knowledge.autodesk.com/zh-hans/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2022/CHS/Maya-CharacterAnimation/files/GUID-334813CE-30E5-43CB-B032-CF8FE1ED96F7-htm.html
+      隐藏天空盒：
+            在天空材质 或者 相机里设置
+      修改 正交/透视 摄像机：
+            视图上方的菜单栏
       UV映射：
             UV-平面映射
       烘焙AO：

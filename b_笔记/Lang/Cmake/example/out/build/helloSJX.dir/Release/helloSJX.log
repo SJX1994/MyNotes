@@ -1,3 +1,4 @@
-﻿  main.cpp
-F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\main.cpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  helloSJX.vcxproj -> F:\gitDepth\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\Release\helloSJX.exe
+﻿  Building Custom Rule D:/GitDepot/notes/AEanimationTool/b_笔记/Lang/Cmake/example/CMakeLists.txt
+  main.cpp
+D:\GitDepot\notes\AEanimationTool\b_笔记\Lang\Cmake\example\main.cpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  helloSJX.vcxproj -> D:\GitDepot\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\Release\helloSJX.exe
