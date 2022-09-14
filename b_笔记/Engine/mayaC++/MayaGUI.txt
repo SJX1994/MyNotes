@@ -81,6 +81,8 @@
                                                     
 
 编辑器： 
+      设置相对路径贴图：
+            Windows-GeneralEditor-FilePathEditor
       晶格变形：
             变形 > (创建)晶格
             ref：

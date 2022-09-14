@@ -15,3 +15,10 @@ Windows：
         无法开机：
             1.静电没有释放干净：
                 拔出ram用绝缘体擦拭，抹除静电
+
+switch：
+    joy-cons 组成：
+        Bend Lab 弯曲传感器：
+            ref：https://zhuanlan.zhihu.com/p/141967442
+    ref：
+    https://youtu.be/RRX7Ds0e2F8
