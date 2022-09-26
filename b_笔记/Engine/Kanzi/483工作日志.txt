@@ -65,7 +65,7 @@ comment：
       wonney:
             白色车漆增加反射细节 _完成
             前车大灯关闭 _完成
-            前灯连贯性 
+            前灯连贯性  _完成
             前车窗反光降低 _完成
 2022/8/8:
       nical:
@@ -81,7 +81,7 @@ comment：
             On white paint this red light is missing 白色车漆时后底部刹车灯消失 _完成
             AB Pillar line details should be dark AB柱与车窗夹缝应该没有反射 _完成
             This piece(Body rear plastic parts) shoudl also be high-gloss black  这件（车身后部塑料件）也应该是高光黑色 _完成
-            These windows should be tinted, especially the gate one  这些窗户应该着色，尤其是后尾门 
+            These windows should be tinted, especially the gate one  这些窗户应该着色，尤其是后尾门 _完成 
             This red light is too bright （底部刹车灯）这红灯太亮了 _完成
             Cut line is not thin / crisp, might be the shadow problem too 切割线不细/脆，也可能是阴影问题 _完成 
             Strange shawdow here, cut line shoudl look thin / crisp 这里有奇怪的阴影，切割线应该看起来很细/脆 _完成
@@ -89,4 +89,23 @@ comment：
             地面晕影调暗 _完成
             前灯条减少 _完成
             车身显示全 _完成
-            月球背景地面变暗 
+            月球背景地面变暗  _完成
+2022/8/26:
+            B and C pillars should be a little darker.  B,C柱应该暗一点 _ 完成（zy）
+            Make hard horizon line look continous in B and C pillars.  B,C柱之间的线条看起来连续_完成（zy）
+            Paint reflections should look continous from one panel to next. 车身不同面板反射之间应该看起来连续_ 完成（zy）
+            This tail pipe chrome piece should not have such strong glow/highlight in this angle of view. 这个尾管镀铬片不应该有这样强烈的发光/高光在这个角度的看_完成（zy）
+            If warm light "hitting" the car left panel , then trunk panel should be cooler hue, regardless of body color. 如果暖光打在汽车左面板，那么无论车身颜色，后备箱面板都应该是较冷的色调_完成（zy）
+            Make window chrome brighter. 让窗户铬更亮_完成（zy）
+            This Reflection jumps like crazy when you rotate. 旋转时车身侧面反射跳跃_完成
+2022/9/5:
+      wonney:
+            雨天主题的雨水大小 _完成
+            雨天主题的雨水密度 _完成
+            雨天主题的飘雪效果 _完成
+2022/9/14:
+      wonney:
+            胎压异常效果与参考对其 _完成
+2022/9/16:
+      安卓:
+            性能优化 _等待具体指标依赖项

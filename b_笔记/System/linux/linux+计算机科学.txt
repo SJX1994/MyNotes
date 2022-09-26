@@ -75,7 +75,7 @@
                                         使得cpu过热运转，达到cpu超出过热工作
                                     睿频：
                                         动态的调节cpu运算的频率
-                                 intel：
+                                intel：
                                     QPI Intel QuickPath Interconnect:
                                         由英特尔开发并使用的点对点处理器互联架构，
                                         用来实现CPU之间的互联。
@@ -98,7 +98,16 @@
                             ram：
                                 通電時才能記錄與使用，斷電後資料就消失，挥发性
                                 Dynamic Random Access Memory, DRAM
-                            gpu
+                            gpu：
+                                nvidia：
+                                    GPU的基本结构：
+                                        GPU 是一种高度并行的处理器架构，由 processing elements 和 memory hierarchy 组成。
+                                        最上层由Streaming Multiprocessors (SMs)以及一级缓存构成。算术和其他指令由 SM 执行。
+                                        下一层：是整块的二级缓存和DRAM(动态随机存取存储器)的通信层。
+                                    给GPU的指令是如何划分和并行执行的：
+                                    如何用算术强度估计性能限制：
+                                    深度学习相关：
+
                             ...
                     南桥：
                         负责连接速度较慢的设备：
