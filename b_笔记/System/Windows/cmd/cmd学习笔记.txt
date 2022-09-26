@@ -84,16 +84,30 @@ batch：
     clear:
         清除当前命令行
 PowerShell:
-    Get-Command:
-        反射命令
-    cat:
-        Get-Content
-        读取文件内容
-    echo:
-        Write-Output
-        例子：
-            '1'>data.cpp:
-                创建一个包含‘1’的.cpp file
+    可执行脚本格式：.ps1
+    api:
+        Get-Command:
+            反射命令
+        cat:
+            Get-Content
+            读取文件内容
+        echo:
+            Write-Output
+            例子：
+                '1'>data.cpp:
+                    创建一个包含‘1’的.cpp file
+    .ps1 操作：
+        在cmd中执行.ps1：
+            Powershell.exe -executionpolicy remotesigned -File "C:\xxx\xxx.ps1"
+        获取文件夹大小：
+            $FolderList = Get-ChildItem -Directory
+            foreach ($folder in $FolderList)
+            {
+                set-location $folder.FullName
+                $size = Get-ChildItem -Recurse | Measure-Object -Sum Length
+                $info = $folder.FullName + "    FileCount: " + $size.Count.ToString() + "   Size: " + [math]::Round(($size.Sum / 1GB),4).ToString() + " GB"
+                write-host $info
+            }
 Win+R：
     开机启动项：
         shell:startup
