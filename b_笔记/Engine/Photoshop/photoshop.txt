@@ -1,5 +1,13 @@
 
 操作：
+      快捷键：
+            修改，检查快捷键：Edit > Keyboard Shortcuts
+            选择下一个图层：
+                  alt+]
+                  多选：
+                  alt+shit+]
+            隐藏：
+                  ctrl+,
       复制遮罩：
             选择——色彩范围
             选择——选择遮住

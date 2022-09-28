@@ -68,6 +68,7 @@ android studio：
                   https://github.com/Genymobile/scrcpy
             707车机测试：
                   车机安装非签名应用:
+                        adb root
                         adb shell setprop bdcarsec.pm.uninstall 0 
                         adb shell setprop bdcarsec.pm.install 0
                         adb shell setprop bdcarsec.am.run.verifyprocess 0

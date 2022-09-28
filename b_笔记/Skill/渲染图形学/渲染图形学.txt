@@ -101,7 +101,8 @@
 
             ref:
                   https://www.sitespinner.com/support/sswebhelp/imagetargetformats.htm
-
+      黑屏技术：
+            DRM
 
 渲染管线：
       大型状态机：
@@ -162,7 +163,7 @@
                   超数学函数（例如pow, exp, log, cos, sin, tan）非常耗费资源，因此避免在低端硬件上使用它们。
             ref：
                   https://www.bitshiftprogrammer.com/2018/11/shader-optimization-part-1.html
-      像素映射：
+      像素映射/离屏渲染：
             这种方法的目的是通过减少3D场景光栅化后像素的数量，达到减少计算复杂度的目的，从而降低GPU占用率。基于纹理映射，将原像素填充到车机屏幕，将完成如下操作：
             1.原像素 映射 到 放大图像的对应像素位置
             2.以原像素在放大图像上的相对位置，对剩余未填充像素的部分进行填充
@@ -180,6 +181,29 @@
 动画：
       面部表情：
             避免表情僵硬 或者 作为UE参考用户心理的测量工具：FACS方案（Facial Action Coding System）
+
+工作岗位要求：
+      Remedy Entertainment 高级图形（长期招聘）：
+            from：https://jobs.lever.co/remedyentertainment/c168a1d6-4fed-4f22-94f3-f4e9aabffbd6
+            你要做什么：
+                  开发、设计、修改、优化和调试渲染管线和引擎系统
+                  在 Xbox Series X 和 S/PS5/Windows 平台上部署、评估性能和测试软件
+                  与工程、设计和艺术团队交流功能并进行协作
+                  参与设计、性能和代码审查过程
+                  为行业领先的 AAA 引擎的设计和路线图做出贡献
+            你给这个岗位带来了什么:
+                  具有使用计算机图形学和/或其他游戏相关技术的经验
+                  工作教育背景与代码和数据优化相关    
+                  强大的数学能力
+                  了解 CPU、GPU 和内存架构
+                  有使用 HLSL、Cg 或 GLSL 编写着色器的经验
+                  流利地使用现代 3D 图形 API
+                  熟悉使用现代 GPU/CPU 性能分析工具
+                  强大的 C/C++ 基础
+                  扎实的调试技能，包括必要时在汇编级别进行调试的能力
+                  你是一个善于沟通的人，喜欢与其他程序员、艺术家和设计师合作
+                  计算机科学、工程或数学相关领域的学士学位
+                  对该职位有益的其他技能包括并行编程和多线程渲染器方面的知识，以及使用 PS5 GNM、Direct3D 12 和/或 Vulkan API 的经验
 
 
 ref:

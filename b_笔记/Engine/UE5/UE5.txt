@@ -1,11 +1,35 @@
 
 
+组件：
+      Sequencer：
+            Sequencer 是虚幻引擎的多轨编辑器，用于实时创建和播放电影序列。 它是虚幻引擎中所有线性内容创建的支柱，也是将编辑部门的各个方面与非线性时间轴中的布局和动画相结合的制作中心。
+            Sequencer 是虚幻引擎的多轨编辑器，用于实时创建和播放电影序列。 轨道可以由动画、转换、音频和其他几种轨道类型组成。 Sequencer 可以实时创建、修改、重新排序和删除镜头。 Sequencer 可以充当制作中心，将编辑部门的各个方面与非线性时间线编辑器中的布局和动画相结合。
+            案例：Slay
+                  样例工程：
+                        https://unrealengine.com/marketplace/en-US/learn/slay-animation-sample?sessionInvalidated=true
+                  
+            doc：
+                  https://docs.unrealengine.com/5.0/en-US/unreal-engine-sequencer-movie-tool-overview/
+                  https://dev.epicgames.com/community/learning/courses/JKX/unreal-engine-technical-guide-to-linear-content-creation-sequencer/L999/unreal-engine-sequencer
+      Blend Animations:
+      Niagara Fluids：
+
+
+
 操作：
       添加全局着色器(Global Shaders)：
             概念：
                   Global Shaders - 那些并非由材质编辑器创建的 Shader，通常是 compute shader 或者 post-process shader。这是基础类型的一种（比如：Global，Material，Mesh），其他一些基础类型将来再介绍。
             ref：
                   https://www.unrealengine.com/zh-CN/tech-blog/how-to-add-global-shaders-to-ue4
-
+      乒乓案例：
+            Brick Breakers：
+                  ref：
+                        https://dev.epicgames.com/community/learning/courses/53d/unreal-engine-let-s-make-a-game-brick-breakers/KJjd/unreal-engine-first-things-first
+      箭雨案例：
+            Arrow Rain Effect：
+                  ref：
+                        https://dev.epicgames.com/community/learning/tutorials/RP2X/unreal-engine-arrow-rain-effect           
+                  
 Nanite:
       Engine\UE5\Nanite.md

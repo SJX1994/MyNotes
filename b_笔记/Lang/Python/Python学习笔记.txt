@@ -479,3 +479,7 @@ Python库：
         pip install ipykernel
         pip install --upgrade ipython
         pip install --upgrade ipykernel
+
+
+Colab：
+    在线编程

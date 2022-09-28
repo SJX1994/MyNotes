@@ -90,8 +90,8 @@
             原因：
                   22号端口被封住
             解决办法：
-                  如果修改不了host
-                  尝试：
+                  修改host
+                  如果修改不了host尝试：
                         https://www.cnblogs.com/Diamond-sjh/p/11352156.html
                         高级设置灰色：
                               https://blog.csdn.net/qq_40846017/article/details/105351900
