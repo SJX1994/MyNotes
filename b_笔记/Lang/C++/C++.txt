@@ -1,7 +1,15 @@
 语言目的：
       封装与重用，可以快速做大型程序的开发
 编译器：
-      g++
+      g++:
+            ref:
+                  下载：
+                        https://winlibs.com/#download-release
+                  使用：
+                        https://blog.csdn.net/weixin_45485719/article/details/103525794
+                  配置：
+                        https://blog.csdn.net/weixin_45485719/article/details/101379108
+                        https://zhuanlan.zhihu.com/p/76613134
 
 学习网址：
       阅读代码：

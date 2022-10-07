@@ -1,3 +1,4 @@
-﻿  Building Custom Rule D:/GitDepot/notes/AEanimationTool/b_笔记/Lang/Cmake/example/Adder/CMakeLists.txt
-  adder.cpp
-  adder.vcxproj -> D:\GitDepot\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\Adder\Release\adder.lib
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(2066,5): warning : The referenced project 'D:\GitDepot\notes\AEanimationTool\b_笔记\Lang\Cmake\example\out\build\ZERO_CHECK.vcxproj' does not exist.
+  Building Custom Rule D:/GitDepot/notes/AEanimationTool/b_笔记/Lang/Cmake/example/Adder/CMakeLists.txt
+  系统找不到指定的路径。
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(247,5): error MSB8066: “D:\GitDepot\notes\AEanimationTool\b_笔记\Lang\Cmake\example\Adder\CMakeLists.txt”的自定义生成已退出，代码为 3。

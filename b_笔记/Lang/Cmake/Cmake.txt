@@ -35,3 +35,6 @@
             Config 配置模式:
                 安装：
                 使用：
+
+ref:
+    https://youtu.be/nlKcXPUJGwA
