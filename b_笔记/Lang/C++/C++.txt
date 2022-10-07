@@ -29,8 +29,15 @@
                   作用域 全局，类，命名空间
             ->
                   访问成员 语法糖
-            &
-                  获取变量的地址
+            &：
+                  引用(reference):
+                        int ival = 1024;
+                        int &refVal = ival; // refVal 指向 ival 的值（是ival的另一个名字），refVal和ival绑定（bind），而不是拷贝
+                        int &refVal2;  // 报错：引用必须初始化
+                        refVal = 2; // 把2赋值给 refVal 指向的对象，此处即是赋给了 ival
+                        int &refVal3 = refVal; // refVal3 绑定了 refVal 绑定了 ival
+                        
+                  引用，获取变量的地址
             *
                   带有地址的变量：
                         int  var = 20;

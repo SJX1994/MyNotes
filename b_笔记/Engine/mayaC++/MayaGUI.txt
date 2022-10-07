@@ -81,6 +81,43 @@
                                                     
 
 编辑器： 
+      动画：
+            重影动画检查：
+                  可视化——打开重影编辑器
+                  ref:
+                        https://youtu.be/2-Nn1vGLDjw
+            曲线动画：
+                  窗口-动画编辑器-曲线图编辑器
+            融合动画(blendshape):
+                  变形——融合变形
+                  增删：
+                        变形——编辑——融合变形
+            欧拉万向锁：
+                  按E+鼠标左键
+                  欧拉万向锁的层级
+                  原理：
+                        https://www.bilibili.com/video/BV1YJ41127qe/?spm_id_from=333.788.recommend_more_video.-1
+                  做动画角度最小的放中间
+            
+            烘培顶点动画：
+                  Cache > Geometry Cache > Create new cache
+            烘培动画：      
+                  https://knowledge.autodesk.com/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2020/ENU/Maya-Animation/files/GUID-72394768-6DD7-4676-857F-B0468509CFF6-htm.html
+                  混合变形：
+                        
+                        https://youtu.be/L2Qnuve7sY4
+
+                        创建：
+                              变形(创建)-混合变形 3个物体 
+                        修改：
+                              在 通道层编辑器
+                        添加：
+                              编辑-混合变形-添加
+                        编辑：
+                              窗口——动画编辑器——形变编辑器
+                              
+                              眉毛 胡子之类：
+                                    窗口——常规编辑器——连接编辑器
       设置相对路径贴图：
             Windows-GeneralEditor-FilePathEditor
       晶格变形：
@@ -88,7 +125,11 @@
             ref：
                   https://knowledge.autodesk.com/zh-hans/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2022/CHS/Maya-CharacterAnimation/files/GUID-334813CE-30E5-43CB-B032-CF8FE1ED96F7-htm.html
       隐藏天空盒：
-            在天空材质 或者 相机里设置
+            在天空材质：
+                  Visibility：
+                        Camera:0.0
+            相机里设置:
+                  背景色：黑色
       修改 正交/透视 摄像机：
             视图上方的菜单栏
       UV映射：
@@ -97,10 +138,7 @@
             https://youtu.be/N14WqEovkWs
       创建UV（无UV）：
             空格——UV——自动
-      融合动画(blendshape):
-            变形——融合变形
-            增删：
-                  变形——编辑——融合变形
+
       3D绘制贴图工具：
             渲染模式：
                   3D绘制工具：
@@ -166,35 +204,12 @@
 
       显示属性：
             Display-->Heads Up Display-->Poly Count
-      欧拉万向锁：
-            按E+鼠标左键
-            欧拉万向锁的层级
-            原理：
-                  https://www.bilibili.com/video/BV1YJ41127qe/?spm_id_from=333.788.recommend_more_video.-1
-            做动画角度最小的放中间
+
 
       批量合并顶点：
             编辑网格-> 合并:设置阈值
 
-      烘培顶点动画：
-            Cache > Geometry Cache > Create new cache
-      烘培动画：      
-            https://knowledge.autodesk.com/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2020/ENU/Maya-Animation/files/GUID-72394768-6DD7-4676-857F-B0468509CFF6-htm.html
-            混合变形：
-                  
-                  https://youtu.be/L2Qnuve7sY4
 
-                  创建：
-                        变形(创建)-混合变形 3个物体 
-                  修改：
-                        在 通道层编辑器
-                  添加：
-                        编辑-混合变形-添加
-                  编辑：
-                        窗口——动画编辑器——形变编辑器
-                        
-                        眉毛 胡子之类：
-                              窗口——常规编辑器——连接编辑器
       预览多重采样抗锯齿：
             操作面板——渲染器——viewport2.0——抗锯齿
 
