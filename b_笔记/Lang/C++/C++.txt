@@ -2,6 +2,9 @@
       封装与重用，可以快速做大型程序的开发
 编译器：
       g++:
+            编译代码：
+                  cd 到目录
+                  g++ 编译.cpp -o 应用名称.exe
             ref:
                   下载：
                         https://winlibs.com/#download-release

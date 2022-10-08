@@ -11,6 +11,15 @@
         <(代码)>
 
 问题：
+      系统没有散热方式:
+            通过注册表：
+                  打开注册表编辑器：Win+R，输入regedit
+                  [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\54533251-82be-4824-96c1-47b60b740d00\94D3A615-A899-4AC5-AE2B-E4D8F634367F]
+                  新建DWORD 32位值
+                  命名为：Attributes
+                  16进制值：00000002
+            ref：
+                  https://www.zhihu.com/question/377063175/answer/2246442028
       DNS刷新：
 	      ipconfig/flushdns
       对比文件异同：
