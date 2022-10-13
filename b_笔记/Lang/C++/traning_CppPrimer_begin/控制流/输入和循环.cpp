@@ -6,7 +6,7 @@ int main()
       // 当输入不是int 流就失效了
       while (std::cin >> value)
             sum += value;
-      std::cout << sum << std::endl;
+      std::cout << sum << std::endl; // 写入缓冲区cout
 
       return 0;
 }

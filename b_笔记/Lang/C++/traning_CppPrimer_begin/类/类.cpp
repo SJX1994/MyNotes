@@ -1,4 +1,4 @@
-#include "Sales_item.h"
+#include "..\..\thirdPart\Sales_item.h"
 #include <iostream>
 
 int main()

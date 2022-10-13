@@ -1,5 +1,11 @@
 C# 是微软对标 Java 创造的语言 所以语言特性比较相似
-
+编译：
+      内置编译器：
+            C:\Windows\Microsoft.NET\Framework64\v4.0.30319
+      编译命令：
+            csc
+                  -help
+                        提示
 关键字：
       namespace：
             https://www.programiz.com/csharp-programming/namespaces

@@ -174,6 +174,8 @@ openGL ES(OpenGL for Embedded Systems ):
         调试和健壮性功能可实现更轻松的代码开发和安全执行。
    《 OpenGL ES 3.0编程指南 》：
 内置函数：
+  ceil:
+    找到大于或等于参数的最接近的整数
   step：
     拆分步径
   smoothStep：

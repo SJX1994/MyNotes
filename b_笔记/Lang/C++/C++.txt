@@ -14,7 +14,11 @@
                         https://blog.csdn.net/weixin_45485719/article/details/101379108
                         https://zhuanlan.zhihu.com/p/76613134
 
-学习网址：
+网址：
+      视频解码库：
+            ffmpeg.org
+      中文库：
+            freetype.org
       阅读代码：
             https://www.jianshu.com/p/7fe990b7aac3
             https://github.com/Light-City/CPlusPlusThings
