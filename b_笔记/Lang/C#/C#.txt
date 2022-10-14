@@ -2,6 +2,8 @@ C# 是微软对标 Java 创造的语言 所以语言特性比较相似
 编译：
       内置编译器：
             C:\Windows\Microsoft.NET\Framework64\v4.0.30319
+      visualStudio编译器（路径取决于installer的版本）：
+            C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Roslyn\
       编译命令：
             csc
                   -help
