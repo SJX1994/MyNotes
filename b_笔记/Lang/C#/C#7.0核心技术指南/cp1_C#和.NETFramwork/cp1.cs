@@ -13,7 +13,7 @@ public class Program
     */
     {
         Console.WriteLine("CP1: C#和.NET Framework");
-        // 7.0 特性
+        // ******************************** 7.0 特性 ********************************
         /*数字可加入下划线*/
         int milion = 1_000_000;
         var binary = 0b_0001_0001_0001_0001;
@@ -38,15 +38,31 @@ public class Program
         Person person_deconstruct = new Person("Jay Shen ");
         var (first,last) = person_deconstruct; // 解构
         first += last;
-        Console.WriteLine(first);
+        /*元组（tuple）*/
+        var bob = ("Bob",23); // 存储相关值的简单方式
+        var bob_name = bob.Item1;
+        var bob_age = bob.Item2;
+        var bob_tuple = (Name:"Bob_tuple", Money:23_000_000 , AGE:23); // 使用了 System.ValueTuple<T1,T2,T3...> 的语法糖
+        var bob_tuple_name = bob_tuple.Name;
+        var bob_tuple_money = bob_tuple.Money;
+        var bob_tuple_function = GetPerson2(); // 使用元组替代out
+        var bob_tuple_function_name = bob_tuple_function.Name;
+        (string tuple_deconstruct_name, int tuple_deconstruct_money,int tuple_deconstruct_age) = GetPerson2(); // 元组支持隐式的解构器
+        var bob_info = tuple_deconstruct_name + tuple_deconstruct_money;
+        /*throw 异常表达式*/
+        //Throw_Foo();
+        // ******************************** 6.0 特性 ********************************
+        Console.WriteLine( bob_info);
+
     }
-    /*输出变量及参数忽略*/
-    public static void Method(out int answer, out string message, out string stillNull)
+    /*throw 异常表达式*/
+    public static string Throw_Foo() => throw new Exception("Throw_Foo!");
+    /*元组（tuple）*/
+    public static (string Name, int Money, int Age) GetPerson() // 返回元组
     {
-            answer = 44;
-            message = "I've been returned";
-            stillNull = null;
+        return ("Bob", 23_000_000, 23);
     }
+    public static (string Name, int Money, int Age) GetPerson2() =>("Bob", 23_000_000,10);  // 返回元组
     /*模式*/
     public static int Mode_Foo(object x)//占位符
     {
@@ -64,6 +80,14 @@ public class Program
             default: return -1;
         }
     }
+    /*输出变量及参数忽略*/
+    public static void Method(out int answer, out string message, out string stillNull)
+    {
+            answer = 44;
+            message = "I've been returned";
+            stillNull = null;
+    }
+    
     
 
 
