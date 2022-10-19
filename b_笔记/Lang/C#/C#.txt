@@ -10,6 +10,16 @@ C# 是微软对标 Java 创造的语言 所以语言特性比较相似
             csc
                   -help
                         提示
+                  /target:library xxx.cs
+                        生成库：xxx.dll
+                  xxx.cs
+                        生成.exe
+                  /out:My.exe File.cs
+                        编译 File.cs 并创建 My.exe
+                  -lib:c:\ -reference:t2.dll t2.cs
+                        带有自定义库的编译
+                        reference:
+                              https://blog.csdn.net/pans0/article/details/82860445
             dotnet
                   new sln
                         生成新的工程文件
