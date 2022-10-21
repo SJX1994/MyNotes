@@ -3,8 +3,13 @@
 
 using System;  // using 是关键字 ; System 是标识符
 using static System.Console;
+/*关键字：delegate*/
+    delegate string NamberChanger(int number); // 全局委托
+    delegate string NamberMulticasting(string fireInTheHole); // 多播委托
+
 class Test // class是关键字 ;Test 是标识符
 {
+    static string test_multicasting = "Jay  ";
     static void Main() // Main 是标识符; static 和 void 是关键字
     {
         int x = 12; // x 是标识符 int 是关键字
@@ -104,8 +109,86 @@ class Test // class是关键字 ;Test 是标识符
             }
             
 
-    }
+    
+       /*关键字：char*/
+            // char 表示一个 16 位 Unicode 字符。
+            // 字符串类型将文本表示为一系列char值。
+            var chars = new[]
+            {
+                'j', // 字符文字
+                '\u006A', // Unicode 十六进制转义序列
+                '\x006A', // 十六进制转义序列
+                (char)106,// 十进制表示
+            };
+           // WriteLine(string.Join(" ", chars));
+       /*关键字：checked / unchecked*/
+        // 溢出检查
+        uint int_overflow = uint.MaxValue;
+        int_overflow += 1; // 溢出后会进入下一个循环
+        unchecked{int_overflow += 1;} // 不检查溢出
+        // checked{int_overflow += uint.MaxValue ;} // 溢出异常 可以用 try catch 捕获
+       /*关键字：const*/
+        // 常量字段和局部变量不是变量，不能修改
+       /*关键字：continue*/
+        // 继续下一轮循环
+       /*关键字：decimal*/
+        // decimal 表示一个 128 位精确的十进制值。
+        // decimal 不是计算机原始值，需要转换为 int 才能 unchecked 溢出
+ 
+            decimal decimal_num = decimal.MaxValue;
+            decimal_num -= 1;
+            
+     
+        string decimal_info = $"decimal from\n{Decimal.MaxValue}\nto\n{Decimal.MinValue}";
+        decimal_info += '\n';
+       /*关键字：default*/
+        // 返回默认值
+        int default_int = default(int);
+        string default_string = default(string);
+        string default_use = string.Format($"{default_int}+{default_string}");
+       /*关键字：delegate*/  
+        // 对某个方法的 引用类型 变量  
+        // 创建委托实例
+        
+        NamberChanger nc_value = new NamberChanger(NumberValue);
+        NamberChanger nc_name = new NamberChanger(NumberName);
+        // 使用委托对象调用方法
+        int try_delegate = 10;
+        string res_delegate = nc_value(try_delegate);
+        string res_delegate_name = nc_name(try_delegate);
+        // 可以使用“多播”的方法 合并赋值
+        NamberMulticasting nm;
+        NamberMulticasting nm_multicasting1 = new NamberMulticasting(StringAdder1);
+        NamberMulticasting nm_multicasting2 = new NamberMulticasting(StringAdder2);
+        nm = nm_multicasting1 + nm_multicasting2;
+        WriteLine(nm("sjx"));
+        
+        
 
+    }
+    /*关键字：delegate*/
+        public static string NumberValue(int number)
+        {
+            return string.Format($"value:{number}");
+        }
+        public static string NumberName(int number)
+        {
+            return string.Format($"PragmarName:{ nameof(number)}");
+        }
+        // 多播
+        public static string StringAdder1(string fireInTheHole)
+        {
+            return test_multicasting += $"{fireInTheHole}_StringAdder1  ";
+        }
+     
+         public static string StringAdder2(string fireInTheHole)
+        {
+            return test_multicasting += $"{fireInTheHole}_StringAdder2  ";
+        }
+         public static string StringAdder2(int fireInTheHole) // 重载
+        {
+            return string.Format($"value:{fireInTheHole}");
+        }
 }
 /*关键字：abstract*/ 
     // 隐藏内部细节仅显示功能
@@ -228,13 +311,13 @@ class Test // class是关键字 ;Test 是标识符
             }
         }
     // base 用法2
-    public class Jack:Person // 派生 会使用所有基类的构造函数
-    {
-        public Jack():base(){}
-        public Jack(bool debug):base(debug){}// 派生类会调用 BaseClass.BaseClass(bool debug)
-        public Jack(string id, string name,bool debug):base(id,name,debug){}// 派生类会调用 BaseClass.BaseClass(string id, string name)
-        public override void GetInformation()
+        public class Jack:Person // 派生 会使用所有基类的构造函数
         {
-                
+            public Jack():base(){}
+            public Jack(bool debug):base(debug){}// 派生类会调用 BaseClass.BaseClass(bool debug)
+            public Jack(string id, string name,bool debug):base(id,name,debug){}// 派生类会调用 BaseClass.BaseClass(string id, string name)
+            public override void GetInformation()
+            {
+                    
+            }
         }
-    }

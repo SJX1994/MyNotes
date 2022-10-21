@@ -3,7 +3,8 @@ using UnityEngine;
 using UnityEditor;
 using System;
 using System.Collections.Generic;
-
+// reference: 
+// https://github.com/lchaumartin/SpiderProceduralAnimation.git
 public class new_ProceduralAnimation : MonoBehaviour
 {
 
