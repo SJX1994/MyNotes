@@ -1,6 +1,11 @@
 
 using System;
-public class Program
+using System.Collections.Generic; // dictionary
+/********************************* 6.0 特性 *********************************/
+/*引入静态成员*/
+using static System.Console; // 静态导入
+
+public class cp1
 {
 
     public static void Main(string [] args) 
@@ -13,7 +18,7 @@ public class Program
     */
     {
         Console.WriteLine("CP1: C#和.NET Framework");
-        // 7.0 特性
+        /********************************* 7.0 特性 *********************************/
         /*数字可加入下划线*/
         int milion = 1_000_000;
         var binary = 0b_0001_0001_0001_0001;
@@ -38,15 +43,109 @@ public class Program
         Person person_deconstruct = new Person("Jay Shen ");
         var (first,last) = person_deconstruct; // 解构
         first += last;
-        Console.WriteLine(first);
+        /*元组（tuple）*/
+        var bob = ("Bob",23); // 存储相关值的简单方式
+        var bob_name = bob.Item1;
+        var bob_age = bob.Item2;
+        var bob_tuple = (Name:"Bob_tuple", Money:23_000_000 , AGE:23); // 使用了 System.ValueTuple<T1,T2,T3...> 的语法糖
+        var bob_tuple_name = bob_tuple.Name;
+        var bob_tuple_money = bob_tuple.Money;
+        var bob_tuple_function = GetPerson2(); // 使用元组替代out
+        var bob_tuple_function_name = bob_tuple_function.Name;
+        (string tuple_deconstruct_name, int tuple_deconstruct_money,int tuple_deconstruct_age) = GetPerson2(); // 元组支持隐式的解构器
+        var bob_info = tuple_deconstruct_name + tuple_deconstruct_money;
+        /*throw 异常表达式*/
+        //Throw_Foo();
+        /********************************* 6.0 特性 *********************************/
+        /*null*/
+        System.Text.StringBuilder sb = null;// null 条件 不会报 空引用异常 NullReferenceException
+        string null_result = sb?.ToString();
+        /*Lambda表达式*/
+        Func<int,int> square = x => x * x; // Lambda 表达式
+        int square_result = square(3);     
+        int timesTwo_result = TimesTwo(3);
+        string someProperty_result = SomeProperty;
+        /*属性初始化器*/
+        DateTime m_time= TimeCreated;// get
+        TimeCreated = DateTime.Today;// set
+        TimeCreated =  TimeCreated_myBirthday_readOnly;// set
+        DateTime m_myBirthday = TimeCreated_myBirthday_readOnly;
+        /*索引初始化*/
+        var dict = new Dictionary<int,string>()
+        {
+            [1] = "one",
+            [2] = "two",
+            [3] = "three"
+        };
+        /*字符串插值*/
+        string jayBirthday = $"JAY's bir: {TimeCreated_myBirthday_readOnly} happy birthday";
+        /*异常过滤器*/
+        try
+        {
+            //Throw_Foo();
+        }
+        catch (Exception ex) when (ex.Message == "JAY")
+        {
+            Console.WriteLine("JAY");
+            Console.WriteLine($"ex is :: {ex}");
+        }
+        catch (Exception ex) when (ex.Message == "SHEN")
+        {
+            Console.WriteLine("SHEN");
+            Console.WriteLine($"ex is :: {ex}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("EXCEPTION");
+            Console.WriteLine($"ex is :: {ex}");
+        }
+        /*引入静态成员*/
+        // WriteLine(jayBirthday);
+        /*返回自定义符号名称*/
+        int return_the_name = 123;
+        string the_name_retruned = nameof(return_the_name);
+        Person m_p2 = new Person("JAY_return_the_name");
+        the_name_retruned = nameof(m_p2);
+        /********************************* 5.0 特性 *********************************/
+        /*async 和 await 的异步通信*/
+        /********************************* 4.0 特性 *********************************/
+        /*动态绑定*/
+        /*可选参数和命名参数*/
+        /*泛型接口 和 委托 实现类型变化*/
+        /*改进COM互操性*/
+        /********************************* 3.0 特性 *********************************/
+        /*语言集成查找（LINQ_Language Integrated Query）*/
+        /*隐式局部变量var*/
+        /*构造器/初始化器*/
+        /*Lambda表达式*/
+        /*拓展方法*/
+        /*查询表达式*/
+        /*表达式树 Expression<TDelegate>*/
+        /*自动化属性*/
+        /********************************* 2.0 特性 *********************************/
+        /*泛型*/
+        /*可空类型*/
+        /*分部类、静态类*/
+        WriteLine(the_name_retruned);
+       
     }
-    /*输出变量及参数忽略*/
-    public static void Method(out int answer, out string message, out string stillNull)
+    /********************************* 6.0 特性 *********************************/
+    /*Lambda表达式*/
+    public static int TimesTwo(int x) => x * 2; // Lambda 表达式
+    public static string SomeProperty => "Hello World"; // Lambda 表达式
+    /*属性初始化器*/
+    public static DateTime TimeCreated { get; set; } = DateTime.Now; // 自动初始赋值
+    public static DateTime TimeCreated_myBirthday_readOnly { get;  } = new DateTime(1994, 11, 14, 12, 0, 0);// 支持只读
+
+    /********************************* 7.0 特性 *********************************/
+    /*throw 异常表达式*/
+    public static string Throw_Foo() => throw new Exception("Throw_Foo!");
+    /*元组（tuple）*/
+    public static (string Name, int Money, int Age) GetPerson() // 返回元组
     {
-            answer = 44;
-            message = "I've been returned";
-            stillNull = null;
+        return ("Bob", 23_000_000, 23);
     }
+    public static (string Name, int Money, int Age) GetPerson2() =>("Bob", 23_000_000,10);  // 返回元组
     /*模式*/
     public static int Mode_Foo(object x)//占位符
     {
@@ -64,6 +163,14 @@ public class Program
             default: return -1;
         }
     }
+    /*输出变量及参数忽略*/
+    public static void Method(out int answer, out string message, out string stillNull)
+    {
+            answer = 44;
+            message = "I've been returned";
+            stillNull = null;
+    }
+    
     
 
 
