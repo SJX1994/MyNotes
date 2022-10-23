@@ -6,7 +6,37 @@ using static System.Console;
 /*关键字：delegate*/
     delegate string NamberChanger(int number); // 全局委托
     delegate string NamberMulticasting(string fireInTheHole); // 多播委托
-
+/*关键字：enum*/
+    // 值类型 由一组基础整数数字 构成
+    enum Season
+    {
+        Spring,
+        Summer,
+        Autumn,
+        Winter
+    }
+    // 显式指定
+    enum ErrorCode : ushort
+    {
+        None = 0,
+        Unknown = 1,
+        ConnectionLost = 100,
+        OutlierReading = 200
+    }
+    // 枚举类型表示选项的组合 需要是2的n次方
+        [Flags]
+        public enum Days
+        {
+            None      = 0b_0000_0000,  // 0
+            Monday    = 0b_0000_0001,  // 1
+            Tuesday   = 0b_0000_0010,  // 2
+            Wednesday = 0b_0000_0100,  // 4
+            Thursday  = 0b_0000_1000,  // 8
+            Friday    = 0b_0001_0000,  // 16
+            Saturday  = 0b_0010_0000,  // 32
+            Sunday    = 0b_0100_0000,  // 64
+            Weekend   = Saturday | Sunday
+        } // 可以使用 按位逻辑运算符|或&来组合枚举值
 class Test // class是关键字 ;Test 是标识符
 {
     static string test_multicasting = "Jay  ";
@@ -16,6 +46,14 @@ class Test // class是关键字 ;Test 是标识符
         x += 1;
        // Console.WriteLine(x); // Console 和 WriteLine 是标识符
        /*关键字：abstract*/ 
+        // 可以有构造方法
+        // 可以有普通成员变量
+        // 可以包含非抽象的普通方法
+        // 可以包含静态方法
+        // 一个类只能继承一个抽象类
+        // 接口interface与之相反
+        // 表示的是“is a”关系
+        // 我的理解：更像是定义了一种超集
         var spiderAnim = new SpiderAnimation(4);
         // spiderAnim.NodesCount();
        /*关键字：as*/
@@ -161,10 +199,60 @@ class Test // class是关键字 ;Test 是标识符
         NamberMulticasting nm_multicasting1 = new NamberMulticasting(StringAdder1);
         NamberMulticasting nm_multicasting2 = new NamberMulticasting(StringAdder2);
         nm = nm_multicasting1 + nm_multicasting2;
-        WriteLine(nm("sjx"));
-        
-        
+        // WriteLine(nm("sjx"));
+       /*关键字：do while*/        
+        // 与while循环相同
+        // 但是do while循环至少执行一次
+        int do_i = 0;
+        do
+        { 
+           // WriteLine(do_i);
+            ++do_i;
+            int do_j = 0;
+            // 允许嵌套
+            do{
+               // WriteLine($"haha:{do_j}");
+                ++do_j;
+            }while(do_j<3);
+            
+        }
+        while(do_i < 5);
+       /*关键字：double*/
+       /*关键字：enum*/
+        // flag 选项组合调用
+            Days meetingDay = Days.Monday | Days.Tuesday | Days.Friday | Days.Weekend;
+            Days addMeetingDay = Days.Wednesday | Days.Friday;
+            bool isMeetingOnTuesday = (meetingDay & Days.Tuesday) == Days.Tuesday;
+            bool isMeetingOnThursday = (meetingDay & Days.Thursday) == Days.Thursday;
+            // WriteLine($"Meeting on {meetingDay & addMeetingDay}");
+            // WriteLine($"{isMeetingOnThursday}");
+            // WriteLine($"{isMeetingOnTuesday}");
+        // 枚举类型可以直接被转换成int
+            int meetingDay_int;
+            meetingDay_int = (int)meetingDay;
+            var theDay = (Days)32;
+            // WriteLine($"{meetingDay_int}");
+            // WriteLine($"{theDay}");
+            if(isMeetingOnTuesday && isMeetingOnThursday)
+            {
+                theDay += meetingDay_int + (int)meetingDay + (int)addMeetingDay ;
+            }
+       /*关键字：event*/
+        // .NET 中的事件遵循`观察者设计模式`
 
+       /*关键字：interface*/
+        // 不可以有构造方法
+        // 不可以有普通成员变量
+        // 不可以包含非抽象的普通方法
+        // 不可以包含静态方法
+        // 一个类只能继承多个接口
+        // 抽象类abstract与之相反
+        // 表示的是“like a”关系
+        // 我的理解：更像是定义了类的一种属性
+        AK47 ak47 = new AK47(10,1,1);
+        ak47.Shoot();
+        WriteLine(ak47.DistanceFromMuzzle); 
+        ak47.Reload(); 
     }
     /*关键字：delegate*/
         public static string NumberValue(int number)
@@ -190,6 +278,41 @@ class Test // class是关键字 ;Test 是标识符
             return string.Format($"value:{fireInTheHole}");
         }
 }
+/*关键字：interface*/
+    //ref:https://learn.microsoft.com/zh-cn/dotnet/csharp/language-reference/keywords/interface
+    interface IWapen
+    {
+        void Shoot();
+        void Reload();
+        // 接口成员
+        int hit_X{get; set; }
+        int hit_Y{get; set; }
+        int hit_Z{get; set; }
+        double DistanceFromMuzzle { get; }
+    }
+    public class AK47 : IWapen
+    {
+        public  void Shoot()
+        {
+            Console.WriteLine("AK47 Shooting");
+        }
+        public void Reload()
+        {
+            Console.WriteLine("AK47 Reloading");
+        }
+        // 接口成员实现
+        public AK47(int x, int y,int z)
+        {
+            hit_X = x;
+            hit_Y = y;
+            hit_Z = z;
+        }
+        public int hit_X { get; set; }
+        public int hit_Y { get; set; }
+        public int hit_Z { get; set; }
+        public double DistanceFromMuzzle =>
+       Math.Sqrt(hit_X * hit_X + hit_Y * hit_Y + hit_Z * hit_Z);
+    }
 /*关键字：abstract*/ 
     // 隐藏内部细节仅显示功能
     abstract class ProceduralAnimation

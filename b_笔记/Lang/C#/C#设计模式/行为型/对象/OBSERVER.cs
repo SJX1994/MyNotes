@@ -1,0 +1,1 @@
+// ref: https://refactoringguru.cn/design-patterns/observer/csharp/example
