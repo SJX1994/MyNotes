@@ -3,6 +3,8 @@
 
 using System;  // using 是关键字 ; System 是标识符
 using static System.Console;
+using System.Collections.Generic;
+using System.Linq;
 /*关键字：delegate*/
     delegate string NamberChanger(int number); // 全局委托
     delegate string NamberMulticasting(string fireInTheHole); // 多播委托
@@ -239,7 +241,8 @@ class Test // class是关键字 ;Test 是标识符
             }
        /*关键字：event*/
         // .NET 中的事件遵循`观察者设计模式`
-
+        // C# 中使用事件机制实现线程间的通信。
+        // TODO
        /*关键字：interface*/
         // 不可以有构造方法
         // 不可以有普通成员变量
@@ -250,10 +253,33 @@ class Test // class是关键字 ;Test 是标识符
         // 表示的是“like a”关系
         // 我的理解：更像是定义了类的一种属性
         AK47 ak47 = new AK47(10,1,1);
-        ak47.Shoot();
-        WriteLine(ak47.DistanceFromMuzzle); 
-        ak47.Reload(); 
+        // ak47.Shoot();
+        // WriteLine(ak47.DistanceFromMuzzle); 
+        // ak47.Reload(); 
+       /*关键字：this*/
+         // 1.引用当前类的实例
+             Test_this test_this = new Test_this();
+             string test_this_res = test_this.Test_this_math(10,10);
+             test_this_res += ' ';
+             // WriteLine(test_this_res);
+         // 2.作为参数传递
+            Employee employee = new Employee("sjx", 25);
+            // employee.PrintEmployee();
+         // 3.索引器
+             IndexerBullets clip_20 = new IndexerBullets();
+             for(int i = 0; i <5 ; ++i)
+             {
+                 clip_20[i] = string.Format($"燃烧弹_{i}") ;
+             }
+             clip_20[5] = "普通子弹_0";
+             clip_20[6] = "普通子弹_1";
+             for(int j = 0; j < IndexerBullets.bulletCount; ++j)
+             {
+             //  WriteLine(clip_20[j]);
+             }
+             // WriteLine(clip_20["燃烧弹_3"]);
     }
+
     /*关键字：delegate*/
         public static string NumberValue(int number)
         {
@@ -278,6 +304,101 @@ class Test // class是关键字 ;Test 是标识符
             return string.Format($"value:{fireInTheHole}");
         }
 }
+/*关键字：this*/
+    // 作为参数传递
+        class Employee
+        {
+            public string name;
+            public int age;
+            private decimal salary = 3000.00m;
+            public decimal Salary
+            {
+                get { return salary; }
+            }
+            public Employee(string name,int age)
+            {
+                this.name = name;
+                this.age = age;
+            }
+            public void PrintEmployee()
+            {   
+                WriteLine($"name:{name},\n age:{age},\n salary:{Salary}");
+                WriteLine($" Tax:{Tax.CalculateTax(this)}");
+            }
+          
+        }
+        class Tax
+        {
+            public static  decimal CalculateTax(Employee employee)
+            {
+                return employee.Salary * 0.2m;
+            }
+        }
+       
+    // 作为限定
+        public class Test_this
+        {
+            private int x;
+            private int y;
+            public string Test_this_math(int x, int y)
+            {
+                this.x = x;
+                this.y = y;
+                return string.Format($"value:{x},{y}");
+            }
+        }
+    // 作为索引器 (无安全校验)
+        // ref: https://www.tutorialspoint.com/csharp/csharp_indexers.htm
+        public class IndexerBullets{
+            private string[] typeOfBullet = new string[bulletCount];
+            static public int bulletCount = 20;
+            public IndexerBullets()
+            {
+                for(int i = 0; i < bulletCount; i++)
+                {
+                    typeOfBullet[i] = ("Empty");
+                }
+            }
+            
+            public string this[int index]
+            {
+                get
+                {
+                    return typeOfBullet[index];
+                }
+                // 等价于
+                    // public int get_num()
+                    // {
+                    //     return _num;
+                    // }
+                set 
+                {
+                    typeOfBullet[index] = value;
+                }
+                // 等价于：
+                    // public void set_num(int value)
+                    // {
+                    //     _num = value;
+                    // }
+            }
+            // this 重载
+            public int this[string name]
+            {
+                get{
+                    int index = 0;
+                    
+                    while(index < bulletCount)
+                    {
+                        if( typeOfBullet[index]== name)
+                        {
+                            return index;
+                        }
+                        index++;
+                    }
+                    return index;
+                }
+            }
+        }
 /*关键字：interface*/
     //ref:https://learn.microsoft.com/zh-cn/dotnet/csharp/language-reference/keywords/interface
     interface IWapen
