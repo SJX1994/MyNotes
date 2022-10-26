@@ -239,10 +239,11 @@ class Test // class是关键字 ;Test 是标识符
             {
                 theDay += meetingDay_int + (int)meetingDay + (int)addMeetingDay ;
             }
-       /*关键字：event*/
+       /*关键字：event*/ //TODO
         // .NET 中的事件遵循`观察者设计模式`
         // C# 中使用事件机制实现线程间的通信。
-        // TODO
+        // Ref: https://www.runoob.com/csharp/csharp-event.html
+
        /*关键字：interface*/
         // 不可以有构造方法
         // 不可以有普通成员变量
@@ -256,6 +257,25 @@ class Test // class是关键字 ;Test 是标识符
         // ak47.Shoot();
         // WriteLine(ak47.DistanceFromMuzzle); 
         // ak47.Reload(); 
+       /*关键字：override + new*/
+        // 概念用法 ref: https://learn.microsoft.com/zh-cn/dotnet/csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords
+        Dick dick = new Dick();
+        dick.headSize = 2;
+        dick.headSize = 10;
+        dick.balls = 2.5;
+        GraphicsClass gc = new GraphicsClass();
+        CustomizeDraw cd = new CustomizeDraw();
+        GraphicsClass gc_cd_override = new CustomizeDraw(); 
+        // gc.DrawPoint();
+        // gc.DrawLine();
+        // gc.DrawDick(dick);
+        // cd.DrawPoint();
+        // cd.DrawLine();
+        // cd.DrawDick(dick);
+        // gc_cd_override.DrawDick(dick); // 重载
+        // gc_cd_override.DrawDick(dick.balls); 
+        // 使用时机 ref: https://learn.microsoft.com/zh-cn/dotnet/csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords
+        // 版本控制
        /*关键字：this*/
          // 1.引用当前类的实例
              Test_this test_this = new Test_this();
@@ -278,6 +298,26 @@ class Test // class是关键字 ;Test 是标识符
              //  WriteLine(clip_20[j]);
              }
              // WriteLine(clip_20["燃烧弹_3"]);
+       /*关键字：virtual*/ 
+            // 情况1：在基类中定义了virtual方法，但在派生类中没有重写该虚方法。那么在对派生类实例的调用中，该虚方法使用的是基类定义的方法。
+            // 情况2：在基类中定义了virtual方法，然后在派生类中使用override重写该方法。那么在对派生类实例的调用中，该虚方法使用的是派生重写的方法。
+            // 多态性由此体现。常被视为自封装和继承之后，面向对象的编程的第三个支柱。 Polymorphism（多态性）是一个希腊词，指“多种形态”，多态性具有两个截然不同的方面：
+            // virtual 关键字用于修改方法、属性、索引器或事件声明，并使它们可以在派生类中被重写。 例如，此方法可被任何继承它的类替代：
+                NPC npc = new NPC();
+                Enemy enemy = new Enemy();
+                NPC npc_enemy = new Enemy();
+                // npc_enemy.Talk();
+                NPC npc_friend = new Friend();
+                // npc_friend.Talk();
+            // 计算面积程序实例
+                double r = 0.3, h = 0.5;
+                Shape cylinder = new Cylinder(r,h);
+                Shape sphere = new Sphere(r);
+                
+                //WriteLine($"球体的表面积为：{sphere.Area()}");
+                //WriteLine($"圆柱体的表面积为：{cylinder.Area()}");
+            
+            // ref:https://learn.microsoft.com/zh-cn/dotnet/csharp/language-reference/keywords/virtual
     }
 
     /*关键字：delegate*/
@@ -304,6 +344,158 @@ class Test // class是关键字 ;Test 是标识符
             return string.Format($"value:{fireInTheHole}");
         }
 }
+/*关键字：virtual*/
+ // 派生类中的替代成员更改
+    public class NPC
+    {
+        public virtual void Talk()
+        {
+            Console.WriteLine("NPC: Hello");
+        }
+        private int _health;
+        public virtual int Health
+        {
+            get { return _health; }
+            set { _health = value; }
+        }
+
+    }
+    public class Enemy : NPC
+    {
+        public override void Talk()
+        {
+            base.Talk();
+            Console.WriteLine("Enemy: I will destroy you!");
+        }
+        public override int Health
+        {
+            get { return base.Health; }
+            set { base.Health = value; }
+        }
+    }
+
+    public class Friend : NPC
+    {
+        public override void Talk()
+        {
+            base.Talk();
+            Console.WriteLine("Friend: I will help you!");
+        }
+        public override int Health
+        {
+            get { return base.Health; }
+            set { base.Health = value; }
+        }
+    }
+ // 计算面积程序
+    public class Shape
+    {
+        public const double PI = 3.1415926;
+        protected double _x,_y;
+        public Shape(){}
+        public Shape(double x,double y)
+        {
+            _x = x;
+            _y = y;
+        }
+        public virtual double Area()
+        {
+            return 0;
+        }
+    }
+    public class Circle:Shape
+    {
+        // _x = r,_y = 0
+        public Circle(double r):base(r,0) 
+        {
+
+        }
+
+        public override double Area()
+        {
+            return PI * _x * _x;
+        }
+        
+    }
+    public class Sphere:Shape
+    {
+        public Sphere(double r):base(r,0)
+        {
+
+        }
+        public override double Area()
+        {
+            return 4 * PI * _x * _x;
+        }
+    }
+    public class Cylinder:Shape
+    {
+        public Cylinder(double r,double h):base(r,h)
+        {
+
+        }
+        public override double Area()
+        {
+            return 2 * PI * _x * _y + 2 * PI * _x * _x;
+        }
+    }
+
+/*关键字：override + new*/
+    public struct Dick
+    {
+       public int headSize;
+       public int bodySize;
+       public double balls;
+    }
+    public class GraphicsClass
+    {
+        public virtual void DrawPoint(){Console.WriteLine("GraphicsClass DrawPoint");}
+        public virtual void DrawLine(){Console.WriteLine("GraphicsClass DrawLine");}
+        // 新版本
+        //Dick dick = new Dick();
+        public virtual void DrawDick(Dick dick){Console.WriteLine($"GraphicsClass DrawDick: {dick.headSize} {dick.bodySize} {dick.balls}");}
+        public virtual void DrawDick(double balls){Console.WriteLine($"GraphicsClass DrawDick: {balls} ");}
+    }
+    public class CustomizeDraw : GraphicsClass
+    {
+        public new void DrawPoint() // 不需要替代父类方法
+        {
+            // base.DrawPoint();
+            Console.WriteLine("CustomizeDraw DrawPoint");
+        }
+        public new void DrawLine()
+        {
+            // base.DrawLine();
+            Console.WriteLine("CustomizeDraw DrawLine");
+        }
+        // 保持自己的版本 对象都将使用 DrawRectangle 的派生类版本
+        public override void DrawDick(Dick dick)
+        {
+            // 调用基类的版本的 DrawDick
+            Console.WriteLine($"CustomizeDraw DrawDick {dick}");
+        }
+        // 多个方法与调用兼容,编译器将选择最佳方法进行调用
+        public new void DrawDick(double balls)
+        {
+            
+            Dick dick = new Dick();
+            dick.balls = balls;
+            base.DrawDick(dick); // 验证父类的版本 确实被改变
+            base.DrawDick(dick.balls); 
+            Console.WriteLine($"CustomizeDraw DrawDick {balls}");
+        }
+    }
+/*关键字：event*/
+    public class EventTest
+    {
+        //private int value;
+        //public delegate void ValueChangedHandler();
+        //public event ValueChangedHandler ValueChanged;
+        public virtual void OnNumberChange()
+        {
+
+        }
+    }
 /*关键字：this*/
     // 作为参数传递
         class Employee
