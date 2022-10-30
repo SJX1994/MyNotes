@@ -233,6 +233,9 @@ ASP.net:
                               构建一个3d引擎：
                                    博客：https://www.cnblogs.com/savorboard/p/net-core-game-engine.html
                                    作者git：https://github.com/mellinoe/CrazyCore
+                        .net包管理：
+                              NuGet：https://www.nuget.org/
+                              https://learn.microsoft.com/en-us/nuget/consume-packages/managing-the-global-packages-and-cache-folders
 Mono:
       读档：
             https://en.wikipedia.org/wiki/MonoDevelop

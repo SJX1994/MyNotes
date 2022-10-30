@@ -1,4 +1,12 @@
 概念：
+    cl编译器编译：
+        (VS所在目录为 %VS% )
+        cl.exe 所在的位置：    
+            %VS%\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.24.28314\bin\Hostx86\x86
+        链接库所在位置：
+            %VS%\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.24.28314\lib\x86
+        头文件所在位置：
+            %VS%\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.24.28314\include
     ...:
         可变参数函数的参数
         可传入任意数量的已规定可传入类型的变量

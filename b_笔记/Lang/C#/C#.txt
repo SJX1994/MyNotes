@@ -6,6 +6,8 @@ C# 是微软对标 Java 创造的语言 所以语言特性比较相似
             C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Roslyn\
       生成工程文件：
             dotnet new sln
+      c#版本与.Net框架的关系：
+            https://learn.microsoft.com/zh-cn/dotnet/csharp/language-reference/configure-language-version
       编译命令：
             csc
                   -help
@@ -20,6 +22,8 @@ C# 是微软对标 Java 创造的语言 所以语言特性比较相似
                         带有自定义库的编译
                         reference:
                               https://blog.csdn.net/pans0/article/details/82860445
+                  -platform:x86 target.cs
+                        当含有C库的时候(C库有时是32位的)，需要指定平台
             dotnet
                   new sln
                         生成新的工程文件
