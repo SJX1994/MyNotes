@@ -2,6 +2,11 @@
 //是开发者为 类 方法 变量 选择的名字
 
 using System;  // using 是关键字 ; System 是标识符
+/*关键字：lock*/
+using System.Threading;
+using System.Threading.Tasks;
+/*关键字：internal*/
+using cp2_internal;
 // 需要donet build // 
 // using System.Memory; // span 内存分配 //https://www.nuget.org/packages/System.Memory/
 using static System.Console;
@@ -420,32 +425,78 @@ class Test // class是关键字 ;Test 是标识符
                 // 以引用传入参数并且不可修改
                 int readonlyArgument = 44;
                 InArgExample(readonlyArgument);
-                WriteLine(readonlyArgument);        
+                     
             // 3.foreach
             // 4.LINQ from
             // 5.LINQ join
 
         }
         /*关键字：interface*/
-        {
-            // 不可以有构造方法
-            // 不可以有普通成员变量
-            // 不可以包含非抽象的普通方法
-            // 不可以包含静态方法
-            // 一个类只能继承多个接口
-            // 抽象类abstract与之相反
-            // 表示的是“like a”关系
-            // 我的理解：更像是定义了类的一种属性
-            AK47 ak47 = new AK47(10, 1, 1);
-            // ak47.Shoot();
-            // WriteLine(ak47.DistanceFromMuzzle); 
-            // ak47.Reload(); 
-        }
+            {
+                // 不可以有构造方法
+                // 不可以有普通成员变量
+                // 不可以包含非抽象的普通方法
+                // 不可以包含静态方法
+                // 一个类只能继承多个接口
+                // 抽象类abstract与之相反
+                // 表示的是“like a”关系
+                // 我的理解：更像是定义了类的一种属性
+                AK47 ak47 = new AK47(10, 1, 1);
+                // ak47.Shoot();
+                // WriteLine(ak47.DistanceFromMuzzle); 
+                // ak47.Reload(); 
+            }
         /*关键字：internal*/
-        {
-            // 可访问性级别和访问修饰符。//TODO
-        }
-        
+            {
+                // 可访问性级别和访问修饰符。
+                //var internal_member = new BaseClass();
+                BaseClass.intPublicMember = 55;
+                int internal_member = BaseClass.intPublicMember;
+                // WriteLine(internal_member);
+            }
+        /*关键字：is*/
+         {
+            // is运算符检查表达式的结果是否与给定类型兼容
+                // 表达式与模式匹配
+                    static bool IsFirstFridayOfOctober(DateTime date) => date is { Month: 10, Day: <=7, DayOfWeek: DayOfWeek.Friday };
+                    IsFirstFridayOfOctober(new DateTime(2019, 10, 4));
+                    // WriteLine(IsFirstFridayOfOctober(new DateTime(2019, 10, 4)));
+                // 检查表达式的运行时类型
+                    object is_obj = "Hello";
+                    if (is_obj is string s)
+                    {
+                        // WriteLine(s);
+                    }
+                // 要检查null
+                    object is_obj2 = null;
+                    if (is_obj2 is null)
+                    {
+                       // WriteLine("is_obj2 is null");
+                    }
+                    is_obj2 = "Hello is_obj2";
+                    if (is_obj2 is not null)
+                    {
+                       // WriteLine(is_obj2.ToString());
+                    }
+         }
+        /*关键字：lock*/
+            {
+                // 任何其他线程都被阻止获取锁并等待直到锁被释放
+                // 示例1：允许一次执行一个线程的示例 ref： https://www.tutlane.com/tutorial/csharp/csharp-thread-lock
+                    // Thread t1 = new Thread(new ThreadStart(lockTest.PrintInfo_lock)) ; // Thread 类的构造函数需要一个 ThreadStart 委托
+                    // Thread t2 = new Thread(new ThreadStart(lockTest.PrintInfo_lock)) ;
+                    // // t1.Start();
+                    // // t2.Start();
+
+                    // Thread t3 = new Thread(new ThreadStart(lockTest.PrintInfo_unlock)) ; // Thread 类的构造函数需要一个 ThreadStart 委托
+                    // Thread t4 = new Thread(new ThreadStart(lockTest.PrintInfo_unlock)) ;
+                    // t3.Start();
+                    // t4.Start();
+                // 示例2：使用相同的实例进行锁定可确保该字段不会被试图同时调用,或者同时更新
+                    // Task返回值用法 ref:https://learn.microsoft.com/en-us/dotnet/standard/parallel-programming/how-to-return-a-value-from-a-task
+                    string accountTest = AccountTest.RUN_LOCKER().Result;
+                    WriteLine(accountTest);
+            }
         /*关键字：operator*/
         {
             // 运算符重载(分子分母运算)
@@ -458,6 +509,24 @@ class Test // class是关键字 ;Test 是标识符
             // Console.WriteLine(a * b);
             // Console.WriteLine(a / b);
             // WriteLine( a.ToString());
+        }
+        /*关键字：static*/
+        {
+            // ref: 
+                // 静态方法与非静态方法的区别：
+
+                // 1.静态方法属于类所有，类实例化前就可以使用；
+
+                // 2.非静态方法可以访问类中任何成员，静态方法只能访问类中的静态成员；
+
+                // 3.静态方法在类实例化前就可以使用，而类中的非静态变量必须在实例化后才能分配内存；
+
+                // 4.static内部只能出现static变量和其他static方法，而且static方法不能使用this关键字，因为它属于整个类......
+            // 验证 1 + 3：
+            BaseClass.intPublicMember = 10;
+             // BaseClass.notStatic = 20; // 报错：非静态变量会在实例化后才能分配内存
+             var baseClass = new BaseClass();
+             baseClass.notStatic = 20;
         }
         /*关键字：override + new*/
         {
@@ -570,6 +639,115 @@ class Test // class是关键字 ;Test 是标识符
         return string.Format($"value:{fireInTheHole}");
     }
 }
+/*关键字：lock*/
+    // 示例一
+        class lockTest
+        {
+            static readonly object pblock = new object();
+            public static void PrintInfo_lock()
+            {
+                lock (pblock)
+                {
+                    for (int i = 1; i <= 4; i++)
+                    {
+                        WriteLine("i value: {0}", i);
+                        Thread.Sleep(1000);
+                    }
+                }
+            }
+            public static void PrintInfo_unlock()
+            {
+                
+                    for (int i = 1; i <= 4; i++)
+                    {
+                        WriteLine("i value: {0}", i);
+                        Thread.Sleep(1000);
+                    }
+                
+            }
+        }
+    // 示例二
+        class Account
+        {
+            private readonly object balanceLock = new object();
+            private decimal balance; //结余
+            public Account(decimal initialBalance)=>balance = initialBalance;
+            // 借记卡
+            public decimal Debit(decimal amount)
+            {
+                if (amount < 0)
+                    {
+                        throw new ArgumentOutOfRangeException(nameof(amount), "The debit amount cannot be negative.");
+                    }
+                decimal appliedAmount = 0;
+                lock(balanceLock)
+                {
+                    if (balance >= amount)
+                    {
+                        balance -= amount;
+                        appliedAmount = amount;
+                    }
+                }
+                return appliedAmount;
+            }
+
+            // 信用卡
+            public void  Credit(decimal amount)
+            {
+                if (amount < 0)
+                {
+                    throw new ArgumentOutOfRangeException(nameof(amount), "The credit amount cannot be negative.");
+                }
+                lock(balanceLock)
+                {
+                    balance += amount;
+                }
+            }
+            // 获取余额
+             public decimal GetBalance()
+                {
+                    lock (balanceLock)
+                    {
+                        return balance;
+                    }
+                }
+
+        }
+        class AccountTest
+        {
+            public static async Task<string> RUN_LOCKER()
+            {
+                var account = new Account(1000);
+                var tasks = new Task[100];
+                for (int i = 0; i < tasks.Length; i++)
+                {
+                    tasks[i] = Task.Run(() => Update(account));
+                }
+                await Task.WhenAll(tasks);
+                // Console.WriteLine($"Account's balance is {account.GetBalance()}");
+                return string.Format($"Account's balance is {account.GetBalance()}");
+                // Output:
+                // Account's balance is 2000
+            }
+
+            static void Update(Account account)
+            {
+                decimal[] amounts = { 0, 2, -3, 6, -2, -1, 8, -5, 11, -6 };
+                foreach (var amount in amounts)
+                {
+                    if (amount >= 0)
+                    {
+                        account.Credit(amount);
+                    }
+                    else
+                    {
+                        account.Debit(Math.Abs(amount));
+                    }
+                }
+            }
+        }
+
+
 /*关键字：in*/
     // 1.作为泛型接口和委托中的泛型类型参数：
         //ref:https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/in-generic-modifier
