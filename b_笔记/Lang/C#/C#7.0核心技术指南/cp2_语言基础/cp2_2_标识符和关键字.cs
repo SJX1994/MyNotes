@@ -1,5 +1,8 @@
+// ref : https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/
+//关键字属于：*预定义类型/内置类型*/
+
 /*标识符*/
-//是开发者为 类 方法 变量 选择的名字
+// 是开发者为 类 方法 变量 选择的名字
 
 using System;  // using 是关键字 ; System 是标识符
 /*关键字：lock*/
@@ -23,40 +26,85 @@ delegate string NamberMulticasting(string fireInTheHole); // 多播委托
             
 
 /*关键字：enum*/
-// 值类型 由一组基础整数数字 构成
-enum Season
-{
-    Spring,
-    Summer,
-    Autumn,
-    Winter
-}
-// 显式指定
-enum ErrorCode : ushort
-{
-    None = 0,
-    Unknown = 1,
-    ConnectionLost = 100,
-    OutlierReading = 200
-}
-// 枚举类型表示选项的组合 需要是2的n次方
-[Flags]
-public enum Days
-{
-    None = 0b_0000_0000,  // 0
-    Monday = 0b_0000_0001,  // 1
-    Tuesday = 0b_0000_0010,  // 2
-    Wednesday = 0b_0000_0100,  // 4
-    Thursday = 0b_0000_1000,  // 8
-    Friday = 0b_0001_0000,  // 16
-    Saturday = 0b_0010_0000,  // 32
-    Sunday = 0b_0100_0000,  // 64
-    Weekend = Saturday | Sunday
-} // 可以使用 按位逻辑运算符|或&来组合枚举值
+    // 值类型 由一组基础整数数字 构成
+    enum Season
+    {
+        Spring,
+        Summer,
+        Autumn,
+        Winter
+    }
+    // 显式指定
+    enum ErrorCode : ushort
+    {
+        None = 0,
+        Unknown = 1,
+        ConnectionLost = 100,
+        OutlierReading = 200
+    }
+    // 枚举类型表示选项的组合 需要是2的n次方
+    [Flags]
+    public enum Days
+    {
+        None = 0b_0000_0000,  // 0
+        Monday = 0b_0000_0001,  // 1
+        Tuesday = 0b_0000_0010,  // 2
+        Wednesday = 0b_0000_0100,  // 4
+        Thursday = 0b_0000_1000,  // 8
+        Friday = 0b_0001_0000,  // 16
+        Saturday = 0b_0010_0000,  // 32
+        Sunday = 0b_0100_0000,  // 64
+        Weekend = Saturday | Sunday
+    } // 可以使用 按位逻辑运算符|或&来组合枚举值
 class Test // class是关键字 ;Test 是标识符
 {
     static string test_multicasting = "Jay  ";
+    /*关键字：struct*/
+    public struct Coords
+    {
+        public Coords(double x, double y)
+        {
+            X = x;
+            Y = y;
+        }
+
+        public double X { get; }
+        public double Y { get; }
+
+        public override string ToString() => $"({X}, {Y})";
+    }
+    /*关键字：sizeof*/
+        public struct Point
+        {
+            public Point(byte tag, double x, double y) => (Tag, X, Y) = (tag, x, y);
+
+            public byte Tag { get; }
+            public double X { get; }
+            public double Y { get; }
+        }
     /*关键字：extern*/
+    /*关键字：readonly*/
+     // 结构体
+        readonly struct Vector3
+        {
+            private readonly object X;
+            private readonly object Y;
+            private readonly object Z;
+            public Vector3(object x, object y, object z)
+            {
+                X = x;
+                Y = y;
+                Z = z;
+            }
+            public override string ToString()
+            {
+                // not OK!!  `this` is an `in` parameter
+                // foo(ref this.X);
+
+                // OK
+                return $"X: {X}, Y: {Y}, Z: {Z}";
+            }
+        }
     //ref: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/extern
     [DllImport("cmdll.dll")]
     public static extern int SampleMethod(int x);
@@ -495,8 +543,17 @@ class Test // class是关键字 ;Test 是标识符
                 // 示例2：使用相同的实例进行锁定可确保该字段不会被试图同时调用,或者同时更新
                     // Task返回值用法 ref:https://learn.microsoft.com/en-us/dotnet/standard/parallel-programming/how-to-return-a-value-from-a-task
                     string accountTest = AccountTest.RUN_LOCKER().Result;
-                    WriteLine(accountTest);
+                    //WriteLine(accountTest);
             }
+        /*关键字：long*/
+        {
+            // 64位整数
+            long longValue = long.MaxValue;
+            // WriteLine(longValue);
+            longValue = long.MinValue;
+            // WriteLine(longValue);
+            longValue += 1;
+        }
         /*关键字：operator*/
         {
             // 运算符重载(分子分母运算)
@@ -509,6 +566,27 @@ class Test // class是关键字 ;Test 是标识符
             // Console.WriteLine(a * b);
             // Console.WriteLine(a / b);
             // WriteLine( a.ToString());
+        }
+        /*关键字：out*/
+        {
+            // 对参数的任何操作都是在参数上进行的。是一种形式的引用
+            int initializeInMethod;
+            OutArgExample(out initializeInMethod);
+            OutArgExample(out int number);
+            // WriteLine(initializeInMethod); 
+        }
+        /*关键字：sbyte*/
+        {
+            // 8 位有符号整数 -128 至 127
+        }
+        /*关键字：sealed*/
+        {
+            // sealed修饰符会阻止其他类从它继承。
+
+        }
+        /*关键字：short*/
+        {
+            // 16位有符号整数 -32768 至 32767
         }
         /*关键字：static*/
         {
@@ -527,6 +605,48 @@ class Test // class是关键字 ;Test 是标识符
              // BaseClass.notStatic = 20; // 报错：非静态变量会在实例化后才能分配内存
              var baseClass = new BaseClass();
              baseClass.notStatic = 20;
+        }
+        /*关键字：sizeof*/
+        {
+            // sizeof运算符返回给定类型的变量占用的字节数
+            // WriteLine(sizeof(byte));  // output: 1
+            // WriteLine(sizeof(double));  // output: 8
+
+            // SizeOfOperator.DisplaySizeOf<Point>();  // output: Size of Point is 24
+            // SizeOfOperator.DisplaySizeOf<decimal>();  // output: Size of System.Decimal is 16
+
+            unsafe
+            {
+                // WriteLine(sizeof(Point*));  // output: 8
+            }
+        }
+        /*关键字：stackalloc*/
+        {
+            // 表达式在堆栈上分配一块内存。
+            unsafe
+            {
+                int length = 3;
+                int* numbers = stackalloc int[length];
+                
+                for (var i = 0; i < length; i++)
+                {
+                    numbers[i] = i;
+                    
+                }
+                numbers = &length;
+                // Write($"{(long)numbers:X}");
+                
+            }
+        }
+        /*关键字：string*/
+        {
+            // .NET 中的字符串使用 UTF-16 编码存储。UTF-8 是 Web 协议和其他重要库的标准。
+        }
+        /*关键字：struct*/
+        {
+            // 是一种可以封装数据和相关功能的值类型。
+            Coords coords = new Coords(1, 2);
+           // WriteLine(coords.ToString()) ;
         }
         /*关键字：override + new*/
         {
@@ -548,6 +668,62 @@ class Test // class是关键字 ;Test 是标识符
             // gc_cd_override.DrawDick(dick.balls); 
             // 使用时机 ref: https://learn.microsoft.com/zh-cn/dotnet/csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords
             // 版本控制
+        }
+        /*关键字：params*/
+        {
+            // 指定采用可变数量参数的方法参数。参数类型必须是一维数组。
+                // UseParams(1, 2, 3, 4);
+                // WriteLine();
+                // UseParams2(1, 'a', "test");
+                // WriteLine();
+                // UseParams2();
+                // WriteLine();
+                // int[] myIntArray = { 5, 6, 7, 8, 9 };
+                // UseParams(myIntArray);
+                // WriteLine();
+                // object[] myObjArray = { 2, 'b', "test", "again" };
+                // UseParams2(myObjArray);
+                // WriteLine();
+                // UseParams2(myIntArray);
+                // WriteLine();
+        }
+        // 访问级别相关： https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/accessibility-levels
+        /*关键字：private*/
+        {
+            // 私有访问权限是最低权限的访问级别。私有成员只能在类的主体或声明它们的结构中访问
+        }
+        /*关键字：public*/
+        {
+            // 公共访问权限是最高权限的访问级别。公共成员可以在任何地方访问
+        }
+        /*关键字：protected*/
+        {
+            // 受保护访问权限是中等权限的访问级别。受保护成员可以在类的主体或声明它们的结构中访问，或者可以在派生类中访问
+        }
+        /*关键字：readonly*/
+        {
+            // “只读引用”功能:
+                // in参数
+                // ref readonly返回
+                // readonly结构
+                    // 使this结构的所有实例成员的参数（构造函数除外）成为in参数的功能。
+                    Vector3 v1 = new Vector3(1, 2, 3);
+                    // Test_readonly(v1);
+                // ref/in扩展方法
+                // ref readonly当地人
+                // ref条件表达式
+        }
+        /*关键字：ref*/
+        {
+            // 表示变量是引用，或者是另一个对象的别名。
+                // 例子：如果更改参数存储位置中的值（以指向新对象），也会更改调用者引用的存储位置。
+                    // Declare an instance of Product and display its initial values.
+                    Product item = new Product("Fasteners", 54321);
+                    // WriteLine("Original values in Main.  Name: {0}, ID: {1}\n",item.ItemName, item.ItemID);
+
+                    // Pass the product instance to ChangeByReference.
+                     ChangeByReference(ref item);
+                    // WriteLine("Back in Main.  Name: {0}, ID: {1}\n", item.ItemName, item.ItemID);
         }
         /*关键字：this*/
         {
@@ -597,7 +773,109 @@ class Test // class是关键字 ;Test 是标识符
 
             // ref:https://learn.microsoft.com/zh-cn/dotnet/csharp/language-reference/keywords/virtual
         }
+        /*关键字：volatile*/
+        {
+           // volatile关键字表示一个字段可能被同时执行的多个线程修改。
+            // 示例：
+                // 如何创建辅助线程或工作线程并用于与主线程并行执行处理。
+                    // // 创建工作线程对象。 这不会启动线程。
+                    // Worker workerObject = new Worker();
+                    // Thread workerThread = new Thread(workerObject.DoWork);
+                    // // 启动worker线程
+                    // workerThread.Start();
+                    // WriteLine("Main thread: starting worker thread...");
+                    // // 等待worker线程完成
+                    // while (!workerThread.IsAlive);
+                    // // 让主线程休眠 500 毫秒，让worker线程做一些工作。
+                    // Thread.Sleep(500);
+                    // workerObject.RequestStop();
+                    // // 使用 Thread.Join 方法阻塞当前线程，直到对象的线程终止。
+                    // workerThread.Join();
+
+        }
+        /*关键字：while*/
+        {
+            // https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/statements/iteration-statements
+        }
+        /*避免冲突*/
+        {
+            @int ci = new @int(1);
+            // Write(ci.ToString()) ;
+        }
+        /*上下文关键字*/
+        {
+            // 上下文：context：指的是 进程间占有的资源空间/相关事物的占位符或容器。上下文关键字：指的是在某个上下文中，具有特殊含义的关键字,它不是 C# 中的保留字。
+            /*上下文关键字：add*/
+                {
+                    // c# event 观察者模式订阅您的事件时调用的自定义事件访问器。
+                }
+            /*上下文关键字：and*/
+                {
+                    // 从 C# 9.0 开始，您可以使用关系模式将表达式结果与常量进行比较
+                    // Relational Patterns
+                }
+            //... 
+        }
     }
+    /*关键字：sealed*/
+        // 示例中，Z继承自Y但Z不能覆盖在F中声明X和密封的虚函数Y
+        class X
+        {
+            protected virtual void F() { Console.WriteLine("X.F"); }
+            protected virtual void F2() { Console.WriteLine("X.F2"); }
+        }
+
+        class Y : X
+        {
+            sealed protected override void F() { Console.WriteLine("Y.F"); }
+            protected override void F2() { Console.WriteLine("Y.F2"); }
+        }
+
+        class Z : Y
+        {
+            // Attempting to override F causes compiler error CS0239.
+            // protected override void F() { Console.WriteLine("Z.F"); }
+
+            // Overriding F2 is allowed.
+            protected override void F2() { Console.WriteLine("Z.F2"); }
+        }
+    /*关键字：ref*/
+        private static void ChangeByReference(ref Product itemRef)
+        {
+            // Change the address that is stored in the itemRef parameter.
+            itemRef = new Product("Stapler", 99999);
+
+            // You can change the value of one of the properties of
+            // itemRef. The change happens to item in Main as well.
+            itemRef.ItemID = 12345;
+        }
+    /*关键字：readonly*/
+        static void Test_readonly(in Vector3 v1)
+        {
+            // no need to make a copy of v1 since Vector3 is a readonly struct
+            WriteLine(v1.ToString());
+        }
+    /*关键字：params*/
+        static void UseParams(params int[] list)
+        {
+            for (int i = 0; i < list.Length; i++)
+            {
+                Write(list[i] + " ");
+            }
+        }
+        static void UseParams2(params object[] list)
+        {
+            for (int i = 0; i < list.Length; i++)
+            {
+                Write(list[i] + " ");
+            }  
+        }
+
+    /*关键字：out*/
+        static void OutArgExample(out int number)
+        {
+            number = 44;
+        }
     /*关键字：in*/
         // 2.作为参数修饰符
             static void InArgExample(in int number)
@@ -639,6 +917,51 @@ class Test // class是关键字 ;Test 是标识符
         return string.Format($"value:{fireInTheHole}");
     }
 }
+/*关键字：volatile*/
+    // 示例：
+        // 如何创建辅助线程或工作线程并用于与主线程并行执行处理。
+        public class Worker
+        {
+            // This method is called when the thread is started.
+            public void DoWork()
+            {
+                bool work = false;
+                while (!_shouldStop)
+                {
+                    work = !work; // simulate some work
+                }
+                Console.WriteLine("Worker thread: terminating gracefully.");
+            }
+            public void RequestStop()
+            {
+                _shouldStop = true;
+            }
+            // Keyword volatile is used as a hint to the compiler that this data
+            // member is accessed by multiple threads.
+            // 关键字 volatile 用于提示编译器该数据成员由多个线程访问。
+            private volatile bool _shouldStop;
+        }
+/*关键字：sizeof*/
+    public class SizeOfOperator
+    {
+        public static unsafe void DisplaySizeOf<T>() where T : unmanaged
+        {
+            WriteLine($"Size of {typeof(T)} is {sizeof(T)}");
+        }
+    }
+/*关键字：ref*/
+    class Product
+    {
+        public Product(string name, int newID)
+        {
+            ItemName = name;
+            ItemID = newID;
+        }
+
+        public string ItemName { get; set; }
+        public int ItemID { get; set; }
+    }
+    
 /*关键字：lock*/
     // 示例一
         class lockTest
@@ -739,6 +1062,10 @@ class Test // class是关键字 ;Test 是标识符
                     {
                         account.Credit(amount);
                     }
+
+
+
+                    
                     else
                     {
                         account.Debit(Math.Abs(amount));
@@ -1293,5 +1620,19 @@ class Test // class是关键字 ;Test 是标识符
         public override void GetInformation()
         {
 
+        }
+    }
+
+/*避免冲突*/
+    public class @int // 而不是 int
+    {
+        int i = 0;
+        public @int(int i)
+        {
+            this.i = i;
+        }
+        public override string ToString()
+        {
+            return $"@int: {i}";
         }
     }
