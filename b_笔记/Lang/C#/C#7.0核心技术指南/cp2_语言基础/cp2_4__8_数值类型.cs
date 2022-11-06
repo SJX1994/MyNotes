@@ -125,14 +125,61 @@ class cp2_4_5_6
                 
                 ref string XRef = ref GetX(); // XRef 引用了 X 的内存地址
                 XRef = "new value"; // X 也会变成 new value
-                WriteLine(X);
+                // WriteLine(X);
             }
             // var隐式局部变量
+            {
+                // var 可能会降低代码的可读性
+                // 匿名函数必须使用var
+                var dude = new{Name = "Jay",Age = 11};// 存储一组值的简单类
+                // 等价于：
+                Dude dude2 = new Dude("Jay", 11);
+            }
+                
+                
         }
-            
+        /*表达式和运算符*/
+        {
+            // 基础表达式
+                // C# 内置运算符表达式：例如 log：
+                  decimal num_expression = (decimal)Math.Log(10,2); // 以2为底 10的对数
+            // 空表达式
+                // 没有返回值的表达式 例如
+                WriteLine("");  
+            // 赋值表达式
+                // =
+                // 左边是变量 右边是 表达式
+            // C#运算符表：https://learn.microsoft.com/zh-cn/dotnet/csharp/language-reference/operators/
+
+        }
+        /*null运算符*/ 
+        {
+            // null合并运算符
+                // 用于赋值
+                string null_s1 = null;
+                string null_s2 = null_s1??"nothing"; // 有值打印值 没值打印字符串 nothing
+                // WriteLine(null_s2); // nothing
+            // 条件运算符
+                // 用于检测
+                StringBuilder null_s3 = null;
+                StringBuilder null_s4 = new StringBuilder("hello");
+                string null_s = null_s3 ?. ToString() ; // 等价于 null_s == null ? null : null_s3.ToString();
+                string null_ss = null_s4 ?. S ? .ToString() ;// 增加代码的健壮性 等价于 null_ss == null ? null : (null_s4.S == null ? null : null_s4.S.ToString());
+                // 可空类型
+                StringBuilder null_s5 = null;
+                int? null_i = null_s5.S.ToString().Length; // 可空类型
+            // 结合使用：
+                string null_sss = null_s4 ?. S ? .ToString() ?? "nothing"; // 有值打印值 没值打印字符串 nothing ;
+        }
+        /*语句*/
+            // 函数是语句构成的 存在于{}中
+        {
+            // 声明语句
+        }    
     }
     
     /*变量和参数*/
+        
         // 引用返回值
             static ref string GetX()
             {
@@ -188,17 +235,33 @@ class cp2_4_5_6
             }
         
 }
-class StringBuilder
-{
-    string s = null;
-    public StringBuilder(object x)
-    {
-        this.s = (string)x;
-    }
-    public string S
-    {
-        get { return s;}
-        set { s = "StringBuilder" + value; }
-    }
-    
-}
+/*变量和参数*/
+    // var隐式局部变量
+        class Dude
+        {
+            private string name;
+            private int age;
+            public Dude(string Name,int Age)
+            {
+                this.name = Name;
+                this.age = Age;
+            }
+           
+            public string Name {get {return this.name;}}
+            public int Age {get{return this.age;}}
+        }
+    // 堆和栈
+        class StringBuilder
+        {
+            string s = null;
+            public StringBuilder(object x)
+            {
+                this.s = (string)x;
+            }
+            public string S
+            {
+                get { return s;}
+                set { s = "StringBuilder" + value; }
+            }
+            
+        }
