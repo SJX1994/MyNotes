@@ -166,8 +166,9 @@ class cp2_4_5_6
                 string null_s = null_s3 ?. ToString() ; // 等价于 null_s == null ? null : null_s3.ToString();
                 string null_ss = null_s4 ?. S ? .ToString() ;// 增加代码的健壮性 等价于 null_ss == null ? null : (null_s4.S == null ? null : null_s4.S.ToString());
                 // 可空类型
-                StringBuilder null_s5 = null;
-                int? null_i = null_s5.S.ToString().Length; // 可空类型
+                // StringBuilder null_s5 = null;
+                // int? null_i = null_s5.S.ToString().Length ; // 可空类型
+                
             // 结合使用：
                 string null_sss = null_s4 ?. S ? .ToString() ?? "nothing"; // 有值打印值 没值打印字符串 nothing ;
         }
@@ -175,6 +176,48 @@ class cp2_4_5_6
             // 函数是语句构成的 存在于{}中
         {
             // 声明语句
+                bool rich = false, famous = false;
+                famous = rich;
+                const double c = 2.0E08;
+                a += c ;
+                // 局部变量
+            // 表达式语句
+                // 赋值表达式(包括自增自减表达式)
+                // 方法调用表达式(包括有无返回值的)
+                // 对象创建表达式
+            // 选择语句    
+                // 选择语句(if、switch)
+                // 条件语句(?:)
+                // 循环语句/迭代语句(while、do、for、foreach)
+                // 跳转语句(break、continue、goto、return)
+                // 其他语句(using:finally{IDisposable.Dispose()}、lock:Mintor.Enter(),Exit())
+        }
+        /*命名空间*/
+            // 避免命名冲突 且容易查找
+        {
+            // using指令
+                // using 指令用于导入命名空间
+            // using static
+                // using static 指令用于导入静态成员
+            // 命名空间中的规则
+                // 名称范围
+                    // 外层命名空间可在内层使用
+                    // 统一命名空间分层结构中不同分支类型需要使用部分限定名称
+                // 名称隐藏
+                // 名称冲突
+                    // 只要空间内名称不冲突就行
+                // 嵌套using指令
+                    // using指令可以嵌套
+            // 类型和命名空间别名
+                // 见下方案例
+            // 高级命名空间特性
+                // 外部别名
+                    // 同名命名空间可以在编译时添加别名 关键字：
+                    // csc /r:别名=文件名.dll app.cs
+                    // extern alias 别名;
+                // 命名空间别名限定符
+                    // 关键字: 别名::类型名  
+
         }    
     }
     
@@ -235,6 +278,86 @@ class cp2_4_5_6
             }
         
 }
+/*命名空间*/
+    // 书写形式A:
+        namespace A.B.C
+        {
+            class ClassA{}
+            class ClassB{}
+        }
+    // 书写形式B:
+        namespace Aa
+        {
+            namespace Bb
+            {
+                namespace Cc
+                {
+                    class ClassA{}
+                    class ClassB{}
+                }
+            }
+        }
+    // 命名空间中的规则
+        // 外层命名空间可在内层使用
+            namespace Aaa
+            {
+                class ClassA{}
+                namespace Bb
+                {
+                    class ClassAsub:ClassA{}
+                }
+            }
+        // 名称范围
+            // 统一命名空间分层结构中不同分支类型需要使用部分限定名称
+                namespace Aaaa
+                {
+                    namespace Aaaa_base
+                    {
+                        class ClassBase{}
+                    }
+                    namespace Aaaa_1
+                    {
+                        class ClassA:Aaaa_base.ClassBase{}
+                    }
+                }
+        // 名称隐藏
+            namespace A_outer
+            {
+                class Foo{}
+                namespace A_Inner
+                {
+                    class Foo{}
+                    class Test
+                    {
+                        Foo f1; // 默认最内层的Foo
+                        A_outer.Foo f2; // 指定外层的Foo
+
+                        
+                    }
+                }
+            }
+        // 嵌套using指令
+            namespace Aaaaa
+            {
+                class ClassA{};
+            }
+            namespace Bbbbb
+            {
+                using Aaaaa;
+                class ClassB:ClassA{};
+            }
+    // 类型和命名空间别名
+        namespace Aaaaaa
+        {
+            // 类型别名
+            using Foo = Aaaaa.ClassA;
+            class ClassA
+            {
+                Foo f;
+            }
+           
+        }
+        
 /*变量和参数*/
     // var隐式局部变量
         class Dude
