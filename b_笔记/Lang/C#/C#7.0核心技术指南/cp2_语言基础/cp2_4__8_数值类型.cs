@@ -40,21 +40,21 @@ class cp2_4_5_6
                     // 存储异常处理
                 Factorial(3);
                 // 堆 存储所有 引用类型
-                // 存储对象
-                // 存储数组
-                // 存储字符串
-                // 存储委托
-                // 存储匿名对象
-                // 存储匿名方法
-                // 存储lambda表达式
-                // 存储泛型
-                // 存储迭代器
-                // 存储垃圾回收(GC回收未引用的对象,变量和常量会一直存活)
-                StringBuilder sb = new StringBuilder("obj1"); // StringBuilder 被 sb 引用，目前被 sb 被 GC 选中
-                // WriteLine(sb.S);
-                StringBuilder sb2 = new StringBuilder("obj2");
-                StringBuilder sb3 = sb2; // sb2 被引用 所以 不会被 GC 选中
-                // WriteLine(sb3.S);
+                    // 存储对象
+                    // 存储数组
+                    // 存储字符串
+                    // 存储委托
+                    // 存储匿名对象
+                    // 存储匿名方法
+                    // 存储lambda表达式
+                    // 存储泛型
+                    // 存储迭代器
+                    // 存储垃圾回收(GC回收未引用的对象,变量和常量会一直存活)
+                    StringBuilder sb = new StringBuilder("obj1"); // StringBuilder 被 sb 引用，目前被 sb 被 GC 选中
+                    // WriteLine(sb.S);
+                    StringBuilder sb2 = new StringBuilder("obj2");
+                    StringBuilder sb3 = sb2; // sb2 被引用 所以 不会被 GC 选中
+                    // WriteLine(sb3.S);
             }
             // 明确赋值
             {
