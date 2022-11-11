@@ -28,6 +28,7 @@
                   window -edit -widthHeight 600 300 adia_myVertexNormalSort_Window;
                   showWindow adia_myVertexNormalSort_Window;
             }
+            
 
             proc SafeDel()
             {
