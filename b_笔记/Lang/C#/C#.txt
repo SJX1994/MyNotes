@@ -48,6 +48,10 @@ C# 是微软对标 Java 创造的语言 所以语言特性比较相似
             支持国际化（多语言本地化）
 
 概念：
+      装箱：
+            ref：https://learn.microsoft.com/zh-cn/dotnet/csharp/programming-guide/types/boxing-and-unboxing
+            装箱是将值类型转换为 object 类型或由此值类型实现的任何接口类型的过程。
+            相对于简单的赋值而言，装箱和取消装箱过程需要进行大量的计算。
       深拷贝：
             相对独立
             例：
