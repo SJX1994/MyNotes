@@ -188,6 +188,8 @@ openGL ES(OpenGL for Embedded Systems ):
   ref：
     https://blog.csdn.net/hgl868/article/details/7876257
 通用概念：
+  ComputeShader计算着色器：
+    it
   纹理缩放：
     放大：
       基于纹理映射，将原像素映射到放大图像的对应像素位置，以原像素在放大图像上的相对位置，对剩余未填充像素的部分进行填充，如果用liner模式，就会与剩余像素做差值，如果选择nearst模式，就会选择临近的像素进行复制。

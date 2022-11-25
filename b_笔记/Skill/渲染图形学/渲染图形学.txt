@@ -171,6 +171,8 @@
             具体实现：
             制作人员将3D场景渲染到中间内存缓冲区，然后针对上述目的与描述对这个缓冲区进行编辑。
 特殊操作：
+      色彩空间 Gamma Linear 伽玛和线性空间：
+            https://www.kinematicsoup.com/news/2016/6/15/gamma-and-linear-space-what-they-are-how-they-differ
       toneMap：（减少过曝）
             https://zhuanlan.zhihu.com/p/21983679
       模糊算法、景深：（变焦）

@@ -67,7 +67,7 @@ VSCode:
             Ctrl+K+J
         对比代码：
             Ctrl 选中两个文件 右键 对比
-        忽略指定后缀名：
+        忽略/隐藏 指定后缀名：
             File/Preferences/Settings
             "files.exclude": {
                 "**/*.meta": true

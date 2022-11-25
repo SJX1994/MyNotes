@@ -50,5 +50,6 @@
       "files.exclude": {
             "**/*.meta": true
       },
-      "python.formatting.provider": "black"
+      "python.formatting.provider": "black",
+      "cmake.sourceDirectory": "${workspaceFolder}/Engine/mayaC++/SJX_CovertFormat"
 }

@@ -1,0 +1,23 @@
+
+
+#pragma kernel SJX_CSMain // 指示编译器将此函数作为计算着色器的入口点（支持多个入口点）
+#include "/Includes/Noise.compute"
+      // 允许修改变量
+      // 允许重新分配线程数
+      // ComuteBuffer 定义了数据缓冲器用于 GPU CPU 通讯
+// 变量
+RWTexture3D<float> DensityTexture;
+// 函数
+float calculateDensity(int3 cell) {
+      float density = 1;
+	density += (float)cell;
+
+	return density;
+}
+// 入口函数
+[numthreads(8,8,8)] // 分配线程 ref:https://learn.microsoft.com/en-us/windows/win32/direct3dhlsl/sm5-attributes-numthreads
+void SJX_CSMain(uint3 id : SV_DispatchThreadID)
+{
+      float density = 0;
+      density = calculateDensity(id);
+}
