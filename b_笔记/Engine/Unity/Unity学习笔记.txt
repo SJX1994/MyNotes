@@ -60,6 +60,8 @@
             Assembly-CSharp-vs.csproj & Assembly-CSharp.csproj:
                 是为JavaScript准备的
 
+UnityEngineAPI：
+    
 
 
 MonoDevelop：
@@ -152,7 +154,7 @@ MonoDevelop：
                 渲染管线：
                     无关管线与着色器只编辑顶点。
             架构：
-                被更新器 更新的 解算器 解算 蓝图 得到 演员。 所有的 演员 是 求解器的 子集。多个演员可以共享 蓝图 的数据（像shader 和 matiral 之间的关系）。
+                被更新器 更新的 解算器 解算 蓝图 得到 演员。 所有的 演员 是 解算器 子集。多个演员可以共享 蓝图 的数据（像shader 和 matiral 之间的关系）。
 
                 解算器（ObiSolver）：
                     最重要的组件
@@ -197,7 +199,7 @@ MonoDevelop：
                             SurfaceCollisionTolerance:表面碰撞容差
                                 与平坦表面更稳定的表面碰撞。
                         ConstraintsSettings:
-                            允许求解器完全跳过与该特定约束类型相关的任何计算。允许求解器完全跳过与该特定约束类型相关的任何计算。以减少开销
+                            允许求解器完全跳过与该特定约束类型相关的任何计算。允许求解器完全跳过与该特定约束类型相关的任何计算。以减少开销，或为了表现增加开销。
                             每个约束类型有四个参数：
                                 Enable
                                     默认是全部打开的
@@ -215,6 +217,7 @@ MonoDevelop：
                 更新器（ObiUpdater）：
                     使它们与 Unity 自己的物理引擎保持同步。需要精确控制模拟更新周期，您可以编写自己的更新程序。
                     只有一个更新程序。未被任何更新程序引用的求解器将不会更新其模拟。
+                    演员特定约束类型的 计算方式为 更新器 的全局更新子步长 * 约束类型的迭代次数。
                     更新类型：
                         ObiFixedUpdater：
                                 固定更新程序将在 FixedUpdate() 期间更新模拟。这是最正确的方法，也是您应该在大多数时间使用的方法。
@@ -254,9 +257,16 @@ MonoDevelop：
                                     编辑当前选择粒子的属性
                                 Particle groups: // 待拓展 需要更明显的提示
                                     可以创建特殊意义的粒子组。例如，一组粒子用于悬挂在领一个物体上。也可以在运行时访问。
-                                
+                                Tethers: // 系绳约束
+                                    选择一个组，生成系绳约束，将会吧 组内的粒子 和所有其他 所有粒子 建立系绳约束。
+                                    （在renderModes：Tethers constraints 然后在演员中进行设置）
                         Property painting
+                            在 renderMode启用mesh后：
+                                笔刷有 内径 和 外径 的差值设置。同时 笔刷可以镜像绘制
                         Texture import/export
+                            可以加载外部纹理来映射权重。
+                            可以导出纹理来保存权重。padding值用来控制纹理边缘出血的像素。
+                        RenderModes：
                 演员（ObiActor）：
                     被更新器 更新的 解算器 解算 蓝图 得到 演员。 所有的 演员 是 求解器的 子集。多个演员可以共享 蓝图 的数据（像shader 和 matiral 之间的关系）。
                     所有演员的输入是 蓝图。为了让 解算器 成功解算，演员 会 实例化蓝图信息（粒子和约束）。
@@ -279,7 +289,15 @@ MonoDevelop：
                         生成方式：演员 要求 解算器 根据蓝图的需要分配尽可能多的 碰撞粒子。 多个演员 由 同一个 求解器 从蓝图 分配粒子
                         交互方式：演员 所有在蓝图中能找到的约束类型 并且 更新他们 的粒子索引。所以 演员 可以 正确指向 另一个解算器中的 演员。
                         更新方式：所有演员 的 激活粒子都在 解算器 中被 更新器 更新。
-
+                    模拟：
+                        性能预算/开销由解算器给出：
+                        Distance constraints：
+                            固定粒子组之间的距离约束，表现为布料的轻重，弹性（纱制 或 油布制）。
+                        Bend constraints：
+                            所有粒子之间的弯曲约束。表现为表面的软硬（更多细节褶皱）
+                        Volume constraints：
+                        Aerodynamic constraints
+                        Tether constraints 
             工具：
                 ClothProxies工具：
                     为ObiCloth 蓝图 创建 非流形网格（ non-manifold mesh）
@@ -298,7 +316,27 @@ MonoDevelop：
                     tips:
                         1.mesh可以创建多个Proxy被使用。
                         2.既可以使用 mesh 也可以 使用 proxy。
-
+                Obi particle attachment：
+                    附着于游戏物体上
+                Obi particle render：
+                    渲染碰撞粒子的体积
+                Obi Instanced particle render：
+                    渲染碰撞粒子生成物体
+                Obi Ambient Force Zone：
+                    针对解算器创建全局风力场
+                Obi Collider：
+                    为解算器计算unity碰撞
+                    每一个碰撞体都需要单独的unity碰撞
+            第三方：
+                测试模型：
+                    
+            原理：  
+            tips：
+                关于缩放:
+                    解算器 的缩放会缩放整个模型的顶点，重力相对的坐标如果是 解算器的本地坐标 重力也会随着解算器旋转而改变
+                    演员 的缩放会缩放打组的粒子
+                碰撞厚度：
+                    从 Obi Collider 渲染
         MagicaCloth：
             下载：
                 CSDN：
@@ -707,6 +745,14 @@ Adia任务：
                 ($Unity工程)Library\PackageCache\com.unity.render-pipelines.high-definition@7.7.1\Documentation~
 
 案例：
+    VAT(vertex animation texture):
+        https://www.youtube.com/playlist?list=PLXNFA1EysfYn686NxzYbKxm845eOIwDPA
+        Maya:https://github.com/ZGeng/VertAnimToTex
+        概念：
+            将网格动画烘培到一张贴图上，
+            这张贴图会在实时渲染中 给  vert shader 使用
+        具体实现：
+            贴图：纵轴是帧数，横轴是顶点数
     100个实用小框架：
         https://www.bilibili.com/read/cv10038189/
         数学小知识：

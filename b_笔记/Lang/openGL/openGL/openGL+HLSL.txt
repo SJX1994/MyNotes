@@ -392,7 +392,7 @@ openGL ES(OpenGL for Embedded Systems ):
         https://www.bilibili.com/video/BV1SW411y7W1
     矩阵旋转
 
-  降低饱和度Desaturation：
+  降低饱和度 Desaturation：
     vec3 color = texture2D( sampler , uv ).rgb;
     vec3 gray = vec3( dot( color , vec3( 0.2126 , 0.7152 , 0.0722 ) ) );
     fragColor = vec4( mix( color , gray , desaturationFactor ) , 1.0 );

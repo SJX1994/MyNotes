@@ -207,7 +207,9 @@
                   计算机科学、工程或数学相关领域的学士学位
                   对该职位有益的其他技能包括并行编程和多线程渲染器方面的知识，以及使用 PS5 GNM、Direct3D 12 和/或 Vulkan API 的经验
 
-
+funnyShit：
+      屌图：
+            https://onemanadreaming.blogspot.com/2014/08/mathematical-equation-of-love-heart.html
 ref:
       FORTICHE 法国
       https://paroj.github.io/gltut/

@@ -51,5 +51,6 @@
             "**/*.meta": true
       },
       "python.formatting.provider": "black",
-      "cmake.sourceDirectory": "${workspaceFolder}/Engine/mayaC++/SJX_CovertFormat"
+      "cmake.sourceDirectory": "${workspaceFolder}/Engine/mayaC++/SJX_CovertFormat",
+      "C_Cpp.errorSquiggles": "Disabled"
 }
