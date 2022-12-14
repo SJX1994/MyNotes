@@ -1,14 +1,4 @@
-文档阅读规则：
-    注释：
-        (这是注释)
-    省略：
-        ...
-    包含：
-        <
-    值：
-        >
-    代码：
-        <(代码)>
+
 
 
 C++基础：
@@ -60,11 +50,6 @@ C++基础：
             概念：
                 指针指向结构体
         
-
-
-
-
-
 Api方程：
     AActor:
         概念：
@@ -107,9 +92,6 @@ Api方程：
         概念：？
         GetWorld：？
 
-
-
-
 流程控制：
     Super:
         通过调用父类重写子类
@@ -145,8 +127,7 @@ Api方程：
         SpawnActors:
         Ticky(float DeltaTime):
             执行每一帧，通过Super和DeltaTime每帧调用自己
-        
-            
+                
 操作：
     导出贴图/资产：
         In “Content Browser” right mouse button click on needed texture. In menu “Asset Action → Export”.

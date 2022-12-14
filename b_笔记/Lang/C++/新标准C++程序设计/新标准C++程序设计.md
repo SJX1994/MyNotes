@@ -7,7 +7,8 @@
 包括如何编写模板以及如何使用标准模板库STL。即便不想用面向对象的方法编程，学习STL也是大有裨益的。
 ## C++高级主题
 涉及了异常处理、名字空间、C++风格的强制类型转换等C++语言中比较深入的内容，以及C++11标准引人的几个新特性。
-
+## 答案参考
+https://github.com/sychaichangkun/Coursera-Tasks/tree/master/C%2B%2B%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1
 ---
 
 # 课程内容

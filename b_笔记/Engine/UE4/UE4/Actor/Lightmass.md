@@ -1,0 +1,1 @@
+[Lightmass](https://docs.unrealengine.com/4.27/zh-CN/RenderingAndGraphics/Lightmass/)(CUP`多线程漫反射`和[`间接阴影`](https://docs.unrealengine.com/4.27/zh-CN/RenderingAndGraphics/Lightmass/IndirectLightingCache/)相关,由 `Swarm Agent`处理，`显示>可视化`)

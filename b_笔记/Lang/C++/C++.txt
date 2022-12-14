@@ -15,6 +15,13 @@
                         https://zhuanlan.zhihu.com/p/76613134
 
 网址：
+      刷题：
+            POJ
+      学习：
+            c++多人协同：
+                  https://www.coursera.org/learn/cpp-chengxu-sheji#instructors
+      在线编译器：
+            cpp.sh
       视频解码库：
             ffmpeg.org
       中文库：
