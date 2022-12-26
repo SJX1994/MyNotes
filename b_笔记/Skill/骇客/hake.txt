@@ -77,4 +77,6 @@ OllyDbg：
             1.找到加积分页面的html：
                   \res\ShiYeLine\value\string.xml
                   <String Id="IDS_VERIFY_CODE_INVALID">
-            
+      指定域名搜索：
+            site:www.baidu.com
+                 

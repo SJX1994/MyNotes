@@ -2,3 +2,5 @@
 
 流程控制工具：
       trello
+离线修改PDF:
+      https://github.com/ShizukuIchi/pdf-editor
