@@ -321,6 +321,8 @@ makefile:
 Win+R:
       winver:
             检查win版本
+      control /name Microsoft.CredentialManager：
+            管理凭据
 
 硬件概念：
       
