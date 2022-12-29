@@ -104,6 +104,8 @@
 
 
 算法：
+    ref：
+        https://log2base2.com/courses/data-structures-in-c/need-for-bst-c-trial
     快速排序：
         // 用 C++ 手动实现快速排序算法，要求时间复杂度尽量稳定，代码风格尽量简洁清晰，可以封装工具函数。Bonus. 把排序函数封装进独立的 class，要求尽量健壮和安全，在各种使用情况下都应有合理行为。
             #include <iostream>
