@@ -87,6 +87,13 @@ MonoDevelop：
         操作：
             修改颜色和sprite：
                 https://dev.twsiyuan.com/2017/10/unity-custom-sprite-shader.html
+            透明：
+                https://www.jianshu.com/p/bdd56b627356
+            贴花：
+                github.com/ColinLeung-NiloCat/UnityURPUnlitScreenSpaceDecalShader
+                https://www.lfzxb.top/screen-space-decal-in-urp-study/
+            遮挡显示：
+                https://youtu.be/szsWx9IQVDI
     自带:
         Presets(预设)：
             保存：
@@ -359,6 +366,15 @@ Adia任务：
         file://192.168.10.3/Producer_New/GA_Producer/Incoming/China/XD/XDXZ/B01/3D道具/New/物件制作规范.pdf
 
 优化：
+    合并mesh减少drawCall插件：
+        MeshBacker：
+            https://assetstore.unity.com/packages/tools/modeling/mesh-baker-5017
+            贴图模糊解决方案：
+                1.增大子合并的最大尺寸
+                2.提高UV利用率
+                3.禁用缩放
+                4.减小分批合并的颗粒度
+            
     粒子特效:
         原理：
             参考：https://blog.csdn.net/alla_Candy/article/details/103709925
@@ -788,6 +804,10 @@ Adia任务：
     获取游戏时实时数据：
         https://github.com/Tayx94/graphy
 
+    小规模合作对战联网：
+        https://blog.unity.com/cn/games/the-8-factors-of-multiplayer-gamedev-in-small-scale-cooperative-games-ft-breakwaters
+        案例：
+            bossRoom：https://github.com/Unity-Technologies/com.unity.multiplayer.samples.coop
 
 报错：
     无法确定预设文件位置类型 /Users/ myUserName /Library/Preferences/Unity/Editor-5.x/Presets/Default UnityEngine.GUIUtility:ProcessEvent(Int32, IntPtr)：
@@ -800,7 +820,12 @@ Adia任务：
             %APPDATA%\UnityHub\logs\info-log.json
         可以看到Unity3d 2019.1.14f1的下载地址是：
             https://download.unitychina.cn/download_unity/148b5891095a/Windows64EditorInstaller/UnitySetup64-2019.1.14f1.exe
-
+    
+    后台不跑：
+        File - BuildSettings - PlayerSettings - Resolution and Presentation - Run in Background
+    
+    代码无法跳转：
+        ctrl+shift+P运行 OmniSharp: Select Project
 
 wedding项目：
     1.呼吸动画

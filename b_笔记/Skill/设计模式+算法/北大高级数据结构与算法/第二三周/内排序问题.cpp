@@ -272,7 +272,7 @@ void bubbleSort(int arr[], int n)
         
         // Last i elements are already
         // in place
-        for (j = 0; j < n - i - 1; j++)
+        for (j = 0; j < n - i - 1; j++) // -i 是排除已经排序好的元素
         {
             
             if (arr[j] > arr[j + 1])

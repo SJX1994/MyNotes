@@ -129,7 +129,20 @@ int AdjustLosser(vector<pair<int, int>> &list, array<int, BuffSize - 1> &LosserT
 #pragma endregion 置换选择排序
 
 #pragma region 二路外排序
+// 归并原理：
+      // 通过若干次二路合并，形成一个已排序的文件。
+      // 为待排序的文件创建尽可能大的初始顺串，可以大大减少扫描遍数和外存读写次数
+      // 把初始顺串长度作为权，然后用 哈夫曼 Huffman 树来找到最优解
 #pragma endregion 二路外排序
+#pragma region 多路外排序
+// Loser trees 败者树：用完全二叉树记录败者/哈夫曼树 额外一个输出节点
+      // ref：【【外排序】02-2 败者树】 https://www.bilibili.com/video/BV1Fb4y1p7k2/?share_source=copy_web&vd_source=ee8bf4f80f85e2ba54f02e9721d930d6
+      // 败者树的优势：记录前一次的比较结果
+// Winner Trees 胜者树：用完全二叉树记录胜者
+	// 胜者树的优势：记录前一次的比较结果
+	// 胜者树的缺点：需要额外的空间
+      
+#pragma endregion 多路外排序
 int main()
 {
       Replace_Selection("./"); // 置换选择排序？

@@ -22,6 +22,10 @@ VSCode:
             Ctrl+K+0
         展开所有代码：
             Ctrl+K+J
+        返回 上/下 一浏览位置：  
+            Alt + ← / Alt + →
+        添加函数说明:
+            C# XML Documentation Comments 插件
     File-Preference-setting：
         打开setting.json:
             Ctrl+P:-键入：setting.json(右上角按钮转换到UI界面)

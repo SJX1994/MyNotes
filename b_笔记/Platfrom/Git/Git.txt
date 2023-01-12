@@ -27,7 +27,10 @@
                         git checkout 分支名
             ref：https://www.freecodecamp.org/news/git-clone-branch-how-to-clone-a-specific-branch/
       检查ssh：
-            
+      回滚错误复原本地工作区的提交：
+            https://juejin.cn/post/6935030333834264607
+            一个典型场景是执行 reset 进行回滚，之后发现回滚错了，要恢复到另一个 commit 的状态。
+            我们通过git reflog查看 commit 操作历史，找到目标 commit，再通过 reset 恢复到目标 commit。      
       创建gitignore：
             创建文本文件 gitignore.txt
             在文本编辑器中打开它并添加您的规则，然后保存并关闭

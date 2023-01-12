@@ -163,6 +163,7 @@
                   超数学函数（例如pow, exp, log, cos, sin, tan）非常耗费资源，因此避免在低端硬件上使用它们。
             ref：
                   https://www.bitshiftprogrammer.com/2018/11/shader-optimization-part-1.html
+                  https://docs.nvidia.com/gameworks/content/technologies/mobile/gles2_perf_fragment.htm
       像素映射/离屏渲染：
             这种方法的目的是通过减少3D场景光栅化后像素的数量，达到减少计算复杂度的目的，从而降低GPU占用率。基于纹理映射，将原像素填充到车机屏幕，将完成如下操作：
             1.原像素 映射 到 放大图像的对应像素位置
