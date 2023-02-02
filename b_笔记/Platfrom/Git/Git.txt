@@ -120,7 +120,8 @@
 
                   Pakes/OpenGLCourse.mp4
 
-
+开源协议：
+      https://blog.csdn.net/suezhang9/article/details/105348898
 
 mac:
       生成ssh：

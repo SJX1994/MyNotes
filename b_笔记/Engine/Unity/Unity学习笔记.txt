@@ -355,6 +355,8 @@ MonoDevelop：
             
 
 版本控制：
+    包管理器:
+        https://docs.unity3d.com/2021.3/Documentation/Manual/upm-scoped.html
     gitignore：
         https://learn.unity.com/tutorial/project-architecture-unity-project-folder-structure?uv=4.x#5c7f8528edbc2a002053b672
 
@@ -385,6 +387,27 @@ Adia任务：
 
     粒子系统消耗检查工具：
         https://networm.me/2019/07/28/unity-particle-effect-profiler/
+    优化关键：
+        帧率及时间增量：
+            实时游戏的帧率(fram rate)是指一连串三维帧以多快的速度向观众显示。
+            帧率的单位为赫兹(Hertz,Hz),即每秒的周期数量。
+            帧率通常以每秒帧数(fram per second,FPS)来度量。
+            两帧之间所经过的时间称为 帧时间(frame time)。或者时间增量(time delta)。
+            (ref:游戏引擎架构JasonGregory)
+            unity瓶颈分析：
+                https://blog.unity.com/technology/detecting-performance-bottlenecks-with-unity-frame-timing-manager
+                项目位置：
+                    // 编辑器
+                        D:\Projects\YM\sjzj\Project\Unity\Library\PackageCache\com.unity.render-pipelines.core@12.1.7\Editor\Debugging
+                    // 运行时
+                        D:\Projects\YM\sjzj\Project\Unity\Library\PackageCache\com.unity.render-pipelines.core@12.1.7\Runtime\Debugging
+                入口：
+                    编辑器：Window/Analysis/Rendering Debugger
+                    运行时：Ctrl + BackSpace
+                入口函数：
+                    编辑器: DebugWindow.cs
+                编辑器指南：
+                    https://docs.unity3d.com/Packages/com.unity.render-pipelines.high-definition@14.0/manual/Render-Pipeline-Debug-Window.html#DecalsPanel
 
 插件：
     Cloth-and-IK-Test：
@@ -558,8 +581,6 @@ Adia任务：
                     VisibilityDXR
                     SubSurfaceDXR
                     PathTracingDXR
-
-
         渲染管线架构：       
             光线追踪：
         HDRP文档笔记：
@@ -752,6 +773,12 @@ Adia任务：
                         可以使用C#
                         或者ShaderGraph
         REF:
+            自定义 HDRP shader code：
+                http://www.erinz.xyz/index.php/archives/316/
+                https://catlikecoding.com/unity/tutorials/scriptable-render-pipeline/custom-shaders/
+                https://forum.unity.com/threads/finally-got-working-stencil-on-hdrp-lit-with-light-shadows-see-an-objects-through-other-objects.1194103/
+                https://www.redowlgames.nl/2017/01/18/shader-selftuition-stencil-testing-in-unity/
+                https://github.com/alelievr/HDRP-Custom-Passes.git
             1.
                 https://www.youtube.com/watch?v=ad9f_nKU0ZA
             2.
@@ -761,6 +788,14 @@ Adia任务：
                 ($Unity工程)Library\PackageCache\com.unity.render-pipelines.high-definition@7.7.1\Documentation~
 
 案例：
+    加载时间Debug：
+        https://docs.unity3d.com/Manual/profiler-profiling-applications.html
+        检查内存使用情况：
+            https://docs.unity3d.com/Packages/com.unity.memoryprofiler@1.0/manual/index.html
+        UI优化：
+            https://gwb.tencent.com/community/detail/116185
+    TPMS中文字体库：
+        https://github.com/kaienfr/Font/tree/master/learnfiles
     VAT(vertex animation texture):
         https://www.youtube.com/playlist?list=PLXNFA1EysfYn686NxzYbKxm845eOIwDPA
         Maya:https://github.com/ZGeng/VertAnimToTex
@@ -808,7 +843,10 @@ Adia任务：
         https://blog.unity.com/cn/games/the-8-factors-of-multiplayer-gamedev-in-small-scale-cooperative-games-ft-breakwaters
         案例：
             bossRoom：https://github.com/Unity-Technologies/com.unity.multiplayer.samples.coop
-
+    Unity Built-in转URP速查表:
+        https://cuihongzhi1991.github.io/blog/2020/05/27/builtinttourp/
+    时间控制插件：
+        https://ludiq.io/chronos/tutorial/adding-a-clock
 报错：
     无法确定预设文件位置类型 /Users/ myUserName /Library/Preferences/Unity/Editor-5.x/Presets/Default UnityEngine.GUIUtility:ProcessEvent(Int32, IntPtr)：
         转到您的注册表，Computer\HKEY_CURRENT_USER\Software\Unity Technologies\Unity Editor 5.x，并打开所有包含“CurrentLib”的键（例如我机器上的particleCurvesCurrentLib_h1743720187），然后将二进制字符串编辑为指向正确的路径。
@@ -826,6 +864,9 @@ Adia任务：
     
     代码无法跳转：
         ctrl+shift+P运行 OmniSharp: Select Project
+    
+    HDRP打包报错：
+        https://learn.unity.com/tutorial/upgrading-an-existing-project-to-use-hdrp-2019-2#5fd514c3edbc2a7538494a67
 
 wedding项目：
     1.呼吸动画
