@@ -1,14 +1,3 @@
-文档规则：
-    注释：
-        (这是注释)
-    省略：
-        ...
-    包含：
-        <
-    值：
-        >
-    代码：
-        <(代码)>
 
 文件结构：
     参考：https://abaojin.github.io/2018/03/11/unity-project/
@@ -408,7 +397,13 @@ Adia任务：
                     编辑器: DebugWindow.cs
                 编辑器指南：
                     https://docs.unity3d.com/Packages/com.unity.render-pipelines.high-definition@14.0/manual/Render-Pipeline-Debug-Window.html#DecalsPanel
-
+    VirtualTexture:
+        https://github.com/jintiao/VirtualTexture
+        浅谈Virtual Texture - 李兵的文章 - 知乎
+        https://zhuanlan.zhihu.com/p/138484024
+    MipmapStreaming：   
+        浅谈Unity纹理串流系统Mipmap Streaming System - 欧几里得范数的文章 - 知乎
+        https://zhuanlan.zhihu.com/p/600257663
 插件：
     Cloth-and-IK-Test：
         https://github.com/SebLague/Cloth-and-IK-Test.git
@@ -788,6 +783,9 @@ Adia任务：
                 ($Unity工程)Library\PackageCache\com.unity.render-pipelines.high-definition@7.7.1\Documentation~
 
 案例：
+    室外照明和场景设置：
+        环境照明：
+            
     加载时间Debug：
         https://docs.unity3d.com/Manual/profiler-profiling-applications.html
         检查内存使用情况：
@@ -847,6 +845,9 @@ Adia任务：
         https://cuihongzhi1991.github.io/blog/2020/05/27/builtinttourp/
     时间控制插件：
         https://ludiq.io/chronos/tutorial/adding-a-clock
+    畸变 Distortion ：
+        HDRP：
+            https://youtu.be/NbXvpy3x4-I
 报错：
     无法确定预设文件位置类型 /Users/ myUserName /Library/Preferences/Unity/Editor-5.x/Presets/Default UnityEngine.GUIUtility:ProcessEvent(Int32, IntPtr)：
         转到您的注册表，Computer\HKEY_CURRENT_USER\Software\Unity Technologies\Unity Editor 5.x，并打开所有包含“CurrentLib”的键（例如我机器上的particleCurvesCurrentLib_h1743720187），然后将二进制字符串编辑为指向正确的路径。

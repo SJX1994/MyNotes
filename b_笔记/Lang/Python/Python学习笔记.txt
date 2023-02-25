@@ -15,6 +15,8 @@
 py命令行：
     安装插件：
         <(py -m pip install xxx)>
+        古早版本python安装：
+            https://phoenixnap.com/kb/install-pip-windows
     检查版本：
          <(py --version )>
 Python库：

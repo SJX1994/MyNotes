@@ -32,7 +32,24 @@
 - tips：如果已有类似结构的UI文件目录，复制 大于 创建。
 - [UI设计资源](https://app.mockplus.cn/app/7DyQnIglMW/design/design?hmsr=share1)
 - [UI切图资源](sjzj\Resources)
+## 添加新字体（textMeshPro）
+### 新增内容添加到多文本
+1. 如果字不多创建动态字体，如果字多创建静态字体 
+   - 创建方法：https://zhuanlan.zhihu.com/p/375889482
+   - .TTF放在： Assets/TextMesh Pro/Fonts/
+   - 生成的unityAsset放在： Assets/TextMesh Pro/Resources/Fonts & Materials
+1. 添加 UIConfigStringReader 脚本到 文本组件
+2. 修改/添加 Excel表：Assets/Config/Excel/ConstStringConfig.xlsx
+3. 同步表：ET-BuildTool-ExcelExporter
+4. 运行时读表检查：修改UIConfigStringReader 看对应值是否显示
+## 操作：
+1. 自动以栈排版
+  - 父级添加组件：HorizontalLayoutGroup + ContentSizeFitter(每个子集都会带有)
+  - 添加子物体
 ## 插件
 - unity自动排版（预研）
   - ref：https://github.com/kyubuns/Baum2
-  - js脚本存放路径:D:\Apps\PhotoShop\App\Adobe Photoshop 2021\Presets\Scripts
+  - 脚本存放路径:D:\Apps\PhotoShop\App\Adobe Photoshop 2021\Presets\Scripts
+  - 入口：文件->脚本->Baum
+  - 脚本语言：javaScript
+  - 其他：目前不支持中文命名,命名通过图层组+图层名称（目前最多两级）
