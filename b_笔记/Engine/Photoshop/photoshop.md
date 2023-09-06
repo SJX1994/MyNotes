@@ -66,3 +66,5 @@
 - photoshopAPIforHtml(CEP)
   - 
 
+- 插件：
+  - photoShop2Spine：https://github.com/EsotericSoftware/spine-scripts/tree/master/photoshop

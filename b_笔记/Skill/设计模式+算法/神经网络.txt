@@ -49,4 +49,12 @@ Neural Networks
             ref：
                   https://www.bilibili.com/video/BV1VV411478E?share_source=copy_web
             卷积：
-                  
+应用层：
+      文字类：
+            chatBox：
+                  https://chatboxai.app/redirect_app/homepage/zh-Hans
+      视频类：
+            https://zhuanlan.zhihu.com/p/570332906
+            https://github.com/THUDM/CogVideo
+            https://github.com/VideoCrafter/VideoCrafter
+            DID  Colossyan 和  Pictory                  

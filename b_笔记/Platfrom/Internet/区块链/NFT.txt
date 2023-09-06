@@ -1,4 +1,9 @@
+
+
 NFT（Non-fungible token）不可替代的代币 是什么：
+      https://zhuanlan.zhihu.com/p/448054686
+      NFT 是 带有 智能合约 的 比特币。
+      NFT 具有 唯一性 不可篡改性 可追溯性。让容易复制的东西，变得可信赖。
       基于区块链的数字资产：
             创造途径：
                   soon holiday pattern pink find almost opera kidney taxi since forget must

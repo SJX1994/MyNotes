@@ -25,7 +25,10 @@
                         git clone --branch <branchname> <remote-repo-url>
                   切换分支：
                         git checkout 分支名
-            ref：https://www.freecodecamp.org/news/git-clone-branch-how-to-clone-a-specific-branch/
+            ref：
+            https://www.freecodecamp.org/news/git-clone-branch-how-to-clone-a-specific-branch/
+            
+            https://blog.csdn.net/qq_36672905/article/details/82776293
       检查ssh：
       回滚错误复原本地工作区的提交：
             https://juejin.cn/post/6935030333834264607
@@ -47,6 +50,21 @@
             git submodule update
                   
 报错：
+      sourceTree 执行操作慢
+            git gc
+            git prune
+
+      需要代理：
+            git config --global http.proxy 127.0.0.1:21882 #设置代理
+            git config --global --get http.proxy #查看代理
+            git config --global --unset http.proxy #取消代理
+            
+      解决出现Failed to connect to 127.0.0.1 port XXXX: Connection refused：
+            原因：
+                  使用了代理proxy
+            解决方法：
+                  查询是否使用代理：git config --global http.proxy
+                  取消代理：git config --global --unset http.proxy
       无法访问：
             修改host：
                   位置：
@@ -185,7 +203,11 @@ mac:
                   OpenSSH to PuTTY Private Key:
                         1.下载：puttygen.exe (https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
                         2.
-                        
+误操作：
+      基础操作：
+            https://www.cnblogs.com/yhjoker/p/11760644.html
+      Git执行git reset --hard回滚以后，撤销这一步回滚操作：
+            https://blog.csdn.net/Saint_EK/article/details/119453032?ops_request_misc=&request_id=&biz_id=102&utm_term=%E6%92%A4%E9%94%80git%E5%9B%9E%E6%BB%9A%E9%94%99%E8%AF%AF&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-0-119453032.142^v86^insert_down1,239^v2^insert_chatgpt&spm=1018.2226.3001.4187              
 
 Gerrit:
       中科：

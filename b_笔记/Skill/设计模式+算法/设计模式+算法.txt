@@ -361,6 +361,11 @@
         多了Presenter：
             事件处理模块
     UML:
+        https://zhuanlan.zhihu.com/p/109655171
+        https://github.com/lyq946/JavaBible/blob/master/DesignPattern/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%8D%95%E6%8E%92%E5%AD%A6%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E3%80%8CUML%E7%B1%BB%E5%9B%BE%E3%80%8D%E5%AE%9A%E7%BA%A7%E8%B5%9B.md
+        yUML:
+            Vscode离线绘制类图工具
+            https://www.cnblogs.com/wangyu2017/p/10506632.html
         用例图
             用例拆分
         子系统

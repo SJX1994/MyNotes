@@ -13,3 +13,6 @@
   - https://www.youtube.com/watch?v=8L6TuHxs7jc
 - mipMapAPI测试：
   - https://zhuanlan.zhihu.com/p/600257663
+
+# 方向：
+- renderTexture重复使用检查

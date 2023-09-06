@@ -53,3 +53,35 @@
   - 入口：文件->脚本->Baum
   - 脚本语言：javaScript
   - 其他：目前不支持中文命名,命名通过图层组+图层名称（目前最多两级）
+# AI 生成Icon工作流
+## icon参数
+- 参考风格：
+  - <img src="./Img/20230227-160123.png" width="450"/>  
+  - <img src="./Img/20230227-160155.png" width="450"/>
+  - <img src="./Img/20230227-160159.png" width="450"/>
+  - <img src="./Img/20230227-160202.png" width="450"/>
+  - <img src="./Img/20230227-160149.png" width="450"/>
+- 参考：
+  - https://www.reddit.com/r/StableDiffusion/comments/104tav4/one_of_my_favorite_prompts_dreamlike_photoreal_20/
+  - https://ai.dawnmark.cn/
+## dreamLike
+- 必须加入prompt
+  -  (Rays of Shimmering Light:1.2),Dripping Paint,
+  -  外观描述 + 材质描述 + 细节刻画
+  -  Artstation,detailed and intricate,Post Processing,Rays of Shimmering Light,Hard Lighting,Ultra-HD,2.5D,Light Mode,Cinematic,illustration
+  - Negative prompt：
+    - lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry
+
+## artPaint
+### v1
+- A money bag, ancient jewelry, cotton linen, a little Chinese pattern, linen gray, a little glossy, red knot, bowknot, martial arts, elegant, realistic, delicate,white background,
+- fantasy, intricate, elegant, highly detailed, anime, artstation, concept art, smooth, sharp focus, illustration, art by artgerm and greg rutkowski and alphonse mucha
+- Negative prompt: 3d, render, doll, plastic, blur, haze, monochrome, b&w, text, (ugly:1.2), unclear eyes, no arms, bad anatomy, cropped, censoring, asymmetric eyes, bad anatomy, bad proportions, cropped, cross-eyed, deformed, extra arms, extra fingers, extra limbs, fused fingers, jpeg artifacts, malformed, mangled hands, misshapen body, missing arms, missing fingers, missing hands, missing legs, poorly drawn, tentacle finger, too many arms, too many fingers, watermark, logo, text, letters, signature, username, words, blurry, cropped, jpeg artifacts, low quality, lowres
+- Steps: 25, Sampler: DPM++ SDE, CFG scale: 11.5, Seed: 715233396, Size: 512x512, Model hash: 0aecbcfa2c, Model: dreamlike-diffusion-1.0, ControlNet Enabled: True, ControlNet Module: hed, ControlNet Model: control_sd15_hed [fef5e48e], ControlNet Weight: 1, ControlNet Guidance Strength: 1 
+
+### v2
+- A grey cotton money bag , tied with rope , scattered golden coins,
+- fantasy, intricate, elegant, (highly detailed:1.2), anime, artstation, concept art, smooth, sharp focus, illustration, art by artgerm and greg rutkowski and alphonse mucha,
+- (Shadows:0.01),Screen Space Global Illumination,(front upper right Soft lighting:1.2),Light Mode--no blur
+- Negative prompt: 3d, render, doll, plastic, blur, haze, monochrome, b&w, text, (ugly:1.2), unclear eyes, no arms, bad anatomy, cropped, censoring, asymmetric eyes, bad anatomy, bad proportions, cropped, cross-eyed, deformed, extra arms, extra fingers, extra limbs, fused fingers, jpeg artifacts, malformed, mangled hands, misshapen body, missing arms, missing fingers, missing hands, missing legs, poorly drawn, tentacle finger, too many arms, too many fingers, watermark, logo, text, letters, signature, username, words, blurry, cropped, jpeg artifacts, low quality, lowres,(colored background:1.6)
+- Steps: 25, Sampler: DPM++ SDE, CFG scale: 11.5, Seed: 715233396, Size: 512x512, Model hash: 0aecbcfa2c, Model: dreamlike-diffusion-1.0, ControlNet Enabled: True, ControlNet Module: hed, ControlNet Model: control_sd15_hed [fef5e48e], ControlNet Weight: 1, ControlNet Guidance Start: 0, ControlNet Guidance End: 1

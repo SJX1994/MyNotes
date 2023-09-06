@@ -1,0 +1,1045 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>1022</x>
+      <y>0</y>
+      <w>245</w>
+      <h>392</h>
+    </coordinates>
+    <panel_attributes>我的
+--
+bg=orange
+transparency=90</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>224</x>
+      <y>0</y>
+      <w>196</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>注册页
+--
+
+bg=orange
+transparency=90</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>224</x>
+      <y>182</y>
+      <w>196</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>管理页
+--
+bg=orange
+transparency=90</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>476</x>
+      <y>0</y>
+      <w>322</w>
+      <h>392</h>
+    </coordinates>
+    <panel_attributes>平台页
+--
+bg=orange
+transparency=90</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>497</x>
+      <y>35</y>
+      <w>231</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>搜索
+bg=green
+layer=3
+transparency=90
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>742</x>
+      <y>35</y>
+      <w>35</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>我的
+bg=green
+layer=3
+transparency=90
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>497</x>
+      <y>70</y>
+      <w>133</w>
+      <h>266</h>
+    </coordinates>
+    <panel_attributes>优质问答：
+--
+
+国内XXX用户的问题：
+---------？
+国外XXX用户的方案：
+---------！
+
+--
+
+国内XXX用户的问题：
+---------？
+国外XXX用户的方案：
+---------！
+
+--
+
+国内XXX用户的问题：
+---------？
+国外XXX用户的方案：
+---------！
+
+--
+ 。。。</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>259</x>
+      <y>686</y>
+      <w>42</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>用户</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>441</x>
+      <y>686</y>
+      <w>49</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>管理员</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>644</x>
+      <y>70</y>
+      <w>133</w>
+      <h>266</h>
+    </coordinates>
+    <panel_attributes>国外用户的问题：
+--
+
+国外XXX用户的问题：
+---------？
+--
+
+国外XXX用户的问题：
+---------？
+--
+
+国外XXX用户的问题：
+---------？
+--
+
+国外XXX用户的问题：
+---------？
+--
+
+国外XXX用户的问题：
+---------？
+--
+
+国外XXX用户的问题：
+---------？
+--
+ 。。。</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>497</x>
+      <y>343</y>
+      <w>280</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>
+向外国人 提出更多问题
+bg=green
+layer=3
+transparency=90
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1043</x>
+      <y>238</y>
+      <w>203</w>
+      <h>147</h>
+    </coordinates>
+    <panel_attributes>我的问题
+--
+
+我的XXX问题：
+---------------------------------------？
+
+--
+
+我的XXX问题：
+---------------------------------------？
+
+--
+。。。</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1197</x>
+      <y>266</y>
+      <w>35</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>展开
+bg=green
+layer=3
+transparency=90
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1197</x>
+      <y>315</y>
+      <w>35</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>展开
+bg=green
+layer=3
+transparency=90
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1043</x>
+      <y>70</y>
+      <w>203</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>我的解答
+--
+
+国外XXX用户的问题：
+---------------------------------------？
+
+--
+
+国外XXX用户的问题：
+---------------------------------------？
+
+--
+。。。</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1197</x>
+      <y>98</y>
+      <w>35</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>展开
+bg=green
+layer=3
+transparency=90
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1197</x>
+      <y>147</y>
+      <w>35</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>展开
+bg=green
+layer=3
+transparency=90
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1043</x>
+      <y>35</y>
+      <w>126</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>用户信息</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1176</x>
+      <y>35</y>
+      <w>70</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>返回首页
+bg=green
+layer=3
+transparency=90
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>770</x>
+      <y>28</y>
+      <w>266</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>10.0;20.0;360.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>413</x>
+      <y>259</y>
+      <w>77</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>413</x>
+      <y>56</y>
+      <w>77</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;11.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1197</x>
+      <y>357</y>
+      <w>35</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>更多
+bg=green
+layer=3
+transparency=90
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1197</x>
+      <y>196</y>
+      <w>35</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>更多
+bg=green
+layer=3
+transparency=90
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>595</x>
+      <y>133</y>
+      <w>28</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>展开
+bg=green
+layer=3
+transparency=90
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>595</x>
+      <y>203</y>
+      <w>28</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>展开
+bg=green
+layer=3
+transparency=90
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>595</x>
+      <y>273</y>
+      <w>28</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>展开
+bg=green
+layer=3
+transparency=90
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>742</x>
+      <y>91</y>
+      <w>28</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>展开
+bg=green
+layer=3
+transparency=90
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>742</x>
+      <y>133</y>
+      <w>28</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>展开
+bg=green
+layer=3
+transparency=90
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>742</x>
+      <y>168</y>
+      <w>28</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>展开
+bg=green
+layer=3
+transparency=90
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>742</x>
+      <y>203</y>
+      <w>28</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>展开
+bg=green
+layer=3
+transparency=90
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>742</x>
+      <y>245</y>
+      <w>28</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>展开
+bg=green
+layer=3
+transparency=90
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>742</x>
+      <y>280</y>
+      <w>28</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>展开
+bg=green
+layer=3
+transparency=90
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>238</x>
+      <y>28</y>
+      <w>168</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>信息收集：
+--
+
+- 用户的基本信息
+- 用户的登录信息
+- 用户的国籍信息
+- 用户的专业领域</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>238</x>
+      <y>119</y>
+      <w>168</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>
+注册
+bg=green
+layer=3
+transparency=90
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>812</x>
+      <y>56</y>
+      <w>196</w>
+      <h>161</h>
+    </coordinates>
+    <panel_attributes>发布页
+--
+bg=orange
+transparency=90</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>812</x>
+      <y>224</y>
+      <w>196</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>发布页
+--
+bg=orange
+transparency=90</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>364</x>
+      <y>385</y>
+      <w>784</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0;1100.0;50.0;1100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>826</x>
+      <y>84</y>
+      <w>168</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>问题解答
+--
+XX国 XXX用户：问题描述 ----- ？
+--
+
+                         内容
+（视频、音频、图片、文本、链接）</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>763</x>
+      <y>91</y>
+      <w>63</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>826</x>
+      <y>259</y>
+      <w>168</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>问题发布
+--
+
+                         内容
+（视频、音频、图片、文本、链接）
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>770</x>
+      <y>357</y>
+      <w>56</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;60.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>826</x>
+      <y>336</y>
+      <w>77</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>目的因素
+bg=green
+layer=3
+transparency=90
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>917</x>
+      <y>336</y>
+      <w>77</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>
+发布
+bg=green
+layer=3
+transparency=90
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>826</x>
+      <y>364</y>
+      <w>77</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>起因因素
+bg=green
+layer=3
+transparency=90
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1001</x>
+      <y>70</y>
+      <w>56</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>60.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1001</x>
+      <y>238</y>
+      <w>56</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>60.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>917</x>
+      <y>168</y>
+      <w>77</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>
+发布
+bg=green
+layer=3
+transparency=90
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>826</x>
+      <y>182</y>
+      <w>77</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>形式因素
+bg=green
+layer=3
+transparency=90
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>238</x>
+      <y>210</y>
+      <w>126</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>搜索
+bg=green
+layer=3
+transparency=90
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>371</x>
+      <y>210</y>
+      <w>35</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>排序
+bg=green
+layer=3
+transparency=90
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>238</x>
+      <y>238</y>
+      <w>168</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>国外用户的问题：
+--
+
+国外XXX用户的问题：
+---------？
+--
+
+国外XXX用户的问题：
+---------？
+--
+ 。。。</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>371</x>
+      <y>259</y>
+      <w>28</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>展示
+bg=green
+layer=3
+transparency=90
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>371</x>
+      <y>301</y>
+      <w>28</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>展示
+bg=green
+layer=3
+transparency=90
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>238</x>
+      <y>357</y>
+      <w>168</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>确认
+bg=green
+layer=3
+transparency=90
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>168</x>
+      <y>28</y>
+      <w>49</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>用户</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>161</x>
+      <y>210</y>
+      <w>49</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>管理员</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>196</x>
+      <y>644</y>
+      <w>112</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>达成体验
+必要功能
+--
+
+注册登录
+
+搜索内容
+
+用户界面
+
+内容
+bg=green
+layer=0
+transparency=90
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>357</x>
+      <y>693</y>
+      <w>35</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>产品
+bg=green
+layer=3
+transparency=90</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>133</x>
+      <y>609</y>
+      <w>182</w>
+      <h>175</h>
+    </coordinates>
+    <panel_attributes>优质体验
+所需功能
+--
+
+专业内容
+
+基础社交
+
+提出问题
+
+回答问题
+bg=green
+layer=0
+transparency=90
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>84</x>
+      <y>574</y>
+      <w>238</w>
+      <h>217</h>
+    </coordinates>
+    <panel_attributes>额外体验
+所需功能
+--
+
+专业社交
+
+反馈评估
+
+bg=green
+layer=0
+transparency=90
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>301</x>
+      <y>693</y>
+      <w>70</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>441</x>
+      <y>574</y>
+      <w>175</w>
+      <h>217</h>
+    </coordinates>
+    <panel_attributes>可以开通的权限
+--
+
+
+bg=green
+layer=0
+transparency=90
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>504</x>
+      <y>602</y>
+      <w>105</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>对系统无关痛痒的
+--
++ 技术支持与答疑</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>504</x>
+      <y>651</y>
+      <w>105</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>会导致系统运行不畅的
+--
++ 用户和权限管理
++ 系统维护和更新
++ 权限和访问控制</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>504</x>
+      <y>721</y>
+      <w>105</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>会导致系统瘫痪的
+--
++ 安全管理、
++ 数据备份和恢复
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>385</x>
+      <y>693</y>
+      <w>70</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

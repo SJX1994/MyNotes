@@ -84,6 +84,10 @@ MonoDevelop：
             遮挡显示：
                 https://youtu.be/szsWx9IQVDI
     自带:
+        LocalVolumetricFog:
+            增加：Sky and Fog Global Volume 添加 Fog 开启 VolumetricFog
+        LightingMap:
+            ref:https://forum.unity.com/threads/generate-lightmap-uvs-for-editor-combined-mesh.495158/
         Presets(预设)：
             保存：
                 Inspector:
@@ -341,8 +345,14 @@ MonoDevelop：
                     25美元一位
         
         shaderGraph：
+        TimeLine:
+            https://www.youtube.com/watch?v=xw4WJ1z2bjQ
+        spine: 
+            下载：  
+                http://zh.esotericsoftware.com/spine-unity-download
+            TimeLine:
+                https://www.youtube.com/watch?v=V2z6FZxIrb0
             
-
 版本控制：
     包管理器:
         https://docs.unity3d.com/2021.3/Documentation/Manual/upm-scoped.html
@@ -404,6 +414,13 @@ Adia任务：
     MipmapStreaming：   
         浅谈Unity纹理串流系统Mipmap Streaming System - 欧几里得范数的文章 - 知乎
         https://zhuanlan.zhihu.com/p/600257663
+    显存占用优化：
+        工具：memory profiler
+        关联关键字：
+            Reflection Probe
+            Render Texture
+    官方HDRP优化：
+        https://unity.com/how-to/performance-optimization-high-end-graphics
 插件：
     Cloth-and-IK-Test：
         https://github.com/SebLague/Cloth-and-IK-Test.git
@@ -417,7 +434,8 @@ Adia任务：
         https://www.codenong.com/cs105490621/
     编译dll：
         https://blog.csdn.net/Fenglele_Fans/article/details/82694333
-
+    时间控制time：
+        Ludiq.Chronos
 渲染管线：
     几何着色器ComputeShader：
         关键字：
@@ -783,9 +801,14 @@ Adia任务：
                 ($Unity工程)Library\PackageCache\com.unity.render-pipelines.high-definition@7.7.1\Documentation~
 
 案例：
+    HDRP可交互水体：
+        https://assetstore.unity.com/packages/2d/textures-materials/water/simple-interactive-water-162033
+    程式动画：
+        Animancer
     室外照明和场景设置：
         环境照明：
-            
+    截图工具：
+        https://github.com/Team-on/UnityScreenShooter        
     加载时间Debug：
         https://docs.unity3d.com/Manual/profiler-profiling-applications.html
         检查内存使用情况：
@@ -849,6 +872,8 @@ Adia任务：
         HDRP：
             https://youtu.be/NbXvpy3x4-I
 报错：
+    运行加载时间长：Reload Script Assemblies
+        Project Settings > Editor > Enter Play Mode Settings you can turn off Domain Reload.
     无法确定预设文件位置类型 /Users/ myUserName /Library/Preferences/Unity/Editor-5.x/Presets/Default UnityEngine.GUIUtility:ProcessEvent(Int32, IntPtr)：
         转到您的注册表，Computer\HKEY_CURRENT_USER\Software\Unity Technologies\Unity Editor 5.x，并打开所有包含“CurrentLib”的键（例如我机器上的particleCurvesCurrentLib_h1743720187），然后将二进制字符串编辑为指向正确的路径。
         ref：
