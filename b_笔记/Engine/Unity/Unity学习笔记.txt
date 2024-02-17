@@ -801,6 +801,16 @@ Adia任务：
                 ($Unity工程)Library\PackageCache\com.unity.render-pipelines.high-definition@7.7.1\Documentation~
 
 案例：
+    UMP包嵌入工程（黑客行为）：
+        https://github.com/liortal53/upm-embed
+    UI粒子特效：
+        https://www.youtube.com/watch?v=Y5WVxdhEiIg&t=694s
+    安卓打包:
+        https://zhuanlan.zhihu.com/p/113007406
+    SpineShaderURP描边：
+        https://github.com/chavaloart/urp-multi-pass
+        +
+        chayan
     HDRP可交互水体：
         https://assetstore.unity.com/packages/2d/textures-materials/water/simple-interactive-water-162033
     程式动画：
@@ -816,7 +826,10 @@ Adia任务：
         UI优化：
             https://gwb.tencent.com/community/detail/116185
     TPMS中文字体库：
-        https://github.com/kaienfr/Font/tree/master/learnfiles
+        动态字体：
+            https://youtu.be/NY1xKqCIj3c?si=eVOa-pOpK5nkTtqm
+        静态字体:
+            https://github.com/kaienfr/Font/tree/master/learnfiles
     VAT(vertex animation texture):
         https://www.youtube.com/playlist?list=PLXNFA1EysfYn686NxzYbKxm845eOIwDPA
         Maya:https://github.com/ZGeng/VertAnimToTex
@@ -872,6 +885,8 @@ Adia任务：
         HDRP：
             https://youtu.be/NbXvpy3x4-I
 报错：
+    VScode加载速度慢：
+        https://forum.unity.com/threads/drastically-slower-visual-studio-code-intellisense-in-entities-0-50.1254999/
     运行加载时间长：Reload Script Assemblies
         Project Settings > Editor > Enter Play Mode Settings you can turn off Domain Reload.
     无法确定预设文件位置类型 /Users/ myUserName /Library/Preferences/Unity/Editor-5.x/Presets/Default UnityEngine.GUIUtility:ProcessEvent(Int32, IntPtr)：
@@ -893,7 +908,8 @@ Adia任务：
     
     HDRP打包报错：
         https://learn.unity.com/tutorial/upgrading-an-existing-project-to-use-hdrp-2019-2#5fd514c3edbc2a7538494a67
-
+    locked Library/ArtifactDB:
+        解决方法：打开任务管理器，关闭所有Unity相关的后台程序，重新打开项目即可。
 wedding项目：
     1.呼吸动画
         -完成

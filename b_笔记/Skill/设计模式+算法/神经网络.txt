@@ -50,6 +50,15 @@ Neural Networks
                   https://www.bilibili.com/video/BV1VV411478E?share_source=copy_web
             卷积：
 应用层：
+      概念：
+            机器学习中的关键组件：
+                  可以用来学习的数据（data）
+
+                  如何转换数据的模型（model）
+
+                  一个目标函数（objective function），用来量化模型的有效性
+
+                  调整模型参数以优化目标函数的算法（algorithm）
       文字类：
             chatBox：
                   https://chatboxai.app/redirect_app/homepage/zh-Hans
@@ -57,4 +66,104 @@ Neural Networks
             https://zhuanlan.zhihu.com/p/570332906
             https://github.com/THUDM/CogVideo
             https://github.com/VideoCrafter/VideoCrafter
-            DID  Colossyan 和  Pictory                  
+            DID  Colossyan 和  Pictory 
+      Unity：
+            https://huggingface.co/blog/zh/unity-api
+      ChatGLM：
+            清华开源大模型
+      Autodl：
+            算力租用
+            RTXA5000 是比较适合部署大模型的 符合最低24G的显存标准
+      FinalShell:
+            运维工具
+      微调：
+            Qlora
+            Lora
+            Ptuning
+      2023年大步骤：
+            租服务器（24G以上） => 下载模型 => 准备数据集 => 
+NLP(natural language processing)
+      目的：
+            人 > 文字 > 电脑 > "理解" > "反馈" > 人
+      理解：
+            1.0：
+                  1 of N Encoding:
+                  例如：5个词
+                  apple = [1,0,0,0,0]
+                  bag = [0,1,0,0,0]
+                  cat = [0,0,1,0,0]
+                  dog = [0,0,0,1,0]
+                  egg = [0,0,0,0,1]
+                  问题：
+                        词语之间的关联性怎么体现？
+            2.0：
+                  World Class：
+                  例如：9个词 3个类别
+                  class1 = [dog,cat,bird]
+                  class2 = [apple,banana,orange]
+                  class3 = [ran,jumped,walked]
+                  问题：
+                        类之间的差别如何体现？
+            3.0：
+                  Word Embedding：
+                  例如：
+                        在笛卡尔坐标系中，每个词语都有一个坐标
+                        词语之间的差别可以通过坐标之间的距离来体现
+                  问题：
+                        同词不同义怎么体现？
+            4.0：
+                  Contextualized Word Embedding：
+                  例如：
+                        水库（因为前面有“水”所以这个库是用来蓄水的容器）
+                        代码仓库（因为前面有“代码”所以这个库是用来存放代码的虚拟内存）
+                  问题：
+                        如何存储上下文关系？
+            ELMO(Embedding from Language Model) —— 特定的模型:
+            5.0：
+                  RNN(Recurrent Neural Network)：
+                  例如：
+                        潮水 退了 就 知道 谁在 裸泳
+                        正向RNN：
+                              <开始> -(开始的Embedding) - 潮水 - (潮水的Embedding) - 退了 - (退了的Embedding) - 就 - (就的Embedding) - 知道 - (知道的Embedding) - 谁在 - (谁在的Embedding) - 裸泳 - (裸泳的Embedding) - <结束>
+
+                        反向RNN：
+                              <开始> -(开始的Embedding) - 裸泳 - (裸泳的Embedding) - 谁在 - (谁在的Embedding) - 知道 - (知道的Embedding) - 就 - (就的Embedding) - 退了 - (退了的Embedding) - 潮水 - (潮水的Embedding) - <结束>
+                              
+                        最后结合“正反向RNN”来预测下一个词语的Embedding
+                  问题：
+                        一个词有多个 “正反向RNN” 怎么决定用哪一个？
+            BERT （全名為 Bidirectional Encoder Representations from Transformers）每个词（事实上字更恰当）获得唯一的 RNN Embedding ——特定的模型 一共有24层：
+            6.0:
+                  平均后的RNN = 正反向RNN1 * a1 + 正反向RNN2 * a2 ...
+                  a1、a2 指得是目的。
+                  问题：
+                        如何确定这个目的？
+            7.0：
+                  目的1：抽词 [MASK]:自动选择 15% 抽掉
+                        BERT 会根据目的抽词，再根据相近的 Embedding 随机填词。
+                  目的2：断句 连接 [CLS]+[SEP]:要做分类的开头 + 要做连结
+                        BERT 会根据目的 断句 和 连结
+                  问题：
+                        抽词 抽一个字 在中文中基本是唯一解答，
+                        中文要怎么办？
+            ERNIE(Enhanced Representation through kNowledge IntEgration)：
+            8.0：
+                  每次抽词都会抽出一个词组，而不是一个字
+            以上是 Encode 阶段 2023年流行的模型:
+
+                  输入序列转换为潜在语义表示的过程
+                  
+            以下是 Decode 阶段:
+            9.0:
+                  转换为目标序列
+
+
+                  
+大V：             
+      Hung-yi Lee 
+            https://www.youtube.com/channel/UC2ggjtuuWvxrHHHiaDH1dlQ
+      李沐 
+            https://www.linkedin.com/in/mulicmu/
+            https://zh-v2.d2l.ai/chapter_introduction/index.html                
+Ref： 
+      https://leemeng.tw/attack_on_bert_transfer_learning_in_nlp.html

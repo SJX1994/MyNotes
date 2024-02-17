@@ -1,9 +1,14 @@
 # 现代游戏通讯：
-## 基础通讯协议：
+## 基础通讯概念：
 - TCP
   - 慢且准
 - UDP
   - 快且疏
+- Snapshot
+  - 它在游戏中的不同客户端之间传输游戏对象的数据，以确保所有客户端都具有一致的游戏状态。
+  - 在多人游戏中，每个客户端都有自己的本地游戏状态。
+  - 为了使所有客户端都知道其他客户端的状态，需要进行网络同步。
+  - 网络快照通常包含游戏对象的位置、旋转、速度、动画状态等关键信息。这些快照会周期性地发送给其他客户端，以确保各个客户端都能够准确地呈现游戏状态。
 ## 通讯媒介：
 - Socket
   - 通讯的基础
@@ -116,6 +121,17 @@
 
 # Unity框架
 ## Mirror:
+- Ref：
+  - 基础
+    - https://www.jianshu.com/p/c44638cd59f0
+    - https://youtu.be/8tKFF0RP9Jw?si=OZ-VSB0JlnSz3JNF
+  - 自定义
+    - https://mirror-networking.gitbook.io/docs/manual/guides/gameobjects/custom-character-spawning
+  - 可传输的数据类型
+    - https://mirror-networking.gitbook.io/docs/guides/data-types
+    - 字典：
+      - https://mirror-networking.gitbook.io/docs/manual/guides/synchronization/syncdictionary
+      - https://fish-networking.gitbook.io/docs/manual/guides/synchronizing/syncdictionary
 - NetworkBehaviour 网络行为和功能：
   - 概念：
     - 用于实现网络行为和功能的组件。
@@ -131,7 +147,24 @@
       - NetworkBehaviour 具有 Target 概念，通过带有 NetworkConnection 方法，可以将消息定向发送给特定客户端。
     - 权限控制：
       - NetworkBehaviour 支持在方法上使用 [Server]、[Client] 等属性，以限制哪些实体可以调用该方法。这有助于确保只有授权的客户端或服务器可以执行特定的网络操作。
-      
+  - NetworkTransformBase：
+    - 被继承：
+      - NetworkTransformUnreliable：
+        - 简介：
+          - 是一种用于网络同步游戏对象位置和旋转信息的组件。
+          - 在网络条件较差或丢包的情况下，可能会导致数据丢失或不同步。
+      - NetworkTransformReliable：
+        - 简介：
+          - 可靠地同步游戏对象位置和旋转信息的组件。
+          - 确保数据的完整性和准确性。 
+    - 参数：
+      - clientAuthority（过时 被syncDirection替代）：设置为true具有客户端权限，当一个网络对象具有客户端权限时，客户端可以在局部控制该对象的位置和旋转信息，而服务器只处理其他客户端发送的位置和旋转同步信息。
+      - interpolate：提供更流畅的观感。但会造成额外的本地计算量。
+      - coordinateSpace：与世界坐标系的位置和旋转一致 或者 父对象或自身的初始位置和旋转进行同步。
+      - sendIntervalMultiplier：网络对象同步频率的一个乘数因子。
+        - 设置为2，那么位置信息的发送间隔将乘以2，从而减少发送频率到原来的一半。这样可以减少带宽消耗和网络负载，但也会导致位置信息的更新速度变慢。
+      - timelineOffset：Mirror会使用时间偏移来处理网络对象的位置同步。具体来说，Mirror会根据网络延迟和插值算法来预测其他客户端接收到位置更新的时间，并将网络对象的位置信息进行线性插值以平滑显示。使用时间偏移可以帮助消除网络延迟造成的位置信息的跳跃和抖动，提供更平滑的移动效果。
+      - 
   - OnStartServer()
     - 通过将特定的消息发送到服务器，以触发服务器上的对应代码。
     - 由NetworkServerHandler的组件处理
@@ -154,7 +187,70 @@
     - 网络场景管理：
       - NetworkManager 允许开发人员定义网络场景，并控制在不同场景之间的切换和同步。
       - 它提供了一些方法和属性，用于加载、切换和同步场景，并确保所有客户端上的场景保持一致。
-      
+  - 方法：
+    - 虚方法 OnServerAddPlayer (服务器)
+      - OnServerAddPlayer是NetworkManager中的一个回调方法。
+      - 用于当新的玩家连接到服务器时执行特定的操作。
+      - 该方法在服务器上被调用，而不是在客户端上。
+    - 虚方法 OnServerDisconnect
+      - OnServerDisconnect是Mirror网络库中NetworkManager的另一个回调方法。
+      - 用于在服务器上处理玩家断开连接的事件。
+  - 参数：
+    - runInBackground：在游戏失去焦点时是否继续运行网络连接和更新。
+    - sendRate：值为30，这意味着每秒向服务器发送30次网络消息。你可以根据你的游戏需求调整这个值。如果你想要更实时的同步效果，可以增加sendRate的值
+    - offlineScene（离线场景）：这是在本地模式下（即没有网络连接）加载的场景。当NetworkManager处于离线模式时，它会加载offlineScene所指定的场景。
+    - onlineScene（在线场景）：这是在联网模式下（即有网络连接）加载的场景。当NetworkManager建立网络连接后，它会加载onlineScene所指定的场景。
+    - transport：用于指定在网络通信中使用的传输协议。
+      - KcpTransport：Kuai Control Protocol 自定义传输模块，用于网络游戏的数据传输。它基于开源库KCP（KCP - A Fast and Reliable ARQ Protocol）作者 韦易笑，提供了一种快速和可靠的数据传输方案。
+      - https://mirror-networking.gitbook.io/docs/manual/transports/kcp-transport
+    - networkAddress：指定网络连接的目标地址（IP地址或域名）。networkAddress的值应该是一个字符串，表示要连接的服务器的地址。这可以是一个IPv4或IPv6地址，也可以是一个域名（例如，game.example.com）。
+    - disconnectInactiveConnections:用于指定在网络连接处于非活动状态时是否断开连接。
+    - disconnectInactiveTimeout:表示网络连接在多长时间没有任何活动和数据传输后会被自动断开。以秒为单位。
+    - authenticator：是NetworkManager的一个属性，它允许你指定一个实现了NetworkAuthenticator抽象类的自定义身份验证器。这个身份验证器可以用来验证客户端和服务器之间的身份，并确保只有受信任的用户可以建立连接和进行通信。
+    - playerPrefab：当有新的客户端连接到服务器时，NetworkManager将使用playerPrefab创建一个新的玩家对象，并将其分配给该连接。
+    - autoCreatePlayer：是一个用于指定网络连接建立后是否自动创建玩家对象的属性。
+    - playerSpawnMethod：
+      - RoundRobin：表示将玩家对象按照循环规则分配给连接。
+      - Random：表示将玩家对象随机分配给连接。
+    - snapshotSettings:
+      - 用于指定网络快照的配置。
+      - bufferTimeMultiplier:
+        - 调整网络快照（Snapshot）缓冲时间的倍数的属性。
+        - 缓冲时间是指在发送方发送快照后，在接收方处理和应用完整个快照之前的时间间隔。缓冲时间的设置可以影响整体的网络同步表现和延迟。
+      - snapshotSettings:缓冲限制是指在接收方处理和应用快照时允许保留的最大快照数量。当快照数量超过bufferLimit时，最旧的快照将被丢弃。
+      - catchupNegativeThreshold: 允许同步系统从正常速度快速调整到更快的速度，以便追赶上当时的网络状态。
+      - catchupPositiveThreshold: 允许同步系统从较慢的速度快速调整到更快的速度，以追赶上当时的网络状态。
+      - catchupSpeed: 同步系统在每个网络更新周期中调整的比例。默认值为0.1，表示同步系统在每个网络更新周期中调整为当前网络状态的10%。
+      - slowdownSpeed: 同步系统在网络延迟变高时，降低同步速度的比例。默认值为0.01，表示同步系统在每个网络更新周期中将当前速度降低1%。
+      - driftEmaDuration: 
+        - 属性设置为2秒，这意味着同步系统将使用过去2秒内的延迟测量值来计算漂移指数移动平均。
+        - 同步系统用于计算漂移指数移动平均的时间跨度。漂移指数是用来估计网络延迟和带宽的指标，可以帮助同步系统更准确地进行同步。
+      - dynamicAdjustment: 控制同步系统在网络状况发生变化时动态调整发送快照的频率和相关参数。它可以根据网络延迟和带宽等指标来自动调整同步系统的性能以获得最佳的同步效果。
+      - dynamicAdjustmentTolerance: 配置同步系统动态调整的容忍度。设置为0.05，这意味着同步系统在执行动态调整时，每次调整的幅度不会超过0.05。这样可以确保同步系统的调整是平滑的，避免因过度调整而导致不稳定的同步效果。
+      - deliveryTimeEmaDuration： 和 driftEmaDuration 差不多。
+        - 属性设置为2秒，这意味着发送系统将使用过去2秒内的延迟测量值来计算漂移指数移动平均。
+        - 发送系统用于平均的时间跨度。
+      - connectionQualityInterval：设置为1秒，这意味着同步系统将每隔1秒进行一次连接质量检测。
+      - 
+- NetworkIdentity 身份ID：
+  - 简介：
+    - 标识具有网络功能的游戏对象。使得游戏对象能够在多台计算机之间进行网络同步
+    - 唯一标识、持久化、网络同步、
+    - 服务器授权模式下，服务器负责控制游戏对象的状态，而客户端只能向服务器发送请求。
+    - 在客户端授权模式下，客户端可以控制自己的游戏对象状态，并将相应的更改通知服务器和其他客户端。
+  - 参数：
+    - assetId
+      - 网络中的客户端和服务器通过这个assetId来唯一标识NetworkIdentity
+    - 
+- NetworkServer 处理网络连接和同步游戏状态的中心服务：
+  - 连接管理：
+    - NetworkServer负责管理网络连接。当一个客户端连接到服务器时，NetworkServer会分配一个唯一的连接ID，并将客户端添加到连接列表中。它还会跟踪客户端是否已断开连接，并在客户端断开连接时进行清理。
+  - 对象生成与同步：
+    - NetworkServer负责生成和同步网络对象。当服务器上生成一个网络对象时，它会在服务器和所有已连接的客户端上生成相同的对象。NetworkServer会跟踪生成的网络对象，并向所有客户端发送同步消息，以确保它们在各个客户端上保持同步。
+    - 消息传递：当一个客户端发送消息到服务器时，NetworkServer会接收并处理这些消息。它通过消息的类型和目标对象来决定如何处理消息。例如，如果消息是用于生成网络对象的请求，NetworkServer会在服务器上生成对象，并通知所有客户端同步生成的结果。如果消息是更新对象属性的请求，NetworkServer会更新服务器上的对象状态，并广播该状态给所有客户端。
+- NetworkManagerHUD 网络管理器的HUD：
+  - 可视化网络管理器的HUD (Heads-Up Display)  
+  - 依赖 NetworkManager
 - Attribute 装饰器：
     - 被装饰的方法将被注册到服务器的回调列表中，以便在适当的时机被调用。
     - `[Server]`：
