@@ -1,22 +1,6 @@
 
-我的git：
-      752523247@qq.com
-      Carsa5th22
-      personalToken：
-            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
-            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
-            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
-            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
-            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
-            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
-            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
-            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
-            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
-            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
-            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
-            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
-            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
-
+github 建立个人网站：
+      https://pages.github.com/
 操作：
       创建Dev分支：
             https://stackoverflow.com/questions/39478482/how-to-create-development-branch-from-master-on-github
