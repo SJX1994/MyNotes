@@ -885,7 +885,10 @@ HTTP：
             https://sleazyfork.org/zh-CN
     wiki离线：
     	
-	https://wiki.kiwix.org/wiki/Content_in_all_languages/zh-cn
+	    https://wiki.kiwix.org/wiki/Content_in_all_languages/zh-cn
+    
+    好用的网页：
+        文字转声音：https://www.textfromtospeech.com/zh/text-to-voice/
 	
 
 

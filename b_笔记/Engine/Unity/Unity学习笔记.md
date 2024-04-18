@@ -802,6 +802,8 @@ Adia任务：
                 ($Unity工程)Library\PackageCache\com.unity.render-pipelines.high-definition@7.7.1\Documentation~
 
 案例：
+    dijkstras寻路：
+        https://github.com/hasanbayatme/unity-dijkstras-pathfinding
     UMP包嵌入工程（黑客行为）：
         https://github.com/liortal53/upm-embed
     UI粒子特效：
@@ -831,6 +833,7 @@ Adia任务：
             https://youtu.be/NY1xKqCIj3c?si=eVOa-pOpK5nkTtqm
         静态字体:
             https://github.com/kaienfr/Font/tree/master/learnfiles
+            https://www.cnblogs.com/anderson0/p/16130186.html
     VAT(vertex animation texture):
         https://www.youtube.com/playlist?list=PLXNFA1EysfYn686NxzYbKxm845eOIwDPA
         Maya:https://github.com/ZGeng/VertAnimToTex
