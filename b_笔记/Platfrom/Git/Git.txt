@@ -36,6 +36,8 @@ github 建立个人网站：
             git submodule update
                   
 报错：
+      sourceTree 打不开：
+            https://blog.csdn.net/weixin_44490021/article/details/131232966
       sourceTree 执行操作慢
             git gc
             git prune

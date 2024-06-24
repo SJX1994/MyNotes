@@ -53,6 +53,8 @@ VSCode:
                     规范注释(注释后应当跟空格)
                 \((.+?)\):
                     匹配括号内的内容
+                word1[\s\S]*word2：
+                    匹配word1和word2之间的所有内容
     操作：
         python导入库：
             settings.json:
