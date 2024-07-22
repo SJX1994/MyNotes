@@ -188,6 +188,9 @@ openGL ES(OpenGL for Embedded Systems ):
   ref：
     https://blog.csdn.net/hgl868/article/details/7876257
 通用概念：
+  几何遮蔽项(Geometry Occlusion Term):
+    反射模型中的一个重要组成部分,它描述了物体表面微平面之间的相互遮挡效果。
+    通过合理计算几何遮蔽项,可以得到更加逼真的渲染效果。
   ComputeShader计算着色器：
     it
   纹理缩放：
@@ -757,3 +760,6 @@ openGL ES(OpenGL for Embedded Systems ):
  2 使用长顶点着色器计算 3D 模型。如果顶点着色器是瓶颈，请减少指令数量，以提高性能。如果片段着色器是瓶颈，则在顶点着色器中进行的优化不会影响性能。
  3 在屏幕上显示很多需要填充大量像素的片段。
  4 将顶点发送给 GPU 并由顶点着色器进行处理。三角形计数会表明每帧绘制的顶点计数。请参阅排除应用程序的性能问题。
+
+资源：
+  贴图下载：https://substance3d.adobe.com/assets

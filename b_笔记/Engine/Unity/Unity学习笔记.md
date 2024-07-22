@@ -672,16 +672,27 @@ Adia任务：
                         多样本抗锯齿 (MSAA)。
                             对像素内的多位置采样，并结合样本
                             一种硬件抗锯齿，可以结合其他效果使用（除了TAA，因为MSAA不支持矢量运动效果采样）
-            Look-Up-Table
-            显示查找表：
-                可以接受所有PS里做的处理作为后处理输入到实时渲染引擎
-                定义：
-                    将一种颜色空间映射到另一种颜色空间
-                    3D LUT，它与立体3D图像无关，它指向的是色彩空间的3维分布矩阵。
-                opengl实现：
-                    https://zhuanlan.zhihu.com/p/43241990
-                可以用Ps之类的软件映射到unity
-            
+
+--- 
+
+- Look-Up-Table
+- 显示查找表：
+    - 可以接受所有PS里做的处理作为后处理输入到实时渲染引擎
+    - 定义：
+        - 将一种颜色空间映射到另一种颜色空间
+        - 3D LUT，它与立体3D图像无关，它指向的是色彩空间的3维分布矩阵。
+    - opengl实现：
+        - https://zhuanlan.zhihu.com/p/43241990
+    - 可以用Ps之类的软件映射到unity
+    - reference:
+    - https://lettier.github.io/3d-game-shaders-for-beginners/lookup-table.html
+        - LUT 着色器是调整游戏外观的便捷工具。比如：从颜色分级到将白天变成夜晚
+        - ![alt text](image.png)
+        - LUT 需要为 256 像素宽 x 16 像素高，并包含 16 个块，每个块为 16 x 16 像素。
+    - https://github.com/lettier/3d-game-shaders-for-beginners/blob/master/demonstration/shaders/fragment/lookup-table.frag
+
+--- 
+
             AxF Shader
             AxF材质：
                 Appearance eXchange Format
