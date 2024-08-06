@@ -34,7 +34,10 @@ github 建立个人网站：
       递归子模块：
             git submodule init
             git submodule update
-                  
+      OAuth(网页令牌验证)：
+            https://stackoverflow.com/questions/57947268/how-do-i-log-in-using-the-git-terminal
+            1. 安装： winget install --id GitHub.cli
+            2. 登陆： winpty gh auth login            
 报错：
       sourceTree 打不开：
             https://blog.csdn.net/weixin_44490021/article/details/131232966
