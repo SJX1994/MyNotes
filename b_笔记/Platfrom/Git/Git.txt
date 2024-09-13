@@ -158,27 +158,17 @@ mac:
       ssh:
             ref：
                   https://www.jianshu.com/p/31cbbbc5f9fa
-            检查ssh：
+            1. 检查 SSH 客户端是否已安装:
+                  ssh -V
+            2. 检查 SSH 密钥：
                   ls -al ~/.ssh
-                  (如果有直接设置)
-
-            生成ssh：
-
-                  
-                  $ git config --global user.name "xxx"
-                  $ git config --global user.email "xxx.mail@xxx.com"
-
-                  cd ~/.ssh
-                  
-                  $ ssh-keygen -t rsa -C "xxx.mail@xxx.com"
-
-                  ~/.ssh
-
-            设置ssh：
-                  # start the ssh-agent in the background
-                  eval "$(ssh-agent -s)"
-                  Agent pid 59566
-                  ssh-add ~/.ssh/id_rsa
+            3. 如果没有 生成ssh：
+                  ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+            6. 设置ssh：
+                  找到生成的SSH, 去网站上设置
+            7. 检查 SSH 配置文件
+                  cat ~/.ssh/config
+            
       密钥：
             类型：
 
