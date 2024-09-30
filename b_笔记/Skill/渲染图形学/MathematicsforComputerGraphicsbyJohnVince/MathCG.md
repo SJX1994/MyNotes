@@ -1,4 +1,4 @@
-## 前言
+## 1. 前言
 ### 效用？
 - 这本书是为那些从事计算机图形学工作的人准备的，
 - 他们知道他们必须在日常工作中使用数学，
@@ -6,7 +6,7 @@
 - 公理、真理和柏拉图式的现实中。
 - 冲着顿悟感来的。
 
-## 数字 Numbers
+## 2. 数字 Numbers
 - 集合论? Set Notation
   - 提供了一个用于 操作和 询问集合的逻辑框架
   - 是 xxx 的成员
@@ -99,7 +99,7 @@
   - 看似不相关的数学概念之间出人意料的联系。
   - C & i
 
-## 代数 Algebra
+## 3. 代数 Algebra
 ### 概念?
   - 代数的一个基本概念是给 未知量命名的想法。
   - 借助 +, −, ×, ÷ 可以开发描述物理过程或逻辑计算行为的表达式。
@@ -228,3 +228,111 @@
   - **参数方程:** 在使用参数方程描述曲线或曲面时,参数的取值范围就构成了函数的定义域。
   - 圆的参数方程 为例：
   - ![alt text](Drafts_圆.jpg)
+
+## 4. 三角学 Trigonometry
+
+### 角度测量单位？ Units of Angular Measurement
+- 现代保留的测量单位：度 和 弧度 degrees and radians
+- 度（Degrees）
+  - 度是一个用于测量角度的单位。一个完整的圆被分成360个等分，
+  - 每个等分就是1度（°）。
+  - 因此，360度等于一个完整的旋转。
+- 弧度（Radians）
+  - 弧度是另一个用于测量角度的单位，基于圆的半径。
+  - 1弧度是指在单位圆上，圆弧的长度等于圆的半径。
+  - 一个完整的圆有 2π 弧度
+- 度与弧度的换算
+  - 180° = π radians
+  - 360° = 2π radians
+  - 57.3° = 1 radian
+
+### 三角比？ The Trigonometric Ratios
+- 边长与角度之间的固有比例关系，
+- 知道这些比例，就可以利用这些比例来解决三角形中未知长度和角度的问题。
+- ![alt text](image-49.png)
+- 上图描述了一个坐标为(**底边-base,高-height**)的点P,
+- 位于一个 **半径-radius** 为1的圆上,旋转了角度θ。
+- 在旋转过程中,高和底的符号变化如下:
+- ![alt text](image-50.png)
+- 高-height 变化如下:
+- ![alt text](image-51.png)
+- 底边-base 变化如下：
+- ![alt text](image-52.png)
+
+- 半径-radius = 斜边-hypotenuse 
+- 高-height = 对边-opposite 
+- 底边-base = 邻边-adjacent 
+- ![alt text](image-53.png)
+- ![alt text](image-54.png)
+- ![alt text](image-55.png)
+- 例子：
+- ![alt text](image-56.png)
+- 求 对边-opposite 和 邻边-adjacent
+- ![alt text](image-57.png)
+
+#### 域和值域？Domains and Ranges
+- 域 (Domain)
+  - 定义：
+    - 函数的 **域** 是指所有可能的输入值（自变量或独立变量）的集合，
+    - 通常用 x 表示。
+    
+- 值域 (Range)
+  - 定义：
+    - 函数的 **值域** 是指所有可能的输出值（因变量或依赖变量）的集合，
+    - 通常用 y 表示。
+---
+- 三角函数的 域 (Domain)
+  - sin θ 、 cos θ 和 tan θ 的周期性质意味着它们的 **域** 无限大。
+  - 习惯上将 sin θ 的 **域**限 制为：![alt text](image-58.png)
+  - tan θ 的 **域** 限制为：![alt text](image-59.png)
+  - ![alt text](image-60.png)
+- 三角函数的 值域 (Range)
+  - sin θ 和 cos θ 的 **值域** 是 [-1, 1]。
+  - tan θ 的 **值域** 是 (-∞, ∞)。
+
+### 反三角函数？ Inverse Trigonometric Functions
+- arcsin、arccosarccos、arctanarctan、arccsc、arcsec 和 arccot 都是反三角函数。
+- 其中 arc 是 arclength 弧长 的缩写。
+- 反三角函数将比率转换回角度。
+- ![alt text](image-61.png)
+
+### 三角恒等式？ Trigonometric Identities
+- 三角恒等式是指在三角函数中成立的等式。
+- 除了位移 90 之外，sin 和 cos 曲线是相同的：
+- ![alt text](image-62.png)
+- 简单代数和毕达哥拉斯定理可用于推导其他公式：
+- ![alt text](image-63.png)
+
+### 正弦法则？ The Sine Rule
+![alt text](image-64.png)
+![alt text](image-65.png)
+### 余弦法则？ The Cosine Rule
+![alt text](image-64.png)
+![alt text](image-66.png)
+![alt text](image-67.png)
+
+### 复合角？ Compound Angles
+![alt text](image-68.png)
+
+### 周长关系？ Perimeter Relationships 
+![alt text](image-64.png)
+![alt text](image-69.png)
+
+### Reference
+- Handbook of Mathematics and Computational Science by John Harris and Horst Stocker (1998)
+- Mathematics from the Birth of Numbers by Jan Gullberg (1997).
+
+## 5. 坐标系 Coordinate Systems
+### 预热
+- 笛卡尔坐标系、轴系、空间中两点之间的距离以及简单二维形状的面积。
+笛卡尔坐标系：
+![alt text](image-73.png)
+
+- 它还涵盖了 极坐标系、球面极坐标系 和 圆柱坐标系。
+
+极坐标系：
+![alt text](image-70.png)
+球面极坐标系：
+![alt text](image-71.png)
+圆柱坐标系：
+![alt text](image-72.png)

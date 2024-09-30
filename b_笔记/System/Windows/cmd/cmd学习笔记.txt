@@ -84,6 +84,32 @@ batch：
     clear:
         清除当前命令行
 PowerShell:
+    目录下文件大小并排序：
+        大小+路径
+            $fso = new-object -com Scripting.FileSystemObject
+            $rootDir = Get-Location
+
+            # 获取当前目录下的所有文件
+            $fileInfo = Get-ChildItem -Path $rootDir -File | ForEach-Object {
+                [PSCustomObject]@{
+                    Size = $_.Length
+                    FullName = $_.FullName
+                }
+            }
+
+            # 按文件大小从大到小排序
+            $fileInfo = $fileInfo | Sort-Object -Property Size -Descending
+
+            # 输出结果
+            $fileInfo | Format-Table @{l='Size [MB]'; e={'{0:N2}' -f ($_.Size / 1MB)}}, FullName
+        大小+文件名
+            $rootDir = Get-Location
+
+            # 获取当前目录下的所有文件
+            $fileInfo = Get-ChildItem -Path $rootDir -File | Select-Object Name, Length
+
+            # 按文件大小从大到小排序并输出文件名和文件大小
+            $fileInfo | Sort-Object -Property Length -Descending | Format-Table @{l='Size [MB]'; e={'{0:N2}' -f ($_.Length / 1MB)}}, Name
     可执行脚本格式：.ps1
     api:
         Get-Command:
