@@ -140,3 +140,35 @@ git国内镜像：
 			主美 TA(真实性demo效果研究)
 		后期
 			音乐 TA(最终效果 主美联调)
+
+公司VPN：
+	easyconnect
+		https://vpn.l2me.com
+		创达vpn：https://sslvpn.nj.thunderst.com:34589
+		账号：jiexiang.shen_a
+		密码：Car.Sa5th22
+kanzi账号：
+	账号：jiexiang.shen_a@thundersoft.com
+	密码：Car.Sa5th22
+
+kanzi邮箱：
+	https://outlook.office.com/mail/.
+	jiexiang.shen@rightware.com
+	ST6dR@@A7u
+	
+公司邮箱：
+	账号：jiexiang.shen_a@thundersoft.com
+	密码：Carsa5th22
+
+奇瑞交接：
+	7月4日 （风险排除）效果确认 + 渲染风险排除
+	8月9日 （开发）正式从 离线渲染 转为 实时渲染
+	8月23日 （元设计）开发流程需求更新
+	9月9日 （风险排除 + 开发）能量流开发
+	9月18日 （风险排除）空调计划制定
+	9月19日 （会议）紧急展示需求 性能风险暴露
+	9月20日 （元设计）性能风险拆解 方案制定
+	9月23日 （开发）3天性能优化展开 后 交由Rightware优化
+	10月9日 （元设计）时间安排 合作分工 
+	10月25日 （风险排除）资源风险相关_未完成
+	8月23日 - 10月10日 （元设计）UE分析 + 多人协作架构5次迭代

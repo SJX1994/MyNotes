@@ -333,7 +333,7 @@
 极坐标系：
 ![alt text](image-70.png)
 球面极坐标系：
-![alt text](image-71.png)
+![alt text](image-71.png) 
 圆柱坐标系：
 ![alt text](image-72.png)
 
@@ -349,3 +349,22 @@
   - 这些图形在计算机动画中用于控制物体、灯光和虚拟相机的运动。
   - 但这些图形所描绘的不是x和y之间的关系，
   - 而是活动（例如运动、旋转、大小、亮度、颜色等）与时间之间的关系。
+
+### 几何形状？ Geometric Shapes
+本篇仅仅从2D维度进行探讨
+
+#### 多边形形状？  Polygonal Shapes
+![alt text](image-76.png)
+![alt text](image-77.png)
+
+#### 形状区域？ Areas of Shapes
+多边形面积的计算方法：(格林公式：Green's Theorem)
+![alt text](image-78.jpg)
+
+### 二维毕达哥拉斯定理？ Theorem of Pythagoras in 2D
+通过XY坐标的增量 得到 两点之间的距离。
+![alt text](image-79.png)
+![alt text](image-78.png)
+
+### 3D 笛卡尔坐标？ 3D Cartesian Coordinates
+![alt text](image-80.png)
