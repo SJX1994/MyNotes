@@ -331,6 +331,9 @@
 - 它还涵盖了 极坐标系、球面极坐标系 和 圆柱坐标系。
 
 极坐标系：
+
+![alt text](image-83.png)
+
 ![alt text](image-70.png)
 球面极坐标系：
 ![alt text](image-71.png) 
@@ -368,3 +371,32 @@
 
 ### 3D 笛卡尔坐标？ 3D Cartesian Coordinates
 ![alt text](image-80.png)
+
+### 3D 毕达哥拉斯定理？ Theorem of Pythagoras in 3D
+- 三维中的毕达哥拉斯定理是二维规则的自然扩展。
+- P1 和 P2 之间的距离 d：
+![alt text](image-81.png)
+
+### 3D 多边形？ 3D Polygons
+- 为什么复杂的多边形由三角形组成？
+  - 最简单的3D多边形是三角形,它总是平面的,即三个顶点位于同一平面上。
+
+### 欧拉定理？ Euler’s Rule
+- 顶点、边和面之间的 关系 是什么？
+- **面数 + 顶点数 = 边数 + 2**（在1619年,笛卡尔发现 单叫 欧拉定理）
+- ![alt text](image-82.png)
+
+### 极坐标？ Polar Coordinates
+- 极坐标用于处理包含角度而不是线性偏移的数据。
+- 点P(x,y)具有等效的极坐标P(ρ,θ)
+- ρ:极径 是 点P到原点的距离
+- θ:极角 是 点P到x轴的角度
+- 如下图所示：
+![alt text](image-84.png)
+![alt text](image-85.png)
+- 例如：点 P(3,4)的 极坐标 是P(5,53.13°)
+![alt text](image-87.png)
+- 这些转换公式只适用于第一象限。在软件环境中应该使用atan2函数,
+- 因为它适用于所有四个象限。
+- 应用：
+![alt text](image-88.png)

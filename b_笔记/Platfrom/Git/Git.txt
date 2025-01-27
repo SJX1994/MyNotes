@@ -34,6 +34,8 @@ github 建立个人网站：
       递归子模块：
             git submodule init
             git submodule update
+      查看提交属于哪个分支：
+            git branch -r --contains COMMIT_ID
       OAuth(网页令牌验证)：
             https://stackoverflow.com/questions/57947268/how-do-i-log-in-using-the-git-terminal
             1. 安装： winget install --id GitHub.cli
